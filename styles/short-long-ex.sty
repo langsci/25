@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short-example macros
+%
+% \shortex{4}{a & b & c & d}
+%            {z & y & x & w}
+%            {mnop}
+% produces
+%   a  b  c  d
+%   z  y  x  w
+%   mnop
+%
+% \shortexdt  takes two translation lines
+% \shortexnt takes no translation lines
+% Multiple translations can also be handled as follows:
+%
+% \shortex{4}{a & b & c & d}
+%            {z & y & x & w}
+%            {mnop \\ qrstu}
+% produces
+%   a  b  c  d
+%   z  y  x  w
+%   mnop
+%   qrstu
+
+\def\shortex#1#2#3#4{\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+#2\\ #3\\
+\multicolumn{#1}{@{}l@{}}{\begin{tabular}[t]{@{}l@{}}
+#4\end{tabular}}\end{tabular}}
+
+% diese modifizierte Version kann
+%\shortex{7}{6}
+%      {?* & Wir & gedachten,   & wessen & er & sich & erinnerte.}
+%      {   & we  & commemorated & who    & he & REFL & remembered}
+%      {   & Intended: `We commemorated the person who he remembered.'}
+
+\newcounter{mytempcounter}
+
+\def\shortexungr#1#2#3#4{\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+\setcounter{mytempcounter}{#1}\addtocounter{mytempcounter}{-1}%
+#2\\ #3\\
+&\multicolumn{\value{mytempcounter}}{@{}l@{}}{\begin{tabular}[t]{@{}l@{}}
+#4\end{tabular}}\end{tabular}}
+
+\def\shortexdt#1#2#3#4#5{\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+#2\\ #3\\ \multicolumn{#1}{@{}l@{}}{#4}\\
+\multicolumn{#1}{@{}l@{}}{#5}
+\end{tabular}}
+
+\def\shortexnt#1#2#3{\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+#2\\ #3
+\end{tabular}}
+
+%%%%%%%%%
+% Long-example macros
+%
+% \longex{4}{2}
+%	{a & b & c & d}{e & f}
+%       {z & y & x & w}{v & u}
+%       {mnop}
+% produces
+%   a  b  c  d
+%   z  y  x  w
+%   e  f
+%   v  u
+%   mnop
+%
+% \longexdt takes two translation lines
+% \longexnt takes no translation lines
+% \longex can also handle multiple translations, as can \shortex above.
+
+\def\longex#1#2#3#4#5#6#7{\begin{tabular}[t]{@{}l}
+ \begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #3\\ #5 \end{tabular}\vspace{.5ex}\\
+ \begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #4\\ #6\\[.5ex] \multicolumn{#2}{@{}l@{}}{\begin{tabular}[t]{@{}l@{}}
+ #7 \end{tabular}} \end{tabular} \end{tabular}}
+
+\def\longexdt#1#2#3#4#5#6#7#8{\begin{tabular}[t]{@{}l}
+ \begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #3\\ #5 \end{tabular}\vspace{.5ex}\\
+ \begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #4\\ #6\\[.5ex] \multicolumn{#2}{@{}l@{}}{#7}\\
+ \multicolumn{#2}{@{}l@{}}{#8}
+ \end{tabular} \end{tabular}}
+
+\def\longexnt#1#2#3#4#5#6{\begin{tabular}[t]{@{}l}
+ \begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #3\\ #5 \end{tabular}\vspace{.5ex}\\
+ \begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #4\\ #6 \end{tabular} \end{tabular}}
+
+% \longexungr{5}{2}
+%	{* & a & b & c & d}{e & f}
+%       {  & z & y & x & w}{v & u}
+%       {mnop}
+\def\longexungr#1#2#3#4#5#6#7{%
+\setcounter{mytempcounter}{#1}\addtocounter{mytempcounter}{-1}%
+\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #3\\ #5 \vspace{.5ex}\\
+ & \multicolumn{\value{mytempcounter}}{@{}l@{}}{\begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #4\\ #6\\[.5ex] \end{tabular}}\\
+ & \multicolumn{\value{mytempcounter}}{@{}l@{}}{\begin{tabular}[t]{@{}l@{}}
+ #7 \end{tabular}}
+\end{tabular}}
+
+% geht irgendwie nicht, warum weiss ich nicht
+% \longexntungr{5}{2}
+%	{* & a & b & c & d}{e & f}
+%       {  & z & y & x & w}{v & u}
+\def\longexntungr#1#2#3#4#5#6{%
+\setcounter{mytempcounter}{#1}\addtocounter{mytempcounter}{-1}%
+\begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #3\\ #5 \vspace{.5ex}\\
+ & \multicolumn{\value{mytempcounter}}{@{}l@{}}{\begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #4\\ #6\\[.5ex] \end{tabular}}
+\end{tabular}}
+
+%%%%%%%%%
+% Long-example macros
+%
+% \verylongex{4}{4}{2}
+%	{a & b & c & d}{e & f & g & h}{ i & j}
+%       {z & y & x & w}{v & u & t & s}{ r & q}
+%       {mnop}
+% produces
+%   a  b  c  d
+%   z  y  x  w
+%   e  f  g  h
+%   v  u  t  s
+%   i  j
+%   r  q
+%   mnop
+%
+% \longexdt takes two translation lines
+% \longexnt takes no translation lines
+% \longex can also handle multiple translations, as can \shortex above.
+
+\def\verylongex#1#2#3#4#5#6#7#8#9{\begin{tabular}[t]{@{}l}
+ \begin{tabular}[t]{@{}*{#1}{l@{\ \ }}}
+ #4\\ #7 \end{tabular}\vspace{.5ex}\\
+ \begin{tabular}[t]{@{}*{#2}{l@{\ \ }}}
+ #5\\ #8\\[.5ex] \end{tabular}\vspace{.5ex}\\
+ \begin{tabular}[t]{@{}*{#3}{l@{\ \ }}}
+ #6\\ #9\\[.5ex] \end{tabular}\vspace{.5ex} \end{tabular}}
+

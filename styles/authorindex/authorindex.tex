@@ -1,0 +1,646 @@
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+% \BibTeX command above has been stolen from \cite{Patashnik88a}
+\documentclass[a4paper]{article}
+
+\newcommand{\package}[1]{\textsf{#1}}
+\newcommand{\authorindex}{\package{authorindex}}
+\newcommand{\mkindex}{\package{makeindex}}
+\newcommand{\perl}{\textsf{perl}}
+
+\newcommand{\file}[1]{\texttt{#1}}
+\newcommand{\fnext}[1]{\file{.#1}}
+\newcommand{\aisty}{\file{authorindex.sty}}
+
+\newcommand{\cmdline}[1]{\texttt{#1}}
+\newcommand{\option}[1]{\cmdline{#1}}
+\newcommand{\aiperl}{\cmdline{authorindex}}
+\newcommand{\bibtex}{\cmdline{bibtex}}
+
+\newcommand{\ltxinp}[1]{\texttt{\string#1}}
+
+\renewcommand\descriptionlabel[1]{\hspace\labelsep\normalfont\texttt{#1}}
+
+\title{The \authorindex\ Package}
+\author{Andreas Wettstein\\\texttt{wettstae@ise.ch}}
+\date{September 2002}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  The \authorindex\ package lists all authors cited in a \LaTeXe\ document from
+  the \ltxinp{\cite} entries and their associated \fnext{bib} bibliography
+  files.  It will not run with bibliographical entries (\ltxinp{\bibitem})
+  explicitly typed into the document. Each author entry in the generated list
+  contains the pages where these citations occur. Alternatively, the package
+  can list the labels of the citations that appear in the references rather
+  than the text pages. The package requires \perl\ (version 5 or higher) to run
+  an auxiliary script and \BibTeX. The package can be used by itself or as a
+  preprocessor for \mkindex. It can produce separate indices and mini indices,
+  which are merged in the bibliography. The package can run under Unix,
+  Windows, or MS-DOS. The \authorindex\ package is compatible with the standard
+  bibliographical styles distributed with \LaTeXe\ and with \package{hyperref}.
+  With the small patches listed here, it will also run with the
+  \package{chapterbib}, \package{chicago}, \package{harvard}, and
+  \package{natbib} bibliographical style packages.
+\end{abstract}
+
+
+\section{Installation}
+
+The \authorindex\ package consists of the \LaTeX\ style file \aisty\ and the
+\perl\ script \aiperl. It needs \LaTeXe, \BibTeX\ \cite{Patashnik88a} and
+\perl\ (version 5 or better) to run.
+
+To install the package, move \aisty\ to a place where \LaTeX\ looks for its
+style files.  Unix: The \perl\ script \aiperl\ must be moved to a place in your
+executable path and be given execution permission.  You may need to modify the
+path to the \perl\ binary that appears in the first line of the script \aiperl,
+replacing \file{/usr/bin/perl} by the correct path for your system. MS-DOS: A
+\perl\ processor for MS-DOS such as \package{ActivePerl} can process the
+\LaTeX\ auxiliary file \fnext{aux} in a command window to produce the
+\authorindex\ file \fnext{ain}.
+
+
+\section{Using the package}
+
+The \LaTeX\ source code includes the \ltxinp{authorindex} package
+via a \ltxinp{\usepackage} statement.  It may also be necessary to
+replace your \ltxinp{\cite} commands by \ltxinp{\aicite}
+commands\footnote{If you put the statement
+\ltxinp{\let}\ltxinp{\cite}\ltxinp{=}\ltxinp{\aicite} in the
+preamble after the loading of the package, \ltxinp{\cite} commands
+will be equivalent to \ltxinp{\aicite} commands, and you will not
+need to modify your text.}.  The \ltxinp{\aicite} command behaves
+like \ltxinp{\cite} but writes additional information to the
+\fnext{aux} file needed to generate the author index.
+
+Additional commands are available. The command \ltxinp{\aimention} enters a
+name into the author index that does not appear in the bibliography file
+\fnext{bib}. It is not strictly a ``citation'' command because it doesn't add a
+citation to the text. Its argument is an author name in the \BibTeX\ name
+format like \ltxinp{\aimention\{Carl Friedrich Gau\{\string\ss\}\}}, for
+example. This command is designed to bridge the gap with keyword indices and
+might be useful for referring to famous people whose work (in contrast to their
+publications) is common knowledge.  Multiple names are possible if they are
+separated by \ltxinp{and} as in the standard \BibTeX\ author format.  The
+command \ltxinp{\aionly} expects a bibliography key and puts the corresponding
+authors in the author index without generating a citation.  In a sense, it is
+similar to \ltxinp{\nocite}.
+
+Producing the author index requires only a few steps. Run the \perl\ script
+\aiperl\ and \LaTeX\ sequentially; the procedure is similar to producing the
+bibliography output from \BibTeX. The command \ltxinp{\printauthorindex} marks
+the point where the author index is to appear in the \LaTeX\ output.  A typical
+sequence to run the tools would be \LaTeX, \BibTeX, \authorindex, \LaTeX,
+\authorindex, \LaTeX. For MS-DOS or Windows, the \authorindex\ step would be
+processed in a command window by an explicit statement like \cmdline{perl
+  authorindex \textit{example} [cr]}, where \textit{example} is the name of the
+\fnext{aux} file and ``\cmdline{[cr]}'' indicates the enter key. In a Unix
+environment, the \aiperl\ script can be invoked simply by the statement
+\cmdline{authorindex \textit{example} [cr]}.
+
+Options to the \authorindex\ package are available, invoked in the usually way
+\ltxinp{\usepackage[option\ldots]\{authorindex\}}. The option \ltxinp{withbib}
+automatically indexes the page where a bibliography entry appears in the
+references. There is also the possibility of generating an index that is merged
+into the corresponding bibliography entries themselves. This possibility is
+switched on by the package option \ltxinp{miniindex} discussed more below.
+
+The details of including the author index are left to the author.  Unlike the
+\LaTeX\ commands \ltxinp{\printindex} or the \ltxinp{\thebibliography}, the
+command \ltxinp{\printauthorindex} does not create a chapter or section
+heading. To format the author index in multiple columns on a page in a
+one-column document, use an additional package like \package{multicol}.  With
+this package, a two-column author index will be created with
+\begin{verbatim}
+\begin{multicols}{2}
+\printauthorindex
+\end{multicols}
+\end{verbatim}
+If you plan to generate several documents with author indices in a consistent
+style, consider redefining the \ltxinp{theauthorindex} environment to fit your
+needs.
+
+
+\section{Overall structure of the index}
+
+\subsection{Normal \fnext{ain} file}
+
+The \fnext{ain} file created by the \perl\ script \aiperl\ from the \fnext{aux}
+file and used by \ltxinp{\printauthorindex} will look like this:
+\begin{verbatim}
+\begin{theauthorindex}
+\item[May, Karl] \aipages{\aifirstpage{iv}, 2, \aibibpage{77}}
+\item[Musil, Robert] \aipages{7, 9, \aibibpage{\aifirstpage{77}}}
+\indexspace
+\item[Schmidt, Arno] \aipages{33, \aibibpage{78}}
+\item[Souter, Nathaniel] \aipages{29--\aifirstpage{36}}
+\end{theauthorindex}
+\end{verbatim}
+Note the provision for both text and bibliographical pages. Author names that
+start with different letters are separated by the statement
+\ltxinp{\indexspace}, which inserts a blank line between the groups. This
+command has no arguments but can be redefined according to your needs inside or
+outside the \ltxinp{theauthorindex} environment. Also, note the provision for a
+sequential range of pages.
+
+
+\subsection{Font sizes}
+
+The command \ltxinp{\aisize} controls the font size used for the author index.
+It expects no arguments. You can redefine it outside the
+\ltxinp{theauthorindex} environment to customize the font size. In most cases,
+it will be sufficient to use one of those options in the \authorindex\ package:
+\begin{description}
+\item[small] will cause the author index to be typeset in small size.
+\item[normal] (the default) will cause the author index to be typeset in the
+  normal text size.
+\end{description}
+
+
+\subsection{Separate entries for first and other authors}
+\label{sec:firstandothers}
+
+By default, \authorindex\ generates exactly one entry for each author in the
+index.  All pages with citations of the author's work go into this entry, no
+matter what the co-authors for the work that you cite are.
+
+You can change this behavior with the \ltxinp{\aisee} command.  You call
+\ltxinp{\aisee} in the preamble of your document with a string argument.  For
+authors that are not the first in the author list of a work cited,
+\authorindex\ generates an entry with this authors name, followed by the string
+you have given to \ltxinp{\aisee}, followed by the name of the first author of
+the cited work.  Entries for authors that are first (or even only) authors of a
+work are listed in the author index as usual.
+
+For example, if you write in German, you'd put
+\begin{verbatim}
+\aisee{, siehe }
+\end{verbatim}
+in your preamble.  If you write in English, you would use ``see'' instead of
+``siehe''.  For example, assume that we cite works with the following author
+lists: ``A.  Schmidt, R. Musil, and K. May'' (cited on page 4); ``R.  Walser
+and K. May'' (and page 4 and 5); ``R.  Musil'' (on page 3); `R. Musil and N.
+Souter'' (on page 5); ``N. Souter and R.  Musil'' (on page 2 and 6).  Then, the
+entries starting with ``M'' in the \fnext{ain} file look like like
+\begin{verbatim}
+\item[\aitop{May, K.}, siehe \aifirst{Schmidt, A.}] \aipages{4}
+\item[\airep{May, K.}, siehe \aifirst{Walser, R.}] \aipages{4, 5}
+\item[Musil, R.] \aipages{\aifirstpage{3}, \aifirstpage{5}}
+\item[\airep{Musil, R.}, siehe \aifirst{Souter, N.}] \aipages{2, 6}
+\item[\airep{Musil, R.}, siehe \aifirst{Schmidt, A.}] \aipages{4}
+\end{verbatim}
+
+
+\subsection{Mini indices}
+\label{sec:mini}
+
+Alternatively (or additionally) to the usual author index, you can use the
+package option \ltxinp{miniindex} in the preamble to cause \aiperl\ to merge a
+mini index directly into your bibliography file; that is, the merge modifies
+the \fnext{bbl}-file. This procedure requires that you run \aiperl\ 
+\emph{after} you run \bibtex.  The page list is put into the single argument of
+the command \ltxinp{\bibindex}.  By default, \ltxinp{\bibindex} prints nothing
+if its argument is empty.  Otherwise, it passes the argument to
+\ltxinp{\aibibindex}, which prints the pages in bold type enclosed by braces
+(for example, \textbf{\{10, 11, 36\}}), as in Nelson F. Beebe's author index
+package \cite{Beebe98}.  For alternatives, you can redefine
+\ltxinp{\aibibindex} using \ltxinp{\renewcommand}.  For obvious reasons, a mini
+index always contains the page numbers, even if the \ltxinp{biblabels} package
+option is used.
+
+Normally, the mini index is placed at the end of each item.  You can change
+this by hacking your bibliography style file.  Let it place \verb|\bibindex{}|
+on it's own line where you want the mini index to go, and \aiperl\ will do the
+rest.
+
+\section{Author names}
+
+\subsection{Which names to include in the index?}
+
+There are two package options to \authorindex\ to select which type of names to
+include in the index:
+\begin{description}
+\item[editors] will cause the editor names to be included in the author index.
+\item[avoideditors] will cause the editors names to be included only if there
+  are no author names present for a cited work
+\item[onlyauthors] (the default) will restrict the author index to the author names.
+\end{description}
+Previous comments concerning authors will also apply to editors when the
+\ltxinp{editors} option is invoked.
+
+The command
+\ltxinp{\aimaxauthors[}\textit{trunc\/}\verb|]{|\textit{max\/}\verb|}| limits
+the maximum number of authors per work that will be included in the author
+index. The optional first argument \textit{trunc\/} determines the number of
+authors to be included if the maximum number is exceeded.  If it is omitted,
+\textit{trunc\/} is assumed equal to \textit{max}. Thus,
+\ltxinp{\aimaxauthors[1]}\verb|{3}| will set the maximum number of authors to
+3; for works with more than three authors only the first one will be included.
+In this example, for a work by ``A.  Schmidt, R. Musil, and K. May'', all of
+them will appear in the author index while, for a four-author work by ``A.
+Schmidt, R.  Musil, K. May, and N. Souter'', only Schmidt will.  This usage is
+similar to the ``et al.'' commonly used in in bibliographies.  With
+\ltxinp{\aimaxauthors}\verb|{3}|, on the other hand, for works with more than 3
+authors, the 3 first ones will be included.  For the two example author lists,
+in both cases, Schmidt, Musil, and May will be listed.
+
+The \authorindex\ package accepts package options for only the most important
+cases:
+\begin{description}
+\item[onlyfirst] sets the maximum number of authors (or editors) per work that
+  will be included in the index to 1.  It corresponds to
+  \verb|\aimaxauthors{1}|.
+\item[all] (the default) sets the maximum number of authors (or editors) per
+  work that will be included to 9999.  It corresponds to
+  \verb|\aimaxauthors{9999}|.
+\end{description}
+
+
+\subsection{Formatting and sorting}
+
+The command \ltxinp{\ainamefmt} contains the specification for formatting and
+ordering names. Its argument is a string consisting of one or more parts
+separated by semicolons.  Each part is made up of one or two components,
+separated by a colon.  If there is only one component, the both components are
+assumed to be equal.  Each of the two component consists of a \BibTeX-format
+string \cite{Patashnik88b}. The first component formats the way the names are
+printed in the index; the second component, the way the names are sorted.  It
+is therefore possible to include the same name multiple times in the index,
+each time sorted or printed differently. One restriction is that you cannot
+have different printed representations that have the same sort format. Because
+\ltxinp{\ainamefmt} can be messy to use, a few simple cases can be selected by
+options to the \authorindex\ package: {\small
+\begin{description}
+\item[lastname] will only include the last name of the authors (and titles like
+  ``von'', if present).
+\item[firstabbrev] will also include the abbreviated first name(s) (and
+  eventually also a ``jr.''), following the last name.
+\item[fullname] (the default) will spell the names in full, to the extent given
+  in the \fnext{bib} file.
+\end{description}}
+
+For example, the package options \ltxinp{fullname}, \ltxinp{lastname}, and
+\ltxinp{firstabbrev} correspond following uses of \ltxinp{\ainamefmt}:
+\begin{verbatim}
+\ainamefmt{{vv }{ll}{, ff}{, jj}}} % fullname
+\ainamefmt{{vv }{ll}}}             % lastname
+\ainamefmt{{vv }{ll}{, f.}{, jj}}} % firstabbrev
+\end{verbatim}
+For a more complex example, assume we want to format the names like for
+\ltxinp{firstabbrev} but, in addition to the normal sorting, we also want to
+sort in names that have a `von'-part ignoring that part.  In other words, we
+want C. F. von Weizs\"{a}cker to appear both under ``V'' and ``W'' in the
+index, but nonetheless always typeset as ``von Weizs\"{a}cker, C. F.'':
+\begin{verbatim}
+\ainamefmt{%
+  {vv }{ll}{, f.}{, jj};%
+  {vv }{ll}{, f.}{, jj}:{ll}{vv }{, f.}{, jj}%
+}
+\end{verbatim}
+This approach would also work for name prefixes like ``van'' or ``de la''.
+
+Note that the command \ltxinp{\indexspace}, which separates entries that start
+with a different letters, is placed according to the format used for sorting.
+
+\subsection{Fonts for the names}
+
+\ltxinp{\ainame} is a command with one argument.  It determines how the
+argument of \ltxinp{\item} inside the \ltxinp{theauthorindex} environment is
+printed.
+
+The command \ltxinp{\aifirst} has one argument.  It is used to typeset the name
+of the leading author from an entry with an additional author when using the
+command \ltxinp{\aisee}. The command \ltxinp{\aitop} typesets the name of the
+first occurrence of an additional author, that is, an author name before the
+string defined by \ltxinp{\aisee}.
+
+Finally, \ltxinp{\airep} typesets a name that has already been used in the
+previous index entry.  Look at the example in section~\ref{sec:firstandothers}
+for clarification.
+
+By redefining these commands, you can do more than just selecting fonts.  One
+example would be to redefine
+\begin{verbatim}
+\renewcommand{\airep}[1]{---}
+\end{verbatim}
+to cause the name of an author to printed only once when it occurs in many
+subsequent entries.
+
+
+\subsection{Advanced customization}
+\label{sec:bsthacker}
+
+If the standard command \ltxinp{\ainamefmt} does not provide enough
+flexibility, you can use the command \ltxinp{\authorindexstyle} in the
+preamble. Its single argument is the name of some \fnext{bst}-file that you
+select to format the author names.
+
+If you decide to write a custom \fnext{bst}-file, it is necessary to understand
+hacking \fnext{bst} files, e.~g.\ by reading \cite{Patashnik88b}. Your \BibTeX\ 
+style file needs to generate a \fnext{bbl} file that contains three lines for
+each author-label pair.  The first line is the name formatted according to your
+taste, as it appears in the index.  The second line is the name format used for
+sorting. The third line contains the label of the citation, or is empty.  In
+the latter case, the label of the previous three line entry is taken;
+furthermore, this entry is assumed to refer to the same author as the current
+one --- differing only in the formatting or sorting rule. The default
+\fnext{bst} file used to format the names is embedded in the \perl\ script
+\aiperl. You could use this as template. Use the command line option
+\option{-k} for \aiperl\ (see Sec.~\ref{sec:Runai}).
+
+The first author of the work is expected to be dumped into the \fnext{bbl} file
+first.
+
+
+\section{Page numbers and bibliography labels}
+
+\subsection{Page numbers or bibliography labels?}
+
+You have to possibility of selecting whether you want the page numbers or the
+bibliography numbers of the references to appear in the index. This selection
+is done through the package options
+\begin{description}
+\item[biblabels] will include in the author index the reference label as it
+  appears in the reference list instead of the page numbers.
+\item[pages] (the default) the pages of the citations.
+\end{description}
+With the option \ltxinp{biblabels}, every citation will be indexed. There is no
+need to use the special citation commands \ltxinp{\aicite}, unless you want to
+have a mini index as well (see section \ref{sec:mini}).  With this option, it
+makes no sense to use either the \ltxinp{\aimention} command or the
+\ltxinp{withbib} package option.
+
+While this manual has referred to ``pages, '' it also applies to the indexing
+of bibliography labels unless explicitly noted otherwise.
+
+
+\subsection{Ordering of pages and compression of page ranges}
+
+The command \ltxinp{\aipagetypeorder}\verb|{|\textsl{order\/}\verb|}| can be
+used to determine the relative order of different types of page numbers, such
+as roman, arabic, and others. The argument \textsl{order\/} is a string
+consisting of a selection of the characters \ltxinp{rRnAa}, which indicate
+lowercase roman, uppercase roman, arabic, uppercase alphabetic, and lowercase
+alphabetic page numbers, respectively. The relative order of the letters in the
+string determine the order of the page numbers. For example, the argument
+\ltxinp{rn} will sort all lowercase roman pages before the arabic pages. If you
+want to use lowercase alphabetic numbers, you have to use
+\ltxinp{\aipagetypeorder} without putting \ltxinp{r} in the string; that is,
+you can't use lowercase roman numbers and lowercase alphabetic numbers at the
+same time. The same holds for using uppercase roman and alphabetical page
+numbers. Composite page numbers (like ``4-17'') are split into their components
+(using any character that cannot be interpreted as a digit as field separator)
+and sorted with the priority of components decreasing from left to right.
+
+Normally, three or more adjacent page numbers are ``compressed.''  If an author
+citation appears on pages 4.17, 4.18, and 4.19, the page range will appear as
+``4.17--4.19'' in the index entry.  However, a range of only two consecutive
+pages will not be compressed. To represent such a pair by the first page number
+plus some string (typically, ``f''), specify that string as the argument of
+\ltxinp{\aitwosuffix} in the preamble.  You can suppress range compression
+altogether by using the \ltxinp{nocompress} package option.
+
+
+\subsection{Fonts used for the pages}
+
+The command \ltxinp{\aipages} determines the overall font of the page numbers.
+The \ltxinp{\aibibpage} command is used to switch on additional properties to
+mark the pages that contain the bibliography entries of works of the author ---
+relevant if the \ltxinp{withbib} package option is used.  \ltxinp{\aifirstpage}
+is used to print page numbers of references in which the author is the leading
+author. All three commands expect one argument and can be redefined by
+\ltxinp{\renewcommand}.
+
+\subsection{Modifying the page numbers}
+\label{sec:pagerep}
+
+The command \ltxinp{\theaipage} determines the string representing the page
+delivered to the \perl\ script \aiperl. This does not apply to bibliography
+labels, even if the \ltxinp{biblabels} package option is used.  By default,
+this is simply defined as \ltxinp{\thepage}, but you can redefine it.
+Originally, allowing \ltxinp{\theaipage} to differ from \ltxinp{\thepage} was
+intended for multi-volume books, where the page numbers in each volume do not
+indicate the volume number.  For example, page 231 of volume II will produce
+only a plain ``231'' as the page number, whereas you might prefer to have the
+indication of the volume in the index such as ``II-231''. You can also do more
+sophisticated things. For example, using the \package{hyperref} package with
+the \ltxinp{plainpages=false} option to create hyperlinks to the page where the
+citation is:
+\begin{verbatim}
+\def\theaipage{\string\hyperpage{\thepage}}
+\end{verbatim}
+NB: To avoid keep \aiperl\ from interpreting the string \ltxinp{\hyperpage} as
+an alphabetic page number, you should not use alphabetic page numbering and
+tell the \perl\ script about it using \ltxinp{\aipagetypeorder}.
+
+
+\section{Running \aiperl}
+\label{sec:Runai}
+
+Having run \LaTeX\ on the properly prepared \LaTeX\ source document, you then
+use the \perl\ script \aiperl\ to process the generated \fnext{aux}-files,
+which produces the author index file (extension \fnext{ain}).
+
+The \perl\ script can be called with any number of arguments.  Without
+arguments, \aiperl\ reads from the standard input. With several arguments,
+\aiperl\ appends \fnext{aux} extensions wherever necessary and processes these
+files. The output is written to the file whose name is extracted from the
+\fnext{aux}-file where \ltxinp{\printauthorindex} was given. It is necessary to
+give the \fnext{aux}-file produced by the \fnext{tex}-file containing
+\verb|\begin{document}| to \aiperl; this file passes information to the script
+regarding the style and content of the index.
+  
+If you use \ltxinp{\include} in your \LaTeX\ source document, it is
+sufficient to give the master \fnext{aux}-file to \aiperl; the
+\fnext{aux}-files of included files are then processed automatically.
+
+\aiperl\ recognizes the following command line options:
+\begin{description}
+\item[-d] (``draft'') Adds additional information to the \fnext{ain} file: For
+  each author, the labels of all references and the page numbers where they are
+  cited are included as comments. This detail may help if you manually edit the
+  generated author index. Also, some statistics are included at the bottom of
+  the \fnext{ain} file. This option does not work with the \option{-i} option.
+\item[-h] (``help'') Prints out a
+  short help text.
+\item[-i] (``index'') Creates a file suitable for further processing with
+  \mkindex\ or the like. For example, you could use that to make a common
+  author and subject index. Note the extension of the generated file still will
+  be \fnext{ain}.  (Use the \option{-p} option and redirection to send the
+  stuff anywhere else.)
+\item[-k] (``keep'') Retains the temporarily generated \fnext{bst}-file after
+  \aiperl\ finishes. This information will give you a good starting point for
+  advanced customization of the author index (see Sec.~\ref{sec:bsthacker}).
+\item[-p] (``print'') Prints the result to standard output instead of writing
+  it to the \fnext{ain}-file.
+\item[-r] (``do not recurse'') Does not automatically process \fnext{aux}-files
+  produced by included files.
+\end{description}
+
+
+\section{\authorindex\ and other packages}
+
+\subsection{Compatible packages}
+
+\subsubsection{Standard distribution package}
+
+The standard \package{cite} package included with the \LaTeX\ distribution
+seems to work with \authorindex\ without problems.
+
+\subsubsection{chapterbib}
+
+The \package{chapterbib} package also works well with \authorindex.  If you
+want to use the mini indices, be sure to run \aiperl\ separately on the main
+\fnext{aux}-file plus the \fnext{aux}-file for each chapter using the
+\option{-r} option (see section \ref{sec:Runai}). In addition, you may want to
+run \aiperl\ on the main \fnext{aux}-file to generate an author index for all
+chapters. For example, you might use a sequence of the form:
+\begin{verbatim}
+ authorindex -r main chapter1
+ authorindex -r main chapter2
+ authorindex main
+\end{verbatim}
+If you require chapterwise author indices, after the first two \authorindex\ 
+runs in the above example, you should rename \file{main.ain} to something else
+and \ltxinp{\input} these files in the place where you want the chapterwise
+authorindex to appear.
+
+\subsubsection{hyperref}
+
+The script \authorindex\ works well with \package{hyperref}.  In the standard
+version, the pages in the author index are not linked back to the page with the
+citation.  Section \ref{sec:pagerep} describes how to fix this problem.
+
+\subsection{Less compatible packages}
+
+Most problems with other bibliographical packages arise because the packages
+override or skip certain citation functions. The \authorindex\ package modifies
+these functions to write page information along with the citation key to the
+\fnext{aux} file.  In the following examples, we show how to re-establish this
+additional output for a few specific packages. Please note that these ``fixes''
+may no longer work if newer versions of these packages appear.
+
+\subsubsection{\package{chicago}}
+
+The standard version of the \package{chicago} package does not work with
+\authorindex. For this package, there is a patch that apparently makes it work
+with \authorindex.  In the file \file{chicago.sty}, you replace the lines
+\begin{verbatim}
+\def\@citex[#1]#2{%
+\end{verbatim}
+with
+\begin{verbatim}
+\def\@citex[#1]#2{\@aicitey{#2}%
+\end{verbatim}
+and
+\begin{verbatim}
+\def\@citedatax[#1]#2{%
+\end{verbatim}
+with
+\begin{verbatim}
+\def\@citedatax[#1]#2{\@aicitey{#2}%
+\end{verbatim}
+and save the modified file under a new name, e.~g.\ \file{aichicago.sty}. Use
+this file in place of the file \file{chicago.sty}.
+
+
+\subsubsection{\package{harvard}}
+
+The \package{harvard} package can be made to work with \authorindex by adding
+code to the document preamble.  After loading the \package{harvard} package
+with \ltxinp{\usepackage}, write the following lines into the preamble of your
+\LaTeX-source file:
+\begin{verbatim}
+\makeatletter
+\renewcommand{\HAR@citetoaux}[1]{%
+  \if@filesw\immediate\write\@auxout{\string\citation{#1}}\fi%
+  \if@filesw\@for\@citeb:=#1\do{\immediate\write\@auxout{%
+      \string\citationpage{\@citeb}{\thepage}}}\fi}%
+\makeatother
+\end{verbatim}
+Then, in the main text, use the \package{harvard} citation commands
+\ltxinp{\cite}, \ltxinp{\citeyear}, etc., exactly as you would normally do
+without the \authorindex\ package.
+
+
+\subsubsection{\package{natbib}}
+
+Like \package{chicago}, the package \package{natbib} also conflicts with
+\authorindex.  Michael Friendly and Patrick W.\ Daly devised a fix for Nelson
+Beebe's \package{authidx} package \cite{Beebe98}, which the former posted to
+\texttt{comp.text.tex}.  With a few changes, it seems to work for \authorindex\ 
+too.  You insert in your \file{natbib.cfg} the following lines:
+\begin{verbatim}
+% natbib.cfg
+% Asoundingly Egregious Hack to make natbib work with authorindex
+% package:
+% - This tacks on to \NAT@citex, which is just for author-year
+%   style citations.  There's probably a better way
+\AtBeginDocument{%
+\@ifpackageloaded{authorindex}{%
+  \let\org@@citex\NAT@citex
+  \def\@citex[#1][#2]#3{%
+    \typeout {indexing: [#1][#2]{#3}}
+    \org@@citex[#1][#2]{#3}\@aicitey{#3}}}{}}
+\endinput
+\end{verbatim}
+Please note that I tested this work-around superficially.  It does not repair a
+conflict that occurs when the \authorindex\ package option \ltxinp{withbib} is
+used.
+
+
+\section{Problems and restrictions}
+
+Currently, I am aware of the following problems and restrictions:
+\begin{itemize}
+\item Compression of page numbers ignores whether the pages will be printed in
+  the same font; that is, you might get something like ``7--\textbf{9}''.
+\item Compression always uses the full page numbers, that is you will always
+  get something like ``4.8--4.10'' rather than ``4.8--10''.
+\item Sorting of names is restricted.  At this time, special characters are
+  stripped, the case is ignored, and a normal comparison according to the
+  ASCII~Code is done.  This might not be what you want if you have accented
+  characters.  Consider using the option \option{-i} in conjunction with
+  additional processing by a more flexible tool.
+\item If you use \ltxinp{\aicite} with multiple arguments and a page break
+  occurs within the list of generated references, one part of the citations
+  will be associated with the wrong page.
+\item The package will fail for author names longer than 79 characters
+  (including spaces, commas, etc) or for very long citation labels. These force
+  a line break in \BibTeX\ output.  Future versions of \BibTeX\ may help.
+\item You can not use the package when you explicitly type your bibliography in
+  your \LaTeX\ file (\ltxinp{\bibitem}) instead of using \BibTeX. Consider
+  using \BibTeX\ instead.  It is a powerful bibliographical tool worth the
+  small additional effort.
+\end{itemize}
+
+\section{Acknowledgement}
+
+I want to thank Mark A. Gordon for his substantial improvements to the language
+and presentation in this manual.
+
+\begin{thebibliography}{3}
+
+\bibitem{Patashnik88a}
+\textsc{O.~Patashnik}.
+\newblock \textsl{{\BibTeX ing}} (1988).
+\newblock Documentation for general {\BibTeX} users.
+
+\bibitem{Beebe98}
+\textsc{N.~H.~F. Beebe}.
+\newblock \textsl{{AUTHIDX}: An author/editor indexing package}.
+\newblock TUGboat \textbf{19}(1):1001--1007 (1998).
+
+\bibitem{Patashnik88b}
+\textsc{O.~Patashnik}.
+\newblock \textsl{Designing {\BibTeX} styles} (1988).
+\newblock The part of \BibTeX's documentation that's not meant for general
+  users.
+
+\end{thebibliography}
+
+\end{document}

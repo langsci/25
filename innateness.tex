@@ -1,0 +1,2791 @@
+%% -*- coding:utf-8 -*-
+\exewidth{(235)}%
+
+\chapter{The innateness of linguistic knowledge}
+\label{Abschnitt-Angeborenheit}\label{chap-innateness}
+%
+% Haspelmath2010c:391 tendencies
+
+
+If we try and compare the theories presented in this book, we notice
+that there are a number of similarities.\footnote{
+  The terms \emph{theory} and \emph{framework} may require clarification. A framework is a common
+  set of assumptions and tools that is used when theories are formulated. In this book, I discussed
+  theories of German. These theories were developed in certain frameworks (GB, GPSG, HPSG, LFG, \ldots) and of course there are
+  other theories of other languages that share the same fundamental assumptions. These theories
+  differ from the theories of German presented here but are formulated in the same
+  framework. \citet{Haspelmath2010c} argues for framework-free grammatical theory. If grammatical
+  theories used incompatible tools, it would be difficult to compare languages. So assuming
+  transformations for English nonlocal dependencies and a \slasch mechanism for German would make
+  comparison impossible. I agree with Haspelmath that the availability of formal tools may lead to
+  biases, but in the end the facts have to be described somehow. If nothing is shared between
+  theories, we end up with isolated theories formulated in one man frameworks. If there \emph{is} shared
+  vocabulary and if there are standards for doing framework"=free grammatical theory, then the
+  framework is framework"=free grammatical theory. See
+  \citet{MuellerCoreGram} and Chapter~\ref{Abschnitt-UG-mit-Hierarchie} of this book for further discussion.
+}
+In all of the frameworks, there are variants of theories that use feature"=value pairs to describe linguistic objects.
+The syntactic structures assumed are sometimes similar. Nevertheless, there are some differences that have often led to fierce debates
+between members of the various schools. Theories differ with regard to whether they assume transformations, empty elements, phrasal or lexical analyses,
+binary branching or flat structures.
+
+Every theory has to not only describe natural language, but also explain it. It is possible to
+formulate an infinite number of grammars that license structures for a given language (see Exercise~\ref{ua-psg-eins} on page~\pageref{ua-psg-eins}). These grammars are \emph{observationally adequate}\is{observational adequacy}.
+A grammar achieves \emph{descriptive adequacy}\is{descriptive adequacy} if it corresponds to observations and the intuitions of native speakers.\footnote{
+This term is not particularly useful as subjective factors play a role. Not everybody finds grammatical theories intuitively correct where it is assumed that every
+observed order in the languages of the world has to be derived from a common
+Specifier"=Head"=Complement configuration, and also only by movement to the left (see Section~\ref{Abschnitt-Kaynesche-Modelle} for the discussion of such proposals).
+}
+A linguistic theory is descriptively adequate if it can be used to formulate a descriptively adequate grammar for every natural language. However, grammars achieving descriptive
+adequacy do not always necessarily reach \emph{explanatory adequacy}\is{explanatory adequacy}. Grammars that achieve explanatory adequacy are those that are compatible with
+acquisition data\is{language acquisition}, that is, grammars that could plausibly be acquired by human speakers \citep[\page
+  24--25]{Chomsky65a}.
+
+\citet[\page 25]{Chomsky65a} assumes that children already have domain"=specific knowledge about what grammars could, in principle, look like and then extract information about what
+a given grammar actually looks like from the linguistic input. The most prominent variant of acquisition theory in Mainstream Generative Grammar (MGG) is the Principles \& Parameters
+theory, which claims that parametrized principles restrict the grammatical structures possible and
+children just have to set parameters during language acquisition
+(see Section~\ref{Abschnitt-GB-Paramater}).
+
+Over the years, the innateness hypothesis, also known as nativism\is{nativism}, has undergone a number of modifications.
+In particular, assumptions about exactly what forms part of the innate linguistic knowledge,
+so"=called Universal Grammar (UG)\is{Universal Grammar (UG)}, have often been subject to change.
+
+Nativism is often rejected by proponents of Construction Grammar\indexcxg, Cognitive
+Grammar\is{Cognitive Grammar} and by many other researchers working in other theories. Other
+explanations are offered for the facts normally used to argue for the innateness of grammatical
+categories, syntactic structures or relations between linguistic objects in syntactic structures.
+Another point of criticism is that the actual complexity of analyses is blurred by the fact that many of the stipulations are simply assumed to be part of UG.
+The following is a caricature of a certain kind of argumentation in GB/Minimalism analyses: 
+
+\begin{enumerate}
+\item I have developed an analysis for the phenomenon P in the language S.
+\item The analysis is elegant/conceptually simple/mine\footnote{
+    Also, see
+    \url{http://www.youtube.com/watch?v=cAYDiPizDIs}. 01.12.2015.\nocite{Zappa86a}\aimention{Frank Zappa}
+}.
+\item There is no possibility to learn the relevant structures or principles.
+\item Therefore, the assumptions A$_1$ through A$_n$ that are made in this analysis must be part of the innate knowledge
+of speakers.
+\end{enumerate}
+By attributing arbitrary assumptions to UG, it is possible to keep the rest of the analysis very
+simple.
+
+The following section will briefly review some of the arguments for language"=specific innate knowledge.
+We will see that none of these arguments are uncontroversial. In the following chapters, I will discuss fundamental
+questions about the architecture of grammar, the distinction between competence and performance and how to model
+performance phenomena, the theory of language acquisition as well as other controversial questions, \eg 
+whether it is desirable to postulate empty elements in linguistic representations and whether language should
+be explained primarily based on the properties of words or rather phrasal patterns.
+
+Before we turn to these hotly debated topics, I want to discuss the one that is most fiercely
+debated, namely the question of innate linguistic knowledge. In the literature, one finds the
+following arguments for innate knowledge:
+
+\begin{itemize}
+\item the existence of syntactic universals,
+\item the speed of acquisition,
+\item the fact that there is a `critical period' for language acquisition,
+\item the fact that all children learn a language, but primates do not,
+\item the fact that children spontaneously regularize pidgin languages, 
+\item the localization of language processing in particular parts of the brain,
+\item the alleged dissociation of language and general cognition:
+\begin{itemize}
+\item Williams Syndrome,
+\item the KE family with FoxP2 mutation and
+\end{itemize}
+\item the Poverty of the Stimulus Argument.
+\end{itemize}
+\citet{Pinker94a} offers a nice overview of these arguments. \citet{Tomasello95a} provides a critical review of this book. The individual points will be discussed in what follows.
+
+\section{Syntactic universals}
+\label{sec-syntactic-universals}
+
+The\is{universal|(} existence of syntactic universals has been taken as an argument for the innateness of linguistic knowledge
+(\eg \citealp[\page 33]{Chomsky98a-u}; %\citealp[\page 46--47]{Chomsky88a-u}; %\citealp[\page 46--47]{Chomsky88a}, ist in Stanford falsch zitiert
+\citealp[\page 237--238]{Pinker94a}). There are varying claims in the literature with regard to what is universal and 
+language"=specific. The most prominent candidates for universals are:\footnote{
+Frans Plank\aimention{Frans Plank} has an archive of universals in Konstanz \citep{PF2000a}:
+\url{http://typo.uni-konstanz.de/archive/intro/}. On 23.12.2015, it contained 2029 entries.
+The entries are annotated with regard to their quality, and it turns out that many of the universals
+are statistical universals, that is, they hold for the overwhelming majority of languages, but there are
+some exceptions. Some of the universals are marked as almost absolute, that is, very few exceptions are known.
+1153 were marked as absolute or absolute with a question mark. 1021 of these are marked as absolute without
+a question mark. Many of the universals captured are implicational universals\is{universal!implicational}, that is, they have the form:
+if a language has the property X, then it also has the property Y. The universals listed in the archive
+are, in part, very specific and refer to the diachronic development of particular grammatical
+properties. For example, the fourth entry states that: \emph{If the exponent of
+  vocative is a prefix, then this prefix has arisen from 1st person possessor or a 2nd person
+  subject.} 
+}\nocite{Harbour2011a}
+
+\begin{itemize}
+\item the Head Directionality Parameter
+\item \xbar structures
+\item grammatical functions such as subject or object
+\item binding principles
+\item properties of long"=distance dependencies
+\item grammatical morphemes for tense, mood and aspect
+\item parts of speech
+\item recursion or self"=embedding
+\end{itemize}
+
+\noindent
+These supposed universals will each be discussed briefly in what follows. One should emphasize that there is by no means
+a consensus that these are universal and that the observed properties actually require postulating innate linguistic
+knowledge.
+
+\subsection{Head Directionality Parameter}
+\label{Abschnitt-Kopfstellungsparameter}
+
+% a month ago -> head final
+% counterexamples notwithstanding
+\mbox{}\is{parameter!head direction|(}%
+The Head Directionality Parameter was already introduced in Section~\ref{Abschnitt-GB-Paramater}. The examples in (\ref{Bsp-Kopfstellungsparameter}) on
+page~\pageref{Bsp-Kopfstellungsparameter}, repeated below as (\mex{1}), show that the structures in Japanese are the mirror image of the English structures:
+\eal
+\label{Bsp-Kopfstellungsparameter-zwei}
+\ex 
+be showing pictures of himself
+\ex
+\gll zibun  -no syasin-o mise-te iru\\
+     himself \hspaceThis{-}of picture showing be\\
+\zl
+In order to capture these facts, a parameter was proposed that is responsible for the position of the head relative to its
+arguments (\eg Chomsky \citeyear[\page 146]{Chomsky86}; \citeyear[\page 70]{Chomsky88a-u}). 
+
+By assuming a Head Directionality Parameter, Radford (\citeyear[\page 60--61]{Radford90a-u}; \citeyear[\page 19--22]{Radford97a-u}), \citet[\page 234, 238]{Pinker94a}, \citet[\page 350]{Baker2003b}
+and other authors claim, either explicitly or implicitly, that there is a correlation between the direction of government of verbs and that of adpositions, that is, languages
+with verb"=final order have postpositions and languages with VO order have prepositions. This claim
+can be illustrated with the language pair English\il{English}/""Japanese\il{Japanese} and the
+examples in (\mex{0}): the \emph{no} occurs after the pronoun in the prepositional phrase, the noun \emph{syasin-o} `picture' follows the PP belonging to it, the main verb follows its object and the
+auxiliary \emph{iru} occurs after the main verb \emph{mise-te}. The individual phrases are the exact mirror image of
+the respective phrases in English.
+
+A single counter example is enough to disprove a universal  claim and in fact, it is possible to
+find a language that has verb"=final order but nevertheless has prepositions.\todostefan{Martin:
+  Dryer's WALS chapters list dozens of examples of this sort.}
+Persian\il{Persian} is such a language. An example is given in (\mex{1}):
+\ea
+\gll man ketâb-â-ro be Sepide dâd-am.\\
+     I book-\pl-\RA{} to Sepide gave-1\sg\\
+\glt `I gave the books to Sepide.'
+\z
+In Section~\ref{Abschnitt-X-Bar}, it was shown that German cannot be easily described with this parameter: German is a verb"=final language but has both
+prepositions and postpositions. The World Atlas of Language Structures lists 41 languages with VO
+order and postpositions and 14 languages with OV order and prepositions.\footnote{
+  \url{http://wals.info/combinations/83A_85A#2/15.0/153.0}, 23.12.2015.
+}
+
+Furthermore, \citet[\page 422]{GW94a} point out that a single parameter for the position of heads would not be enough since complementizers in both English and German/Dutch
+occur before their complements, however, English is a VO language, whereas German and Dutch count as OV languages.
+
+If one wishes to determine the direction of government based on syntactic categories (\citealp[\page 422]{GW94a}, \citealp[\page 15]{Chomsky2005a}), then one has to assume
+that the syntactic categories in question belong to the inventory of Universal Grammar (see Section~\ref{Abschnitt-UG-Wortarten}, for more on this).
+Difficulties with prepositions and postpositions also arise for this kind of assumption as these are normally assigned to the same category (P).
+If we were to introduce special categories for both prepositions and postpositions, then a four"=way
+division of parts of speech like the one on page~\pageref{Tabelle-Merkmalszerlegung-Wortarten} would
+no longer be possible. One would instead require a binary feature in addition and one would thereby
+automatically predict eight categories although only five (the four commonly assumed plus an extra one) are actually needed.
+
+One can see that the relation between direction of government that Pinker formulated as a universal
+claim is in fact correct but rather as a tendency than as a strict rule, that is, there are many languages where
+there is a correlation between the use of prepositions or postpositions and the position the verb.\footnote{
+\citet[\page 234]{Pinker94a} uses the word \emph{usually} in his formulation. He thereby implies
+that there are exceptions and that the correlation between the ordering of adpositions and the
+direction of government of verbs is actually a tendency rather than
+a universally applicable rule. However, in the pages that follow, he argues that the Head Directionality Parameter forms part of innate linguistic knowledge.
+\citet[\page 55]{Travis84a-u} discusses data from Mandarin Chinese that do not correspond to the correlations she assumes. She then proposes treating the Head Directionality Parameter
+as a kind of Default Parameter that can be overridden by other constraints in the language.
+} 
+
+In many languages, adpositions have evolved from verbs. In Chinese\is{Mandarin Chinese} grammar, it is commonplace to refer to a particular class of words as coverbs\is{coverb}.
+These are words that can be used both as prepositions and as verbs. If we view languages historically, then we can find explanations for these tendencies that do not have to make
+reference to innate linguistic knowledge (see \citealp[\page 445]{EL2009a}). 
+
+Furthermore, it is possible to explain the correlations with reference to processing preferences: in languages with the same direction of government, the distance between the verb
+and the pre-/postposition is less (Figure~\ref{fig-head-position}a--b) than in languages with
+differing directions of government (Figure~\ref{fig-head-position}c--d).
+\begin{figure}
+\hfill
+%\begin{tabular}{cc}
+\subfloat[SVO with prepositions (common)]{
+\makebox[.4\textwidth]{
+\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=2\baselineskip}}
+%\tikzset{frontier/.style={distance from root=24\baselineskip}}
+\Tree[.IP NP
+       [.VP \node(v){V}; NP [.PP \node(p){P}; NP ] 
+       ]
+]
+\draw (v) |-  ([yshift=-5mm]v |- p) -| (p);
+\end{tikzpicture}}}
+\hfill
+\subfloat[SOV with postpositions (common)]{
+\makebox[.4\textwidth]{
+\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=2\baselineskip}}
+%\tikzset{frontier/.style={distance from root=24\baselineskip}}
+\Tree[.IP NP
+       [.VP [.PP NP \node(p){P}; ] NP \node(v){V};
+       ]
+]
+\draw (v) |-  ([yshift=-5mm]v |- p) -| (p);
+\end{tikzpicture}}}\hfill\mbox{}
+
+\hfill
+\subfloat[SVO with postpositions (rare)]{
+\makebox[.4\textwidth]{
+\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=2\baselineskip}}
+%\tikzset{frontier/.style={distance from root=24\baselineskip}}
+\Tree[.IP NP
+       [.VP \node(v){V}; NP [.PP NP \node(p){P}; ] 
+       ]
+]
+\draw (v) |-  ([yshift=-5mm]v |- p) -| (p);
+\end{tikzpicture}}}
+\hfill
+\subfloat[SOV with prepositions (rare)]{
+\makebox[.4\textwidth]{
+\begin{tikzpicture}
+\tikzset{level 1+/.style={level distance=2\baselineskip}}
+%\tikzset{frontier/.style={distance from root=24\baselineskip}}
+\Tree[.IP NP
+       [.VP [.PP \node(p){P}; NP ] NP \node(v){V};
+       ]
+]
+\draw (v) |-  ([yshift=-5mm]v |- p) -| (p);
+\end{tikzpicture}}}
+\hfill\mbox{}
+\caption{Distance between verb and preposition for various head orders according to \citet[\page 221]{Newmeyer2004b}}\label{fig-head-position}
+\end{figure}%
+From the point of view of processing, languages with the same direction of government should be preferred since they allow the hearer to better identify the parts
+of the verb phrase (\citet[\page 219--221]{Newmeyer2004b} cites \citew[\page 32]{Hawkins2004a-u}
+with a relevant general processing preference). This tendency can thus be explained as the
+grammaticalization of a performance preference (see Chapter~\ref{Abschnitt-Diskussion-Performanz}
+for the distinction between competence and performance) and recourse to innate language"=specific
+knowledge is not necessary.%
+\is{parameter!head direction|)}
+
+\subsection{\xbar structures}
+\label{sec-Diskussion-X-Bar}
+
+It\is{X theory@\xbar theory|(} is often assumed that all languages have syntactic structures that
+correspond to the \xbar schema (see Section~\ref{sec-xbar}) (\citealp[\page
+238]{Pinker94a}; \citealp[\page 11, 14]{Meisel95a}; \citealp[\page 216]{PJ2005a}). There are, however, languages such as Dyirbal\il{Dyirbal} (Australia) where it does not seem
+to make sense to assume hierarchical structure for sentences.
+Thus, \citet[\page 110]{Bresnan2001a} assumes that Tagalog\il{Tagalog}, Hungarian\il{Hungarian},
+Malayalam\il{Malayalam}, Warlpiri\il{Warlpiri}, Jiwarli\il{Jiwarli}, Wambaya\il{Wambaya},
+Jakaltek\il{Jakaltek}
+and other corresponding languages do not have a VP node, but rather a rule taking the form of (\mex{1}): 
+\ea
+S $\to$ C$^*$
+\z
+Here, C$^*$ stands for an arbitrary number of constituents and there is no head in the structure.
+Other examples for structures without heads will be discussed in Section~\ref{Abschnitt-Phrasale-Konstruktionen}.
+
+\xbar structure was introduced to restrict the form of possible rules. The assumption was that these restrictions reduce the class
+of grammars one can formulate and thus -- according to the assumption -- make the grammars easier to
+acquire. But as \citet{KP90a} have shown,
+the assumption of \xbar structures does not lead to a restriction with regard to the number of possible grammars if one allows for empty heads\is{empty element}.
+In GB, a number of null heads were used and in the Minimalist Program\indexmp, there has been a
+significant increase of these. For example, the rule in (\mex{0}) can be reformulated as follows:
+\ea
+V$'$ $\to$ \vnull C$^*$
+\z
+Here, \vnull is an empty head. Since specifiers are optional, V$'$ can be projected to VP and we arrive at a structure corresponding to
+the \xbar schema.
+
+Apart from the problem with languages with very free constituent order, there are further problems with adjunction structures: Chomsky's analysis of adjective structure
+in \xbart (\citealp[\page 210]{Chomsky70a}; see also Section~\ref{sec-xbar} of this book, in
+particular Figure~\vref{Abbildung-AP}) is not straightforwardly applicable to German since, unlike
+English, adjective phrases in German are head"=final and degree modifiers must directly precede the
+adjective: 
+\eal
+\ex[]{
+\gll der auf seinen Sohn sehr stolze Mann\\
+	 the of his son very proud man\\
+\glt `the man very proud of his son'
+}
+\ex[*]{
+\gll der sehr auf seinen Sohn stolze Mann\\
+	 the very of his son proud man\\
+}
+\ex[*]{
+\gll der auf seinen Sohn stolze sehr Mann\\
+	 the of his son proud very man\\
+}
+\zl
+Following the \xbar schema, \emph{auf seinen Sohn} has to be combined with \emph{stolze} and only then can the
+resulting \abar projection be combined with its specifier (see Figure~\vref{Abbildung-AP} for the structure of adjective
+phrases in English). It is therefore only possible to derive orders such as (\mex{0}b) or (\mex{0}c). Neither of these
+is possible in German. It is only possible to rescue the \xbar schema if one assumes that German is
+exactly like English and, for some reason, the complements of adjectives must be moved to the left. If we allow these kind of repair
+approaches, then of course any language can be described using the \xbar schema. The result would be that one would have
+to postulate a vast number of movement rules for many languages and this would be extremely complex and difficult
+to motivate from a psycholinguistic perspective. See Chapter~\ref{Abschnitt-Diskussion-Performanz} for grammars compatible with performance.
+
+A further problem for \xbart in its strictest form as presented in Section~\ref{sec-xbar} is posed by so"=called hydra clauses\is{hydra clause} \citep{PR70a,Link84a-u,Kiss2005a}:
+\eal
+\ex {}
+\gll [[der Kater] und [die Katze]], die einander lieben\\
+     \spacebr{}\spacebr{}the tomcat and the cat that each.other love\\
+\glt `the tomcat and the (female) cat that love each other'
+\ex {}[[The boy] and [the girl]] who dated each other are friends of mine. 
+\zl
+Since the relative clauses in (\mex{0}) refer to a group of referents, they can only attach to the result of the coordination.
+The entire coordination is an NP, however, and adjuncts should actually be attached at the \xbar level. The reverse case of relative clauses
+in German and English is posed by adjectives in Persian: \citet{Samvelian2007a} argues for an analysis where adjectives are combined with nouns
+directly, and only the combination of nouns and adjectives is then combined with a PP argument.
+
+The discussion of German and English shows that the introduction of specifiers and adjuncts cannot be restricted to particular projection levels, and
+the preceding discussion of non"=configurational languages has shown that the assumption of intermediate levels does not make sense for every language.
+
+It should also be noted that Chomsky himself assumed in 1970 that languages can deviate from the \xbar
+schema \citeyearpar[\page 210]{Chomsky70a}.
+
+If one is willing to encode all information about combination in the lexicon, then one could get by with very abstract combinatorial rules that would hold universally.
+An example of this kind of combinatorial rules is the multiplication rules of Categorial Grammar\is{Categorial Grammar (CG)} (see Chapter~\ref{Kapitel-CG}) 
+as well as Merge\is{Merge} in the Minimalist Program\indexmp (see Section~\ref{Abschnitt-MP}).
+The rules in question simply state that two linguistic objects are combined. These kinds of
+combination of course exist in every language. With completely lexicalized grammars, however, it is only possible to describe languages
+if one allows for null heads and makes certain ad hoc assumptions. This will be discussed in
+Section~\ref{Abschnitt-Phrasale-Konstruktionen}.\is{X theory@\xbar theory|)} 
+
+\subsection{Grammatical functions such as subject and object}
+\label{Abschnitt-UG-EPP}
+
+\mbox{}\citet[\page xxv]{BK82a}, \citet[\page 236--237]{Pinker94a}\is{subject|(}\is{object|(}\is{grammatical function|(}, \citet[\page 349]{Baker2003b} 
+and others assume that all languages have subjects and objects. In order to determine what exactly this claim means, we have to explore the terms
+themselves. For most European languages, it is easy to say what a subject and an object is (see Section~\ref{Abschnitt-GF}), however,
+it has been argued that it is not possible for all languages or that it does not make sense to use
+these terms at all (\LATER{\citealp{Durie85a}; }\citealp[Chapter~4]{Croft2001a}; \citealp[Section~4]{EL2009a}).
+
+In theories such as LFG\indexlfg{} -- the one in which Pinker worked -- grammatical functions play a primary role. The fact that it is still
+controversial whether one should view sentences as subjects, objects or as specially defined sentential arguments (\xcomp) \citep*{DL2000a-u,Berman2003a-u,Berman2007a-u,AMM2005a-u,Forst2006a-u}
+serves to show that there is at least some leeway for argumentation when it comes to assigning
+grammatical functions to arguments. It is therefore likely that one can find an assignment of
+grammatical functions to the arguments of a functor in all languages. 
+
+Unlike LFG, grammatical functions are irrelevant in GB (see \citealp{Williams84a,Sternefeld85a}) and Categorial Grammar\indexcg. In GB, grammatical functions can only be
+determined indirectly by making reference to tree positions. Thus, in the approach discussed in
+Chapter~\ref{Kapitel-GB}, the subject is the phrase in the specifier position of IP.
+
+In later versions of Chomskyan linguistics, there are functional nodes that seem to correspond to grammatical functions (AgrS\is{category!functional!AgrS},
+AgrO\is{category!functional!AgrO}, AgrIO\is{category!functional!AgrIO}, see
+page~\pageref{Seite-AgrO}). However, \citet[Section~4.10.1]{Chomsky95a-u} remarks that these functional categories were only assumed for theory internal reasons
+and should be removed from the inventory of categories that are assumed to be part of UG. See \citew{Haider97a} and \citew[\page 509--510]{Sternefeld2006a-u} for a description of German that does without functional projections
+that cannot be motivated in the language in question.
+
+The position taken by HPSG\indexhpsg is somewhere in the middle: a special valence feature is used for subjects (in grammars of German, there is a head feature that contains a
+representation of the subject for non"=finite verb forms). However, the value of the \subjf is
+derived from more general theoretical considerations: in German, the least oblique\is{obliqueness}
+element with structural case\is{case!structural} is the subject (\citealp[\page 153]{Mueller2002b};
+\citealp[\page 311]{MuellerLehrbuch1}).
+
+In \gbt (Extended Projection Principle, EPP\is{Extended Projection Principle (EPP)}, \citew[\page 10]{Chomsky82a-u}) and also in LFG\indexlfg (Subject Condition\is{Subject Condition}), there are principles
+ensuring that every sentence must have a subject. It is usually assumed that these principles hold universally.\footnote{ 
+  However, \citet[\page 27]{Chomsky81a} allows for languages not to have a subject. He assumes that this is handled by a parameter.
+ \citet[\page 311]{Bresnan2001a} formulates the Subject Condition, but mentions in a footnote that it might be necessary
+to parametrize this condition so that it only holds for certain languages.%
+} 
+  
+As previously mentioned, there are no grammatical functions in GB, but there are structural positions that correspond to grammatical functions.
+The position corresponding to the subject is the specifier of IP. The EPP states that there must be an element in SpecIP. If we assume universality
+of this principle, then every language must have an element in this position. As we have already seen, there is a counterexample to this
+universal claim: German. German has an impersonal passive (\mex{1}a) and there are also subjectless verbs (\mex{1}b,c) and adjectives (\mex{1}d--f).\footnote{%
+	For further discussion of subjectless verbs in German, see \citew[Sections~6.2.1, 6.5]{Haider93a}, \citew{Fanselow2000b},
+   \citew[\page912]{Nerbonne86b} and \citew[Section~3.2]{MuellerLehrbuch1}.
+}
+\eal
+\ex 
+\gll dass noch gearbeitet wird\\
+	 that still worked is\\
+\glt `that people are still working'
+\ex 
+\gll Ihm graut vor der Prüfung.\\
+     him.\dat{} dreads before the exam\\
+\glt `He dreads the exam.'
+\ex 
+\gll Mich friert.\\
+	 me.\acc{} freezes\\
+\glt `I am freezing.'
+\ex\label{ex-schulfrei}
+\gll weil schulfrei ist\\
+	 because school.free is\\
+\glt `because there is no school today'
+\ex\label{ex-schlecht-ist}
+\gll weil ihm schlecht ist\\
+	 because him.\dat{} ill is\\
+\glt `because he is not feeling well'
+\ex\label{ex-fuer-dich-ist-immer-offen}\iw{offen}
+\gll Für dich ist immer offen.\footnotemark\\
+	 for you is always open\\
+\footnotetext{
+ \citew[\page 18]{Haider86}.
+}
+\glt `We are always open for you.'
+\zl
+Most of the predicates that can be used without subjects can also be used with an expletive subject. An example is given in(\mex{1}):
+\ea
+\gll dass es ihm vor der Prüfung graut\\
+	 that \expl{} him before the exam dreads\\
+\glt `He dreads the exam.'
+\z
+However, there are verbs such as \emph{liegen} `lie' in example (\mex{1}a) from \citet[\page 185]{Reis82} that cannot occur with
+an \emph{es} `it'.
+
+\eal
+\ex[]{
+\gll Mir liegt an diesem Plan.\\
+	 me.\dat{} lies on this plan\\
+\glt `This plan matters a lot to me.'
+}
+\ex[*]{
+\gll Mir liegt es an diesem Plan.\\
+	 me.\dat{} lies it on this plan\\
+}
+\zl
+
+\noindent
+Nevertheless, the applicability of the EPP and the Subject Condition is sometimes also assumed for German.
+\todostefan{\citet{JS89a-u}}\citet[\page 1311]{Grewendorf93}\todostefan{Safir85 cited by \citet[\page 259]{Koster87a-u}}
+assumes that there is an empty expletive\is{empty element}\is{pronoun!expletive} that fills the subject position of subjectless constructions.
+
+Berman (\citeyear[\page 11]{Berman99a};
+\citeyear[Chapter~4]{Berman2003a}), working in \lfg, assumes that verbal morphology can fulfill the subject role
+in German and therefore even in sentences where no subject is overtly present, the position for the subject is filled
+in the f"=structure. A constraint stating that all f"=structures without a \predv must be third
+person singular applies to the f"=structure of the unexpressed subject. The agreement information in
+the finite verb has to match the information in the f"=structure of the unexpressed subject and
+hence the verbal inflection in subjectless constructions is restricted to be 3rd person singular \citep{Berman99a}. 
+
+As we saw on page~\pageref{Seite-leeres-Objekt}, some researchers working in the Minimalist Program even
+assume that there is an object in every sentence (Stabler\aimention{Edward P. Stabler} quoted in
+\citet[\page 61, 124]{Veenstra98a}). Objects of mono-valent verbs are assumed to be empty
+elements\is{empty element}.
+ 
+If we allow these kinds of tools, then it is of course easy to maintain the existence of many universals: we claim that a language X has the property Y and then assume that
+the structural items are invisible and have no meaning. These analyses can only be justified theory"=internally with the goal of uniformity\is{uniformity}
+(see \citealp[Section~2.1.2]{CJ2005a}).\footnote{
+	For arguments from language acquisition, see Chapter~\ref{chap-acquisition}.
+	}
+\is{subject|)}\is{object|)}\is{grammatical function|)}
+
+\subsection{Binding principles}
+
+The principles\is{Binding Theory|(} governing the binding of pronouns are also assumed to be part of UG (\citealp[\page 33]{Chomsky98a-u}; \citealp*[\page 146]{CTK2009a}; 
+\citealp[\page 468]{Rizzi2009a}). Binding Theory in \gbt has three principles: principle A states that reflexives such as \emph{sich} or \emph{himself} refer to
+an element (antecedent) inside of a certain local domain (binding domain). Simplyfying a bit, one could say
+that a reflexive has to refer to a co-argument.
+\ea
+\gll Klaus$_i$ sagt, dass Peter$_j$ sich$_{*i/j}$ rasiert hat.\\
+     Klaus     says that Peter himself shaved has\\
+\z
+Principle B holds for personal pronouns and states that these cannot refer to elements inside of their
+binding domain.
+\ea
+\gll Klaus$_i$ sagt, dass Peter$_j$ ihn$_{i/*j}$ rasiert hat.\\
+	 Klaus says that Peter him shaved has\\ 
+\z
+Principle C determines what referential expressions can refer to. According to Principle~C, an expression A$_1$ cannot refer to another expression
+A$_2$ if A$_2$ c"=commands\is{c"=command} A$_1$. c"=command is defined with reference to the structure of the utterance. There are various definitions
+of c"=command; a simple version states that A c"=commands B if there is a path in the constituent structure that goes upwards from A to the next branching
+node and then only downwards to B.
+
+For the example in (\mex{1}a), this means that \emph{Max} and \emph{er} `he' cannot refer to the same individual since \emph{er} c"=commands
+\emph{Max}.
+
+\eal
+\ex 
+\gll Er sagt, dass Max Brause getrunken hat.\\
+	 he says that Max soda drunk has\\
+\glt `He said that Max drank soda.'
+\ex 
+\gll Max sagt, dass er Brause getrunken hat.\\
+	 Max said that he soda drunk has\\
+\glt `Max said that he drank soda.'
+\ex 
+\gll Als er hereinkam, trank Max Brause.\\
+	 as he came.in drank Max soda\\
+\glt `As he came in, Max was drinking soda.'
+\zl
+This is possible in (\mex{0}b), however, as there is no such c"=command relation. For \emph{er} `he', it must only be the case that it does not
+refer to another argument of the verb \emph{getrunken} `drunk' and this is indeed the case in (\mex{0}b). Similarly, there is no c"=command
+relation between \emph{er} `he' and \emph{Max} in (\mex{0}c) since the pronoun \emph{er} is inside a complex structure.
+\emph{er} `he' and \emph{Max} can therefore refer to the the same or different individuals in (\mex{0}b) and (\mex{0}c).
+
+\citet*[\page 147]{CTK2009a} point out that (\mex{0}b,c) and the corresponding English\il{English} examples are ambiguous, whereas
+(\mex{0}a) is not, due to Principle C. This means that one reading is not available. In order to acquire the correct binding principles,
+the learner would need information about which meanings expressions do not have. The authors note that children already master Principle C
+at age three and they conclude from this that Principle C is a plausible candidate for innate linguistic knowledge. (This is a classic kind of argumentation.
+For Poverty of the Stimulus arguments\is{Poverty of the Stimulus}, see Section~\ref{Abschnitt-PSA} and for more on negative evidence, see Section~\ref{Abschnitt-negative-Evidenz}).
+
+\citet[\page 483]{EL2009b} note that Principle C is a strong cross"=linguistic tendency but
+it nevertheless has some exceptions. As an example, they mention both reciprocal expressions
+in Abaza\il{Abaza}, where affixes that correspond to \emph{each other} occur in subject position rather than object position as well as Guugu Yimidhirr\il{Guugu Yimidhirr}, where
+pronouns in a superordinate clause can be coreferent with full NPs in a subordinate clause.
+
+Furthermore, \citet[\page 351]{Fanselow92b} refers to the examples in (\mex{1}) that show that Principle C is a poor candidate for a syntactic
+principle.
+\eal
+\ex 
+\gll Mord ist ein Verbrechen.\\
+     murder is a crime\\
+\ex 
+\gll Ein gutes Gespräch hilft Probleme überwinden.\\
+     a good conversation helps problems overcome\\
+\glt `A good conversation helps to overcome problems.'
+\zl
+(\mex{0}a) expresses that it is a crime when somebody kills someone else, and (\mex{0}b) refers to conversations with another
+person rather than talking to oneself. In these sentences, the nominalizations \emph{Mord} `murder'
+and \emph{Gespräch} `conversation' are used without any arguments of the original verbs. So there
+aren't any arguments that stand in a syntactic command relation to one another. Nevertheless the arguments
+of the nominalized verbs cannot be coreferential. Therefore it seems that there is a principle at work that says that
+the argument slots of a predicate must be interpreted as non"=coreferential as long as the identity of the arguments is not explicitly expressed
+by linguistic means.\todostefan{aber was hat das mit den Fällen zu tun, in denen die Sachen im Baum
+  realisiert sind. Noch mal Fanselow lesen}
+
+In sum, one can say that there are still a number of unsolved problems with Binding Theory. The
+\hpsg variants of Principles A--C in English cannot
+even be applied to German \citep[Chapter~20]{Mueller99a}. Working in LFG, \citet{Dalrymple93a} proposes a variant of Binding Theory where the binding
+properties of pronominal expressions are determined in the lexicon. In this way, the language"=specific properties of pronouns can be accounted for.\is{Binding Theory|)}
+
+\subsection{Properties of long"=distance dependencies}
+\label{Abschnitt-Fernabhängigkeiten}
+
+The\is{subjacency|(}\todostefan{\cite{Kroch89a-u,SWPsubmitted-u}} 
+long"=distance dependencies discussed in the preceding chapters are subject
+to some kind of restrictions. For example, nothing can be extracted out of sentences that are part of a noun phrase in English. \citet[\page
+  70]{Ross67} calls the relevant constraint the \emph{Complex NP Constraint}\is{Complex NP
+  Constraint}. In later work, the attempt was made to group this, and other constraints such as the
+\emph{Right Roof Constraint}\is{Right Roof Constraint} also formulated by  \citet[Section~5.1.2]{Ross67}, into a single, more general constraint, namely the Subjacency Principle
+	(Chomsky: \citeyear[\page 271]{Chomsky73a}; \citeyear[\page 40]{Chomsky86b}; \citealp{Baltin81a,Baltin2006a}).
+Subjacency was assumed to hold universally.
+The Subjacency Constraint states that movement operations can cross at most one bounding node\is{bounding node}, whereby what exactly counts as a bounding node
+depends on the language in question (Baltin: \citeyear[\page 262]{Baltin81a};
+\citeyear{Baltin2006a}; \citealp[\page 57]{Rizzi82b}; \citealp[\page 38--40]{Chomsky86b}).\LATER{\citew{PB90a,Newmeyer91a}}\footnote{
+	 \citet[\page 539--540]{Newmeyer2004a} points out a conceptual problem following from the language"=specific determination of bounding nodes: it is argued
+	 that subjacency is an innate language"=specific principle since it is so abstract that it is impossible for speakers to learn it. However, if parametrization
+	 requires that a speaker chooses from  a set of categories in the linguistic input, then the corresponding constraints must be derivable from the input at least to
+	 the degree that it is possible to determine the categories involved. This raises the question as to whether the original claim of the impossibility of acquisition
+	 is actually justified. See Section~\ref{Abschnitt-PSA} on the  \emph{Poverty of the Stimulus}\is{Poverty of the Stimulus}
+	 and Section~\ref{Abschnitt-PP} on parameter"=based theories of language
+         acquisition\is{language acquisition}.
+
+         Note also that a parameter that has as the value a part of speech requires the respective
+         part of speech values to be part of UG.
+}
+
+Currently, there are varying opinions in the GB/Minimalism tradition with regard to the question of whether subjacency should be considered as part of innate linguistic knowledge.
+\citet*{HCF2002a} assume that subjacency does not form part of language"=specific abilities, at least not in the strictest sense, but rather is a linguistically relevant constraint
+in the broader sense that the constraints in question can be derived from more general cognitive ones (see
+p.\,\pageref{Seite-Subjazenz-Performanz}). Since subjacency still plays a role as a UG principle in other contemporary works (Newmeyer \citeyear[\page 15, 74--75]{Newmeyer2005a};
+\citeyear[\page 184]{Newmeyer2004b}; 
+\citealp{Baltin2006a}\footnote{
+However, see \citew[\page 552]{Baltin2004a}.
+}; \citealp{Baker2009a}; \citealp{Freidin2009a}; \citealp{Rizzi2009a,Rizzi2009b-andere-anfuehrungszeichen}), 
+the Subjacency Principle will be discussed here in some further detail.
+
+It is possible to distinguish two types of movement: movement to the left (normally called extraction\is{extraction}) and movement to the right (normally referred to as
+extraposition\is{extraposition}. Both movement types constitute long"=distance dependencies.
+In the following section, I will discuss some of the restrictions on extraposition. Extraction will be discussed in Section~\ref{Abschnitt-Subjazenz-Extraktion} following it.
+
+\subsubsection{Extraposition}
+
+\mbox{}\citet{Baltin81a}\is{Extraposition|(} and \citet[\page 40]{Chomsky86b} claim that the extraposed relative clauses in (\mex{1}) have to be interpreted with
+reference to the embedding NP, that is, the sentences are not equivalent to those where the relative clause would occur in the position marked with t, but rather
+they correspond to examples where it would occur in the position of the t$'$.\il{English}
+\eal
+\label{ex-chomsky-sub}
+\ex {}[\sub{NP} Many books [\sub{PP} with [stories t]] t$'$]  were sold [that I wanted to read].
+\ex {}[\sub{NP} Many proofs [\sub{PP} of [the theorem t]] t$'$] appeared\\
+    {}[that I wanted to think about].
+\zl
+Here, it is assumed that NP, PP, VP and AP are bounding nodes for rightward movement (at least in English) and the interpretation in question here
+is thereby ruled out by the Subjacency Principle \citep[\page 262]{Baltin81a}. 
+
+If we construct a German example parallel to (\mex{0}a) and replace the embedding noun so that it is ruled out or dispreferred as a referent, then we arrive at (\mex{1}):
+\ea
+\gll weil viele Schallplatten mit Geschichten verkauft wurden, die ich noch lesen wollte\\
+	 because many records with stories sold were that I still read wanted\\
+\glt `because many records with stories were sold that I wanted to read'
+\z
+This sentence can be uttered in a situation where somebody in a record store sees particular records and remembers that he had
+wanted to read the fairy tales on those records. Since one does not read records, adjunction to the superordinate noun is implausible
+and thus adjunction to \emph{Geschichten} `stories' is preferred. By carefully choosing the nouns, it is possible to construct examples such as
+(\mex{1}) that show that extraposition can take place across multiple NP nodes:\footnote{
+  See \citew[\page 211]{Mueller99a} and Müller (\citeyear{Mueller2004d};
+  \citeyear[Section~3]{Mueller2007c}). For parallel examples from
+  Dutch\il{Dutch}, see \citew[\page 52]{Koster78b-u}.  
+}
+
+\eal
+\ex 
+\gll Karl hat mir [ein Bild [einer Frau \_$_i$]] gegeben, [die schon lange tot ist]$_i$.\\
+	 Karl has me  \spacebr{}a picture  \spacebr{}a woman {} given \spacebr{}that PRT long dead is\\
+\glt `Karl gave me a picture of a woman that has been dead some time.'
+\ex 
+\gll Karl hat mir [eine Fälschung [des Bildes [einer Frau \_$_i$]]] gegeben, [die schon lange tot ist]$_i$.\\
+	Karl has me \spacebr{}a forgery \spacebr{}of.the picture \spacebr{}of.a woman {} given \spacebr{}that PRT long dead is\\
+\glt `Karl gave me a forgery of the picture of a woman that has been dead for some time.'
+\ex 
+\gll Karl hat mir [eine Kopie [einer Fälschung [des Bildes [einer Frau \_$_i$]]]] gegeben, [die schon lange tot ist]$_i$.\\
+	 Karl has me \spacebr{}a copy \spacebr{}of.a forgery \spacebr{}of.the picture \spacebr{}of.a woman {} given \spacebr{}that PRT long dead is\\
+\glt `Karl gave me a copy of a forgery of the picture of a woman that has been dead for some time.'
+\zl
+This kind of embedding could continue further if one were to not eventually run out of nouns that
+allow for semantically plausible embedding.
+NP is viewed as a bounding node in German (Grewendorf: \citeyear[\page 81]{Grewendorf88a};
+\citeyear[\page 17--18]{Grewendorf2002a}; \citealp[\page 285]{Haider2001a}). These examples show that it is possible for rightward extraposed relative clauses
+to cross any number of bounding nodes.
+
+\citet[\page 52--54]{Koster78b-u} discusses some possible explanations for the data in (\mex{0}), where it is assumed that relative clauses move to the NP/PP border and are then
+moved on further from there (this movement requires so"=called escape hatches\is{escape hatch} or escape routes). He argues that
+these approaches will also work for the very sentences that should be ruled out by subjacency, that is, for examples such as (\ref{ex-chomsky-sub}). This means that either
+data such as (\ref{ex-chomsky-sub}) can be explained by subjacency and the sentences in (\mex{0})  are counterexamples, or there are escape hatches and the examples in
+(\ref{ex-chomsky-sub}) are irrelevant, deviant sentences that cannot be explained by subjacency.
+
+In the examples in (\mex{0}), a relative clause was extraposed in each case. These relative clauses
+are treated as adjuncts and there are analyses that assume that extraposed adjuncts are not moved but rather base"=generated in their position,
+and coreference/""coindexation is achieved by special mechanisms \citep{Kiss2005a}.
+For proponents of these kinds of analyses, the examples in (\mex{0}) would be irrelevant to the subjacency discussion as the Subjacency Principle
+only constrains movement. However, extraposition across phrase boundaries is not limited to relative clauses; sentential complements can also be extraposed:
+\eal
+\ex 
+\gll Ich habe [von [der Vermutung \_$_i$]] gehört, [dass es Zahlen gibt, die die folgenden Bedingungen erfüllen]$_i$.\\
+	 I have \spacebr{}from \spacebr{}the conjecture {} heard \spacebr{}that there numbers are that the following requirements fulfill\\
+\glt `I have heard of the conjecture that there are numbers that fulfill the following requirements.'
+\ex 
+\gll Ich habe [von [einem Beweis [der Vermutung \_$_i$]]] gehört, [dass es Zahlen gibt, die die folgenden Bedingungen erfüllen]$_i$.\\
+	I have \spacebr{}from \spacebr{}a proof \spacebr{}of.the conjecture {} heard \spacebr{}that there numbers are that the following requirements fulfill\\
+\glt `I have heard of the proof of the conjecture that there are numbers that fulfill the following requirements.'
+\ex 
+\gll Ich habe [von [dem Versuch [eines Beweises [der Vermutung \_$_i$]]]] gehört, [dass es Zahlen gibt, die die folgenden Bedingungen erfüllen]$_i$.\\
+	I have \spacebr{}from \spacebr{}the attempt \spacebr{}of.a proof \spacebr{}of.the conjecture {} heard \spacebr{}that there numbers are that the following requirements fulfill\\
+\glt `I have heard of the attempt to prove the conjecture that there are numbers that fulfill the following requirements.'
+\zl
+Since there are nouns that select \emph{zu} infinitives or prepositional phrases and since these can
+be extraposed like the sentences above, it must be ensured that the syntactic category of the postposed element corresponds to the category required by the noun.
+This means that there has to be some kind of relation between the governing noun and the extraposed element. For this reason, the examples in
+(\mex{0}) have to be analyzed as instances of extraposition and provide counter evidence to the claims discussed above.
+
+If one wishes to discuss the possibility of recursive embedding, then one is forced to refer to constructed examples as the likelihood of stumbling across groups of sentences
+such as those in (\mex{-1}) and (\mex{0}) is very remote. It is, however, possible to find some individual cases of deep embedding:
+(\mex{1}) gives some examples of relative clause extraposition and complement extraposition taken from the Tiger corpus\is{Tiger corpus}\footnote{
+  See \citew{BDEHKLRSU2004a} for more information on the Tiger corpus.
+} (\citealp[\page 78--79]{Mueller2007c}; \citealp[Section~2.1]{MM2009a}).\todosatz{raggedright
+  funktioniert hier leider auch für die Translation. Das muss irgendwie in eine Umgebung.
+}
+\eal
+\ex 
+\gll Der 43jährige will nach eigener Darstellung damit [\sub{NP} den Weg [\sub{PP} für [\sub{NP} eine
+  Diskussion [\sub{PP} über [\sub{NP} den künftigen Kurs [\sub{NP} der stärksten
+  Oppositions\-gruppierung]]]]]] freimachen, [die aber mit 10,4 Prozent
+  der Stimmen bei der Wahl im
+  Oktober weit hinter den Erwartungen zurückgeblieben war]. (s27639)\\
+  the 43.year.old wants after own depiction there.with {} the way {} for {} a discussion {} about {} the future course {} of.the strongest
+  opposition.group free.make \spacebr{}that however with 10.4 percent
+  of.the votes at the election in October far behind the expectations stayed.back was\\
+\glt `In his own words, the 43-year old wanted to clear the way for a discussion about the future course of the strongest opposition group that had, however, performed well below expectations gaining only 10.4 percent of the votes at the election in October.'
+\ex 
+\gll {}[\ldots] die Erfindung der Guillotine könnte [\sub{NP} die Folge [\sub{NP} eines verzweifelten
+    Versuches des gleichnamigen Doktors] gewesen sein, [seine Patienten ein für allemal von
+    Kopfschmerzen infolge schlechter Kissen zu befreien]. (s16977)\\
+	{}{} the invention of.the guillotine could {} the result {} of.a desperate attempt the same.name doctor have been \spacebr{}his patients
+once for all.time of headaches because.of bad pillows to free\\
+\glt `The invention of the guillotine could have been the result of a desperate attempt of the
+eponymous doctor to rid his patients once and for all of headaches from bad pillows.'
+\zl
+
+\noindent
+It is also possible to construct sentences for English that violate the Subjacency Condition.
+\citet[\page 2333]{Uszkoreit90a} provides the following example:
+\ea
+{}[\sub{NP} Only letters [\sub{PP} from [\sub{NP} those people \_$_i$]]] remained
+unanswered [that had received our earlier reply]$_i$.
+\z
+%
+Jan Strunk\aimention{Jan Strunk} (p.\,c.\, 2008) has found examples for extraposition of both restrictive and non"=restrictive relative clauses across
+multiple phrase boundaries:
+\eal
+\ex For example, we understand that Ariva buses have won [\sub{NP} a number [\sub{PP} of [\sub{NP}
+      contracts [\sub{PP} for [\sub{NP} routes in London \_$_i$ ]]]]] recently, [which will not be run
+by low floor accessible buses]$_i$.\footnote{
+\url{http://www.publications.parliament.uk/pa/cm199899/cmselect/cmenvtra/32ii/32115.htm},
+24.02.2007.
+}
+\ex I picked up [\sub{NP} a copy of [\sub{NP} a book \_$_i$ ]] today, by a law
+professor, about law, [that is not assigned or in any way required to read]$_i$.\footnote{
+\url{http://greyhame.org/archives/date/2005/09/}, 27.09.2008.
+}
+\ex We drafted [\sub{NP} a list of [\sub{NP} basic demands \_$_i$ ]] that night [that had to be
+  unconditionally met or we would stop making and 
+delivering pizza and go on strike]$_i$.\footnote{
+\url{http://portland.indymedia.org/en/2005/07/321809.shtml}, 27.09.2008.
+}
+\zl
+(\mex{0}a) is also published in \citew[\page 111]{SS2013b-u}. Further attested examples from German and
+English can be found in this paper.
+
+The preceding discussion has shown that subjacency constraints on rightward movement do not hold for English or German and thus cannot be
+viewed as universal. One could simply claim that NP and PP are not bounding nodes in English or German. Then, these extraposition data would
+no longer be problematic for theories assuming subjacency. However, subjacency constraints are also
+assumed for leftward movement. This is discussed in more detail in the following section.\is{extraposition|)} 
+
+\subsubsection{Extraction}
+\label{Abschnitt-Subjazenz-Extraktion}
+
+Under\is{extraction|(} certain conditions, leftward movement is not possible from certain constituents \citep{Ross67}. 
+These constituents are referred to as islands for extraction\is{extraction!island}. \citet[Section~4.1]{Ross67} formulated the \emph{Complex NP Constraint}\is{Complex NP
+  Constraint} (CNPC) that states that extraction is not possible from complex noun phrases. An example of extraction
+  from a relative clause inside a noun phrase is the following:
+
+\ea[*]{
+Who$_i$ did he just read [\sub{NP} the report [\sub{S} that was about \_$_i$]?
+}
+\z
+Although (\mex{0}) would be a semantically plausible question, the sentence is still ungrammatical. This is explained by the fact that
+the question pronoun has been extracted across the sentence boundary of a relative clause and then across the NP boundary and has therefore
+crossed two bounding nodes. It is assumed that the CNPC holds for all languages. This is not the case, however, as the corresponding structures
+are possible in Danish\il{Danish} \citep[\page 55]{EL79a}, Norwegian\il{Norwegian},
+Swedish\il{Swedish}, Japanese\il{Japanese}, Korean\il{Korean}, Tamil\il{Tamil}
+and Akan\il{Akan} (see \citew[\page 245, 262]{Hawkins99a} and references therein).
+Since the restrictions of the CNPC are integrated into the Subjacency Principle, it follows that the Subjacency Principle cannot be universally
+applicable unless one claims that NP is not a bounding node in the problematic languages. However, it seems
+indeed to be the case that the majority of languages do not allow extraction from complex noun phrases. Hawkins explains this on the basis of the processing difficulties\is{performance}
+associated with the structures in question (Section~4.1). He explains the difference between languages that allow this kind of extraction and languages that do not
+with reference to the differing processing load for structures that stem from the interaction of extraction with other grammatical properties such as verb position
+and other conventionalized grammatical structures in the respective languages (Section~4.2).
+
+Unlike extraction from complex noun phrases, extraction across a single sentence boundary (\mex{1}) is not ruled out by the Subjacency Principle.
+\ea
+Who$_i$ did she think that he saw \_$_i$?
+\z
+Movement across multiple sentence boundaries, as discussed in previous chapters, is explained by so"=called cyclic\is{cycle!transformational} movement
+in transformational theories: a question pronoun is moved to a specifier position and can then be
+moved further to the next highest specifier. Each of these
+movement steps is subject to the Subjacency Principle. The Subjacency Principle rules out
+long"=distance movement in one fell swoop.
+
+The Subjacency Principle cannot explain why extraction from sentences embedded under verbs that specify the kind of utterance (\mex{1}a) or factive verbs (\mex{1}b)
+is deviant \citep[\page 68--69]{EL79a}. 
+\eal
+\ex[??]{
+Who$_i$ did she mumble that he saw \_$_i$?
+}
+\ex[??]{
+Who$_i$ did she realize that he saw \_$_i$?
+}
+\zl
+The structure of these sentences seems to be the same as (\mex{-1}). In entirely syntactic approaches, it was also attempted to explain these differences as subjacency
+violations or as a violation of Ross' constraints. It has therefore been assumed \citep[\page 401--402]{Stowell81a-u} that the sentences in (\mex{0}) have a  structure different
+from those in (\mex{-1}). 
+Stowell treats these sentential arguments of manner of speaking verbs as adjuncts. Since adjunct clauses are islands for extraction by assumption, this would explain why
+(\mex{0}a) is marked. The adjunct analysis is compatible with the fact that these sentential arguments can be omitted:
+\eal
+\ex She shouted that he left.
+\ex She shouted.
+\zl
+\citet[\page 352]{AG2008a} have pointed out that treating such clauses as adjuncts is not justified as they are only possible with a very restricted
+class of verbs, namely verbs of saying and thinking. This property is a property of arguments\is{argument} and not of adjuncts\is{adjunct}.
+Adjuncts such as place modifiers are possible with a wide number of verb classes. Furthermore, the meaning changes if the sentential argument is omitted as in (\mex{0}b):
+whereas (\mex{0}a) requires that some information is communicated, this does not have to be the case with (\mex{0}b). It is also possible to replace the sentential argument
+with an NP as in (\mex{1}), which one would certainly not want to treat as an adjunct.
+\ea
+She shouted the remark/the question/something I could not understand.
+\z
+The possibility of classifying sentential arguments as adjuncts cannot be extended to factive verbs
+as their sentential argument is not optional \citep[\page 352]{AG2008a}:
+
+\eal
+\judgewidth{??}
+\ex[]{
+She realized that he left.
+}
+\ex[??]{
+She realized.
+}
+\zl
+
+\noindent
+\citet{KK70a} suggest an analysis of factive verbs that assumes a complex noun phrase with a nominal head. An optional
+\emph{fact} Deletion"=Transformation\is{transformation!fact-Deletion@\emph{fact}"=Deletion} removes the head noun and the determiner of the
+NP in sentences such as (\mex{1}a) to derive sentences such as (\mex{1}b) (page~159). 
+\eal
+\ex She realized [\sub{NP} the fact [\sub{S} that he left]].
+\ex She realized [\sub{NP} [\sub{S} that he left]].
+\zl
+The impossibility of extraction out of such sentences can be explained by assuming that two boundary
+nodes were crossed, which was assumed to be impossible (on
+the island status of this construction, see \citealp[Section~4]{KK70a}). This analysis predicts that
+extraction from complement clauses of factive verbs should be just as bad as extraction from overt
+NP arguments since the structure for both is the same.
+%\todostefan{Naja, ein Unterschied ist eben, ob
+%  Material da ist, oder nicht.} 
+According to \citet[\page 353]{AG2008a}, this is, however, not the case: 
+\eal
+\judgewidth{??}
+\ex[*]{
+Who did she realize the fact that he saw  \_$_i$?
+}
+\ex[??]{
+Who did she realize that he saw  \_$_i$?
+}
+\zl
+
+\noindent
+Together with \citet{Erteschik81a}, \citet{EL79a}, \citet{Takami88a}\LATER{\citet{Erteschik-Shir79a,Erteschik-Shir98a}}
+and \citet{vanValin98a}, \citet[Section~7.2]{Goldberg2006a} assumes that the gap must be in a part of the utterance
+that can potentially form the focus\is{focus} of an utterance (see \citew{Cook2001a}, \citew{deKuthy2002a} and
+\citew{Fanselow2003a} for German). This means that this part must not be presupposed\is{presupposition}.\footnote{  
+  Information is presupposed if it is true regardless of whether the utterance is negated or not.
+  Thus, it follows from both (i.a) and (i.b) that there is a king of France.
+  \eal
+  \ex The King of France is bald.
+  \ex The King of France is not bald.
+  \zllast
+}
+If one considers what this means for the data from the subjacency discussion, then one notices that in each case extraction
+has taken place out of presupposed material:
+\eal
+\ex Complex NP\\
+She didn't see the report that was about him. $\to$ The report was about him.
+\ex Complement of a verb of thinking or saying\\
+She didn't whisper that he left. $\to$ He left.
+\ex Factive verb\\
+She didn't realize that he left. $\to$ He left.
+\zl
+Goldberg assumes that constituents that belong to backgrounded information are islands (\emph{Backgrounded constructions are islands} (BCI)).
+\citet{AG2008a} have tested this semantic/""pragmatic analysis experimentally and compared it to a purely syntactic approach.
+They were able to confirm that information structural properties\is{information structure} play a significant role for the extractability
+of elements. Along with \citet[Section~3.H]{Erteschik73a-u}, \citet[\page 375]{AG2008a} assume that languages differ with regard to how
+much constituents have to belong to background knowledge in order to rule out extraction.
+In any case we should not rule out extraction from adjuncts for all languages as there are languages such as Danish\il{Danish} where it is possible to
+extract from relative clauses\is{relative clause}.\footnote{
+Discussing the question of whether UG"=based approaches are falsifiable, \citet*[\page
+  2669]{CKT2010a} claim that it is not possible to extract from relative clauses and the existence
+of such languages would call into question the very concept of UG. (``If a child acquiring any language
+could learn to extract linguistic expressions from a relative clause, then this would seriously
+cast doubt on one of the basic tenets of UG.'') They thereby contradict Evans and Levinson as well as Tomasello, who claim that UG approaches are
+not falsifiable\is{Universal Grammar (UG)!falsifiability}. If the argumentation of Crain, Khlentzos and Thornton were correct, then (\mex{1}) would falsify
+UG and that would be the end of the discussion.
+}
+\citet[\page 61]{Erteschik73a-u} provides the following examples, among others:
+\eal
+\label{Beispiel-Extraktion-Adjunkt}
+\ex
+\gll Det$_i$ er   der mange [der kan lide \_$_i$].\\
+     that are there  many \hspaceThis{[}that can like\\
+\glt `There are many who like that.' (lit.: `That, there are many who like.')
+\ex
+\gll Det    hus$_i$  kender jeg en    mand [som har købt \_$_i$].\\
+     that   house  know  I a man \hspaceThis{[}that has bought\\
+\glt `I know a man that has bought that house.' (lit.: `This house, I know a man that has bought.')
+\zl
+\noindent 
+Rizzi's parametrization\is{parameter!subjacency} of the subjacency restriction has been abandoned in many works, and the relevant effects have been
+ascribed to differences in other areas of grammar \citep{Adams84a,CMC83a,Grimshaw86b,Kluender92a}.\il{English|)}
+
+We have seen in this subsection that there are reasons other than syntactic properties of structure as to why leftward movement might be blocked.
+In addition to information structural properties, processing considerations\label{Seite-Subjazenz-Performanz}\is{performance}
+also play a role \citep*{Grosu73a,EC2000a,Gibson98a,KK93a,Hawkins99a,SHS2007a}.
+The length of constituents involved, the distance between filler and gap, definiteness, complexity of syntactic structure and
+interference effects between similar discourse referents in the space between the filler and gap are all important factors for
+the acceptability of utterances. Since languages differ with regard to their syntactic structure,
+varying effects of performance, such as the ones found for extraposition and extraction, are to be expected.\is{extraction|)} 
+
+In sum, we can say that subjacency constraints do not hold for extraposition in either German or English and furthermore that one can better
+explain constraints on extraction with reference to information structure and processing phenomena than with the Subjacency Principle.
+Assuming subjacency as a syntactic constraint in a universal competence grammar is therefore unnecessary to explain the facts.
+\is{subjacency|)}
+
+\subsection{Grammatical morphemes for tense, mood and aspect}
+
+\citet[\page 238]{Pinker94a} is correct in claiming that there are morphemes for tense, mood, aspect, case and negation in many languages. However, there is a great
+deal of variation with regard to which of these grammatical properties are used in a language and
+how they are expressed.
+
+For examples of differences in the tense system see \citew{wals-65,wals-66}. Mandarin
+Chinese\il{Mandarin Chinese} is a clear case: it has next to no morphology. The fact that the same morphemes occur in one form or another in almost every language
+can be attributed to the fact that certain things need to be expressed repeatedly and then things which are constantly repeated become grammaticalized.
+
+
+
+\subsection{Parts of speech}
+\label{Abschnitt-UG-Wortarten}
+
+In Section~\ref{Abschnitt-neues-GB}, so"=called cartographic approaches\is{cartography} were mentioned, some of which assume over thirty functional categories
+(see Table~\ref{Tabelle-Cinque} on page~\pageref{Tabelle-Cinque} for Cinque's\aimention{Guglielmo
+  Cinque} functional heads) and assume that these categories form part of UG together with corresponding fixed syntactic structures.
+\citet[\page 55, 57]{CR2010a} even assume over 400 functional categories\is{category!functional}
+that are claimed to play a role in the grammars of all languages.\footnote{
+	The question of whether these categories form part of UG is left open.
+}
+Also, specific parts of speech such as \mbox{Infl}\is{category!functional!I} (inflection) and
+Comp\is{category!functional!C} (complementizer) are referred to when formulating principles that are assumed to be universal (Baltin: \citeyear[\page
+262]{Baltin81a}; \citeyear{Baltin2006a}; \citealp{Rizzi82b}; \citealp[\page 38]{Chomsky86b};
+\citealp[\page 397]{Hornstein2013a}). 
+
+Chomsky (\citeyear[\page 68]{Chomsky88a-u}; \citeyear{Chomsky91a-u};
+\citeyear[\page 131]{Chomsky95a-u}), \citet[\page 284, 286]{Pinker94a}, \citet[\page 270]{Briscoe2000a} and
+\citet[\page 621]{Wunderlich2004a} make comparatively fewer assumptions about the innate inventory of parts of speech:
+Chomsky assumes that all lexical categories\is{category!lexical} (verbs\is{verb},  nouns\is{noun},
+adjectives\is{adjective} and adpositions\is{adposition}) belong to UG and languages have these at their disposal.
+Pinker, Briscoe and Wunderlich assume that all languages have nouns and verbs.
+Again critics of UG raised the question as to whether these syntactic categories can be found in other languages in the form known to us from languages such as German and English.
+
+\citet[\page 72]{Braine87a} argues that parts of speech such as verb and noun should be viewed as derived from fundamental concepts like argument and predicate
+(also see \citew[\page 257]{Wunderlich2008a}). This means that there is an independent explanation for the presence of these categories that is not
+based on innate language"=specific knowledge.
+
+\citet[Section~2.2.4]{EL2009a} discuss the typological literature and give examples of languages which lack adverbs and adjectives.
+The authors cite Straits Salish\il{Straits Salish} as a language in which there may be no difference between verbs and nouns (also, see \citealp[\page 481]{EL2009b}).
+They remark that it does make sense to assume the additional word classes ideophone\is{ideophone}, positional\is{positional}, coverb\is{coverb},
+classifier\is{classifier} for the analysis of non Indo"=European languages on top of the four or five normally used.\footnote{
+	For the opposite view, see \citew[\page 465]{JP2009a}.
+} 
+This situation is not a problem for UG"=based theories if one assumes that languages can choose from an inventory of possibilities (a toolkit)\is{Universal Grammar (UG)!as a toolkit}
+but do not have to exhaust it (\citealp[\page
+263]{Jackendoff2002a-u}; \citealp[\page 11]{Newmeyer2005a}; \citealp*[\page 204]{FHC2005a};
+\citealp[\page 6--7]{Chomsky2007a}; \citealp[\page 55, 58, 65]{CR2010a}). 
+However, if we condone this view, then there is a certain arbitrariness. It is possible to assume any parts of speech that one requires
+for the analysis of at least one language, attribute them to UG and then claim that most (or maybe even all) languages do not make use of
+the entire set of parts of speech. This is what is suggested by \citet[\page 157]{Villavicencio2002a}, working in the framework
+of Categorial Grammar, for the categories S, NP, N, PP and PRT. This kind of assumption is not falsifiable\is{Universal Grammar (UG)!falsifiability} (see
+\citealp[\page 436]{EL2009a}; \citealp[\page 471]{Tomasello2009a} for a discussion of similar cases and a more general discussion).
+
+Whereas Evans and Levinson assume that one needs additional categories, \citet[\page
+458]{Haspelmath2009a} and \citet[\page 453]{Croft2009a} go so far as to deny the existence of cross"=linguistic
+parts of speech. I consider this to be too extreme and believe that a better research strategy is to try and find commonalities between
+languages.\footnote{
+  Compare \citew[\page 2]{Chomsky99a}:
+``In the absence of compelling evidence to the contrary, assume languages to be uniform, with variety
+restricted to easily detectable properties of utterances.''
+} 
+One should, however, expect to find languages that do not fit into our Indo"=European"=biased conceptions of grammar.
+
+\subsection{Recursion and infinitude}
+\label{Abschnitt-Rekursion}
+
+In an article in \emph{Science}, \citet*{HCF2002a} put forward the hypothesis that the only
+domain"=specific universal is recursion, ``providing the capacity to generate an infinite range of expressions from a finite set of elements'' (see (\ref{NP-Regeln-Adj}) on p.~\pageref{NP-Regeln-Adj} for an example of a
+recursive phrase structure rule).\footnote{
+	In a discussion article in \emph{Cognition}, \citet*{FHC2005a} clarify that their claim that recursion is the only language"=specific and
+	human"=specific property is a hypothesis and it could be the case that are not any language"=specific/species"=specific properties at all.
+	Then, a particular combination of abilities and properties would be specific to humans
+        (p.\,182--201). An alternative they consider is that innate language-specific knowledge has a complexity corresponding to what was assumed in earlier versions of Mainstream Generative Grammar (p.\,182).
+
+\citet[\page 7]{Chomsky2007a} notes that Merge\is{Merge} could be a non language"=specific operation but still attributes it to UG.%
+} This assumption is controversial and there have been both formal and empirical objections to it.
+
+\subsubsection{Formal problems}
+
+The claim that our linguistic capabilities are infinite is widespread and can already be found
+in Humboldt's work:\footnote{
+The process of language is not simply one where an individual instantiation is created; at the same time it must allow for an
+indefinite set of such instantiations and must above all allow the expression of the conditions imposed by thought.
+Language faces an infinite and truly unbounded subject matter, the epitome of everything one can think of. Therefore, it must make
+infinite use of finite means and this is possible through the identity of the power that is
+responsible for the production of thought and language.
+}
+\begin{quote}
+Das Verfahren der Sprache ist aber nicht bloß ein solches, wodurch eine einzelne Erscheinung zustande kommt;
+es muss derselben zugleich die Möglichkeit eröffnen, eine unbestimmbare Menge solcher Erscheinungen und unter allen,
+ihr von dem Gedanken gestellten Bedingungen hervorzubringen.
+Denn sie steht ganz eigentlich einem unendlichen und wahrhaft grenzenlosen Gebiete, dem Inbegriff alles
+Denk\-baren gegenüber. Sie muss daher von endlichen Mitteln einen unendlichen Gebrauch machen, und
+vermag dies durch die Identität der gedanken- und sprache\-erzeugenden Kraft.  \citep[\page 108]{Humboldt88a-u}
+\end{quote}
+
+\noindent
+If we just look at the data, we can see that there is an upper bound for the length of utterances. This has to do with the fact that
+extremely long instances cannot be processed and that speakers have to sleep or will eventually die at some point.
+If we set a generous maximal sentence length at 100,000 morphemes and then assume a morpheme inventory of X then one can form less than
+X$^{100,000}$ utterances. We arrive at the number X$^{100,000}$ if we use each of the morphemes at each of the 100,000 positions.
+Since not all of these sequences will be well"=formed, then there are actually less than
+X$^{100,000}$ possible utterances (see also \citealp{Weydt72a} for a similar but more elaborate argument). This number
+is incredibly large, but still finite. The same is true of thought: we do not have infinitely many
+possible thoughts (if \emph{infinitely} is used in the mathematical sense of the word), despite
+claims by Humboldt and \citet[\page 137]{Chomsky2008a} to the contrary.\footnote{
+  \citet{Weydt72a} discusses Chomsky's statements regarding the existence of infinitely many
+  sentences and whether it is legitimate for Chomsky to refer to Humboldt. Chomsky's quote in
+  \emph{Current Issues in Linguistic Theory} \citep[\page 17]{Chomsky70b-ut} leaves out the sentence \emph{Denn sie steht ganz eigentlich einem unendlichen und
+    wahrhaft grenzenlosen Gebiete, dem Inbegriff alles Denkbaren gegenüber.} \citet[\page 266]{Weydt72a} argues that
+  Humboldt, Bühler\aimention{Bühler, Karl} and Martinet\aimention{Martinet, Andr{\'e}} claimed that
+  there are infinitely many thoughts that can be expressed. Weydt
+  claims that it does not follow that sentences may be arbitrarily long. Instead he suggests that
+  there is no upper bound on the length of texts. This claim is interesting, but I guess texts are
+  just the next bigger unit and the argument that Weydt put forward against languages without an
+  upper bound for sentence length also applies to texts. A text can be generated by the rather
+  simplified rule in (i) that combines an utterance U with a text T resulting in a larger text T:
+  \ea
+  T $\to$ T U
+  \z
+  U can be a sentence or another phrase that can be part of a text. If one is ready to admit that
+  there is no upper bound on the length of texts, it follows that there cannot be an upper bound on
+  the length of sentences either, since one can construct long sentences by joining all phrases of a
+  text with \emph{and}. Such long sentences that are the product of conjoining short sentences are different in nature from very long sentences that are admitted under the
+  Chomskyan view in that they do not include center-self embeddings\is{self"=embedding} of an
+  arbitrary depth (see Section~\ref{chap-competence-performance}), but nevertheless the number of
+  sentences that can be produced from arbitrarily long texts is infinite.
+
+  As for arbitrarily long texts there is an interesting problem: Let us assume that a person
+  produces sentences and keeps adding them to an existing text. This enterprise will be interrupted
+  when the human being dies. One could say that another person could take up the text extension
+  until this one dies and so on. Again the question is whether one can understand the meaning and the structure
+  of a text that is several million pages long. 42. If this is not enough of a problem, one may ask
+  oneself whether the language of the person who keeps adding to the text in the year 2731 is still
+  the same that the person who started the text spoke in 2015. If the answer to this question is no,
+  then the text is not a document containing sentences from one language L but a mix from several
+  languages and hence irrelevant for the debate. 
+} 
+
+In the literature, one sometimes finds the claim that it is possible to produce infinitely long
+sentences (see for instance \citew*[\page 117]{NKN2001a} and \citew[\page 3]{KS2008a-u} and Dan Everett in \citew{OW2012a} at 25:19).
+This is most certainly not the case. It is also not the case that the rewrite grammars we encountered in
+Chapter~\ref{Kapitel-PSG} allow for the creation of infinite sentences as the set of symbols
+of the right"=hand side of the rule has to be finite by definition. While it is possible to derive
+an infinite number of sentences, the sentences themselves cannot be infinite, since it is always one
+symbol that is replaced by finitely many other symbols and hence no infinite symbol sequence may result.
+
+\citet[Section~I.1]{Chomsky65a} follows \citet{Saussure16a}\nocite{Saussure16a-Fr} and draws a distinction between competence\is{competence} and performance\is{performance}:
+competence is the knowledge about what kind of linguistic structures are well"=formed, and performance is the application of this knowledge (see
+Section~\ref{Abschnitt-Kompetenz-Performanz-TAG} and Chapter~\ref{Abschnitt-Diskussion-Performanz}).
+Our restricted brain capacity as well as other constraints are responsible for the fact that we cannot deal with an arbitrary amount of embedding
+and that we cannot produce utterances longer than 100,000 morphemes. The separation between competence and performance makes sense and allows us to
+formulate rules for the analysis of sentences such as (\mex{1}):
+\eal 
+\label{Beispiel-Satzeinbettung}
+\ex Richard is sleeping.
+\ex Karl suspects that Richard is sleeping.
+\ex Otto claims that Karl suspects that Richard is sleeping.
+\ex Julius believes that Otto claims that Karl suspects that Richard is sleeping.
+\ex Max knows that Julius believes that Otto claims that Karl suspects that Richard is sleeping.
+\zl
+The rule takes the following form: combine a noun phrase with a verb of a certain class and a clause.
+By applying this rule successively, it is possible to form strings of arbitrary length.
+\citet{PS2010a} point out that one has to keep two things apart: the question of whether language
+is a recursive system and whether it is just the case that the best models that we can devise for a particular
+language happen to be recursive. For more on this point and on processing in the brain, see \citew{LL2011a}.
+When constructing strings of words using the system above, it cannot be shown that (a particular) language is
+infinite, even if this is often claimed to be the case (\citealp[\page 105--106]{Bierwisch66a}; \citealp[\page 86]{Pinker94a}; \citealp*[\page 1571]{HCF2002a}; \citealp[\page 1]{MuellerLehrbuch1};
+\citealp*[\page 7]{HNG2005a}; \citealp[\page 3]{KS2008a-u}).
+
+The ``proof'' of this infinitude of language is led as an indirect proof parallel to the proof that shows
+that there is no largest natural number (\citealp[\page 105--106]{Bierwisch66a}; \citealp[\page 86]{Pinker94a}). In the domain of natural numbers, this works
+as follows: assume x is the largest natural number. Then form x + 1 and, since this is by definition a natural number, we have now found a natural number that is greater than x. We have therefore shown that the assumption that x is the highest number
+leads to a contradiction and thus that there cannot be such a thing as the largest natural number.
+
+When transferring this proof into the domain of natural language, the question arises as to whether one would still want to class 
+a string of 1,000,000,000 words as part of the language we want to describe. If we do not want this, then this proof will not work.
+
+If we view language as a biological construct, then one has to accept the fact that it is finite. Otherwise, one is forced to assume
+that it is infinite, but that an infinitely large part of the biologically real object is not biologically real \citep[\page
+111]{Postal2009a}. \citet{LL2011a} refer to languages as physically uncountable but finite sets of strings.
+They point out that a distinction must be made between the ability to imagine extending a sentence indefinitely and the ability
+to take a sentence from a non"=countable set of strings and really extend it. We possess the first ability but not the second.
+
+One possibility to provide arguments for the infinitude of languages is to claim that only generative grammars\is{Generative Grammar},
+which create sets of well"=formed utterances, are suited to modeling language and that we need recursive rules to capture the data, which
+is why mental representations have a recursive procedure that generates infinite numbers of expressions (Chomsky, \citeyear[\page 115]{Chomsky56a-u}; \citeyear[\page
+86--87]{Chomsky2002a-u}), which then implies that languages consist of infinitely many expressions.
+There are two mistakes in this argument that have been pointed out by \citet{PS2010a}: 
+even if one assumes generative grammars, it can still be the case that a context"=sensitive grammar can still only generate a finite set even with 
+recursive rules. \citet[120--121]{PS2010a} give an interesting example from Andr{\'a}s Kornai\aimention{Andr{\'a}s Kornai}.
+
+The more important mistake is that it is not necessary to assume that grammars generate
+sets. There are three explicitly formalized alternatives of which only the third is mentioned here,
+namely the model"=theoretic and therefore constraint"=based\is{constraint"=based grammar} approaches\is{model"=theoretic grammar} (see 
+Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch}). Johnson \& Postal's Arc Pair Grammar\is{Arc Pair Grammar} \citeyearpar{JP80a-u}, LFG\indexlfg
+in the formalization of \citet{Kaplan95a}, GPSG\indexgpsg in the reformalization of \citet{Rogers97a-andere-anfuhrungszeichen} and HPSG\indexhpsg
+with the assumptions of \citet{King99a-u}, \citet{Pollard99a} and \citet{Richter2007a} are examples of model"=theoretic approaches.
+In constraint"=based theories, one would say for an example like (\ref{Beispiel-Satzeinbettung}) that certain attitude verbs select a nominative NP and a 
+\emph{that} clause and that these can only occur in a certain local configuration where a particular relation holds between the elements involved.
+One of these relations is subject"=verb agreement. In this way, one can represent expressions such as (\ref{Beispiel-Satzeinbettung})
+and does not have to say anything about how many sentences can be embedded.
+This means that constraint"=based theories are compatible with both answers to the question of whether there is a finite or infinite number of structures.
+Using competence grammars formulated in the relevant way, it is possible to develop performance
+models that explain why certain strings -- for instance very long ones -- are unacceptable
+(see Chapter~\ref{Abschnitt-Diskussion-Performanz}).
+
+\subsubsection{Empirical problems}
+
+It is sometimes claimed that all natural languages are recursive and that sentences of an arbitrary
+length are possible in all languages (\citealp*[\page 7]{HNG2005a} for an overview, and see \citew[Section~2]{PS2010a} for further references). When one speaks of recursion,
+what is often meant are structures with self"=embedding as we saw in the analysis of (\ref{Beispiel-Satzeinbettung}) \citep{Fitch2010a}. 
+However, it is possible that there are languages that do not allow self"=embedding. \citet{Everett2005a-u} claims that
+Pirah{\~a}\il{Pirah{\~a}} is such a language (however, see \citew*{NPR2009a-u} and
+\citew{Everett2009a-u}). 
+A further example of a language without recursion, which is sometimes cited with reference to \citew{Hale76a}, is Warlpiri\il{Warlpiri}.
+Hale's rules for the combination of a sentence with a relative clause are recursive, however (page~85). This recursion is made
+explicit on page~98.\footnote{%
+	However, he does note on page~78 that relative clauses are separated from the sentence
+        containing the head noun by a pause. Relative clauses in Warlpiri are always peripheral, that is, they occur to the left or right of a sentence with the noun they refer to. Similar
+	constructions can be found in German:
+\ea
+\gll Es war einmal ein Mann. Der hatte sieben Söhne.\\
+	 there was once a man he had seven sons\\
+\glt `There once was a man. He had seven sons.'
+\z
+It could be the case that we are dealing with linking of sentences at text level\is{text} and not recursion at sentence level.
+} \citet[\page 131]{PS2010a} discuss Hixkaryana\il{Hixkaryana}, an Amazonian language from the Caribbean language
+family that is not related to Pirah{\~a}. This language does have embedding, but the embedded
+material has a different form to that of the matrix clause. It could be the case that these embeddings cannot be carried out indefinitely. In Hixkary{\'a}na,
+there is also no possibility to coordinate\is{coordination} phrases or clauses (\citew[\page
+45]{Derbyshire79a-u} cited by \citew[\page 131]{PS2010a}), which is why this possibility of forming recursive sentence embedding does not
+exist in this language either. Other languages without self"=embedding seem to be Akkadian\il{Akkadian}, Dyirbal\il{Dyirbal} and Proto"=Uralic\il{Proto"=Uralic}.
+	
+There is of course a trivial sense in which all languages are recursive: they follow a rule that says that a particular number of symbols can be combined
+to form another symbol.\footnote{
+  \citet[\page 11]{Chomsky2005a} assumes that Merge\is{Merge} combines n objects. A special instance of this is binary Merge.\is{branching!binary}
+}
+\ea
+X $\to$ X \ldots{} X
+\z
+In this sense, all natural languages are recursive and the combination of simple symbols to more complex ones is a basic property of language \citep[\page
+6]{Hockett60a}. The fact that the debate about Pirah{\~a} is so fierce could go to show that this is not the kind of recursion that is meant.
+Also, see \citet{Fitch2010a}.
+
+It is also assumed that the combinatorial rules of Categorial Grammar\indexcg hold universally. It is possible to use these rules to
+combine a functor with its arguments (\mbox{X/Y $*$ Y = X}). These rules are almost as abstract as the rules in (\mex{0}). The difference
+is that one of the elements has to be the functor. There are also corresponding constraints in the Minimalist Program\indexmp such
+as selectional features (see Section~\ref{Abschnitt-MG}) and restrictions on the assignment of
+semantic roles. However, whether or not a Categorial Grammar licenses recursive structures does not depend on the very general combinatorial schemata, but rather on the lexical entries.
+Using the lexical entries in (\mex{1}), it is only possible to analyze two sentences and certainly not to build recursive structures.
+
+\eal
+\ex the: np/n
+\ex woman: n
+\ex cat: n
+\ex sees: (s\bs np)/np
+\zl
+If we expand the lexicon to include modifiers of the category n/n or conjunctions of the category (X\bs X)/X, then we arrive at a recursive
+grammar.
+
+\citet*[\page 203]{FHC2005a} note that the existence of languages that do not license recursive structures is not a problem for UG"=based theories
+as not all the possibilities in UG have to be utilized by an individual language.
+With this view, we have actually the same situation as with parts of speech (see
+Section~\ref{Abschnitt-UG-Wortarten}) that you can posit any number of properties belonging to UG
+and then decide on a language by language basis whether they play a role or not. An extreme variant of this approach would be that grammars of all languages become part of 
+UG (perhaps with different symbols such as NP\sub{Spanish}, NP\sub{German}). This variant of a UG"=based theory of the human capacity for language
+would be truly unfalsifiable\is{Universal Grammar (UG)!falsifiability} (\citealp[\page 436, 443]{EL2009a}; \citealp[\page 471]{Tomasello2009a}).
+
+\subsubsection{Recursion in other areas of cognition}
+
+There are also phenomena in domains outside of language that can be described with recursive rules:
+\citet*[\page 1571]{HCF2002a} mention navigation, family relations and counting systems.\footnote{\label{fn-Rekursion-Mathematik}%
+  \citet[\page 230]{PJ2005a} note, however, that navigation differs from the kind of recursive system described by Chomsky and that recursion
+  is not part of counting systems in all cultures. They assume that those cultures that have developed
+  infinite counting systems could do this because of their linguistic capabilities. This is also assumed by \citet*[\page 203]{FHC2005a}.
+  The latter authors claim that all forms of recursion in other domains depend on language. For more on this point, see
+  \citew[\page 7--8]{Chomsky2007a}. \citet{LL2011a} note that natural numbers are defined
+  recursively, but the mathematical definition does not necessarily play a role for the kinds of arithmetic operations carried out by humans.
+}
+One could perhaps argue that the relevant abilities are acquired late and that higher mathematics is a matter of individual accomplishments that do not
+have anything to do with the cognitive capacities of the majority, but even children at the age of 3
+years and 9 months are already able to produce recursive structures:
+%\todostefan{M: Is this true also  for children of nonlinguists?}
+In 2008, there were newspaper reports about an indigenous Brazilian tribe that was photographed from
+a plane. I showed this picture to my son\aimention{Max M{\"u}ller} and told him that Native Americans shot at the plane with a bow and arrow. He then asked me what kind of plane it was. I told him that you cannot 
+see that because the people
+who took the photograph were sitting in the plane. He then answered that you would then need another
+plane if you wanted to take a photo that contained both the plane and the Native Americans. He was
+pleased with his idea and said ``And then another one. And then another one. One after the
+other''. He was therefore very much able to imagine the consequence of embeddings.
+
+\citet[\page 113--114]{CJ2005a} discuss visual perception\is{visual perception} and music\is{music} as recursive systems that are
+independent of language. \citet{Jackendoff2011a} extends the discussion of visual perception and
+music and adds the domains of planning (with the example of making coffee) and wordless comic strips.
+\citet[\page 7--8]{Chomsky2007a} claims that examples from visual perception are irrelevant but then admits that the ability to build up recursive structures
+could belong to general cognitive abilities (p.\,8).
+He still attributes this ability to UG. He views UG as a subset of the Faculty of Language, that is, as a subset of non domain"=specific abilities
+(Faculty of Language in the Broad Sense = FLB\is{Faculty of Language! in the Broad Sense (FLB)}) and the domain"=specific abilities (Faculty of Language in the Narrow Sense = FLN\is{Faculty of
+  Language! in the Narrow Sense (FLN)}) required for language.
+
+\subsection{Summary}
+\label{Abschnitt-Universalien-Zusammenfassung}
+
+In sum, we can say that there are no linguistic universals for which there is a consensus that one
+has to assume domain"=specific innate knowledge to explain them.  At the 2008 meeting of the
+\emph{Deutsche Gesellschaft für Sprachwissenschaft}, Wolfgang Klein\aimention{Wolfgang Klein}
+promised \euro~100 to anyone who could name a non"=trivial property that all languages share
+(see \citealp{Klein2009a}). This begs the question of what is meant by `trivial'. It seems clear
+that all languages share predicate"=argument structures\is{predicate"=argument structure} and
+dependency relations\is{dependency} in some sense (\citealp[]{Hudson2010a}; \citealp[\page
+  2701]{LR2010a}) and, all languages have complex expressions whose meaning can be determined compositionally (Manfred Krifka\aimention{Manfred Krifka} was promised
+20\,\euro{} for coming up with compositionality\is{compositionality}). However, as has been noted at various
+points, universality by no means implies innateness (\citealp[\page 189]{Bates84a};
+\citealp[\page 205]{Newmeyer2005a}): Newmeyer gives the example that words for sun and moon probably
+exist in all languages. This has to do with the fact that these celestial bodies play an important
+role in everyone's lives and thus one needs words to refer to them.  It cannot be concluded from
+this that the corresponding concepts have to be innate. Similarly, a word that is used to express a
+relation between two objects (\eg \emph{catch}) has to be connected to the words describing both of
+these objects (\emph{I}, \emph{elephant}) in a transparent way. However, this does not necessarily entail that this property of language is innate.
+
+Even if we can find structural properties shared by all languages, this is still not proof of innate linguistic knowledge, as these similarities could
+be traced back to other factors. It is argued that all languages must be made in such a way as to be acquirable with the paucity of resource available to small
+children (\citealp[Section~10.7.2]{Hurford2002a}; \citealp[\page 433]{Behrens2009a}).
+It follows from this that, in the relevant phases of its development, our brain is a constraining factor.
+Languages have to fit into our brains and since our brains are similar, languages are also similar
+in certain respects (see \citealp[\page 251]{Kluender92a}).
+\is{universal|)}
+
+\section{Speed of language acquisition}
+\label{Abschnitt-Geschwindigkeit-Spracherwerb}
+
+It\is{acquisition!speed|(} is often argued that children learn language extraordinarily quickly and
+this can only be explained by assuming that they already possess knowledge about language that does
+not have to be acquired (\eg \citealp[\page 144]{Chomsky76c-u}; \citealp[\page
+  395]{Hornstein2013a}).  In order for this argument to hold up to closer scrutiny, it must be demonstrated
+that other areas of knowledge with a comparable degree of complexity require longer to acquire
+\citep[\page 214--218]{Sampson89a}. This has not yet been shown.  Language acquisition spans several
+years and it is not possible to simply state that language is acquired following \emph{brief
+exposure}.  Chomsky compares languages to physics and points out that it is considerably more
+difficult for us to acquire knowledge about physics.  \citet[\page 215]{Sampson89a} notes, however,
+that the knowledge about physics one acquires at school or university is not a basis for comparison
+and one should instead consider the acquisition of everyday knowledge about the physical world around
+us.  For example, the kind of knowledge we need when we want to pour liquids into a container, skip
+with a skipping rope or the knowledge we have about the ballistic properties of objects. The
+complexity in comparing these domains of knowledge in order to be able to make claims about language
+acquisition may turn out to be far from trivial.  For an in-depth discussion of this aspect, see
+\citew[\page 214--218]{Sampson89a}.  \citet[\page 1]{MR98a-u} point out that children at the age of
+six can understand 23,700 words and use over 5000.  It follows from this that, in the space of four
+and a half years, they learn on average 14 new words every day. This is indeed an impressive
+feat, but cannot be used as an argument for innate linguistic knowledge as all theories of
+acquisition assume that words have to be learned from data rather than being predetermined by a
+genetically"=determined Universal Grammar. In any case the assumption of genetic encoding would be highly
+implausible for newly created words such as \emph{fax}, \emph{iPod}, \emph{e-mail}, \emph{Tamagotchi}\is{Tamagotchi}.
+
+Furthermore, the claim that first language acquisition is effortless and rapid when compared to second language acquisition\is{acquisition!second language} is a myth
+as has been shown by estimations by \citet[\page 9]{Klein86a-u}: if we assume that children hear linguistic utterances for five hours a day (as a conservative
+estimate), then in the first five years of their lives, they have 9100 hours of linguistic training. But at the age of five, they have still not acquired all complex constructions.
+In comparison, second"=language learners, assuming the necessary motivation, can learn the grammar of a language rather well in a six-week crash course with
+twelve hours a day (500 hours in total).\is{acquisition!speed|)}
+
+\section{Critical period for acquisition}
+
+Among ducks\is{critical period|(}\is{acquisition|(}, there is a critical phase in which their
+behavior towards parent figures is influenced significantly. Normally,
+baby ducks follow their mother. If, however, a human is present rather than the mother during a particular time span, the ducks will follow the human.
+After the critical period, this influence on their behavior can no longer be identified \citep{Lorenz70a-u}. This kind of critical period can also be identified
+in other animals and in other areas of cognition, for example the acquisition of visual abilities among primates.
+Certain abilities are acquired in a given time frame, whereby the presence of the relevant input is important for determining the start of this
+time frame.\todostefan{\citew{Hurford91a-u} diskutieren}
+
+\citet{Lenneberg64a} claims that language acquisition is only possible up to the age of twelve and concludes from the fact that children can learn
+language much better than adults that this is also due to a critical period and that language acquisition must have similar properties to
+the behavior of ducks and hence, the predisposition for language acquisition must be innate \citep[Chapter~4]{Lenneberg67a-u}.
+
+The assumptions about the length of the critical period for language acquisition vary considerably. It is possible to find suggestions for 5, 6, 12 and even 15 years
+\citep[\page 31]{HBW2003a}. An alternative assumption to a critical period would be to assume that the ability to acquire languages decreases continuously
+over time. 
+\citet{JN89a} tried to determine a critical period for second"=language acquisition\is{acquisition} and they claim that a second language is learned
+significantly worse from the age of 15.\nocite{Sorace2003a}
+\citet*[\page]{EBJKSPP96a} have, however, pointed out that there is a different curve for Johnson and Newport's data that fits the individual data better. The alternative curve
+shows no abrupt change but rather a steady decrease in the ability to learn language and therefore offers no proof of an effect created by a critical period.
+
+\citet*{HBW2003a} evaluate data from a questionnaire of 2,016,317 Spanish speakers\il{Spanish} and 324,444 speakers of Mandarin Chinese\il{Mandarin Chinese}
+that immigrated to the United States. They investigated which correlations there were between age, the point at immigration, the general level of education of the speakers
+and the level of English they acquired\il{English}.
+They could not identify a critical point in time after which language acquisition was severely restricted.
+Instead, there is a steady decline in the ability to learn as age increases. This can also be observed in other
+domains: for example, learning to drive at an older age is much harder.
+
+Summing up, it seems to be relatively clear that a critical period cannot be proven to exist for second"=language acquisition. Sometimes, it is assumed anyway that second"=language acquisition
+is not driven by an innate UG, but is in fact a learning process that accesses knowledge already
+acquired during the critical period \citep[\page 176]{Lenneberg67a-u}.
+One would therefore have to show that there is a critical period for first"=language
+acquisition. This is, however, not straightforward as, for ethical reasons, one cannot experimentally
+manipulate the point at which the input is available. We cannot, say, take 20 children and let them grow up without linguistic input to the age
+of 3, 4, 5, 6, \ldots{} or 15 and then compare the results. This kind of research is dependent on thankfully very rare cases of neglect. For example, \citet{Curtiss77a-u}
+studied a girl called Genie. At the time, Genie was 13 years old and had grown up in isolation. She is a so"=called feral child.\is{feral child}
+As Curtiss showed, she was no longer able to learn certain linguistic rules. For an objective comparison, one would need other test subjects that had not grown up
+in complete isolation and in inhumane conditions. The only possibility of gaining relevant
+experimental data is to study deaf subjects that did not receive any input from a sign language up to a certain age. \citet[\page
+63]{JN89a} carried out relevant experiments with learners of American Sign Language\il{sign language!American (ASL)}. It was also shown here that there is a linear
+decline in the ability to learn, however nothing like a sudden drop after a certain age or even a complete loss of the ability to acquire language.\is{critical period|)}\is{acquisition|)}
+
+\section{Lack of acquisition among non"=human primates}
+
+The fact that non-human primates cannot learn natural language is viewed as evidence for the genetic determination of our linguistic ability. All scientists agree on the fact that there are genetically"=determined
+differences between humans and primates and that these are relevant for linguistic ability.
+\citet{Friederici2009a} offers an overview of the literature that claims that in chimpanzees\is{chimpanzee} and macaques\is{macaque} (and small children),
+the connections between parts of the brain are not as developed as in adult humans. The connected regions of the brain are together responsible for
+the processing of lexical"=semantic knowledge and could constitute an important prerequisite for the development of language (p.\,179).
+
+The question is, however, whether we differ from other primates in having special cognitive
+capabilities that are specific to language or whether our capability to acquire languages is due to
+domain-general differences in cognition. \citet[Section~2]{Fanselow92b} speaks of a human"=specific formal competence that does not necessarily
+have to be specific to language, however. Similarly, \citet[\page 7--8]{Chomsky2007a} has considered whether Merge\is{Merge} (the only structure"=building
+operation, in his opinion), does not belong to language"=specific innate abilities, but rather to general human"=specific competence (see, however,
+Section~\ref{Abschnitt-Rekursion}, in particular footnote~\ref{fn-Rekursion-Mathematik}).  
+
+One can ascertain that non"=human primates do not understand particular pointing gestures. Humans like to imitate things. Other primates also imitate, however, not
+for social reasons \citep[\page 9--10]{Tomasello2006c}. According to \citet[\page 676]{TCCBM2005a}, only humans have the ability and motivation to
+carry out coordinated activities with common goals and socially"=coordinated action plans. Primates do understand intentional actions, however, only humans
+act with a common goal in mind (\emph{shared intentionality}).
+Only humans use and understand hand gestures \citep[\page 685, 724, 726]{TCCBM2005a}. Language is collaborative to a high degree: symbols
+are used to refer to objects and sometimes also to the speaker or hearer. In order to be able to use this kind of communication system, one has to be able to
+put oneself in the shoes of the interlocutor and develop common expectations and goals \citep[\page 683]{TCCBM2005a}.
+Non"=human primates could thus lack the social and cognitive prerequisites for language, that is, the difference between humans and other primates does not have
+to be explained by innate linguistic knowledge (\citealp[Section 8.1.2]{Tomasello2003a};
+\citealp{TCCBM2005a}).
+
+\section{Creole and sign languages}
+
+When\is{creole language|(}\il{sign language|(} speakers that do not share a common language wish to communicate with each other, they develop so"=called
+pidgin languages\is{pidgin language}. These are languages that use parts of the vocabularies of the languages involved but have a very rudimentary
+grammar. It has been noted that children of pidgin speakers regularize these languages. The next generation of speakers creates a new language with an independent
+grammar. These languages are referred to as \emph{creole languages}.
+One hypothesis is that the form of languages that develop from creolization is restricted by an innate UG \citep{Bickerton84a}. It is assumed that
+the parameter setting of creole languages corresponds to the default values of parameters\is{parameters} (Bickerton: \citeyear[\page 217]{Bickerton84b};
+\citeyear[\page 178]{Bickerton84a}), that is, parameters already have values at birth and these
+correspond to the values that creole languages have. These default values would have to be modified when learning other languages.\footnote{
+	For problems that can arise from the assumption of defaults values, see  \citew[\page
+  17]{Meisel95a}. \citet[\page 56, fn.\,13]{Bickerton97a} distances himself from the claim that creole languages have
+  the default values of parameters.
+} 
+Bickerton claims that creole languages contain elements that language learners could not have
+acquired from the input, that is from the pidgin languages. His argumentation is a variant of the classic Poverty of the Stimulus Argument\is{Poverty of the Stimulus} that will be discussed in more detail in Section~\ref{Abschnitt-PSA}.
+
+Bickerton's claims have been criticized as it cannot be verified whether children had input in the individual languages
+of the adults (\citealp[\page 207]{Samarin84a};
+\citealp[\page 209]{Seuren84a}).\todostefan{M: more recent work: Arends, Mufwene, Parkvall} All that can be said considering this lack of evidence is that there are a number
+of demographic facts that suggest that this was the case for at least some creole languages.
+This means that children did not only have the strings from the pidgin languages as an input but
+also sentences from the individual languages spoken by parents and others around them. Many creolists assume that adults contribute specific grammatical forms to the emerging language. For example, in the case of Hawaiian Creole English\il{Hawaiian Creole English}
+one can observe that there are influences from the mother tongues of the speakers involved: Japanese speakers use SOV order as well as SVO and Philippinos use VOS order as well
+as SVO order. In total, there is quite a lot of variation in the language that can be traced back to the various native languages of the individual speakers.
+
+It is also possible to explain the effects observed for creolization without the assumption of innate language"=specific knowledge:
+the fact that children regularize language can be attributed to a phenomenon independent of language. In experiments, participants were shown two
+light bulbs and the test subjects had to predict which of the light bulbs would be turned on next. If one of the bulbs was switched on 70\% of the
+time, the participants also picked this one 70\% of the time (although they would have actually had a higher success rate if they had always chosen
+the bulb turned on with 70\% probability). This behavior is known as \emph{Probability Matching}\is{Probability
+Matching}. If we add another light bulb to this scenario and then turn this lamp on in 70\% of cases and the other two each 
+15\% of the time, then participants choose the more frequently lit one 80--90\% of the time, that is, they regularize in the direction of
+the most frequent occurrence \citep{Gardener57a,Weir64a}.
+
+Children regularize more than adults \citep{HudsonN99a,HKN2005a}, a fact that can be traced back to their
+limited brain capacity (``less is more''-hypothesis, \citealp{Newport90a,Elman93a}). 
+
+Like creolization, a similar situation can be found in certain social contexts with the acquisition of sign language\is{sign language}:
+\citet{SN2004a} have shown that a child (Simon) that learned American Sign Language (ASL)\is{sign language!American (ASL)} makes considerably
+less mistakes than his parents. The parents first learned ASL at the age of 15 or 16 and performed particular obligatory movements only
+70\% of the time. Simon made these movements 90\% of the time. He regularized the input from his parents, whereby the consistent use
+of form"=meaning pairs plays an important role, that is, he does not simply use Probability Matching, but learns selectively.
+ \citet[\page 401]{SN2004a} suspect that these kinds of regularizations also play a role for the emergence of creole and sign languages.
+However, the relevant statistical data that one would need to confirm this hypothesis are not available.
+\is{creole language|)}\il{sign language|)}
+
+
+\section{Localization in special parts of the brain}
+
+By measuring brain activity during speech production/processing and also by investigating patients with brain damage, one can identify
+special parts of the brain (Broca's area\is{Broca's area} and
+Wernicke's area\is{Wernicke's area}) that play an important role for language production and processing (see \citew{Friederici2009a} for a current overview).
+Chomsky talks about there being a center of language and even calls this (metaphorically) an
+\emph{organ}\is{organ} (\citealp[\page 164]{Chomsky77c-u}; \citealp[\page 1]{Chomsky2005a}; \citealp[\page 133]{Chomsky2008a}).
+This localization was seen as evidence for the innate basis for our linguistic knowledge (also see \citealp[\page 297--314]{Pinker94a}). 
+
+However, it is the case that if these parts are damaged, other areas of the brain can take over the relevant
+functions. If the damage occurs in early childhood, language can also be learned without these special areas
+of the brain (for sources, see \citealp[Section~4.1]{Dabrowska2004a}).
+
+Apart from that, it can also be observed that a particular area of the brain is activated when reading. If the conclusion about the localization of processing 
+in a particular part of the brain leading to the innateness of linguistic knowledge were valid, then the activation of certain
+areas of the brain during reading should also lead us to conclude that the ability to read is innate (\citealp[\page ]{EBJKSPP96a};
+\citealp[\page 57]{Bishop2002a}). This is, however, not assumed (also see \citealp*[\page 196]{FHC2005a}). 
+
+It should also be noted that language processing affects several areas of the brain and not just Broca's and Wernicke's areas (\citealp[\page
+11]{FM2005a}; \citealp{Friederici2009a}). On the other hand, Broca's and Wernicke's areas are also active during non"=linguistic tasks
+such as imitation, motoric coordination and processing of music\is{music} \citep{MKGF2001a}. For an overview and further sources,
+see \citew{FM2005a}.
+
+\citet{MMGRRBW2003a} investigated brain activity during second"=language acquisition. They gave German native speakers data from Italian and Japanese and noticed
+that there was activation in Broca's area. They then compared this to artificial languages that used Italian\il{Italian} and Japanese\il{Japanese} words but did
+not correspond to the principles of Universal Grammar as assumed by the authors. An example of the processes assumed in their artificial language is the formation
+of questions by reversing of word order as shown in (\mex{1}).
+\eal
+\ex This is a statement.
+\ex Statement a is this?
+\zl
+The authors then observed that different areas of the brain were activated when learning this artificial language. This is an interesting result, but does not show
+that we have innate linguistic knowledge. It only shows that the areas that are active when processing our native languages are also active when we learn other
+languages and that playing around with words such as reversing the order of words in a sentence affects other areas of the brain.
+
+A detailed discussion of localization of languages in particular parts of the brain can be found
+in \citew[Chapter~4]{Dabrowska2004a}.
+
+
+\section{Differences between language and general cognition}
+
+Researchers who believe that there is no such thing as innate linguistic knowledge assume that language can be acquired with general cognitive
+means. If it can be shown that humans with severely impaired cognition can still acquire normal linguistic abilities or that there are people
+of normal intelligence whose linguistic ability is restricted, then one can show that language and general cognition are independent.
+
+\subsection{Williams Syndrome}
+
+There\is{Williams Syndrome|(} are people with a relatively low IQ\is{IQ}, who can nevertheless produce grammatical utterances.
+Among these are people with Williams Syndrome (see \citew*{BLJLG2000a} for a discussion of the abilities of people with
+Williams Syndrome). \citet{Yamada81a} takes the existence of such cases as evidence for a separate module of grammar, independent
+of the remaining intelligence.
+
+IQ is determined by dividing a score in an intelligence test (the mental age) by chronological age. The teenagers that were studied
+all had a mental age corresponding to that of a four to six year-old child. Yet children at this age already boast impressive
+linguistic ability that comes close to that of adults in many respects. \citet*[\page 295]{GSP94a} have shown that children
+with Williams Syndrome do show a linguistic deficit and that their language ability corresponds to what would be expected
+from their mental age. For problems of sufferers of Williams Syndrome in the area of morphosyntax, see \citew{KGBDHU97a}.
+The discussion about Williams Syndrome is summarized nicely in \citew{Karmiloff-Smith98a}.
+\is{Williams Syndrome|)}
+
+\subsection{KE family with FoxP2 mutation}
+
+There\is{FoxP2|(}\is{gene|(} is a British family -- the so"=called KE family -- that has problems with language.
+The members of this family who suffer from these linguistic problems have a genetic defect. \citet{FVKWMP98a} and \citet{LFHVM2001a}
+discovered that this is due to a mutation of the FoxP2 gene (FoxP2 stands for \emph{Forkhead-Box P2}).
+\citet{GC91a} conclude from the fact that deficits in the realm of morphology are inherited with genetic defects that
+there must be a gene that is responsible for a particular module of grammar (morphology\is{morphology}).
+\citet[\page 930]{VKWAFP95a} have demonstrated, however, that the KE family did not just have problems with morphosyntax:
+the affected family members have intellectual and linguistic problems together with motoric problems with facial muscles.
+Due to the considerably restricted motion in their facial muscles, it would make sense to assume that their linguistic difficulties also
+stem from motory problems \citep[\page 285]{Tomasello2003a}. The linguistic problems in the KE family are not just limited
+to production problems, however, but also comprehension problems \citep[\page 58]{Bishop2002a}.
+Nevertheless, one cannot associate linguistic deficiencies directly with FoxP2 as there are a number of other abilities that
+are affected by the FoxP2 mutation: as well as hindering pronunciation, morphology and syntax, it also has an effect on
+non"=verbal IQ and motory problems with the facial muscles, dealing with non-linguistic tasks, too \citep{VKWAFP95a}.
+
+%% Furthermore, FoxP2 also occurs in animals. For example, the human gene differs from the analogous
+%% gene of a mouse\is{mouse} in only three amino acid positions, and from those of
+%% chimpanzees\is{chimpanzee}, gorillas\is{gorilla} and rhesus apes\is{rhesus ape} by only two
+%% positions \citep{EPFLWKMP2002a}.
+%
+%In addition, 
+Furthermore, FoxP2 also occurs in other body tissues: it is also responsible for the development of
+the lungs, the heart, the intestine and various regions of the brain \citep{MF2003a}. \citet[\page
+  260--261]{MF2003a} point out that FoxP2 is probably not directly responsible for the development
+of organs or areas of organs but rather regulates a cascade of different genes. FoxP2 can therefore
+not be referred to as the language gene, it is just a gene that interacts with other genes in
+complex ways.  It is, among other things, important for our language ability, however, in the same
+way that it does not make sense to call FoxP2 a language gene, nobody would connect a hereditary
+muscle disorder with a `walking gene' just because this myopathy prevents upright walking
+\citep[\page 58]{Bishop2002a}.  A similar argument can be found in \citet[\page
+  392]{Karmiloff-Smith98a}: 
+there is a genetic defect that leads some people to begin to lose their hearing from the age of ten
+and become completely deaf by age thirty. This genetic defect
+causes changes in the hairs inside the ear that one requires for hearing. In this case, one would
+also not want to talk about a `hearing gene'.
+
+\citet*[\page 190]{FHC2005a} are also of the opinion that FoxP2 cannot be responsible for linguistic knowledge. For an overview of this topic,
+see \citew{Bishop2002a} and \citew[Section~6.4.2.2]{Dabrowska2004a} and for genetic questions in general, see \citew{FM2005a}. 
+\is{FoxP2|)}\is{gene|)}
+
+\section{Poverty of the Stimulus}
+\label{Abschnitt-PSA}
+
+
+An\is{Poverty of the Stimulus|(}\is{acquisition|(} important argument for the innateness of the linguistic knowledge is the so"=called
+Poverty of the Stimulus Argument (PSA) \citep[\page 34]{Chomsky80b-u}. Different versions of it can be found in the literature and have been carefully discussed
+by \citet{PS2002a}. After discussing these variants, they summarize the logical structure of the
+argument as follows (p.\,18):
+\eal
+\ex Human children learn their first language either by data"=driven learning or by learning supported by innate knowledge (a disjunctive premise by assumption)
+\ex If children learn their first language by data"=driven learning, then they could not acquire anything for which they did not have the necessary evidence
+(the definition of data"=driven learning)
+\ex However, children do in fact learn things that they do not seem to have decisive evidence for (empirical prerequisite)
+\ex Therefore, children do not learn their first language by data"=driven learning. (\emph{modus tollens} of b and c)
+\ex Conclusion: children learn language through a learning process supported by innate knowledge. (disjunctive syllogism of a and d)
+\zl
+Pullum and Scholz then discuss four phenomena that have been claimed to constitute evidence for there being innate linguistic knowledge.
+These are plurals as initial parts of compounds in English \citep{Gordon86a}, sequences of auxiliaries in English
+\citep{Kimball73b-u}, anaphoric \emph{one} in English \citep{Baker78a-u} and the position of auxiliaries in English \citep[\page 29--33]{Chomsky71a-u}.
+Before I turn to these cases in Section~\ref{PSA-Faelle}, I will discuss a variant of the PSA that refers to the formal properties of
+phrase structure grammars.
+
+\subsection{Gold's Theorem}
+\label{Abschnitt-Golds-Theorem}
+
+In theories of formal languages\is{language!formal}, a language is viewed as a set containing all
+the expressions belonging to a particular language. This kind of set can be captured using various
+complex rewrite grammars. A kind of rewrite grammar\is{rewrite grammar} -- so"=called context"=free 
+grammars\is{context"=free grammar} -- was presented in Chapter~\ref{Kapitel-PSG}.
+In context"=free grammars, there is always exactly one symbol on the left"=hand side of the rule
+(a so"=called non"=terminal symbol) and there can be more of these on the right"=hand side of the
+rule. On the right side there can be symbols (so"=called non"=terminal symbols\is{symbol!non-terminal}) or words/morphemes
+of the language in question (so"=called terminal symbols\is{symbol!terminal}). The words in a grammar are also referred to as vocabulary (V). Part of a formal grammar is
+a start symbol, which is usually S. In the literature, this has been criticized since not all expressions
+are sentences (see \citealp[\page 44]{Deppermann2006a}). It is, however, not necessary to assume
+this. It is possible to use Utterance as the start symbol and define rules that derive S, NP, VP or whatever else
+one wishes to class as an utterance from Utterance.\footnote{
+	On page~\pageref{HPSG-Rootnode}, I discussed a description that corresponds to the
+	S symbol in phrase structure grammars. If one omits the specification of head features
+	in this description, then one gets a description of all complete	phrases, that is,
+	also \emph{the man} or \emph{now}.
+}
+  
+Beginning with the start symbol, one can keep applying phrase structure rules in a grammar  
+until one arrives at sequences that only contain words (terminal symbols). The set of all sequences
+that one can generate are the expressions that belong to the language that is licensed by the grammar.
+This set is a subset of all sequences of words or morphemes that can be created by arbitrary 
+combination. The set that contains all possible sequences is referred to as V$^*$.   
+  
+\cite{Gold67a} has shown that in an environment E, it is not possible to solve the identification
+problem for any language from particular languages classes, given a finite amount of linguistic input, without additional knowledge. Gold is concerned
+with the identification of a language from a given class of languages. A language L counts as identified if at a given point in time
+t$_n$, a learner can determine that L is the language in question and does not change this hypothesis.
+This point in time is not determined in advance, however, identification has to take place at some point.
+Gold calls this \emph{identification in the limit}\is{identification in the limit|(}.
+The environments are  arbitrary infinite sequences of sentences \phonliste{ a$_1$, a$_2$, a$_3$,
+\ldots }, whereby each sentence in the language must occur at least once in this sequence. In order
+to show that the identification problem cannot be solved for even very simple language classes, Gold
+considers the class of languages that contain all possible sequences of words from the vocabulary V expect
+for one sequence: let V be the vocabulary and x$_1$, x$_2$, x$_3$, \ldots{} the sequences of words from this vocabulary.
+The set of all strings from this vocabulary is V$^*$. For the class of languages in (\mex{1}), which consist of all possible
+sequences of elements in V with the exception of one sequence, it is possible to state a process of how one could
+learn these languages from a text.
+\ea
+L$_1$ = V$^* - x_1$, L$_2$ = V$^* - x_2$, L$_3$ = V$^* - x_3$, \ldots
+\z
+
+\noindent
+After every input, one can guess that the language is V$^* - \sigma$, where $\sigma$ stands for the alphabetically first
+sequence with the shortest length that has not yet been seen. If the sequence in question occurs later, then this hypothesis
+is revised accordingly. In this way, one will eventually arrive at the correct language.
+
+If we expand the set of languages from which we have to choose by V$^*$, then our learning process will no longer work since, if
+V$^*$ is the target language, then the guessing will perpetually yield incorrect results.
+If there were a procedure capable of learning this language class, then it would have to correctly identify V$^*$ after a certain
+number of inputs. Let us assume that this input is x$_k$. How can the learning procedure tell us at this point that the language
+we are looking for is not V$^* - x_j$ for $j \neq k$? If x$_k$ causes one to guess the wrong grammar
+V$^*$, then every input that comes after that will be compatible
+with both the correct (V$^* - x_j$) and incorrect (V$^*$) result. Since we only have positive
+data, no input allows us to distinguish between either of the
+hypotheses and provide the information that we have found a superset of the language we are looking for.
+Gold has shown that none of the classes of grammars assumed in the theory of formal languages (for example, regular\is{regular language}, context"=free\is{context"=free
+grammar} and context"=sensitive\is{context"=sensitive grammar} languages) can be identified after a finite amount of steps given the input of a text with example utterances.
+This is true for all classes of languages that contain all finite languages and at least one infinite language. The situation is different if positive and negative data\is{negative
+evidence}
+are used for learning instead of text.
+
+The conclusion that has been drawn from Gold's results is that, for language acquisition, one requires knowledge that helps to avoid particular hypotheses from the start.
+\citew{Pullum2003a} criticizes the use of Gold's findings as evidence for the fact that linguistic knowledge must be innate. He lists a number of assumptions that have
+to be made in order for Gold's results to be relevant for the acquisition of natural languages. He then shows that each of these is not uncontroversial.
+
+\begin{enumerate}
+\item Natural languages could belong to the class of text-learnable languages as opposed to the class of context"=free grammars mentioned above.
+
+\item Learners could have information about which sequences of words are not grammatical (see p.\,453--454 of Gold's essay for a similar
+conjecture). As has been shown since then, children do have direct negative evidence\is{negative evidence} and there is also indirect
+negative evidence (see Section~\ref{Abschnitt-negative-Evidenz}). 
+
+\item It is not clear whether learners really restrict themselves to exactly one grammar. \citet{Feldman72a} has developed a learning procedure that
+eliminates all incorrect grammars at some point and is infinitely many times correct, however, it does not have to always choose one correct grammar
+and stick to the corresponding hypothesis.
+Using this procedure, it is possible to learn all recursively enumerable languages\is{recursively enumerable language}, that is, all languages
+for which there is a generative grammar. Pullum notes that even Feldman's learning procedure could prove to be too restrictive. It could take an entire
+lifetime for a learner to reach the correct grammar and they could have incorrect yet increasingly better hypotheses along the way.
+
+\item Learners could work in terms of improvements. If one allows for a certain degree of tolerance, then acquisition is easier and it even becomes
+possible to learn the class of recursively enumerable languages  \citep{Wharton74a}.
+
+\item Language acquisition does not necessarily constitute the acquisition of knowledge about a particular set of sequences, that is, the acquisition
+of a generative grammar capable of creating this set. The situation is completely different if grammars are viewed as a set of constraints that
+partially describe linguistic structures, but not necessarily a unique set of linguistic structures (for more on this point, see
+      Section~\ref{sec-modelle-theorien} and Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch}).
+\end{enumerate}
+
+\noindent
+Furthermore, Pullum notes that it is also possible to learn the class of context"=sensitive grammars
+with Gold's procedure with positive input only in a finite number of steps, if there is an upper
+bound $k$ for the number of rules, where $k$ is an arbitrary number.
+It is possible to make $k$ so big that the cognitive abilities of the human brain would not be able to use a grammar with more rules than this.
+Since it is normally assumed that natural languages can be described by context"=sensitive grammars\is{context"=sensitive grammar}, it can therefore
+be shown that the syntax of natural languages in Gold's sense can be learned from texts (also, see \citealp[\page 195--196]{SP2002b}).  
+
+\citet{Johnson2004a} adds that there is another important point that has been overlooked in the discussion about language acquisition. Gold's problem
+of identifiability is different from the problem of language acquisition that has played an important role in the nativism debate.
+In order to make the difference clear, Johnson differentiates between identifiability (in the Goldian sense) and learnability in the sense of
+language acquisition. Identifiability for a language class C means that there must be a function $f$ that for each environment $E$ for each
+language $L$ in $C$ permanently converges on hypothesis $L$ as the target language in a finite amount of time.
+
+Johnson proposes the following as the definition of \emph{learnability}\is{learnability} (p.\,585):
+\emph{A class $C$ of natural languages is learnable iff, given almost any normal human child and almost any
+normal linguistic environment for any language $L$ in $C$, the child will acquire $L$ (or something sufficiently similar to $L$) as a native language
+between the ages of one and five.} Johnson adds the caveat that this definition does not correspond to
+any theory of learnability in psycholinguistics, but rather it is a hint in the direction of a
+realistic conception of acquisition.
+
+Johnson notes that in most interpretations of Gold's theorem, identifiability and learnability are viewed as one and the same
+and shows that this is not logically correct: the main difference between the two depends on the use of two quantifiers.
+Identifiability of  \emph{one} language $L$ from a class $C$ requires that the learner converges on $L$ in \emph{every} environment
+after a finite amount of time. This time can differ greatly from environment to environment.
+There is not even an upper bound for the time in question.
+It is straightforward to construct a sequence of environments $E_1$, $E_2$, \ldots{} for $L$, so that a learner in the environment $E_i$ will not
+guess $L$ earlier than the time  $t_i$. Unlike identifiability, learnability means that there is a point in time after which in every
+normal environment, \emph{every} normal child has converged on the correct language. This means that children acquire their language
+after a particular time span.
+ Johnson quotes \citet[\page 352]{Morgan89a} claiming that children learn their native language after they have heard approximately
+ 4,280,000 sentences. If we assume that the concept of learnability has a finite upper"=bound for available time, then very few language
+ classes can be identified in the limit. Johnson has shown this as follows: let $C$ be a class of languages containing $L$ and $L'$, where
+ $L$ and $L'$ have some elements in common. It is possible to construct a text such that the first $n$ sentences are contained both in
+ $L$ and in $L'$.
+If the learner has $L$ as its working hypothesis  then continue the text with sentences from $L'$, if he has $L'$ as his hypothesis,
+then continue with sentences from $L$. In each case, the learner has entertained a false hypothesis after $n$ steps. This means that identifiability
+is not a plausible model for language acquisition.
+
+Aside from the fact that identifiability is psychologically unrealistic, it is not compatible with learnability \citep[\page 586]{Johnson2004a}.
+For identifiability, only one learner has to be found (the function $f$ mentioned above), learnability, however, quantifies over
+(almost) all normal children. If one keeps all factors constant, then it is easier to show the identifiability of a language class rather than
+its learnability.
+On the one hand, identifiability quantifies universally over all environments, regardless of whether these may seem odd or of how many repetitions these may contain.
+Learnability, on the other hand, has (almost) universal quantification exclusively over normal environments. Therefore, learnability refers to fewer environments
+than identifiability, such that there are less possibilities for problematic texts that could occur as an input and render a language unlearnable.
+Furthermore, learnability is defined in such a way that the learner does not have to learn $L$ exactly, but rather learn something sufficiently similar
+to $L$. With respect to this aspect, learnability is a weaker property of a language class than
+identifiability. Therefore, learnability does not follow from identifiability nor the reverse.\is{identification in the limit|)}
+  
+Finally, Gold is dealing with the acquisition of syntactic knowledge without taking semantic knowledge into consideration.  
+However, children possess a vast amount of information from the context that they employ when acquiring a language \citep{TCCBM2005a}.
+As pointed out by \citet[\page 44]{Klein86a-u}, humans do not learn anything if they are placed in a room and sentences in
+Mandarin Chinese\is{Mandarin Chinese} are played to them. Language is acquired in a social and cultural context.
+  
+In sum, one should note that the existence of innate linguistic knowledge cannot be derived from mathematical
+findings about the learnability of languages.  
+
+\subsection{Four case studies}
+\label{PSA-Faelle}
+
+\mbox{}\citet{PS2002a} have investigated four prominent instances of the Poverty of the Stimulus Argument in more detail.
+These will be discussed in what follows. Pullum and Scholz's article appeared in a discussion volume. Arguments against their
+article are addressed by \citet{SP2002b} in the same volume. Further PoS arguments from \citet{Chomsky86} and
+from literature in German have been disproved by \citet{Eisenberg92b}.
+
+\subsubsection{Plurals in noun-noun compounding}
+
+\mbox{}\citet{Gordon86a}\il{English|(} claims that compounds\is{composition} in English only allow
+irregular plurals in compounds, that is, \emph{mice-eater} but ostensibly not
+\noword{rats-eater}. Gordon claims that compounds with irregular plurals as first element are so rare that children could not have learned the fact that such
+compounds are possible purely from data.
+
+On pages 25--26, Pullum and Scholz discuss data from English that show that regular plurals can
+indeed occur as the first element of a compound (\emph{chemicals-maker}, \emph{forms-reader}, \emph{generics-maker},
+\emph{securities-dealer}, \emph{drinks trolley}, \emph{rules committee}, \emph{publications
+  catalogue}).\footnote{
+  Also, see \citew[\page 7]{Abney96a} for examples from the Wall Street Journal.
+}
+This shows that what could have allegedly not been learned from data is in fact not linguistically adequate and one therefore does not have to explain 
+its acquisition.\il{English|)}
+
+\subsubsection{Position of auxiliaries}
+
+The\il{English|(} second study deals with the position of modal\is{verb!modal} and auxiliary verbs\is{verb!auxiliary}. \citet[\page
+  73--75]{Kimball73b-u} discusses the data in (\mex{1}) and the rule in (\mex{2}) that is similar to one of the rules suggested by
+ \citet[\page 39]{Chomsky57a} and is designed to capture the following data: 
+\eal
+\label{Aux-Beispiele}
+\ex It rains.
+\ex\label{It-may-rain} 
+It may rain.
+\ex It may have rained.
+\ex It may be raining.
+\ex It has rained.
+\ex It has been raining.
+\ex It is raining.
+\ex\label{It-may-have-been-raining}
+It may have been raining.
+\zl
+\ea
+\label{Regel-Aux}
+Aux $\to$ T(M)(have+en)(be+ing)
+\z
+T stands for tense, M for a modal verb and \emph{en} stands for the participle morpheme (\suffix{en} in
+\emph{been}/\emph{seen}/\ldots{} and \suffix{ed} in \emph{rained}). The brackets here indicate the optionality
+of the expressions. Kimball notes that it is only possible to formulate this rule if (\mex{-1}h) is well"=formed.
+If this were not the case, then one would have to reorganize the material in rules such that the three cases
+(M)(have+en), (M)(be+ing) and (have+en)(be+ing) would be covered.
+Kimball assumes that children master the complex rule since they know that sentences such as
+(\mex{-1}h) are well-formed and since
+they know the order in which modal and auxiliary verbs must occur. Kimball assumes that children do not have positive
+evidence for the order in (\mex{-1}h) and concludes from this that the knowledge about the rule in (\mex{0}) must
+be innate.
+
+Pullum and Scholz note two problems with this PSA: first, they have found hundreds of examples, among them some from
+children's stories, so that the Kimball's claim that sentences such as (\mex{-1}h) are ``vanishingly rare'' should
+be called into question. For PSA arguments, one should at least specify how many occurrences there are allowed to be if one still wants to claim
+that nothing can be learned from them \citep[\page
+  29]{PS2002a}. 
+
+The second problem is that it does not make sense to assume that the rule in  (\mex{-1}h) plays a role in our linguistic knowledge.
+Empirical findings have shown that this rule is not descriptively adequate. If the rule in (\ref{Regel-Aux}) is not descriptively
+adequate, then it cannot achieve explanatory adequacy and therefore, one no longer has to explain how it can be acquired.
+  
+Instead of a rule such as (\ref{Regel-Aux}), all theories discussed here currently assume that auxiliary or modal verbs embed a phrase, that is,
+one does not have an Aux node containing all auxiliary and modal verbs, but rather a structure for (\ref{It-may-have-been-raining}) that looks
+as follows:
+\ea
+It [may [have [been raining]]].
+\z
+Here, the auxiliary or modal verb always selects the embedded phrase. The acquisition problem now looks completely different: a speaker has to learn the form
+of the head verb in the verbal projection selected by the auxiliary or modal verb. If this information has been learned, then it is irrelevant
+how complex the embedded verbal projections are: \emph{may} can be combined with a non"=finite lexical verb (\ref{It-may-rain}) or a non"=finite
+auxiliary (\ref{Aux-Beispiele}c,d).\il{English|)}
+
+\subsubsection{Reference of \emph{one}}
+
+The\il{English|(} third case study investigated by Pullum and Scholz deals with the pronoun \emph{one} in English.
+\citet[\page 413--425, 327--340]{Baker78a-u} claims that children cannot learn that \emph{one} can refer to constituents
+larger than a single word as in (\mex{1}).
+\eal
+\ex I would like to tell you another funny story, but I've already told you the only \emph{one} I
+know.
+\ex The old man from France was more erudite than the young \emph{one}.
+\zl
+Baker (\page 416--417) claims that \emph{one} can never refer to single nouns inside of NPs and supports this
+with examples such as (\mex{1}):
+\ea[*]{
+The student of chemistry was more thoroughly prepared than the one of physics.
+}
+\z
+According to Baker, learners would require negative data\is{negative evidence} in order to acquire this knowledge about ungrammaticality.
+Since learners -- following his argumentation -- never have access to negative evidence, they cannot possibly have learned the relevant
+knowledge and must therefore already possess it.
+
+\citet[\page 33]{PS2002a} point out that there are acceptable examples with the same structure as
+the examples in (\mex{0}): 
+\eal
+\ex I'd rather teach linguistics to a student of mathematics than to
+one of any discipline in the humanities.
+\ex An advocate of Linux got into a heated discussion with one of
+Windows NT and the rest of the evening was nerd talk.
+\zl
+This means that there is nothing to learn with regard to the well"=formedness of the structure in (\mex{-1}).
+Furthermore, the available data for acquiring the fact that \emph{one} can refer to larger constituents is not as hopeless
+as Baker (p.\,416) claims: there are examples that only allow an interpretation where \emph{one} refers to a larger
+string of words. Pullum and Scholz offer examples from various corpora. They also provide examples from the CHILDES corpus\is{CHILDES},
+a corpus that contains communication with children \citep{MacWhinny95a-u}. The following example is from a daytime TV show:
+\eanoraggedright
+\begin{tabular}[t]{@{}l@{~}p{11cm}}
+A: & ``Do you think you will ever remarry again? I don't.''\\
+B: & ``Maybe I will, someday. But he'd have to be somebody very special. Sensitive and supportive, giving. Hey, wait a minute, where
+   do they make guys like this?''\\
+A: & ``I don't know. I've never seen one up close.''\\
+\end{tabular}
+\z
+Here, it is clear that \emph{one}  cannot refer to \emph{guys} since A has certainly already seen \emph{guys}.
+Instead, it refers to \emph{guys like this}, that is, men who are sensitive and supportive.   
+
+Once again, the question arises here as to how many instances a learner has to hear for it to count as evidence in the eyes
+of proponents of the PSA.\il{English|)}
+
+\subsubsection{Position of auxiliaries in polar questions}
+\label{Abschnitt-Hilfsverbumstellung}
+
+The\is{auxiliary movement|(}\il{English|(} fourth PoS argument discussed by Pullum and Scholz comes from Chomsky and pertains to the
+position of the auxiliary in polar interrogatives in English. As shown on page~\pageref{Seite-GB-Entscheidungsfragen-Englisch},
+it was assumed in \gbt that a polar question is derived by movement of the auxiliary from the I position to the initial position C of
+the sentence. In early versions of Transformational Grammar, the exact analyses were different, but the main point was that the
+highest auxiliary is moved to the beginning of the clause. 
+ \citet[\page 29--33]{Chomsky71a-u}
+discusses the sentences in (\mex{1}) and claims that children know that they have to move the highest auxiliary verb even without having
+positive evidence for this.\footnote{
+	Examples with auxiliary movement are used in more recent PoS arguments too, for example in 
+  \citew*{BPYC2011a} and \citew[\page 39]{Chomsky2013a}. Work by \citet{Bod2009a} is not discussed by the authors.
+  For more on Bod's approach, see Section~\ref{Abschnitt-UDOP}.% 
+} If, for example, they entertained the hypothesis that one simply places the first auxiliary at the beginning of the sentence, then
+this hypothesis would deliver the correct result (\mex{1}b) for (\mex{1}a), but not for (\mex{1}c) since the polar question should
+be (\mex{1}d) and not (\mex{1}e).
+\eal
+\ex[]{
+The dog in the corner is hungry.
+}
+\ex[]{
+Is the dog in the corner hungry?
+}
+\ex[]{
+The dog that is in the corner is hungry.
+}
+\ex[]{\label{Hilfsverbinversion-mit-RS}
+Is the dog that is in the corner hungry?
+}
+\ex[*]{\label{Hilfsverbinversion-ungrammatisch}
+Is the dog that in the corner is hungry?
+}
+\zl
+Chomsky claims that children do not have any evidence for the fact that the hypothesis that one
+simply fronts the linearly first auxiliary is wrong, which is why they could pursue this hypothesis in a data"=driven learning process. He even goes so
+far as to claim that speakers of English only rarely or even never produce examples such as (\ref{Hilfsverbinversion-mit-RS})
+(Chomsky in
+\citew[\page 114--115]{Piattelli-Palmarini80a-u}). 
+With the help of corpus data and plausibly constructed examples, \citet{Pullum96a} has shown that this claim is clearly wrong.
+ \citet{Pullum96a} provides examples from the Wall Street Journal and \citet{PS2002a} discuss the relevant examples in more detail
+ and add to them with examples from the CHILDES corpus\is{CHILDES} showing  that adult speakers cannot only produce the relevant
+ kinds of sentences, but also that these occur in the child's input.\footnote{
+For more on this point, see \citew[\page 223]{Sampson89a}. Sampson cites part of a poem by William Blake, that is studied in English schools, as well as
+a children's encyclopedia. These examples surely do not play a role in acquisition of auxiliary position since this order is learned at the age of
+3;2, that is, it has already been learned by the time children reach school age.%
+}
+Examples from CHILDES\is{CHILDES} that disprove the hypothesis that the first auxiliary has to be fronted are given in (\mex{1}):\footnote{ 
+  See \citew{LE2001a}. Researchers on language acquisition agree that the frequency of these kind of examples in communication with children is in fact
+  very low. See \citew[\page 223]{ARP2008a}.
+}
+\eal
+\label{aux-fronting-childes}
+\ex Is the ball you were speaking of in the box with the bowling pin?
+\ex Where's this little boy who's full of smiles?
+\ex\label{aux-fronting-Adjunktsatz} While you're sleeping, shall I make the breakfast?
+\zl
+
+\noindent
+Pullum and Scholz point out that \emph{wh}"=questions such as (\mex{0}b) are also relevant if one assumes that these are derived from
+polar questions (see page~\pageref{Seite-GB-Entscheidungsfragen-Englisch} in this book) and if one wishes to show how the child can
+learn the structure"=dependent hypothesis. This can be explained with the examples in (\mex{1}): the
+base form from which (\mex{1}a) is derived is (\mex{1}b). If we were to front the first auxiliary in (\mex{1}b), we would produce (\mex{1}c).
+\eal
+\ex[]{
+Where's the application Mark promised to fill out?\footnote{
+  From the transcription of a TV program in the CHILDES corpus\is{CHILDES}.
+}
+}
+\ex[]{
+the application Mark [\sub{AUX} PAST] promised to fill out [\sub{AUX} is] there
+}
+\ex[*]{
+Where did the application Mark promised to fill out is?
+}
+\zl
+Evidence for the fact that (\mex{0}c) is not correct can, however, also be found in language addressed to children.
+Pullum and Scholz provide the examples in (\mex{1}):\footnote{
+	These sentences are taken from NINA05.CHA in DATABASE/ENG/SUPPES/.
+}
+\eal
+\label{wh-Fragen-Hilfsverbinversion}
+\ex Where's the little blue crib that was in the house before?
+\ex Where's the other dolly that was in here?
+\ex Where's the other doll that goes in there?
+\zl
+These questions have the form \emph{Where's NP?}, where NP contains a relative clause.
+
+In (\ref{aux-fronting-Adjunktsatz}), there is another clause preceding the actual interrogative, an adjunct clause containing an
+auxiliary as well. This sentence therefore provides evidence for falsehood of the hypothesis that the linearly first auxiliary must be fronted
+\citep[\page 223]{Sampson89a}. 
+
+In total, there are a number of attested sentence types in the input of children that would allow them to choose between the two
+hypotheses. Once again, the question arises as to how much evidence should be viewed as sufficient.
+
+Pullum und Scholz's article has been criticized by \citet{LU2002a} and \citet{LY2002a}. Lasnik and Uriagereka argue that the acquisition
+problem is much bigger than presented by Pullum and Scholz since a learner without any knowledge about the language he was going to acquire
+could not just have the hypothesis in (\mex{1}) that were discussed already but also the additional hypotheses in (\mex{2}):
+\eal
+\label{Hilfsverbhypothesen}
+\ex Place the first auxiliary at the front of the clause.
+\ex\label{Hypothese-I-C} 
+Place the first auxiliary in matrix-Infl at the front of the clause.
+\zl
+\eal
+\ex Place any auxiliary at the front of the clause.
+\ex Place any finite auxiliary at the front of the clause.
+\zl
+Both hypotheses in (\mex{0}) would be permitted by the sentences in (\mex{1}):
+\eal
+\ex[]{
+Is the dog in the corner hungry?
+}
+\ex[]{
+Is the dog that is in the corner hungry?
+}
+\zl
+They would, however, also allow sentences such as  (\mex{1}):
+\ea[*]{
+Is the dog that in the corner is hungry?
+}
+\z
+The question that must now be addressed is why all hypotheses that allow (\mex{0}) should be discarded since the learners do
+not have any information in their natural"=linguistic input about the fact that (\mex{0}) is not possible. They are lacking
+negative evidence.\is{negative evidence} If (\mex{-1}b) is present as positive evidence, then this by no means implies
+that the hypothesis in (\ref{Hypothese-I-C}) has to be the correct one. Lasnik and Uriagereka present the following hypotheses
+that would also be compatible with (\mex{-1}b):
+\eal
+\ex Place the first auxiliary in initial position (that follows a change in intonation).
+\ex Place the first auxiliary in initial position (that follows the first complete constituent).
+\ex Place the first auxiliary in initial position (that follows the first parsed semantic unit).
+\zl
+These hypotheses do not hold for sentences such as (\mex{1}) that contain a conjunction:
+\ea
+\label{Beispiel-Hilfsverbvoranstellung-Koordination}
+Will those who are coming and those who are not coming raise their hands?
+\z
+The hypotheses in (\mex{-1}) would also allow for sentences such as (\mex{1}):
+\ea[*]{
+Are those who are coming and those who not coming will raise their hands?
+}
+\z
+Speakers hearing sentences such as (\mex{-1}) can reject the hypotheses (\mex{-2}) and thereby rule out (\mex{0}), however, it is still possible
+to think of analogous implausible hypotheses that are compatible with all data previously discussed.
+
+\citet{LY2002a} take up the challenge of Pullum and Scholz and explicitly state how many occurrences one needs to acquire a particular phenomenon.
+They write the following:
+
+\begin{quote}
+   Suppose we have two independent problems of acquisition, P$_1$ and P$_2$, each
+of which involves a binary decision. For P$_1$, let F$_1$ be the frequency of the
+data that can settle P$_1$ one way or another, and for P$_2$, F$_2$. Suppose further
+that children successfully acquire P$_1$ and P$_2$ at roughly the same developmental
+stage. Then, under any theory that makes quantitative predictions of language
+development, we expect F$_1$ and F$_2$ to be roughly the same. Conversely, if F$_1$ and
+F$_2$ turn out significantly different, then P$_1$ and P$_2$ must represent qualitatively
+different learning problems.
+
+   Now let P$_1$ be the auxiliary inversion problem. The two choices are the
+structure-dependent hypothesis (3b-i) and the first auxiliary hypothesis (3a-i). \citep[\page 155]{LY2002a}
+\end{quote}
+
+\noindent
+The position of auxiliaries in English is learned by children at the age of 3;2. According to Legate
+and Yang, another acquisition phenomenon that is learned at the age of 3;2 is needed for
+comparison. The authors focus on subject drop\is{parameter!pro"=drop}\footnote{
+  This phenomenon is also called \emph{pro"=drop}. For a detailed discussion of the pro"=drop
+  parameter see Section~\ref{sec-pro-drop}.
+}, that is learned
+at 36 months (two months earlier than auxiliary movement). According to the authors, acquisition problems involve a binary decision:
+in the first case, one has to choose between the two hypotheses in (\ref{Hilfsverbhypothesen}). In the second case, the learner has to determine
+whether a language uses overt subjects. The authors assume that the use of expletives\is{pronoun!expletive} such as \emph{there} serves as
+evidence for learners that the language they are learning is not one with optional subjects. They then count the sentences in the CHILDES corpus\is{CHILDES}
+that contain \emph{there}"=subjects and estimate F$_2$ at 1,2\,\% of the sentences heard by the learner.
+Since, in their opinion, we are dealing with equally difficult phenomena here, sentences such as (\ref{Hilfsverbinversion-mit-RS}) and (\ref{wh-Fragen-Hilfsverbinversion})
+should constitute 1.2\,\% of the input in order for auxiliary movement to be learnable.
+
+The authors then searched in the Nina and Adam corpora (both part of CHILDES\is{CHILDES}) and note that 0,068 to 0,045\,\% of utterances have the form of
+(\ref{wh-Fragen-Hilfsverbinversion}) and none have the form of (\ref{Hilfsverbinversion-mit-RS}). They conclude that this number is not sufficient as positive evidence.
+
+Legate and Yang are right in pointing out that Pullum and Scholz's data from the Wall Street Journal are not necessarily relevant for language acquisition and also in pointing
+out that examples with complex subject noun phrases do not occur in the data or at least to a
+negligible degree. There are, however, three serious problems with their argumentation: first, there
+is no correlation between the occurrence of expletive subjects and the property of being a pro"=drop
+language: Galician\il{Galician} \citep[Section~2.5]{RU90a-u} is a pro"=drop language with subject
+expletive pronouns, in Italian\il{Italian} there is an existential expletive \emph{ci},\footnote{
+	However, \emph{ci} is not treated as an expletive by all authors. See \citew{Remberger2009a} for an overview.
+} even though Italian counts as a pro"=drop language, \citet{Franks95a-u} lists Upper\il{Sorbian!Upper} and Lower Sorbian\il{Sorbian!Lower} as pro"=drop languages
+ that have expletives in subject position.
+Since therefore expletive pronouns have nothing to do with the pro"=drop parameter, their frequency is irrelevant for the acquisition of a parameter value. If there were a correlation
+between the possibility of omitting subjects and the occurrence of subject expletives, then Norwegian and Danish\il{Danish} children should learn that there has to be a subject
+in their languages earlier than children learning English since expletives occur a higher percentage of the time in Danish and Norwegian\il{Norwegian} \citep[\page 220]{SP2002b}.
+In Danish, the constructions corresponding to \emph{there}"=constructions in English are twice as frequent. It is still unclear whether there are actually differences in
+rate of acquisition \citep[\page 246]{Pullum2009a}.
+
+Second, in constructing their Poverty of the Stimulus argument, Legate and Yang assume that there is innate linguistic knowledge (the pro"=drop parameter\is{parameter!pro"=drop|)}).
+Therefore their argument is circular since it is supposed to show that the assumption of innate linguistic knowledge is indispensable \citep[\page 220]{SP2002b}. 
+
+The third problem in Legate and Yang's argumentation is that they assume that a transformational analysis is the only possibility. This becomes clear
+from the following citation \citep[\page 153]{LY2002a}:
+\begin{quote}
+The correct operation for question formation is, of course, structure dependent: it involves parsing
+the sentence into structurally organized phrases, and fronting the auxiliary that follows the
+subject NP, which can be arbitrarily long:
+\begin{exe}
+\exi{(4)}
+\begin{xlist}
+\ex Is [the woman who is singing] e happy?
+\ex Has [the man that is reading a book] e eaten supper?
+\end{xlist}
+\end{exe}
+\end{quote}
+
+\noindent
+The analysis put forward by Chomsky (see page~\pageref{Seite-GB-Entscheidungsfragen-Englisch}) is a transformation"=based\is{transformation} one, that is, a learner
+has to learn exactly what Legate and Yang describe: the auxiliary must move in front of the subject noun phrase. There are, however, alternative analyses that
+do not require transformations or equivalent mechanisms.
+If our linguistic knowledge does not contain any information about transformations, then their claim about what has to be learned is wrong.
+For example, one can assume, as in Categorial Grammar\is{Categorial Grammar (CG)}, that auxiliaries form a word class with particular distributional properties.
+One possible placement for them is initial positions as observed in questions, the alternative is after the subject \citep[\page 104]{Villavicencio2002a}.
+There would then be the need to acquire information about whether the subject is realized to the
+left or to the right of its head. As an alternative to this lexicon"=based analysis,
+one could pursue a Construction Grammar\is{Construction Grammar (CxG)} (Fillmore \citeyear[\page44]{Fillmore88a};
+\citeyear{Fillmore99a}; \citealp[\page 18]{KF99a}), Cognitive Grammar\is{Cognitive Grammar} \citep[Chapter~9]{Dabrowska2004a}, or HPSG\indexhpsg \citep{GSag2000a-u} approach.
+In these frameworks, there are simply two\footnote{
+	\citet{Fillmore99a} assumes subtypes of the Subject Auxiliary Inversion Construction since this kind of inversion does not
+	only occur in questions.
+}
+schemata for the two sequences that assign different meanings according to the order of verb and subject. The acquisition problem is then that the learners have
+to identify the corresponding phrasal patterns in the input. They have to realize that Aux NP VP is a well"=formed structure in English that has interrogative
+semantics.
+The relevant theories of acquisition in the Construction Grammar"=oriented literature have been very well worked out (see Section~\ref{Abschnitt-musterbasiert} and
+\ref{Abschnitt-Selektionsbasierter-Spracherwerb}). Construction"=based theories of acquisition are also supported by the fact that one can see that there are
+frequency effects, that is, auxiliary inversion is first produced by children for just a few auxiliaries and only in later phases of development is it then extended to
+all auxiliaries. If speakers have learned that auxiliary constructions have the pattern Aux NP VP, then the coordination data provided by Lasnik and Uriagereka in 
+(\ref{Beispiel-Hilfsverbvoranstellung-Koordination}) no longer pose a problem since, if we only assign the first conjunct to the NP in the pattern Aux NP VP, then
+the rest of the coordinate structure (\emph{and those who are not coming}) remains unanalyzed and cannot be incorporated into the entire sentence.
+The hearer is thereby forced to revise his assumption that \emph{will those who are coming} corresponds to the sequence Aux NP in Aux NP VP and instead to
+use the entire NP \emph{those who are coming and those who are not coming}.
+For acquisition, it is therefore enough to simply learn the pattern Aux NP VP first for some and then eventually for all auxiliaries in English.
+This has also been shown by \citet{LE2001a}, who trained a neural network\is{neural network|(} exclusively with data that did not contain NPs with relative
+clauses in auxiliary constructions. Relative clauses were, however, present in other structures. The complexity of the training material was increased bit
+by bit just as is the case for the linguistic input that children receive
+\citep{Elman93a}.\footnote{
+	There are cultural differences. In some cultures, adults do not talk to children that have not attained
+	full linguistic competence \citep{Ochs82a,OS84a} (also see
+  Section~\ref{Abschnitt-negative-Evidenz}). Children have to therefore learn the language from their environment, that is, the sentences that
+  they hear reflect the full complexity of the language.
+} The neural network can predict the next symbol after a sequence of words. For sentences with interrogative word order, the predictions are correct.
+Even the relative pronoun in (\mex{1}) is predicted despite the sequence Aux Det N Relp never occurring in the training material.
+\ea
+Is the boy who is smoking crazy?
+\z
+Furthermore, the system signals an error if the network is presented with the ungrammatical sentence (\mex{1}):
+\ea[*]{
+Is the boy who smoking is crazy?
+}
+\z
+A gerund is not expected after the relative pronoun, but rather a finite verb. The constructed neural network is of course not yet an adequate model of what is
+going on in our heads during acquisition and speech production.\footnote{
+  See \citet[\page 324]{Hurford2002a} and \citet[Section~6.2]{Jackendoff2007a} for problems that arise for certain kinds of neural
+  networks and \citet{Pulvermueller2003a,Pulvermueller2010a} for an alternative
+  architecture that does not have these problems.
+} The experiment shows, however, that the input that the learner receives contains rich statistical\is{statistics} information that can be
+used when acquiring language.\is{neural network|)} Lewis and Elman point out that the statistical information about the distribution of words in the input
+is not the only information that speakers have. In addition to information about distribution, they are also exposed to information about the context\is{context}
+and can make use of phonological similarities in words.
+
+In connection to the ungrammatical sentences in (\mex{0}), it has been claimed that the fact that such sentences can never be produced shows
+that children already know that grammatical operations are structure"=dependent and this is why they do not entertain the hypothesis that it is simply
+the linearly first verb that is moved \citep{CN87a-u}. The claim simply cannot be verified since children do not normally form the relevant complex
+utterances. It is therefore only possible to experimentally illicit utterances where they could make the relevant mistakes.
+\citet{CN87a-u} have carried out such experiments. Their study has been criticized by \citet*{ARP2008a} since these authors could show that children
+do really make mistakes when fronting auxiliaries. The authors put the difference to the results of the first study by Crain and Nakayama down to unfortunate choice
+of auxiliary in Crain and Nakayama's study. Due to the use of the auxiliary \emph{is}, the ungrammatical examples had pairs of words that never or only
+very rarely occur next to each other (\emph{who running} in (\mex{1}a)). 
+\eal
+\ex \hspaceThis{*~}The boy who is running fast can jump high. $\to$\\
+ {}* Is the boy who running fast can jump high?
+\ex \hspaceThis{*~}The boy who can run fast can jump high. $\to$\\
+ {}* Can the boy who run fast can jump high?
+\zl
+If one uses the auxiliary \emph{can}, this problem disappears since \emph{who} and \emph{run} certainly do appear together. This then leads to the children
+actually making mistakes that they should not have, as the incorrect utterances actually violate a constraint that is supposed to be part of innate
+linguistic knowledge.
+
+\citet{Estigarribia2009a} investigated English polar questions in particular. He shows that not even half of the polar questions in children's input have
+ the form Aux NP VP (p.\,74).
+Instead, parents communicated with their children in a simplified form and used sentences such as:
+\eal
+\ex That your tablet?
+\ex He talking?
+\ex That taste pretty good?
+\zl
+Estigarribia divides the various patterns into complexity classes of the following kind:
+\textsc{frag}
+(\emph{fragmentary}), \textsc{spred} (\emph{subject predicate}) and \textsc{aux-in} (\emph{auxiliary
+  inversion}). (\mex{1}) shows corresponding examples:
+\eal\settowidth\jamwidth{(\textsc{aux-in})}
+\ex coming tomorrow?         \jambox{(\textsc{frag})}
+\ex you coming tomorrow?     \jambox{(\textsc{spred})}
+\ex Are you coming tomorrow? \jambox{(\textsc{aux-in})}
+\zl
+What we see is that the complexity increases from class to class. Estigarribia suggests a system of language
+acquisition where simpler classes are acquired before more complex ones and the latter ones develop from peripheral
+modifications of more simple classes
+(p.\,76). He assumes that question forms are learned from right to left
+ (\emph{right to left elaboration}\is{right to left
+  elaboration}), that is, (\mex{0}a) is learned first, then the pattern in (\mex{0}b) containing a subject in addition to the material in (\mex{0}a), and
+ then in a third step, the pattern (\mex{0}c) in which an additional auxiliary occurs (p.\,82). 
+In this kind of learning procedure, no auxiliary movement is involved. This view is compatible with constraint"=based analyses such as that of
+ \citet{GSag2000a-u}. 
+A similar approach to acquisition by \citet*{FPAG2007a} will be discussed in Section~\ref{Abschnitt-musterbasiert}.
+
+A further interesting study has been carried out by \citet{Bod2009a}. He shows that it is possible to learn auxiliary inversion
+assuming trees with any kind of branching even if there is no auxiliary inversion with complex noun phrases present
+in the input. The procedure he uses as well as the results he gains are very interesting and will be discussed 
+in Section~\ref{Abschnitt-UDOP} in more detail.
+
+In conclusion, we can say that children do make mistakes with regard to the position of auxiliaries that they
+probably should not make if the relevant knowledge were innate. Information about the statistical
+distribution of words in the input is enough to learn the structures of complex sentences without
+actually having this kind of complex sentences in the input.% 
+\is{auxiliary movement|)}\il{English|)}
+
+\subsubsection{Summary}
+
+\mbox{}\citet[\page 19]{PS2002a} show what an Argument from Poverty of the Stimulus (APS) would have to look like if it were
+constructed correctly:
+\ea
+\begin{tabular}[t]{@{}l@{~~}p{11cm}@{}}
+\multicolumn{2}{@{}l@{}}{APS specification schema:}\\
+a. & ACQUIRENDUM CHARACTERIZATION: describe in detail what is alleged to be known.\\
+b. & LACUNA SPECIFICATION: identify a set of sentences such that if the learner had access to them, the claim of data-driven learning
+of the acquirendum would be supported.\\
+c. & INDISPENSABILITY ARGUMENT: give reason to think that if
+learning were data-driven, then the acquirendum could not be
+learned without access to sentences in the lacuna.\\
+d. & INACCESSIBILITY EVIDENCE: support the claim that tokens of sentences in the lacuna were not available to the learner during the acquisition process.\\
+e. & ACQUISITION EVIDENCE: give reason to believe that the acquirendum does in fact become known to learners during childhood.\\
+\end{tabular}
+\z
+As the four case studies have shown, there can be reasons for rejecting the acquirendum. If the acquirendum does not have to be acquired, than there is no
+longer any evidence for innate linguistic knowledge.
+The acquirendum must at least be descriptively adequate. This is an empirical question that can be answered by linguists. In three of the four PoS arguments discussed
+by Pullum and Scholz, there were parts which were not descriptively adequate. In previous sections, we already encountered other PoS arguments that involve
+claims regarding linguistic data that cannot be upheld empirically (for example, the Subjacency Principle). 
+For the remaining points in (\mex{0}), interdisciplinary work is required: the specification of the lacuna falls into the theory of formal language\is{formal language}
+(the specification of a set of utterances), the argument of indispensability is a mathematical task
+from the realm of learning theory\is{learning theory}, the evidence for inaccessibility is an
+empirical question that can be approached by using corpora, and finally the evidence for acquisition
+is a question for experimental developmental psychologists \citep[\page 19--20]{PS2002a}. 
+
+\citet[\page 46]{PS2002a} point out an interesting paradox with regard to (\mex{0}c):
+without results from mathematical theories of learning, one cannot achieve (\mex{0}c). If one wishes to provide a valid
+Poverty of the Stimulus Argument, then this should automatically lead to improvements in theories of learning, that is, it is possible
+to learn more than was previously assumed.
+
+\subsection{Unsupervized Data-Oriented Parsing (U-DOP)}
+\label{Abschnitt-UDOP}
+
+\mbox{}\citet{Bod2009a}\is{auxiliary movement|(}\is{statistics|(}\is{Unsupervized Data-Oriented Parsing (U-DOP)|(} 
+has developed a procedure that does not require any information about word classes or relations between words
+contained in utterances.
+The only assumption that one has to make is that there is some kind of structure. The procedure consists of three steps:
+\begin{enumerate}
+\item Compute all possible (binary"=branching) trees\is{branching!binary} (without category symbols) for a set
+of given sentences.
+\item Divide these trees into sub"=trees.
+\item Compute the ideal tree for each sentence.
+\end{enumerate}
+This process will be explained using the sentences in  (\mex{1}):
+\eal
+\ex Watch the dog.
+\ex The dog barks.
+\zl
+The trees that are assigned to these utterances only use the category symbol X since the categories for the relevant phrases
+are not (yet) known. In order to keep the example readable, the words themselves will not be given the category X, although
+one can of course do this. Figure~\vref{Abbildung-unlabeled-trees} shows the trees for (\mex{0}).
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[X
+		[watch]
+		[the]]
+	[dog]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[watch]
+	[X
+		[the]
+		[dog]]]
+\end{forest}
+\hfill\mbox{}
+\\[3ex]
+\hfill\begin{forest}
+sn edges
+[X
+	[X
+		[the]
+		[dog]]
+	[barks]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[the]
+	[X
+		[dog]
+		[barks]]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{Abbildung-unlabeled-trees}Possible binary"=branching structures for \emph{Watch the
+    dog} and \emph{The dog barks}.}
+%\vspace{-\baselineskip}
+\end{figure}%
+%%
+%%
+In the next step, the trees are divided into subtrees. The trees in Figure~\ref{Abbildung-unlabeled-trees} have the subtrees that can be seen in Figure~\vref{Abbildung-Teilbaume}.
+\begin{figure}
+\hfill\begin{forest}
+sn edges
+[X
+	[X
+		[watch]
+		[the]]
+	[dog]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[X [,phantom ]]
+	[dog]]
+\end{forest}
+\hfill
+\begin{forest}
+[X
+	[watch]
+	[the]]
+\end{forest}\hfill\mbox{}
+\\[3ex]
+\hfill\begin{forest}
+sn edges
+[X
+	[watch]
+	[X
+		[the]
+		[dog]]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[watch]
+	[X [,phantom ]]]
+\end{forest}
+\hfill
+\begin{forest}
+[X
+	[the]
+	[dog]]
+\end{forest}\hfill\mbox{}
+\\[3ex]
+\hfill\begin{forest}
+sn edges
+[X
+	[X
+		[the]
+		[dog]]
+	[barks]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[X [,phantom ]]
+	[barks]]
+\end{forest}
+\hfill
+\begin{forest}
+[X
+	[the]
+	[dog]]
+\end{forest}\hfill\mbox{}
+\\[3ex]
+\hfill\begin{forest}
+sn edges
+[X
+	[the]
+	[X
+		[dog]
+		[barks]]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[the]
+	[X [,phantom ]]]
+\end{forest}
+\hfill
+\begin{forest}
+[X
+	[dog]
+	[barks]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{Abbildung-Teilbaume}Subtrees for the trees in Figure~\ref{Abbildung-unlabeled-trees}}
+\end{figure}%
+In the third step, we now have to compute the best tree for each utterance. For \emph{The dog
+  barks.}, there are two trees in the set of the subtrees that correspond exactly to this utterance.
+But it is also possible to build structures out of subtrees. There are therefore multiple derivations possible
+for \emph{The dog
+  barks.} all of which use the trees in Figure~\ref{Abbildung-Teilbaume}: 
+  one the one hand, trivial derivations that use the entire tree, and on the other, derivations that
+  build trees from smaller subtrees.
+Figure~\vref{Abbildung-Analyse} gives an impression of how this construction of subtrees happens.
+\begin{figure}
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[the]
+	[X
+		[dog]
+		[barks]]]
+\end{forest}}
+is created by
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[the]
+	[X
+		[dog]
+		[barks]]]
+\end{forest}}
+and
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[the]
+	[X [,phantom ]]]
+\end{forest}}
+$\circ$
+\adjustbox{valign=c}{%
+\begin{forest}
+[X
+	[dog]
+	[barks]]
+\end{forest}}\hfill\mbox{}
+\\[3ex]
+\hfill\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[X
+		[the]
+		[dog]]
+	[barks]]
+\end{forest}}
+is created by
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[X
+		[the]
+		[dog]]
+	[barks]]
+\end{forest}}
+and
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[X [,phantom ]]
+	[barks]]
+\end{forest}}
+$\circ$
+\adjustbox{valign=c}{%
+\begin{forest}
+[X
+	[the]
+	[dog]]
+\end{forest}}
+\hfill\mbox{}
+\caption{\label{Abbildung-Analyse}Analysis of \emph{The dog barks} using subtrees from Figure~\ref{Abbildung-Teilbaume}}
+\end{figure}%
+If we now want to decide which of the analyses in (\mex{1}) is the best, then we have to compute the probability of each tree.
+\eal
+\ex {}[[the dog] barks]
+\ex {}[the [dog barks]]
+\zl
+The probability of a tree is the sum of the probabilities of all its analyses.
+There are two analyses for (\mex{0}b), which can be found in Figure~\ref{Abbildung-Analyse}.
+The probability of the first analysis of (\mex{0}b) corresponds to the probability of choosing exactly the complete tree for [the [dog barks]] from
+the set of all subtrees. Since there are twelve subtrees, the probability of choosing that one is 1/12. The probability of the second
+analysis is the product of the probabilities of the subtrees that are combined and is therefore 1/12 $\times$ 1/12 = 1/144.
+The probability of the analysis in (\mex{0}b) is therefore 1/12 + (1/12 $\times$ 1/12) = 13/144.
+One can then calculate the probability of the tree in (\mex{0}a) in the same way. The only difference here is that the tree for
+[the dog] occurs twice in the set of subtrees. Its probability is therefore
+ 2/12. The probability of the tree [[the dog] barks] is therefore:
+ 1/12 + (1/12 $\times$ 2/12) = 14/144. We have thus extracted knowledge about plausible structures from the corpus. This knowledge can
+also  be applied whenever one hears a new utterance for which there is no complete tree. It is then possible to use already known
+ subtrees to calculate the probabilities of possible analyses of the new utterance.
+Bod's model can also be combined with weights: those sentences that were heard longer ago by the speaker, will receive a lower weight.
+One can thereby also account for the fact that children do not  have all sentences that they have ever heard available simultaneously. 
+This extension makes the UDOP model more plausible for language acquisition\is{acquisition}.
+
+In the example above, we did not assign categories to the words. If we were to do this, then we
+would get the tree in Figure~\vref{Abbildung-diskontinuierlich} as a possible
+subtree.
+\begin{figure}
+\centering
+\begin{forest}
+[X
+	[X
+		[watch,tier=word]]
+	[X
+		[X]
+		[X
+			[dog,tier=word]]]]
+\end{forest}
+\caption{\label{Abbildung-diskontinuierlich}Discontinuous partial tree}
+\end{figure}%
+These kinds of discontinuous subtrees are important if one wants to capture dependencies between elements that occur in different subtrees
+of a given tree. Some examples are the following sentences:
+
+\eal
+\ex BA carried \emph{more} people \emph{than} cargo in 2005.
+\ex \emph{What's} this scratch \emph{doing} on the table?
+\ex Most software \emph{companies} in Vietnam \emph{are} small sized.
+\zl
+
+\noindent
+It is then also possible to learn auxiliary inversion in English with these kinds of discontinuous
+trees. All one needs are tree structures for the two sentences in (\mex{1}) in order to prefer the correct sentence (\mex{2}a) over the incorrect one (\mex{2}b).
+
+\eal
+\label{Beispiel-Inversion}
+\ex The man who is eating is hungry.
+\ex Is the boy hungry?
+\zl
+
+\eal
+\ex[]{\label{Bsp-Is-the-man-who-is-eating-hungry}
+Is the man who is eating hungry?
+}
+\ex[*]{
+Is the man who eating is hungry?
+}
+\zl
+
+\noindent
+U-DOP can learn the structures for (\mex{-1}) in Figure~\vref{Abbildung-Strukturen-fuer-Fragen-und-RS} from the sentences in (\mex{1}):
+
+\eal
+\label{Hilfsverbinversion-Input}
+\ex\label{Bsp-The-man-who-is-eatin-mumbled}
+The man who is eating mumbled.
+\ex The man is hungry.
+\ex The man mumbled.
+\ex The boy is eating.
+\zl
+
+\noindent
+Note that these sentences do not contain any instance of the structure in (\mex{-1}a).
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[X
+		[X
+			[X
+				[the]]
+			[X
+				[man]]]
+		[X
+			[X
+				[who]]
+			[X
+				[X
+					[is]]
+				[X
+					[eating]]]]]
+	[X
+		[X
+			[is]]
+		[X
+			[hungry]]]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[X
+	[X
+		[is]]
+	[X
+		[X
+			[X
+				[the]]
+			[X
+				[boy]]]
+		[X
+			[hungry]]]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{Abbildung-Strukturen-fuer-Fragen-und-RS}Structures that U-DOP learned from the examples in (\ref{Beispiel-Inversion}) and (\ref{Hilfsverbinversion-Input})}
+\end{figure}%
+With the structures learned here, it is possible to show that the shortest possible derivation for
+the position of the auxiliary is also the correct one: the correct order
+\emph{Is the man who is eating
+  hungry?} only requires that the fragments in Figure~\vref{Abbildung-Kombination-fuer-grammatischen-Satz} are combined, whereas the structure for
+  * \emph{Is the man who eating is hungry?} requires  at least four subtrees from Figure~\ref{Abbildung-Strukturen-fuer-Fragen-und-RS} to be combined
+  with each other. This is shown by Figure~\vref{Abbildung-Kombination-fuer-ungrammatischen-Satz}.
+
+\begin{figure}
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+[X
+	[X
+		[is,tier=word]]
+	[X
+		[X]
+		[X
+			[hungry,tier=word]]]]
+\end{forest}
+}
+\hfill
+$\circ$
+\hfill
+\hspace{5mm}\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[X
+		[X
+			[the]]
+		[X
+			[man]]]
+	[X
+		[X
+			[who]]
+		[X
+			[X
+				[is]]
+			[X
+				[eating]]]]]
+\end{forest}}
+\hfill\mbox{}
+\caption{\label{Abbildung-Kombination-fuer-grammatischen-Satz}Derivation of the correct structure for combination with an auxiliary using two subtrees from
+Figure~\ref{Abbildung-Strukturen-fuer-Fragen-und-RS}}
+\end{figure}%
+%
+%
+%
+%
+\begin{figure}
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+empty nodes
+[X
+	[X
+	      [
+        	[is]] ]
+	[X
+		[X]
+		[X]]]
+\end{forest}}
+\hfill
+$\circ$
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+[X
+	[X
+		[X
+			[the,tier=word]]
+		[X
+			[man,tier=word]]]
+	[X
+		[X
+			[who,tier=word]]
+		[X]]]
+\end{forest}}
+\hfill
+$\circ$
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[eating]]
+\end{forest}}
+\hfill
+$\circ$
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+sn edges
+[X
+	[X
+		[is]]
+	[X
+		[hungry]]]
+\end{forest}}
+\hfill\mbox{}
+\caption{\label{Abbildung-Kombination-fuer-ungrammatischen-Satz}Derivation of the incorrect structure
+for the combination with an auxiliary using two subtrees from Figure~\ref{Abbildung-Strukturen-fuer-Fragen-und-RS}}
+\end{figure}%
+
+The motivation for always taking the derivation that consists of the least subparts is that one maximizes similarity to already known material.
+
+The tree for (\mex{1}) containing one auxiliary too many can also be created from Figure~\ref{Abbildung-Strukturen-fuer-Fragen-und-RS} with just two subtrees 
+(with the tree [\sub{X} is\sub{X} X] and the entire tree for \emph{The man who is eating is hungry}).
+\ea[*]{
+Is the man who is eating is hungry?
+}
+\z
+Interestingly, children do produce these kind of incorrect sentences (\citealp[\page 530]{CN87a-u}; \citealp*{ARP2008a}). 
+However, if we consider the probabilities of the subtrees in addition to the the number of combined
+subparts, we get the correct result, namely (\ref{Bsp-Is-the-man-who-is-eating-hungry}) and not (\mex{0}).
+This is due to the fact that \emph{the man who is eating} occurs in the corpus twice, in (\ref{Bsp-Is-the-man-who-is-eating-hungry}) and in
+(\ref{Bsp-The-man-who-is-eatin-mumbled}).
+Thus, the probability of \emph{the man who
+  is eating} is just as high as the probability of \emph{the man who is eating is hungry} and thus derivation in Figure~\ref{Abbildung-Kombination-fuer-grammatischen-Satz} 
+  is preferred over the one for (\mex{0}).
+This works for the constructed examples here, however one can imagine that in a realistic corpus, sequences of the form \emph{the man who is eating} are more frequent
+than sequences with further words since \emph{the man who is eating} can also occur in other contexts.
+Bod has applied this process to corpora of adult language (English\il{English}, German\il{German} and Chinese\il{Mandarin Chinese}) as well as
+applying it to the Eve corpus from the CHILDES database\is{CHILDES} in order to see whether analogy formation\is{analogy} constitutes a plausible model
+for human acquisition of language\is{acquisition}. He was able to show that what we demonstrated for
+the sentences above also works for a larger corpus of
+naturally occurring language: although there were no examples for movement of an auxiliary across a complex NP in the Eve corpus, it is possible to learn
+by analogy that the auxiliary from a complex NP cannot be fronted.
+
+It is therefore possible to learn syntactic structures from a corpus without any prior knowledge
+about parts of speech or abstract properties of language.
+The only assumption that Bod makes is that there are (binary"=branching)\is{branching!binary} structures. The assumption of binarity is not really
+necessary. But if one includes flat branching structures into the computation, the set of trees will
+become considerably bigger. Therefore, Rens Bod only used binary"=branching structures in his
+experiments. In his trees, X consists of two other X's or a word. We are therefore dealing with
+recursive\is{recursion} structures. Therefore, Bod's work proposes a theory of the acquisition of
+syntactic structures that only requires recursion, something that is viewed by \citet*{HCF2002a} as a basic property of language.
+
+As shown in Section~\ref{Abschnitt-Rekursion}, there is evidence that recursion is not restricted to language and thus one can conclude that it is not 
+necessary to assume innate linguistic knowledge in order to be able to learn syntactic structures from the given input.
+
+Nevertheless, it is important to point out something here: what Rens Bod shows is that syntactic structures can be learned.
+The information about the parts of speech of each word involved which are not yet included in his structures can also be derived using
+statistical\is{statistics} methods \citep{RCF98a,Clark2000a}.\footnote{
+	Computational linguistic algorithms for determining parts of speech often look at an entire corpus. But children are always
+	dealing with just a particular part of it. The corresponding learning process must then also include a
+	curve of forgetting. See \citew[\page
+  67]{Braine87a}. 
+} 
+In all probability, the structures that can be learned correspond to structures that surface"=oriented linguistic theories would also assume. However, not
+all aspects of the linguistic analysis are acquired. In Bod's model, only occurrences of words in structures are evaluated.
+Nothing is said about whether words stand in a particular regular relationship to one another or not (for example, a lexical rule connecting a passive
+participle and perfect participle). Furthermore, nothing is said about how the meaning of expressions arise (are they rather  holistic in the sense of Construction
+Grammar or projected from the lexicon?). These are questions that still concern theoretical linguists (see Chapter~\ref{Abschnitt-Phrasal-Lexikalisch}) 
+and cannot straightforwardly be derived from the statistic distribution of words and the structures computed from them (see Section~\ref{Abschnitt-U-Dop-phrasal}
+for more on this point).\is{auxiliary movement|)}
+
+A second comment is also needed: we have seen that statistical information can be used to derive the structure of complex linguistic expressions. This now
+begs the question of how this relates to Chomsky's earlier argumentation against statistical approaches
+(\citealp[\page 16]{Chomsky57a}). \citet[Section~4.2]{Abney96a} discusses this in detail. The problem with his earlier argumentation is that Chomsky referred
+ to Markov models\is{Markov model}. These are statistical versions of finite automatons. Finite automatons\is{automaton!finite} can only describe
+type 3 languages\is{complexity class} and are therefore not appropriate for analyzing natural
+language. However, Chomsky's criticism cannot be applied to statistical methods
+in general.\is{statistics|)}\is{Unsupervized Data-Oriented Parsing (U-DOP)|)}
+
+\subsection{Negative evidence}
+\label{Abschnitt-negative-Evidenz}
+
+In\is{negative evidence|(} a number of works that assume innate linguistic knowledge, it is claimed that children do not have access to negative evidence, that is,
+nobody tells them that sentences such as (\ref{Hilfsverbinversion-ungrammatisch})\is{auxiliary inversion} -- repeated here as (\mex{1})
+-- are ungrammatical (\citealp[\page 42--52]{BH70a}; \citealp{Marcus93a}). 
+\ea[*]{\label{Hilfsverbinversion-ungrammatisch-zwei}
+Is the dog that in the corner is hungry?
+}
+\z
+It is indeed correct that adults do not wake up their children with the ungrammatical sentence of the day, however, children do in fact have access
+to negative evidence of various sorts. For example, \citet{CC2003a} have shown that English\il{English} and French speaking\il{French} parents
+correct the utterances of their children that are not well"=formed.
+For example, they repeat utterances where the verb was inflected incorrectly. Children can deduce from the fact that the utterance was repeated and from what was changed
+in the repetition that they made a mistake and Chouinard and Clark also showed that they actually do this. The authors looked at data from five children whose
+parents all had an academic qualification. They discuss the parent"=child relationship in other cultures, too (see \citew{Ochs82a,OS84a} and \citew[\page 71]{Marcus93a}
+for an overview) and refer to studies of America families with lower socio"=economic status (page~660). 
+
+A further form of negative evidence is indirect negative evidence\is{evidence!negative!indirect}, which \citet[\page 9]{Chomsky81a} also assumes could play a role
+in acquisition. \citet[Section~5.2]{Goldberg95a} gives the utterance in (\mex{1}a) as an example:\footnote{
+Also, see \citew[\page 277]{Tomassello2006b-u}.
+}
+\eal
+\ex[]{
+Look! The magician made the bird disappear.
+}
+\ex[*]{
+The magician disappeared the bird.
+}
+\zl
+The child can conclude from the fact that adults use a more involved causative construction with \emph{make}
+that the verb \emph{disappear}, unlike other verbs such as \emph{melt}, cannot be used transitively. 
+An immediately instructive example for the role played by indirect negative evidence comes from morphology.
+There are certain productive rules that can however still not be applied if there is a word that blocks\is{blocking}
+the application of the rule. An example is the \suffix{er} nominalization\is{nominalization} suffix in German.
+By adding an \suffix{er} to a verb stem, one can derive a noun that refers to someone who carries out a particular
+action (often habitually) (\emph{Raucher} `smoker', \emph{Maler} `painter', \emph{Sänger} `singer', \emph{Tänzer} `dancer').
+However, \emph{Stehler} `stealer' is very unusual. The formation of \emph{Stehler} is blocked by the existence of \emph{Dieb} `thief'.
+Language learners therefore have to infer from the non"=existence of \emph{Stehler} that the nominalization rule does not apply to \emph{stehlen} `to steal'.
+
+Similarly, a speaker with a grammar of English\il{English} that does not have any restrictions on
+the position of manner adverbs would expect that both orders in (\mex{1}) are possible \citep[\page 206]{SP2002b}:
+\eal
+\ex[]{
+call the police immediately
+}
+\ex[*]{
+call immediately the police
+}
+\zl
+Learners can conclude indirectly from the fact that verb phrases such as (\mex{0}b) (almost) never occur in the input that these are probably not part
+of the language. This can be modeled using the relevant statistical learning algorithms.
+
+The examples for the existence of negative evidence provided so far are more arguments from plausibility.
+\citet{Stefanowitsch2008a}\is{statistics|(} has combined corpus linguistic\is{corpus linguistics} studies
+on the statistical distribution with acceptability experiments and has shown that negative evidence gained from
+expected frequencies correlates with acceptability judgments of speakers. This process will be discussed now briefly: Stefanowitsch
+assumes the following principle:
+\ea
+Form expectations about the frequency of co"=occurrence of linguistic features or elements on the basis of their individual frequency of occurrence
+and check these expectations against the actual frequency of co"=occurrence. \citep[\page 518]{Stefanowitsch2008a}
+\z
+Stefanowitsch works with the part of the \emph{International Corpus of English} that contains British English\il{English} (ICE-GB). In this corpus, the
+verb \emph{say} occurs 3,333 times and sentences with ditransitive verbs (Subj Verb Obj Obj) occur 1,824 times. The entire total of verbs in the corpus
+is 136,551. If all verbs occurred in all kinds of sentences with the same frequencies, then we would expect \emph{say} to occur 44.52 times
+(X / 1,824 = 3,333 / 136,551 and hence X = 1,824 $\times$ 3,333 / 136,551) in the ditransitive construction. But the number of actual
+occurrences is actually 0 since, unlike (\mex{1}b), sentences such as (\mex{1}a) are not used by
+speakers of English. 
+\eal
+\ex[*]{
+Dad said Sue something nice.
+}
+\ex[]{
+Dad said something nice to Sue.
+}
+\zl
+Stefanowitsch shows that the non"=occurrence of \emph{say} in the ditransitive sentence pattern is significant. Furthermore, he investigated how acceptability
+judgments compare to the frequent occurrence or non"=occurrence of verbs in certain constructions. 
+In a first experiment, he was able to show that the frequent non"=occurrence of elements in particular constructions correlates with the acceptability judgments of speakers, whereas
+this is not the case for the frequent occurrence of a verb in a construction.\is{statistics|)}
+
+In sum, we can say that indirect negative evidence can be derived from linguistic input and that it
+seems to play an important role in language acquisition.
+\is{negative evidence|)}% 
+
+\section{Summary}
+
+It follows from all this that not a single one of the arguments in favor of innate linguistic knowledge remains uncontroversial.
+This of course does not rule out there still being innate linguistic knowledge, however, those who wish to incorporate
+this assumption into their theories have to take more care than was previously the case to prove that what they assume to be innate
+is actually part of our linguistic knowledge and that it cannot be learned from the linguistic input alone.%
+\is{Poverty of the Stimulus|)}%
+\is{acquisition|)}
+
+
+\section*{Comprehension questions}
+
+\begin{enumerate}
+\item Which arguments are there for the assumption of innate linguistic knowledge?
+\end{enumerate} 
+
+
+\section*{Further reading}
+
+Pinker's book \citeyearpar{Pinker94a} is the best written book arguing for nativist models of language.
+
+\citet*{EBJKSPP96a} discuss all the arguments that have been proposed in favor of innate linguistic knowledge and show
+that the relevant phenomena can be explained differently. The authors adopt a connectionist view. They work with neuronal
+networks, which are assumed to model what is happening in our brains relatively accurately.
+The book also contains chapters about the basics of genetics and the structure of the brain, going into detail about why
+a direct encoding of linguistic knowledge in our genome is implausible. 
+
+Certain approaches using neuronal networks have been criticized because they cannot capture certain aspects of human abilities
+such as recursion or the multiple usage of the same words in an utterance.
+ \citet{Pulvermueller2010a} discusses an architecture that has memory and uses this to analyze recursive structures. In his overview article,
+ certain works are cited that show that the existence of more abstract rules or schemata of the kind theoretical linguists take for granted
+ can be demonstrated on the neuronal level. Pulvermüller does not, however, assume that linguistic knowledge is innate (p.\,173).
+
+Pullum and Scholz have dealt with the Poverty"=of"=the"=Stimulus argument in detail
+ \citep{PS2002a,SP2002b}.
+
+\citet{Goldberg2006a} and \citet{Tomasello2003a} are the most prominent proponents of Construction Grammar, a theory that explicitly tries
+to do without the assumption of innate linguistic knowledge.
+
+%      <!-- Local IspellDict: en_US-w_accents -->

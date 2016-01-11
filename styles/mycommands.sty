@@ -1,0 +1,62 @@
+
+\@ifpackageloaded{hyperref}{
+\def\uu#1{%
+\underline{\hyperpage{#1}}%
+}%
+}{%
+\def\uu#1{%
+\underline{#1}%
+}%
+}
+%\newcommand{\ii}[1]{{\it#1}}
+\@ifpackageloaded{hyperref}{
+\def\ii#1{%
+\hyperpage{\it #1}%
+}%
+}{%
+\def\ii#1{%
+{\it #1}%
+}%
+}
+%\newcommand{\uuii}[1]{\underline{{\it #1}}}
+\@ifpackageloaded{hyperref}{
+\def\uuii#1{%
+\underline{\hyperpage{{\it #1}}}%
+}%
+}{%
+\def\uuii#1{%
+\underline{\it #1}%
+}%
+}
+\@ifpackageloaded{hyperref}{
+\def\fn#1#2{%
+\hyperpage{#2}$^{#1}$%
+}%
+}{%
+\def\fn#1#2{%
+#2$^{#1}$%
+}%
+}
+%\newcommand{\fnuu}[2]{\underline{#2}$^{#1}$}
+\@ifpackageloaded{hyperref}{
+\def\fnuu#1#2{%
+\underline{\hyperpage{#2}}$^{#1}$%
+}%
+}{%
+\def\fnuu#1#2{%
+\underline{#2}$^{#1}$%
+}%
+}
+%\newcommand{\fnii}[2]{{\it#2$^{#1}$}}
+\@ifpackageloaded{hyperref}{
+\def\fnii#1#2{%
+\hyperpage{\it #2}$^{#1}$%
+}%
+}{%
+\def\fnii#1#2{%
+{\it #2}$^{#1}$%
+}%
+}
+
+
+\newcommand{\spacebr}{\hspaceThis{[}}

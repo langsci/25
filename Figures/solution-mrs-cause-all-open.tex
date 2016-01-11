@@ -1,0 +1,49 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e}
+
+
+
+    % to set the MRSes for scope underspecification
+%http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+% for texlive 2015
+\newtcbox{\mybox}[1][]{empty,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1,top=2pt,bottom=2pt}
+
+% for texlive 2013
+%\newtcbox{\mybox}[1][]{enhanced,boxrule=0pt,colframe=white,colback=white,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1} %,top=3pt,bottom=3pt}
+                                %use shorten <=2pt,shorten >=2pt in the pictures.
+
+
+\newcommand{\mynode}[2]{\mybox[#1]{#2}}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{tabular}{@{}ccc@{}}
+                               & \mybox[h0]{h0}                & \\[8ex]
+\mybox[h1]{h1:every(x, \mybox[h2]{h2}, \mybox[h3]{h3})}      &                              & \mybox[h6]{h6:CAUSE(max, \mybox[h7]{h7})}\\[8ex]
+\mybox[h4]{h4:window(x)}           &          & \\[6ex]
+                               & \mybox[h5]{h5:open(x)}\\
+\end{tabular}
+
+\begin{tikzpicture}[overlay,remember picture] 
+\draw(h0.south)--(h6.north); 
+\draw(h7.south) .. controls +(0,-1) and +(-1,1)..  (h1.north);
+\draw(h2.south)--(h4.north);
+\draw(h3.south)--(h5.north);
+\end{tikzpicture}
+
+
+
+\end{document}

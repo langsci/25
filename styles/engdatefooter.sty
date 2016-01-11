@@ -1,0 +1,80 @@
+\typeout{Documentstyle `engdatefooter.sty' as of 1st September 1994}
+
+
+%%% Taken from report.sty. this was \ps@headings{}
+
+\selectlanguage{\USenglish}
+
+% draftheadings
+
+\if@twoside
+\def\ps@draftheadings{\let\@mkboth\markboth
+ \def\@oddfoot{\hfill Draft of \today. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!}\def\@evenfoot{Draft of \today, \thistime. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!\hfill}%
+ \def\@evenhead{\rm \thepage\hfil \sl \leftmark}%        Left heading.
+ \def\@oddhead{{\sl \rightmark}\hfil \rm\thepage}% Right heading.
+ \def\chaptermark##1{\markboth {\ifnum \c@secnumdepth >\m@ne
+      \@chapapp\ \thechapter. \ \fi ##1}{}}%
+ \def\sectionmark##1{\markright {\ifnum \c@secnumdepth >\z@
+   \thesection. \ \fi ##1}}}
+\else
+\def\ps@draftheadings{\let\@mkboth\markboth
+\def\@oddfoot{\hfill Draft of \today. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!}\def\@evenfoot{Draft of \today, \thistime. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!\hfill}%
+\def\@oddhead{{\sl \rightmark}\hfil \rm\thepage}% Heading.
+\def\chaptermark##1{\markright {\ifnum \c@secnumdepth >\m@ne
+  \@chapapp\ \thechapter. \ \fi ##1}}}
+\fi
+
+% draftartheadings
+\usepackage{scrtime}
+\if@twoside
+  \def\ps@draftartheadings{%
+      \def\@oddfoot{\hfill Draft of \today, \thistime. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!}\def\@evenfoot{Draft of \today, \thistime. \href{mailto:Stefan.Mueller@fu-berlin.de}{Comments} Welcome!\hfill}%
+      \def\@evenhead{\thepage\hfil\leftmark}%
+      \def\@oddhead{{\rightmark}\hfil\thepage}%
+      \let\@mkboth\markboth
+    \def\sectionmark##1{%
+      \markboth {%
+        \ifnum \c@secnumdepth >\z@
+          \thesection\quad
+        \fi
+        ##1}{}}%
+    \def\subsectionmark##1{%
+      \markright {%
+        \ifnum \c@secnumdepth >\@ne
+          \thesubsection\quad
+        \fi
+        ##1}}}
+\else
+  \def\ps@draftartheadings{%
+    \let\@oddfoot\@empty
+    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+    \let\@mkboth\markboth
+    \def\sectionmark##1{%
+      \markright {\MakeUppercase{%
+        \ifnum \c@secnumdepth >\m@ne
+          \thesection\quad
+        \fi
+        ##1}}}}
+\fi
+
+\if@twoside
+\def\ps@habilheadings{\let\@mkboth\markboth
+ \def\@oddfoot{}\def\@evenfoot{}%
+ \def\@evenhead{\rm \thepage\hfil \sl \leftmark}%        Left heading.
+ \def\@oddhead{{\sl \rightmark}\hfil \rm\thepage}% Right heading.
+ \def\chaptermark##1{\markboth {\ifnum \c@secnumdepth >\m@ne
+      \@chapapp\ \thechapter. \ \fi ##1}{}}%
+ \def\sectionmark##1{\markright {\ifnum \c@secnumdepth >\z@
+   \thesection. \ \fi ##1}}}
+\else
+\def\ps@habilheadings{\let\@mkboth\markboth
+\def\@oddfoot{}\def\@evenfoot{}%
+\def\@oddhead{{\sl \rightmark}\hfil \rm\thepage}% Heading.
+\def\chaptermark##1{\markright {\ifnum \c@secnumdepth >\m@ne
+  \@chapapp\ \thechapter. \ \fi ##1}}}
+\fi
+
+
+\endinput
+
+

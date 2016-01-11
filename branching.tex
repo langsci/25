@@ -1,0 +1,175 @@
+%% -*- coding:utf-8 -*-
+
+\section{Binary branching}
+\label{sec-branching}
+
+We\is{branching!binary|(} have seen that the question of the kind of branching structures assumed has received differing treatments in various theories.
+Classical \xbart assumes that a verb is combined with all its complements. In later variants of GB, all structures are strictly binary branching.
+Other frameworks do not treat the question of branching in a uniform way: there are proposals that assume binary branching structures and others
+that opt for flat structures.
+
+\citet[Section~2.5]{Haegeman94a-u} uses learnability arguments\is{language acquisition} (rate of acquisition, see Section~\ref{Abschnitt-Geschwindigkeit-Spracherwerb}
+on this point).
+She discusses the example in (\mex{1}) and claims that language learners have to choose one of eight structures if flat-branching structures can occur in natural
+language. If, on the other hand, there are only binary-branching structures, then the sentence in (\mex{1}) cannot have the structures in
+Figure~\vref{Abbildung-Haegmann-flach} to start with, and therefore a learner would not have to rule out the corresponding hypotheses.
+\ea 
+Mummy must leave now.
+\z
+\begin{figure}
+\begin{forest}
+sn edges, empty nodes
+[{}
+ [{} [Mummy]]
+ [{} [must]]
+ [{} [leave]]
+ [{} [now]]]
+\end{forest}
+%
+\hfill
+\begin{forest}
+sn edges, empty nodes
+[{} 
+ [{} [{} [Mummy]]
+     [{} [must]]
+     [{} [leave]]]
+ [{} [now]]]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges, empty nodes
+[{} 
+ [{} [Mummy]]
+ [{} 
+     [{} [must]]
+     [{} [leave]]
+     [{} [now]]]]
+\end{forest}
+\caption{\label{Abbildung-Haegmann-flach}Structures with partial flat-branching}
+\end{figure}%
+
+\noindent
+However, \citet[\page 88]{Haegeman94a-u} provides evidence for the fact that (\mex{0}) has the structure in (\mex{1}):
+\ea
+{}[Mummy [must [leave now]]]
+\z
+The relevant tests showing this included elliptical constructions\is{ellipsis}, that is, the fact that it is possible to
+refer to the constituents in (\mex{0}) with pronouns. This means that there is actually evidence for
+the structure of (\mex{-1}) that is assumed by linguists and we therefore do not have to assume that
+it is just hard-wired in our brains that only binary-branching structures are allowed. \citet[\page
+  143]{Haegeman94a-u} mentions a consequence of the binary branching hypothesis: if all structures are
+binary-branching, then it is not possible to straightforwardly account for sentences with
+ditransitive verbs in \xbart. In \xbart, it is assumed that a head is combined with all its
+complements at once (see Section~\ref{sec-xbar}). So in order to account for ditransitive verbs in
+\xbart, an empty element\is{empty element} (\littlev) has to be assumed (see Section~\ref{sec-little-v}).
+
+It should have become clear in the discussion of the arguments for the Poverty of the Stimulus in Section~\ref{Abschnitt-PSA} that
+the assumption that only binary-branching structures are possible is part of our innate linguistic knowledge is nothing more than pure
+speculation. Haegeman offers no kind of evidence for this assumption. As shown in the discussions of the various theories we have seen,  
+it is possible to capture the data with flat structures. For example, it is possible to assume that, in English, the verb
+is combined with its complements in a flat structure \citep[\page 39]{ps2}. There are sometimes theory-internal reasons for
+deciding for one kind of branching or another, but these are not always applicable to other theories. For example, Binding Theory\is{Binding Theory}
+in \gbt is formulated with reference to dominance relations in trees \citep[\page 188]{Chomsky81a}. If one assumes that syntactic structure plays
+a crucial role for the binding of pronouns (see page~\pageref{Seite-Bindungstheorie}), then it is possible to make assumptions about syntactic
+structure based on the observable binding relations. Binding data have, however, received a very different treatment in various theories.
+In LFG\indexlfg, constraints on f"=structure\is{f"=structure} are used for Binding Theory \citep{Dalrymple93a}, whereas Binding Theory
+in HPSG\indexhpsg operates on argument structure lists\isfeat{arg-st} (valence information that are ordered in a particular way,
+see Section~\ref{Abschnitt-Arg-St}).
+ 
+The opposite of Haegeman's position is the argumentation for flat structures put forward by Croft
+\citeyearpar[Section~1.6.2]{Croft2001a}. In his\indexcxg Radical Construction Grammar FAQ, Croft observes that
+a phrasal construction such as the one in (\mex{1}a) can be translated into a Categorial Grammar
+lexical entry\indexcg like (\mex{1}b).
+\eal
+\ex {}[\sub{VP} V NP ]
+\ex VP/NP
+\zl
+He claims that a disadvantage of Categorial Grammar is that it only allows for binary-branching structures and yet there exist constructions
+with more than two parts (p.\,49). The exact reason why this is a problem is not explained, however. He even acknowledges himself that
+it is possible to represent constructions with more than two arguments in Categorial Grammar. For a ditransitive verb, the entry in Categorial
+Grammar of English would take the form of (\mex{1}):
+\ea
+((s\bs np)/np)/np
+\z
+If we consider the elementary trees for TAG in Figure~\vref{Abbildung-TAG-flach-binaer}, it becomes clear that it is equally possible
+to incorporate semantic information into a flat tree and a binary-branching tree.
+\begin{figure}
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+tag
+[S
+	[NP$\downarrow$]
+	[VP
+		[V
+			[gives]]
+		[NP$\downarrow$]
+		[NP$\downarrow$]]]
+\end{forest}
+}
+\hfill
+\adjustbox{valign=c}{%
+\begin{forest}
+tag
+[S
+	[NP$\downarrow$]
+	[VP
+		[V$'$
+			[V
+				[gives]]
+			[NP$\downarrow$]]
+		[NP$\downarrow$]]]
+\end{forest}}
+\hfill\mbox{}
+\caption{\label{Abbildung-TAG-flach-binaer}Flat and binary-branching elementary trees}
+\end{figure}%
+The binary-branching tree corresponds to a Categorial Grammar derivation. In both analyses in 
+Figure~\ref{Abbildung-TAG-flach-binaer}, a meaning is assigned to a head that occurs with a certain
+number of arguments. Ultimately, the exact structure required depends on the kinds of restrictions on structures
+that one wishes to formulate.
+In this book, such restrictions were not discussed, but we have seen some theories model binding relations\is{Binding Theory}
+with reference to tree structures. Reflexive pronouns\is{pronoun!reflexive} must be bound within a particular local domain inside the
+tree. In theories such as LFG\indexlfg and HPSG\indexhpsg, these binding restrictions are formulated
+without any reference to trees.
+%\todostefan{Das stand irgendwie schon oben. Vielleicht ist aber ein
+%  bisschen Redundanz auch OK.}
+This means that evidence from binding data for one of the structures in Figure~\ref{Abbildung-TAG-flach-binaer} (or for
+other tree structures) constitutes nothing more than theory-internal evidence.
+
+Another reason to assume trees with more structure is the possibility to insert adjuncts\is{adjunct} on any node.
+In Chapter~\ref{Kapitel-HPSG}, an HPSG analysis for German that assumes binary-branching structures was proposed.
+With this analysis, it is possible to attach an adjunct to any node and thereby explain the free ordering of adjuncts
+in the middle field:
+\eal
+\ex 
+\gll {}[weil] der Mann der Frau das Buch \emph{gestern} gab\\
+	 {}\spacebr{}because the man the woman the book yesterday gave\\
+\glt `because the man gave the woman the book yesterday'	 
+\ex 
+\gll {}[weil] der Mann der Frau \emph{gestern} das Buch gab\\
+	 {}\spacebr{}because the man the woman yesterday the book gave\\
+\ex 
+\gll {}[weil] der Mann \emph{gestern} der Frau das Buch gab\\
+	 {}\spacebr{}because the man yesterday the woman the book gave\\
+\ex 
+\gll {}[weil] \emph{gestern} der Mann der Frau das Buch gab\\
+	 {}\spacebr{}because yesterday the man the woman the book gave\\
+\zl
+This analysis is not the only one possible, however. One could also assume an entirely flat structure where arguments
+and adjuncts are dominated by one node. \citet{Kasper94a} suggests this kind of analysis in
+\hpsg (see also Section~\ref{Abschnitt-Adjunkte-GPSG} for GPSG analyses that make use of metarules\is{metarule} for the introduction of adjuncts). Kasper requires complex relational constraints\is{relation} that
+create syntactic relations between elements in the tree and also compute the semantic contribution of the entire constituent using the meaning
+of both the verb and the adjuncts. The analysis with binary-branching structures is simpler than those with complex relational constraints and --
+in the absence of theory-external evidence for flat structures -- should be preferred to the analysis with flat structures.
+At this point, one could object that adjuncts in English cannot occur in all positions between arguments and therefore the binary-branching
+Categorial Grammar analysis and the TAG analysis in Figure~\ref{Abbildung-TAG-flach-binaer} are wrong. This is not correct, however, as it is
+the specification of adjuncts with regard to the adjunction site that is crucial in Categorial Grammar.
+An adverb has the category (s\bs np)\bs (s\bs np) or (s\bs np)/(s\bs np) and can therefore only be combined with constituents that correspond to the VP node in
+Figure~\ref{Abbildung-TAG-flach-binaer}. In the same way, an elementary tree for an adverb in TAG
+can only attach to the VP node (see Figure~\ref{abb-Adjunktion} on
+page~\pageref{abb-Adjunktion}). For the treatment of adjuncts in English, binary-branching
+structures therefore do not make any incorrect predictions.
+\is{branching!binary|)}
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

@@ -1,0 +1,23 @@
+\typeout{Documentstyle `subsubsubsec.sty' as of 26th May 1995 (jhe)}
+
+% Defines \subsubsubsection, looking as \subsubsection,
+% using \theparagraph - counter
+
+% Damit diese subsubsubsection auch eine Nummer bekommt, sollte
+% \setcounter{secnumdepth}{4} und (f"urs Inhaltsverzeichnis)
+% \setcounter{tocdepth}{4} (oder so) angegeben werden.
+
+\def\subsubsubsection{\@startsection{paragraph}{3}{\z@}{-3.25ex plus
+    -1ex minus-.2ex}{1.5ex plus.2ex}{\reset@font\normalsize\bf}}
+%
+\let\subsubsubsectionmark\@gobble
+%
+
+\def\subsubsubsubsection{\@startsection{subparagraph}{3}{\z@}{-3.25ex plus
+    -1ex minus-.2ex}{1.5ex plus.2ex}{\reset@font\normalsize\bf}}
+%
+\let\subsubsubsubsectionmark\@gobble
+% needed for hyperref
+\def\toclevel@subsubsubsection{4}
+%
+\endinput

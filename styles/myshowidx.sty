@@ -1,0 +1,75 @@
+% this was taken from showidx.sty and multind.sty
+% I really did not understand what I was doing.
+% But it works. ;-)
+
+
+%% 
+%% This is file `showidx.sty',
+%% generated with the docstrip utility.
+%% 
+%% The original source files were:
+%% 
+%% makeindx.dtx  (with options: `showidx')
+%% 
+%% 
+%\ProvidesPackage{myshowidx}
+%                [1996/11/05 v1.0]
+\newinsert\indexbox
+\dimen\indexbox=\maxdimen
+%\def\index#1{\@bsphack\begingroup
+             %\def\protect##1{\string##1\space}
+             %\@sanitize\catcode32=10\relax\@index{#1}}
+
+\def\index#1{\@bsphack\begingroup
+               \def\protect##1{\string##1\space}\@sanitize
+               \@wrindex{#1}}
+
+\def\@wrindex#1#2{\let\thepage\relax
+   \xdef\@gtempa{\@ifundefined{#1@idxfile}{}{\expandafter
+      \write\csname #1@idxfile\endcsname{\string
+      \indexentry{#2}{\thepage}}}}\endgroup\@gtempa
+   \@showidx{#2}\if@nobreak \ifvmode\nobreak\fi\fi\@esphack}
+
+% showidx.sty
+%\def\@wrindex#1#2{\let\thepage\relax
+   %\xdef\@gtempa{\write#1{\string
+      %\indexentry{#2}{\thepage}}}\endgroup\@gtempa
+   %\@showidx{#2}\if@nobreak \ifvmode\nobreak\fi\fi\@esphack}
+
+\def\@index#1#2{\@showidx{#2}\endgroup\@esphack}
+\def\@showidx#1{%
+  \insert\indexbox{\small
+    \hsize\marginparwidth
+    \hangindent\marginparsep \parindent\z@
+    \everypar{}\let\par\@@par \parfillskip\@flushglue
+    \lineskip\normallineskip
+    \baselineskip .8\normalbaselineskip\sloppy
+    \raggedright \leavevmode
+    \vrule \@height .7\normalbaselineskip \@width \z@\relax
+        #1\relax
+    \vrule \@height \z@ \@depth .3\normalbaselineskip \@width \z@}}
+
+\renewcommand\raggedbottom{\def\@textbottom{\vskip
+      \z@ plus.0001fil}\let\@texttop\@mkidx}
+
+%\renewcommand\flushbottom{\let\@textbottom\relax
+%                          \let\@texttop\@mkidx}
+
+\def\myflushbottom{\let\@texttop\@mkidx}
+
+\def\@mkidx{\vbox to \z@{\hbox{\if@twocolumn
+    \if@firstcolumn \@leftidx \else \@rightidx \fi
+  \else \if@twoside \ifodd\c@page \@rightidx
+                    \else \@leftidx \fi
+        \else \@rightidx \fi
+  \fi
+  \box\indexbox}\vss}}
+
+\def\@leftidx{\hskip-\marginparsep \hskip-\marginparwidth}
+\def\@rightidx{\hskip\columnwidth \hskip\marginparsep}
+
+% I do not want the 'real' flushbottom
+\myflushbottom
+\endinput
+%% 
+%% End of file `myshowidx.sty'.

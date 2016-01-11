@@ -1,0 +1,2824 @@
++%% -*- coding:utf-8 -*-
+
+\chapter{Introduction and basic terms}
+\label{Kapitel-Grundbegriffe}
+
+The aim of this chapter is to explain why we actually study syntax
+%% \todostefan{M: Ich fände es gut, irgendwo die Termini "`theory"' und "`framework"' zu besprechen (und sei es nur in einer Fußnote). Letzterer wird viel verwendet, aber offenbar gar nicht speziell eingeführt. Und "`theory"' wird sowohl als Massennomen ("`grammatical theory"') als auch as Zählnomen ("`specific theories"') verwendet – das sind offenbar etwas verschiedene Bedeutungen. Ich habe ja behauptet, dass man Grammatiktheorie auch ohne (allgemeines) Framework machen kann (siehe Haspelmath 2010b, im Anhang), und da verwende ich die Termini natürlich nicht synonym (siehe §14.2.2-5 für eine knappe Diskussion der oft verwirrenden Termini framework, theory, description, analysis). }
+(Section~\ref{sec-wozu-syntax}) and why it is important to formalize our findings
+(Section~\ref{sec-formal}). Some basic terminology will be introduced in
+Sections~\ref{konstituententests}--\ref{sec-topo}: Section~\ref{konstituententests}
+deals with criteria for dividing up utterances into smaller units. Section~\ref{Abschnitt-Wortarten} 
+shows how words can be grouped into classes, that is I will introduce criteria for assigning words to
+categories such as verb or adjective. Section~\ref{Abschnitt-Kopf} introduces the notion of 
+heads, in
+Section~\ref{Abschnitt-Argument-Adjunkt} the distinction between arguments and adjuncts is explained,
+Section~\ref{Abschnitt-GF} defines grammatical functions and
+Section~\ref{Abschnitt-Toplogie} introduces the notion of topological fields, which can be used to
+characterize certain areas of the clause in languages such as German. 
+
+Unfortunately, linguistics is a scientific field 
+with a considerable amount of terminological chaos.
+This is partly due to the fact that terminology originally defined for certain languages 
+(\eg Latin\il{Latin}, English\il{English})
+was later simply adopted for the description of other languages as well. However, this is not always
+appropriate since languages differ from one another considerably and are constantly changing.  
+Due to the problems caused by this, the terminology started to be used differently or new terms were invented. 
+When new terms are introduced in this book, I will always mention related terminology or differing uses of
+each term so that readers can relate this to other literature.  
+
+
+\section{Why do syntax?}
+\label{sec-wozu-syntax}
+
+Every linguistic expression we utter has a meaning. We are therefore dealing with
+what has been referred to as form-meaning pairs \citep{Saussure16a}\nocite{Saussure16a-Fr}. A word such as \emph{tree}
+in its specific orthographical form or in its corresponding phonetic form is assigned the
+meaning \relation{tree}. Larger linguistic units can be built up out of smaller ones: words can be
+joined together to form phrases and these in turn can form sentences. 
+
+The question which now arises is the following: do we need a formal system which can assign a
+structure to these sentences? Would it not be sufficient to formulate a pairing of form and meaning for complete sentences
+just as we did for the word \emph{tree} above?  
+
+That would, in principle, be possible if a language were just a finite list of word sequences.  If
+we were to assume that there is a maximum length for sentences and a maximum length for words and
+thus that there can only be a finite number of words, then the number of possible sentences would
+indeed be finite.  However, even if we were to restrict the possible length of a sentence, the
+number of possible sentences would still be enormous.  The question we would then really need
+to answer is: what is the maximum length of a sentence?  For instance, it is possible to extend all
+the sentences in (\mex{1}): 
+
+\eal 
+\ex this sentence goes on and on and on and on \ldots 
+\ex {}[A sentence is a sentence] is a sentence.
+\ex\label{einbettung-dass-Saetze} that Max thinks that Julius knows that Otto claims that Karl suspects that Richard confirms that Friederike is laughing
+
+\zl
+In (\mex{0}b), something is being said about the group of words \emph{a sentence is a sentence},
+namely that it is a sentence. One can, of course, claim the same for the whole sentence in
+(\mex{0}b) and extend the sentence once again with \emph{is a sentence}. The sentence in (\mex{0}c)
+has been formed by combining 
+\emph{that Friederike is laughing} with \emph{that}, \emph{Richard} and \emph{confirms}. The result
+of this combination is a new sentence \emph{that Richard confirms that Friederike is laughing}. In
+the same way, this has then been extended with \emph{that}, \emph{Karl} and \emph{suspects}. 
+One thus obtains a very complex sentence which embeds a less complex sentence. 
+This partial sentence in turn contains a further partial sentence and so on.
+(\mex{0}c) is similar to those sets of Russian nesting dolls%\todostefan{Martin: nesting doll}
+, also called \emph{matryoshka}\is{matryoshka}: each doll contains
+a smaller doll which can be painted differently from the one that contains it. In just the same way
+the sentence in (\mex{0}c) contains parts which are similar to it but which are shorter and which
+involve different nouns and verbs. This can be made clearer by using brackets in the following way: 
+
+\ea
+\label{ex-that-max-thinks-that-recursion}
+that Max thinks [that Julius knows [that Otto claims [that Karl suspects [that Richard confirms [that Friederike is laughing]]]]]
+\z
+
+\noindent
+We can build incredibly long and complex sentences in the ways that were demonstrated in (\mex{-1}).\footnote{
+ It is sometimes claimed that we are capable of constructing infinitely long sentences (\citealp*[\page
+ 117]{NKN2001a}; \citealp[\page 3]{KS2008a-u}; Dan Everett in \citew{OW2012a} at 25:19) or that Chomsky made such claims \citep[\page 341]{Leiss2003a}. This is, however, not correct since every sentence
+has to come to an end at some point. Even in the theory of formal languages developed in the Chomskyan
+tradition, there are no infinitely long sentences. Rather, certain formal grammars can describe a
+set containing infinitely many finite sentences (\citealp[\page 13]{Chomsky57a}). See also \citew{PS2010a} and
+ Section~\ref{Abschnitt-Rekursion} on the issue of recursion\is{recursion} in grammar and for claims about the
+ infinite nature of language.}
+%vanTrijp2013a:110 express new conceptualizations in an infinite number of ways
+
+
+It would be arbitrary to establish some cut-off point up to which such combinations can
+be considered to belong to our language (\citealp[\page 208]{Harris57a}; \citealp[\page 23]{Chomsky57a}). 
+It is also implausible to claim that such complex sentences are stored in our brains as a single complex
+unit. While evidence from psycholinguistic experiments shows that highly frequent or
+idiomatic combinations are stored as complex units, this could not be the case for sentences such as
+those in (\mex{-1}). Furthermore, we are capable of producing utterances that we have never heard
+before and which have also never been uttered or written down previously. Therefore, these utterances
+must have some kind of structure, there must be patterns which occur again and again. As humans, we
+are able to build such complex structures out of simpler ones and, vice-versa, to break down 
+complex utterances into their component parts. Evidence for humans' ability to make use of rules for combining
+words into larger units has now also been provided by research in neuroscience \citep[\page 170]{Pulvermueller2010a}.
+
+It becomes particularly evident that we combine linguistic material in a rule-governed way when
+these rules are violated. Children acquire\is{acquisition} linguistic rules by generalizing from
+the input available to them. In doing so, they produce some utterances which they could not
+have ever heard previously: 
+\is{verb-particle} 
+\ea
+\settowidth\jamwidth{(Friederike, 2;6)}
+\gll Ich festhalte die. \\
+     I \particle.hold them\\\jambox{(Friederike, 2;6)}
+\glt Intended: `I hold them tight.'
+\z
+Friederike, learning German, was at the stage of acquiring the rule for the position of the finite
+verb (namely, second position). What she did here, however, was to place the whole verb, including a
+separable particle \emph{fest} `tight', in the second position although the particle should be realized at the end of
+the clause (\emph{Ich halte die fest.}).
+
+If we do not wish to assume that language is merely a list of pairings of form and meaning, then
+there must be some process whereby the meaning of complex utterances can be obtained from the
+meanings of the smaller components of those utterances. Syntax reveals something about the way in which the
+words involved can be combined, something about the structure of an utterance. For instance,
+knowledge about subject-verb agreement\is{agreement} helps with the interpretation of the following sentences in German:
+
+\eal
+\label{Beispiel-mit-Kongruenz}
+\ex 
+\gll Die Frau schläft.\\
+     the woman sleep.\textsc{3sg}\\
+\glt `The woman sleeps.'
+\ex 
+\gll Die Mädchen schlafen.\\
+     the girls sleep.\textsc{3pl}\\
+\glt `The girls sleep.'
+\ex 
+\gll Die Frau kennt die Mädchen.\\
+     the woman know.\textsc{3sg} the girls\\
+\glt `The woman knows the girls.'
+\ex 
+\gll Die Frau kennen die Mädchen.\\
+     the woman know.\textsc{3pl} the girls\\
+\glt `The girls know the woman.'
+\zl
+The sentences in (\mex{0}a,b) show that a singular or a plural subject requires a verb with the corresponding inflection. 
+In (\mex{0}a,b), the verb only requires one argument so the function of
+\emph{die Frau} `the woman' and \emph{die Mädchen} `the girls' is clear.
+In (\mex{0}c,d) the verb requires two arguments and \emph{die Frau} `the woman' and \emph{die
+  Mädchen} `the girls'
+could appear in either argument position in German. The sentences could mean that the woman 
+knows somebody or that somebody knows the woman. However, due to the inflection on the verb and
+knowledge of the syntactic rules of German, the hearer knows that there is only one available
+reading for (\mex{0}c) and (\mex{0}d), respectively.
+ 
+It is the role of syntax to discover, describe and explain such rules, patterns and structures.
+
+\section{Why do it formally?}
+\label{sec-formal}
+
+The\is{formalization|(} two following quotations give a motivation for the necessity of
+describing language formally:  
+\begin{quote}
+\label{quote-Chomsky-Formalisierung}%
+Precisely constructed models for linguistic structure can play an
+important role, both negative and positive, in the process of discovery 
+itself. By pushing a precise but inadequate formulation to
+an unacceptable conclusion, we can often expose the exact source
+of this inadequacy and, consequently, gain a deeper understanding
+of the linguistic data. More positively, a formalized theory may 
+automatically provide solutions for many problems other than those
+for which it was explicitly designed. Obscure and intuition-bound
+notions can neither lead to absurd conclusions nor provide new and
+correct ones, and hence they fail to be useful in two important respects. 
+I think that some of those linguists who have questioned
+the value of precise and technical development of linguistic theory
+have failed to recognize the productive potential in the method
+of rigorously stating a proposed theory and applying it strictly to
+linguistic material with no attempt to avoid unacceptable conclusions 
+by ad hoc adjustments or loose formulation.
+\citep[\page5]{Chomsky57a}
+\end{quote}
+
+\begin{quote}
+As is frequently pointed out but cannot be overemphasized, an important goal
+of formalization in linguistics is to enable subsequent researchers to see the defects
+of an analysis as clearly as its merits; only then can progress be made efficiently.
+\citep[\page322]{Dowty79a}
+\end{quote}
+%
+If we formalize linguistic descriptions, it is easier to recognize what exactly a particular analysis means. 
+We can establish what predictions it makes and we can rule out alternative analyses. A further
+advantage of precisely formulated theories is that they can be written down in such a way
+that computer programs can process them. When a theoretical analysis is implemented as a computationally processable grammar fragment, 
+any inconsistencies will become immediately evident. Such implemented grammars can then be used to process
+large collections of text, so-called corpora\is{corpus}, and they can thus establish which
+sentences a particular grammar cannot yet analyze or which sentences are assigned the wrong
+structure. For more on using computer implementation in linguistics see \citew*[\page 163]{Bierwisch63},
+\citew[Chapter~22]{Mueller99a} and \citew{Bender2008c} as well as Section~\ref{Asbchnitt-GB-Formalisierung}.
+\is{formalization|)}
+
+
+
+\section{Constituents}
+\label{konstituententests}\label{sec-constituents}
+
+If we consider the sentence in (\ref{Beispiel-Alle-Studenten-lesen}), we have the intuition that
+certain words form a unit.
+
+\ea
+\label{Beispiel-Alle-Studenten-lesen}
+\gll Alle Studenten lesen während dieser Zeit Bücher.\\
+     all  students  read  during  this   time books\\
+\glt `All the students are reading books at this time.'
+\z
+For example, the words \emph{alle} `all' and \emph{Studenten} `students' form a unit which says something about who is
+reading. \emph{während} `during', \emph{dieser} `this' and {\emph{Zeit} `time' also form a unit which refers to a period
+  of time during which the reading takes place, and \emph{Bücher} `books' says something about what is
+  being read. The first unit is itself made up of two parts, namely \emph{alle} `all'
+and \emph{Studenten} `students'. The unit \emph{während dieser Zeit} `during this time' can also be divided into two
+subcomponents: \emph{während} `during' and \emph{dieser Zeit} `this time'. \emph{dieser Zeit} `this time' is also composed of two
+parts, just like \emph{alle Studenten} `all students' is. 
+
+Recall that in connection with (\ref{einbettung-dass-Saetze}) above we talked about the sets of Russian nesting dolls (\emph{matryoshkas})\is{matryoshka}. Here, too, when we break down (\mex{0}) we have smaller units which are
+components of bigger units. However, in contrast to the Russian dolls, we do not just have one
+smaller unit contained in a bigger one but rather, we can have several units which are grouped
+together in a bigger one. The best way to envisage this is to imagine a system of boxes: 
+one big box contains the whole sentence. Inside this box, there are four other boxes, which each
+contain \emph{alle Studenten} `all students', \emph{lesen} `reads', \emph{während
+  dieser Zeit} `during this time' and \emph{Bücher} `books' respectively.
+Figure~\vref{Abbildung-Schachteln} illustrates this.
+
+\begin{figure}
+\centering
+\TZbox{%
+\TZbox{%
+       \TZbox{alle}
+       \TZbox{Studenten}}
+\TZbox{lesen}
+\TZbox{%
+       \TZbox{während}
+       \TZbox{%
+           \TZbox{dieser}
+           \TZbox{Zeit}}}
+\TZbox{Bücher}}
+\caption{\label{Abbildung-Schachteln}Words and phrases in boxes}
+\end{figure}%
+
+\noindent
+In the following section, I will introduce various tests which can be used to show how certain
+words seem to ``belong together'' more than others. When I speak of a \emph{word sequence}\is{word sequence}, I generally mean
+an arbitrary linear sequence of words which do not necessarily need to have any syntactic or semantic relationship, e.\,g.\
+\emph{Studenten lesen während} `students read during' in (\mex{0}). A sequence of words which form a
+structural entity, on the other hand,  is referred to as a \emph{phrase}\is{phrase}. Phrases can
+consist of words as in \emph{this time} or of combinations of words with other phrases as in
+\emph{during this time}. The parts of a phrase and the phrase itself are called
+\emph{constituents}\is{constituent}. So all elements that are in a box in
+Figure~\ref{Abbildung-Schachteln} are constituents of the sentence. 
+
+%% Traditional grammars often refer to \emph{constituents}\is{constituent} or \emph{phrases}\is{phrase}. Constituents
+%% are the immediate entities which make up a sentence, so in the above example \emph{all the students}, \emph{at the moment}
+%% and \emph{books} are all constituents. The elements which make up a constituent are called
+%% \emph{constituent parts}.\todostefan{Satzglied und Gliedteil change this, irrelevant in the English world}
+%%
+%% \citet{Bussmann2002a} views finite verbs as constituents as well, that is \emph{read} would therefore
+%% also be a constituent. The authoritative Duden grammar of German, Duden \citeyearpar[\page 783]{Duden2005-Authors}, defines
+%% a constituent somewhat differently: here, a constituent is an element, which can occupy the position before the finite verb in 
+%% German. Following this definition, a finite verb could not be classed as a constituent. As I will show in Section~\ref{sec-konst-test-probleme-voranstellung},
+%% this definition leads to some serious problems. I will therefore retain the general definition of a constituent. 
+
+Following these preliminary remarks, I will now introduce some tests which will help us to identify whether a particular
+string of words is a constituent or not.
+
+
+\subsection{Constituency tests}
+
+There are a number of ways to test the constituent status of a sequence of words. In the following subsections, I will present some of these. In 
+Section~\ref{sec-status-der-ktests}, we will see that there are cases when simply applying a test ``blindly'' leads to unwanted results.
+
+\subsubsection{Substitution}
+
+If it is possible to replace a sequence of words in a sentence with a different sequence of words\is{substitution test} and the acceptability of the sentence 
+remains unaffected, then this constitutes evidence for the fact that each sequence of words forms a constituent.
+
+In (\mex{1}), \emph{den Mann} `the man' can be replaced by the string \emph{eine Frau} `a woman'. This is an indication that both of
+these word sequences are constituents. 
+
+\eal
+\ex 
+\gll Er kennt [den Mann].\\
+     he knows \spacebr{}the man\\
+\glt `He knows the man.'
+\ex 
+\gll Er kennt [eine Frau].\\
+     he knows \spacebr{}a woman\\
+\glt `He knows a woman.'
+\zl
+
+\noindent
+Similary to (\mex{1}a),  the string \emph{das Buch zu lesen} `the book to read' can be replaced
+by \emph{der Frau das Buch zu geben} `the woman the book to give'.
+
+\eal
+\ex\label{ex-das-buch-zu-lesen} 
+\gll Er versucht, [das Buch zu lesen].\\
+	 he tries \spacebr{}the book to read\\
+\glt `He is trying to read the book.'
+\ex 
+\gll Er versucht, [der Frau das Buch zu geben].\\
+	 he tries \spacebr{}the woman the book to give\\
+\glt `He is trying to give the woman the book.'
+\zl
+%
+This test is referred to as the \emph{substitution test}\is{substitution test}.
+
+
+\subsubsection{Pronominalization}
+
+Everything\is{pronominalization test} that can be replaced by a pronoun forms a constituent.
+In (\mex{1}), one can for example refer to \emph{der Mann} `the man' with the pronoun \emph{er} `he':
+
+\eal
+\ex 
+\gll {}[Der Mann] schläft.\\
+	 {}\spacebr{}the man sleeps\\
+\glt `The man is sleeping.'
+\ex 
+\gll Er schläft.\\
+	 he sleeps\\
+\glt `He is sleeping.'
+\zl
+
+\noindent
+It is also possible to use a pronoun to refer to constituents such as \emph{das Buch zu lesen} `the
+book to read' in \pref{ex-das-buch-zu-lesen}, as is shown in (\mex{1}):
+
+\eal
+\ex 
+\gll Peter versucht, [das Buch zu lesen].\\
+	 Peter tries \spacebr{}the book to read\\
+\glt `Peter is trying to read the book.'
+\ex 
+\gll Klaus versucht das auch.\\
+	 Klaus tries that also\\
+\glt `Klaus is trying to do that as well.'
+\zl
+
+\noindent
+The pronominalization test is another form of the substitution test.
+
+\subsubsection{Question formation}
+
+A sequence of words that can be elicited by a question forms a constituent:
+
+\eal
+\ex 
+\gll {}[Der Mann] arbeitet.\\
+	 \spacebr{}the man works\\
+\glt `The man is working.'
+\ex 
+\gll Wer arbeitet?\\
+	 who works\\
+\glt `Who is working?'
+\zl
+
+\noindent
+Question formation is a specific case of pronominalization. One uses a particular type of pronoun (an interrogative 
+pronoun) to refer to the word sequence.
+
+Constituents such as \emph{das Buch zu lesen} in \pref{ex-das-buch-zu-lesen} can also be elicited by questions, as (\mex{1}) 
+shows:
+\ea
+\gll Was versucht er?\\
+     what tries he\\
+\glt `What does he try?'
+\z
+
+%STEFAN: Man könnte sich überlegen, englische Beispiele für die Konstituententests zu nehmen.
+
+
+\subsubsection{Permutation test}
+
+If a sequence of words\is{permutation test|(}\is{movement test|(} can be moved without adversely affecting the acceptability of the sentence
+in which it occurs, then this is an indication that this word sequence forms a constituent.
+
+In (\mex{1}), \emph{keiner} `nobody' and \emph{diese Frau} `this woman' exhibit different orderings,
+which suggests that \emph{diese} `this' and \emph{Frau} `woman' belong together.
+\eal
+\ex[]{
+\gll dass keiner [diese Frau] kennt\\
+     that nobody this woman knows\\
+  }
+\ex[]{
+\gll dass [diese Frau] keiner kennt\\
+	 that this woman nobody knows\\
+\glt `that nobody knows this woman'
+  }
+\zl
+On the other hand, it is not plausible to assume that \emph{keiner diese} `nobody this' forms a constituent in (\mex{0}a). If we try to form other possible orderings by trying
+to move \emph{keiner diese} `nobody this' as a whole, we see that this leads to unacceptable results:\footnote{
+ I use the following notational conventions for all examples: `*'\is{*} indicates that a sentence is ungrammatical, `\#'\is{\#} denotes that the sentence has a reading which
+ differs from the intended one and finally  `\S'\is{\S} should be understood as a sentence which is deviant for semantic or information-structural reasons, for example, because
+ the subject must be animate, but is in fact inanimate in the example in question, or because there is a conflict between constituent order and the marking of given information through
+ the use of pronouns.%
+ }
+ \eal
+\ex[*]{
+dass Frau keiner diese kennt
+}
+\ex[*]{
+dass Frau kennt keiner diese
+}
+\zl
+
+\noindent
+Furthermore, constituents such as the \emph{das Buch zu lesen} `to read the book' in \pref{ex-das-buch-zu-lesen} can be moved:
+\eal
+\ex 
+\gll Er hat noch nicht [das Buch zu lesen] versucht.\\
+     he has \particle{} not \spacebr{}the book to read tried\\
+\glt `He has not yet tried to read the book.'
+\ex 
+\gll Er hat [das          Buch zu lesen] noch   nicht versucht.\\
+     he has \spacebr{}the book to read  \particle{} not   tried\\
+\ex 
+\gll Er hat noch nicht versucht, [das Buch zu lesen].\\
+     he has \particle{} not tried    \spacebr{}the book to read\\
+\zl
+\is{permutation test|(}\is{movement test|(}
+
+\subsubsection{Fronting} 
+
+Fronting\is{fronting|(} is a further variant of the movement test. In German declarative sentences, only a single constituent may normally precede the finite verb:
+\eal
+\label{bsp-v2}
+\ex[]{
+\gll [Alle Studenten] lesen während der vorlesungsfreien Zeit Bücher.\\
+      \spacebr{}all students read.\textsc{3pl} during the lecture.free time books\\
+\glt `All students read books during the semester break.'
+}
+\ex[]{
+\gll [Bücher] lesen alle Studenten während der vorlesungsfreien Zeit.\\
+     \spacebr{}books read all students during the lecture.free time\\
+}
+\ex[*]{
+\gll [Alle Studenten] [Bücher] lesen während der vorlesungsfreien Zeit.\\
+     \spacebr{}all students \spacebr{}books read during the lecture.free time\\
+}
+\ex[*]{
+\gll [Bücher] [alle Studenten] lesen während der vorlesungsfreien Zeit.\\
+     \spacebr{}books \spacebr{}all students read during the lecture.free time\\
+}
+\zl 
+The possibility for a sequence of words to be fronted (that is to occur in front of the finite verb) is a strong indicator of constituent status.\is{fronting|(}
+
+\subsubsection{Coordination}
+
+If two sequences of words can be conjoined\is{coordination!-test|(} then this suggests that each sequence
+forms a constituent.
+
+In (\mex{1}), \emph{der Mann} `the man' and \emph{die Frau} `the woman' are conjoined and the entire coordination
+is the subject of the verb \emph{arbeiten} `to work'. This is a good indication of the fact that \emph{der Mann} and
+\emph{die Frau} each form a constituent.
+\ea
+\gll {}[Der        Mann] und [die          Frau] arbeiten.\\
+     \spacebr{}the man   and \spacebr{}the woman work.3PL\\
+\glt `The man and the woman work.'
+\z
+
+%\ea
+%{}[The man] and [the woman] work.
+%\z
+
+The example in (\mex{1}) shows that phrases with \emph{to}"=infinitives can be conjoined:
+\ea
+\gll Er hat versucht, [das Buch zu lesen] und [es dann unauffällig verschwinden zu lassen].\\
+     he had tried \spacebr{}the book to read and \spacebr{}it then secretly disappear to let\\
+\glt `He had tried to read the book and then make it quietly disappear.'
+\z
+\is{coordination!-test|)}
+%\ea
+%He had hoped [to visit New York] and [to see the Statue of Liberty].
+%\z
+
+\subsection{Some comments on the status of constituent tests}
+\label{sec-status-der-ktests}
+
+It would be ideal if the tests presented here delivered clear-cut results in every case, as the empirical
+basis on which syntactic theories are built would thereby become much clearer. Unfortunately, this is not the case.
+There are in fact a number of problems with constituent tests, which I will discuss in what follows.\LATER{AL: \citew{GHS87a-u-gekauft,Welke2007a-u}}
+
+\subsubsection{Expletives}
+\is{pronoun!expletive|(}
+
+There is a particular class of pronouns -- so-called \emph{expletives} -- which do not denote
+people, things, or events and are therefore non-referential\is{reference}. An example of this is \emph{es} `it' in (\mex{1}).
+\eal
+\ex[]{
+\gll Es regnet.\\
+     it rains\\
+\glt `It is raining.'
+}
+\ex[]{
+\gll Regnet es?\\
+     rains it\\
+\glt `Is it raining?'
+}
+\ex[]{\label{bsp-dass-es-jetzt-regnet}
+\gll dass es jetzt regnet\\
+     that it now rains\\
+\glt `that it is raining now'
+}
+\zl
+As the examples in (\mex{0}) show, \emph{es} can either precede the verb, or follow it. It can also be separated from the verb
+by an adverb, which suggests that \emph{es} should be viewed as an independent unit.
+
+Nevertheless, we observe certain problems with the aforementioned tests. Firstly, \emph{es} `it' is restricted
+with regard to its movement possibilities, as (\mex{1}a) and (\mex{2}b) show.
+\eal
+\ex[*]{\label{bsp-dass-jetzt-es-regnet}
+\gll dass jetzt es regnet\\
+     that now it rains\\
+\glt Intended: `that it is raining now'
+}
+\ex[]{
+\gll dass jetzt keiner klatscht\\
+     that now nobody claps\\
+\glt `that nobody is clapping now'
+}
+\zl
+\eal
+\ex[]{\label{bsp-er-sah-es-regnen}
+\gll Er sah es regnen.\\
+	 he saw it.\acc{} rain\\
+\glt `He saw that it was raining.'
+}
+\ex[*]{\label{bsp-es-sah-er-regnen}
+  \gll Es sah er regnen.\\
+       it.\acc{} saw he rain\\
+\glt Intended: `he saw that it was raining.'
+}
+\ex[]{
+\gll Er sah einen Mann klatschen.\\
+	 he saw a.\acc{} man clap\\
+\glt `He saw a man clapping.'
+}
+\ex[]{
+\gll Einen Mann sah er klatschen.\\
+	 a.\acc{} man saw he clap\\
+\glt `A man, he saw clapping.'
+}
+\zl
+Unlike the accusative object \emph{einen Mann} `a man' in (\mex{0}c,d), the expletive in (\mex{0}b) cannot
+be fronted.
+
+Secondly, substitution and question tests also fail:
+\eal
+\ex[*]{
+\gll Der Mann / er regnet.\\
+	 the man {} he rains\\
+}
+\ex[*]{
+\gll Wer / was regnet?\\
+	 who  {} what rains\\
+}
+\zl
+
+\noindent
+Similarly, the coordination test cannot apply either:
+\ea[*]{
+\gll Es und der Mann regnet / regnen.\\
+     it and the man rains  {} rain\\
+}
+\z
+The failure of these tests can be easily explained: weakly stressed pronouns such as \emph{es} are 
+preferably placed before other arguments, directly after the conjunction (\emph{dass} in (\ref{bsp-dass-es-jetzt-regnet}))
+and directly after the finite verb in (\ref{bsp-er-sah-es-regnen}) (see \citealp[\page 570]{Abraham95a-u}). If an element
+is placed in front of the expletive, as in (\ref{bsp-dass-jetzt-es-regnet}), then the sentence is rendered ungrammatical.
+The reason for the ungrammaticality of (\ref{bsp-es-sah-er-regnen}) is the general ban on accusative
+\emph{es} appearing in clause"=initial position. Although such cases exist, they are only possible
+if \emph{es} `it' is referential\is{reference} (\citealt[\page162]{Lenerz94a};
+\citealp[\page4]{GS97a}).
+
+The fact that we could not apply the substitution and question tests is also no longer mysterious as
+\emph{es} is not referential in these cases. We can only replace \emph{es} `it' with another expletive such
+as \emph{das} `that'. If we replace the expletive with a referential expression, we derive a different semantic
+interpretation. It does not make sense to ask about something semantically empty or to refer to it with
+a pronoun.\is{pronoun!expletive|)}
+
+It follows from this that not all of the tests must deliver a positive result for a sequence of words to count as a constituent,
+that is, the tests are therefore not a necessary requirement for constituent status.
+
+\subsubsection{Movement}
+
+The movement test\is{movement!permutation} is problematic for languages with relatively free constituent order, since it is not
+always possible to tell what exactly has been moved. For example, the string \emph{gestern dem Mann}
+`yesterday the man' occupies different positions
+in the examples in (\mex{1}).
+\eal
+\ex 
+\gll weil keiner gestern dem Mann geholfen hat\\
+     because nobody yesterday the man helped has\\
+\glt `because nobody helped the man yesterday'
+\ex 
+\gll weil gestern dem Mann keiner geholfen hat\\
+	 because yesterday the man nobody helped has\\
+\glt `because nobody helped the man yesterday'
+\zl
+One could therefore assume that \emph{gestern} `yesterday' and \emph{dem Mann} `the man', which of course do not form a constituent, 
+have been moved together. An alternative explanation for the ordering variants in (\mex{0}) is that adverbs can occur in various positions
+in the clause and that only \emph{dem Mann} `the man' has been moved in front of \emph{keiner}
+`nobody' in (\mex{0}b). In any case, it is clear that \emph{gestern} and \emph{dem Mann}
+have no semantic relation and that it is impossible to refer to both of them with a pronoun. Although it may seem at first glance as if this material had been moved as
+a unit, we have seen that it is in fact not tenable to assume that \emph{gestern dem Mann} `yesterday the man' forms a constituent.
+
+\subsubsection{Fronting}
+\label{sec-konst-test-probleme-voranstellung} 
+
+As\is{fronting|(} mentioned in the discussion of (\ref{bsp-v2}), the position in front of the finite verb is normally occupied
+by a single constituent. The possibility for a given word sequence to be placed in front of the finite verb is sometimes even used as
+a clear indicator of constituent status, and even used in the definition of
+\emph{Satzglied}\footnote{\emph{Satzglied} is a special term used in grammars of German, referring to a constituent on
+  the clause level \citep[\page 783]{Duden2005-Authors}. 
+}.
+An example of this is taken from \citew{Bussmann83a}, but is no longer present in
+\citew{Bussmann90a}:\footnote{
+The original formulation is: \textbf{Satzgliedtest}\is{Satzglied} [Auch: Konstituententest]. Auf der $\to$ Topikalisierung
+beruhendes Verfahren zur Analyse komplexer Konstituenten. Da bei Topikalisierung
+jeweils nur eine Konstituente bzw.\ ein $\to$ Satzglied an den Anfang gerückt werden kann,
+lassen sich komplexe Abfolgen von Konstituenten (\zb Adverbialphrasen) als
+ein oder mehrere Satzglieder ausweisen; in \textit{Ein Taxi quält sich im Schrittempo
+durch den Verkehr} sind \textit{im Schrittempo} und \textit{durch den Verkehr}
+zwei Satzglieder, da sie beide unabhängig voneinander in Anfangsposition gerückt werden
+können.%
+}
+\begin{quote}
+\textbf{Satzglied test}\is{constituent} A procedure based on $\to$ topicalization used to analyze complex constituents.
+Since topicalization only allows a single constituent to be moved to the beginning of the sentence, complex sequences of
+constituents, for example adverb phrases, can be shown to actually consist of one or more constituents. In the example
+\textit{Ein Taxi quält sich im Schrittempo durch den Verkehr} `A taxi was struggling at walking speed through the traffic', \textit{im Schrittempo} 
+`at walking speed' and \textit{durch den Verkehr} `through the traffic' are each constituents as both can be fronted independently of each 
+other. \citep[\page446]{Bussmann83a}
+\end{quote}
+
+\noindent
+The preceding quote has the following implications:
+\begin{itemize}
+\item Some part of a piece of linguistic material can be fronted independently $\to$\\
+	  This material does not form a constituent.
+\item Linguistic material can be fronted together $\to$\\
+	  This material forms a constituent.
+\end{itemize}
+It will be shown that both of these prove to be problematic.
+
+The first implication is cast into doubt by the data in (\mex{1}):
+\eal
+\ex
+\gll Keine Einigung erreichten Schröder und Chirac über den Abbau der Agrarsubventionen.\footnotemark\\
+     no agreement reached Schröder and Chirac about the reduction of.the agricultural.subsidies\\
+\footnotetext{tagesschau, 15.10.2002, 20:00.}
+\glt `Schröder and Chirac could not reach an agreement on the reduction of agricultural subsidies.'
+\ex 
+\gll [Über           den Abbau     der    Agrarsubventionen]     erreichten Schröder und Chirac keine Einigung.\\
+     \spacebr{}about the reduction of.the agricultural.subsidies reached    Schröder and Chirac no agreement\\
+\zl
+Although parts of the noun phrase \emph{keine Einigung über den Abbau der Agrarsubventionen} `no agreement on the reduction
+of agricultural subsidies' can be fronted individually, we still want to analyze the entire word string as a noun phrase when it
+is not fronted as in (\mex{1}):
+\ea
+\gll Schröder und Chirac erreichten [keine Einigung über den Abbau der Agrarsubventionen].\\
+     Schröder and Chirac reached    \spacebr{}no agreement about the reduction of.the agricultural.subsidies\\
+\z
+The prepositional phrase \emph{über den Abbau der Agrarsubventionen} `on the reduction of agricultural subsidies' is semantically
+dependent on \emph{Einigung} `agreement' cf. (\mex{1}):
+\ea
+\gll Sie einigen sich über die Agrarsubventionen.\\
+     they agree \refl{} about the agricultural.subsidies\\
+\glt `They agree on the agricultural subsidies.'
+\z
+
+
+This word sequence can also be fronted together:
+\ea
+\gll {}[Keine Einigung über den Abbau der Agrarsubventionen] erreichten Schröder und Chirac.\\
+     \spacebr{}no agreement about the reduction of.the agricultural.subsidies  reached Schröder and Chirac\\
+\z
+In the theoretical literature, it is assumed that \emph{keine Einigung über den Abbau
+  der Agrarsubventionen} forms a constituent which can be ``split up'' under certain circumstances\is{NP"=split}.
+In such cases, the individual subconstituents can be moved independently of each other \citep{deKuthy2002a} as we have seen in (\mex{-2}). 
+
+The second implication ist problematic because of examples such as (\mex{1}):
+\eal
+\label{bsp-mehr-vf}
+\ex\label{bsp-trocken-durch-die-stadt}
+\gll {}[Trocken] [durch die Stadt] kommt man am Wochenende auch mit der BVG.\footnotemark\\
+	 \spacebr{}dry \spacebr{}through the city comes one at.the weekend also with the BVG\\
+\footnotetext{
+        taz berlin, 10.07.1998, p.\,22.
+      }
+\glt `With the BVG, you can be sure to get around town dry at the weekend.'
+\ex 
+\gll {}[Wenig] [mit Sprachgeschichte] hat der dritte Beitrag in dieser Rubrik zu tun, [\ldots]\footnotemark\\
+       \spacebr{}little \spacebr{}with language.history has the third contribution in this section to do\\
+\footnotetext{
+  Zeitschrift für Dialektologie und Linguistik, LXIX, 3/2002, p.\,339.
+}
+\glt `The third contribution in this section has little to do with language history.'
+\zl
+
+\noindent
+In (\mex{0}), there are multiple constituents preceding the finite verb, which bear no obvious syntactic or
+semantic relation to each other. Exactly what is meant by a ``syntactic or semantic relation'' will be fully
+explained in the following chapters. At this point, I will just point out that in (\mex{0}a) the adjective 
+\emph{trocken} `dry' has \emph{man} `one' as its subject and furthermore says something about the
+action of `travelling through the city', that is it refers to the action denoted by the verb. As (\mex{1}b) shows,
+\emph{durch die Stadt} `through the city' cannot be combined with the adjective \emph{trocken}
+`dry'.
+%\todostefan{Martin: This sentence lacks a pred. of torcken. Stefan: Verstehe ich n.}
+\eal
+\ex[]{
+\gll Man ist / bleibt trocken.\\
+	 one is {} stays dry\\
+\glt `One is/stays dry.'
+}
+\ex[*]{
+\gll Man ist / bleibt trocken durch die Stadt.\\
+     one is {} stays dry through the city\\
+}
+\zl
+Therefore, the adjective \emph{trocken} `dry' does not have a syntactic or semantic relationship with the prepositional
+phrase \emph{durch die Stadt} `through the city'. Both phrases have in common that they refer to the verb and are dependent on it.
+
+
+One may simply wish to treat the examples in (\ref{bsp-mehr-vf}) as exceptions. This approach would,
+however, not be justified, as I have shown in an extensive empirical study \citep{Mueller2003b}.
+
+If one were to classify \emph{trocken durch die Stadt} as a constituent due to it passing the fronting test, then one would have
+to assume that \emph{trocken durch die Stadt} in (\mex{1}) is also a constituent. In doing so, we would devalue the term \emph{constituent}
+as the whole point of constituent tests is to find out which word strings have some semantic or syntactic relationship.\footnote{
+  These data can be explained by assuming a silent verbal head\is{trace!verb}\is{empty element} preceding the finite verb and thereby ensuring
+  that there is in fact just one constituent in initial position in front of the finite verb \citep{Mueller2005d,MuellerGS}.
+  Nevertheless, this kind of data are problematic for constituent tests since these tests have been specifically designed to tease apart
+  whether strings such as \emph{trocken} and \emph{durch die Stadt} or \emph{wenig} and \emph{mit Sprachgeschichte} in (\mex{1}) form a constituent.%
+}
+\eal
+\ex 
+\gll Man kommt am Wochenende auch mit der BVG trocken durch die Stadt.\\
+     one comes at.the weekend also with the BVG dry through the city\\
+\glt `With the BVG, you can be sure to get around town dry at the weekend.'
+\ex 
+\gll Der dritte Beitrag in dieser Rubrik hat wenig mit Sprachgeschichte zu tun.\\
+     the third  contribution in this section  has little with language.history to do\\
+\glt `The third contribution in this section has little to do with language history.'
+\zl
+The possibility for a given sequence of words to be fronted is therefore not a sufficient diagnostic for constituent status.
+
+We have also seen that it makes sense to treat expletives as constituents despite the fact that the accusative expletive cannot be fronted 
+(cf. (\ref{bsp-er-sah-es-regnen})):
+\eal
+\ex[]{
+\gll Er bringt es bis zum Professor.\\
+     he brings \expl{} until to.the professor\\
+\glt `He makes it to professor.'
+}
+\ex[\#]{
+\gll Es bringt er bis zum Professor.\\
+     it brings he until to.the professor\\
+} 
+\zl
+There are other elements that can also not be fronted. Inherent reflexives\is{verb!inherent reflexives} are a good example of this:
+\eal
+\ex[]{
+\gll Karl hat sich nicht erholt.\\
+	 Karl has {\refl} not recovered\\
+\glt `Karl hasn't recovered.'
+}
+\ex[*]{
+\gll Sich hat Karl nicht erholt.\\
+     \refl{} has Karl not recovered\\
+}
+\zl
+It follows from this that fronting is not a necessary criterion for constituent status. Therefore, the possibility for a given word string to
+be fronted is neither a necessary nor sufficient condition for constituent status.\is{fronting|)}
+
+\subsubsection{Coordination}
+\label{Abschnitt-K-Tests-Koordination}
+
+Coordinated structures\is{coordination|(}\is{coordination!-test} such as those in (\mex{1}) also prove to be problematic:
+\ea
+\label{ex-gapping}
+%Peter gab ihm einen Apfel und ihr eine Tomate.
+\gll Deshalb kaufte der Mann einen Esel und die Frau ein Pferd.\\
+	 therefore bought the man a donkey and the woman a horse\\
+\glt `Therefore, the man bought a donkey and the woman a horse.'
+\z
+At first glance, \emph{der Mann einen Esel} `the man a donkey' and \emph{die Frau ein Pferd} `the woman a horse' in (\mex{0}) seem to be coordinated.
+Does this mean that \emph{der Mann einen Esel} and \emph{die Frau ein Pferd} each form a constituent?
+
+As other constituent tests show, this assumption is not plausible. This sequence of words cannot be moved together as a unit:\footnote{
+	The area in front of the finite verb is also referred to as the \emph{Vorfeld}\is{Vorfeld}
+        `prefield' (see Section~\ref{Abschnitt-Toplogie}).
+	Apparent multiple fronting\is{fronting!apparent multiple} is possible under certain circumstances in German. See the previous section, especially the discussion of the examples
+	in (\ref{bsp-mehr-vf}) on page~\pageref{bsp-mehr-vf}. The example in (\mex{1}) is created in such a way that the subject is present in the prefield,
+	which is not normally possible with verbs such as \emph{kaufen} `to buy' for reasons which have to do with the information"=structural properties of these
+	kinds of fronting constructions. Compare also \citealp{dKM2003a} on subjects in fronted verb
+        phrases and \citealp[\page 72]{BC2010a} on frontings of subjects in apparent multiple frontings.
+}
+\ea[*]{
+\gll Der Mann einen Esel kaufte deshalb.\\
+     the man  a     donkey bought therefore\\
+}
+\z
+
+\noindent
+Replacing the supposed constituent is also not possible without ellipsis:
+
+\eal
+\ex[\#]{
+\gll Deshalb kaufte er.\\
+     therefore bought he\\
+}
+\ex[*]{
+\gll Deshalb kaufte ihn.\\
+     therefore bought him\\
+}
+\zl
+The pronouns do not stand in for the two logical arguments of \emph{kaufen} `to buy', which are realized by
+\emph{der Mann} `the man' and \emph{einen Esel} à donkey' in (\ref{ex-gapping}), but rather for one in each. There are analyses
+that have been proposed for examples such as (\ref{ex-gapping}) in which two verbs \emph{kauft} `buys' occur, 
+where only one is overt, however \citep{Crysmann2003c}. The example in (\mex{1}) would therefore correspond to:
+\ea
+\gll Deshalb kaufte der Mann einen Esel und kaufte die Frau ein Pferd.\\
+	 therefore bought the man a donkey and bought the woman a horse\\
+\z
+This means that although it seems as though \emph{der Mann einen Esel} `the man a donkey' and
+\emph{die Frau ein Pferd} `the woman a horse' are coordinated, it is actually
+\emph{kauft der Mann einen Esel} `buys the man a donkey' and \emph{(kauft) die Frau ein Pferd} `buys
+the woman a horse' which are conjoined.
+\is{coordination|)}
+
+We should take the following from the previous discussion: even when a given word sequence passes certain constituent tests,
+this does not mean that one can automatically infer from this that we are dealing with a
+constituent, that is, the tests we have seen are not a sufficient condition for constituent status.
+
+Summing up, it has been shown that these tests are neither sufficient nor necessary for attributing
+constituent status to a given sequence of words. However, as long as one keeps the problematic cases
+in mind, the previous discussion should be enough to get an initial idea about what should be treated as a
+constituent.
+
+\section{Parts of speech}
+\label{Abschnitt-Wortarten}
+
+The words in (\mex{1}) differ not only in their meaning but also in other respects.
+\ea
+\gll Der dicke Mann lacht jetzt.\\
+	 the fat man laughs now\\
+\glt `The fat man is laughing now.'
+\z
+Each of the words is subject to certain restrictions when forming sentences. It is common practice to group words into classes with
+other words which share certain salient properties. For example, \emph{der} `the' is an article\is{article}, \emph{Mann} `man' is a noun\is{noun},
+\emph{lacht} `laugh' is a verb\is{verb} and \emph{jetzt} `now' is an adverb\is{adverb}. As can
+be seen in (\mex{1}), it is possible to replace all the words
+in (\mex{0}) with words from the same word class.
+\ea
+\gll Die dünne Frau lächelt immer.\\
+	 the thin woman smiles always\\
+\glt `The thin woman is always smiling.'
+\z
+This is not always the case, however. For example, it is not possible to use a reflexive verb such as \emph{erholt} `recovers' or the second-person form
+\emph{lächelst} in (\mex{0}). This means that the categorization of words into parts of speech is
+rather coarse and that we will have to say a lot more about the properties of a given word. In this
+section, we will discuss various words classes/parts of speech and in the following sections we will
+go into further detail about the various properties which characterize a given word class.
+
+The most important parts of speech are \emph{verbs}, \emph{nouns}\is{noun}, \emph{adjectives}\is{adjective}, \emph{prepositions}\is{preposition} and
+\emph{adverbs}\is{adverb}. In earlier decades, it was
+common among researchers working on German (see also Section~\ref{sec-tesniere-pos} on \tes's category system) to
+speak of \emph{action words}, \emph{describing words}, and \emph{naming words}. These descriptions prove problematic however, as illustrated by the following examples:
+
+
+\eal
+\ex 
+\gll die \emph{Idee}\\
+	the idea\\
+\ex 
+\gll die \emph{Stunde}\\
+	 the hour\\
+\ex 
+\gll das laute \emph{Sprechen}\\
+     the loud speaking\\
+\glt `(the act of) speaking loudly'
+\ex 
+\gll Die \emph{Erörterung} der Lage dauerte mehrere Stunden.\\
+     the discussion of.the situation lasted several hours\\
+\glt `The discussion of the situation lasted several hours.'
+\zl
+(\mex{0}a) does not describe a concrete entity, (\mex{0}b) describes a time interval and (\mex{0}c) and (\mex{0}d)
+describe actions. It is clear that \emph{Idee} `idea', \emph{Stunde} `hour', \emph{Sprechen}
+`speaking' and \emph{Erörterung} `discussion' differ greatly in terms of their
+meaning. Nevertheless, these words still behave like \emph{Mann} `man' and \emph{Frau} `woman' in many respects
+and are therefore classed as nouns.
+
+The term \emph{action word} is not used in scientific linguistic work as verbs do not always need
+to denote actions:
+\eal
+\ex
+\gll Ihm gefällt das Buch.\\
+	 him pleases the book\\
+\glt `He likes the book.'
+\ex 
+\gll Das Eis schmilzt.\\
+	 the ice melts\\
+\glt `The ice is melting.'
+\ex 
+\gll Es regnet.\\
+	 it rains\\
+\glt `It is raining.'
+\zl
+One would also have to class the noun \emph{Erörterung} `discussion' as an action word.\is{verb|)}
+
+Adjectives\is{adjective|(} do not always describe properties of objects. In the following examples, the opposite is in fact true:
+the characteristic of being a murderer is expressed as being possible or probable,  but not as being true properties of the modified noun.
+\eal
+\ex 
+\gll der mutmaßliche Mörder\\
+     the suspected murderer\\
+\ex 
+\gll Soldaten sind potenzielle Mörder.\\
+     soldiers are potential murderers\\
+\zl
+The adjectives themselves in (\mex{0}) do not actually provide any information about the characteristics of the entities described. One
+may also wish to classify \emph{lachende} `laughing' in (\mex{1}) as an adjective.
+\ea
+\gll der lachende Mann\\
+	 the laughing man\\
+\z
+If, however, we are using properties and actions as our criteria for classification, \emph{lachend}
+`laughing' should technically be an action word.\is{adjective|)}
+
+Rather than\is{inflexion|(} semantic criteria, it is usually formal criteria which are used to determine word classes. The various forms a word can take
+are also taken into account. So \emph{lacht} `laughs', for example, has the forms given in (\mex{1}). 
+\eal
+\ex 
+\gll Ich lache.\\
+	 I laugh\\
+\ex 
+\gll Du lachst.\\
+	 you.\sg{} laugh\\
+\ex 
+\gll Er lacht.\\
+	 he laughs\\
+\ex 
+\gll Wir lachen.\\
+	 we laugh\\
+\ex 
+\gll Ihr lacht.\\
+	 you.\textsc{pl} laugh\\
+\ex 
+\gll Sie lachen.\\
+     they laugh\\
+\zl
+In German, there are also forms for the preterite, imperative, present subjunctive, past subjunctive and infinitive forms 
+(participles and infinitives with or without \emph{zu} `to'). All of these forms constitute the
+inflectional paradigm\is{inflection!-paradigm} of a verb. Tense\is{tense}  (present\is{present},
+preterite\is{preterite}, future\is{future}),
+%\todostefan{Antonio: Perfect?}
+mood\is{mood} (indicative\is{indicative}, subjunctive\is{subjunctive}, imperative\is{imperative}),
+person\is{person} (1st, 2nd, 3rd) and number\is{number} (singular\is{singular}, plural\is{plural}) all play a role in the
+inflectional paradigm. Certain forms can coincide in a paradigm, as (\mex{0}c) and (\mex{0}e) and
+(\mex{0}d) and (\mex{0}f) show.
+
+Parallel to verbs, nouns\is{noun} also have an inflectional paradigm:\is{case}
+\eal
+\ex 
+\gll der Mann\\
+	 the.\nom{} man\\
+\ex 
+\gll des Mannes\\
+	 the.\gen{} man.\gen{}\\
+\ex 
+\gll dem Mann\\
+	 the.\dat{} man\\
+\ex 
+\gll den Mann\\
+	 the.\acc{} man\\
+\ex 
+\gll die Männer\\
+	 the.\nom{} men\\
+\ex 
+\gll der Männer\\
+	 the.\gen{} men\\
+\ex 
+\gll den Männern\\
+	 the.\dat{} men.\dat\\
+\ex 
+\gll die Männer\\
+	 the.\acc{} men\\
+\zl
+We can differentiate between nouns on the basis of gender\is{gender} (feminine, masculine, neuter). The choice of gender is often
+purely formal in nature and is only partially influenced by biological sex or the fact that we are describing a particular object:
+\eal
+\ex
+\gll die Tüte\\
+	 the.\fem{} bag(F)\\
+\glt `the bag'
+\ex 
+\gll der Krampf\\
+	 the.\mas{} cramp(M)\\
+\glt `cramp'
+\ex 
+\gll das Kind\\
+	 the.\neu{} child(N)\\
+\glt `the child'
+\zl
+%% %Schwer zu übersetzen - "männlich" = masculine. dieses terminologische Problem gibt es im Englischen nicht. Unten ist mein Versuch das anzupassen.
+%% One should avoid using terms which refer to biological gender such as \emph{männlich} `male',
+%% \emph{weiblich} `female' and \emph{sächlich} `inanimate' in German. Gender or\todostefan{check whether this can be removed}
+%% \emph{genus} really means `kind'. Bantu languages can, for example, have between 7 and 10 genders \citep{Corbett2005a}.
+
+
+As well as gender, case\is{case} (nominative\is{case!nominative},
+genitive\is{case!genitive}, dative\is{case!dative}, accusative\is{case!accusative}) and number\is{number} are
+also important for nominal paradigms.
+
+Like nouns, adjectives\is{adjective} inflect for gender, case and number. They differ from nouns, however, in that
+gender marking is variable. Adjectives can be used with all three genders:
+\eal
+\ex 
+\gll eine kluge Frau\\
+	 a.\fem{} clever.\fem{} woman\\
+\ex 
+\gll ein kluger Mann\\
+	 a clever.\mas{} man\\
+\ex 
+\gll ein kluges Kind\\
+	 a clever.\neu{} child\\
+\zl
+In addition to gender, case and number, we can identify several inflectional classes. Traditionally, we distinguish between strong, mixed and weak 
+inflection of adjectives. The inflectional class\is{inflectional class}\label{page-Flexionsklasse-Wunderlich} that we have to choose is dependent on the 
+form or presence of the article:
+%% \footnote{
+%% Dieter Wunderlich\aimention{Dieter Wunderlich} has shown in an unpublished article that one can get by with just strong and weak inflectional classes. For details
+%% see \citew[Section~2.2.5]{ps2} or \citew[Section~13.2]{MuellerLehrbuch1}. 
+%% }\todostefan{Martin: verwirrend nicht angemessen für Lehrbuch}
+\eal
+\ex 
+\gll ein alter Wein\\
+     an old wine\\
+\ex
+\gll der alte Wein\\
+     the old wine\\
+\ex 
+\gll alter Wein\\
+     old wine\\
+\zl
+
+
+
+Furthermore, adjectives have comparative\is{comparative} and superlative\is{superlative} wordforms:
+\eal
+\ex 
+\gll klug\\
+	 clever\\
+\ex 
+\gll klüg-er\\
+	 clever-er\\
+\ex 
+\gll am klüg-sten\\
+	 at.the clever-est\\
+\zl
+This is not always the case. Especially for adjectives which make reference to some end point, a degree of comparison does not make sense.
+If a particular solution is optimal, for example, then no better one exists.
+Therefore, it does not make sense to speak of a ``more optimal'' solution. In a similar vein, it is not possible to
+be ``deader'' than dead.
+
+There are some special cases such as colour adjectives ending in \suffix{a} in German \emph{lila} `purple' and \emph{rosa} `pink'.
+These inflect optionally (\mex{1}a), and the uninflected form is also possible:
+\eal
+\ex 
+\gll eine lilan-e Blume\\
+	 a purple-\fem{} flower\\
+\ex 
+\gll eine lila Blume\\
+	 a purple flower\\
+\zl
+
+\noindent
+In both cases, \emph{lila} is classed an adjective. We can motivate this classification by appealing to the fact that both words occur
+at the same positions as other adjectives that clearly behave like adjectives with regard to inflection.\is{inflection|)}
+
+The parts of speech discussed thus far can all be differentiated in terms of their inflectional properties. For words which do not inflect,
+we have to use additional criteria. For example, we can classify words by the syntactic context in which they occur (as we did for the 
+non-inflecting adjectives above). We can identify prepositions\is{preposition}, adverbs\is{adverbs},
+conjunctions\is{conjunction}, interjections\is{interjection} and sometimes also particles\is{particle}.
+Prepositions are words which occur with a noun phrase whose case they determine:
+\eal
+\ex 
+\gll in diesen Raum\\
+	 in this.\acc{} room\\
+\ex 
+\gll in diesem Raum\\
+	 in this.\dat{} room\\
+\zl
+\emph{wegen} `because' is often classed as a preposition although it can also occur after the noun and in these cases would technically be a
+postposition:\is{postposition}
+\ea
+\gll des Geldes wegen\\
+	 the money.\gen{} because\\
+\glt `because of the money'
+\z
+It is also possible to speak of \emph{adpositions}\is{adposition} if one wishes to remain neutral about the exact position of the word.
+
+Unlike prepositions, adverbs\is{adverb} do not require a noun phrase. 
+\eal
+\ex
+\gll Er schläft in diesem Raum.\\
+	 he sleeps in this room\\
+\ex
+\gll Er schläft dort.\\
+	 he sleeps there\\
+\zl
+Sometimes adverbs are simply treated as a special variant of prepositions (see page~\pageref{Seite-Adverbien-PP}). The explanation for this is that
+a prepositional phrase such as \emph{in diesem Raum} `in this room' shows the same syntactic
+distribution as the corresponding adverbs. \emph{in} differs
+from \emph{dort} `there' in that it needs an additional noun phrase. These differences are
+parallel to what we have seen with other parts of speech. For instance, the verb \emph{schlafen} `sleep' requires only a noun phrase, whereas \emph{erkennen} `recognize' requires two.
+\eal
+\ex 
+\gll Er schläft.\\
+     he sleeps\\
+\ex 
+\gll Peter erkennt ihn.\\
+     Peter recognizes him\\
+\zl
+
+
+Conjunctions\is{conjunction} can be subdivided into subordinating and coordinating conjunctions. Coordinating conjunctions include
+\emph{und} `and' and \emph{oder} `or'. In coordinate structures, two units with the same syntactic properties are
+combined. They occur adjacent to one another. \emph{dass} `that' and \emph{weil} `because' are subordinating conjunctions because
+the clauses that they introduce can be part of a larger clause and depend on another element of this
+larger clause.
+\eal
+\ex 
+\gll Klaus glaubt, dass er lügt.\\
+	 Klaus believes that he lies\\
+\glt `Klaus believes that he is lying.'
+\ex 
+\gll Klaus glaubt ihm nicht, weil er lügt.\\
+	 Klaus believes him not because he lies\\
+\glt `Klaus doesn't believe him because he is lying.'
+\zl
+%Subordinating conjunctions are also referred to as \emph{subjunctions}\is{subjunction}.
+
+Interjections\is{interjection} are clause"=like expressions such as \emph{Ja!} `Yes!', \emph{Bitte!} `Please!' %komisch auf Englisch, 
+\emph{Hallo!} `Hel\-lo!', 
+ \emph{Hurra!} `Hooray!', \emph{Bravo!} `Bravo!', \emph{Pst!} `Psst!', \emph{Plumps!} `Clonk!'.
+ %Vielleicht sollte man sich nochmal überlegen ob man nicht englische Interjectionen benutzt.
+ 
+If adverbs and prepositions are not assigned to the same class, then adverbs are normally used as a kind of ``left over''
+category in the sense that all non"=inflecting words which are neither prepositions, conjunctions nor interjections are classed as adverbs. Sometimes
+this category for ``left overs'' is subdivided: only words which can appear in front of the finite verb when used as a constituent are 
+referred to as adverbs. Those words which cannot be fronted are dubbed \emph{particles}\is{particle}. Particles themselves can be subdivided
+into various classes based on their function, \eg degree particles and illocutionary
+particles. Since these functionally defined classes also contain adjectives, I will not make this distinction and simply speak of \emph{adverbs}.
+
+
+We have already sorted a considerable number of inflectional words into word classes. When one is faced with the task of classifying
+a particular word, one can use the decision diagram in Figure~\vref{Abbildung-Wortarten}, which is
+taken from the Duden grammar of German \citep[\page 133]{Duden2005-Authors}.\footnote{
+  The Duden is the official document for the German orthography. The Duden grammar does not have an
+  official status but is very influential and it used for educational purposes as well. I will refer
+  to it several times in this introductory chapter.
+}
+\begin{figure}
+\centering
+\begin{forest}
+word tier, for tree={fit=rectangle}
+[part of speech
+       [inflects
+          [for tense [verb] ]
+          [for case 
+            [fixed gender [noun] ]
+            [flexible gender 
+               [no comparative [article word\\pronoun] ]
+               [comparative [adjective] ] ] ] ]
+       [does not inflect [adverb\\conjunction\\preposition\\interjection] ] ]
+\end{forest}
+\caption{\label{Abbildung-Wortarten}Decision tree for determining parts of speech following \citew[\page 133]{Duden2005-Authors}}
+\end{figure}%
+
+%Ich komme auf die Übersetzung dieses Baumes zurück!
+
+
+
+If a word inflects for tense\is{tense}, then it is a verb\is{verb}. If it displays different case
+forms\is{case}, then one has to check if it has a fixed gender\is{gender}. If this is indeed the
+case, then we know that we are dealing with a noun\is{noun}. Words with variable gender have to be
+checked to see if they have comparative\is{comparative} forms. A positive result will be a clear
+indication of an adjective\is{adjective}.  All other words are placed into a residual category,
+which the Duden refers to as pronouns/article words.  Like in the class of non-inflectional
+elements, the elements in this remnant category are subdivided according to their syntactic
+behavior.  The Duden grammar makes a distinction between pronouns and article words. According to
+this classification, pronouns are words which can replace a noun phrase such as \emph{der Mann} `the
+man', whereas article words normally combine with a noun. In Latin grammars, the notion of `pronoun'
+includes both pronouns in the above sense and articles, since the forms with and without the noun
+are identical. Over the past centuries, the forms have undergone split development to the point
+where it is now common in contemporary Romance languages to distinguish between words which replace
+a noun phrase and those which must occur with a noun. Elements which belong to the latter class are
+also referred to as \emph{determiners}\is{determiner}.
+
+
+If\is{pronoun|(} we follow the decision tree in Figure~\ref{Abbildung-Wortarten}, the personal
+pronouns \emph{ich} `I', \emph{du} `you', \emph{er} `he', \emph{sie} `her', \emph{es} `it',
+\emph{wir} `we', \emph{ihr} `you', and \emph{sie} `they', for example, would be grouped together
+with the possessive pronouns \emph{mein} `mine', \emph{dein} `your', \emph{sein} `his'/""`its',
+\emph{ihr} `her'/""`their', and \emph{unser} `our'. The corresponding reflexive pronouns,
+\emph{mich} `myself', \emph{dich} `yourself', \emph{sich} `himself'/""`herself'/""`itself',
+`themselves', \emph{uns} `ourselves', \emph{euch} `yourself', and the reciprocal pronoun
+\emph{einander} `each other' have to be viewed as a special case in German as there are no differing
+gender forms of \emph{sich} `himself'/""`herself'/""`itself' and \emph{einander} `each other'. Case is
+not expressed morphologically by reciprocal pronouns. By replacing genitive, dative and accusative
+pronouns with \emph{einander}, it is possible to see that there must be variants of \emph{einander}
+`each other' in these cases, but these variants all share the same form:
+
+\eal
+\ex 
+\gll Sie gedenken seiner / einander.\\
+	 they commemorate him.\gen{} {} each.other\\
+\ex 
+\gll Sie helfen ihm / einander.\\
+	 they help him.\dat{} {} each.other\\
+\ex 
+\gll Sie lieben ihn / einander.\\
+	 they love him.\acc{} {} each.other\\
+\zl
+%
+
+
+So-called pronominal adverbs\is{adverb!pronominal-} such as \emph{darauf} `on there', \emph{darin} `in there', \emph{worauf} `on where', \emph{worin} `in where'
+also prove problematic. These forms consist of a preposition (\eg \emph{auf} `on') and the elements \emph{da} `there' and \emph{wo} `where'. As the name suggests,
+\emph{pronominal adverbs} contain something pronominal and this can only be \emph{da} `there' and
+\emph{wo} `where'. However, \emph{da} `there' and \emph{wo} `where'  do not inflect and would therefore,
+following the decision tree, not be classed as pronouns.
+
+The same is true of relative pronouns such as \emph{wo} `where' in (\mex{1}):
+\eal
+\ex 
+\gll Ich komme eben aus der Stadt, \emph{wo} ich Zeuge eines Unglücks gewesen bin.\footnotemark\\
+	 I come \particle{} from the city where I witness of.an accident been am\\
+\footnotetext{
+ 	\citew*[\page 672]{Duden84-Authors}.
+ 	}\label{bsp-wo-ich-zeuge}
+\glt `I come from the city where I was witness to an accident.' 
+\ex 
+\gll Studien haben gezeigt, daß mehr Unfälle in Städten passieren, \emph{wo} die Zebrastreifen abgebaut werden, weil die Autofahrer unaufmerksam werden.\footnotemark\\
+     studies have shown that more accidents in cities happen where the zebra.crossings removed become because the drivers unattentive become\\
+\footnotetext{
+        taz berlin, 03.11.1997, p.\,23.
+        }
+\glt `Studies have shown that there are more accidents in cities where they do away with zebra crossings, because drivers become unattentive.'
+\ex 
+\gll Zufällig war ich in dem Augenblick zugegen, \emph{wo} der Steppenwolf zum erstenmal unser Haus betrat und bei meiner Tante sich einmietete.\footnotemark\\
+	 coincidentally was I in the moment present where the Steppenwolf to.the first.time our house entered and by my aunt \textsc{refl} took.lodgings\\
+
+\footnotetext{
+                Herman Hesse, \emph{Der Steppenwolf}. Berlin und Weimar: Auf"|bau-Verlag. 1986, p.\,6.
+	}
+\glt `Coincidentally, I was present at the exact moment in which Steppenwolf entered our house for the first time and took lodgings with my aunt.'
+\zl
+
+
+If they are uninflected, then they cannot belong to the class of pronouns according to the decision tree above.
+\citet[\page 277]{Eisenberg2004a} notes that \emph{wo} `where' is a kind of \emph{uninflected relative
+pronoun} (he uses quotation marks) and remarks that this term runs contrary to the exclusive use of the
+term pronoun for nominal, that is inflected, elements. He therefore uses the
+term \emph{relative adverb}\is{adverb!relative} for them (also see \citew[\S 856, \S 857]{Duden2005-Authors}).
+
+There are also usages of the relatives \emph{dessen} `whose' and \emph{wessen} `whose' in combination with a noun:
+\eal
+\ex 
+\gll der Mann, dessen Schwester ich kenne\\
+	 the man whose sister I know\\
+\ex 
+\gll Ich möchte wissen, wessen Schwester du kennst.\\
+	 I would.like know whose sister you know\\
+\glt `I would like to know whose sister you know.'
+\zl
+According to the classification in the Duden, these should be covered by the terms \emph{Relativartikelwort} `relative article word' and
+\emph{Interrogativartikelwort} `interrogative article word'. They are mostly counted as part of the relative pronouns and question pronouns
+(see for instance \citew[\page 229]{Eisenberg2004a}). Using Eisenberg's terminology, this is unproblematic as he does not make a distinction between articles,
+pronouns and nouns, but rather assigns them all to the class of nouns. But authors who do make a distinction between articles and pronouns sometimes
+also speak of interrogative pronouns when discussing words which can function as articles or indeed replace an entire noun phrase.
+
+
+One should be prepared for the fact that the term \emph{pronoun}\is{pronoun} is often simply used for words which refer to other
+entities and, this is important, not in the way that nouns such as \emph{book} and \emph{John} do, but rather dependent on context.
+The personal pronoun \emph{er} `he' can, for example, refer to either a table or a man. This usage of the term \emph{pronoun}
+runs contrary to the decision tree in Figure~\ref{Abbildung-Wortarten} and includes uninflected elements such as \emph{da} `there' and 
+\emph{wo} `where'.
+
+Expletive pronouns\is{pronoun!expletive} such as \emph{es} `it' and \emph{das} `that', as well
+as the \emph{sich} `him'/""`her'/""`itself' belonging to inherently
+reflexive verbs do not make reference to actual objects. They are considered pronouns because of the similarity in form. Even if we were to assume a narrow
+definition of pronouns, we would still get the wrong results as expletive forms do not vary with regard to case, gender and number. If one does everything by
+the book, expletives would belong to the class of uninflected elements. If we assume that \emph{es} `it' as well as the personal pronouns have a nominative
+and accusative variant with the same form, then they would be placed in with the nominals. We would then have to admit that the assumption that \emph{es} has gender
+would not make sense, that is we would have to count \emph{es} as a noun by assuming neuter gender, analogous to personal pronouns.%
+
+
+We have not yet discussed how we would deal with the italicized words in (\mex{1}):
+\eal
+\ex 
+\gll das \emph{geliebte} Spielzeug\\
+	 the beloved toy\\
+\ex 
+\gll das \emph{schlafende} Kind\\
+	 the sleeping child\\
+\ex 
+\gll die Frage des \emph{Sprechens} und \emph{Schreibens} über Gefühle\\
+	 the question of.the talking and writing about feelings\\
+\glt `the question of talking and writing about feelings'
+\ex 
+\gll Auf dem Europa-Parteitag fordern die \emph{Grünen} einen ökosozialen Politikwechsel.\\
+	 on the Europe-party.conference demand the Greens a eco-social political.change\\
+\glt `At the European party conference, the Greens demanded eco-social political change.'
+\ex\label{Wortart-adverbiales-Adjektiv} 
+\gll Max lacht \emph{laut}.\\
+	 Max laughs loudly\\
+\ex\label{Wortart-Satzadverb-Adjektiv} 
+\gll Max würde \emph{wahrscheinlich} lachen.\\
+	 Max would probably laugh\\
+\zl
+\emph{geliebte} `beloved' and \emph{schlafende} `sleeping' are  participle forms of \emph{lieben} `to love' and \emph{schlafen} `to sleep'.
+These forms are traditionally treated as part of the verbal paradigm. In this sense, \emph{geliebte} and \emph{schlafende} are verbs. This 
+is referred to as lexical word class. The term \emph{lexeme}\is{lexeme} is relevant in this case. All forms in a given inflectional paradigm
+belong to the relevant lexeme\is{inflection}\is{paradigm}. In the classic sense, this term also includes the regularly derived forms, that is
+participle forms and nominalized infinitives also belong to a verbal lexeme. Not all linguists share this view, however. Particularly problematic is
+the fact that we are mixing verbal with nominal and adjectival paradigms. For example, \emph{Sprechens} `speaking.\gen{}' is in the genitive and adjectival
+participles also inflect for case, number and gender. Furthermore, it is unclear as to why \emph{schlafende} `sleeping' should be classed as a verbal lexeme and
+a noun such as \emph{Störung} `disturbance' is its own lexeme and does not belong to the lexeme \emph{stören} `to disturb'. I subscribe to the more modern view
+of grammar and assume that processes in which a word class is changed result in a new lexeme being created. Consequently, \emph{schlafende} `sleeping' does not belong to the lexeme
+\emph{schlafen} `to sleep', but is a form of the lexeme \emph{schlafend}. This lexeme belongs to the word class `adjective' and inflects accordingly.   
+
+
+As we have seen, it is still controversial as to where to draw the line between inflection and derivation\is{derivation} (creation of a new lexeme).
+\citet*[\page263--264]{SWB2003a} view the formation of the present participle (\emph{standing}) and the past participle (\emph{eaten}) in English\il{English}
+as derivation as these forms inflect for gender and number in French\il{French}.
+
+Adjectives such as \emph{Grünen} `the Greens' in (\mex{0}d) are nominalized adjectives and are written with a capital like other nouns in German when there is
+no other noun that can be inferred from the immediate context:
+\ea
+\gll A: Willst du den roten Ball haben?\\
+	 {} want you the red ball have\\
+\glt \hspaceThis{A:} 'Do you want the red ball?'\\
+
+\gll B: Nein, gib mir bitte den grünen.\\
+	{} no give me please the green\\
+\glt \hspaceThis{B:} `No, give me the green one please.'
+\z
+
+\noindent
+In the answer to (\mex{0}), the noun \emph{Ball} has been omitted. This kind of omission is not present in (\mex{-1}d). One could also assume here that
+a word class change has taken place. If a word changes its class without combination with a visible affix, we refer to this as \emph{conversion}\is{conversion}.
+Conversion has been treated as a sub-case of derivation\is{derivation} by some linguists.
+The problem is, however, that \emph{Grüne} `greens' inflects just like an adjective and the gender varies depending on the object it is referring to:
+\eal
+\ex 
+\gll Ein Grüner hat vorgeschlagen, \ldots\\
+	 a green.\mas{} has suggested\\
+\glt `A (male) member of the Green Party suggested \ldots'
+\ex 
+\gll Eine Grüne hat vorgeschlagen, \ldots\\
+	 a green.\fem{} has suggested\\
+\glt `A (female) member of the Green Party suggested \ldots'
+\zl
+We also have the situation where a word has two properties. We can make
+life easier for ourselves by talking about \emph{nominalized adjectives}. The lexical
+category\is{category!lexical} of \emph{Grüne} is adjective and its syntactic category\is{category!syntactic} is noun.
+
+The word in (\ref{Wortart-adverbiales-Adjektiv}) can inflect like an adjective and should therefore be classed as an adjective following our tests. Sometimes, these
+kinds of adjectives are also classed as adverbs. The reason for this is that the uninflected forms of these adjectives behave like adverbs:
+\ea
+\gll Max lacht immer / oft / laut.\\
+	 Max laughs always {} often {} loud\\
+\glt `Max (always/often) laughs (loudly).'
+\z
+%
+To capture this dual nature of words some researchers distinguish between lexical and syntactic
+category of words. The lexical category of \emph{laut} `loud(ly)' is that of an adjective and the syntactic category to which it belongs is
+`adverb'. The classification of adjectives such as \emph{laut} `loud(ly)' in (\mex{0}) as adverbs is not assumed by all authors.
+Instead, some speak of adverbial usage of an adjective, that is one assumes that the syntactic category is still adjective but
+it can be used in a different way so that it behaves like an adverb (see \citealp[Section~7.3]{Eisenberg2004a}, for example). This
+is parallel to prepositions, which can occur in a variety of syntactic contexts:
+\eal
+\ex 
+\gll Peter schläft im Büro.\\
+	 Peter sleeps in.the office\\
+\glt `Peter sleeps in the office.'
+\ex 
+\gll der Tisch im Büro\\
+	 the table in.the office\\
+\glt `the table in the office'
+\zl
+We have prepositional phrases in both examples in (\mex{0}), however in (\mex{0}a) \emph{im Büro} `in the office' acts like an adverb in that it modifies the verb 
+\emph{schläft} `sleeps' and in (\mex{0}b) \emph{im Büro} modifies the noun \emph{Tisch} `table'. In the same way, \emph{laut} `loud' can modify a noun (\mex{1}) or
+a verb (\mex{-1}).
+\ea
+\gll die laute Musik\\
+     the loud music\\
+\z 
+%% \noindent
+%% Lastly, I would like to discuss (\ref{Wortart-Satzadverb-Adjektiv}) as a particularly difficult case. Words such as 
+%% \emph{wahr\-scheinlich} `probably', \emph{hoffentlich} `hopefully' and \emph{glücklicherweise} `fortunately' are
+%% referred to as sentential adverbs\is{adverb!sentential}. These modify the entire utterance and give an indication of 
+%% speaker attitude. Inflected elements such as \emph{vermutlich} `supposed(ly)' and \emph{wahrscheinlich} `probable/-ly'
+%% also belong to this semantically-motivated word class. If we want to refer to all these words as
+%% adverbs, then we would have to assume that
+%% conversion has taken place in cases such as \emph{wahrscheinlich} `probably' -- that is that it belongs to the lexical category `adjective'
+%% but the syntactic category `adverb'.
+
+\section{Heads}
+\label{Abschnitt-Kopf}
+
+The head\is{head|(} of a constituent/phrase is the element which determines the most important
+properties of the constituent/phrase. At the same time, the head also determines the composition of the
+phrase, that is, the head requires certain other elements to be present in the phrase. The heads in the following
+examples have been marked in \emph{italics}:
+\eal
+\ex 
+\gll \emph{Träumt} dieser Mann?\\
+	 dreams this.\nom{} man\\
+\glt `Does this man dream?'
+\ex 
+\gll \emph{Erwartet} er diesen Mann?\\
+	 expects he.\nom{} this.\acc{} man\\
+\glt `Is he expecting this man?'
+\ex 
+\gll \emph{Hilft} er diesem Mann?\\
+	 helps he.\nom{} this.\dat{} man\\
+\glt `Is he helping this man?'
+\ex 
+\gll \emph{in} diesem Haus\\
+	 in this.\dat{} house\\
+\ex 
+\gll ein \emph{Mann}\\
+	 a.\nom{} man\\
+\zl
+Verbs determine the case of their arguments (subjects and objects). In (\mex{0}d), the preposition determines which case the noun phrase \emph{diesem Haus} `this house'
+bears (dative) and also determines the semantic contribution of the phrase (it describes a location). (\mex{0}e) is controversial: there are linguists who believe that the
+determiner is the head (\LATER{\cite{Brame81a,Brame82a} \citealp[\page 90]{Hudson84a};
+}\citealp{Hellan86a,Abney87a,Netter94,Netter98a}%
+%; \citealp[Section~6.2]{Bresnan2001a}
+) while others assume that the noun is the head of the phrase (\citealp{vanLangendonck94a}; \citealp[\page 49]{ps2}; \citealp{Demske2001a};
+\citealp[Section~6.6.1]{MuellerLehrbuch1}; \citealp{Hudson2004a}; \citealp{Bruening2009a}).
+% Dalrymple textbook
+
+
+The combination of a head with another constituent is called a \emph{projection
+of the head}\is{projection}. A projection which contains all the necessary parts to create a well-formed phrase of that type
+is a \emph{maximal projection}\is{projection!maximal}. A sentence is the maximal projection of a finite verb.
+
+Figure~\vref{Abbildung-beschriftete-Schachteln} shows the structure of (\mex{1}) in box representation.
+\ea
+\gll Der Mann liest einen Aufsatz.\\
+	 the man reads an essay\\
+\glt `The man is reading an essay.'
+\z
+Unlike Figure~\ref{Abbildung-Schachteln}, the boxes have been labelled here.
+\begin{figure}
+\centering
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+VP\\[2mm]
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+NP\\[2mm]
+       \TZbox{\begin{tabular}{@{}l@{}}
+                   Det\\der
+                   \end{tabular}}
+       \TZbox{\begin{tabular}{@{}l@{}}
+                   N\\Mann
+                   \end{tabular}}
+\end{tabular}}
+\TZbox{\begin{tabular}{@{}l@{}}
+                   V\\liest
+                   \end{tabular}}
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+NP\\[2mm]
+           \TZbox{\begin{tabular}{@{}l@{}}
+                   Det\\einen
+                   \end{tabular}}
+           \TZbox{\begin{tabular}{@{}l@{}}
+                   N\\Aufsatz
+                   \end{tabular}}
+\end{tabular}}
+\end{tabular}}
+\caption{\label{Abbildung-beschriftete-Schachteln}Words and phrases in annotated boxes}
+\end{figure}%
+
+
+The annotation includes the category of the most important element in the box. VP stands for \emph{verb phrase} and NP for \emph{noun phrase}. VP and NP are maximal projections of
+their respective heads.
+
+Anyone who has ever faced the hopeless task of trying to find particular photos of their sister's wedding in a jumbled, unsorted cupboard can vouch for the fact that it is most definitely a good idea
+to mark the boxes based on their content and also mark the albums based on the kinds of photos they contain.
+
+An interesting point is that the exact content of the box with linguistic material does not play a
+role when the box is put into a larger box. It is possible, for example, to replace
+the noun phrase \emph{der Mann} `the man' with \emph{er} `he', or indeed the more complex \emph{der Mann aus Stuttgart, der das Seminar zur Entwicklung der Zebrafinken besucht} `the man from Stuttgart
+who takes part in the seminar on the development of zebra finches'. However, it is not possible to use \emph{die Männer} `the men' or \emph{des Mannes} `of the man' in this position:
+\eal 
+\ex[*]{ 
+\gll Die Männer liest einen Aufsatz.\\
+	 the men reads an essay\\
+} 
+\ex[*]{ 
+\gll Des Mannes liest einen Aufsatz.\\
+	 of.the man.\gen{} reads an essay\\
+} 
+\zl 
+The reason for this is that \emph{die Männer} `the men' is in plural and the verb \emph{liest} `reads' is in singular. The noun phrase bearing genitive case \emph{des Mannes} can also
+not occur, only nouns in the nominative case. It is therefore important to mark all boxes with the information that is important for placing these boxes into larger boxes.
+Figure~\vref{Abbildung-ausfuehrlich-beschriftete-Schachteln} shows our example with more detailed annotation.
+
+\begin{figure}
+\centerfit{%
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+VP, fin\\[2mm]
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+NP, nom, 3, sg\\[2mm]
+       \TZbox{\begin{tabular}{@{}l@{}}
+                   Det, nom, mas, sg\\der
+                   \end{tabular}}
+       \TZbox{\begin{tabular}{@{}l@{}}
+                   N, nom, mas, sg\\Mann
+                   \end{tabular}}
+\end{tabular}}
+\TZbox{\begin{tabular}{@{}l@{}}
+                   V, fin\\liest
+                   \end{tabular}}
+\TZbox{%
+\begin{tabular}{@{}l@{}}
+NP, acc, 3, sg\\[2mm]
+           \TZbox{\begin{tabular}{@{}l@{}}
+                   Det, acc, mas, sg\\einen
+                   \end{tabular}}
+           \TZbox{\begin{tabular}{@{}l@{}}
+                   N, acc, mas, sg\\Aufsatz
+                   \end{tabular}}
+\end{tabular}}
+\end{tabular}}}
+\caption{\label{Abbildung-ausfuehrlich-beschriftete-Schachteln}Words and word strings in annotated boxes}
+\end{figure}%
+
+The features of a head which are relevant for determining in which contexts a phrase can occur are called \emph{head features}\is{head feature}.
+The features are said to be \emph{projected}\is{projection!of features} by the head.
+\is{head|)}
+
+
+
+\section{Arguments and adjuncts}
+\label{sec-intro-arg-adj}
+\label{Abschnitt-Argument-Adjunkt}
+\label{Abschnitt-Valenz}
+
+The constituents\is{argument|(} of a given clause have different relations to their head.
+It is typical to distinguish between arguments and adjuncts\is{adjunct|(}. The syntactic arguments
+of a head correspond for the most part to their logical arguments. We can represent the meaning of (\mex{1}a)
+as (\mex{1}b) using predicate logic\is{predicate logic}.
+\eal
+\ex Peter helps Maria.
+\ex \relation{help}(\relation{peter}, \relation{maria})
+\zl
+The logical representation of (\mex{0}b) resembles what is expressed in (\mex{0}a), however it abstracts away from
+constituent order and inflection. \emph{Peter} and \emph{Maria} are syntactic arguments of the verb \emph{help} and their
+respective meanings (\relation{Peter} and \relation{Maria}) are arguments of the logical relation expressed by \relation{help}.
+One could also say that \emph{help} assigns semantic roles\is{semantic role} to its arguments. Semantic roles include agent\is{agent}
+(the person carrying out an action), patient\is{patient} (the affected person or thing), beneficiary (the person who receives something)
+and experiencer\is{experiencer} (the person experiencing a psychological state). The subject of \emph{help} is an agent and the direct object is 
+a beneficiary. Arguments which fulfil a semantic role are also called \emph{actants}\is{actant}. This term is also used for inanimate objects.
+
+This kind of relation between a head and its arguments is covered by the terms
+\emph{selection}\is{selection} and \emph{valence}\is{valence|(}.  Valence is a term borrowed from
+chemistry. Atoms can combine with other atoms to form molecules with varying levels of
+stability. The way in which the electron shells are occupied plays an important role for this
+stability. If an atom combines with others atoms so that its electron shell is fully occupied, then
+this will lead to a stable connection. Valence tells us something about the number of hydrogen
+atoms which an atom of a certain element can be combined with. In forming H$_2$O, oxygen has a
+valence of 2. We can divide elements into valence classes. Following Mendeleev, elements with a
+particular valence are listed in the same column in the periodic table.
+
+The concept of valence was applied to linguistics by \citet{Tesniere59a-u}\nocite{Tesniere80a-u}: a
+head needs certain arguments in order to form a stable compound. Words with the same valence -- that
+is which require the same number and type of arguments -- are divided into valence
+classes. Figure~\vref{abb-chemie-valenz} shows examples from chemistry as well as linguistics.
+\begin{figure}
+\centering
+\begin{forest}
+[O
+  [H] 
+  [H] ]
+\end{forest}
+\hspace{5em}
+\begin{forest}
+[help
+ [Peter]
+ [Mary] ]
+\end{forest}
+\caption{\label{abb-chemie-valenz}Combination of hydrogen and oxygen and the combination
+of a verb with its arguments}
+\end{figure}%
+
+We used (\mex{0}) to explain logical valence. Logical valence can, however, sometimes differ from syntactic
+valence. This is the case with verbs like \emph{rain}, which
+require an expletive pronoun\is{pronoun!expletive} as an argument. 
+Inherently reflexive verbs\is{verb!inherent reflexives}
+such as \emph{sich erholen} `to recover' in German are another example. %of this.
+\eal
+\ex\label{Beispiel-es-regnet}
+\gll Es regnet.\\
+     it rains\\
+\glt `It is raining.'
+\ex\label{Beispiel-erholt-sich}
+\gll Klaus erholt sich.\\
+     Klaus recovers \refl{}\\
+\glt `Klaus is recovering.'
+\zl
+The expletive \emph{es} `it' with weather verbs and the \emph{sich} of so-called inherent reflexives such as \emph{erholen} `to recover' have to
+be present in the sentence. Germanic languages have expletive elements that are used to fill the
+position preceding the finite verb. These positional expletives are not realized in embedded clauses in
+German, since embedded clauses have a structure that differs from canonical unembedded declarative
+clauses, which have the finite verb in second position. (\mex{1}a) shows that \emph{es} cannot
+be omitted in \emph{dass}"=clauses.
+\eal
+\ex[*]{
+\gll Ich glaube, dass regnet.\\
+     I think     that rains\\
+\glt Intended: `I think that it is raining.'
+}
+\ex[*]{
+\gll Ich glaube, dass Klaus erholt.\\
+	 I believe that Klaus recovers\\
+\glt Intended: `I believe that Klaus is recovering.'	 
+}
+\zl
+Neither the expletive nor the reflexive pronoun contribute anything semantically to the sentence. They must, however, be present to derive a complete,
+well-formed sentence. They therefore form part of the valence of the verb.
+
+
+
+Constituents which do not contribute to the central meaning of their head, but rather provide additional information are called \emph{adjuncts}.
+An example is the adverb \emph{deeply} in (\mex{1}):
+\ea
+John loves Mary deeply.
+\z
+This says something about the intensity of the relation described by the verb. Further examples of adjuncts are attributive adjectives (\mex{1}a) and relative clauses (\mex{1}b):
+\eal
+\ex\label{bsp-eine-schoene-frau}
+a {\em beautiful\/} woman
+\ex the man {\em who Mary loves\/}
+\zl
+Adjuncts\is{adjunct} have the following syntactic/semantic properties:
+\eal
+\label{adj-kriterien}
+\ex Adjuncts do not fulfil a semantic role.
+\ex Adjuncts are optional.\is{optionality}
+\ex Adjuncts can be iterated.
+\zl
+The phrase in (\ref{bsp-eine-schoene-frau}) can be extended by adding another adjunct:
+\ea
+a beautiful clever woman
+\z
+If one puts processing problems aside for a moment, this kind of extension by adding adjectives could proceed infinitely
+(see the discussion of (\ref{Beispiel-Iteration-Adjektive}) on page~\pageref{Beispiel-Iteration-Adjektive}). Arguments, on the other hand, cannot be realized
+more than once:
+\ea[*]{
+The man the boy sleeps.
+}
+\z
+
+If the entity carrying out the sleeping action has already been mentioned, then it is not possible to have another noun phrase which refers to
+a sleeping individual. If one wants to express the fact that more than one individual is sleeping, this must be done by means of coordination as in (\mex{1}):
+\ea
+The man and the boy are sleeping.
+\z
+One should note that the criteria for identifying adjuncts proposed in (\ref{adj-kriterien}) is not sufficient, since there are also syntactic arguments,
+which do not fill semantic roles (\eg \emph{es} `it' in (\ref{Beispiel-es-regnet}) and \emph{sich} (\refl)
+in (\ref{Beispiel-erholt-sich})) or are optional (\emph{pizza} in (\mex{1})).
+\ea
+Tony is eating (pizza).
+\z
+
+\noindent
+Heads normally determine the syntactic properties of their arguments in a relatively fixed way.
+A verb is responsible for the case\is{case} which its arguments bear.
+\eal
+\ex[]{
+\gll Er gedenkt des Opfers.\\
+	 he remembers the.\gen{} victim.\gen{}\\
+\glt `He remembers the victim.'
+}
+\ex[*]{
+\gll Er gedenkt dem Opfer.\\
+	 he remembers the.\dat{} victim\\
+}
+\ex[]{
+\gll Er hilft dem Opfer.\\
+	 he helps the.\dat{} victim\\
+\glt `He helps the victim.'
+}
+\ex[*]{
+\gll Er hilft des Opfers.\\
+	 he helps the.\gen{} victim.\gen{}\\
+}
+\zl
+The verb \emph{governs}\is{government} the case\is{case} of its arguments.
+
+The preposition and the case of the noun phrase in the prepositional phrase are both determined by the verb:\footnote{
+  For similar examples, see \citew[\page 78]{Eisenberg94a}.
+}
+
+
+
+\eal
+\ex[]{
+\gll Er denkt an seine Modelleisenbahn.\\
+	 he thinks on his.\acc{} model.railway\\
+\glt `He is thinking of his model railway.'
+}
+\ex[\#]{
+\gll Er denkt an seiner Modelleisenbahn.\\
+	 He thinks on his.\dat{} model.railway\\
+}
+\ex[]{
+\gll Er hängt an seiner Modelleisenbahn.\\
+	 He hangs on his.\dat{} model.railway\\
+\glt `He clings to his model railway.'
+}
+\ex[*]{
+\gll Er hängt an seine Modelleisenbahn.\\
+	 he hangs on his.\acc{} model.railway\\
+}
+\zl
+The case of noun phrases in modifying prepositional phrases, on the other hand, depends on their meaning. In German, directional prepositional phrases
+normally require a noun phrase bearing accusative case (\mex{1}a), whereas local PPs (denoting a
+fixed location) appear in the dative case (\mex{1}b):
+\eal
+\ex
+\gll Er geht in die Schule / auf den Weihnachtsmarkt / unter die Brücke.\\
+	 he goes in the.\acc{} school {} on the.\acc{} Christmas.market {} under the.\acc{} bridge\\
+\glt `He is going to school/to the Christmas market/under the bridge.'
+\ex 
+\gll Er schläft in der Schule / auf dem Weihnachtsmarkt / unter der Brücke.\\
+	 he sleeps in the.\dat{} school {} on the.\dat{} Christmas.market {} under the.\dat{} bridge\\
+\glt `He is sleeping at school/at the Christmas market/under the bridge.'
+\zl
+
+%{
+%\interfootnotelinepenalty=10
+An interesting case is the verb \emph{sich befinden} `to be located', which expresses the location of something. This cannot occur without
+some information about the location pertaining to the verb:
+\ea[*]{
+\gll Wir befinden uns.\\
+     we  are.located \textsc{refl}\\
+}
+\z
+The exact form of this information is not fixed -- neither the syntactic category nor the
+preposition inside of prepositional phrases is restricted:
+\ea
+\gll Wir befinden uns hier / unter der Brücke / neben dem Eingang / im Bett.\\
+	 we are \textsc{refl} here {} under the bridge {} next.to the entrance {} in bed\\
+\glt `We are here/under the bridge/next to the entrance/in bed.'
+\z
+Local modifiers such as \emph{hier} `here' or \emph{unter der Brücke} `under the bridge' are analyzed with regard to
+other verbs (\eg \emph{schlafen} `sleep') as adjuncts. For verbs such as \emph{sich befinden} `to be (located)', we will most likely
+have to assume that information about location forms an obligatory syntactic argument of the verb.
+%
+% Sollte das je verwendet werden, bitte noch mal durchsehen. Anmerkungen im PDF berücksichtigen. 25.09.2015
+%
+%% \footnote{
+%% 	The verb \emph{wohnen} `to live' is also discussed in a similar context. The prepositional phrase in (i.b) is assumed to form
+%% 	part of the valence of the verb (See \citew[Chapter~2]{Steinitz69a}, \citew[\page127]{HS73a}, \citew[\page99]{Engel94}, 
+%% \citew*[\page119]{Kaufmann95a}, \citew[\page 21]{Abraham2005a}).
+%% Simple sentences with \emph{wohnen} `to live' without information about a location or situation
+%% are mostly deviant.
+%%
+%% \eal
+%% \ex[?]{
+%% \gll Er wohnt.\\
+%% 	 he lives\\
+%% \glt `He lives.'
+%% }
+%% \ex[]{
+%% \gll Er wohnt in Bremen.\\
+%% 	 he lives in Bremen\\
+%% \glt `He lives in Bremen.'
+%% }
+%% \ex[]{
+%% \gll Er wohnt allein.\\
+%% 	 he lives alone\\
+%% \glt `He lives alone.'
+%% }
+%% \zl
+%% As (ii) shows, it is not possible in general to rule out cases of \emph{wohnen} without information about location: 
+%%  \eal
+%%  \ex 
+%% 	\gll Das Landgericht Bad Kreuznach wies die Vermieterklage als unbegründet zurück, die Mieterfamilie kann wohnen bleiben. (Mieterzeitung 6/2001, p.\,14)\\
+%% 		 the state.court Bad Kreuznach rejected the landlord.lawsuit as unfounded back the renting.family can living stay\\
+%% 	\glt `The state court of Bad Kreuznach rejected the landlord's lawsuit as unfounded and the family renting the property can carry on living (there).'
+%%   \ex 
+%% 	\gll Die Bevölkerungszahl explodiert. Damit immer mehr Menschen wohnen können, wächst Hongkong, die Stadt, und nimmt sich ihr Terrain ohne zu fragen.  (taz, 31.07.2002, p.\,25)\\
+%%              the population exploded So.that always more people live can grows Hongkong the city and takes \textsc{refl} her terrain without to ask\\
+%% 	\glt `The total population has exploded. In order for more people to be able to live (there), the city of Hongkong has been growing and simply occupying more terrain without asking.'
+%%   \ex 
+%% 	\gll Selbst wenn die Hochschulen genug Studienplätze für alle schaffen, müssen die Studenten auch wohnen und essen. (taz, 16.02.2011, p.\,7)\\
+%% 		 even if the universities enough study.places for all create must the students also live and eat\\
+%% 	\glt `Even if universities can manage to create enough places for everyone, the students still need to finance food and lodgings.'
+%%   \ex 
+%% 		\gll Wohnst Du noch, oder lebst Du schon?\\
+%% 			 Live you still or live you already\\
+%% 		\glt `Are you just living somewhere, or are you at home?' %(IKEA-Werbung, Anfang
+%%                                 %2003)
+%%  (strassen|feger, Obdachlosenzeitung Berlin, 01/2008, p.\,3)
+%%   \ex 
+%% 		\gll Wer wohnt, verbraucht Energie -- zumindest normalerweise.\\
+%% 			 who lives uses energy {} at.least normally\\
+%% 		\glt `Everyone who lives (somewhere), uses energy -- at least that is normally
+%%                 true.'  (taz, berlin, 15.12.2009, p.\,23)
+%%         \zl
+%% If we do not want to completely rule out sentences without a modifier, then the preposition in (i.b)
+%% would be an optional modifier which is still somehow part of the valence of the verb. This does not
+%% seem to make sense. We should therefore view \emph{wohnen} as an intransitive verb.	
+%
+%% (i.a) should also be deviant since this particular expression is not very informative (see also
+%% \citew[\page 28, 38--40]{Welke88a-u} on this point), since a
+%% person normally lives \emph{somewhere} (even if it is, regrettably, for some under a bridge).  In
+%% (ii.a) it is explicit that the family lives in a rented property. In this case, the location does not have
+%% to be repeated as an explicit argument of \emph{wohnen}. It is only the question of whether the
+%% family can continue to live there or not that is relevant in (ii.a). Similarly, it is the fact of
+%% living somewhere in general and not the exact place which is important in (ii.b).
+%
+%% See \citew{GA2001a} for more on modifiers which are obligatory in certain contexts due to pragmatic\is{pragmatics} reasons.%
+%}
+%}
+
+The verb selects a phrase with information about location, but does not place any syntactic restrictions on its type. This specification
+of location behaves semantically like the other adjuncts we have seen previously. If I just consider the semantic aspects of the combination
+of a head and adjunct, then I also refer to the adjunct as a \emph{modifier}.\is{modifier}\footnote{
+  See Section~\ref{sec-Adverbiale} for more on the grammatical function of adverbials\is{adverbial}. The term adverbial is normally used
+  in conjunction with verbs. \emph{modifier} is a more general term, which normally includes attributive adjectives.%
+}
+Arguments specifying location with verbs such as \emph{sich befinden} `to be located' are also subsumed under the term \emph{modifier}.
+Modifiers are normally adjuncts, and therefore optional\is{optionality}, whereas in the case of \emph{sich befinden} they seem to
+be (obligatory) arguments.
+
+In conclusion, we can say that constituents that are required to occur with a certain head are arguments of that head. Furthermore,
+constituents which fulfil a semantic role with regard to the head are also arguments. These kinds of arguments can, however, sometimes
+be optional.
+
+Arguments are normally divided into subjects\is{subject} and complements\is{complement}.\footnote{
+  In some schools the term complement is understood to include the subject, that is, the term
+  complement is equivalent to the term argument (see for instance \citealp[\page
+    342]{Gross2003a}). Some researchers treat some subjects, \eg those of finite verbs, as
+  complements (\citealp{Pollard90a}; \citealp[\page 376]{Eisenberg94b}).
+} Not all heads
+require a subject (see \citealp[Section~3.2]{MuellerLehrbuch1}). The number of arguments of a head can therefore
+also correspond to the number of complements of a head.
+\is{argument|)}\is{adjunct|)}\is{valence|)}
+
+\section{Grammatical functions}
+\label{Abschnitt-GF}
+
+In some theories, grammatical functions such as subject and object form part of the formal description
+of language (see Chapter~\ref{Kapitel-LFG} on Lexical Functional Grammar, for example). This is not the case for the majority of the
+theories discussed here, but these terms are used for the informal description of certain phenomena.
+For this reason, I will briefly discuss them in what follows.
+
+
+\subsection{Subjects}
+\label{Abschnitt-Subjekt}
+
+Although\is{subject|(} I assume that the reader has a clear intuition about what a subject is, it is by no means a trivial matter to arrive at a definition of
+the word \emph{subject} which can be used cross-linguistically.\LATER{\citew{Keenan76b-u}}
+For German, \citet{Reis82} suggested the following syntactic properties as definitional for subjects:
+\begin{itemize}
+\item agreement\is{agreement} of the finite verb with it
+\item nominative case\is{case!nominative} in non-copular clauses
+\item omitted in infinitival clauses (control\is{control})
+\item optional in imperatives\is{imperative}
+\end{itemize}
+I have already discussed agreement in conjunction with the examples in
+(\ref{Beispiel-mit-Kongruenz}). \citet{Reis82} argues that the second bullet point is a
+suitable criterion for German. She formulates a restriction to non-copular clause because there
+can be more than one nominative argument in sentences with predicate nominals such as (\mex{1}):
+\eal
+\ex
+\gll Er ist ein Lügner.\\
+     he.\nom{} ist a liar.\nom{}\\
+\glt `He is a liar.'
+\ex 
+\gll Er wurde ein Lügner genannt.\\
+     he.\nom{} was a liar.\nom{} called\\
+\glt `He was called a liar.'
+\zl
+Following this criterion, arguments in the dative case such as \emph{den Männern} `the men' cannot be classed as subjects in German:
+\eal
+\ex 
+\gll Er hilft den Männern.\\
+	 he helps the.\dat{} men.\dat{}\\
+\glt `He is helping the men.'
+\ex
+\label{bsp-den-maennern-wurde-geholfen}
+\gll Den Männern wurde geholfen.\\
+	 the.\dat{} men.\dat{} were.3SG helped\\
+\glt `The men were helped.'
+\zl
+Following the other criteria, datives should also not be classed as subjects -- as \citet{Reis82} has shown.
+In (\mex{0}b), \emph{wurde}, which is the 3rd person singular form, does not agree with \emph{den Männern}. The
+third of the aforementioned criteria deals with infinitive constructions such as those in (\mex{1}):
+\eal
+\ex[]{
+\gll Klaus behauptet, den Männern zu helfen.\\
+	 Klaus claims the.\dat{} men.\dat{} to help\\
+\glt `Klaus claims to be helping the men.'
+}
+\ex[]{
+\gll Klaus behauptet, dass er den Männern hilft.\\
+	 Klaus claims that he the.\dat{} men.\dat{} helps\\
+\glt `Klaus claims that he is helping the men.'
+}
+\ex[*]{
+\gll Die Männer behaupten, geholfen zu werden.\\
+	 the men claim helped to become\\
+\glt Intended: `The men are claiming to be helped.'
+}
+\ex[*]{
+\gll Die Männer behaupten, elegant getanzt zu werden.\\
+	 the men claim elegantly danced to become\\
+\glt Intended: `The men claim that there is elegant dancing.'
+}
+\zl
+% Martin findet, dass man d rausschmeißen sollte.
+%
+In the first sentence, an argument of the verb \emph{helfen} `to help' has been omitted. If one wishes to express it, then one would have to use
+the subordinate clause beginning with \emph{dass} `that' as in (\mex{0}b). Examples (\mex{0}c,d) show that infinitives which do not require a nominative argument cannot be embedded
+under verbs such as \emph{behaupten} `to claim'. If the dative noun phrase \emph{den Männern} `the
+men' were the subject in (\ref{bsp-den-maennern-wurde-geholfen}), we would expect the control
+construction (\mex{0}c) to be well"=formed. This is, however, not the case. Instead of (\mex{0}c), it is necessary to use (\mex{1}):
+\ea
+\gll Die Männer behaupten, dass ihnen geholfen wird.\\
+	 the men.\nom{} claim that them.\dat{} helped becomes\\
+\glt `The men claim that they are being helped.'
+\z
+%
+In the same way, imperatives are not possible with verbs that do not require a nominative. (\mex{1}) shows some examples from \citet[\page 186]{Reis82}.
+\eal
+\ex[]{
+\gll Fürchte dich nicht!\\
+	 be.scared \textsc{refl} not\\
+\glt `Don't be scared!'
+}
+\ex[*]{
+\gll Graue nicht!\\
+     dread not\\
+\glt `Don't dread it!'
+}
+\ex[]{
+\gll Werd einmal unterstützt und \ldots\\
+     be once supported and\\
+\glt `Let someone support you for once and \ldots'
+}
+\ex[*]{
+\gll Werd einmal geholfen und \ldots\\
+     be once helped and\\
+\glt `Let someone help you and \ldots'
+}
+\zl
+The verb \emph{sich fürchten} `to be scared' in (\mex{0}a) obligatorily requires a nominative
+argument as its subject (\mex{1}a). The similar verb \emph{grauen} `to dread' in (\mex{0}b)
+takes a dative argument (\mex{1}b).
+\eal
+\ex
+\gll Ich fürchte mich vor Spinnen.\\
+	 I.\nom{} be.scared \textsc{refl} before spiders\\
+\glt `I am scared of spiders.'
+\ex 
+\gll Mir graut vor Spinnen.\\
+	 me.\dat{} scares before spiders\\
+\glt `I am dreading spiders.'
+\zl
+
+\noindent
+Interestingly, dative arguments in Icelandic\il{Icelandic} behave differently. \citet{ZMT85a} discuss various
+characteristics of subjects in Icelandic and show that it makes sense to describe dative arguments as subjects in passive 
+sentences even if the finite verb does not agree with them (Section~3.1) or they do not bear nominative case. An example of this
+are infinitive constructions with an omitted dative argument (p.\,457):
+\eal
+\ex 
+\gll Ég vonast til að verða hjálpað.\\
+     I hope for to be helped\\
+\glt `I hope that I will be helped.'
+\ex
+\gll Að vera hjálpað í prófinu er óleyfilegt.\\
+     to be helped on the.exam is not.allowed\\
+\glt `It is not allowed for one to be helped during the exam.'
+\zl
+
+\noindent
+In a number of grammars, clausal arguments such as those in (\mex{1}) are classed as subjects as they can be replaced
+by a noun phrase in the nominative (\mex{2}) (see \eg \citealp[\page 63, 289]{Eisenberg2004a}).
+\eal
+\ex
+\gll Dass er schon um sieben kommen wollte, stimmt nicht.\\
+	 that he already at seven come wanted is.true not\\
+\glt `It's not true that he wanted to come as soon as seven.'
+\ex 
+\gll Dass er Maria geheiratet hat, gefällt mir.\\
+	 that he Maria married has pleases me\\
+\glt `I'm glad that he married Maria.'
+\zl
+\eal
+\ex
+\gll Das stimmt nicht.\\
+	 that is.true not\\
+\glt `That isn't true.'
+\ex 
+\gll Das gefällt mir.\\
+	 that pleases me\\
+\glt `I like that.'
+\zl
+%% We cannot take the inflection of the finite verb as evidence of subjecthood: the verb in (\mex{-1})
+%% is in 3rd person singular
+%% and this form is also used when there is no subject present:
+%% \ea
+%% \gll dass gelacht wurde\\
+%% 	 that laughed was\\
+%% \glt `that there was laughing'
+%% \z
+%% The \emph{dass}"=clauses in (\mex{-2}) could also be objects and the entire sentence a subjectless construction.
+%%
+%% It is not possible to form imperatives, but this does not necessarily tell us anything about the subjecthood of the clausal argument since imperatives
+%% are aimed at an animate addressee or a machine, whereas clausal arguments refer to situations.
+%%
+%%
+%% \citet[\page 285]{Eisenberg94a} offers the following examples, which supposedly show that sentences can take the place of subjects in a subordinate
+%% infinitival clause:
+%% \eal
+%% %\ex Daß er alt wird, trägt dazu bei, ihn unsicher zu machen.
+%% % Das Beispiel ist falsch, weil auch andere Faktoren dazu beisteuern, dass er unsicher wird.
+%% \ex
+%% \gll Daß du zu Hause bleibst, hilft nicht, die Startbahn zu verhindern.\\
+%% 	 that you at home stay helps not the runway to prevent\\
+%% \glt `The fact that your staying at home won't help to prevent the (building of) the runway.'
+%% \ex 
+%% \gll Daß du sprichst, verdient erwähnt zu werden.\\
+%% 	 that you speak deserves mentioned to become\\
+%% \glt `The fact that you're speaking deserves to be mentioned.'
+%% \zl
+%% The infinitives in (\mex{0}) correspond to the sentences with the finite verb in (\mex{1}):
+%% \eal
+%% %\ex Daß er alt wird, macht ihn unsicher.
+%% \ex 
+%% \gll Daß du zu Hause bleibst, verhindert die Startbahn.\\
+%% 	 that you at home stay prevents the runway\\
+%% \glt `The fact that you're staying at home, prevents the runway.'
+%% \ex\label{Beispiel-dass-du-sprichst} 
+%% \gll Daß du sprichst, wird erwähnt.\\
+%% 	 that you speak becomes mentioned\\
+%% \glt `The fact that you're speaking is being mentioned.'
+%% \zl
+%% Things are not that simple, however, as it is possible to use the demonstrative pronoun \emph{das} in place of the 
+%% \emph{dass}"=clauses in (\mex{0}). If we assume that the unexpressed subject of an infinitive corresponds to a pronoun which
+%% refers to an argument in the matrix clause, then the subject of the infinitive in (\mex{-1}) should correspond to a pronoun
+%% such as \emph{das} and therefore be nominal \citep[\page 194]{Reis82}.\todostefan{Martin versteht
+%%   das Argument nicht}
+%% We have seen that, for German, we can equate subjects with non-predicative nominatives. As was shown in the discussion of the Icelandic
+%% data, this is not appropriate for all languages.
+
+It should be noted that there are different opinion on the question of whether clausal arguments should be treated as subjects or
+not. As recent publications show, there is still some discussion in Lexical Function
+Grammar\indexlfg (see Chapter~\ref{Kapitel-LFG}) \citep*{DL2000a-u,Berman2003a-u,Berman2007a-u,AMM2005a-u,Forst2006a-u}. 
+\is{subject|)}   
+
+If we can be clear about what we want to view as a subject, then the definition of object is no longer difficult: objects are all other
+arguments whose form is directly determined by a given head. As well as clausal objects, German has genitive, dative, accusative and prepositional
+objects:
+
+\exewidth{(235)}
+\eal
+\ex 
+\gll Sie gedenken des Mannes.\\
+	 they remember the.\gen{} man.\gen{}\\
+\glt `They remember the man.'
+\ex 
+\gll Sie helfen dem Mann.\\
+	 they help the.\dat{} man.\dat{}\\
+\glt `They are helping the man.'
+\ex 
+\gll Sie kennen den Mann.\\
+	 they know the.\acc{} man.\acc{}\\
+\glt `They know the man.'
+\ex 
+\gll Sie denken an den Mann.\\
+	 they think on the man\\
+\glt `They are thinking of the man.'
+\zl
+As well as defining objects by their case, it is commonplace to talk of \emph{direct objects}\is{object!direct} and \emph{indirect objects}\is{object!indirect}.
+The direct object gets its name from the fact that -- unlike the indirect object -- the referent of a direct object is directly affected by the action denoted by the
+verb.
+%\todostefan{Martin: Originally, this referred to a lack of preposition (in French); maybe
+%  nowadays, this new association is found} 
+With ditransitives such as the German \emph{geben} `to give', the accusative object is the direct object and the dative is the indirect object.
+\ea
+\gll dass er dem Mann den Aufsatz gibt\\
+	 that he.\nom{} the.\dat{} man.\dat{} the.\acc{} essay.\acc{} gives\\
+\glt `that he gives the man the essay'
+\z
+For trivalent verbs (verbs taking three arguments), we see that the verb can take either an object in the genitive case\is{genitive} (\mex{1}a) or, for verbs with a direct object in the accusative, 
+a second accusative object\is{case!accusative} (\mex{1}b):
+\eal
+\ex 
+\gll dass er den Mann des Mordes bezichtigte\\
+	 that he the.\acc{} man.\acc{} the.\gen{} murder.\gen{} accused\\
+\glt `that he accused the man of murder'
+\ex 
+\gll dass er den Mann den Vers lehrte\\
+	 that he the.\acc{} man.\acc{} the.\acc{} verse.\acc{} taught\\
+\glt `that he taught the man the verse'
+\zl
+These kinds of objects are sometimes also referred to as indirect objects.
+%\todostefan{Martin: Really? better: oblique objects}
+
+Normally, only those objects which are promoted to subject in passives with \emph{werden} `to be' are classed as
+direct objects. This is important for theories such as LFG\indexlfg (see Chapter~\ref{Kapitel-LFG}) since
+passivization is defined with reference to grammatical function. With two-place verbal predicates, the dative 
+is not normally classed as a direct object \citep{Cook2006a-u}. 
+\ea
+\gll dass er dem Mann hilft\\
+     that he the.\dat{} man.\dat{} helps\\
+\glt `that he helps the man'
+\z
+In many theories, grammatical function does not form a primitive component of the theory, but rather corresponds to positions
+in a tree structure. The direct object in German is therefore the object which is first combined
+with the verb in a configuration that is assumed to be the underlying structure of German sentences. The
+indirect object is the second object to be combined with the verb. On this view, the dative object of \emph{helfen} `to help'
+would have to be viewed as a direct object.
+
+In the following, I will simply refer to the case of objects and avoid using the terms direct object\is{object!direct} and indirect object\is{object!indirect}.
+
+In the same way as with subjects, we consider whether there are object clauses which are
+equivalent to a certain case and can fill the respective grammatical function of a direct or indirect object. If we assume that 
+\emph{dass du sprichst} `that you are speaking' in (\ref{Beispiel-dass-du-sprichst}) is a subject,
+then the subordinate clause must be a direct object in (\mex{1}b):
+\eal
+\ex\label{Beispiel-dass-du-sprichst} 
+\gll Daß du sprichst, wird erwähnt.\\
+     that you speak becomes mentioned\\
+\glt `The fact that you're speaking is being mentioned.'
+\ex
+\gll Er erwähnt, dass du sprichst.\\
+	 he mentioned that you speak\\
+\glt `He mentioned that you are speaking.'
+\zl
+In this case, we cannot really view the subordinate clause as the accusative object since it does not bear case. However, we can replace the sentence with an accusative-marked
+noun phrase:
+\ea
+\gll Er erwähnt diesen Sachverhalt.\\
+	 he mentions this.\acc{} matter\\
+\glt `He mentions this matter.'
+\z
+%Wäre nicht "er erwähnte..." besser?
+If we want to avoid this discussion, we can simply call these arguments clausal objects.
+
+
+\subsection{The adverbial}
+\label{sec-Adverbiale}
+
+Adverbials\is{adverbial|(} differ semantically from subjects and objects. They tell us something
+about the conditions under which an action or process takes place, or the way in which a certain
+state persists. In the majority of cases, adverbials are adjuncts, but there are -- as we have
+already seen -- a number of heads which also require adverbials. Examples of these are verbs such as
+\emph{to be located} or \emph{to make one's way}.  For \emph{to be located}, it is necessary to
+specify a location and for \emph{to proceed to} a direction is needed. These kinds of adverbials
+are therefore regarded as arguments of the verb.
+
+The term \emph{adverbial} comes from the fact that adverbials are often adverbs. This is not the only possibility, however. Adjectives, participles, prepositional phrases, 
+noun phrases and even sentences can be adverbials:
+
+\eal
+\ex 
+\gll Er arbeitet sorgfältig.\\
+	 he works carefully\\
+\ex 
+\gll Er arbeitet vergleichend.\\
+	 he works comparatively\\
+\glt `He does comparative work.'
+\ex 
+\gll Er arbeitet in der Universität.\\
+	 he works in the university\\
+\glt `He works at the university.'
+\ex 
+\gll Er arbeitet den ganzen Tag.\\
+     he works the whole day.\acc\\
+\glt `He works all day.'
+\ex 
+\gll Er arbeitet, weil es ihm Spaß macht.\\
+	 he works because it him.\dat{} fun makes\\
+\glt `He works because he enjoys it.'
+\zl
+
+\noindent
+Although the noun phrase in (\mex{0}d) bears accusative case\is{case!accusative}, it is not an accusative object. \emph{den ganzen Tag} `the whole day' is a so-called temporal accusative.
+The occurrence of accusative in this case has to do with the syntactic and semantic function of the noun phrase\is{case!semantic}, it is not determined by the verb. These kinds of accusatives
+can occur with a variety of verbs, even with verbs that do not normally require an accusative object: 
+
+\eal
+\ex 
+\gll Er schläft den ganzen Tag.\\
+     he sleeps the whole day\\
+\glt `He sleeps the whole day.'
+\ex 
+\gll Er liest den ganzen Tag diesen schwierigen Aufsatz.\\
+	 he reads the.\acc{} whole.\acc{} day this.\acc{} difficult.\acc{} essay\\
+\glt `He spends the whole day reading this difficult essay.'
+\ex 
+\gll Er gibt den Armen den ganzen Tag Suppe.\\
+	 he gives the.\dat{} poor.\dat{} the.\acc{} whole.\acc{} day soup\\
+\glt `He spends the whole day giving soup to the poor.'
+\zl
+
+The case of adverbials does not change under passivization:
+\eal
+\ex[]{
+\gll weil den ganzen Tag gearbeitet wurde\\
+	 because the.\acc{} whole.\acc{} day worked was\\
+\glt `because someone worked all day'
+}
+\ex[*]{
+\gll weil der ganze Tag gearbeitet wurde\\
+	 because the.\nom{} whole.\nom{} day worked was\\
+}
+\zl
+\is{adverbial|)}
+
+\subsection{Predicatives}
+
+Adjectives\is{adjective!predicative}\is{adjective!depictive} like those in (\mex{1}a,b) as well as noun phrases such as \emph{ein Lügner} `a liar' in (\mex{1}c)
+are counted as predicatives\is{predicative|(}. 
+\eal
+\ex 
+\gll Klaus ist \emph{klug}.\\
+	 Klaus is clever\\
+\ex 
+\gll Er isst den Fisch \emph{roh}.\\
+	 he eats the fish raw\\
+%\ex Er fährt das Auto kaputt.
+\ex 
+\gll Er ist \emph{ein} \emph{Lügner}.\\
+     he is a liar\\
+\zl
+In the copula construction in (\mex{0}a,c), the adjective \emph{klug} `clever' and the noun phrase
+\emph{ein Lügner} `a liar' is an argument of the copula \emph{sein} `to be' and the depictive adjective in (\mex{0}b)
+is an adjunct to \emph{isst} `eats'.
+
+For predicative\label{page-Kasuskongruenz} noun phrases, case is not determined by the head but rather by some other element.\footnote{
+	There is some dialectal variation with regard to copula constructions: in standard German, the case of the noun phrase with \emph{sein} `to be'
+	is always nominative and does not change when embedded under \emph{lassen} `to let'. According to \citet*[{\S}\,1259]{Duden95-Authors}, in Switzerland the
+	accusative form is common which one finds in examples such as (ii.a).
+	\eal
+\ex 
+\gll Ich bin dein Tanzpartner.\\
+     I am your.\nom{} dancing.partner\\
+\ex 
+\gll Der wüste Kerl ist ihr Komplize.\\
+     the wild  guy  is  her.\nom{} accomplice\\
+\ex 
+\gll Laß den wüsten Kerl [\ldots] meinetwegen ihr Komplize sein.\\
+     let the.\acc{} wild.\acc{} guy {} for.all.I.care her.\nom{} accomplice be\\
+\glt `Let's assume that the wild guy is her accomplice, for all I care.'  \citep*[{\S}\,6925]{Duden66-Authors}
+%\ex Laß mich dein treuer Herold sein.\label{bsp-lass-mich}
+\ex 
+\gll Baby, laß mich dein Tanzpartner sein.\\
+     baby let me.\acc{} your.\nom{} dancing.partner be\\
+\glt `Baby, let me be your dancing partner!'  (Funny van Dannen, Benno-Ohnesorg-Theater, Berlin, Volksbühne, 11.10.1995)
+\zl
+
+        \eal
+        \ex[]{
+        \gll Er lässt den lieben Gott `n frommen Mann sein.\\
+	     he lets the.\acc{} dear.\acc{} god a pious.\acc{} man be\\
+        \glt `He is completely lighthearted/unconcerned.'
+        }
+        \ex[*]{
+        \gll Er lässt den lieben Gott `n frommer Mann sein.\\
+	     he lets the.\acc{} dear.\acc{} god a pious.\nom{} man be\\
+        }
+        \zllast
+}
+For example, the accusative in (\mex{1}a) becomes nominative under passivization (\mex{1}b):
+\eal
+\ex 
+\gll Sie nannte ihn einen Lügner.\\
+	 she called him.\acc{} a.\acc{} liar\\
+\glt `She called him a liar.'
+\ex 
+\gll Er wurde ein Lügner genannt.\\
+	 he.\nom{} was a.\nom{} liar called\\
+\glt `He was called a liar.'
+\zl
+Only \emph{ihn} `him' can be described as an object in (\mex{0}a). In (\mex{0}b), \emph{ihn} becomes the subject and therefore 
+bears nominative case. \emph{einen Lügner} `a liar' refers to \emph{ihn} `him' in (\mex{0}a) and to \emph{er}
+`he' in (\mex{0}b) and agrees in case with the noun over which it predicates.
+This is also referred to as \emph{agreement case}\is{case!agreement}.
+
+For other predicative constructions see \citew[§~1206]{Duden2005-Authors} and \citew[Chapter~4, Chapter~5]{Mueller2002b}
+and \citew{Mueller2008a}.
+\is{predicative|)}
+
+
+\subsection{Valence classes}
+
+It is possible to divide verbs into subclasses depending on how many arguments they require and on the properties these arguments are required to have. The
+classic division describes all verbs which have an object which becomes the subject under passivization as \emph{transitive}\is{verb!transitive}. Examples of this
+are verbs such as \emph{love} or \emph{beat}. Intransitive verbs\is{verb!intransitive}, on the other hand, are verbs which have either no object, or one that does not become the subject in passive
+sentences. Examples of this type of verb are \emph{schlafen} `to sleep', \emph{helfen} `to help', \emph{gedenken} `to remember'. A subclass of transitive verbs are 
+ditransitive verbs\is{verb!ditransitive} such as \emph{geben} `to give' and \emph{zeigen} `to show'.
+
+Unfortunately, this terminology is not always used consistently. Sometimes, two-place verbs with
+dative and genitive objects are also classed as transitive verbs. In this naming tradition, the
+terms intransitive, transitive and ditransitive are synonymous with one-place, two-place and
+three-place verbs.
+
+The fact that this terminological confusion can lead to misunderstandings between even established linguistics is shown by Culicover and Jackendoff's \citeyearpar[\page 59]{CJ2005a} criticism 
+of Chomsky. Chomsky states that the combination of the English auxiliary \emph{be} + verb with passive morphology can only be used for transitive verbs. Culicover and Jackendoff claim that this cannot
+be true because there are transitive verbs such as \emph{weigh} and \emph{cost}, which cannot undergo passivization:
+\eal
+\ex[]{
+This book weighs ten pounds / costs ten dollars.
+}
+\ex[*]{
+Ten pounds are weighed / ten dollar are cost by this book.
+}
+\zl
+
+Culicover and Jackendoff use \emph{transitive} in the sense of a verb requiring two arguments. If we only view those verbs whose object becomes the subject of
+a passive clause as transitive, then \emph{weigh} and \emph{cost} no longer count as transitive verbs and Culicover and Jackendoff's criticism no longer holds.\footnote{
+Their cricitism also turns out to be unjust even if one views transitives as being two-place predicates. If one claims that a verb must take at least two arguments to be able
+to undergo passivization, one is not necessarily claiming that all verbs taking two or more arguments have to allow passivization. The property of taking multiple arguments is
+a condition which must be fulfilled, but it is by no means the only one.
+}
+That noun phrases such as those in (\mex{0}) are no ordinary objects can also be seen by the fact they cannot be replaced by pronouns. It is therefore not possible to ascertain
+which case they bear since case distinctions are only realized on pronouns in English.
+If we translate the English examples into German, we find accusative objects\is{case!accusative}:
+\eal
+\ex 
+\gll Das Buch kostete einen Dollar.\\
+	 the book costs one.\acc{} dollar\\
+\glt `The book costs one dollar.'
+\ex 
+\gll Das Buch wiegt einen Zentner.\\
+	 the book weighs one.\acc{} centner\\
+\zl
+
+% Die verwenden das auch im Sinne von zwei/dreistellig.
+% Es ist übrigens auch so, dass Verben, die ein Genitiv- bzw.\ Dativobjekt verlangen, in anderen
+% Sprachen durchaus zu den transitiven Verben gezählt werden. Das ist \zb für das Isländische
+% sinnvoll, denn im Isländischen können diese Objekte zum Subjekt werden \citep[\page 445]{ZMT85a}. Wird die einzelsprachlich
+% motivierte Terminologie unreflektiert auf andere Sprachen übertragen, so entsteht terminologisches Chaos.
+
+
+In the following, I will use \emph{transitive} in the former sense, that is for verbs with an object that becomes the subject when passivized (\eg with
+\emph{werden} in German). When I talk about the class of verbs that includes \emph{helfen} `to help', which takes a nominative and dative argument, and \emph{schlagen} `to hit', 
+which takes a nominative and accusative argument, I will use the term two"=place or bivalent verbs.
+
+\section{A topological model of the German clause}
+\label{sec-topo}
+\label{Abschnitt-Toplogie}
+
+\is{topology|(}%
+
+In this section, I introduce the concept of so-called \emph{topological fields} (\emph{topologische Felder}). These will be used frequently in later chapters to
+discuss different parts of the German clause. One can find further, more detailed introductions to topology in \citew{Reis80a},
+\citew{Hoehle86} and \citew{Askedal86}. \citew{Woellstein2010a-u} is a
+textbook about the topological field model.
+
+
+
+
+\subsection{The position of the verb}
+
+It is common practice to divide German sentences into three types pertaining to the position of the finite verb:
+\is{verb!-first}\is{verb!-second}\is{verb!-final}
+\begin{itemize}
+\item verb-final clauses
+\item verb-first (initial) clauses
+\item verb-second (V2) clauses
+\end{itemize}
+
+The following examples illustrate these possibilities:
+\eal
+\ex 
+\gll (Peter hat erzählt,) dass er das Eis gegessen \emph{hat}.\\
+     \hspaceThis{(}Peter has told that he the ice.cream eaten has\\
+\glt `Peter said that he has eaten the ice cream.'
+\ex 
+\gll \emph{Hat} Peter das Eis gegessen?\\
+	 has Peter the ice.cream eaten\\
+\glt `Has Peter eaten the ice cream?'
+\ex 
+\gll Peter \emph{hat} das Eis gegessen.\\
+	 Peter has the ice.cream eaten\\
+\glt `Peter has eaten the ice cream.'
+\zl
+
+
+\subsection{The sentence bracket, prefield, middle field and postfield}
+
+We observe that the finite verb \emph{hat} `has' is only adjacent to its complement
+\emph{gegessen} `eaten' in (\mex{0}a). In (\mex{0}b) and (\mex{0}c), the verb and its complement
+are separated, that is discontinuous.\is{constituent!discontinuous} We can then divide the German clause into various sub-parts on the basis of these distinctions.
+In (\mex{0}b) and (\mex{0}c), the verb and the auxiliary form a ``bracket'' around the clause. For this reason, we call this the \emph{sentence bracket} (\emph{Satzklammer})\is{sentence bracket}.
+The finite verbs in (\mex{0}b) and (\mex{0}c) form the left bracket and the non-finite verbs form the right bracket. Clauses with verb-final order are usually introduced by conjunctions such as 
+\emph{weil} `because', \emph{dass} `that' and \emph{ob} `whether'. These conjunctions occupy the same position as the finite verb in verb-initial or verb-final clauses. We therefore
+also assume that these conjunctions form the left bracket in these cases. Using the notion of the sentence bracket, it is possible to divide the structure of the German clause into the 
+prefield (\emph{Vorfeld}), middle field (\emph{Mittelfeld}) and postfield (\emph{Nachfeld}). The
+prefield describes everything preceding the left sentence bracket, the middle field is the section
+between the left and right bracket and the postfield describes the position after the right bracket.
+Table~\vref{bsp-topo} gives some examples of this.\todostefan{glossing in table?}
+%
+%STEFAN: Wie machen wir das hier? Wir können nicht in der Tabelle glossen. Eine Möglichkeit ist zuerst ein Beispiel mit Glossen anzugeben, das unten in der Tabelle vorkommt.
+%\newpage
+\is{prefield|see{field}}%
+\is{field!pre-}%
+\is{middle field|see{field}}%
+\is{field!middle-}%
+\is{postfield|see{field}}%
+\is{field!post-}%
+\begin{table}
+\begin{sideways}
+%{\tiny
+\begin{tabular}{lllll}
+Prefield & Left bracket & Middle field                           & Right bracket & Postfield                   \\\lsptoprule
+Karl    & schläft.                                                                                            \\
+Karl    & hat           &                                        & geschlafen.                                 \\
+Karl    & erkennt       & Maria.                                                                               \\
+Karl    & färbt         & den Mantel                             & um             & den Maria kennt.           \\
+Karl    & hat           & Maria                                  & erkannt.                                    \\
+Karl    & hat           & Maria als sie aus dem Zug stieg sofort & erkannt.                                    \\
+Karl    & hat           & Maria sofort                           & erkannt        & als sie aus dem Zug stieg. \\
+Karl    & hat           & Maria zu erkennen                      & behauptet.                                  \\
+Karl    & hat           &                                        & behauptet      & Maria zu erkennen.         \\ \\
+        & Schläft       & Karl?                                                                                \\
+        & Schlaf!                                                                                              \\
+        & Iss           & jetzt dein Eis                         & auf!                                        \\
+        & Hat           & er doch das ganze Eis alleine          & gegessen.                                   \\  \\
+        & weil          & er das ganze Eis alleine               & gegessen hat   & ohne mit der Wimper zu zucken.    \\
+        & weil          & er das ganze Eis alleine               & essen können will   & ohne gestört zu werden.    \\
+wer     &               & das ganze Eis alleine                  & gegessen hat \\
+der     &               & das ganze Eis alleine                  & gegessen hat \\
+mit wem &               & du                                     & geredet hast\\
+mit dem &               & du                                     & geredet hast\\\lspbottomrule
+\end{tabular}
+\end{sideways}
+\caption{\label{bsp-topo}Examples of how topological fields can be occupied}
+\end{table}
+The right bracket can contain multiple verbs and is often referred to as a \emph{verbal complex} or \emph{verb cluster}.
+The assignment of question words and relative pronouns to the prefield will be discussed in the following section.
+
+\subsection{Assigning elements to fields}
+
+As the examples in Table~\ref{bsp-topo} show, it is not required that all fields are always occupied. Even the left bracket can be empty if one opts to leave out
+the copula\is{copula} \emph{sein} `to be' such as in the examples in (\mex{1}):
+\eal
+\ex
+
+{}[\ldots]
+\gll egal,      was  noch  passiert, der Norddeutsche Rundfunk             steht  schon   jetzt als Gewinner fest.\footnotemark\\
+     regardless what still happens the north.German broadcasting.company stands already now as winner \particle\\
+\footnotetext{
+        Spiegel, 12/1999, p.\,258.
+}
+\glt `Regardless of what still may happen, the North German broadcasting company is already the winner.'
+\ex 
+\gll Interessant, zu erwähnen, daß ihre Seele völlig    in Ordnung war.\footnotemark\\
+	 interesting to mention that her soul completely in order was\\
+\footnotetext{
+        Michail Bulgakow, \emph{Der Meister und Margarita}. München: Deutscher Taschenbuch Verlag. 1997, p.\,422.
+      }
+\glt `It is interesting to note that her soul was entirely fine.'
+\ex
+\gll Ein Treppenwitz der    Musikgeschichte, daß die Kollegen   von Rammstein vor    fünf Jahren noch im      Vorprogramm   von Sandow spielten.\footnotemark\\
+	 an afterwit of.the history.of.music that the colleagues of Rammstein before five years still in.the pre.programme of Sandow played\\
+\footnotetext{
+         Flüstern \& Schweigen, taz, 12.07.1999, p.\,14. %war das englisch? 07.12.1999, p.\,14
+}
+\glt `One of the little ironies of music history is that five years ago their colleagues of Rammstein
+were still an opening act for Sandow.'
+\zl
+The examples in (\mex{0}) correspond to those with the copula in (\mex{1}):
+\eal
+\ex 
+\gll Egal ist, was noch passiert, \ldots\\
+     regardless is	 what still happens \\
+\glt `It is not important what still may happen \ldots'
+\ex
+\gll Interessant ist zu erwähnen, dass ihre Seele völlig in Ordnung war.\\
+	 interesting is to mention that her soul completely in order was\\
+\glt `It is interesting to note that her soul was completely fine.'
+\ex 
+\gll Ein Treppenwitz der Musikgeschichte ist, dass die Kollegen von Rammstein vor fünf Jahren noch im Vorprogramm von Sandow spielten.\\
+	 an afterwit of.the music.history is that the colleagues of Rammstein before five years still in pre.programme of Sandow played\\
+\glt `It is one of the little ironies of music history that five years ago their colleagues of Rammstein were still an opening act for Sandow.'
+\zl
+When fields are empty, it is sometimes not clear which fields are occupied by certain constituents. For the examples in (\mex{-1}), one would have to
+insert the copula to be able to ascertain that a single constituent is in the prefield and, furthermore, which fields are occupied by the other constituents.
+
+
+In the following example taken from \citet[\page13]{Paul1919a}, inserting the copula obtains a different result: 
+\eal
+\ex 
+\gll Niemand da?\\
+	 nobody there\\
+\ex 
+\gll Ist niemand da?\\
+	 is nobody there\\
+\glt `Is nobody there?'
+\zl
+Here we are dealing with a question and \emph{niemand} `nobody' in (\mex{0}a) should therefore not be analyzed as in the prefield but rather the middle field.
+
+In (\mex{1}), there are elements in the prefield, the left bracket and the middle field. The right
+bracket is empty.\footnote{
+  The sentence requires emphasis on \emph{der} `the'. \emph{der Frau, die er kennt} `the woman' is
+  contrasted with another woman or other women.
+}
+\ea
+\gll Er        gibt  der Frau        das Buch,       die er kennt.\\
+     he.\mas{} gives the woman(\fem) the book.(\neu) that.\fem{} he knows\\
+\glt `He gives the book to the woman that he knows.'
+\z 
+How should we analyze relative clauses such as
+\emph{die er kennt} `that he knows'? Do they form part of the middle field or the postfield?
+This can be tested using a test discussed in \citep[\page72]{Bech55a} (\emph{Rangprobe}\is{Rangprobe}):
+first, we modify the example in (\mex{0}) so that it is in the perfect. Since non-finite verb forms occupy the right bracket, we
+can clearly see the border between the middle field and postfield. The examples in (\mex{1}) show that the relative clause cannot
+occur in the middle field unless it is part of a complex constituent with the head noun \emph{Frau} `woman'.
+\eal
+\ex[]{
+\gll Er hat [der Frau] das Buch gegeben, [die er kennt].\\
+     he has \spacebr{}the woman the book given \spacebr{}that he knows\\
+\glt `He has given the book to the woman that he knows.'
+}
+\ex[*]{
+\gll Er hat [der Frau] das Buch, [die er kennt,] gegeben.\\
+     he has \spacebr{}the woman the book \spacebr{}that he knows given\\
+}
+\ex[]{
+\gll Er hat [der Frau, die er kennt,] das Buch gegeben.\\
+     he has \spacebr{}the woman that he knows the book given\\
+}
+\zl
+
+\noindent
+This test does not help if the relative clause is realized together with its head noun at the end of the sentence as in (\mex{1}):
+\ea
+\gll Er gibt das Buch der Frau, die er kennt.\\
+      he gives the book the woman that he knows\\
+\glt `He gives the book to the woman that he knows.'
+\z
+If we put the example in (\mex{0}) in the perfect, then we observe that the lexical verb can occur before or after the relative clause:
+\eal
+\ex 
+\gll Er hat das Buch [der Frau] gegeben, [die er kennt].\\
+     he has the book \spacebr{}the woman given \spacebr{}that he knows\\
+\glt `He has given the book to the woman he knows.'
+\ex 
+\gll Er hat das Buch [der Frau, die er kennt,] gegeben.\\
+	 he has the book \spacebr{}the woman that he knows given\\
+\zl
+In (\mex{0}a), the relative clause has been extraposed. In (\mex{0}b) it forms part of the noun phrase \emph{der Frau, die er kennt} `the woman that he knows'
+and therefore occurs inside the NP in the middle field. It is therefore not possible to rely on this test for (\mex{-1}). We assume that the relative clause in (\mex{-1})
+also belongs to the NP since this is the most simple structure. If the relative clause were in the
+postfield, we would have to assume that it has undergone extraposition from its position inside
+the NP, that is, we would have to assume the NP"=structure anyway and then extraposition in addition.%\todoandrew{after
+% this hat eine positionale Bedeutung, d.h. man versteht vielleicht nicht, dass es ein zusätzlicher
+%  Analyseaufwand ist, der hier problematisch ist}
+%
+%% Die Einordnung von Interrogativphrasen und Relativphrasen wird in der theoretischen Literatur
+%% verschieden gehandhabt. Theoretisch gibt es drei Möglichkeiten für die Zuordnung von \emph{wer}
+%% in (\mex{1}) zu einem Stellungsfeld: \emph{wer} könnte im Vorfeld, in der linken Satzklammer oder
+%% im Mittelfeld stehen.
+%% \ea
+%% Ich möchte wissen, wer das ganze Eis alleine gegessen hat.
+%% \z
+%% Die letzte Möglichkeit ist die unplausibelste, da Interrogativ- und Relativphrasen aus anderen
+%% Teilsätzen vorangestellt worden sein können, was keine Eigenschaft von Mittelfeldelementen ist.
+%% Mittelfeldelemente gehören (von einigen wenigen Ausnahmen abgesehen, die nur unter eingeschränkten
+%% Bedingungen möglich sind) immer zu den Verben in den Satzklammern. Wie die Beispiele in (\mex{1})
+%% zeigen, kann die Phrase, die das Relativpronomen enthält, durchaus zu einem Verb gehören,
+%% dessen Projektion sich im Nachfeld befindet. Die Zugehörigkeit der Relativphrase ist durch
+%% ein \_$_i$ gekennzeichnet.
+%% \eal
+%% \label{bsp-richter-top}
+%% \ex eine Tat, [\sub{VP} die begangen zu haben]$_i$ Hans sich weigert [\sub{VP} dem Richter \_$_i$ zu gestehen]\footnote{
+%%         \citew[\page48a]{Haider85c}.
+%% }\label{bsp-richter}
+%% \ex ein Buch, [\sub{VP} das zu lesen]$_i$ der Professor glaubt [\sub{VP} den Studenten \_$_i$ empfehlen zu müssen]\footnote{
+%%         \citew[Section~7.3.2]{Grewendorf88}.
+%% }
+%% \zl
+
+We have a similar problem with interrogative and relative pronouns. Depending on the author, these are assumed to be in the
+left bracket (\citealp{Kathol2001a}; \citealp[\page 403]{Eisenberg2004a}) or the prefield
+(\citealp[§1345]{Duden2005-Authors}; \citealp[\page 29--30, Section~3.1]{Woellstein2010a-u}) or even in the
+middle field \citep[\page 75]{AH2004a-u}. In Standard German interrogative or relative
+clauses,\is{interrogative clause|(}\is{relative clause|(} both fields are never simultaneously
+occupied. For this reason, it is not immediately clear to which field an element
+belongs. Nevertheless, we can draw parallels to main clauses: the pronouns in  interrogative and
+relative clauses can be contained inside complex phrases: 
+\eal
+\ex 
+\gll der Mann,         [mit dem] du gesprochen hast\\
+     the man \spacebr{}with whom you spoken have\\
+\glt `the man you spoke to'	 
+\ex 
+\gll Ich möchte wissen, [mit wem] du gesprochen hast.\\
+     I want.to know \spacebr{}with whom you spoken have\\
+\glt `I want to know who you spoke to.'
+\zl
+Normally, only individual words (conjunctions or verbs) can occupy the left bracket,\footnote{
+ Coordination is an exception to this\is{coordination}:
+\ea
+\gll Er [kennt und liebt] diese Schallplatte.\\
+     he \spacebr{}knows and loves this record\\
+\glt `He knows and loves this record.'
+\z
+} 
+whereas words and phrases can appear in the prefield. It therefore makes sense to assume that interrogative and relative pronouns (and phrases containing them)
+also occur in this position. 
+
+Furthermore it can be observed that the dependency between the elements in the \vf of declarative
+clauses and the remaining sentence is of the same kind as the dependency between the phrase that
+contains the relative pronoun and the remaining sentence. For instance, \emph{über dieses Thema}
+`about this topic' in (\mex{1}a)
+depends on \emph{Vortrag} `talk', which is deeply embedded in the sentence:
+\emph{einen Vortrag} `a talk' is an argument of \emph{zu halten} `to hold', which in turn is an
+argument of \emph{gebeten} `asked'.
+\eal
+\ex 
+\gll Über dieses Thema habe ich ihn gebeten, einen Vortrag zu halten.\\
+     about this topic  have I   him asked    a     talk    to hold\\
+\glt `I asked him to give a talk about this topic.'
+\ex 
+\gll das Thema, über das ich ihn gebeten habe, einen Vortrag zu halten\\
+     the topic  about which I him asked have a talk to hold\\
+\glt `the topic about which I asked him to give a talk'
+\zl
+The situation is similar in (\mex{0}b): the relative phrase \emph{über das} `about which' is a dependent of
+\emph{Vortrag} `talk' which is realized far away from it. Thus, if the relative phrase is assigned to the \vf, it is
+possible to say that such nonlocal frontings always target the \vf.
+
+Finally, the Duden grammar \citep[§1347]{Duden2005-Authors} provides the following examples from non-standard German
+(mainly southern dialects):
+\eal
+\ex 
+\gll Kommt drauf an, mit wem dass sie zu tun haben.\\
+     comes there.upon \partic with whom that you to do have\\
+\glt `It depends on whom you are dealing with.'
+%\ex
+\zl
+\eal
+\ex 
+\gll Lotti, die wo eine tolle Sekretärin ist, hat ein paar merkwürdige Herren empfangen.\\
+     Lotti  who where a great secretary is has a few strange gentlemen welcomed\\
+\glt `Lotti, who is a great secretary, welcomed a few strange gentlemen.'
+\ex 
+\gll Du bist der beste Sänger, den wo ich kenn.\\
+     you are the best singer   who where I know\\
+\glt `You are the best singer whom I know.'
+\zl
+These examples of interrogative and relative clauses show that the left sentence bracket is filled
+with a conjunction (\emph{dass} `that' or \emph{wo} `where' in the respective dialects). So if one wants to have a model that treats Standard German and the
+dialectal forms uniformly, it is reasonable to assume that the relative phrases and interrogative phrases
+are located in the \vf. 
+
+\subsection{Recursion}
+\label{sec-topo-rekursion}
+
+As already noted by \citet[\page82]{Reis80a}, when occupied by a complex constituent, the prefield can be subdivided into 
+further fields including a postfield, for example. The constituents \emph{für lange lange Zeit} `for a long, long
+time' in (\mex{1}b) and  \emph{daß du kommst} `that you are coming' in (\mex{1}d) are inside the prefield but occur
+to the right of the right bracket \emph{verschüttet} `buried' / \emph{gewußt} `knew', that is they are in the postfield
+of the prefield.
+\eal
+\label{Beispiel-topologisch-komplexes-Vorfeld}
+\ex
+\gll Die Möglichkeit, etwas zu verändern, ist damit verschüttet für lange lange Zeit.\\
+	 the possibility something to change is there.with buried for long long time\\
+\glt `The possibility to change something will now be gone for a long, long time.'	  
+\ex 
+\gll {}[Verschüttet für lange lange Zeit] ist damit die Möglichkeit,      etwas zu ver"-ändern.\\
+      \spacebr{}buried for long long time ist there.with the possibility  something to change\\
+\ex 
+\gll Wir haben schon seit langem gewußt, daß du kommst.\\
+     we have \particle{} since long known that you come\\
+\glt `We have known for a while that you are coming.'
+\ex 
+\gll {}[Gewußt, daß du kommst,] haben wir schon seit langem.\\
+	 \spacebr{}known that you come have we \particle{} since long\\
+\zl
+
+
+\noindent
+Like constituents in the prefield, elements in the middle field and postfield can also have an internal structure and be divided into subfields accordingly.
+For example, \emph{daß} `that' is the left bracket of the subordinate clause \emph{daß du kommst} in (\mex{0}c), whereas \emph{du} `you' occupies the middle
+field and \emph{kommst} `come' the right bracket.%
+
+% \subsection{Weitere Felder}
+
+% Für Sätze mit Linksversetzung wie in (\mex{1}a) nimmt \citet{Hoehle86-ohne-anfuehrungszeichen} noch ein eigenes
+% Stellungsfeld vor dem Vorfeld an:
+% \ea
+% Der Montag, der passt mir gut.
+% \z
+% Für koordinierende Partikeln wie \emph{und}, \emph{oder}, \emph{aber}, \emph{sondern},
+% (\emph{weder}-) \emph{noch} und nicht-koordinierende beiordnende Partikeln wie \emph{denn} und
+% \emph{weil} mit Verbzeitsatz nimmt er ein weiteres Stellungsfeld an.
+% \eal
+% \ex Aber würde den jemand den Hund füttern morgen abend?
+% \ex Denn dass es regnet, damit rechnet keiner.
+% \zl
+
+
+% Zum Glück wird die Terminologie für die topologischen Felder inzwischen weitestgehend einheitlich
+% verwendet. Unterschiede gibt es jedoch bei Sätzen wie (\mex{1}). Während die Dudengrammatik die
+% satzeinleitende Konjunktion zum Vorfeld bzw.\ zur linken Satzklammer rechnet, nimmt Höhle82 ein
+% eigenes Stellungsfeld dafür an.
+
+
+\is{topology|)}\is{recursion|)}
+
+
+
+\section*{Comprehension questions}
+
+
+\begin{enumerate}
+\item How does the head of a phrase differ from non"=heads?
+\item What is the head in the examples in (\mex{1})?
+      \eal
+      \ex he
+      \ex Go!
+      \ex quick
+      \zl
+\item How do arguments differ from adjuncts?
+\item Identify the heads, arguments and adjuncts in the following sentence (\mex{1}) and in the subparts of the sentence:
+  \ea
+	\gll Er hilft den kleinen Kindern in der Schule.\\
+		 he helps the small children in the school\\
+	\glt `He helps small children at school.' 
+  \z
+
+\item How can we define the terms prefield (\emph{Vorfeld}), middle field (\emph{Mittelfeld}), postfield (\emph{Nachfeld}) and the left
+and right sentence brackets (\emph{Satzklammer})?
+\end{enumerate}
+
+
+\section*{Exercises}
+
+\begin{enumerate}
+\item Identify the sentence brackets, prefield, middle field and postfield in the following sentences. Do the same for the embedded clauses! 
+\eal
+\ex 
+\gll Karl isst.\\
+	 Karl eats\\
+\glt `Karl is eating.'
+\ex 
+\gll Der Mann liebt eine Frau, den Peter kennt.\\
+     the man  loves a woman who Peter knows\\
+\glt `The man who Peter knows loves a woman.'
+\ex 
+\gll Der Mann liebt eine Frau, die Peter kennt.\\
+	 the man loves a woman that Peter knows\\
+\glt `The man loves a woman who Peter knows.'
+%\ex Die Studenten behaupten, nur wegen der Hitze einzuschlafen.
+\ex 
+\gll Die Studenten haben behauptet, nur wegen der Hitze einzuschlafen.\\
+	 the students have claimed only because.of the heat to.fall.asleep\\
+\glt `The students claimed that they were only falling asleep because of the heat.'
+\ex 
+\gll Dass Peter nicht kommt, ärgert Klaus.\\
+	 that Peter not comes annoys Klaus\\
+\glt `(The fact) that Peter isn't coming annoys Klaus.'
+\ex 
+\gll Einen Mann küssen, der ihr nicht gefällt, würde sie nie.\\
+	 a man kiss that her not pleases would she never\\
+\glt `She would never kiss a man she doesn't like.'
+\zl
+\end{enumerate}
+
+
+\section*{Further reading}
+
+\citet{Reis80a} gives reasons for why field theory is important for the description of the position of constituents in German.
+
+\citet{Hoehle86-ohne-anfuehrungszeichen} discusses fields to the left of the prefield, which are needed for left"=dislocation structures
+such as with \emph{der Mittwoch} in (\mex{1}), \emph{aber} in (\mex{2}a) and \emph{denn} in (\mex{2}b):
+\ea
+\gll Der Mittwoch, der passt mir gut.\\
+	 the Wednesday that fits me good\\
+\glt `Wednesday, that suits me fine.'
+\z
+\eal
+\ex 
+\gll Aber würde denn jemand den Hund füttern morgen abend?\\
+	 but would \particle{} anybody the dog feed tomorrow evening\\
+\glt `But would anyone feed the dog tomorrow evening?'
+\ex 
+\gll Denn dass es regnet, damit rechnet keiner.\\
+     because that it rains there.with reckons nobody\\
+\glt `Because no-one expects that it will rain.'
+\zl
+Höhle also discusses the historical development of field theory.
+
+%      <!-- Local IspellDict: en_US-w_accents -->

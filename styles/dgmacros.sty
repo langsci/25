@@ -1,0 +1,26 @@
+\makeatletter
+
+% macros for displaying FDs
+
+\def\fd#1{\setlength{\baselineskip}{0pt}
+  \small
+     \hbox{#1}}
+% removed 25 Jan 90  \hfill}
+\def\fdx#1{\setlength{\baselineskip}{0pt}\vcenter{#1}}
+\def\fdand#1{\(\left[\fdx{#1}\right]\)}
+\def\fdor#1{\(\left\{\fdx{#1}\right\}\)}
+\def\fdset#1{\(\left\{\hbox{#1}\right\}\)}
+\def\fdstack#1#2{\(\vcenter{\hbox{#1}{\vskip 2ex}\hbox{#2}}\)}
+\def\feat#1#2{\vskip .4ex\hbox{\hspace{.2em}#1\hspace{1em}#2\hspace{.2em}}\vskip .8ex}
+%\def\feat#1#2{\vskip 2pt\hbox{#1 #2}\vskip 4pt}
+\def\nfeat#1#2{\vskip .4ex\hbox{#1 $\not=$ #2}\vskip .8ex}
+\def\etc{\hbox to 1in{\hss\vdots\hss}}
+
+\def\dskip{\vskip 8pt plus 2pt minus 3pt}
+
+\def\line#1#2(#3){\@stepcounter{equation}
+  \let\@currentlabel=\theequation \label{#3}
+  \hbox to \hsize{\hbox to #1in{(\theequation) \hfil}
+       \hskip 0pt minus 0.4in $#2$\hfil}}
+
+\makeatother

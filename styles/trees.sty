@@ -1,0 +1,182 @@
+
+% Tree definitions to go with pstricks. 
+% Requires package pstricks.
+
+\include{pst-tree}
+
+\def\tree{\@ifnextchar[{\@tree}{\@tree[top]}}
+\def\@tree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+  \pstree[levelsep=*2.8ex,nodesep=3pt,treesep=.5cm]{\TR[name=#1]{\small #2}}{#3}}
+
+\def\avmtree{\@ifnextchar[{\@avmtree}{\@avmtree[top]}}
+\def\@avmtree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+  \pstree[levelsep=*2.8ex,nodesep=3pt,treesep=.5cm]{\TR[name=#1]{\small 
+     \begin{tabular}{c}#2\end{tabular}}}{#3}}
+
+\def\dottree{\@ifnextchar[{\@dottree}{\@dottree[top]}}
+\def\@dottree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linestyle=dashed,linewidth=.5pt]}
+  \pstree[levelsep=*2.8ex,nodesep=3pt,treesep=.5cm]{\TR[name=#1]{\small #2}}{#3}}
+
+% Argument for blanktree is height of tree
+\def\blanktree{\@ifnextchar[{\@blanktree}{\@blanktree[2.8ex]}}
+\def\@blanktree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=0pt,linecolor=white]}
+  \pstree[levelsep=*#1,nodesep=3pt,treesep=.5cm]{\TR{\small #2}}{#3}}
+
+\def\talltree{\@ifnextchar[{\@talltree}{\@talltree[top]}}
+\def\@talltree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+  \pstree[levelsep=*3.5ex,nodesep=3pt,treesep=.5cm]{\TR[name=#1]{\small #2}}{#3}}
+
+\def\talltalltree{\@ifnextchar[{\@talltalltree}{\@talltalltree[top]}}
+\def\@talltalltree[#1]#2#3{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+  \pstree[levelsep=*4.5ex,nodesep=3pt,treesep=.5cm]{\TR[name=#1]{\small #2}}{#3}}
+
+\def\ctree{\@ifnextchar[{\@ctree}{\@ctree[top]}}
+\def\@ctree[#1]#2#3{%
+  \hbox{\begin{tabular}{@{}c@{}}{\@tree[{#1}]{\small #2}{#3}}\end{tabular}}}
+
+\def\ctalltree{\@ifnextchar[{\@ctalltree}{\@ctalltree[top]}}
+\def\@ctalltree[#1]#2#3{%
+  \hbox{\begin{tabular}{@{}c@{}}{\@talltree[{#1}]{\small #2}{#3}}\end{tabular}}}
+
+\def\nonodetree#1{%
+  \renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+  \hbox{\begin{tabular}{@{}c@{}}{%
+        \pstree[levelsep=*3.5ex,nodesepA=0pt,nodesepB=3pt,treesep=.5cm]{\Tp}{#1}}
+        \end{tabular}}}
+
+\def\le{\@ifnextchar[{\@le}{\@le[lex]}}
+\def\@le[#1]#2{\renewcommand\psedge{\ncdiag[arm=0,angleA=270,angleB=90,linewidth=.5pt]}
+               \TR[name={#1}]{#2}}
+
+\def\tri#1{\setbox1\hbox{#1}%
+           \pstree[levelsep=2ex,nodesep=3pt,treesep=.5cm]{%
+                   \Tfan[fansize=\wd1,linewidth=.5pt]}{\box1}}
+
+\newcounter{anglea}
+\newcounter{angleb}
+% Labeled loop (used for FSAs)
+\def\fsaloop{\@ifnextchar[{\@fsaloop}{\@fsaloop[15]}}
+\def\@fsaloop[#1]#2#3{%
+   \nccurve[nodesepA=0pt,nodesepB=1pt,ncurv=#1,angleA=100,angleB=80,linewidth=.5pt]{->}{#2}{#2}\naput[npos=.7,ref=l]{#3}}
+% Labeled loop with angle (used for FSAs)
+\def\afsaloop{\@ifnextchar[{\@afsaloop}{\@afsaloop[0]}}
+\def\@afsaloop[#1]{\@ifnextchar[{\@@afsaloop[#1]}{\@@afsaloop[#1][40]}}
+\def\@@afsaloop[#1][#2]#3#4{\setcounter{anglea}{#1}\addtocounter{anglea}{5}\relax%
+   \setcounter{angleb}{#1}\addtocounter{angleb}{-5}\relax%
+   \nccurve[nodesepA=0pt,nodesepB=1pt,ncurv=#2,angleA=\theanglea,angleB=\theangleb,linewidth=.5pt]{->}{#3}{#3}\nbput[npos=.7,ref=l]{#4}}
+% Labeled transition (used for FSAs)
+\def\fsatrans{\@ifnextchar[{\@fsatrans}{\@fsatrans[0]}}
+\def\@fsatrans[#1]#2{\@ifnextchar[{\@@fsatrans[#1]{#2}}{\@@fsatrans[#1]{#2}[180]}}
+\def\@@fsatrans[#1]#2[#3]#4{\@ifnextchar[{\@@@fsatrans[#1]{#2}[#3]{#4}}{\@@@fsatrans[#1]{#2}[#3]{#4}[.2em]}}
+\def\@@@fsatrans[#1]#2[#3]#4[#5]#6{%
+   \nccurve[nodesepA=2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}
+\Aput[#5]{#6}}
+
+
+% Right side to right side, with scalable arm.
+\def\rtor{\@ifnextchar[{\@rtor}{\@rtor[.15]}}
+\def\@rtor[#1]#2#3{%
+  \ncangles[angle=0,armA={#1},linearc=.15,nodesep=-2pt,linewidth=.5pt]{#2}{#3}}
+
+% Right side to right side, with scalable arm, tight fit on first node
+\def\tightrtor{\@ifnextchar[{\@tightrtor}{\@tightrtor[.15]}}
+\def\@tightrtor[#1]#2#3{%
+  \ncangles[angle=0,armA={#1},linearc=.15,nodesepA=-3pt,nodesepB=-2pt,linewidth=.5pt]{#2}{#3}}
+
+% Right side to right side, dotted line, with scalable arm.
+\def\rtord{\@ifnextchar[{\@rtor}{\@rtor[.15]}}
+\def\@rtord[#1]#2#3{%
+  \ncangles[linestyle=dashed,angle=0,armA={#1},linearc=.15,nodesep=-2pt,linewidth=.5pt]{#2}{#3}}
+
+% Left to left, directable entry points.
+\def\ltol{\@ifnextchar[{\@ltol}{\@ltol[0]}}
+\def\@ltol[#1]#2{\@ifnextchar[{\@@ntona[#1]{#2}}{\@@ntona[#1]{#2}[0]}}
+
+% Left to right, directable entry points.
+\def\ltor{\@ifnextchar[{\@ltor}{\@ltor[0]}}
+\def\@ltor[#1]#2{\@ifnextchar[{\@@ntona[#1]{#2}}{\@@ntona[#1]{#2}[180]}}
+
+% Right to left, directable entry points.
+\def\rtol{\@ifnextchar[{\@rtol}{\@rtol[180]}}
+\def\@rtol[#1]#2{\@ifnextchar[{\@@ntona[#1]{#2}}{\@@ntona[#1]{#2}[0]}}
+
+% Bottom of one node to bottom of another, scalable arm
+\def\btob{\@ifnextchar[{\@btob}{\@btob[.15]}}
+\def\@btob[#1]#2#3{%
+  \ncbar[arm={#1},angle=-90,nodesep=2pt,linewidth=.5pt]{#2}{#3}}
+
+% Top of one node to top of another, scalable arm
+\def\ttot{\@ifnextchar[{\@ttot}{\@ttot[.15]}}
+\def\@ttot[#1]#2#3{%
+  \ncbar[arm={#1},angle=90,nodesep=2pt,linewidth=.5pt]{#2}{#3}}
+
+% Node to node, with arrow.
+\def\ntona{\@ifnextchar[{\@ntona}{\@ntona[0]}}
+\def\@ntona[#1]#2{\@ifnextchar[{\@@ntona[#1]{#2}}{\@@ntona[#1]{#2}[0]}}
+\def\@@ntona[#1]#2[#3]#4{%
+   \nccurve[nodesepA=2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}
+
+% Node to node STRAIGHT line, with arrow.
+\def\ntonsa{\@ifnextchar[{\@ntonsa}{\@ntonsa[0]}}
+\def\@ntonsa[#1]#2{\@ifnextchar[{\@@ntonsa[#1]{#2}}{\@@ntonsa[#1]{#2}[0]}}
+\def\@@ntonsa[#1]#2[#3]#4{%
+   \ncline[nodesepA=2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}
+
+% Node to node, no arrow.
+\def\nton{\@ifnextchar[{\@nton}{\@nton[0]}}
+\def\@nton[#1]#2{\@ifnextchar[{\@@nton[#1]{#2}}{\@@nton[#1]{#2}[0]}}
+\def\@@nton[#1]#2[#3]#4{%
+   \nccurve[nodesepA=2pt,nodesepB=-1pt,angleA={#1},angleB={#3},linewidth=.5pt]{#2}{#4}}
+
+% Node to node, with arrow, tight fit at beginning of line.
+\def\tightntona{\@ifnextchar[{\@tightntona}{\@tightntona[0]}}
+\def\@tightntona[#1]#2{\@ifnextchar[{\@@tightntona[#1]{#2}}{\@@tightntona[#1]{#2}[0]}}
+\def\@@tightntona[#1]#2[#3]#4{%
+   \nccurve[nodesepA=-2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}
+
+% Node to node dotted line, with arrow, tight fit at beginning of line.
+\def\tightntonad{\@ifnextchar[{\@tightntonad}{\@tightntonad[0]}}
+\def\@tightntonad[#1]#2{\@ifnextchar[{\@@tightntonad[#1]{#2}}{\@@tightntonad[#1]{#2}[0]}}
+\def\@@tightntonad[#1]#2[#3]#4{%
+   \nccurve[linestyle=dashed,nodesepA=-2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}
+
+% Node to node dotted line, with arrow
+\def\ntonad{\@ifnextchar[{\@ntonad}{\@ntonad[0]}}
+\def\@ntonad[#1]#2{\@ifnextchar[{\@@ntonad[#1]{#2}}{\@@ntonad[#1]{#2}[0]}}
+\def\@@ntonad[#1]#2[#3]#4{%
+   \nccurve[linestyle=dashed,nodesepA=-1pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}
+
+% Node to node dotted line, no arrow
+\def\ntond{\@ifnextchar[{\@ntond}{\@ntond[0]}}
+\def\@ntond[#1]#2{\@ifnextchar[{\@@ntond[#1]{#2}}{\@@ntond[#1]{#2}[0]}}
+\def\@@ntond[#1]#2[#3]#4{%
+   \nccurve[linestyle=dashed,nodesepA=-1pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{#2}{#4}}
+
+% Node to node STRAIGHT dotted line, no arrow
+\def\ntonsd{\@ifnextchar[{\@ntonsd}{\@ntonsd[0]}}
+\def\@ntonsd[#1]#2{\@ifnextchar[{\@@ntonsd[#1]{#2}}{\@@ntonsd[#1]{#2}[0]}}
+\def\@@ntonsd[#1]#2[#3]#4{%
+   \ncline[linestyle=dashed,nodesepA=-1pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{#2}{#4}}
+
+% Node to node, no arrow, tight fit at beginning of line.
+\def\tightnton{\@ifnextchar[{\@tightnton}{\@tightnton[0]}}
+\def\@tightnton[#1]#2{\@ifnextchar[{\@@tightnton[#1]{#2}}{\@@tightnton[#1]{#2}[0]}}
+\def\@@tightnton[#1]#2[#3]#4{%
+   \nccurve[nodesepA=-2pt,nodesepB=-1pt,angleA={#1},angleB={#3},linewidth=.5pt]{#2}{#4}}
+
+% Node to node, two arrows, tight fit at beginning of line.
+\def\ntonaa{\@ifnextchar[{\@ntonaa}{\@ntonaa[0]}}
+\def\@ntonaa[#1]#2{\@ifnextchar[{\@@ntonaa[#1]{#2}}{\@@ntonaa[#1]{#2}[0]}}
+\def\@@ntonaa[#1]#2[#3]#4{%
+   \nccurve[nodesepA=2pt,nodesepB=0pt,angleA={#1},angleB={#3},linewidth=.5pt]{<->}{#2}{#4}}
+
+\def\ltord{\@ifnextchar[{\@ltord}{\@ltord[0]}}
+\def\@ltord[#1]#2{\@ifnextchar[{\@@ltord[#1]{#2}}{\@@ltord[#1]{#2}[180]}}
+\def\@@ltord[#1]#2[#3]#4{%
+   \nccurve[linestyle=dashed,nodesepA=2pt,nodesepB=1pt,angleA={#1},angleB={#3},linewidth=.5pt]{->}{#2}{#4}}

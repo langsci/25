@@ -1,0 +1,1113 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Generalized Phrase Structure Grammar}
+\label{Kapitel-GPSG}
+
+Generalized Phrase Structure Grammar (GPSG) was developed as an answer %alternative 
+to Transformational Grammar at the end of the 1970s. The book by \citet*{GKPS85a} is the main publication in
+this framework. Hans Uszkoreit has developed a largish GPSG fragment for German \citeyearpar{Uszkoreit87a}.
+Analyses in GPSG were so precise that it was possible to use them as the basis for computational implementations.
+The following is a possibly incomplete list of languages with implemented GPSG fragments:
+\begin{itemize}
+\item German \citep{Weisweber87a-u,WP92b,Naumann87a-u,Naumann88-u-gekauft,Volk88}
+\item English \citep*{Evans85a-u,PT85a-u,Phillips92a-u,GCB93a-u}
+\item French \citep*{EdSB96a}
+\item Persian \citep*{BSM2011a}
+\end{itemize}
+
+As was discussed in Section~\ref{Abschnitt-Transformationen}, \citet{Chomsky57a} argued that simple phrase structure
+grammars are not well-suited to describe relations between linguistic structures and claimed that one needs transformations to
+explain them. These assumptions remained unchallenged for two decades (with the exception of publications by \citew{Harman63a}
+and \citew{Freidin75a}) until alternative theories such as LFG and GPSG emerged, which addressed Chomsky's criticisms and developed non"=transformational explanations of phenomena for which there were previously only transformational analyses
+or simply none at all. The analysis of local reordering of arguments, passives and long"=distance dependencies are some of the most important phenomena
+that have been discussed in this framework. Following some introductory remarks on the representational format of GPSG in Section~\ref{sec-Representationsformat}, I will
+present the GPSG analyses of these phenomena in some more detail.
+
+\section{General remarks on the representational format}
+\label{sec-Representationsformat}
+
+This section has three parts. The general assumptions regarding features and the representation of
+complex categories is explained in Section~\ref{sec-complex-categories-gpsg}, the assumptions
+regarding the linearization of daughters in a phrase structure rule is explained in
+Section~\ref{GPSG-lokale-Umstellung}. Section~\ref{sec-metarules-gpsg} introduces metarules, Section~\ref{Sec-GPSG-Sem} deals with
+semantics, and Section~\ref{Abschnitt-Adjunkte-GPSG} with adjuncts.
+
+\subsection{Complex categories, the Head Feature Convention, and \xbar rules}
+\label{sec-complex-categories-gpsg}
+
+In Section~\ref{sec-PSG-Merkmale}, we augmented our phrase structure grammars with features. GPSG goes one step further and describes categories as sets of feature"=value pairs.
+The category in (\mex{1}a) can be represented as in (\mex{1}b):
+\eal
+\ex NP(3,sg,{nom})
+\ex \{ \textsc{cat} n, \textsc{bar} 2, \textsc{per} 3, \textsc{num} sg, \textsc{case} nom \} 
+\zl
+It is clear that (\mex{0}b) corresponds to (\mex{0}a). (\mex{0}a) differs from (\mex{0}b) with
+regard to the fact that the information about part of speech and the \xbar~level (in the symbol NP)
+are prominent, whereas in (\mex{0}b) these are treated just like the information about case,
+number or person. 
+
+Lexical entries have a feature \subcat.\is{valence}\is{subcategorization} The value is a number
+which says something about the kind of grammatical rules in which the word can be used. 
+(\mex{1}) shows examples for grammatical rules and lists some verbs which can occur in these rules.\footnote{
+The analyses discussed in the following are taken from \citew{Uszkoreit87a}.
+}
+\ea
+\label{gpsg-regeln}
+\begin{tabular}[t]{@{}l@{~$\to$~}ll@{}}
+V2  & H[5]                                    & (\emph{kommen} `come', \emph{schlafen} `sleep')\\
+V2  & H[6], N2[\textsc{case} acc]                & (\emph{kennen} `know', \emph{suchen} `search')\\
+V2  & H[7], N2[\textsc{case} dat]                & (\emph{helfen} `help', \emph{vertrauen} `trust')\\
+V2  & H[8], N2[\textsc{case} dat], N2[\textsc{case} acc]  & (\emph{geben} `give', \emph{zeigen} `show')\\
+V2  & H[9], V3[+dass]                         & (\emph{wissen} `know', \emph{glauben} `believe')\\
+\end{tabular}
+\z
+%
+These rules license VPs, that is, the combination of a verb with its complements, but not with its subject. The numbers following the category symbols (V or N) indicate the
+\xbar~projection level. For Uszkoreit, the maximum number of projections of a verbal projection is three
+rather than two as is often assumed.
+
+The H on the right side of the rule stands for \emph{head}. The \emph{Head Feature Convention}
+(HFC)\is{Head Feature Convention (HFC)} ensures that certain features
+of the mother node are also present on the node marked with H (for details see
+\citealp*[Section~5.4]{GKPS85a} and \citealp[67]{Uszkoreit87a}):
+\begin{principle-break}[Head Feature Convention]
+The mother node and the head daughter must bear the same head features unless indicated otherwise.
+\end{principle-break}
+%
+In (\mex{0}), examples for verbs which can be used in the rules are given in brackets. As with ordinary phrase structure grammars, one also requires
+corresponding lexical entries for verbs in GPSG. Two examples are provided in (\mex{1}):
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
+V[5, \textsc{vform} \emph{inf}]  & einzuschlafen\\
+V[6, \textsc{vform} \emph{inf}]  & aufzuessen\\
+\end{tabular}
+\z
+The first rule states that \emph{einzuschlafen} `to fall asleep' has a \subcat value of 5 and the second indicates that \emph{aufzuessen} `to finish eating'  has a
+\subcat value of 6. It follows, then, that \emph{einzuschlafen} can only be used in the first rule (\mex{-1}) and \emph{aufzuessen} can
+only be used in the second. Furthermore, (\mex{0}) contains information about the form of the verb
+(\emph{inf} stands for infinitives with \emph{zu} `to').
+
+If we analyze the sentence in (\mex{1}) with the second rule in (\mex{-1}) and the second rule in (\mex{0}), then we arrive at the structure in Figure~\vref{Abb-HFC}.
+\ea
+\gll Karl hat versucht, [den Kuchen aufzuessen].\\
+	Karl has tried \spacebr{}the cake to.eat.up\\
+\glt `Karl tried to finish eating the cake.'
+\z 
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[{V2[\vform \type{inf}]}
+  [N2 [den Kuchen;the cake,triangle] ]
+  [{V[6, \vform \type{inf}]} [aufzuessen;to.eat.up] ] ]
+\end{forest}
+}
+\caption{\label{Abb-HFC}Projection of head features in GPSG}
+\end{figure}%
+The rules in (\mex{-2}) say nothing about the order of the daughters which is why the verb (H[6]) can also be in final position. This aspect will be discussed
+in more detail in Section~\ref{GPSG-lokale-Umstellung}. With regard to the HFC, it is important to bear in mind that information about the infinitive verb form is also
+present on the mother node. Unlike simple phrase structure rules such as those discussed in Chapter~\ref{Kapitel-PSG}, this follows automatically from
+the Head Feature Convention in GPSG. In (\mex{-1}), the value of \vform is given and the HFC ensures that the corresponding information is represented
+on the mother node when the rules in (\ref{gpsg-regeln}) are applied. For the phrase in (\mex{0}),
+we arrive at the category V2[\textsc{vform} \emph{inf}] and this ensures that this phrase only occurs in the contexts it is supposed to:
+\eal
+\label{Beispiel-GPSG-Kopfeigenschaften}
+\ex[]{
+\gll [Den Kuchen aufzuessen] hat er nicht gewagt.\\
+	\spacebr{}the cake to.eat.up has he not dared\\
+\glt `He did not dare to finish eating the cake.'
+}
+\ex[*]{
+\gll [Den Kuchen aufzuessen] darf er nicht.\\
+\spacebr{}the cake to.eat.up be.allowed.to he not\\
+}
+\glt Intended: `He is not allowed to finish eating the cake.'
+\ex[*]{
+\gll [Den Kuchen aufessen] hat er nicht gewagt.\\
+	\spacebr{}the cake eat.up has he not dared\\
+\glt Intended: `He did not dare to finish eating the cake.'
+}
+\ex[]{
+\gll [Den Kuchen aufessen] darf er nicht.\\
+	\spacebr{}the cake eaten.up be.allowed.to he not\\
+\glt `He is not allowed to finish eating the cake.'
+}
+\zl
+\emph{gewagt} `dared' selects for a verb or verb phrase with an infinitive with \emph{zu} `to' but
+not a bare infinitive, while \emph{darf} `be allowed to' takes a bare infinitive.
+
+This works in an analogous way for noun phrases: there are rules for nouns which do not take an argument as well as for nouns with certain arguments. Examples of rules for 
+nouns which either require no argument or two PPs are given in (\mex{1}) \citep*[\page 127]{GKPS85a}:
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}ll@{}}
+N1 & H[30] & (\emph{Haus} `house', \emph{Blume} `flower')\\
+N1 & H[31], PP[\emph{mit}], PP[\emph{über}] & (\emph{Gespräch} `talk', \emph{Streit} `argument')\\
+\end{tabular}
+\z
+The rule for the combination of \nbar and a determiner is as follows:
+\ea
+N2 $\to$ Det, H1
+\z
+N2 stands for NP, that is, for a projection of a noun phrase on bar level two, whereas H1
+stands for a projection of the head daughter on the bar level one.
+The Head Feature Convention ensures that the head daughter is also a nominal projection, since all features on the head daughter apart from the \xbar~level 
+are identified with those of the whole NP. When analyzing (\mex{1}), the second rule in (\mex{-1}) licenses the \nbar \emph{Gesprächs mit Maria
+  über Klaus}. The fact that \emph{Gesprächs} `conversation' is in the genitive is represented in the lexical item of \emph{Gesprächs} and since \emph{Gesprächs}
+  is the head, it is also present at \nbar, following the Head Feature Convention.
+\ea
+\gll des Gespräch-s mit Maria über Klaus\\
+	 the.\gen{} conversation-\gen{} with Maria about Klaus\\
+\glt `the conversation with Maria about Klaus'
+\z
+For the combination of \nbar with the determiner, we apply the rule in (\mex{-1}). The category of
+the head determines the word class of the element on the left"=hand side of the rule, which is why
+the rule in (\mex{-1}) corresponds to the classical \xbar~rules that we encountered in (\ref{Regel-NP-Xbar}) on page~\pageref{Regel-NP-Xbar}. Since \emph{Gesprächs mit Maria über Klaus} is
+the head daughter, the information about the genitive of \nbar is also present at the NP node.
+
+\subsection{Local reordering}
+\label{GPSG-lokale-Umstellung}
+
+The first phenomenon to be discussed is local reordering of arguments. As was already discussed in
+Section~\ref{sec-GB-lokale-Umstellung}, arguments in the middle field can occur in an almost
+arbitrary order. (\mex{1}) gives some examples:
+\eal
+\label{bsp-GPSG-anordnung}
+\ex 
+\gll {}[weil] der Mann der Frau das Buch gibt\\
+     {}\spacebr{}because the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\glt `because the man gives the book to the woman'
+\ex 
+\gll {}[weil] der Mann das Buch der Frau gibt\\
+     {}\spacebr{}because the.\nom{} man the.\acc{} book the.\dat{} woman gives\\
+\ex 
+\gll {}[weil] das Buch der Mann der Frau gibt\\
+{}\spacebr{}because the.\acc{} book the.\nom{} man the.\dat{} woman gives\\
+\ex 
+\gll {}[weil] das Buch der Frau der Mann gibt\\
+{}\spacebr{}because the.\acc{} book the.\dat{} woman the.\nom{} man gives\\
+\ex 
+\gll {}[weil] der Frau der Mann das Buch gibt\\
+{}\spacebr{}because the.\dat{} woman the.\nom{} man the.\acc{} book gives\\
+\ex 
+\gll {}[weil] der Frau das Buch der Mann gibt\\
+{}\spacebr{}because the.\dat{} woman the.\acc{} book the.\nom{} man gives\\
+\zl
+
+\noindent
+In the phrase structure grammars in Chapter~\ref{Kapitel-PSG}, we used features to ensure that verbs occur with the correct number of arguments. The following rule in (\mex{1}) was
+used for the sentence in (\mex{0}a):
+\ea
+\begin{tabular}[t]{@{}l@{ }l@{ }l@{ }l@{ }l@{ }}
+S  & $\to$ NP[nom]& NP[dat] & NP[acc] & V\_nom\_dat\_acc\\
+\end{tabular}
+\z
+If one wishes to analyze the other orders in (\mex{-1}), then one requires an additional five rules, that is, six in total:
+\ea
+\label{Regeln-PSG-Abfolge}
+\begin{tabular}[t]{@{}l@{ }l@{ }l@{ }l@{ }l@{ }}
+S  & $\to$ NP[nom]& NP[dat] & NP[acc] & V\_nom\_dat\_acc\\
+S  & $\to$ NP[nom]& NP[acc] & NP[dat] & V\_nom\_dat\_acc\\
+S  & $\to$ NP[acc]& NP[nom] & NP[dat] & V\_nom\_dat\_acc\\
+S  & $\to$ NP[acc]& NP[dat] & NP[nom] & V\_nom\_dat\_acc\\
+S  & $\to$ NP[dat]& NP[nom] & NP[acc] & V\_nom\_dat\_acc\\
+S  & $\to$ NP[dat]& NP[acc] & NP[nom] & V\_nom\_dat\_acc\\
+\end{tabular}
+\z
+
+\noindent
+In addition, it is necessary to postulate another six rules for the orders with verb initial order:
+\ea
+\begin{tabular}[t]{@{}l@{ }l@{ }l@{ }l@{ }l}
+S  & $\to$ V\_nom\_dat\_acc NP[nom]& NP[dat] & NP[acc]\\
+S  & $\to$ V\_nom\_dat\_acc NP[nom]& NP[acc] & NP[dat]\\
+S  & $\to$ V\_nom\_dat\_acc NP[acc]& NP[nom] & NP[dat]\\
+S  & $\to$ V\_nom\_dat\_acc NP[acc]& NP[dat] & NP[nom]\\
+S  & $\to$ V\_nom\_dat\_acc NP[dat]& NP[nom] & NP[acc]\\
+S  & $\to$ V\_nom\_dat\_acc NP[dat]& NP[acc] & NP[nom]\\
+\end{tabular}
+\z
+
+\noindent
+Furthermore, one would also need parallel rules for transitive and intransitive verbs with all
+possible valences. Obviously, the commonalities of these rules and the generalizations regarding
+them are not captured. The point is that we have the same number of arguments, they can be
+realized in any order and the verb can be placed in initial or final position. As linguists, we find it
+desirable to capture this property of the German language and represent it beyond phrase structure 
+rules. In Transformational Grammar, the relationship between the orders is captured by means of movement: the Deep Structure corresponds
+to verb"=final order with a certain order of arguments and the surface order is derived by means of \movealpha. Since GPSG is a non"=transformational
+theory, this kind of explanation is not possible. Instead, GPSG imposes restrictions on \emph{immediate dominance}\is{dominance!immediate} (ID), which differ
+from those which refer to \emph{linear precedence}\is{linear precedence} (LP): rules such as (\mex{1}) are to be understood as dominance rules, which do not
+have anything to say about the order of the daughters \citep{Pullum82a}.
+\ea
+\begin{tabular}[t]{@{}l@{ }l}
+S  & $\to$ V, NP[nom], NP[acc], NP[dat]\\
+\end{tabular}
+\z
+The rule in (\mex{0}) simply states that S dominates all other nodes. Due to the abandonment of ordering restrictions for the right"=hand side of the rule, we
+only need one rule rather than twelve. 
+
+Nevertheless, without any kind of restrictions on the right"=hand side of the rule, there would be far too much freedom. For example, the following order would be
+permissible:
+\ea[*]{
+\label{bsp-der-frau-der-mann-gibt}
+\gll Der Frau der Mann gibt ein Buch.\\
+     the woman.\dat{} the.\nom{} man gives the.\acc{} book\\
+}
+\z
+Such orders are ruled out by so"=called \emph{Linear Precedence Rules}\is{Linear Precedence Rule} or LP"=rules\is{LP"=rule}. LP"=constraints are restrictions on
+local trees, that is, trees with a depth of one. It is, for example, possible to state something
+about the order of V, NP[nom], NP[acc] and NP[dat] in Figure~\vref{fig-gpsg-lokaler-Baum} using linearization
+rules.
+
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[S
+  [V]
+  [{NP[nom]}]
+  [{NP[acc]}]
+  [{NP[dat]}] ]
+\end{forest}}
+\caption{\label{fig-gpsg-lokaler-Baum}Example of a local tree}
+\end{figure}%
+
+\noindent
+The following linearization rules serve to exclude orders such as those in (\ref{bsp-der-frau-der-mann-gibt}):
+\ea
+\begin{tabular}[t]{@{}l@{~$<$~}l@{}}
+V[+\textsc{mc}]  & X\\
+X       & V[$-$\textsc{mc}]\\
+\end{tabular}
+\z
+\textsc{mc}\isfeat{mc} stands for \emph{main clause}. The LP"=rules ensure that in main clauses (+\textsc{mc}), the verb precedes all other constituents and follows them in subordinate clauses
+($-$\textsc{mc}). There is a restriction that says that all verbs with the \textsc{mc}"=value `+' also have to be (+\textsc{fin}). This will rule out infinitive forms in initial position.
+
+These LP rules do not permit orders with an occupied prefield or postfield in a local tree. This is intended. We will see how fronting can be accounted for in Section~\ref{Abschnitt-GPSG-Fernabhaengigkeiten}.
+\is{constituent order}
+
+\subsection{Metarules}
+\label{sec-metarules-gpsg}
+
+We\is{metarule|(} have previously encountered linearization rules for sentences with subjects,
+however our rules have the form in (\mex{1}), that is, they do not include subjects:
+\ea
+\label{gpsg-regel-dat-ditransitiv}
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
+V2  & H[7], N2[\textsc{case} dat]                \\
+V2  & H[8], N2[\textsc{case} dat], N2[\textsc{case} acc]  \\
+\end{tabular}
+\z
+These rules can be used to analyze the verb phrases \emph{dem Mann das Buch zu geben} `to give the man the
+book' and \emph{das Buch dem Mann zu geben} `to give the book to the man' as they appear in
+(\mex{1}), but we cannot analyze sentences like (\ref{bsp-GPSG-anordnung}), since the subject does
+not occur on the right"=hand side of the rules in (\mex{0}).
+\eal
+\ex 
+\gll Er verspricht, [dem Mann das Buch zu geben].\\
+     he promises    \spacebr{}the.\dat{} man the.\acc{} book to give\\
+\glt `He promises to give the man the book.'
+\ex 
+\gll Er verspricht, [das Buch dem Mann zu geben].\\
+	 he promises \spacebr{}the.\acc{} book the.\dat{} man to give\\
+\glt `He promises to give the book to the man.'
+\zl
+A rule with the format of (\mex{1}) does not make much sense for a GPSG analysis of German since it
+cannot derive all the orders in (\ref{bsp-GPSG-anordnung}) as the subject can occur between the elements of the VP as in (\ref{bsp-GPSG-anordnung}c).
+\ea
+S $\to$ N2 V2
+\z
+With the rule in (\mex{0}), it is possible to analyze (\ref{bsp-GPSG-anordnung}a) as in
+Figure~\vref{fig-gpsg-VP} and it would also be possible to analyze (\ref{bsp-GPSG-anordnung}b) with
+a different ordering of the NPs inside the VP. The remaining examples in (\ref{bsp-GPSG-anordnung})
+cannot be captured by the rule in (\mex{0}), however. 
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[S
+  [{N2[nom]} [der Mann;the man,triangle] ]
+  [V2
+    [{N2[dat]} [der Frau;the woman,triangle] ]
+    [{N2[acc]} [das Buch;the book,triangle] ] 
+    [V [gibt;gives] ] ] ]
+\end{forest}}
+\caption{\label{fig-gpsg-VP}VP analysis  for German (not appropriate in the GPSG framework)}
+\end{figure}%
+%
+This has to do with the fact that only elements in the same local tree, that is, elements which occur on the right"=hand side of a rule, can be reordered.
+While we can reorder the parts of the VP and thereby derive (\ref{bsp-GPSG-anordnung}b), it is not possible to place the subject at a lower position between
+the objects. Instead, a metarule can be used to analyze sentences where the subject occurs between other arguments of the verb. This rule relates phrase structure
+rules to other phrase structure rules. A metarule can be understood as a kind of instruction that creates
+another rule for each rule with a certain form and these newly created rules will in turn license local trees.
+
+For the example at hand, we can formulate a metarule which says the following: if there is a rule with the form ``V2 consists of something'' in the grammar,
+then there also has to be another rule ``V3 consists of whatever V2 consists + an NP in the nominative''. In formal terms, this looks as follows:
+\ea
+\label{subjekt-meta}
+V2  $\to$ W $\mapsto$\\
+V3  $\to$ W, N2[\textsc{case} nom]
+\z
+W is a variable which stands for an arbitrary number of categories (W = \emph{what\-ever}). The metarule creates the following rule in (\mex{1}) from the rules
+in (\ref{gpsg-regel-dat-ditransitiv}):
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
+V3  & H[7], N2[\textsc{case} dat], N2[\textsc{case} nom]                \\
+V3  & H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} nom]  \\
+\end{tabular}
+\z
+
+\noindent
+Now, the subject and other arguments both occur in the right"=hand side of the rule and can therefore be freely ordered as long as no LP rules are violated.%
+\is{metarule|)}
+
+
+\subsection{Semantics}
+\label{Sec-GPSG-Sem}
+
+The semantics adopted by \citew*[Chapter~9--10]{GKPS85a}  goes back to Richard
+\citet{Montague74a-u}. Unlike a semantic theory which stipulates the combinatorial possibilities for each rule (see Section~\ref{sec-PSG-Semantik}), GPSG uses
+more general rules. This is possible due to the fact that the expressions to be combined each have a semantic type. It is customary to distinguish between entities\is{entity}
+(\type{e}) and truth values\is{truth value} (\type{t}). Entities refer to an object in the world (or in a possible world), whereas entire sentences are either true
+or false, that is, they have a truth value. It is possible to create more complex types from the types \type{e} and \type{t}. Generally, the following holds: if 
+\type{a} and \type{b} are types, then \sliste{ \type{a}, \type{b} } is also a type. Examples of complex types are \sliste{ \type{e}, \type{t} } and \sliste{ \type{e}, \sliste{
+    \type{e}, \type{t} }}. We can define the following combinatorial rule for these kind of typed expressions:
+\ea
+If $\alpha$ is of type \sliste{ \type{b}, \type{a} } and $\beta$ of type \type{b}, then $\alpha(\beta)$ is of type
+\type{a}.
+\z
+This type of combination is also called \emph{functional application}\is{functional application}.
+With the rule in (\mex{0}), it is possible that the type \sliste{ \type{e}, \sliste{
+    \type{e}, \type{t} }} corresponds to an expression which still has to be combined with two expressions of
+	type \type{e} in order to result in an expression of \type{t}. The first combination step with \type{e} will yield \sliste{ \type{e}, \type{t} }
+	and the second step of combination with a further \type{e} will give us \type{t}. This is similar to what we saw with $\lambda$"=expressions on
+	page~\pageref{lambbbda-moegen}: $\lambda y \lambda x$ \relation{like}(x, y) has to combine with a y and an x. The result in this example was 
+	\relation{mögen}(\relation{max}, \relation{lotte}), that is, an expression that is either true or false in the relevant world.
+
+In \citew{GKPS85a}, an additional type is assumed for worlds in which an expression is true or false. For reasons of simplicity, I will omit this here. The types
+that we need for sentences, NPs and N$'$s, determiners and VPs are given in (\mex{1}):
+\eal
+\label{semantische-Typen}
+\ex TYP(S)   = \type{t}
+\ex TYP(NP)  = \sliste{ \sliste{ \type{e}, \type{t} }, \type{t} }
+\ex TYP(N$'$)  = \sliste{ \type{e}, \type{t} }
+% Richter/Sterenfeld 2012: Es fehlt bei TYP(Det) = \sliste{ N$'$, NP } in den Klammern die TYP-Aufrufe
+\ex TYP(Det) = \sliste{ TYP(N$'$), TYP(NP) }
+\ex TYP(VP)  = \sliste{ \type{e}, \type{t} }
+\zl
+A sentence is of type \type{t} since it is either true or false. A VP needs an expression of type \type{e} to yield a sentence of type \type{t}.
+The type of the NP may seem strange at first glance, however, it is possible to understand it if one considers the meaning of NPs with quantifiers.
+For sentences such as (\mex{1}a), a representation such as (\mex{1}b) is normally assumed:
+\eal
+\ex All children laugh.
+\ex $\forall x$ \relation{child}(x) $\to$ \relation{laugh}(x)
+\zl
+The symbol $\forall$ stands for the universal quantifier\is{quantifier!universal}. The formula can
+be read as follows. For every object, for which it is the case that it has the property of being a
+child, it is also the case that it is laughing. If we consider the contribution made by the NP, then we see that
+the universal quantifier, the restriction to children and the logical implication come from the NP:
+\ea
+$\forall x$ \relation{child}(x) $\to$ P(x)
+\z
+This means that an NP is something that must be combined with an expression which has exactly one open slot corresponding to the x in (\mex{0}). This is formulated in (\ref{semantische-Typen}b):
+an NP corresponds to a semantic expression which needs something of type \sliste{ \type{e},
+  \type{t} } to form an expression which is either true or false (that is, of type \type{t}).
+
+An N$'$ stands for a nominal expression for the kind  $\lambda$x child(x). This means if there is a specific individual which one can insert in place of the x, then we arrive at an
+expression that is either true or false. For a given situation, it is the case that either John has the property of being a child or he does not. An N$'$ has the same type as
+a VP.
+%\todostefan{Andrew: sind Determinierer nicht((e,t),e)?}
+
+TYP(N$'$) and TYP(NP) in (\ref{semantische-Typen}d) stand for the types given in (\ref{semantische-Typen}c) and
+(\ref{semantische-Typen}b), that is, a determiner is semantically something which has to be combined with the meaning of N$'$
+to give the meaning of an NP.
+
+\citet*[\page 209]{GKPS85a} point out a redundancy in the semantic specification of grammars which follow the rule"=by"=rule
+hypothesis\is{rule"=by"=rule hypothesis} (see Section~\ref{sec-PSG-Semantik}) since, instead of giving rule by rule instructions with regard to combinations, it suffices in many cases simply
+to say that the functor is applied to the argument. If we use types such as those in (\ref{semantische-Typen}), it is also clear which constituent is the functor
+and which is the argument. In this way, a noun cannot be applied to a determiner, but rather only the reverse is possible. The combination in (\mex{1}a) yields a
+well-formed result, whereas (\mex{1}b) is ruled out.
+
+\begin{samepage}
+\eal
+\ex Det$'$(N$'$)
+\ex N$'$(Det$'$)
+\zl
+\end{samepage}
+
+\noindent
+The general combinatorial principle is then as follows:
+\eanoraggedright
+Use functional application for the combination of the semantic contribution of the daughters to yield a well-formed expression corresponding to the
+type of the mother node.
+\z
+The authors of the GPSG book assume that this principle can be applied to the vast majority of GPSG rules so that only a few special cases have to be dealt
+with by explicit rules.
+
+\subsection{Adjuncts}
+\label{Abschnitt-Adjunkte-GPSG}
+
+For\is{adjunct|(} nominal structures in English\il{English}, \citet[\page 126]{GKPS85a} assume the \xbar~analysis and, as we have seen in Section~\ref{sec-psg-np}, this analysis is applicable
+to nominal structures in German. Nevertheless, there is a problem regarding the treatment of adjuncts in the verbal domain if one assumes flat branching structures, since adjuncts can
+freely occur between arguments:
+\eal
+\ex 
+\gll weil der Mann der Frau das Buch \emph{gestern} gab\\
+	 because the man the woman the book yesterday gave\\
+\glt `because the man gave the book to the woman yesterday'
+\ex 
+\gll weil der Mann der Frau \emph{gestern} das Buch gab\\
+	 because the man the woman yesterday the book gave\\
+\ex 
+\gll weil der Mann \emph{gestern} der Frau das Buch gab\\
+	 because the man yesterday the woman the book gave\\
+\ex 
+\gll weil \emph{gestern} der Mann der Frau das Buch gab\\
+	 because yesterday the man the woman the book gave\\
+\zl
+For (\mex{0}), one requires the following rule:
+\ea
+\label{regel-ditransitiv-adv}
+V3  $\to$ H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} nom], AdvP
+\z
+Of course, adjuncts can also occur between the arguments of verbs from other valence classes:
+\ea
+\gll weil (oft) die Frau (oft) dem Mann (oft) hilft\\
+	because \spacebr{}often the woman \spacebr{}often the man \spacebr{}often helps\\
+\glt `because the woman often helps the man'
+\z
+Furthermore, adjuncts can occur between the arguments of a VP:
+\ea
+\gll Der Mann hat versucht, der Frau heimlich das Buch zu geben.\\
+	the man has tried the woman secretly the book to give\\
+\glt `The man tried to secretly give the book to the woman.'
+\z 
+
+\noindent
+In order to analyze these sentences, we can use a metarule which adds an adjunct to the right"=hand side of a V2 \citep[\page 146]{Uszkoreit87a}.
+\ea
+\label{Adjunkt-MR}
+V2  $\to$ W $\mapsto$\\
+V2  $\to$ W, AdvP
+\z 
+By means of the subject introducing metarule in (\ref{subjekt-meta}), the V3"=rule in (\ref{regel-ditransitiv-adv}) is derived from a V2"=rule.
+Since there can be several adjuncts in one sentence, a metarule such as (\ref{Adjunkt-MR}) must be allowed to apply multiple times. The recursive
+application of metarules is often ruled out in the literature due to reasons of generative capacity\is{capacity!generative} (see
+Chapter~\ref{Abschnitt-Generative-Kapazitaet}) (\citealp{Thompson82a-u}; \citealp[\page 146]{Uszkoreit87a}). If one uses the Kleene star\is{Kleene star}\is{*},
+then it is possible to formulate the adjunct metarule in such as way that it does not have to apply recursively \citep[\page
+146]{Uszkoreit87a}:
+%% Kein Problem, wenn Mengen erzeugt werden, da in einer Menge jedes Element nur einmal enthalten
+%% ist. Ist aber trotzdem unschön.
+%% \footnote{
+%% Note that the Kleene star\is{Kleene star} stands for arbitrarily many repetitions of a symbol. This includes zero
+%% repetitions. Depending on the implementation of metarules this would license infinitely many rules
+%% since the output of the metarule can be its input. Even if this feeding is excluded, the
+%% possibility to have zero AdvPs leads to spurious ambiguities since both the original rule for V2 and
+%% the one licensed by the metarule can be applied in the analysis of sentences without AdvPs. This
+%% problem can be fixed by using the `+' instead of the `*'\is{*}, since `+'\is{+} stands for `at least one'.
+%% }
+\ea
+\label{adv-metarule}
+V2  $\to$ W $\mapsto$\\
+V2  $\to$ W, AdvP*
+\z 
+If one adopts the rule in (\mex{0}), then it is not immediately clear how the semantic contribution of the adjuncts can be determined.\footnote{
+	In LFG\indexlfg, an adjunct is entered into a set in the functional structure (see Section~\ref{Abschnitt-LFG-Adjunkte}). This also works with the use
+	of the Kleene Star notation. From the f"=structure\is{f"=structure}, it is possible to compute the semantic denotation with corresponding scope by making reference
+	to the c"=structure\is{c"=structure}. In HPSG\indexhpsg, \citet{Kasper94a} has made a proposal which corresponds to the
+        GPSG proposal with regard to flat branching structures and
+	an arbitrary number of adjuncts. In HPSG, however, one can make use of so"=called relational constraints. These are similar to small programs which
+	can create relations between values inside complex structures. Using such relational constraints, it is then possible to compute the meaning of
+	an unrestricted number of adjuncts in a flat branching structure.
+} For the rule in (\mex{-1}), one can combine the semantic contribution of the AdvP with the semantic contribution of the V2 in the input rule. This is of course
+also possible if the metarule is applied multiple times. If this metarule is applied to (\mex{1}a),
+for example, the V2"=node in (\mex{1}a) contains the semantic contribution of the first adverb.
+\eal
+\ex V2 $\to$ V, NP, AdvP
+\ex V2 $\to$ V, NP, AdvP, AdvP
+\zl
+The V2"=node in (\mex{0}b) receives the semantic representation of the adverb applied to the V2"=node in
+(\mex{0}a).
+
+\citet{WP92b} have shown that it is possible to use metarules such as (\ref{Adjunkt-MR}) if one does not use
+metarules to compute a set of phrase structure rules, but rather directly applies the metarules
+during the analysis of a sentence. Since sentences are always of finite length and the metarule
+introduces an additional AdvP to the right"=hand side of the newly licensed rule, the metarule can
+only be applied a finite number of times.  
+\is{adjunct|)}
+
+\section{Passive as a metarule}
+\label{sec-passive-gpsg}
+
+The German passive\is{passive|(} can be described in an entirely theory"=neutral way as
+follows:\footnote{
+  This characterization does not hold for other languages. For instance, Icelandic allows for dative
+  subjects. See \citet*{ZMT85a}.
+}
+\begin{itemize}
+\item The subject is suppressed. 
+\item If there is an accusative object, this becomes the subject.
+\end{itemize}
+
+\noindent
+This is true for all verb classes which can form the passive. It does not make a difference whether the verbs takes one, two or three arguments:
+\eal
+\label{beispiel-arbeiten}
+\ex 
+\gll weil er noch gearbeitet hat\\
+	 because he.\nom{} still worked has\\
+\glt 'because he has still worked'
+\ex 
+\gll weil noch gearbeitet wurde\\
+	 because still worked was\\
+\glt `because there was still working there'
+\zl
+\eal
+\label{beispiel-denken}
+\ex 
+\gll weil er an Maria gedacht hat\\
+	 because he.\nom{} on Maria thought has\\
+\glt `because he thought of Maria'
+\ex 
+\gll weil an Maria gedacht wurde\\
+	 because on Maria thought was\\
+\glt `because Maria was thought of'
+\zl
+\eal
+\ex 
+\gll weil sie ihn geschlagen hat\\
+	 because she.\nom{} him.\acc{} beaten has\\
+\glt `because she has beaten him'
+\ex 
+\gll weil er geschlagen wurde\\
+	 because he.\nom{} beaten was\\
+\glt `because he was beaten'
+\zl
+\eal
+\ex 
+\gll weil er ihm den Aufsatz gegeben hat\\
+     because he.\nom{} him.\dat{} the.\acc{} essay given has\\
+\glt `because he has given him the essay'
+\ex 
+\gll weil ihm der Aufsatz gegeben wurde\\
+     because him.\dat{} the.\nom{} essay given was\\
+\glt `because he was given the essay'
+\zl
+
+\noindent
+In a simple phrase structure grammar, we would have to list  two separate rules for each pair of sentences making reference to the valence class of the
+verb in question. The characteristics of the passive discussed above would therefore not be
+explicitly stated in the set of rules. In GPSG, it is possible to explain the relation between
+active and passive rules using a metarule: for each active rule, a corresponding passive rule with suppressed subject is licensed.
+The link between active and passive clauses can therefore be captured in this way.  
+
+An important difference to Transformational Grammar/GB\indexgb\indexmp is that we are not creating a
+relation between two trees, but rather between active and passive rules. The two rules license two
+unrelated structures, that is, the structure of (\mex{1}b) is not derived from the structure of (\mex{1}a). 
+
+\eal
+\ex 
+\gll weil sie ihn geschlagen hat\\
+     because she.\nom{} him.\acc{} beaten has\\
+\glt `because she has beaten him'
+\ex 
+\gll weil er geschlagen wurde\\
+     because he.\nom{} beaten was\\
+\glt `because he was beaten'
+\zl
+%
+The generalization with regard to active/passive is captured nevertheless.
+
+In what follows, I will discuss the analysis of the passive given in \citew*{GKPS85a} in some more detail: the authors suggest the following metarule\is{metarule|(}
+for English\il{English} (p.\,59):\footnote{
+  See \citew[\page 1114]{WP92b} for a parallel rule for German which refers to accusative case on the left"=hand side of the metarule.
+}
+
+\ea
+VP  $\to$ W, NP $\mapsto$\\
+VP[\textsc{pas}]  $\to$ W, (PP[\emph{by}])
+\z
+This rule states that verbs which take an object can occur in a passive VP without this object. Furthermore, a \emph{by}-PP can be added.
+If we apply this metarule to the rules in (\mex{1}), then this will yield the rules listed in (\mex{2}):
+\ea
+\begin{tabular}[t]{@{}l@{}}
+VP $\to$ H[2], NP\\
+VP $\to$ H[3], NP, PP[\emph{to}]\\
+\end{tabular}
+\z
+\ea
+\begin{tabular}[t]{@{}l@{}}
+VP[\textsc{pas}] $\to$ H[2], (PP[\emph{by}])\\
+VP[\textsc{pas}] $\to$ H[3], PP[\emph{to}], (PP[\emph{by}])\\
+\end{tabular}
+\z
+It is possible to use the rules in (\mex{-1}) to analyze verb phrases in active sentences:
+\eal
+\ex{} [\sub{S} The man [\sub{VP} devoured the carcass]].
+\ex{} [\sub{S} The man [\sub{VP} handed the sword to Tracy]].
+\zl
+The combination of a VP with the subject is licensed by an additional rule (S $\to$ NP,
+VP).
+
+With the rules in (\mex{-1}), one can analyze the VPs in the corresponding passive sentences in
+(\mex{1}): 
+\eal
+\ex{} [\sub{S} The carcass was [\sub{VP[\textsc{pas}]} devoured (by the man)]].
+\ex{} [\sub{S} The sword was [\sub{VP[\textsc{pas}]} handed to Tracy (by the man)]].
+\zl
+%
+At first glance, this analysis may seem odd as an object is replaced inside the VP by a PP which would be the subject in an
+active clause. Although this analysis makes correct predictions with regard to the syntactic well"=formedness of structures, it
+seems unclear how one can account for the semantic relations. It is possible, however, to use a
+lexical rule\is{lexical rule} that licenses the passive participle and manipulates the semantics of
+the output lexical item in such a way that the \emph{by}-PP is correctly integrated semantically \citep[\page 219]{GKPS85a}.
+
+We arrive at a problem, however, if we try to apply this analysis to German since the impersonal passive\is{passive!impersonal} cannot be derived
+by simply suppressing an object. The V2"=rules for verbs such as \emph{arbeiten} `work' and \emph{denken} `think' as used for the analysis of
+(\ref{beispiel-arbeiten}a) and (\ref{beispiel-denken}a) have the following form:
+\ea
+\begin{tabular}[t]{@{}l@{}}
+V2 $\to$ H[5]\\
+V2 $\to$ H[13], PP[\emph{an}]\\
+\end{tabular}
+\z
+There is no NP on the right"=hand side of these rules which could be turned into a \emph{von}-PP. If the passive
+is to be analyzed as suppressing an NP argument in a rule, then it should follow from the existence of the impersonal passive 
+that the passive metarule has to be applied to rules which license finite clauses, since information about whether there is a subject
+ or not is only present in rules for finite clauses.\footnote{
+	GPSG differs from GB\indexgb in that infinitive verbal projections do not contain nodes for empty subjects. This is also true for all other
+	theories discussed in this book with the exception of Tree-Adjoining Grammar\indextag.
+} In this kind of system, the rules for finite sentences (V3) are the basic rules and the rules for V2 would be derived from these.
+ 
+It would only make sense to have a metarule which applies to V3 for German since English does not have V3 rules which contain both the subject
+and its object on the right"=hand side of the rule.\footnote{
+ \citet[\page 62]{GKPS85a} suggest a metarule similar to our subject introduction metarule on page~\pageref{subjekt-meta}.
+ The rule that is licensed by their metarule is used to analyze the position of auxiliaries in English and only licenses sequences of the form AUX NP VP. In such structures,
+ subjects and objects are not in the same local tree either.
+}
+For English, it is assumed that a sentence consists of a subject and a VP (see \citealp[\page 139]{GKPS85a}). 
+This means that we arrive at two very different analyses for the passive in English and German, which do not capture
+the descriptive insight that the passive is the suppression of the subject and the subsequent
+promotion of the object in the same way.
+The central difference
+between German and English seems to be that English obligatorily requires a subject,\footnote{
+  Under certain conditions, the subject can also be omitted in English. For more on imperatives and other subject"=less examples, see
+  page~\pageref{Beispiel-Imperativ-Englisch}.
+} which is why English does not have an impersonal passive. 
+This is a property independent of passives, which affects the possibility of having a passive structure, however.\is{metarule|)}
+
+The problem with the GPSG analysis is the fact that valence is encoded in phrase structure rules and that subjects are not present in the rules
+for verb phrases. In the following chapters, we will encounter approaches from LFG\indexlfg,
+Categorial Grammar\indexcg, HPSG\indexhpsg, Construction Grammar\indexcxg, and Dependency Grammar\indexdg
+which encode valence separately from phrase structure rules and therefore do not have a principled problem with impersonal passive.\is{passive!impersonal|)}
+
+See \citet[\page 394--396]{Jacobson87b} for more problematic aspects of the passive analysis in GPSG and for the insight that a lexical representation of valence -- as assumed
+in Categorial Grammar, GB, LFG and HPSG -- allows for a lexical analysis of the phenomenon, which is however unformulable in GPSG for principled reasons having to
+do with the fundamental assumptions regarding valence representations.
+\is{passive|)}
+
+\section{Verb position}
+\label{Abschnitt-Verbstellung-GPSG}
+
+\mbox{}\citet{Uszkoreit87a}\is{Verb position|(} analyzed verb"=initial and verb"=final order as linearization variants of a flat tree. The details of this analysis have already
+been discussed in Section~\ref{GPSG-lokale-Umstellung}.
+
+An alternative suggestion in a version of GPSG comes from \citep[\page 110]{Jacobs86a}: Jacobs' analysis is a rendering of the verb movement analysis in GB. He assumes that there
+is an empty verb in final position and links this to the verb in initial position using technical
+means which we will see in more detail in the following section.\is{verb position|)}
+
+\section{Long"=distance dependencies as the result of local dependencies}
+\label{Abschnitt-GPSG-Fernabhaengigkeiten}
+
+One\is{long-distance dependency|(} of the main innovations of GPSG is its treatment of long"=distance dependencies as a sequence of local dependencies \citep{Gazdar81}.
+This approach will be explained taking constituent fronting to the prefield in German as an
+example. Until now, we have only seen the GPSG analysis for verb-initial and verb-final position: the
+sequences in (\mex{1}) are simply linearization variants.
+\eal
+\ex 
+\gll {}[dass] der Mann der Frau das Buch gibt\\
+	 {}\spacebr{}that the man the woman the book gives\\
+\glt `that the man gives the book to the woman'
+\ex 
+\gll Gibt der Mann der Frau das Buch?\\
+	 gives the man the woman the book\\
+\glt `Does the man give the book to the woman?'
+\zl
+What we want is to derive the verb"=second order in the examples in (\mex{1}) from V1 order in (\mex{0}b).
+\eal
+\ex 
+\gll Der Mann gibt der Frau das Buch.\\
+     the man  gives the woman the book\\
+\glt `The man gives the woman the book.'
+\ex 
+\gll Der Frau gibt der Mann das Buch.\\
+     the woman gives the man the book\\
+\glt `The man gives the woman the book.'
+\zl
+
+\noindent
+For this, the metarule in (\mex{1}) has to be used. This metarule removes an arbitrary category X from the set of categories on the right"=hand side of the rule and represents it on
+the left"=hand side with a slash (`/')\is{/}:\footnote{%
+	An alternative to Uszkoreit's trace"=less analysis \citeyearpar[\page 77]{Uszkoreit87a},
+        which is explained here, consists of using a trace
+	for the extracted element as in GB.
+}
+\ea
+\label{meta-slash-intro}
+V3  $\to$ W, X $\mapsto$\\
+V3/X  $\to$ W
+\z
+
+\noindent
+This rule creates the rules in (\mex{2}) from (\mex{1}):
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
+V3  & H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} nom] 
+\end{tabular}
+\z
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
+V3/N2[\textsc{case} nom] &  H[8], N2[\textsc{case} dat], N2[\textsc{case} acc]\\
+V3/N2[\textsc{case} dat] &  H[8], N2[\textsc{case} acc], N2[\textsc{case} nom]\\
+V3/N2[\textsc{case} acc] &  H[8], N2[\textsc{case} dat], N2[\textsc{case} nom]\\
+\end{tabular}
+\z
+
+\noindent
+The rule in (\mex{1}) connects a sentence with verb"=initial order with a constituent which is missing in the sentence:
+\ea
+\label{gpsg-vs-regel}
+V3[+\textsc{fin}] $\to$ X[+\textsc{top}], V3[+\textsc{mc}]/X
+\z
+In (\mex{0}), X stands for an arbitrary category which is marked as missing in V3 by the `/'. X is referred to as a 
+\emph{filler}\is{filler}.
+
+The interesting cases of values for X with regard to our examples are given in (\mex{1}):
+\ea
+\begin{tabular}[t]{@{}l@{~$\to$~}l@{~}l@{}}
+V3[+\textsc{fin}] & N2[+\textsc{top}, \textsc{case} nom], & V3[+\textsc{mc}]/N2[\textsc{case} nom]\\
+V3[+\textsc{fin}] & N2[+\textsc{top}, \textsc{case} dat], & V3[+\textsc{mc}]/N2[\textsc{case} dat]\\
+V3[+\textsc{fin}] & N2[+\textsc{top}, \textsc{case} acc], & V3[+\textsc{mc}]/N2[\textsc{case} acc]\\
+\end{tabular}
+\z
+(\mex{0}) does not show actual rules. Instead, (\mex{0}) shows examples for insertions of specific
+categories into the X"=position, that is, different instantiations of the rule.
+
+The following linearization rule ensures that a constituent marked by [+\textsc{top}] in (\mex{-1}) precedes the rest of the sentence:
+\ea
+{}[+\textsc{top}] $<$ X
+\z
+\textsc{top} stands for \emph{topicalized}. As was mentioned on
+page~\pageref{Seite-Topikalisierung}, the prefield is not restricted to topics. Focused elements and expletives can
+also occur in the prefield, which is why the feature name is not ideal. However, it is possible to replace
+it with something else, for instance \emph{prefield}. This would not affect the analysis. X in (\mex{0})
+stands for an arbitrary category. This is a new X and it is independent from the one in (\ref{gpsg-vs-regel}). 
+
+Figure~\vref{fig-nld-gpsg} shows the interaction of the rules for the analysis of
+(\mex{1}).\footnote{%
+  The \textsc{fin} feature has been omitted one some of the nodes since it is redundant: +\textsc{mc}"=verbs always require the \textsc{fin} value `+'.
+}
+\ea
+\gll Dem Mann gibt er das Buch.\\
+     the.\dat{} man gives he,\nom{} the.\acc{} book\\
+\glt `He gives the man the book.'
+\z
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[{V3[+\textsc{fin}, +\textsc{mc}]}
+  [{N2[dat,+\textsc{top}]} [dem Mann;the man,triangle] ]
+  [{V3[+\textsc{mc}]/N2[dat]}
+    [{V[8,+\textsc{mc}]} [gibt;gives] ]
+    [{N2[nom]} [er;he] ] 
+    [{N2[acc]} [das Buch;the book, triangle] ] ] ]
+\end{forest}
+}
+\caption{\label{fig-nld-gpsg}Analysis of fronting in GPSG}
+\end{figure}%
+%
+The metarule in (\ref{meta-slash-intro}) licenses a rule which adds a dative object into slash. This
+rule now licenses the subtree for \emph{gibt er das Buch} `gives he the book'.
+The linearization rule V[+\textsc{mc}] $<$ X orders the verb to the very left inside of the local
+tree for V3. In the next step, the constituent following the slash is bound off. Following the
+LP"=rule [+\textsc{top}] $<$ X, the bound constituent must be ordered to the left of the V3 node.
+
+The analysis given in Figure~\ref{fig-nld-gpsg} may seem too complex since the noun phrases in (\mex{0}) all depend on the same verb. It is possible to invent a system
+of linearization rules which would allow one to analyze (\mex{0}) with an entirely flat structure. One would nevertheless still need an analysis for sentences such as those in 
+(\ref{bsp-Fernabhaengigkeit}) on
+page~\pageref{bsp-Fernabhaengigkeit} -- repeated here as (\mex{1}):
+\eal
+\ex\label{bsp-um-zwei-millionen-zwei}
+\gll {}[Um zwei Millionen Mark]$_i$ soll er versucht haben, [eine Versicherung \_$_i$ zu betrügen].\footnotemark\\
+     {}\spacebr{}around two million Deutsche.Marks should he tried have \spacebr{}an insurance.company {} to deceive\\
+\footnotetext{
+         taz, 04.05.2001, p.\,20.
+}
+\glt `He apparently tried to cheat an insurance company out of two million Deutsche Marks.'
+\ex
+\gll "`Wer$_i$, glaubt er, daß er \_$_i$ ist?"' erregte sich ein Politiker vom Nil.\footnotemark\\
+     \spacebr{}who believes he that he {} is retort \textsc{refl} a politician from.the Nile\\
+\footnotetext{
+        Spiegel, 8/1999, p.\,18.
+}
+\glt `\,``Who does he think he is?'', a politician from the Nile exclaimed.'
+\ex\label{ex-wen-glaubst-du-dass-zwei}
+\gll Wen$_i$ glaubst du, daß ich \_$_i$ gesehen habe.\footnotemark\\
+     who believe you that I {} seen have\\
+\footnotetext{
+    \citew[\page84]{Scherpenisse86a}.
+    }
+\glt `Who do you think I saw?'
+\ex 
+\gll {}[Gegen ihn]$_i$ falle es den Republikanern hingegen schwerer, [~[~Angriffe \_$_i$] zu lancieren].\footnotemark\\
+	 {}\spacebr{}against him fall it the Republicans however more.difficult \hspaceThis{[~[~}attacks {} to launch\\
+\footnotetext{
+  taz, 08.02.2008, p.\,9.
+}
+\glt `It is, however, more difficult for the Republicans to launch attacks against him.'
+\zl
+The sentences in (\mex{0}) cannot be explained by local reordering as the elements in the prefield are not dependent on the highest verb, but instead originate in the lower clause.
+Since only elements from the same local tree can be reordered, the sentences in (\mex{0}) cannot be analyzed without postulating some kind of additional mechanism for long"=distance
+dependencies.\footnote{
+  One could imagine analyses that assume the special mechanism for nonlocal dependencies only for
+  sentences that really involve dependencies that are nonlocal. This was done in HPSG\indexhpsg by
+  \citet{Kathol95a} and \citet{Wetta2011a} and by \citet{GO2009a} in \dg. I discuss the Dependency
+  Grammar analyses in detail in Section~\ref{sec-linearization-problems-dg} and show that analyses
+  that treat simple V2 sentences as ordering variants of non-V2 sentences have problems with the scope\is{scope} of
+  fronted adjuncts, with coordination\is{coordination} of simple sentences and sentences with nonlocal dependencies
+  and with so-called multiple frontings\is{apparent multiple fronting}.
+}
+
+Before I conclude this chapter, I will discuss yet another example of fronting, namely one of the
+more complex examples in (\mex{0}). The analysis of (\mex{0}c) consists of several steps: the
+introduction, percolation and finally binding off of information about the long"=distance dependency.
+This is shown in Figure~\vref{fig-gpsg-udc}. 
+\begin{figure}
+\centerline{%
+%http://tex.stackexchange.com/questions/187407/add-a-node-without-content-to-a-tree-in-forest/187433#187433
+\begin{forest}
+sn edges,empty nodes
+[{V3[+\textsc{fin},+\textsc{mc}]}
+  [{N2[acc,+\textsc{top}]} [wen;who] ]
+  [{V3[+\textsc{mc}]/N2[acc]}
+    [{V[9,+\textsc{mc}]} [glaubt;believes] ]
+    [{N2[nom]} [du;you] ] 
+    [{V3[+dass,$-$\textsc{mc}]/N2[acc]} 
+      [{}[dass;that] ]
+      [{V3[$-$dass,$-$\textsc{mc}]/N2[acc]} 
+         [{N2[nom]} [ich;I] ]
+         [{V[6,$-$\textsc{mc}]} [gesehen habe;seen have,triangle] ] ] ] ] ]
+\end{forest}
+}
+\caption{\label{fig-gpsg-udc}Analysis of long"=distance dependencies in GPSG}
+\end{figure}%
+Simplifying somewhat, I assume that \emph{gesehen habe} `have seen' behaves like a normal transitive verb.\footnote{
+   See \citew{Nerbonne86a} and \citew{Johnson86a}, for analyses of verbal complexes in GPSG.
+}
+A phrase structure rule licensed by the metarule in (\ref{meta-slash-intro}) licenses the combination of \emph{ich} `I' and \emph{gesehen habe} `has seen'
+and represents the missing accusative object on the V3 node. The complementizer \emph{dass} `that' is combined with \emph{ich gesehen
+habe} `I have seen' and the information about the fact that an accusative NP is missing is percolated up the tree. This percolation is controlled by the
+so"=called \emph{Foot Feature Principle}\is{Foot Feature Principle}, which states that all foot
+features of all the daughters are also present on the mother node. Since the \textsc{slash} feature is
+a foot feature, the categories following the `/' percolate up the tree if they are not bound off in
+the local tree. In the final step, the V3/N2[acc] is combined with the missing N2[acc]. The result
+is a complete finite declarative clause of the highest projection level.% 
+\is{long-distance dependency|)}
+
+\section{Summary and classification}
+\label{Abschnitt-Einordnung-GPSG}\label{sec-derivation-GPSG}
+
+Some
+%\todoandrew{Einordnung? Something like ``evalutaion'' or ``putting things into context''}\todostefan{hmm.. ja so etwas wie 'classification of GPSG' (as a theory)} 
+twenty years after Chomsky's criticism of phrase structure grammars, the first large grammar fragment in the GPSG framework appeared and offered analyses of phenomena
+which could not be described by simple phrase structure rules. Although works in GPSG essentially build on Harman's 1963 idea of a transformation-less grammar, they also go far
+beyond this. A special achievement of GPSG is, in particular, the treatment of long"=distance dependencies as worked out by \citet{Gazdar81}. By using the \slasch"=mechanism, it
+was possible to explain the simultaneous extraction of elements from conjuncts (Across the Board Extraction\is{Across the Board Extraction}, \citealp{Ross67}). The following examples from
+\citet[\page 173]{Gazdar81} show that gaps in conjuncts must be identical, that is, a filler of a certain category must correspond to a gap in every conjunct:
+\eal\settowidth\jamwidth{(= S/NP \& S/NP)}
+\label{ex-atb-gazdar}
+\ex[]{ The kennel     which Mary made and Fido sleeps in has been stolen.	 \jambox{(= S/NP \& S/NP)}
+}
+\ex[]{ The kennel in which Mary keeps drugs and Fido sleeps has been stolen.	\jambox{(= S/PP \& S/PP)}
+}
+\ex[*]{The kennel (in) which Mary made and Fido sleeps has been stolen.     \jambox{(= S/NP \& S/PP)}
+}
+\zl
+GPSG can plausibly handle this with mechanisms for the transmission of information about gaps. In symmetric coordination, the \slasch elements in each conjunct have
+to be identical. On the one hand,
+%\todoandrew{on the hand?}\todostefan{das gleiche hier} 
+a transformational approach is not straightforwardly possible since
+one normally assumes in such analyses that there is a tree and something is moved to another
+position in the tree thereby leaving a trace. However, in coordinate structures, the filler would
+correspond to two or more traces and it cannot be explained how the filler could originate in more
+than one place.
+
+While the analysis of Across the Board extraction is a true highlight of GPSG, there are some problematic
+aspects that I want to address in the following: the interaction between valence and morphology,
+the representation of valence and partial verb phrase fronting, and the expressive power of the GPSG
+formalism. 
+
+\subsection{Valence and morphology}
+
+The encoding of valence in GPSG is problematic for several reasons. For example, morphological processes take into account the valence properties of words. 
+Adjectival derivation with the suffix \suffix{bar} `-able' is only productive with transitive verbs,
+that is, with verbs with an accusative object which can undergo passivization:
+\eal\settowidth\jamwidth{(nominative, accusative, PP[mit])}
+\ex[]{
+\gll lös-bar\\
+     solv-able\\  	\jambox{(nominative, accusative)}
+}
+\ex[]{
+\gll vergleich-bar\\ 
+     compar-able\\ \jambox{(nominative, accusative, PP[mit])}
+}
+\ex[*]{
+\gll schlaf-bar\\ 
+	 sleep-able\\ \jambox{(nominative)}
+}
+\ex[*]{
+\gll helf-bar\\  
+	 help-able\\\jambox{(nominative, dative)}
+}
+\zl
+A rule for derivations with \prefix{-bar} `-able' must therefore make reference to valence
+information. This is not possible in GPSG grammars since every lexical entry is only assigned a
+number which says something about the rules in which this entry can be used. For \bards, one would
+have to list in the derivational rule all the numbers which correspond to rules with accusative
+objects, which of course does not adequately describe the phenomenon. Furthermore, the valence of
+the resulting adjective also depends on the valence of the verb. For example, a verb such as
+\emph{vergleichen} `compare' requires a \emph{mit} (with)-PP and \emph{vergleichbar} `comparable'
+does too (Riehemann: \citeyear[\page 7, 54]{Riehemann93a}; \citeyear[\page 68]{Riehemann98a}).  In
+the following chapters, we will encounter models which assume that lexical entries contain
+information as to whether a verb selects for an accusative object or not. In such models,
+morphological rules which need to access the valence properties of linguistic objects can be
+adequately formulated.
+
+The issue of interaction of valence and derivational morphology will be taken up in
+Section~\ref{sec-val-morph} again, where approaches in LFG\indexlfg and Construction
+Grammar\indexcxg are discussed that share assumptions about the encoding of valence with GPSG.
+
+\subsection{Valence and partial verb phrase fronting}
+
+\citet{Nerbonne86a} and \citet{Johnson86a} investigate fronting of partial VPs\is{partial verb phrase fronting|(} in the GPSG
+framework.
+(\mex{1}) gives some examples: in (\mex{1}a) the bare verb is fronted and its arguments are realized
+in the middle field, in (\mex{1}b) one of the objects is fronted together with the verb and in
+(\mex{1}c) both objects are fronted with the verb.
+\eal
+\ex 
+\gll Erzählen wird er seiner Tochter ein Märchen können.\\
+     tell will he his daughter a fairy.tale can\\
+\ex 
+\gll Ein Märchen erzählen wird er seiner Tochter können.\\
+     a fairy.tale tell will he his daughter can\\
+\ex 
+\gll Seiner Tochter ein Märchen erzählen wird er können.\\
+     his daughter a fairy.tale tell will he can\\
+\glt `He will be able to tell his daughter a fairy tale.'
+\zl
+The problem with sentences such as those in (\mex{0}) is that the valence requirements of the verb
+\emph{erzählen} `to tell' are realized in various positions in the sentence. For fronted
+constituents, one requires a rule which allows a ditransitive to be realized without its arguments
+or with one or two objects. Furthermore, it has to be ensured that the arguments that are
+missing in the prefield are realized in the remainder of the clause. It is not legitimate to omit
+obligatory arguments or realize arguments with other properties like a different case, as the
+examples in (\mex{1}) show:
+\eal
+\ex[]{
+\gll Verschlungen hat er es nicht.\\
+     devoured     has he.\nom{} it.\acc{} not\\
+\glt `He did not devour it.'
+}
+\ex[*]{
+\gll Verschlungen hat er nicht.\\
+     devoured     has he.\nom{} not\\
+}
+\ex[*]{
+\gll Verschlungen hat er ihm nicht.\\
+     devoured     has he.\nom{} him.\dat{} not\\
+}
+\zl
+The obvious generalization is that the fronted and unfronted arguments must add up to the total
+set belonging to the verb. This is scarcely possible with the rule-based valence
+representation in GPSG. In theories such as Categorial Grammar\is{Categorial Grammar (CG)} (see
+Chapter~\ref{Kapitel-CG}), it is possible to formulate elegant analyses of (\mex{0})
+\citep{Geach70a}. Nerbonne and Johnson both suggest analyses for sentences such as (\mex{0}) which
+ultimately amount to changing the representation of valence information in the direction of
+Categorial Grammar.\is{partial verb phrase fronting|)} 
+
+Before I turn to the expressive power of the GPSG formalism, I want to note that the problems that
+we discussed in the previous subsections are both related to the representation of valence in GPSG. We
+already run into valence"=related problems when discussing the passive in Section~\ref{sec-passive-gpsg}: since subjects and objects are introduced in
+phrase structure rules and since there are some languages in which subject and object are not in the
+same local tree, there seems to be no way to describe the passive as the suppression of the subject
+in GPSG.
+
+\subsection{Generative capacity}
+
+In GPSG, the system of linearization, dominance and metarules is normally restricted by conditions
+we will not discuss here in such a way that one could create a phrase structure grammar of the kind
+we saw in Chapter~\ref{Kapitel-PSG} from the specification of a GPSG grammar. Such grammars are also called
+context"=free grammars\is{context"=free grammar}\is{capacity!generative}. In the mid-80s, it was
+shown that context"=free grammars are not able to describe natural language in general, that is it
+could be shown that there are languages that need more powerful grammar formalisms than
+context"=free grammars (\citealp{Shieber85a,Culy85a}; see \citew{Pullum86a} for a historical
+overview). The so-called \emph{generative capacity} of grammar formalisms is discussed in
+Chapter~\ref{Abschnitt-Generative-Kapazitaet}.
+
+Following the emergence of constraint"=based models such as HPSG (see Chapter~\ref{Kapitel-HPSG}) and
+unification-based variants of Categorial Grammar (see Chapter~\ref{Kapitel-CG} and
+\citealp{Uszkoreit86d}), most authors previously working in GPSG turned to other frameworks. The GPSG
+analysis of long"=distance dependencies and the distinction between immediate dominance and linear precedence are
+still used in HPSG\indexhpsg and variants of Construction Grammar\indexcxg to this day. See also
+Section~\ref{sec-ld-lp-tag} for a Tree Adjoining Grammar variant that separates dominance from precedence.
+
+\section*{Comprehension questions}
+
+\begin{enumerate}
+\item What does it mean for a grammar to be in an ID/LP format?
+%\todoandrew{What does it mean for a
+  %grammar to be in ID/LP-Format?}\todostefan{ja das ist besser.}
+\item How are linear variants of constituents in the middle field handled by GPSG?
+\item Think of some phenomena which have been described by transformations and consider how GPSG has analyzed these data using other means.
+\end{enumerate}
+
+\section*{Exercises}
+
+\begin{enumerate}
+\item Write a small GPSG grammar which can analyze the following sentences:
+\eal
+\ex 
+\gll {}[dass] der Mann ihn liest\\
+	 {}\spacebr{}that the.\nom{} man him.\acc{} reads\\
+\glt `that the man reads it'
+\ex 
+\gll {}[dass] ihn der Mann liest\\
+	{}\spacebr{}that him.\acc{} the.\nom{} man reads\\
+\glt `that the man reads it'
+%\ex {}[dass] er gelesen wurde
+\ex 
+\gll Der Mann liest ihn.\\
+     the.\nom{} man reads him.\acc\\
+\glt `The man reads it.'
+\zl
+Include all arguments in a single rule without using the metarule for introducing subjects.
+\end{enumerate}
+
+\section*{Further reading}
+
+The main publication in GPSG is \citew*{GKPS85a}. This book has been critically discussed by \citet{Jacobson87b}. Some problematic analyses
+are contrasted with alternatives from Categorial Grammar\indexcg and reference is made to the heavily Categorial Grammar influenced work of \citet{Pollard84a-u}, which
+counts as one of the predecessors of HPSG. Some of Jacobson's suggestions can be found in later works in HPSG.
+
+Grammars of German can be found in \citew{Uszkoreit87a} and \citew{Busemann92a-u}. \citet{Gazdar81} developed an analysis of long"=distance dependencies, which
+is still used today in theories such as HPSG.
+
+A history of the genesis of GPSG can be found in \citew{Pullum89a}.
+
+% Zu kurz
+%\citet[Abschnitt~5.6.4]{Rambow94a} vergleicht seine TAG"=Analyse mit der GPSG"=Variante von \citet{Uszkoreit87a}.
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

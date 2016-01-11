@@ -1,0 +1,210 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Generative capacity and grammar formalisms}
+\label{Abschnitt-Generative-Kapazitaet}
+
+In\is{capacity!generative|(}\is{complexity class|(} several of the preceding chapters,
+the complexity hierarchy for formal languages was mentioned. The simplest languages are so"=called regular languages\is{regular language} (Type~3),
+they are followed by those described as context"=free grammars\is{context"=free grammar} (Type~2), then those grammars which are 
+context"=sensitive\is{context"=sensitive grammar} (Type 1) and finally we have unrestricted grammars\is{unrestricted grammars} (Type~0) that
+create recursively enumerable languages, which are the most complicated class. In creating theories, a conscious effort was made to
+use formal means that correspond to what one can actually observe in natural language.
+This led to the abandonment of unrestricted Transformational Grammar since this has generative power of Type 0 (see page~\pageref{page-TG-Typ0}).
+GPSG was deliberately designed in such a way as to be able to analyze just the context"=free
+languages and not more. In the mid-80s, it was shown that natural languages have a higher complexity
+than context"=free languages \citep{Shieber85a,Culy85a}. It is now assumed that so"=called
+\emph{mildly context sensitive} grammars are sufficient for analyzing natural languages. Researchers
+working on TAG\indextag are working on developing variants of TAG\indextag that fall into exactly
+this category. Similarly, it was shown for different variants of Stabler's \emph{Minimalist
+  Grammars}\indexmg (see Section~\ref{Abschnitt-MG} and \citealp{Stabler2001a,Stabler2010b}) that they
+have a mildly context"=sensitive capacity \citep{Michaelis2001a-u}. Peter Hellwig's Dependency
+Unification Grammar\is{Dependency Unification Grammar (DUG)} is also mildly context-sensitive
+\citep[\page 595]{Hellwig2003a}. 
+LFG\indexlfg and HPSG\indexhpsg, as well as Chomsky's theory in \emph{Aspects}, fall into the class of Type~0 languages \citep{Berwick82a-u,Johnson88}.
+The question at this point is whether it is an ideal goal to find a descriptive language that has exactly the same power as the object it describes.
+Carl \citet{Pollard96a} once said that it would be odd to claim that certain theories in physics were not adequate simply because they make use of tools
+from mathematics that are too powerful.\footnote{% 
+If physicists required the formalism to constrain the theory
+
+    Editor: Professor Einstein, I'm afraid we can't accept this
+    manuscript of yours on general relativity.
+
+    Einstein: Why? Are the equations wrong?
+
+    Editor: No, but we noticed that your differential equations are
+    expressed in the first-order language of set theory. This is
+    a totally unconstrained formalism! Why, you could have written
+    down ANY set of differential equations! \citep{Pollard96a}
+}
+It is not the descriptive language that should constrain the theory but rather the theory contains the restrictions
+that must hold for the objects in question. This is the view that \citet[\page 277, 280]{Chomsky81b} takes. Also, see 
+\citew[Section~4]{Berwick82a-u},
+\citew[Section~8]{KB82a-u} on LFG and \citew[Section~3.5]{Johnson88} on the \emph{Off-Line Parsability Constraint}\is{Off-Line Parsability}
+in LFG and attribute"=value grammars in general.
+
+There is of course a technical reason to look for a grammar with the lowest level of complexity possible:
+we know that it is easier for computers to processes grammars with lower complexity than more
+complex grammars. To get an idea about the complexity of a task the so"=called `worst case' for the
+relevant computations is determined, that is, it is determined how long a program needs for an input
+of a certain length in the least favorable case to get a result for a grammar from a certain class. This begs the question if the worst case is actually relevant. 
+For example, some grammars that allow discontinuous constituents perform less favorably in the worst case than normal phrase structure grammars 
+that only allow for combinations of continuous strings \citep[Section~8]{Reape91}.
+As I have shown in \citew{Mueller2004b}, a parser\is{parser} that builds up larger units starting from words (a bottom-up parser) is far less
+efficient when processing a grammar assuming a verb movement analysis than is the case for a bottom-up parser that allows for discontinuous constituents.
+This has to do with the fact that verb traces do not contribute any phonological material and a parser cannot locate them without further machinery.
+It is therefore assumed that a verb trace exists in every position in the string and in most cases
+these traces do not contribute to an analysis of the complete input.
+Since the verb trace is not specified with regard to its valence information, it can be combined
+with any material in the sentence, which results in an enormous computational load.
+On the other hand, if one allows discontinuous constituents, then one can do without verb traces and the computational load is thereby reduced.
+In the end, the analysis using discontinuous constituents was eventually discarded for linguistic reasons \citep{Mueller2005c,Mueller2005d,MuellerLehrbuch1,MuellerGS},
+however, the investigation of the parsing behavior of both grammars is still interesting as it shows that worst case properties are not always
+informative.
+
+I will discuss another example of the fact that language"=specific restrictions can restrict the complexity of a grammar:
+\citet[Section~3.2]{GM2007a} assume that Stabler's Minimalist Grammars\indexmg (see
+Section~\ref{Abschnitt-MG}) with extensions for late adjunction and extraposition are actually more powerful than mildly context"=sensitive.
+If one bans extraction from adjuncts\is{extraction!from adjuncts} (\citealp[\page
+46]{FG2002a}) and also assumes the Shortest Move Constraint\is{Shortest Move Constraint (SMC)} (see footnote~\ref{Fn-SMC} on page~\pageref{Fn-SMC}), then one arrives at a grammar that is mildly"=context sensitive
+\citep[\page 178]{GM2007a}.
+The same is true of grammars with the Shortest Move constraint and a constraint for extraction from specifiers.
+
+Whether extraction takes places from a specifier or not depends on the organization of the particular grammar in question.
+In some grammars, all arguments are specifiers\is{specifier} (\citealp[\page 120--123]{Kratzer96a}, also see
+Figure~\ref{Abbildung-Kratzer} on page~\pageref{Abbildung-Kratzer}). A ban on extraction\is{extraction!from specifier} from
+specifiers would imply that extraction out of arguments would be impossible. This is, of course, not
+true in general. Normally, subjects are treated as specifiers (also by \citet[\page 44]{FG2002a}). It is often claimed that subjects
+are islands for extraction (see \citealp[\page 35, \page
+41]{Grewendorf89a}; G.\ Müller: %\citeyear{GMueller91a-u}; \citeyear[\page 36]{GMueller94a}; \citeyear[\page ??]{GMueller95a};
+\citeyear[\page 220]{GMueller96b}; \citeyear[\page 32, \page 163]{GMueller98a};
+% Müller hat dann sowas wie anti-freezing, das dann wie Focus-Movement funktioniert
+%
+%für transitive und nicht"=ergative intransitive Verben und
+\citealp[\page 98]{Sabel99a}; \citealp[\page 422]{Fanselow2001a}).
+Several\label{page-extraction-out-of-subjects} authors have noted, however, that extraction from subjects is possible in German (see \citealp[\page 25]{Duerscheid89a}; \citealp*[\page 173]{Haider93a};
+\citealp{Pafel93b-u}; \citealp[\page 27]{Fortmann96a-u}; \citealp[\page 320]{Suchsland97a};
+\citealp[\page 87]{VS98a}; \citealp[\page 2066]{Ballweg97a}; \citealp[\page 100--101]{Mueller99a}; \citealp[\page 7]{deKuthy2002a}).
+The following data are attested examples:%\todoandrew{gloss und translation}
+\begin{sloppypar}
+\eal
+\ex 
+\gll {}[Von den übrigbleibenden Elementen]$_i$ scheinen [die Determinantien \_$_i$] die wenigsten Klassifizierungsprobleme aufzuwerfen.\footnotemark\\
+     \spacebr{}of the left.over elements seem \spacebr{}the determinants {} the fewest classification.problems to.throw.up\\
+\footnotetext{
+      In the main text of \citew[\page 102]{Engel70a}.
+}
+\glt `Of the remaining elements, the determinants seem to pose the fewest problems for classification.'
+\ex 
+\gll {}[Von den Gefangenen]$_i$ hatte eigentlich [keine \_$_i$] die Nacht der Bomben überleben sollen.\footnotemark\label{bsp-von-den-gefangenen}\\
+	 {}\spacebr{}of the prisoners had actually \spacebr{}none {} the night of.the bombs survive should\\
+\footnotetext{
+        Bernhard Schlink, \emph{Der Vorleser}, Diogenes Taschenbuch 22953, Zürich: Diogenes Verlag, 1997, p.\,102.
+    }
+\glt `None of the prisoners should have actually survived the night of the bombings.'
+\ex 
+\gll {}[Von der HVA]$_i$ hielten sich [etwa 120 Leute \_$_i$] dort in ihren Gebäuden auf.\footnotemark\\
+	 {}\spacebr{}of the HVA held \refl{} \spacebr{}around 120 people {} there in their buildings \prt{}\\
+\footnotetext{
+       Spiegel, 3/1999, p.\,42.
+     }
+\glt `Around 120 people from the HVA stayed there inside their buildings.'
+\ex 
+\gll {}[Aus dem "`Englischen Theater"']$_i$ stehen [zwei Modelle \_$_i$] in den Vitrinen.\footnotemark\\
+	 {}\spacebr{}from the \hspaceThis{"`}English theater stand \spacebr{}two models {} in the cabinets\\
+\footnotetext{
+        Frankfurter Rundschau, quoted from \citew[\page 52]{deKuthy2001a}.
+      }
+\glt `Two models from the `English Theater' are in the cabinets.'
+%Auch er fühlt sich nicht nur daheim im Saarland, sondern bei der Mehrheit der Bevölkerung aufgehoben. "Hier im politischen Berlin ist man manchmal isoliert", gibt Schreiner zu. Dennoch besteht er darauf: 
+\ex 
+\gll {}[Aus der Fraktion]$_i$ stimmten ihm [viele \_$_i$] zu darin, dass die Kaufkraft der Bürger gepäppelt werden müsse, nicht die gute Laune der Wirtschaft.\footnotemark\\
+	 {}\spacebr{}from the faction agreed him \spacebr{}many {} \prt{} there.in that the buying.power of.the citizens boosted become must not the good mood of.the economy\\
+\footnotetext{
+        taz, 16.10.2003, p.\,5.%  taz Themen des Tages 282 Zeilen, ULRIKE WINKELMANN S. 5
+}
+\glt `Many of the fraction agreed with him that it is the buying power of citizens that needed to be increased, not the good spirits of the economy.'
+\ex 
+\gll {}[Vom Erzbischof Carl Theodor Freiherr von Dalberg]$_i$ gibt es beispielsweise [ein Bild \_$_i$]
+        im Stadtarchiv.\footnotemark\label{bsp-von-erzbischof-bilder}\\
+	{}\spacebr{}from archbishop Carl Theodor Freiherr from Dalberg gives it for.example \spacebr{}a picture {} in.the city.archives\\
+\footnotetext{
+        Frankfurter Rundschau, quoted from \citew[\page 7]{deKuthy2002a}.
+}
+\glt `For example, there is a picture of archbishop Carl Theodor Freiherr of Dalberg in the city archives.'
+\ex 
+\gll {}[Gegen die wegen Ehebruchs zum Tod durch Steinigen verurteilte Amina Lawal]$_i$ hat gestern in Nigeria
+    [der zweite Berufungsprozess \_$_i$] begonnen.\footnotemark\\
+	{}\spacebr{}against the because.of adultery to.the death by stoning sentenced Amina Lawal has yesterday in Nigeria \spacebr{}the second appeal.process {} begun\\
+\footnotetext{
+        taz, 28.08.2003, p.\,2.
+    }
+\glt `The second appeal process began yesterday against Amina Lawal, who was sentenced to death by stoning for adultery.'
+\ex 
+\gll {}[Gegen diese Kahlschlagspolitik]$_i$ finden derzeit bundesweit [Proteste und Streiks \_$_i$ ] statt.\footnotemark\\
+	 {}\spacebr{}against this clear.cutting.politics happen at.the.moment statewide \spacebr{}protests and strikes {} {} \prt{}\\
+\footnotetext{
+        Streikaufruf, Universität Bremen, 03.12.2003, p.\,1.
+    }
+\glt `At the moment, there are state-wide protests and strikes against this destructive politics.'
+\ex 
+\gll {}[Von den beiden, die hinzugestoßen sind], hat [einer        \_$_i$ ] eine Hacke, der andere einen Handkarren.\footnotemark\\
+	 {}\spacebr{}of the both that joined are has \spacebr{}one {}    {}  a pickaxe   the other a handcart\\
+\footnotetext{
+        Murakami Haruki, \emph{Hard-boiled Wonderland und das Ende der Welt}, suhrkamp taschenbuch, 3197, 2000,
+        Translation by Annelie Ortmanns and Jürgen Stalph, p.\,414.
+}
+\glt `Of the two that joined, one had a pickaxe and the other a handcart.'
+% Funktionsverbgefüge
+% \ex {}"`Gehen Sie nur. [Um mich] brauchen Sie sich keine Sorgen zu machen."'\footnote{
+%         Murakami Haruki, \emph{Hard-boiled Wonderland und das Ende der Welt}, suhrkamp taschenbuch, 3197, 2000,
+%         Übersetzung Annelie Ortmanns und Jürgen Stalph, p.\,377
+% }
+%% Aus der großen Schar der Athleten sind es nur Einzelne, die das Talent mitbringen, das Glück haben
+%% und i, entscheidenden Moment die Nerven, um tatsächlich eine Medaille zu gewinnen.\footnote{
+%%   Dieter Baumann, taz, 26.08.2004, p.\,14
+%}
+\ex 
+\gll ein Plan, [gegen den]$_i$ sich nun [ein Proteststurm \_$_i$ ] erhebt\footnotemark\\
+     a plan \spacebr{}against which \refl{} now \spacebr{}a storm.of.protests {} {} rises\\
+\footnotetext{
+  taz, 30.12.2004, p.\,6.
+}
+\glt `a plan against which a storm of protests has now risen'
+\ex 
+\gll {}Dagegen$_i$ jedoch regt sich jetzt [Widerstand \_$_i$ ]: [\ldots]\footnotemark\\
+	{}against however rises \refl{} now \spacebr{}resistance {}\\
+\footnotetext{
+  taz, 02.09.2005, p.\,18.%
+}
+\glt `Resistance to this is now rising, however:'
+\ex
+\gll {}[Aus der Radprofiszene]$_i$ kennt ihn [keiner \_$_i$ ] mehr\footnotemark\\
+	 {}\spacebr{}from the cycling.professional.scene knows him \spacebr{}nobody {} {} anymore\\
+\footnotetext{
+  taz, 04.07.2005, p.\,5.
+}
+% Nobody from the professional cycling scene has heard of him anymore.
+\glt `Nobody from the professional cycling scene acts like they know him anymore.'\todostefan{check
+  once taz archive gets online again}
+\ex 
+\gll {}[Über das chinesische Programm der Deutschen Welle] tobt dieser Tage [ein heftiger Streit \_$_i$ ].\footnotemark\\
+     \spacebr{}about the Chinese program of.the Deutsche Welle rages these days \spacebr{}a hefty controversy\\
+\footnotetext{
+ taz, 21.10.2008, p.\,12.
+}
+\glt `Recently, there has been considerable controversy about the Chinese program by the Deutsche Welle.'
+\zl
+\end{sloppypar}
+
+\noindent
+This means that a ban on extraction from specifiers cannot hold for German. As such, it cannot be true for all languages.
+
+We have a situation that is similar to the one with discontinuous constituents: since it is not possible to integrate
+the ban on extraction discussed here into the grammar formalism, it is more powerful than what is required
+for describing natural language. However, the restrictions in actual grammars -- in this case, the restrictions on
+extraction from specifiers in the relevant languages -- ensure that the respective language"=specific grammars have a mildly context"=sensitive
+capacity.\is{capacity!generative|)}\is{complexity class|)}
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

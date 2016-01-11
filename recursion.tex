@@ -1,0 +1,62 @@
+%% -*- coding:utf-8 -*-
+\section{Recursion}
+\label{sec-recursion}
+
+Every\is{recursion|(} theory in this book can deal with self"=embedding in language as it was
+discussed on page~\pageref{ex-that-max-thinks-that-recursion}. The example
+(\ref{ex-that-max-thinks-that-recursion}) is repeated here as (\mex{1}):
+\ea
+\label{ex-that-max-thinks-that-recursion-two}
+that Max thinks [that Julia knows [that Otto claims [that Karl
+suspects [that Richard confirms [that Friederike is laughing]]]]]
+\z
+Most theories
+capture this directly with recursive phrase structure rules or dominance schemata. TAG\indextag is
+special with regard to recursion since recursion is factored out of the trees. The corresponding
+effects are created by an adjunction operation that allows any amount of material to be inserted
+into trees.  It is sometimes claimed that Construction Grammar\indexcxg cannot capture the existence
+of recursive structure in natural language (\eg \citealp[\page 269]{Leiss2009a}).  This impression
+is understandable since many analyses are extremely surface"=oriented. For example, one often talks
+of a [Sbj TrVerb Obj] construction. However, the grammars in question also become recursive as soon
+as they contain a sentence embedding or relative clause construction. A sentence embedding
+construction could have the form [Sbj that-Verb that-S], where a that-Verb is one that can take
+a sentential complement and that-S stands for the respective complement. A \emph{that}"=clause can then be inserted
+into the that-S slot. Since this \emph{that}"=clause can also be the result of the application of
+this construction, the grammar is able to produce recursive structures such as those in (\mex{1}):
+
+\ea
+Otto claims [\sub{that-S} that Karl suspects [\sub{that-S} that Richard sleeps]].
+\z
+In (\mex{0}), both \emph{Karl suspects that Richard sleeps} and the entire clause are instances of the [Sbj
+that-Verb that-S] construction. The entire clause therefore contains an embedded subpart that is licensed by
+the same construction as the clause itself. (\mex{0}) also contains a constituent of the category
+\emph{that}-S that is embedded inside of \emph{that}-S. For more on recursion and self"=embedding\is{self"=embedding} in Construction Grammar, see \citew{Verhagen2010a}.
+
+Similarly, every Construction Grammar that allows a noun to combine with a genitive\is{genitive} noun phrase also allows
+for recursive structures. The construction in question could have the form [Det N
+NP[gen] ] or [ N NP[gen] ]. The [Det N NP[gen] ] construction licenses structures such as (\mex{1}):
+\ea
+\gll [\sub{NP} des Kragens [\sub{NP} des Mantels [\sub{NP} der Vorsitzenden]]]\\
+	{} the collar {} of.the coat {} of.the chairwoman\\
+\glt `the collar of the coat of the chairwoman'
+\z
+\citet{Jurafsky96a} and \citet*{BLT2009a} use probabilistic context"=free grammars\is{context"=free grammar!probabilistic (PCFG)} (PCFG) for a Construction Grammar parser
+with a focus on psycholinguistic plausibility and modeling of acquisition. Context"=free grammars
+have no problems with self"=embedding\is{self"=embedding} structures like those in (\mex{0}) and thus this kind
+of Construction Grammar itself does not encounter any problems with self"=embedding.
+
+\citet[\page 192]{Goldberg95a} assumes that the resultative construction\is{construction!resultative} for English\il{English} has the following
+form:
+\ea
+{}[SUBJ [V OBJ OBL]] 
+\z
+This corresponds to a complex structure as assumed for elementary trees in TAG. LTAG differs from Goldberg's approach in that every structure requires a lexical
+anchor, that is, for example (\mex{0}), the verb would have to be fixed in LTAG. But in Goldberg's analysis, verbs can be inserted into independently
+existing constructions (see Section~\ref{Abschnitt-Stoepselei}). In TAG publications, it is often emphasized that elementary trees do not contain any recursion.
+The entire grammar is recursive however, since additional elements can be added to the tree using adjunction and -- as (\mex{-2}) and
+(\mex{-1}) show -- insertion into substitution nodes can also create recursive structures.
+\is{recursion|)}
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

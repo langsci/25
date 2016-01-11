@@ -1,0 +1,69 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=lnls,
+                ,isbn=978-3-944675-21-3,
+                ,url=http://langsci-press.org/catalog/book/14,
+	        ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+                ,copyright=CC-BY-ND
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,../LSP/lsp-styles/lsp-forest-setup,makros.2e}
+
+\usetikzlibrary{tikzmark}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+\oneline{%
+\begin{forest}
+sn edges, for tree={l sep= 6ex}
+[V{[\subcat \sliste{ \spirit{1}, \spirit{2} }]}
+	[\ibox{1} NP{[\textit{nom}]}
+		[er;he]]
+	[V{[\subcat \sliste{ \ibox{1}, \spirit{2} } ]}
+		[\ibox{2} NP{[\textit{acc}]}
+			[die Äpfel;the apples,triangle]]
+		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} } ]}
+			[\subnode{ap1}{AP}
+				[ungewaschen;unwashed]]
+			[V{[\subcat \sliste{ \subnode{arg11}{\ibox{1}}, \subnode{arg12}{\ibox{2}} }]}
+				[isst;eats]]]]]
+\end{forest}
+\hspace{1em}
+\begin{forest}
+sn edges, for tree={l sep= 6ex}
+[V{[\subcat \sliste{ \spirit{1}, \spirit{2} } ]}
+	[\ibox{1} NP{[\textit{nom}]}
+		[er;he]]
+	[V{[\subcat \sliste{ \ibox{1}, \spirit{2} } ]}
+		[\subnode{ap2}{AP}
+			[ungewaschen;unwashed]]
+		[V{[\subcat \sliste{ \subnode{arg21}{\ibox{1}}, \spirit{2} } ]}
+			[\ibox{2} NP{[\textit{acc}]}
+				[die Äpfel;the apples,triangle]]
+			[V{[\subcat \sliste{ \ibox{1}, \ibox{2} } ]}
+				[isst;eats]]]]]
+\end{forest}
+% This has to be inside of the scaling
+    %% \begin{tikzpicture}[overlay,remember picture]
+    %% %% this works with tikzmark
+    %% \draw[->, bend angle=40, bend left] ($(pic cs:ap1)+(1ex,2ex)$) to($(pic cs:arg11)+(1ex,2.5ex)$);
+    %% \draw[->, bend angle=40, bend left] ($(pic cs:ap1)+(1ex,2ex)$) to($(pic cs:arg12)+(1ex,2.5ex)$); % 1ex links, 2ex hoch
+    %% %
+    %% \draw[->, bend angle=40, bend left] ($(pic cs:ap2)+(1ex,2ex)$) to($(pic cs:arg21)+(1ex,2.5ex)$);
+    %% \end{tikzpicture}
+% somehow it stopped working
+%% this used to work with subnode in texlive 2013 but is broken now
+\begin{tikzpicture}[overlay,remember picture] 
+\draw[->, bend angle=40, bend left] (ap1.north) to (arg11.north);
+\draw[->, bend angle=40, bend left] (ap1.north) to (arg12.north); 
+%
+\draw[->, bend angle=40, bend left] (ap2.north) to (arg21.north);
+\end{tikzpicture}
+}
+\end{document}

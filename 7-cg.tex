@@ -1,0 +1,912 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Categorial Grammar}
+\label{Kapitel-CG}\label{chap-CG}
+
+Categorial Grammar\is{Categorial Grammar (CG)|(} is the second oldest of the approaches discussed in this book. It was developed in the 30s by the Polish logician
+\href{http://en.wikipedia.org/wiki/Kazimierz_Ajdukiewicz}{Kazimierz Ajdukiewicz}
+\citep{Ajdukiewicz35a-u}. Since
+syntactic and semantic descriptions are tightly connected and all syntactic combinations correspond
+to semantic ones, Categorial Grammar is popular amongst logicians and semanticists.
+Some stellar works in the field of semantics are those of Richard Montague \citeyearpar{Montague74a-u}.
+
+Other important works come from David Dowty in Columbus, Ohio \citeyearpar{Dowty79a}, Michael
+Moortgat in Utrecht \citeyearpar{Moortgat89a-u}, Glyn Morrill in Barcelona
+\citeyearpar{Morrill94a-u}, Bob Carpenter in New York \citeyearpar{Carpenter98a-u} and Mark Steedman
+in Edinburgh \citeyearpar{Steedman91a,Steedman97a,Steedman2000a-u}. A large fragment for German using Montague Grammar has been developed by \citew{Stechow79}.
+The 2569"=page grammar of the \emph{Institut für Deutsche Sprache} in Mannheim \citep*{IDS97} contains Categorial Grammar analyses in the relevant chapters.
+\citet{Fanselow81a-u} worked on morphology in the framework of Montague Grammar.  \citet{Uszkoreit86d},
+\citet{Karttunen86a,Karttunen89a-u} and \citet*{CKZ88a} developed combinations of unification"=based approaches and Categorial Grammar.
+
+The basic operations for combining linguistic objects are rather simple and well"=understood, so
+that it is no surprise that there are many systems for the development and processing of Categorial Grammars
+\citep*{YK90a-u,Carpenter1994a-u,BvN94a-u,Llore1995a-u,Koenig99a-u,Moot2002a-u,WB2003a-u,BCPW2007a,Morrill2012a}. An
+important contribution has been made by Mark Steedman's group (see for instance \citealp*{CHS2002a-u,CC2007a-u}).
+
+%% , aber auch in Deutschland gab und
+%% gibt es computerlinguistische Gruppen, die in diesem theoretischen Rahmen arbeiten
+%% \citep*{Uszkoreit86d,Koenig99a-u,VHE2003a}.
+%% MCGTOOLS: Llore1995a-u
+Implemented fragments exist for the following languages:
+\begin{itemize}
+\item German \citep*{Uszkoreit86d,Koenig99a-u,VHE2003a,VTBS2011a}
+\item English\il{English} \citep{Villavicencio2002a,Baldridge2002a-u,Beavers2002a-u,Beavers2004a-u}
+% CMZ86a ist ein Report, den gibt es aber nirgends
+\item Finish\il{Finnish} \citep{Karttunen89a-u}
+\item French\il{French} \citep*{BBCG87a-u}
+\item Dutch\il{Dutch} \citep{BvN94a-u,Baldridge2002a-u}
+\item Tagalog\il{Tagalog} \citep{Baldridge2002a-u}
+\item Turkish\il{Turkish} \citep{Hoffmann95a-u,Baldridge2002a-u}
+\end{itemize}
+In addition, \citet*[\page 15]{BCPW2007a} mention an implementation for Classical Arabic\il{Arabic}.
+
+Some of the systems for the processing of Categorial Grammars have been augmented by probabilistic\is{statistics}
+components, so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some systems can derive lexical items from corpora and \citet{Briscoe2000a} and \citet{Villavicencio2002a} use statistical
+information in their UG"=based\is{Universal Grammar (UG)} language acquisition models.\is{language acquisition}
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
+
+
+\section{General remarks on the representational format}
+
+
+\subsection{Representation of valence information}
+\label{sec-forward-backward-application}
+
+In\is{valence|(} Categorial Grammar, complex categories replace the \subcatf that is used in GPSG\indexgpsg to ensure that a head can only be used with
+suitable grammatical rules. Simple phrase structure rules\is{phrase structure grammar} can be replaced with complex categories as follows:\is{/|(} 
+
+\ea
+\label{LE-CG}
+\begin{tabular}[t]{@{}l@{\hspace{1cm}}l}
+Rule                              & Category~in~the~lexicon\\
+vp $\to$ v(ditrans) np~np         & (vp/np)/np  \\
+vp $\to$ v(trans) np              & vp/np  \\
+vp $\to$ v(np\_and\_pp) np~pp(to) & (vp/pp)/np  \\
+\end{tabular}
+\z
+vp/np stands for something that needs an np in order for it to form a vp.
+
+In Categorial Grammar, there are only a few very abstract rules. One of these is forward application, also referred to as the multiplication rule:
+\ea
+\label{vorwaertsapplikation}\label{forward-application}
+forward application\is{forward application}:\\
+X/Y $*$ Y = X
+\z
+This rule combines an X looking for a Y with a Y and requires that Y occurs to the right of X/Y.
+The result of this combination is an X that no longer requires a Y. X/Y is called the \emph{functor}\is{functor}
+and Y is the \emph{argument}\is{argument} of the functor.
+
+Valence is encoded only once in Categorial Grammar, as in \gbt, in the lexicon. In GPSG\indexgpsg, valence information was present in grammatical rules
+and in the \subcatf of the lexical entry.
+
+Figure~\vref{abb-cg-transitives-Verb} shows how a lexical entry for a transitive verb is combined
+with its object.\todostefan{Die Linien sind zu hoch im vergleich zum $<$}
+\begin{figure}
+\centerline{%
+\deriv{2}{
+%\begin{tabular}{@{}cc@{}}
+chased       & Mary\\
+%\uline{1}    & \uline{1} \\
+\hr & \hr\\
+vp/np   & np\\
+\multicolumn{2}{@{}c@{}}{\forwardapp} \\
+\multicolumn{2}{@{}c@{}}{vp}\\
+%\cgmc<2->{2}{vp}\\
+%\end{tabular}
+}
+}
+\caption{\label{abb-cg-transitives-Verb}Combination of a verb and its object (preliminary)}
+\end{figure}%
+A derivation in CG is basically a binary branching tree, it is however mostly represented as follows:
+an arrow under a pair of categories indicates that these have been combined via a combinatorial rule. The direction of this arrow indicates the direction
+of this combinaton. The result is given beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to Figure~\ref{abb-cg-transitives-Verb}.
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[vp
+	[vp/np
+		[chased]]
+	[np
+		[Mary]]]
+\end{forest}
+}
+\caption{\label{Abb-CG-als-Baum}Derivation in Figure~\ref{abb-cg-transitives-Verb} as a tree diagram}
+\end{figure}%
+One usually assumes left associativity\is{left associativity}
+for `/', that is, (vp/pp)/np = vp/pp/np.\is{/|)}
+
+If we look at the lexical entries in (\ref{LE-CG}), it becomes apparent that the category v does not appear. The lexicon only determines what the product of
+combination of a lexical entry with its arguments is. The symbol for vp can also be eliminated: an (English) vp is something that requires an NP to its left in
+order to form a complete sentence. This\is{$\backslash$|(} can be represented as s$\backslash$np.
+Using the rule for backward application, it is possible to compute derivations such as the one in Figure~\vref{abb-the-cat-chased-Mary}.\is{valence|)}
+\ea
+Backward application\is{backward application}:\\
+Y $*$ X$\backslash$Y = X 
+\z
+
+\begin{figure}
+\centerline{%
+\deriv{4}{
+the  & cat & chased         & Mary\\
+\hr  & \hr & \hr            & \hr \\
+np/n & n   & (s\bs np)/np   & np\\
+\multicolumn{2}{@{}c}{\forwardapp} & \multicolumn{2}{c@{}}{\forwardapp}\\
+\multicolumn{2}{c}{{np}}             & \multicolumn{2}{c@{}}{{s\bs np}}\\
+\multicolumn{4}{@{}c@{}}{\backwardapp}\\
+\multicolumn{4}{c@{}}{{s}}\\
+}}
+\caption{\label{abb-the-cat-chased-Mary}Analysis of a sentence with a transitive verb}
+\end{figure}%
+
+\noindent
+In Categorial Grammar, there is no explicit difference made between phrases and words: an intransitive verb is described in the same way as a verb phrase with an
+object:  s$\backslash$np. In the same way, proper nouns are complete noun phrases, which are assigned the symbol np.\is{$\backslash$|)}
+
+\subsection{Semantics}
+
+As already mentioned, Categorial Grammar is particularly popular among semanticists as syntactic
+combinations always result in parallel semantic combinations and even for complex combinations such
+as those we will discuss in more detail in the following sections, there is a precise definition of
+meaning composition.
+In the following, we will take a closer look at the representational format discussed in \citet[Section~2.1.2]{Steedman97a}.
+
+Steedman proposes the following lexical entry for the verb \emph{eats}:\footnote{
+ I have adapted his notation to correspond to the one used in this book.
+}
+\ea
+eats := (s: \relation{eat}(x, y)\bs np\sub{3S}:x)/np:y
+\z
+In (\mex{0}), the meaning of each category is given after the colon. Since nothing is known about
+the meaning of the arguments in the lexical entry of \emph{eat},
+the meaning is represented by the variables $x$ and $y$. When the verb combines with an NP, the denotation of the NP is inserted. An example is given in (\mex{1}):\footnote{
+The assumption that \emph{apples} means \relation{apples} and not \relation{apples}(z) minus the quantifier contribution is a simplification here.
+}
+\ea
+\deriv{2}{
+(s: eat'(x, y)\bs np_{3S}:x)/np:y & np: apples'\\
+\multicolumn{2}{@{}c@{}}{\forwardapp}\\
+s: eat'(x, apples')\bs np_{3S}:x\\
+}
+\z
+When combining a functor with an argument, it must be ensured that the argument fits the functor, that is, it must be unifiable\is{unification} with it
+(for more on unification see Section~\ref{sec-unifikation}). The unification of np:y with np: \relation{apples} results in np: \relation{apples} since \relation{apples}
+is more specific than the variable y. Apart from its occurance in the term np:y, y occurs in the description of the verb in another position (s:
+\relation{eat}(x, y)\bs np\sub{3S}:x) and therefore also receives the value \relation{apples}
+there. Thus, the result of this combination is s: \relation{eat}(x, \relation{apples})\bs np$_{3S}$:x 
+as shown in (\mex{0}).
+
+Steedman notes that this notation becomes less readable with more complex derivations and instead uses the more standard $\lambda$"=notation:
+\ea
+eats := (s\bs np\sub{3S})/np: $\lambda y.\lambda x.\relation{eat}(x, y)$
+\z
+Lambdas are used to allow access to open positions in complex semantic representations (see Section~\ref{sec-PSG-Semantik}). A semantic representation such as
+$\lambda
+y.\lambda x.\relation{eat}(x, y)$ can be combined with the representation of \emph{apples} by
+removing the first lambda expression and inserting the denotation of \emph{apples}
+in all the positions where the corresponding variable (in this case, y) appears (see Section~\ref{sec-PSG-Semantik} for more on this point):
+\ea
+$\lambda y.\lambda x.eat'(x, y)$ \relation{apples}\\
+$\lambda x.eat'(x, apples')$
+\z
+This removal of lambda expressions is called $\beta$"=reduction\is{beta"=reduction@$\beta$"=reduction}\label{Seite-beta-Reduktion}.
+
+If we use the notation in (\mex{-1}), the combinatorial rules must be modified as follows:
+\ea
+\begin{tabular}[t]{@{}l@{ * }l@{ = }c}
+X/Y:f & Y:a & X: f a\\
+Y:a & X\bs Y:f & X: f a\\ 
+\end{tabular}
+\z
+In such rules, the semantic contribution of the argument (a) is written after the semantic denotation of the functor (f). The open positions in the denotation of
+the functor are represented using lambdas. The argument can be combined with the first lambda expression using $\beta$-reduction.
+
+Figure~\vref{Abb-Semantik-CG} shows the derivation of a simple sentence with a transitive verb.
+\begin{figure}
+\centerline{%
+\deriv{3}{
+Jacob & eats         & apples\\
+\hr & \hr          & \hr \\
+np:\relation{jacob}  & (s\bs np)/np: \lambda y.\lambda x.eat'(x, y) & np:apples'\\
+         & \multicolumn{2}{c@{}}{\forwardapp}\\
+         & \multicolumn{2}{c@{}}{\begin{tabular}[t]{@{}l@{}l@{}}
+                              s\bs np&: $\lambda y.\lambda x.eat'(x, y)\; apples'$\\
+                                     &= $\lambda x.eat'(x, apples')$\\
+                              \end{tabular}}\\
+\multicolumn{3}{@{}c@{}}{\backwardapp}\\
+\multicolumn{3}{c@{}}{\begin{tabular}[t]{@{}l@{}l@{}}
+                    s&: $\lambda x.eat'(x, apples')\; jacob'$\\
+                     &= $eat'(jacob', apples')$\\
+                              \end{tabular}}\\
+}}
+\caption{\label{Abb-Semantik-CG}Meaning composition in Categorial Grammar}
+\end{figure}%
+After forward and backward application, $\beta$"=reduction is immediately applied.
+
+\subsection{Adjuncts}
+
+As\is{adjunct|(} noted in Section~\ref{sec-intro-arg-adj}, adjuncts are optional. In phrase
+structure grammars, this can be captured for example by rules that have a certain element (for
+instance a VP) on the left"=hand side of the rule and the same element and an adjunct on the
+right"=hand side of the rule. Since the symbol on the left is the same as the one on the right, this rule can be
+applied arbitrarily many times. (\mex{1}) shows some examples of this:
+\eal
+\ex VP $\to$ VP~PP
+\ex Noun $\to$ Noun~PP
+\zl
+One can analyze an arbitrary amount of PPs following a VP or noun using these rules.
+
+In Categorial Grammar, adjuncts have the following general form: X\bs X or X/X.
+Adjectives are modifiers, which must occur before the noun. They have the category n/n.
+Modifiers occurring after nouns (prepositional phrases and relative clauses) have the category
+n\bs n instead.\footnote{
+	In Categorial Grammar, there is no category symbol like \xbar for intermediate projections of
+	\xbart. So rather than assuming \nbar/\nbar, CG uses n/n. See Exercise~\ref{ue-Xbar-CG}.
+} For VP-modifiers, X is replaced by the symbol for the VP (s\bs np) and this yields the relatively complex expression (s\bs np)\bs (s\bs np).
+Adverbials in English are VP"=modifiers and have this category. Prepositions that can be used in a PP modifying a verb require an NP in order to
+form a complete PP and therefore have the category ((s\bs np)\bs (s\bs
+np))/np. Figure~\vref{abb-CG-Adjunktion} gives an example of an adverb (\emph{quickly}) and a preposition (\emph{round}). 
+%
+\begin{figure}
+\oneline{%
+\deriv{9}{
+The  & small & cat & chased       & Mary & quickly                & round                     & the & garden\\
+\hr  & \hr   & \hr & \hr          & \hr  & \hr                    & \hr                       & \hr & \hr\\
+np/n & n/n   & n   & (s\bs np)/np & np   & (s\bs np)\bs (s\bs np) & (s\bs np)\bs (s\bs np)/np & np/n & n\\
+     & \multicolumn{2}{c}{\forwardapp} & \multicolumn{2}{c}{\forwardapp}\\
+     & \multicolumn{2}{c}{n}           & \multicolumn{2}{c}{s\bs np}\\
+\multicolumn{3}{@{}c}{\forwardapp}        & \multicolumn{3}{c}{\backwardapp}\\
+\multicolumn{3}{@{}c}{np}                 & \multicolumn{3}{c}{s\bs np}\\
+&&&&&&&\multicolumn{2}{c@{}}{\forwardapp}\\
+&&&&&&&\multicolumn{2}{c@{}}{np}\\
+&&&&&&\multicolumn{3}{c@{}}{\forwardapp}\\
+&&&&&&\multicolumn{3}{c@{}}{(s\bs np)\bs (s\bs np)}\\
+&&&\multicolumn{6}{c@{}}{\backwardapp}\\
+&&&\multicolumn{6}{c@{}}{(s\bs np)}\\
+\multicolumn{9}{@{}c@{}}{\backwardapp}\\
+\multicolumn{9}{@{}c@{}}{s}\\
+}}
+\caption{\label{abb-CG-Adjunktion}Example of an analysis with adjuncts in Categorial Grammar}
+\end{figure}%
+Note that the result of the combination of \emph{round} and \emph{the garden} corresponds to the category of the adverb ((s\bs np)\bs (s\bs np)).
+In \gbt, adverbs and prepositions were also placed into a single class (see page~\pageref{Seite-Adverbien-PP}). This overarching class was then divided into subclasses
+based on the valence of the elements in question.
+\is{adjunct|)}
+
+\section{Passive}
+
+In Categorial Grammar, the passive\is{passive|(} is analyzed by means of lexical rule (\citealp[\page412]{Dowty78a};
+\citealp[Section~3.4]{Dowty2003a}). (\mex{1}) shows the rule in \citew[\page 49]{Dowty2003a}.
+\ea
+\label{Lexikonregel-Passiv-CG}
+\begin{tabular}[t]{@{}ll@{~$\to$~}l@{}}
+Syntax:   & $\alpha \in$ (s\bs np)/np & PST-PART($\alpha$) $\in$ PstP/np$_{by}$\\
+Semantics: & $\alpha'$                 & $\lambda y\lambda x \alpha'(y) (x)$
+\end{tabular}
+\z
+Here, PstP stands for past participle and np$_{by}$ is an abbreviation for a verb phrase modifier of
+the form vp\bs vp or rather (s\bs np)\bs (s\bs np).
+The rule says the following: if a word belongs to the set of words with the category (s\bs
+np)/np, then the word with past participle morphology also belongs in the set of words with the category PstP/np$_{by}$.
+
+(\mex{1}a) shows the lexical entry for the transitive verb \emph{touch} and (\mex{1}b) the result of rule application:
+\eal
+\ex touch:   (s\bs np)/np
+\ex touched: PstP/np$_{by}$ 
+\zl
+The auxiliary \emph{was} has the category (s\bs np)/PstP and the preposition \emph{by} has the category  np$_{by}$/np, or its unabbreviated form ((s\bs np)\bs (s\bs np))/np.
+In this way, (\mex{1}) can be analyzed as in Figure~\vref{abb-CG-Passiv}.
+\ea
+John was touched by Mary.
+\z
+\begin{figure}
+\centerline{%
+\deriv{5}{%
+John & was            & touched      & by         & Mary.\\
+\hr  & \hr            & \hr_{\mathrm{LR}}  & \hr        & \hr\\
+np   & (s\bs np)/\mathit{PstP} & \mathit{PstP}/np_{by} & np_{by}/np & np\\
+     &                &              & \multicolumn{2}{c@{}}{\forwardapp}\\
+     &                &              & \multicolumn{2}{c@{}}{np_{by}}\\
+     &                & \multicolumn{3}{c@{}}{\forwardapp}\\
+     &                & \multicolumn{3}{c@{}}{\mathit{PstP}}\\
+     & \multicolumn{4}{c@{}}{\forwardapp}\\
+     & \multicolumn{4}{c@{}}{s\bs np}\\
+\multicolumn{5}{@{}c@{}}{\backwardapp}\\
+\multicolumn{5}{@{}c@{}}{s}\\
+}}
+\caption{\label{abb-CG-Passiv}Analysis of the passive using a lexical rule}
+\end{figure}%
+% Der semantische Beitrag von \emph{touch} ist $\lambda u\lambda v\relation{touch}(v,u)$. Der
+% semantische Beitrag ($\alpha'$) wird durch den semantischen Teil der Regel in
+% (\ref{Lexikonregel-Passiv-CG}) auf $\lambda y\lambda x \alpha'(x) (y)$ abgebildet. Setze man in
+% diesen Ausdruck für $\alpha'$ die Bedeutung von \emph{touch} ein erhält man den Ausdruck in
+% (\mex{1}a) und nach den entsprechenden Kombinations- und Reduktionsschritten einen Ausdruck, der der
+% Bedeutung des Passivsatzes entspricht.
+%\note{Bedeutung von touch muss andersrum sein -> Analyse geht  nicht auf}
+% \eal
+% \settowidth\jamwidth{(Kombination mit \relation{john})}
+% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (y)$ 
+% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (y)$ \relation{mary}      \jambox{(Kombination mit \relation{mary})}
+% \ex $\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (\relation{mary})$                 \jambox{($\beta$"=Reduktion)}
+% \ex $\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (\relation{mary})$ \relation{john} \jambox{(Kombination mit \relation{john})}
+% \ex $\lambda u\lambda v~\relation{touch}(u,v)(\relation{john}) (\relation{mary})$             \jambox{($\beta$"=Reduktion)}
+% \ex $\lambda v~\relation{touch}(\relation{mary},v)(\relation{john})$                          \jambox{($\beta$"=Reduktion)}
+% \ex $\relation{touch}(\relation{mary},\relation{john})$                                       \jambox{($\beta$"=Reduktion)}
+% \zl
+% geht nicht auf
+% \eal
+% \settowidth\jamwidth{(Kombination mit \relation{john})}
+% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(v,u)(y) (x)$ 
+% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(v,u)(y) (x)$ \relation{mary}      \jambox{(Kombination mit \relation{mary})}
+% \ex $\lambda x \lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (x)$                 \jambox{($\beta$"=Reduktion)}
+% \ex $\lambda x \lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (x)$ \relation{john} \jambox{(Kombination mit \relation{john})}
+% \ex $\lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (\relation{john})$             \jambox{($\beta$"=Reduktion)}
+% \ex $\lambda v~\relation{touch}(\relation{mary},v)(\relation{john})$                          \jambox{($\beta$"=Reduktion)}
+% \ex $\relation{touch}(\relation{mary},\relation{john})$                                       \jambox{($\beta$"=Reduktion)}
+% \zl
+
+\noindent
+The question as to how to analyze the pair of sentences in (\mex{1}) still remains unanswered.\footnote{
+	Thanks to Roland Sch\"{a}fer\aimention{Roland Sch{\"a}fer} (p.\,m., 2009) for pointing out these data to me.
+}
+\eal
+\ex He gave the book to Mary.
+\ex The book was given to Mary.
+\zl
+\emph{gave} has the category ((s\bs np)/pp)/np, that is, the verb must first combine with an NP (\emph{the
+  book}) and a PP (\emph{to Mary}) before it can be combined with the subject. The problem is that the rule in (\ref{Lexikonregel-Passiv-CG}) cannot be applied to \emph{gave}
+  with a \emph{to}-PP since the pp argument is sandwiched between both np arguments in ((s\bs np)/pp)/np. One would have to generalize the rule in (\ref{Lexikonregel-Passiv-CG}) somehow
+  by introducing new technical means\footnote{
+  Baldridge\aimention{Jason Baldridge} (p.\,M.\ 2010) suggests using regular expressions in a general lexical rule for passive.%
+ }
+  or assume additional rules for cases such as (\mex{0}b).\is{passive|)}
+
+\section{Verb position}
+\label{sec-Verbstellung-CG-Steedman}
+
+\mbox{}\citet[\page 159]{Steedman2000a-u}\is{verb position|(} proposed an analysis with variable branching for Dutch\il{Dutch}, that is, there are two lexical entries for 
+ \emph{at} `eat': an initial one with its arguments to the right, and another occupying final position with its arguments to its left.
+
+\eal
+\ex \emph{at} `eat' in verb-final position: (s\sub{+SUB}$\backslash$np)$\backslash$np
+\ex \emph{at} `eat' in verb-initial position: (s\sub{$-$SUB}/np)/np
+\zl
+Steedman uses the feature \textsc{sub} to differentiate between subordinate and non-subordinate sentences. Both lexical items are related via lexical rules.\is{lexical rule}
+
+One should note here that the NPs are combined with the verb in different orders. The normal order is:
+
+\eal
+\label{CG-Verbbewegung}
+\ex in verb-final position: (s\sub{+SUB}$\backslash$np[nom])$\backslash$np[acc]
+\ex in verb-initial position: (s\sub{$-$SUB}/np[acc])/np[nom]
+\zl
+The corresponding derivations for German sentences with a bivalent verb are shown in Figures~\ref{Abbildung-CG-der-Mann-der-Frau-das-Buch-gibt}
+and~\ref{Abbildung-CG-gibt-der-Mann-der-Frau-das-Buch}.
+
+\begin{figure}
+\centerline{%
+\deriv{3}{%
+er      & ihn   & isst\\
+\hr     & \hr   & \hr \\
+np[nom] & np[acc]     & (s_{+\mathrm{SUB}}\bs np[nom]) \bs np[acc]\\
+&\mc{2}{c@{}}{\backwardapp}\\
+&\mc{2}{c@{}}{s_{+\mathrm{SUB}}\bs np[nom]}\\
+\mc{3}{@{}c@{}}{\backwardapp}\\
+\mc{3}{@{}c@{}}{s_{+\mathrm{SUB}}}\\
+}}
+\caption{\label{Abbildung-CG-der-Mann-der-Frau-das-Buch-gibt}Analysis of verb-final sentences following Steedman}
+\end{figure}%
+\begin{figure}
+\centerline{%
+\deriv{3}{%
+isst & er  & ihn \\
+\hr  & \hr & \hr    \\
+((s_{-\mathrm{SUB}}/np[acc])/np[nom]& np[nom]    & np[acc]      \\
+\mc{2}{@{}c}{\forwardapp}\\
+\mc{2}{@{}c}{s_{-\mathrm{SUB}}/np[acc]}\\
+\mc{3}{@{}c@{}}{\forwardapp}\\
+\mc{3}{@{}c@{}}{s_{-\mathrm{SUB}}}\\
+}}
+\caption{\label{Abbildung-CG-gibt-der-Mann-der-Frau-das-Buch}Analysis of verb-initial sentences following Steedman}
+\end{figure}%
+In Figure~\ref{Abbildung-CG-der-Mann-der-Frau-das-Buch-gibt} the verb is first combined with an
+accusative object, whereas in Figure~\ref{Abbildung-CG-gibt-der-Mann-der-Frau-das-Buch}, the verb is first combined with the subject. For criticism of these kinds of analyses
+with variable branching, see \citew{Netter92} and \citew{Mueller2005c,MuellerGS}.
+
+
+\citet{Jacobs91a} developed an analysis which corresponds to the verb movement analysis in GB\indexgb. He assumes verb-final structures, that is, there is a lexical entry for verbs
+where arguments are selected to the left of the verb. A transitive verb would therefore have the
+entry in (\mex{1}a). Additionally, there is a trace in verb-final position that requires the
+arguments of the verb and the verb itself in initial position. (\mex{1}b) shows what the verb trace
+looks like for a transitive verb in initial position: 
+\eal
+\ex Verb in final position:\\
+    (s\bs np[nom])\bs np[acc]
+\ex Verb trace for the analysis of verb-first:\\
+    ((s\bs ((s\bs np[nom])\bs np[acc]))\bs np[nom])\bs np[acc]
+\zl
+The entry for the verb trace is very complex. It is probably simpler to examine the analysis in Figure~\vref{Abbildung-CG-isst-der-junge-den-kuchen-jacobs}.
+
+\begin{figure}
+\oneline{%
+%\begin{sideways}%
+\deriv{4}{%
+isst & er  & ihn & \_\\
+\hr & \hr  & \hr & \hr \\
+(s\bs np[nom]) \bs np[acc]    & np[nom] & np[acc]      & (((s\bs (s\bs np[nom]) \bs np[acc])\bs np[nom]) \bs np[acc]\\
+&&\mc{2}{c@{}}{\backwardapp}\\
+&&\mc{2}{c@{}}{(s\bs (s\bs np[nom]) \bs np[acc])\bs np[nom]}\\
+&\mc{3}{c@{}}{\backwardapp}\\
+&\mc{3}{c@{}}{s\bs ((s\bs np[nom]) \bs np[acc])}\\
+\mc{4}{@{}c@{}}{\backwardapp}\\
+\mc{4}{@{}c@{}}{s}\\
+}
+%\end{sideways}
+}
+\caption{\label{Abbildung-CG-isst-der-junge-den-kuchen-jacobs}Analysis of verb-initial sentences following \citet{Jacobs91a}}
+\end{figure}%
+The trace is the head in the entire analysis: it is first combined with the accusative object and then with the subject. In a final step,
+it is combined with the transitive verb in initial-position.\footnote{ See \citew{Netter92} for a similar analysis in HPSG\indexhpsg.
+} 
+A problem with this kind of analysis is that the verb \emph{isst} `eats', as well as \emph{er} `he' and
+\emph{ihn} `him'/`it', are arguments of the verb trace in (\mex{1}).
+\ea
+\gll Morgen [isst [er [ihn \_]]]\\
+	 tomorrow \spacebr{}eats \spacebr{}he \spacebr{}him\\
+\glt `He will eat it/him tomorrow.'
+\z
+Since adjuncts can occur before, after or between arguments of the verb in German, one would expect that \emph{morgen} `tomorrow' can occur before the verb
+\emph{isst}, since \emph{isst} is just a normal argument of the verbal trace in final position. As adjuncts do not change the categorial status of a projection, the phrase \emph{morgen isst er ihn} `tomorrow he eats him' should be able to
+occur in the same positions as \emph{isst er ihn}. This is not the case, however. If we replace
+\emph{isst er ihn} by \emph{morgen isst er ihn} in (\mex{1}a) the result is (\mex{1}b), which is ungrammatical.
+\eal
+\ex[]{
+\gll Deshalb isst er ihn.\\
+     therefore eats he him\\
+\glt `Therefore he eats it/him.'
+}
+\ex[*]{
+\gll Deshalb morgen isst er ihn.\\
+	 therefore tomorrow eats he him\\
+}
+\zl
+%Normalerweise geht man davon aus, dass das \vf durch Voranstellung einer Konstituente besetzt wird
+%und nicht durch ein
+An approach which avoids this problem comes from \citet{KW91a} (see
+Section~\ref{Abschnitt-Verbstellung-HPSG}). Here, the authors assume that there is a verb in initial
+position which selects a projection of the verb trace. If adverbials are only combined with verbs in
+final-position, then a direct combination of \emph{morgen} `tomorrow' and \emph{isst er ihn} `eats he
+it' is ruled out. If one assumes that the verb in first-position is the functor, then it is possible to capture the
+parallels between complementizers\is{complementizer} and verbs in initial position
+\citep{Hoehle97a}: finite verbs in initial position differ from complementizers only in requiring
+a projection of a verb trace, whereas complementizers require projections of overt verbs: 
+\eal
+\ex 
+\gll dass [er ihn isst]\\
+     that \spacebr{}he it eats\\
+\ex 
+\gll Isst [er ihn \_ ]\\
+     eats \spacebr{}he it\\
+\zl
+This description of verb position in German captures the central insights of the GB analysis in Section~\ref{ABschnitt-Verbstellung-GB}.\is{verb position|)}
+
+\section{Local reordering}
+\label{Abschnitt-CG-lokale-Umstellung}
+
+Up to now,\is{constituent order|(} we have seen combinations of functors and arguments where the arguments were either to the left or to the right of the functor. The
+saturation of arguments always took place in a fixed order: the argument furthest to the right was
+combined first with the functor, \eg (s\bs np)/pp first combined with
+the PP, and the result of this combination was combined with the NP.
+
+There are a number of possibilities to analyze ordering variants in German: \citet{Uszkoreit86b} suggests accounting for possible orders lexically, that is, that
+each possible order corresponds to a lexical item. One would therefore have at least six lexical items for a ditransitive verb. \citet[\page 257]{Briscoe2000a} and 
+\citet[\page 96--98]{Villavicencio2002a} propose a variant of this analysis where the order of arguments is modified in the syntax: a syntactic rule can, for example, change
+the order (S/PRT)/NP into (S/NP)/PRT.
+
+A different approach is suggested by \citet{SB2006a-u}. They discuss various options for ordering arguments attested in the languages of the world.
+This includes languages in which the order of combination is free, as well as languages where
+the direction of combination is free.\is{constituent order!free}\is{constituent
+  order!fixed} Steedman and Baldridge introduce the following convention for
+representing categories: elements in curly brackets can be discharged in any order. `$|$'\is{$\vert$} in place of `$\backslash$'\is{$\backslash$} 
+or `/'\is{/} serves to indicate that the direction of combination is free. Some prototypical examples are shown in (\mex{1}):
+
+\ea
+\begin{tabular}[t]{@{}lll@{}}
+English\il{English}   & (S$\backslash$NP)/NP     & S(VO)\\
+Latin\il{Latin}       & S\{$|$NP[nom], $|$NP[acc] \} & free order\\
+Tagalog\il{Tagalog}     & S\{/NP[nom], /NP[acc] \} & free order, verb-initial\\
+Japanese\il{Japanese} & S\{$\backslash$NP[nom], $\backslash$NP[acc] \} & free order, verb-final\\
+\end{tabular}
+\z
+\citet[Section~3.1]{Hoffmann95a-u} has proposed an analysis analagous to that of Japanese for Turkish\il{Turkish} and this could also be used in conjunction with an analysis
+of verb position for German. This would correspond to the GB/MP\indexgb analysis of \citet{Fanselow2001a} or the HPSG analysis\indexhpsg presented in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}.
+\is{constituent order|}
+
+\section{Long"=distance dependencies}
+\label{Abschnitt-UDC-KG}\label{sce-nld-cg}
+
+\mbox{}\citet[Section~1.2.4]{Steedman89a} proposes an analysis of long"=distance dependencies without movement or empty elements. For examples such as (\mex{1}), he assumes that
+the category of \emph{Harry must have been eating} or \emph{Harry devours} is s/np.\todostefan{CUP
+  reviewer: No explanation of islands}
+\eal
+\ex\label{Bsp-these-apples}
+These apples, Harry must have been eating.
+\ex apples which Harry devours
+\zl
+The fronted NP \emph{these apples} and the relative pronoun \emph{which} are both functors in the analysis of (\mex{0}) which take s/np as their argument.
+Using the machinery introduced up to now, we cannot assign the category s/np to the strings in (\mex{0}) although it is intuitively the case that \emph{Harry devours}
+is a sentence missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type raising} and forward\is{composition!foward}
+and backward composition\is{composition!backward}. Both of these operations will be introduced in the following sections.
+
+\subsection{Type Raising}
+
+The category np can be transformed into the category (s/(s\bs np)) by \emph{type raising}\is{type raising}. If we combine this category with (s\bs np), then we
+get the same result as if we had combined np and (s\bs np) with the forward application rule in (\ref{vorwaertsapplikation}). (\mex{1}a) shows the combination of an NP
+with a VP (a sentence missing an NP to its left). The combination of the type"=raised NP with the VP is given in (\mex{1}b).
+\eal
+\ex np $*$ s\bs np = s 
+\ex s/(s\bs np) $*$ s\bs np = s
+\zl
+In (\mex{0}a), a verb or verb phrase selects an NP to its left (s\bs np). In (\mex{0}b), an NP having undergone type raising selects a verb or verb phrase to its right which requires
+an NP to its left (s\bs np). 
+
+Type raising simply reverses the direction of selection: the VP in (\mex{0}a) is the functor and the
+NP is the argument, whereas in  (\mex{0}b), it is the type raised NP, which acts as the functor,
+and the VP is the argument. In each case, the result of the combination is the same. This change of selectional direction may just seem like a trick at first glance, but as we will see, this
+trick can be extremely useful. First, however, we will introduce forward and backward composition.
+\is{type raising|)}
+
+\subsection{Forward and backward composition}
+\label{Kategorialgrammatik-Komposition}
+
+(\mex{1})\is{composition|(} shows the rules for forward and backward composition.
+\eal
+\ex\label{Regel-Vorwaertskomposition}
+ Forward composition\is{composition!forward} (> B)\\
+    X/Y $*$ Y/Z = X/Z 
+\ex Backward composition\is{composition!backward} (< B)\\
+    Y\bs Z $*$ X\bs Y = X\bs Z
+\zl 
+These rules will be explained using forward composition as an example. (\mex{0}a) can be understood as follows: X/Y more or less means; if I find a Y, then I am a complete X.
+In the combinatorial rule, X/Y is combined with Y/Z. Y/Z stands for a Y that is not yet complete and is
+still missing a Z. The requirement that Y must find a Z in order
+to be complete is postponed: we pretend that Y is complete and use it anyway, but we still bear in mind that
+something is actually still missing. Hence, if we combine X/Y with Y/Z, we get something which becomes an X when combined with a Z. 
+\is{composition|)} 
+
+\subsection{Analysis of long"=distance dependencies}
+\label{Abschnitt-CG-UDC}
+
+By using forward composition, we can assign \emph{Harry must have been eating} the category
+s/np. Figure~\vref{abb-CG-Komposition} shows how this works.\todostefan{textit sieht anders aus als
+  mathmode, aber ohne textit werden die Munisse mit Leerzeichen gesetzt}
+\begin{figure}
+\centerline{%
+\deriv{6}{
+These\;apples  & Harry                & must & have & been & eating\\
+\hr           & \forwardt            & \hr  & \hr  & \hr  & \hr\\
+%
+%
+np            & s/{(s\bs np)}        & {(s\bs np)}/vp & vp/\textit{vp-en} & \textit{vp-en}/\textit{vp-ing} & \textit{vp-ing}/np\\
+              & \multicolumn{2}{c}{\forwardc}\\
+              & \multicolumn{2}{c}{{{s}/vp}}\\
+              & \multicolumn{3}{c}{\forwardc}\\
+              & \multicolumn{3}{c}{{{s}/\textit{vp-en}}}\\
+              & \multicolumn{4}{c}{\forwardc}\\
+              & \multicolumn{4}{c}{{{s}/\textit{vp-ing}}}\\
+              & \multicolumn{5}{c@{}}{\forwardc}\\
+              & \multicolumn{5}{c@{}}{{{s}/np}}\\
+}}
+\caption{\label{abb-CG-Komposition}Application of forward composition to VP-chains}
+\end{figure}%
+\emph{must} is a verb which requires an unmarked infinitive form,  \emph{have} requires a participle and \emph{been} must combine with a
+gerund. In the above figure, the arrow with a small `T' stands for type raising, whereas the arrows with a `B' indicate composition.
+The direction of composition is shown by the direction of the arrow.
+
+For the analysis of (\ref{Bsp-these-apples}), we are still missing one small detail, a rule that turns the NP at the beginning of the sentence
+into a functor which can be combined with s/np. Normal type raising cannot handle this because it would produce s/(s\bs np) when s/(s/np)
+is required.
+
+\citet[\page 217]{Steedman89a} suggests the rule in (\mex{1}):
+\ea
+\label{Regel-Topikalisierung}
+Topicalization\is{topicalization} ($\uparrow$\is{$\uparrow$}):\\
+X $\Rightarrow$ st/(s/X)\\
+where X $\in$ \{ np, pp, vp, ap, s$'$ \}
+\z
+st stands for a particular type of sentence, namely one with topicalization.
+
+If we replace X with np, we can turn \emph{these apples} into st/(s/np) and complete the analysis of 
+(\ref{Bsp-these-apples}) as shown in Figure~\vref{abb-CG-UDC}.
+\begin{figure}
+\centerline{%
+\deriv{6}{
+These\;apples  & Harry                & must & have & been & eating\\
+\forwardtop   & \forwardt            & \hr  & \hr  & \hr  & \hr\\
+%
+%
+st/(s/np)\;\;     & s/{(s\bs np)}        & {(s\bs np)}/vp & vp/\textit{vp-en} & \textit{vp-en}/\textit{vp-ing} & \textit{vp-ing}/np\\
+              & \multicolumn{2}{c}{\forwardc}\\
+              & \multicolumn{2}{c}{{{s}/vp}}\\
+              & \multicolumn{3}{c}{\forwardc}\\
+              & \multicolumn{3}{c}{{{s}/\textit{vp-en}}}\\
+              & \multicolumn{4}{c}{\forwardc}\\
+              & \multicolumn{4}{c@{}}{{{s}/\textit{vp-ing}}}\\
+              & \multicolumn{5}{c@{}}{\forwardc}\\
+              & \multicolumn{5}{c@{}}{{{s}/np}}\\
+\multicolumn{6}{@{}c@{}}{\forwardapp}\\
+\multicolumn{6}{@{}c@{}}{{st}}\\
+}}
+\caption{\label{abb-CG-UDC}Analysis of long"=distance dependencies in Categorial Grammar}
+\end{figure}%
+
+\noindent
+The mechanism presented here will of course also work for dependencies that cross sentence boundaries.
+Figure~\vref{abb-CG-UDC-lang} shows the analysis for (\mex{1}):
+\ea
+Apples, I believe that Harry eats.
+\z
+\begin{figure}
+\centerline{%
+\deriv{6}{
+Apples        & I             & believe        & that & Harry         & eats\\
+\forwardtop   & \forwardt     & \hr            & \hr  & \hr           & \hr\\
+%
+%
+st/(s/np)\;\;     & s/(s\bs np)  & (s\bs np)/s'    & s'/s & s/(s\bs np) & (s\bs np)/np\\
+              & \multicolumn{2}{c@{}}{\forwardc}  &      & \multicolumn{2}{c@{}}{\forwardc}\\
+              & \multicolumn{2}{c@{}}{{{s}/s'}}   &      & \multicolumn{2}{c@{}}{{{s}/np}}\\
+              & \multicolumn{3}{c@{}}{\forwardc}\\
+              & \multicolumn{3}{c@{}}{{{s}/s}}\\
+              & \multicolumn{5}{c@{}}{\forwardc}\\
+              & \multicolumn{5}{c@{}}{{{s}/np}}\\
+\multicolumn{6}{@{}c@{}}{\forwardapp}\\
+\multicolumn{6}{@{}c@{}}{{st}}\\
+}}
+\caption{\label{abb-CG-UDC-lang}Analysis of long"=distance dependencies across sentence boundaries}
+\end{figure}%
+%
+Using the previously described tools, it is, however, only possible to describe extractions where the fronted element
+in the sentence would have occurred at the right edge of the phrase without fronting. This means it is not possible to analyze sentences where the
+middle argument of a ditransitive verb has been extracted \citep[\page 532]{Steedman85a-u}. \citet[\page 406]{Pollard88a} provides the derivation
+in Figure~\vref{abb-CG-UDC-Ditrans} for (\mex{1}).
+\ea
+Fido we put downstairs.
+\z
+\begin{figure}
+\centerline{%
+\deriv{4}{
+Fido                 & we            & put        & downstairs\\
+\forwardtoptop       & \forwardt     & \hr        & \hr  \\
+%
+%
+(st/pp)/((s/pp)/np)  & s/(s\bs np)  & ((s\bs np)/pp)/np    & pp\\
+                     & \multicolumn{2}{c@{}}{\forwardczwei}  \\
+                     & \multicolumn{2}{c@{}}{(s/pp)/np}   \\
+%
+\multicolumn{3}{@{}c@{}}{\forwardapp}  \\
+\multicolumn{3}{@{}c@{}}{{st/pp}}   \\
+\multicolumn{4}{@{}c@{}}{\forwardapp}\\
+\multicolumn{4}{@{}c@{}}{{st}}\\
+}}
+\caption{\label{abb-CG-UDC-Ditrans}Analysis of long"=distance dependencies across sentence boundaries}
+\end{figure}%
+In this analysis, it is not possible to combine \emph{we} and \emph{put} using the rule in
+(\ref{Regel-Vorwaertskomposition}) since (s\bs np) is not directly accessible: 
+breaking down ((s\bs np)/pp)/np into functor and argument gives us ((s\bs np)/pp) and np. 
+In order to deal with such cases, we need another variant of composition:
+\ea
+Forward composition for n=2 (> BB)\\
+X/Y $*$ (Y/Z1)/Z2 = (X/Z1)/Z2
+\z
+With this addition, it is now possible to combine the type-raised \emph{we} with \emph{put}. The result is (s/pp)/np.
+The topicalization rule in (\ref{Regel-Topikalisierung}), however, requires an element to the right of st with the form
+(s/X). This is not the case in Figure~\ref{abb-CG-UDC-Ditrans}. For the NP \emph{Fido}, we need a functor category
+which allows that the argument itself is complex. The rule which is needed for the case in
+(\mex{-1}) is given in (\mex{1}).
+
+\ea
+\label{Regel-Topikalisierung-zwei}
+Topicalization\is{topicalization} for n=2 ($\uparrow\uparrow$\is{$\uparrow\uparrow$}):\\
+X2 $\Rightarrow$ (st/X1)/((s/X1)/X2)\\
+where X1 and X2 $\in$ \{ NP, PP, VP, AP, S$'$ \}
+\z
+
+\noindent
+If we assume that verbs can have up to four arguments (\zb \emph{buy}: buyer,
+seller, goods, price), then it would be necessary to assume a further rule for composition as well as another topicalization rule.
+Furthermore, one requires a topicalization rule for subject extraction \citep[\page 405]{Pollard88a}. Steedman has developed a notation which
+provides a compact notation of the previously discussed rules, but if one considers what exactly these representations stand for, one still arrives at the
+same number of rules that have been discussed here.%
+\is{long"=distance dependency|)}
+
+\section{Summary and classification}
+\label{Abschnitt-Relativsaetze-CG}\label{Abschnitt-Ratte-CG}\label{sec-pied-piping-cg}
+
+The operations of Combinatory Categorial Grammar, which go beyond those of standard Categorial Grammar, allow for so much flexibility that it is even possible
+to assign a category to sequences of words that would not normally be treated as a constituent. This is an advantage for the analysis of coordination\is{coordination}
+(see Section~\ref{Abschnitt-Koordination}) and furthermore, \citet{Steedman91a} has argued that intonation data\is{prosody} support the constituent status of these strings.
+See also Section~\ref{Abschnitt-Inkrementelle-Verarbeitung} for a direct model of incremental language processing in Categorial Grammar. In phrase structure grammars,
+it is possible to use GPSG mechanisms to pass information about relative pronouns contained in a phrase up the tree. These techniques are not used in CG and this leads
+to a large number of recategorization rules for topicalization and furthermore leads to inadequate analyses of pied-piping constructions in relative clauses. As the
+topicalization analysis was already discussed in Section~\ref{Abschnitt-UDC-KG}, I will briefly elaborate on relative clauses here.
+
+\citet[\page 614]{SB2006a-u} present an analysis of long"=distance dependencies using the following relative clause in (\mex{1}):
+\ea
+the man  that Manny says Anna married\\
+\z
+The relative pronoun is the object of \emph{married} but occurs outside the clause \emph{Anna married}.
+
+Steedman assumes the lexical entry in (\mex{1}) for relative pronouns:
+
+\ea
+\label{le-Relativpronomen-CG}
+(n$\backslash$n)/(s/np)
+\z
+This means the following: if there is a sentence missing an NP to the right of a relative pronoun, then the relative pronoun can form an
+N-modifier (n$\backslash$n) with this sentence. The relative pronoun is the head (functor) in this analysis.
+
+Utilizing both additional operations of type raising and composition, the examples with relative clauses can be analyzed as shown in
+Figure~\vref{abb-CG-Relativsatz}.
+%
+\begin{figure}
+\centerline{%
+\deriv{5}{
+that                                & Manny                                                   & says                              & Anna                 & married\\
+\hr                                 & \forwardt                                               & \hr                               & \forwardt            & \hr \\
+%
+%
+(n\bs n)/(s/np) & s/{(s\bs np)}                           & {(s\bs np)}/s     & s/{(s\bs np)} & {(s\bs np)}/np\\
+                                    & \multicolumn{2}{c}{\forwardc} & \multicolumn{2}{c@{}}{\forwardc}\\
+%
+%
+                                    & \multicolumn{2}{c}{{s/{s}}}                    & \multicolumn{2}{c@{}}{{{s}/np}}\\
+                                    & \multicolumn{4}{c@{}}{\forwardc}\\
+                                    & \multicolumn{4}{c@{}}{{{s/np}}}\\
+\multicolumn{5}{c@{}}{\forwardapp}\\
+\multicolumn{5}{c@{}}{{n\bs n}}\\
+}}
+\caption{\label{abb-CG-Relativsatz}Categorial Grammar analysis of a relative clause with long"=distance dependency}
+\end{figure}%
+%
+The lexical entry for the verbs corresponds to what was discussed in the preceding sections: \emph{married} is a normal transitive verb and 
+ \emph{says} is a verb that requires a sentential complement and forms a VP (s\bs np) with it. This VP yields a sentence when combined
+ with an NP. The noun phrases in Figure~\ref{abb-CG-Relativsatz} have been type raised. Using forward composition, it is possible to combine 
+ \emph{Anna} and \emph{married} to yield s/np. This is the desired result: a sentence missing an NP to its right. \emph{Manny}
+and \emph{says} and then \emph{Manny says} and \emph{Anna married} can also be combined via forward composition and we then have the category
+s/np for \emph{Manny says Anna married}. This category can be combined with the relative pronoun using forward application and we then arrive at
+n\bs n, which is exactly the category for postnominal modifiers.
+
+However, the assumption that the relative pronoun constitutes the head is problematic since one has to then go to some lengths to explain pied-piping\is{pied-piping}
+constructions such as those in (\mex{1}).
+
+\eal
+\ex\label{Beispiel-Minister}
+Here's the minister [[in [the middle [of [whose sermon]]]] the dog barked].\footnote{
+\citew[\page 212]{ps2}.
+}
+\ex Reports [the height of the lettering on the covers of which] the government prescribes should be
+abolished.\label{Ross-reports}\footnote{
+\citew[\page 109]{Ross67}.\nocite{Ross86a-u}
+}
+\zl
+In (\mex{0}), the relative pronoun is embedded in a phrase that has been extracted from the rest of the relative clause. The relative pronoun
+in (\mex{0}a) is the determiner of \emph{sermon}. Depending on the analysis, \emph{whose} is the head of the phrase \emph{whose sermon}.
+The NP is embedded under \emph{of} and the phrase \emph{of whose sermon} depends on \emph{middle}. The entire NP \emph{the middle of the sermon}
+is a complement of the preposition \emph{in}. It would be quite a stretch to claim that \emph{whose} is the head of the relative clause in (\mex{0}a).
+The relative pronoun in (\mex{0}b) is even more deeply embedded.
+\citet[\page 50]{Steedman97a} gives the following lexical entries for \emph{who},
+\emph{whom} and \emph{which}:
+\eal
+\label{le-relpron-Steedman}
+\settowidth\jamwidth{(komplexe extrahierte NP-Relativphrase)}
+\ex ((n$\backslash$n)/(s\bs np))\bs (np/np)       \jambox{(complex subject-relative phrase)}
+\ex ((n$\backslash$n)/(s/pp))$\backslash$(pp/np)  \jambox{(complex extracted PP-relative phrase)}
+\ex ((n$\backslash$n)/(s/np))$\backslash$(np/np)  \jambox{(complex extracted NP-relative phrase)}
+\zl
+Using (\mex{0}b) and (\mex{0}c), it is possible to analyze (\mex{1}a) and (\mex{1}b):
+\eal
+\ex a report the cover of which Keats (expects that Chapman) will design
+\ex a subject on which Keats (expects that Chapman) will speak
+\zl
+In the analysis of (\mex{0}b), \emph{which} requires a preposition to its left (pp/np) so it can form the category
+(n$\backslash$n)/(s/pp). This category needs a sentence lacking a PP to its right in order to form a post-nominal
+modifier (n$\backslash$n). In the analysis of (\mex{0}a), \emph{the cover of} becomes np/np by means
+of composition and \emph{which} with the lexical entry (\mex{-1}c) can combine with \emph{the cover of} to its left. The result is
+the category (n$\backslash$n)/(s/np), that is, something that requires a sentence missing an NP.
+
+Ross' examples (\ref{Ross-reports}) can also be analyzed as follows (\mex{-1}c):
+\ea
+reports [the height of the lettering on the covers of]\sub{np/np}
+which]\sub{(n$\backslash$n)/(s/np)} the government prescribes
+\z
+The complex expression \emph{the height of the lettering on the covers of} becomes np/np after composition and the rest of the analysis
+proceeds as that of (\mex{-1}a).
+
+In additon to entries such as those in (\ref{le-relpron-Steedman}), we also need further entries to analyze sentences such as (\mex{1}), where
+the relative phrase has been extracted from the middle of the clause (see \citealp[\page 410]{Pollard88a}):
+\ea
+Fido is the dog which we put downstairs.
+\z
+The problem here is similar to what we saw with topicalization: \emph{we put} does not have the cateory
+s/np but rather (s/pp)/np and as such, cannot be directly combined with the relative pronoun in (\ref{le-Relativpronomen-CG}).
+
+\citet[\page 204]{Morrill95a} discusses the lexical entry in (\ref{le-relpron-Steedman}b) for the relative pronoun in (\mex{1}):
+\ea
+\label{Beispiel-about-which}
+about which John talked
+\z
+In the lexical entry (\ref{le-relpron-Steedman}b), \emph{which} requires something to the left of it, which requires a noun phrase in order to form a complete
+prepositional phrase, that is, \emph{which} selects a preposition. Morrill noted that there is a need
+to postulate further lexical items for cases like (\mex{1}) in which the relative pronoun occurs in the middle of the fronted phrase.
+\ea
+the contract [the loss of which after so much wrangling] John would finally have to pay for
+\z
+These and other cases could be handled by additional lexical stipulations. Morrill instead proposes additional types of the combination of functors and
+arguments, which allow a functor B \up\is{$\uparrow$} A to enclose its argument A and produce B, or a functor A $\downarrow$\is{$\downarrow$}
+B to enclose its argument to then yield B (p.\,190). Even with these additional operations, he still needs the two lexical items in (\mex{1})
+for the derivation of a pied-piping construction with an argument NP or a PP:
+\eal
+\ex (NP \up\ NP) $\downarrow$ (N$\backslash$N)/(S/NP)
+\ex (PP \up\ NP) $\downarrow$ (N$\backslash$N)/(S/PP)
+\zl
+These lexical items are still not enough, however, as (\mex{0}b) contains a PP but this PP corresponds to an argument PP, which is required
+for (\ref{Beispiel-about-which}). To analyze (\ref{Beispiel-Minister}), which involves a PP adjunct, we need to assume the category (s\bs np)/(s\bs np)  for the prepositional
+phrase \emph{in the middle of whose seremon}. We therefore also require at least three additional items for relative pronouns.
+
+By introducing new operations, Morrill manages to reduce the number of lexical entries for \emph{which}, however, the fact remains
+that he has to mention the categories which can occur in pied-piping constructions in the lexical entry of the relative pronoun.
+
+Furthermore, the observation that relative clauses consist of a phrase with a relative pronoun plus a sentence missing a relative phrase
+is lost. This insight can be kept if one assumes a GPSG"=style\indexgpsg analysis where information about whether there is a relative pronoun
+in the relative phrase can be passed up to the highest node of the relative phrase.
+The relative clause can then be analyzed as the combination of a sentence with a gap and an appropriately marked relative phrase.
+For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see Section~\ref{Abschnitt-Relativ-Interrogativsaetze}.
+\is{Categorial Grammar (CG)|)}
+
+\section*{Comprehension questions}
+
+\begin{enumerate}
+\item Identify the functors and arguments in Figures~\ref{abb-cg-transitives-Verb}
+  and~\ref{abb-the-cat-chased-Mary}.
+\item Which combination operations do you know?
+\item What is composition used for?
+\end{enumerate}
+
+\section*{Exercises}
+
+\begin{enumerate}
+\item Analyze the following sentence:
+\ea
+The children in the room laugh loudly.
+\z
+\item\label{ue-Xbar-CG} Analyze the noun phrase in (\mex{1}):
+\ea
+the picture of Mary
+\z
+Compare the resulting analysis with the structure given in Figure~\vref{Abbildung-NP-mit-PP-Argument} and think about which
+categories of \xbar syntax the categories in Categorial Grammar correspond to. 
+\end{enumerate}
+
+\section*{Further reading}
+
+\begin{sloppypar}
+Mark Steedman discusses a variant of Categorial Grammar, \emph{Combinatory Categorial Grammar}, in a series of books and articles:
+\citet{Steedman91a,Steedman2000a-u,SB2006a-u}.
+\end{sloppypar}
+\citet{Lobin2003a} compares Categorial Grammar with Dependency Grammar and \citet{PB93a} suggest a
+combination of Dependency Grammar and Categorial Grammar, which they call Dependency Categorial Grammar\is{Dependency Categorial Grammar}.
+
+\citet{Briscoe2000a} and \citet{Villavicencio2002a} discuss UG"=based acquisition models in the framework of Categorial Grammar.
+
+
+
+
+
+% Yusuke Kubota ESSLLI 2013: Extraktion geht nicht, wenn etwas in der Mitte fehlt
+% The book that he read _ yesterday.
+% Grund: S/NP ist etwas, dem rechts was fehlt, nicht in der Mitte.
+
+%      <!-- Local IspellDict: en_US-w_accents -->

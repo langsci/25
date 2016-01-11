@@ -1,0 +1,85 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e}
+
+\usetikzlibrary{tikzmark}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+%\oneline{%
+%}
+
+\hfill
+\begin{forest}
+[{\subnode{vpone}{\ms{
+   cat & {\upshape VP}\\
+ }}\vspace{2mm}\\ 
+ \ms{
+       cat & {\upshape VP}\\
+       agr & \ibox{2}\\ 
+       mode & ind\\
+ }}
+  [{\ms{
+       cat & {\upshape V}\\
+      }\vspace{2mm}\\
+    \ms{
+      cat & {\upshape V}\\
+      agr & \ibox{2} \ms{
+                      per & 3\\ 
+                      num & sing\\
+                     }\\
+       }} [is]]
+  [{\ms{
+       cat & {\upshape VP}\\ 
+       mode & ger\\
+      }\vspace{2mm}\\
+    \ms{
+       cat & {\upshape VP}\\
+       }$^*$}]]
+\end{forest}
+%% %%% sings tree:
+%% \hspace{-1em}
+\hfill
+\begin{forest}
+[{\ms{ 
+   cat & {\upshape S}\\
+ }\vspace{2mm}\\
+ \ms{
+  cat & {\upshape S}\\ 
+  }}
+  [\ms{ cat & {\upshape NP}\\
+        agr & \ibox{1}\\
+      }]
+  [{\subnode{vptwo}{\ms{
+      cat  & {\upshape VP}\\
+      agr  & \ibox{1}\\
+      mode & ind\\
+      }}\vspace{2mm}\\
+     \ms{
+     cat & {\upshape VP}\\ 
+     mode & ger\\
+     }}
+     [{\ms{ cat & {\upshape V}\\
+          }\vspace{2mm}\\
+       \ms{
+            cat & {\upshape V}\\
+        }}
+       [laughing]]]]
+\end{forest}
+\hfill\mbox{}
+\begin{tikzpicture}[overlay,remember picture,out=0,in=220]
+\draw[->, dashed] (vpone) to (vptwo);
+\end{tikzpicture}
+
+
+\end{document}

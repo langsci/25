@@ -1,0 +1,99 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{makros.2e}
+
+\usepackage{pstricks,pst-node}
+
+%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
+\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
+\psset{linewidth=0.5pt}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+%\oneline{%
+\begin{pspicture}(-0.5,0.4)(2.8,4.1)
+%\psgrid
+     \psset{fillstyle=solid, fillcolor=black,radius=0.75mm}
+     \pnode(-0.4,2){start1}
+     \Cnode(0,2){noun1}
+     \Cnode(2,4){fem1}
+     \Cnode(2,1){nom1}
+%
+     \psset{fillstyle=none,nodesep=0pt,angleB=180,arrows=->} 
+%
+     \nccurve{start1}{noun1}
+     \nccurve{noun1}{fem1}\naput{\textsc{gender}}
+     \nccurve{noun1}{nom1}\naput{\textsc{case}}
+%
+     \nput{270}{noun1}{\type{noun}}
+     \nput{270}{fem1}{\type{fem}}
+     \nput{270}{nom1}{\type{nominative}}
+\end{pspicture}
+\begin{pspicture}(-0.5,0.4)(2.8,4.1)
+%\psgrid
+%
+     \psset{fillstyle=solid, fillcolor=black,radius=0.75mm}
+     \pnode(-0.4,2){start2}
+     \Cnode(0,2){noun2}
+     \Cnode(2,4){fem2}
+     \Cnode(2,1){nom2}
+%
+     \psset{fillstyle=none,nodesep=0pt,angleB=180,arrows=->} 
+%
+     \nccurve{start2}{noun2}
+     \nccurve{noun2}{fem2}\naput{\textsc{gender}}
+     \nccurve{noun2}{nom2}\naput{\textsc{case}}
+
+     \nput{270}{noun2}{\type{noun}}
+     \nput{270}{fem2}{\type{fem}}
+     \nput{270}{nom2}{\type{genitive}}
+\end{pspicture}
+\begin{pspicture}(-0.5,0.4)(2.8,4.1)
+%\psgrid
+     \psset{fillstyle=solid, fillcolor=black,radius=0.75mm}
+     \pnode(-0.4,2){start3}
+     \Cnode(0,2){noun3}
+     \Cnode(2,4){fem3}
+     \Cnode(2,1){nom3}
+%
+     \psset{fillstyle=none,nodesep=0pt,angleB=180,arrows=->} 
+%
+     \nccurve{start3}{noun3}
+     \nccurve{noun3}{fem3}\naput{\textsc{gender}}
+     \nccurve{noun3}{nom3}\naput{\textsc{case}}
+%
+     \nput{270}{noun3}{\type{noun}}
+     \nput{270}{fem3}{\type{fem}}
+     \nput{270}{nom3}{\type{dative}}
+\end{pspicture}
+\begin{pspicture}(-0.5,0.4)(2.8,4.1)
+%\psgrid
+     \psset{fillstyle=solid, fillcolor=black,radius=0.75mm}
+     \pnode(-0.4,2){start2}
+     \Cnode(0,2){noun2}
+     \Cnode(2,4){fem2}
+     \Cnode(2,1){nom2}
+%
+     \psset{fillstyle=none,nodesep=0pt,angleB=180,arrows=->} 
+%
+     \nccurve{start2}{noun2}
+     \nccurve{noun2}{fem2}\naput{\textsc{gender}}
+     \nccurve{noun2}{nom2}\naput{\textsc{case}}
+%
+     \nput{270}{noun2}{\type{noun}}
+     \nput{270}{fem2}{\type{fem}}
+     \nput{270}{nom2}{\type{accusative}}
+\end{pspicture}
+
+
+\end{document}

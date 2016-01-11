@@ -1,0 +1,2153 @@
+%% -*- coding:utf-8 -*-
+
+
+\chapter{Transformational Grammar -- Government \& Binding}
+\label{Kapitel-GB}\label{chap-GB}\label{chap-gb}
+
+Transformational Grammar\is{Transformational Grammar|(} and its subsequent incarnations (such as Government and Binding Theory
+and Minimalism) were developed by Noam Chomsky at MIT in Boston \citep{Chomsky57a,Chomsky65a,Chomsky75a,Chomsky81a,Chomsky86b,Chomsky95a-u}.
+Manfred \citet{Bierwisch63} was the first to implement Chomsky's ideas for German. In the 60s, the decisive impulse came from the 
+\emph{Arbeitsstelle Strukturelle Grammatik} `Workgroup for Structural Grammar', which was part of the Academy of Science of the GDR. (See
+\citew{Bierwisch92} and \citew{Vater2010a} for an historic overview.)
+As well as Bierwisch's work, the following other works focussing on German, which have been written as part of this research
+program should also be mentioned: \citew{Fanselow87a}, \citew{FF87}, \citew{SS88a}, \citew{Grewendorf88a}, \citew{Haider93a},
+\citew{Sternefeld2006a-u}.
+
+The variants of Chomskyan theories are often grouped under the heading \emph{Generative Grammar}\index{Generative Grammar}.
+This term comes from the fact that phrase structure grammars, coupled with the additional assumptions of Chomsky, can generate
+sets of well"=formed expressions (see p.\,\pageref{Seite-generiert}). It is such a set of sentences that constitutes a language (in the formal
+sense) and one can test if a sentence forms part of a language by checking if a particular sentence is in the set of sentences generated
+by a given grammar or not. In this sense, simple phrase structure grammars and, with corresponding formal assumptions, GPSG, LFG, 
+HPSG and Construction Grammar (CxG) are generative theories.
+In recent years, a different view of the formal basis of theories such as LFG, HPSG and CxG has
+emerged such that the aforementioned theories are now \emph{model theoretic}
+theories\is{model"=theoretic grammar} rather than generative"=enumerative ones\footnote{
+Model theoretic approaches are always constraint"=based and the terms \emph{model theoretic} and \emph{constraint"=based} are 
+sometimes used synonymously. 
+} (See Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch} for discussion). In 1957, Chomsky defined the term \emph{Generative Grammar}
+in the following way (also see \citealp[\page 162]{Chomsky95a-u}):
+\begin{quote}
+A grammar of a language purports to be a description of the ideal speaker-hearer's intrinsic
+competence. If the grammar is, furthermore, perfectly explicit\,---\,in other words, if it does not
+rely on the intelligence of the understanding reader but rather provides an explicit analysis of
+his contribution\,---\,we may call it (somewhat redundantly) a \emph{generative
+  grammar}. \citep[\page 4]{Chomsky65a}
+\end{quote}
+In this sense, all grammatical theories discussed in this book would be viewed as generative grammars.
+To differentiate further, sometimes the term \emph{Mainstream Generative Grammar}\is{Mainstream
+  Generative Grammar} (MGG) is used \citep[\page 3]{CJ2005a} for Chomskyan models.
+In this chapter, I will discuss a well"=developed and very influential version of Chomskyan
+grammar, \gbt. More recent developments following Chomsky's Minimalist Program are dealt with in Chapter~\ref{chapter-mp}.
+
+\section{General remarks on the representational format}
+\label{Abschnitt-GB-allgemein}
+
+This section provides an overview of general assumptions. I introduce the concept of transformations
+in Section~\ref{Abschnitt-Transformationen}. Section~\ref{Abschnitt-GB-Paramater} provides
+background information about assumptions regarding language acquisition, which shaped the theory
+considerably, Section~\ref{Abschnitt-T-Modell} introduces the so"=called T model, the basic
+architecture of \gbt. Section~\ref{Abschnitt-X-Bar} introduces the \xbart in the specific form that is used in \gb
+and Section~\ref{sec-GB-CP-IP-System-English} shows how this version of the \xbart can be applied to English. The discussion of
+the analysis of English sentences is an important prerequisite for the understanding of the analysis
+of German, since many analyses in the \gb framework are modeled in parallel to the analyses of
+English. Section~\ref{sec-German-clause} introduces the analysis of German clauses in a parallel way
+to what has been done for English in Section~\ref{sec-GB-CP-IP-System-English}.
+
+\subsection{Transformations}
+\label{Abschnitt-Transformationen}
+
+In the previous\is{transformation|(} chapter, I introduced simple phrase structure
+grammars. \citet[Chapter~5]{Chomsky57a} criticized these kind of rewrite grammars since -- in his
+opinion -- it is not clear how one can capture the relationship between active and passive sentences or
+the various ordering possibilities of constituents in a sentence. While it is of course possible to
+formulate different rules for active and passive sentences in a phrase structure grammar, it would
+not adequately capture the fact that the same phenomenon occurs in the example pairs in (\mex{1})--(\mex{3}):
+\eal
+\ex 
+\gll weil dort noch jemand arbeitet\\
+     because there still somebody works\\
+\glt `because somebody is still working there'
+\ex 
+\gll weil dort noch gearbeitet wurde\\
+     because there still worked was\\
+\glt `because work was still being done there'	 
+\zl
+\eal
+\ex 
+\gll weil er den Weltmeister schlägt\\
+	 because he the world.champion beats\\
+\glt `because he beats the world champion'
+\ex 
+\gll weil der Weltmeister geschlagen wurde\\
+	 because the world.champion beaten was\\
+\glt `because the world champion was beaten'
+\zl
+\eal
+\ex 
+\gll weil der Mann der Frau den Schlüssel stiehlt\\
+	 because the man the woman the key steals\\
+\glt `because the man is stealing the key from the woman'
+\ex 
+\gll weil der Frau der Schlüssel gestohlen wurde\\
+	 because the woman the key stolen was\\
+\glt `because the key was stolen from the woman'
+\zl
+
+\noindent
+\citet[\page 43]{Chomsky57a} suggests a transformation that creates a connection between active and
+passive sentences. The passive transformation for English\il{English} that he suggested has the form in (\mex{1}):
+\ea
+\begin{tabular}[t]{@{}l@{~}l@{~}l@{~}l}
+NP& V &NP & $\to$ 3 [\sub{AUX} be] 2en [\sub{PP} [\sub{P} by] 1]\\
+1 & 2 &3\\
+\end{tabular}
+\z
+This transformational rule maps a tree with the symbols on the left"=hand side of the rule onto a tree with the symbols on the
+right"=hand side of the rule. Accordingly, 1, 2 and 3 on the right of the rule correspond to symbols, which are under the numbers on the
+left"=hand side. \emph{en} stands for the morpheme which forms the participle (\emph{seen}, \emph{been}, \ldots, but also \emph{loved}).
+Both trees for (\mex{1}a,b) are shown in Figure~\ref{fig-Passivtransformation}.
+
+\eal
+\ex John loves Mary.
+\ex Mary is loved by John.
+\zl
+\begin{figure}
+\hfill
+\begin{forest}
+%sn edges
+[S, for tree={parent anchor=south, child anchor=north}
+  [NP [John] ]
+  [VP
+    [V [loves] ]
+    [NP [Mary] ] 
+  ]]
+\end{forest}
+\hspace{1em}
+\raisebox{6\baselineskip}{$\leadsto$}
+\hspace{1em}
+  \begin{forest}
+  %sn edges
+  [S, for tree={parent anchor=south, child anchor=north}
+  	[NP[Mary]]
+	[VP
+	[Aux[is, tier=word]]
+	[V[loved, tier=word]]
+	[PP
+	[P[by, tier=word]]
+	[NP[John, tier=word]]]]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-Passivtransformation}Application of passive transformation}
+\end{figure}%
+The symbols on the left of transformational rules do not necessarily have to be in a local tree, that is, they can be daughters of different mothers
+as in Figure~\ref{fig-Passivtransformation}.
+
+Rewrite grammars were divided into four complexity classes\is{complexity class} based on the properties they
+have. The simplest grammars are assigned to the class 3, whereas the most complex are of type~0. The so"=called 
+context"=free grammars\is{context-free grammar} we have dealt with thus far are of type~2. Transformational grammars which allow symbols to
+be replaced by arbitrary other symbols are of type~0 \citep{PR73a-u}.\label{page-TG-Typ0} Research on the complexity
+of natural languages shows that the highest complexity level (type~0) is too complex for natural language. It follows from this
+-- assuming that one wants to have a restrictive formal apparatus for the description of grammatical knowledge \citep[\page 62]{Chomsky65a} -- that
+the form and potential power of transformations has to be restricted.\footnote{
+	For more on the power of formal languages, see Chapter~\ref{Abschnitt-Generative-Kapazitaet}.
+} 
+Another criticism of early versions of transformational grammar was that, due to a lack of restrictions, the way in which transformations interact was not clear. 
+Furthermore, there were problems associated with transformations which delete material (see
+\citealp[Section~3.1.4]{Klenk2003a})\todostefan{provide English ref}. For this reason, new theoretical approaches such 
+as Government \& Binding \citep{Chomsky81a} were developed. In this model, the form that grammatical rules can take is restricted (see Section~\ref{Abschnitt-X-Bar}). Elements
+moved by transformations are still represented in their original position, which makes them
+recoverable at the original position and hence the necessary information is available for semantic interpretation. 
+There are also more general principles, which serve to restrict transformations\is{transformation|)}.
+
+After some initial remarks on the model assumed for language acquisition in \gbt, we will take a closer look at phrase structure rules,
+transformations and constraints.
+
+
+\subsection{The hypothesis regarding language acquisition: Principles \& Parameters}
+\label{Abschnitt-GB-Paramater}
+
+\citet[Section~I.8]{Chomsky65a}\is{Principles \& Parameters|(} assumes that linguistic knowledge must be innate since the language system is,
+in his opinion, so complex that it would be impossible to learn a language from the given input using more general cognitive principles alone
+(also, see Section~\ref{Abschnitt-PSA}). If it is not possible to learn language solely through interaction with our environment, then at least part of
+our language ability must be innate. The question of exactly what is innate and if humans actually have an innate capacity for language remains
+controversial and the various positions on the question have changed over the course of the last decades. Some notable works on this topic are \citew{Pinker94a}, 
+\citew{Tomasello95a}, \citew{Wunderlich2004a}, \citew*{HCF2002a} and \citew{Chomsky2007a}. For more on this discussion, see Chapter~\ref{chap-innateness}.
+
+\citet{Chomsky81a} also assumes that there are general, innate principles which linguistic structure cannot violate. These principles are parametrized, that is,
+there are options. Parameter\is{parameter!head position}\is{parameter} settings can differ between languages.
+An example for a parametrized principle is show in (\mex{1}):
+\ea
+Principle: A head occurs before or after its complement(s) depending
+on the value of the parameter \textsc{position}.
+%Prinzip: Ein Kopf steht in Abhängigkeit vom Parameter \textsc{stellung}
+%vor oder nach seinen Komplementen.
+\z
+The Principles and Parameters model assumes that a significant part of language acquisition consists of extracting enough information
+from the linguistic input in order to be able to set parameters. \citet[\page 8]{Chomsky2000a-u} compares the setting of parameters to
+flipping a switch. For a detailed discussion of the various assumptions about language acquisition in the P\&P"=model, see
+Chapter~\ref{sec-acquisition}. Speakers of English\il{English} have to learn that heads occur before their
+complements in their language, whereas a speaker of Japanese\il{Japanese} has to learn that heads follow their complements. (\mex{1}) gives the 
+respective examples:
+\eal
+\label{Bsp-Kopfstellungsparameter}
+\ex be showing pictures of himself
+\ex
+\gll zibun -no syasin-o mise-te iru\\
+     \refl{}  from picture     showing be\\
+\zl
+As one can see, the Japanese verb, noun and prepositional phrases are a mirror image of the corresponding phrases in English.
+(\mex{1}) provides a summary and shows the parametric value for the position parameter:
+\ea
+\begin{tabular}[t]{@{}lll@{}}
+Language                & Observation                      & Parameter: head initial\\
+English\il{English}   & Heads occur before complements    & +\\
+Japanese\il{Japanese} & Heads occur after complements   & $-$\\
+\end{tabular}
+\z
+Investigating languages based on their differences with regard to certain assumed parameters has proven to be a very
+fruitful line of research in the last few decades and has resulted in an abundance of comparative cross"=linguistic studies.
+
+After these introductory comments on language acquisition, the following sections will discuss the basic assumptions of \gbt.%
+\is{Principles \& Parameters|)}
+
+\subsection{The T model}
+\label{Abschnitt-T-Modell}
+
+Chomsky\is{T model|(}
+criticized simple PSGs for not being able to adequately capture certain correlations. An example of this is the relationship between
+active and passive sentences. In phrase structure grammars, one would have to formulate active and passive rules for intransitive,
+transitive and ditransitive verbs. The fact that the passive can otherwise be consistently described as the suppression of the most
+prominent argument is not captured by phrase structure rules. Chomsky therefore assumes that there is an underlying structure, the
+so"=called \emph{Deep Structure}\is{Deep Structure|see{D"=Structure}}\is{D"=structure}, and that other structures are derived from this. 
+The general architecture of the so-called T~model is discussed in the following subsections.
+
+\subsubsection{D-structure and S-structure}
+
+During the derivation of new structures, parts of the Deep Structure can be deleted or moved. In
+this way, one can explain the relationship between active and passive sentences. As the result of
+this kind of manipulation of structures, also called transformations, one derives a new
+structure, the  \emph{Surface Structure}\is{Surface Structure|see{S"=structure}}\is{S"=structure},
+from the original Deep Structure. Since the Surface Structure does not actually mirror the actual
+use of words in a sentence in some versions of the theory, the term \emph{S"=structure} is sometimes
+used instead as to avoid misunderstandings. 
+\ea
+\begin{tabular}[t]{@{}l@{~=~}l@{}}
+\emph{Surface Structure} & S-structure\\
+\emph{Deep Structure} & D"=structure\\
+\end{tabular}
+\z
+\noindent
+Figure~\vref{Abb-T-Modell} gives an overview of the GB architecture: phrase structure
+rules and the lexicon license the D"=structure from which the S"=structure is derived by means of transformations.
+\begin{figure}
+\centering
+\begin{forest}
+for tree = {edge={->},l=4\baselineskip}
+[D-structure
+     [S-structure,edge label={node[midway,right]{move $\alpha$}} 
+            [Deletion rules{,}\\Filter{,} phonol.\ rules
+                    [Phonetic\\Form (PF)]]
+            [Anaphoric rules{,}\\rules of quantification and control
+                    [Logical\\Form (LF)]]]]
+    \end{forest}
+
+\caption{\label{Abb-T-Modell}The T~model}
+\end{figure}%
+
+S"=structure feeds into Phonetic Form (PF)\is{Phonetic Form (PF)} and Logical Form (LF)\is{Logical Form (LF)}.
+The model is referred to as the \emph{T-model} (or Y-model)
+because D"=structure, S"=structure, PF and LF form an upside"=down T (or Y). We will
+look at each of these individual components in more detail.
+
+Using phrase structure rules, one can describe the relationships between individual elements (for
+instance words and phrases, sometimes also parts of words). The format for these rules
+is \xbar syntax (see Section~\ref{sec-xbar}). The lexicon\is{lexicon|(}, together with the structure licensed by \xbar syntax,
+forms the basis for D"=structure. D"=structure is then a syntactic representation of the selectional grid (=~valence classes\is{valence!classes})
+of individual word forms in the lexicon. 
+
+The lexicon contains a lexical entry for every word which comprises information about morphophonological structure, syntactic features
+and selectional properties. This will be explained in more detail in Section~\ref{Abschnitt-GB-Lexikon}. Depending on one's exact theoretical
+assumptions, morphology\is{morphology} is viewed as part of the lexicon. Inflectional morphology\is{inflection} is, however, mostly consigned
+to the realm of syntax. The lexicon is an interface for semantic interpretation of individual word forms.\is{lexicon}
+
+The surface position in which constituents are realized is not necessarily the position they have in
+D"=strucutre. For example, there are the following ordering variants for a sentence with a ditransitive verb in (\mex{1}):
+\eal
+\ex 
+\gll {}[dass] der Mann der Frau das Buch gibt\\
+	 {}\spacebr{}that the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\glt `that the man gives the woman the book'
+\ex 
+\gll Gibt der Mann der Frau das Buch?\\
+	 gives the.\nom{} man the.\dat{} woman the.\acc{} book\\
+\glt `Does the man give the woman the book?'
+\ex 
+\gll Der Mann gibt der Frau das Buch.\\
+	 the.\nom{} man gives the.\dat{} woman the.\acc{} book\\
+\glt `The man gives the woman the book.'
+\zl
+The following transformational rules for the movements above are assumed: (\mex{0}b) is derived from (\mex{0}a) by fronting the verb, 
+and (\mex{0}c) is derived from (\mex{0}b) by fronting the nominative noun phrase. In \gbt, there is only one very general transformation:
+Move-$\alpha$\is{Move-$\alpha$} = ``Move anything anywhere!''. The nature of what exactly can be moved where and for which reason is determined
+by principles. Examples of such principles are the Theta Criterion and the Case Filter, which will be
+dealt with below.
+
+The relations between a predicate and its arguments that are determined by the lexical entries have to be accessible for semantic interpretation at all 
+representational levels. For this reason, the base position of a moved element is marked with a
+trace. This means for instance that the position in which the
+fronted \emph{gibt} `gives' originated is indicated in (\mex{1}b). The respective marking is
+referred to as a \emph{trace}\is{trace} or a \emph{gap}\is{gap}. Such empty elements may be
+frightening when one encounters them first, but I already motivated the assumption
+of empty elements in nominal structures in Section~\ref{sec-psg-np}  (page~\pageref{np-epsilon}). 
+\eal
+\ex 
+\gll {}[dass] der Mann der Frau das Buch gibt\\
+	 {}\spacebr{}that the man the woman the book gives\\
+\glt `that the man gives the woman the book'
+\ex 
+\gll Gibt$_i$ der Mann der Frau das Buch \_$_i$?\\
+	 gives the man the woman the book\\
+\glt `Does the man give the woman the book?'
+\ex 
+\gll {}[Der Mann]$_j$ gibt$_i$ \_$_j$ der Frau das Buch \_$_i$.\\
+	 {}\spacebr{}the man gives {} the woman the book\\
+\glt `The man gives the woman the book.'
+\zl
+(\mex{0}c) is derived from (\mex{0}a) by means of two movements, which is why there are two traces in (\mex{0}c). The traces are marked with
+indices so it is possible to distinguish the moved constituents. The corresponding indices are then present on the moved constituents. Sometimes,
+\emph{e} (for \emph{empty}) or \emph{t} (for \emph{trace}) is used to represent traces.
+
+The S"=structure derived from the D"=structure is a surface"=like structure but should not be equated with the structure of actual utterances.
+\is{T model|)}
+
+\subsubsection{Phonetic Form}
+
+%https://en.wikipedia.org/wiki/Phonetic_Form
+Phonological operations are represented at\is{Phonetic Form (PF)|(} the level of Phonetic Form (PF). PF is responsible for creating the form which
+is actually pronounced. For example, so"=called \emph{wanna}"=contraction takes place at PF \citep[\page 20--21]{Chomsky81a}.
+\eal
+\ex The students want to visit Paris.
+\ex The students wannna visit Paris.
+\zl
+The contraction\is{contraction} in (\mex{0}) is licensed by the optional rule in (\mex{1}):
+\ea
+want + to $\to$ wanna
+\z
+\is{Phonetic Form (PF)|)}
+
+\subsubsection{Logical Form}
+
+Logical Form\is{Logical Form (LF)|(} is the syntactic level which mediates between S"=structure and the semantic interpretation of
+a sentence. Some of the phenomena which are dealt with by LF are anaphoric reference of pronouns, quantification and control. 
+
+Syntactic factors\label{Seite-Bindungstheorie} play a role in resolving anaphoric dependencies.
+An important component of \gbt is Binding Theory\is{Binding Theory}, which seeks to explain what a
+pronoun can or must refer to and when a reflexive pronoun can or must be used. 
+(\mex{1}) gives some examples of both personal and reflexive pronouns:
+\eal
+\ex 
+\gll Peter kauft einen Tisch. Er gefällt ihm.\\
+	 Peter buys a table.\mas{} he likes him\\
+\glt `Peter is buying a table. He likes it/him.'
+\ex 
+\gll Peter kauft eine Tasche. Er gefällt ihm.\\
+	 Peter buys a bag.\fem{} he likes him\\
+\glt `Peter is buying a bag. He likes it/him.'
+\ex 
+\gll Peter kauft eine Tasche. Er gefällt sich.\\
+	 Peter buys a bag.\fem{} he likes himself\\
+\glt `Peter is buying a bag. He likes himself.'
+\zl
+In the first example, \emph{er} `he' can refer to either Peter, the table or something/someone else that was previously mentioned
+in the context. \emph{ihm} `him' can refer to Peter or someone in the context. Reference to the table is restricted by world knowledge.
+In the second example, \emph{er} `he' cannot refer to \emph{Tasche} `bag' since \emph{Tasche} is feminine and \emph{er} is masculine.
+\emph{er} `he' can refer to Peter only if \emph{ihm} `him' does not refer to Peter. \emph{ihm} would otherwise have to refer to a person
+in the wider context. This is different in (\mex{0}c). In (\mex{0}c), \emph{er} `he' and \emph{sich} `himself' must refer to the same
+object. This is due to the fact that the reference of reflexives such as \emph{sich} is restricted to a particular local domain. Binding Theory
+attempts to capture these restrictions.
+
+LF is also important for quantifier scope. Sentences such as (\mex{1}a) have two readings. These are given in (\mex{1}b) and (\mex{1}c).
+
+\eal
+\label{Beispiel-Every-man-loves-a-woman}
+\ex Every man loves a woman.
+\ex $\forall x \exists y (man(x) \to (woman(y) \wedge love(x,y)))$
+\ex $\exists y \forall x (man(x) \to (woman(y) \wedge love(x,y)))$
+\zl
+The symbol $\forall$\is{$\forall$} stands for a \emph{universal quantifier}\is{quantifier!universal} and $\exists$\is{$\exists$} stands for an
+\emph{existential quantifier}\is{quantifier!existential}. The first formula corresponds to the reading that for every man, there is a woman who he loves
+and in fact, these can be different women. Under the second reading, there is exactly one woman such that all men love her. The question of when such an
+ambiguity arises and which reading is possible when depends on the syntactic properties of the given utterance. LF is the level which is important for the
+meaning of determiners such as \emph{a} and \emph{every}.
+
+Control Theory\is{Control Theory} is also specified with reference to LF. Control Theory deals with the question of how the semantic role of the infinitive
+subject in sentences such as (\mex{1}) is filled.
+\eal
+\ex 
+\gll Der Professor schlägt dem Studenten vor, die Klausur noch mal zu schreiben.\\
+	 the professor suggests the student \textsc{prt} the test once again to write\\
+\glt `The professor advises the student to take the test again.'
+\ex 
+\gll Der Professor schlägt dem Studenten vor, die Klausur nicht zu bewerten.\\
+	 the professor suggests the student \textsc{prt} the test not to grade\\
+\glt `The professor suggests to the student not to grade the test.'
+\ex 
+\gll Der Professor schlägt dem Studenten vor, gemeinsam ins Kino zu gehen.\\
+	 the professor suggests the student \textsc{prt} together into cinema to go\\
+\glt `The professor suggests to the student to go to the cinema together.'
+\zl
+\is{Logical Form (LF)|)}
+
+\subsubsection{The lexicon}
+\label{Abschnitt-GB-Lexikon}
+
+The meaning of words tells us that they have to be combined with certain roles like ``acting person'' or ``affected thing'' when creating more complex phrases.
+For example, the fact that the verb \emph{know} needs two arguments belongs to its semantic contribution. The semantic representation of the contribution of the verb \emph{know} in (\mex{1}a) is given in (\mex{1}b):
+\eal
+\ex Maria knows the man.
+\ex \relation{know}(x,y)
+\zl
+\noindent
+Dividing heads into valence classes is also referred to as \emph{subcategorization}\is{subcategorization}:\label{Seite-Subkategoriesierung} 
+\emph{know} is subcategorized for a subject and an object.
+This term comes from the fact that a head is already categorized with regard to its
+part of speech (verb, noun, adjective, \ldots) and then further sub"-classes (\eg intransitive or
+transitive verb) are formed with regard to valence information. Sometimes the phrase \emph{X subcategorizes for Y} is used, which means \emph{X selects Y}.
+% or even \emph{X governs Y}. Martin: government ist in GB was anderes.
+\emph{know} is referred to as the predicate\is{predicate} since 
+\relation{know} is the logical predicate.
+The subject and object are the arguments\is{argument} of the predicate. There are several terms used to describe the total selectional requirements such
+as \emph{argument structure}\is{argument structure}, \emph{valence frames}\is{valence frame},
+\emph{subcategorization frame}\is{subcategorization frame}, \emph{thematic grid}\is{thematic grid} and \emph{theta grid} or $\theta$-grid\is{theta grid}. 
+%\todostefan{ich habe hier einige uebersetzungen erstmal weggelassen, weil ich mir nicht sicher bin wie die richtige uebersetzung ist.}
+%Subjekt und Objekt sind die Argumente\is{Argument} des Prädikats. Spricht man von der Gesamtheit
+%der Selektionsanforderungen, verwendet man Begriffe wie Argumentstruktur\is{Argumentstruktur}, Valenzrahmen\is{Valenz!-rahmen},
+%Selektionsraster\is{Selektion!-sraster}, Subkategorisierungsrahmen\is{Subkategorisierung!-srahmen}, thematisches Raster\is{Raster!thematisches} 
+%oder Theta-Raster = $\theta$-Raster\is{theta-Raster@$\theta$-Raster}
+%(\emph{thematic grid}, \emph{Theta-grid}). 
+
+Adjuncts\is{adjunct} modify semantic predicates and when the semantic aspect is emphasized they are
+also called \emph{modifiers}\is{modifier}. Adjuncts are not present in the argument structure
+of predicates.
+
+Following GB assumptions, arguments occur in specific positions in the clause -- in so"=called argument positions\is{argument!position} (\eg the sister of 
+an \xnull element, see Section~\ref{sec-xbar}). The Theta Criterion\is{Theta Criterion} states that elements in argument positions have to be assigned
+a semantic role\is{semantic role} -- a so"=called theta role\is{theta role@$\theta$-role} -- and each role can only be assigned once \citep[\page 36]{Chomsky81a}: 
+\begin{principle-break}[Theta Criterion]\label{theta-Kriterium}
+\begin{itemize}
+\item Each theta role is assigned to exactly one argument position.
+\item Every phrase in an argument position receives exactly one theta role.
+\end{itemize}
+\end{principle-break}
+\noindent
+The arguments of a head are ordered, that is, one can differentiate between higher- and lower"=ranked arguments. The highest"=ranked
+argument of verbs and adjectives has a special status. Since GB assumes that it is often (and always in some languages) realized in a position
+outside of the verb or adjective phrase, it is often referred to as the \emph{external argument}\is{argument!external}. The remaining
+arguments occur in positions inside of the verb or adjective phrase. These kind of arguments are dubbed 
+\emph{internal arguments}\is{argument!internal} or \emph{complements}\is{complement}. For simple sentences, this often means that the subject
+is the external argument.
+
+When discussing types of arguments, one can identify three classes of theta roles:
+\begin{itemize}
+\item Class 1: agent\is{agent} (acting individual), the cause of an action or feeling (stimulus), holder of a certain property
+\item Class 2: experiencer\is{experiencer} (perceiving individual), the person profiting from something (beneficiary\is{beneficiary})
+(or the opposite: the person affected by some kind of damage), possessor (owner or soon"=to"=be owner of something, or the opposite:
+someone who has lost or is lacking something) 
+\item Class 3: patient\is{patient} (affected person or thing), theme\is{theme}
+\end{itemize}
+If a verb has several theta roles of this kind to assign, Class~1 normally has the highest rank, whereas Class~3 has the lowest.
+Unfortunately, the assignment of semantic roles to actual arguments of verbs has received a rather inconsistent treatment in the 
+literature. This problem has been discussed by \citet{Dowty91a}, who suggests using proto"=roles. An argument is assigned the
+proto"=agent role if it has sufficiently many of the properties that were identified by Dowty as prototypical properties of agents (\eg animacy\is{animacy}, volitionality).%
+\nocite{Gruber65a-u,Fillmore68,Fillmore71a-u,Jackendoff72a-u,Dowty91a}
+
+The mental lexicon contains \emph{lexical entries} with the specific properties of syntactic words needed to use that word grammatically.
+Some of these properties are the following:
+\begin{itemize}
+\item form
+\item meaning (semantics)
+\item grammatical features:\\
+      syntactic word class + morphosyntactic features   
+\item theta grid
+\end{itemize}
+
+\noindent
+(\mex{1}) shows an example of a lexical entry:
+\ea
+\raisebox{1.2ex}{%
+\begin{tabular}[t]{|l|ll|}
+\hline
+form     & \emph{hilft} `helps'&\\\hline
+semantics & \relation{helfen}     &\\\hline
+grammatical features  & \multicolumn{2}{l|}{verb,}\\
+                       & \multicolumn{2}{l|}{3rd person singular indicative present active}\\\hline\hline
+
+%\setlength{\arrayrulewidth}{9pt}
+theta grid                &&\\\hline
+theta roles                & \underline{agent} & beneficiary\\[2mm]\hline
+grammatical particularities &                   & dative\\\hline
+\end{tabular}}
+\z
+Assigning semantic roles to specific syntactic requirements (beneficiary = dative) is also called \emph{linking}.\is{linking}
+
+Arguments are ordered according to their ranking: the highest argument is furthest left. In the case
+of \emph{helfen}, the highest argument is the external argument\is{external argument}, which is why the agent is underlined. With so"=called unaccusative verbs,\is{verb!unaccusative}\footnote{
+See \citew{Perlmutter78} for a discussion of unaccusative verbs. The term \emph{ergative verb}\is{verb!ergative} is also common, albeit
+a misnomer. See \citew{Burzio81-u,Burzio86a-u-gekauft} for the earliest work on unaccusatives in the Chomskyan Framework and 
+\citew{Grewendorf89a} for German. Also, see \citew{Pullum88a} on the usage of these terms and for a historical evaluation.
+}
+the highest argument is not treated as the external argument. It would therefore not be underlined in the corresponding lexical entry.
+
+\subsection{\xbart}
+\label{Abschnitt-X-Bar}
+
+In\is{X theory@\xbar theory|(} GB, it is assumed that all syntactic structures licensed by the core grammar\is{core grammar}\footnote{
+ \citet[\page 7--8]{Chomsky81a} distinguishes between a regular area of language which is determined by a grammar which
+ can be acquired using genetically determined language"=specific knowledge and a periphery\is{periphery}, to which irregular parts
+ of language such as idioms (\eg \emph{to pull the wool over sb.'s eyes}) belong. See Section~\ref{Abschnitt-musterbasiert}.
+}
+correspond to the \xbar schema (see Section~\ref{sec-xbar}).\footnote{
+   \citet[\page 210]{Chomsky70a} allows for grammatical rules that deviate from the \xbar schema.
+   It is, however, common practice to assume that languages exclusively use \xbar structures.
+}
+In the following sections, I will comment on the syntactic categories assumed and the basic assumptions with regard to
+the interpretation of grammatical rules. 
+
+\subsubsection{Syntactic categories}
+\label{GB-syntaktische-categoryn}
+
+The categories which can be used for the variable X in the \xbar schema are divided into lexical\is{category!lexical} and functional\is{category!functional}
+categories. This correlates roughly with the difference between open and closed word classes. The following are lexical categories: 
+\begin{itemize}
+\item V = verb\is{verb}
+\item N = noun\is{noun}
+\item A = adjective\is{adjective}
+\item P = preposition\is{preposition}/postposition
+\item Adv = adverb\is{adverb}
+\end{itemize}
+Lexical categories can be represented using binary features and a cross"=classification:\footnote{%
+   See \citew[\page 199]{Chomsky70a} for a cross"=classification of N, A and V, and 
+   \citew[Section~3.2]{Jackendoff77} for a cross"=classification of P, albeit with differing feature assignment.
+} 
+\LATER{\citet{Wunderlich96a} has criticized this feature decomposition}
+\begin{table}[H]
+\centerline
+{\renewcommand{\arraystretch}{1.5}%
+\begin{tabular}[t]{ccc}
+\lsptoprule
+ & $-$V & +V \\
+\midrule
+$-$N & P = [ $-$N, $-$V ] &  V = [ $-$N, +V ] \\
+  +N & N = [ +N, $-$V ]    &  A = [ +N, +V ]\\
+\lspbottomrule
+\end{tabular}}
+\caption{\label{Tabelle-Merkmalszerlegung-Wortarten}Representation of four lexical categories using two binary features}
+\end{table}%
+
+\noindent
+Adverbs are viewed as intransitive prepositions\label{Seite-Adverbien-PP} and are therefore captured by the decomposition in the
+table above.
+
+Using this cross"=classification, it is possible to formulate generalizations. One can, for example, simply refer to adjectives and
+verbs: all lexical categories which are [~+V~] are either adjectives or verbs. Furthermore, one can
+say of [~+N~] categories (nouns and adjectives) that they can bear case. 
+
+Apart from this some authors have tried to associate the head position with the feature values in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} (see \eg \citealp[\page 52]{Grewendorf88a};
+\citealp[\page 124]{Haftka96a}; G.\ \citealp[\page 238]{GMueller2011a}). With prepositions and nouns,
+the head precedes the complement in German:
+\eal
+\ex
+\gll \emph{für} Marie\\
+	 for Marie\\
+\ex 
+\gll \emph{Bild} von Maria\\
+	 picture of Maria\\
+\zl
+With adjectives and verbs, the head is final:
+\eal
+\ex 
+\gll dem König \emph{treu}\\
+     the king loyal\\
+\glt `Loyal to the king'
+\ex 
+\gll der [dem Kind \emph{helfende}] Mann\\
+     the the child helping man\\
+\glt `the man helping the child'
+\ex 
+\gll dem Mann \emph{helfen}\\
+     the man help\\
+\glt `help the man'
+\zl
+This data seems to suggest that the head is final with [~+V~] categories and initial with [~$-$V~] categories. Unfortunately, this
+generalization runs into the problem that there are also postpositions in German. These are, like
+prepositions, not verbal, but do occur after the NP they require: 
+\eal
+\ex 
+\gll des Geldes \emph{wegen}\\
+     the money because\\
+\glt `because of the money'
+\ex 
+\gll die Nacht \emph{über}\\
+     the night during\\
+\glt `during the night'
+\zl
+Therefore, one must either invent a new category, or abandon the attempt to use binary category features to describe ordering restrictions.
+If one were to place postpositions in a new category, it would be necessary to assume another binary
+feature.\footnote{
+Martin Haspelmath\aimention{Martin Haspelmath} has pointed out that one could assume a rule that moves a
+post-head argument into a pre-head position (see \citealp[\page 89]{Riemsdijk78a} for the discussion
+of a transformational solution). This would be parallel to the realization of
+prepositional arguments of adjectives in German:
+\eal
+\ex
+\gll auf seinen Sohn stolz\\
+     on  his son proud\\
+\glt `proud of his son'
+\ex 
+\gll stolz auf seinen Sohn\\
+     proud of his son\\
+\zl
+But note that the situation is different with postpositions here, while all adjectives that take
+prepositional objects allow for both orders, this is not the case for prepositions. Most
+prepositions do not allow their object to occur before them. It is an idiosyncratic feature of some
+postpositions that they want to have their argument to the left.%
+} 
+Since this feature can have either a negative or a positive value, one would then have four
+additional categories. There are then eight possible feature combinations, some of which would not
+correspond to any plausible category.
+
+For functional categories, GB does not propose a cross"=classification. Usually, the following categories are assumed:
+\begin{table}[H]
+\begin{tabular}{lp{65ex}@{}}
+C   & Complementizer\is{category!functional!C} (subordinating conjunctions such as \emph{dass} `that')\\
+I   & Finiteness\is{category!functional!I} (as well as Tense and Mood);\\
+    & also Infl in earlier work (inflection),\\
+    & T in more recent work (Tense)\is{category!functional!T} \\
+D   & Determiner\is{category!functional!D} (article, demonstrative)\\
+\end{tabular}
+\end{table}%
+
+\subsubsection{Assumptions and rules}
+
+In GB, it is assumed that all rules must follow the \xbar format discussed in Section~\ref{sec-xbar}. In other theories, rules which correspond
+to the \xbar format are used along other rules which do not. If the strict version of \xbart is
+assumed, this comes with the assumption of \emph{endocentricity}\is{endocentricity}: every phrase
+has a head and every head is part of a phrase (put more technically: every head
+projects\is{projection} to a
+phrase). 
+
+Furthermore, as with phrase structure grammars, it is assumed that the branches of tree structures
+cannot cross (\emph{Non-Tangling Condition}\is{Non-Tangling Condition}). This assumption is made by
+the majority of theories discussed in this book. There are, however, some variants of TAG\indextag,
+HPSG\indexhpsg, Construction Grammar\indexcxg, and Dependency Grammar\indexdg which allow crossing branches and therefore
+discontinuous\is{constituent!discontinuous} constituents
+(\citealp*{BJR91a,Reape94a,BC2005a};\citealp[\page 261]{Heringer96a-u}; \citealp[Section~9.6.2]{Eroms2000a}).
+
+In \xbart, one normally assumes that there are at most two projection levels (X$'$ and X$''$). However, there are some versions of Mainstream
+Generative Grammar and other theories which allow three or more levels \citep{Jackendoff77,Uszkoreit87a}. In this chapter, I follow the
+standard assumption that there are two levels, that is, phrases have at least three projection levels:
+
+
+\begin{itemize}
+\item X$^0$ = head
+\item X$'$ = intermediate projection (X bar) 
+\item XP = highest projection (=~X$''$ = $\overline{\overline{\mbox{X}}}$), also called \emph{maximal projection}\is{projection!maximal} 
+\end{itemize}
+\is{X theory@\xbar theory|)}
+
+\subsection{CP and IP in English}
+\label{Abschnitt-GB-CP-IP-System-Englisch}\label{sec-GB-CP-IP-System-English}
+
+Most work in Mainstream Generative Grammar is heavily influenced by previous publications dealing with English. If one wants to understand GB analyses of
+German and other languages, it is important to first understand the analyses of English and, for this reason, this will be the focus of this section.
+The CP/IP system is also assumed in LFG grammars of English and thus the following section also provides a foundation for understanding some of the
+fundamentals of LFG presented in Chapter~\ref{Kapitel-LFG}.
+
+In earlier work, the rules in (\mex{1}a) and (\mex{1}b) were proposed for English sentences \citep[\page 19]{Chomsky81a}.
+
+\eal
+\ex S $\to$ NP VP
+\ex S $\to$ NP Infl VP
+\zl
+
+Infl stands for \emph{Inflection} as inflectional affixes are inserted at this position in the
+structure. The symbol AUX was also used instead
+of Infl in earlier work, since auxiliary verbs are treated in the same way as inflectional
+affixes. Figure~\vref{Abb-Old-School-Hilfsverb} shows a sample 
+analysis of a sentence with an auxiliary, which uses the rule in (\mex{0}b). 
+%
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[S
+  [NP
+  	[Ann]]
+  [INFL
+  	[will]]
+  [VP
+  	[V$'$
+		[V$^0$[read]]
+		[NP[the newspaper, triangle]]]]]
+\end{forest}
+}
+\caption{\label{Abb-Old-School-Hilfsverb}English sentence with an auxiliary verb following \citet[\page 19]{Chomsky81a}}
+\end{figure}%
+
+Together with its complements, the verb forms a structural unit: the VP. The constituent status of
+the VP is supported by several constituent tests and further differences
+between subjects and objects regarding their positional restrictions.
+
+The rules in (\mex{0}) do not follow the \xbar template since there is no symbol on the right"=hand side of the rule with the same
+category as one on the left"=hand side, that is, there is no head. In order to integrate rules like
+(\mex{0}) into the general theory, \citet[\page 3]{Chomsky86b} developed a rule system with
+two layers above the verb phrase (VP), namely the CP/""IP system\is{category!functional!I|(}. CP stands for \emph{Complementizer Phrase}.
+The head of a CP can be a complementizer. Before we look at CPs in more detail, I will discuss an example of an IP in this new system. 
+Figure~\vref{Abb-GB-Hilfsverb} shows an IP with an auxiliary in the \inull position. As we can see, this corresponds to the structure of
+the \xbar template: \inull is a head, which takes the VP as its complements and thereby forms I$'$. The subject\is{subject} is the specifier\is{specifier} 
+of the IP.
+%
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[IP
+  [NP
+  	[Ann]]
+  [I$'$
+  	[I$^0$
+  		[will]]
+	[VP
+  	[V$'$
+		[V$^0$[read]]
+		[NP[the newspaper, triangle]]]]]]
+\end{forest}}
+\caption{\label{Abb-GB-Hilfsverb}English sentence with auxiliary verb in the CP/IP system}
+\end{figure}%
+% nach vorn verschoben
+% Wie man sieht, entspricht die Struktur dem \xbars: \inull ist ein Kopf, der die VP als Komplement
+% nimmt und eine I$'$ bildet. Das Subjekt\is{Subjekt} ist der Spezifikator\is{Spezifikator} der IP.
+% %Die Hilfsverben stehen in \inull (=~Aux). Satzadverbien können zwischen Hilfsverb und Vollverb stehen.
+
+The sentences in (\mex{1}) are analyzed as complementizer phrases (CPs), the complementizer is the head:
+
+\eal
+\ex that Ann will read the newspaper
+\ex\label{ex-that-ann-reads-the-newspaper}that Ann reads the newspaper
+\zl
+In sentences such as (\mex{0}), the CPs do not have a specifier. Figure~\vref{Abb-GB-Englisch-CP} shows the analysis
+of (\mex{0}a). 
+\begin{figure}
+% node labels for moving elements will be typeset by the \tmove command
+% here we have to provide invisible boxes to get the line drawing right.
+\centerline{%
+\begin{forest}
+sn edges
+[CP
+[C$'$
+	[C$^0$[that]]
+	[IP
+		[NP[Ann]]
+		[I$'$
+			[I$^0$[will]]
+			[VP
+				[V$'$
+					[V$^0$[read]]
+					[NP[the newspaper, triangle]]]]]]]]
+\end{forest}}
+\caption{\label{Abb-GB-Englisch-CP}English complementizer phrase}
+\end{figure}%
+
+
+Yes/no-questions\label{Seite-GB-Entscheidungsfragen-Englisch} in English such as those in (\mex{1}) are formed by moving the 
+auxiliary verb\is{auxiliary movement} in front of the subject.
+\ea
+Will Ann read the newspaper?
+\z
+Let us assume that the structure of questions corresponds to the structure of sentences with complementizers. This means that questions are also
+CPs. Unlike the sentences in (\mex{-1}), however, there is no subordinating conjunction. In the D"=structure of questions, the \cnull position is
+empty and the auxiliary verb is moved to this position. Figure~\vref{Abb-GB-Ja-Nein} shows an analysis of (\mex{0}).
+
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[CP
+[C$'$
+	[C$^0$[will$_k$]]
+	[IP
+		[NP[Ann]]
+		[I$'$
+			[I$^0$[\trace$_k$]]
+			[VP
+				[V$'$
+					[V$^0$[read]]
+					[NP[the newspaper, triangle]]]]]]]]
+\end{forest}
+}
+\caption{\label{Abb-GB-Ja-Nein}English polar question}
+\end{figure}%
+The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary movement}
+
+
+
+\emph{wh}-questions are formed by the additional movement of a constituent in front of the auxiliary. 
+Figure~\vref{Abb-GB-Wh} shows the analysis of (\mex{1}): 
+\ea
+What will Ann read?
+\z
+%
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[CP
+[NP[what$_i$]]
+[C$'$
+	[C$^0$[will$_k$]]
+	[IP
+		[NP[Ann]]
+		[I$'$
+			[I$^0$[\trace$_k$]]
+			[VP
+				[V$'$
+					[V$^0$[read]]
+					[NP[\trace$_i$]]]]]]]]
+\end{forest}
+}
+\caption{\label{Abb-GB-Wh}English \emph{wh}"=question}
+\end{figure}%
+As before, the movement of the object of \emph{read} is indicated by a trace. This is important when constructing the meaning of
+the sentence. The verb assigns some semantic role to the element in its object position. Therefore,
+one has to be able to ``reconstruct'' the fact that \emph{what} actually originates in this position. This is ensured by coindexation of the trace with \emph{what}.\il{English|)}
+
+Until now, I have not yet discussed sentences without auxiliaries such as (\ref{ex-that-ann-reads-the-newspaper}). In order to analyze these kinds of sentences, one has to assume that the
+inflectional affix is present in the \inull position. An example analysis is given in Figure~\vref{Abb-GB-englischer-Satz-ohne-Hilfsverb}.
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[IP
+	[NP[Ann]]
+	[I$'$
+		[I$^0$[-s]]
+		[VP
+			[V$'$
+				[V$^0$[read-]]
+				[NP[the newspaper, triangle]]]]]]
+\end{forest}}
+\caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}English sentence without auxiliary}
+\end{figure}%
+Since the inflectional affix precedes the verb, some kind of movement operation still needs to take place.
+For theory"=internal reasons, one does not wish to assume movement operations to positions lower in the
+tree, hence the verb has to move to the affix and not the other way around.
+%% \begin{itemize}
+%% \item Die {D"=Struktur} ist die Phrasenstruktur,\\
+%% die sich aus den Theta-Rastern der beteiligten \bf{lexikalischen Einheiten} ergibt.
+%% \item Die {S-Struktur} berücksichtigt
+%% zusätzlich die Anforderungen der {functionaln categoryn}.
+%
+%% Besonders wichtig:\\
+%% functional categoryn können {Bewegungen} auslösen. 
+%% \end{itemize}
+
+Following this excursus on the analysis of English sentences, we can now turn to German.
+
+
+
+\subsection{The structure of the German clause}
+\label{sec-German-clause}
+
+The CP/IP model has been adopted by many scholars for the analysis of German.\footnote{
+  For GB analyses without IP, see \citew{BK89a}, \citew[\page 157]{Hoehle91},
+  \citew{Haider93a,Haider97a} and \citew[Section~IV.3]{Sternefeld2006a-u}. Haider assumes
+  that the function of I is integrated into the verb. In LFG\indexlfg, an IP is assumed for English
+  (\citealp[Section~6.2]{Bresnan2001a}; \citealp[Section~3.2.1]{Dalrymple2001a-u}, but not for German \citep[Section~3.2.3.2]{Berman2003a}.
+  In HPSG\indexhpsg, no IP is assumed.
+} 
+The categories C, I and V, together with their specifier positions, can be linked to the
+topological\is{topology} fields as shown in Figure~\vref{Abb-GB-Topo}.
+
+\begin{figure}
+    \centering
+        \begin{forest}
+            sn edges original,empty nodes
+            [CP
+              [{}
+                [XP,terminus
+                  [SpecCP\\prefield, name=p1
+                  ]
+                ]
+              ]
+              [C$'$
+                    [{}
+                      [C$^0$, terminus
+                        [C$^0$\\left SB, name=c0
+                        ]
+                      ]
+                    ]
+                    [IP
+                      [{}
+                        [XP, terminus
+                          [{IP (without I$^0$, V$^0$)\\middlefield}
+                            [SpecIP\\subject position, set me left, name=specip
+                            ]
+                            [phrases inside\\the VP, name=p3
+                            ]
+                          ]
+                        ]
+                      ]
+                      [I$'$
+                              [VP, name=vp
+                                [V$^0$, name=v0, terminus, no path, anchor=east
+                                  [{V$^0$, I$^0$\\right SB}, name=p2, set me left
+                                  ]
+                                ]
+                              ]
+                              [{}
+                                    [I$^0$, terminus, name=io
+                                    ]
+                              ]
+                      ]
+                    ]
+              ]
+            ]
+            \draw [thick]
+              (p1.north west) rectangle (io.east |- p3.south);
+            \draw
+              ($(c0.north east)!1/2!(specip.west |- c0.north east)$) coordinate (p6) -- (p6 |- p3.south)
+              ($(p1.north east)!1/2!(c0.north west)$) coordinate (p4) -- (p3.south -| p4)
+              ($(specip.north east)!1/2!(p3.north west)$) coordinate (p5) -- (p3.south -| p5)
+              ($(p2.north west)!1/2!(p2.north west -| p3.east)$) coordinate (p7) -- (p3.south -| p7)
+              (p6 |- p2.south) -- (p2.south -| p7)
+              (vp.south) -- (v0.center -| p3.west) -- (v0.west)
+              (v0.east) -- +(4.5pt,0) -- (vp.south)
+              ;
+        \end{forest}
+\is{field!pre-}\is{field!middle-}\is{sentence bracket}
+\caption{\label{Abb-GB-Topo}CP, IP and VP and the topological model of German}
+\end{figure}%
+%% \begin{itemize}
+%% \item Zuordnung zum Vorfeld dadurch motiviert, dass im Bairischen
+%%       zusätzlich zur w/d-Phrase ein Komplementierer auf"|treten kann.
+%% \item außerdem theorieinterne Gründe (Phrasenposition vs.\ Kopfposition)
+%% \item Diese Zuordnung schafft allerdings empirische Probleme:
+%%       \begin{itemize}
+%%       \item Komplementierer kann mit w-Phrase koordiniert werden \citep{Reis85} %S. 301
+%%       \item w/d-Phrasen verhalten sich in Bezug auf Verum-Fokus genauso wie Komplementierer
+%%       \item w/d-Phrasen können in Dialekten wie Komplementierer flektiert werden
+%%       \end{itemize}
+%% \end{itemize}
+Note that SpecCP and SpecIP are not category symbols. They do not occur in grammars with rewrite rules. Instead, they simply describe
+positions in the tree.%
+\is{category!functional!I|)}
+
+
+As shown in Figure~\ref{Abb-GB-Topo}, it is assumed that the highest argument of the verb (the subject in simple sentences) 
+has a special status. It is taken for granted that the subject always occurs outside of the VP, which is why it is referred
+to as the external argument.\is{argument!external} The VP itself does not have a specifier. In more recent work, however, the subject
+is generated in the specifier of the VP \citep{FS86a-u,KS91a-u}. In some languages, it is assumed that it moves to a position
+outside of the VP. In other languages such as German, this is the case at least under certain conditions (\eg definiteness, see
+\citealp{Diesing92a}). I am presenting the classical GB analysis here, where the subject is outside the VP. All arguments other than
+the subject are complements of the V, that are realized within the VP, that is, they are internal arguments. If the verb requires just one complement, then this is the
+sister of the head V$^0$ and the daughter of V$'$ according to the \xbar schema. The accusative object is the prototypical complement.
+
+Following the \xbar template, adjuncts\is{adjunct|(} branch off above the complements of V$'$. The analysis of a VP
+with an adjunct is shown in Figure~\vref{GB-Adjunkte}.
+\ea
+\gll weil der Mann morgen den Jungen trifft\\
+	 because the man tomorrow the boy meets\\
+\glt `because the man is meeting the boy tomorrow'
+\z
+
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[VP
+[V$'$
+	[Adv[morgen;tomorrow]]
+	[V$'$
+		[NP[den Jungen;the boy, triangle]]
+		[V[triff-;meet]]]]]
+\end{forest}}
+\caption{\label{GB-Adjunkte}Analysis of adjuncts in \gbt}
+\end{figure}%
+\is{adjunct|)}
+
+
+\section{Verb position}
+\label{ABschnitt-Verbstellung-GB}
+
+In German, the position of the heads of VP and IP (\vnull and \inull) are to the right of their
+complements and \vnull and \inull form part of the right sentence bracket.
+The subject and all other constituents (complements and adjuncts) all occur to the left of \vnull
+and \inull and form the middle field. It is assumed
+that German -- at least in terms of D"=structure -- is an SOV language (=~ a language with the base order Subject--Object--Verb).
+The analysis of German as an SOV language is almost as old as Transformational Grammar itself. It was originally proposed by
+\citet*[\page34]{Bierwisch63}.\footnote{
+	Bierwisch attributes the assumption of an underlying verb"=final order to \citet{Fourquet57a}. A German translation of the
+	French manuscript cited by Bierwisch can be found in \citew[\page117--135]{Fourquet70a}. For other proposals, see \citew{Bach62a},
+\citew{Reis74a}, \citew{Koster75a} and \citew[Chapter~1]{Thiersch78a}. Analyses which assume that
+German has an underlying SOV pattern were also suggested in \gpsg \citep[\page110]{Jacobs86a}, 
+LFG \citep[Section~2.1.4]{Berman96a-u} and HPSG   (\citealp*{KW91a}; \citealp{Oliva92a}; \citealp*{Netter92};   
+\citealp*{Kiss93}; \citealp*{Frank94}; \citealp*{Kiss95a}; \citealp{Feldhaus97},
+\citealp{Meurers2000b}; \citealp{Mueller2005c,MuellerGS}). 
+}
+Unlike German, Germanic languages like Danish\il{Danish}, English\il{English} and Romance languages
+like French\is{French} are SVO languages, whereas Welsh\il{Welsh} and Arabic\il{Arabic}
+are VSO languages. Around 40\,\% of all languages belong to the SOV languages, around 35\,\% are
+SVO \citep{wals-81}.
+% 41,03 SOV
+% 35,4  SVO
+%  6,9  VSO
+
+The assumption of verb"=final order\label{page-verbletzt} as the base order is motivated by the following observations:\footnote{
+	For points 1 and 2, see \citew[\page34--36]{Bierwisch63}. For point~\ref{SOV-Skopus} see \citew[Section~2.3]{Netter92}.%
+}
+
+% Ich glaube, über Deutsch würde man sagen, dass Prominenz rechts in der phonologischen Phrase ist,
+% aber nicht ausschließlich durch Längung markiert, sondern vor allem durch pitch. Demnach wäre
+% deutsch wieder irgendwie dazwischen... Außerdem kommt bei Deutsch (wie bei Englisch) noch
+% Deakzentuierung von Gegebenem dazu, da kann Prominenz auch mal nicht-final sein. Oder man sagt,
+% dass in diesen Fällen dann automatisch immer die phonologische Phrase zuende ist, dann ist der
+% Akzent wieder final. Caroline Féry hat dazu Papiere. Diese Deakzentuierung gibt es im Spanischen
+% (und ich denke auch im Italienischen) nicht in dieser Art. Japanisch weiß ich nicht.
+%
+% Viele Grüße,
+% Felix
+%
+%
+%  Am 30.09.11 21:00, schrieb Stefan Müller:
+% >
+% > Habe gerade folgendes gefunden:
+% >
+% >> Interestingly, because head-final languages (\eg Turkish and
+% >> Japanese) mark prominence in phonological phrases initially through
+% >> pitch and intensity and head-initial languages (\eg Italian and
+% >> English) mark prominence in phonological phrases finally through
+% >> duration (Nespor et al., 2008),
+% >
+% >
+% > Wie macht das Deutsche das und ist es dann also head-final oder
+% > -initial. Das wollte ich ja schon immer mal wissen ...
+% >
+% > Viele Grüße
+% >
+% >     Stefan
+
+
+\begin{enumerate}
+\item Verb particles form a close unit with the verb.
+\eal
+\ex 
+\gll weil er morgen an-fängt\\
+	 beause he tomorrow \textsc{prt}-starts\\
+\glt `because he is starting tomorrow'
+\ex 
+\gll Er fängt morgen an.\\
+	 he starts tomorrow \textsc{prt}\\
+\glt `He is starting tomorrow.'
+\zl
+This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.
+
+Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
+`to perform something for the first time', can often not be divided into their component parts and
+V2 clauses are therefore ruled out (This was first mentioned by \citet{Hoehle91b} in unpublished
+work. The first published source is \citew[\page 62]{Haider93a}):
+\eal
+\ex[]{
+\gll weil sie das Stück heute ur-auf-führen\\
+	 because they the play today \textsc{pref}-\textsc{part}-lead\\
+\glt `because they are performing the play for the first time today'
+}
+\ex[*]{
+\gll Sie ur-auf"|führen heute das Stück.\\
+	 they \textsc{pref}-\textsc{part}-lead today the play\\
+}
+\ex[*]{
+\gll Sie führen heute das Stück ur-auf.\\
+	 they lead today the play \textsc{pref}-\textsc{part}\\
+}
+\zl
+The examples show that there is only one possible position for the verb. This order is the one that is assumed to be the base order.
+\item Verbs in non"=finite clauses and in finite subordinate clauses with a conjunction are
+always in final position (I am ignoring the possibility of extraposing constituents):
+\eal
+\ex 
+\gll Der Clown versucht, Kurt-Martin die Ware zu geben.\\
+     the clown tries Kurt-Martin the goods to give\\
+\glt `The clown is trying to give Kurt-Martin the goods.'
+\ex 
+\gll dass der Clown Kurt-Martin die Ware gibt\\
+	 that the clown Kurt-Martin the goods gives\\
+\glt `that the clown gives Kurt-Martin the goods'
+\zl
+
+\item If one compares the position of the verb in German to Danish\il{Danish} (Danish is an SVO language
+like English), then one can clearly see that the verbs in German form a cluster at the end of the sentence,
+whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
+\eal
+\ex 
+\gll dass er ihn gesehen$_3$ haben$_2$ muss$_1$\\
+	 that he him seen have must\\
+\ex 
+\gll at han må$_1$ have$_2$ set$_3$ ham\\
+     that he must have seen him\\
+\glt `that he must have seen him'
+\zl
+\item\label{SOV-Skopus}\is{scope|(} The scope relations of the adverbs in (\ref{bsp-absichtlich-nicht-anal}) depend on their order:
+the left"=most adverb has scope over the two following elements.\footnote{%
+At this point, it should be mentioned that there seem to be exceptions from the rule that modifiers to the left take scope over those to
+their right. \citet*[\page47]{Kasper94a} discusses examples such as (i), which go back to \citet*[\page137]{BV72}.
+\eal
+\label{bsp-peter-liest-gut-wegen}
+\ex 
+\gll Peter liest gut wegen der Nachhilfestunden.\\
+	 Peter reads well because.of the tutoring\\
+\ex 
+\gll Peter liest wegen der Nachhilfestunden gut.\\
+	 Peter reads because.of the tutoring well\\
+\glt `Peter can read well thanks to the tutoring.'
+\zl
+% Kiss95b:212
+	As \citet[Section~6]{Koster75a} and \citet*[\page67]{Reis80a} have shown, these are not particularly convincing counter"=examples
+	as the right sentence bracket is not filled in these examples and therefore the examples are
+        not necessarily instances of normal reordering inside of the middle field, but could instead
+        involve extraposition\is{extraposition} of the PP.
+	As noted by Koster and Reis, these examples become ungrammatical if one fills the right bracket and does not extrapose the causal adjunct:
+\eal
+\ex[*]{
+\gll Hans hat gut  wegen      der Nachhilfestunden gelesen.\\
+     Hans has well because.of the tutoring read\\
+}
+\ex[]{
+\gll Hans hat gut gelesen wegen der Nachhilfestunden.\\
+	 Hans has well read because.of the tutoring\\
+\glt `Hans has been reading well because of the tutoring.'
+}
+\zl
+However, the following example from \citet[\page 383]{Crysmann2004a} shows that, even with the right bracket occupied, one can still have an
+order where an adjunct to the right has scope over one to the left:
+\ea
+\gll Da muß es schon erhebliche Probleme mit der Ausrüstung gegeben haben, da wegen schlechten
+  Wetters ein Reinhold Messmer niemals aufgäbe.\\
+  there must it already serious problems with the equipment given have since because.of bad weather a Reinhold Messmer never
+  would.give.up\\
+ \glt `There really must have been some serious problems with the equipment because someone like Reinhold Messmer would never give
+  up just because of some bad weather.'
+%\ex Stefan  ist wohl deshalb krank geworden, weil er äußerst hart wegen der Konferenz in Bremen gearbeitet hat.
+\z
+Nevertheless, this does not change anything regarding the fact that the corresponding cases in (\ref{bsp-absichtlich-nicht-anal}) 
+and (\ref{bsp-absichtlich-nicht-anal-v1}) have the same meaning regardless of the position of the verb. The general means of semantic
+composition may well have to be implemented in the same way as in Crysmann's analysis.%
+}
+This was explained by assuming the following structure:
+\eal
+\label{bsp-absichtlich-nicht-anal}
+\ex 
+\gll weil er [absichtlich [nicht lacht]]\\
+	 because he \spacebr{}intentionally \spacebr{}not laughs\\
+\glt `because he is intentionally not laughing'
+\ex 
+\gll weil er [nicht [absichtlich lacht]]\\
+     because he \spacebr{}not \spacebr{}intentionally laughs\\
+\glt `because he is not laughing intentionally'
+\zl
+It is interesting to note that scope relations are not affected by verb position. If one assumes that sentences with verb"=second
+order have the underlying structure in (\mex{0}), then this fact requires no further explanation. (\mex{1}) shows
+the derived S"=structure for (\mex{0}):
+\eal
+\label{bsp-absichtlich-nicht-anal-v1}
+\ex 
+\gll Er lacht$_i$ [absichtlich [nicht \_$_i$]].\\
+     he laughs \spacebr{}intentionally \spacebr{}not\\
+\glt `He is intentionally not laughing.'
+\ex 
+\gll Er lacht$_i$  [nicht [absichtlich \_$_i$]].\\
+     he laughs \spacebr{}not \spacebr{}intentionally\\
+\glt `He is not laughing intentionally.'
+\zl\is{scope}
+%\item Verum-Fokus
+\nocite{Hoehle88a,Hoehle97a}
+\end{enumerate}\is{verb final language}
+%% Nebeneffekt der SOV-Struktur: Je enger
+%% sich ein Satzglied auf das Verb bezieht, desto näher steht es an der rechten Satzklammer und auch
+%% dann, wenn das Verb wegbewegt wurde.
+
+\noindent
+After motivating and briefly sketching the analysis of verb"=final order, I will now look 
+at the CP/IP analysis of German in more detail. \cnull corresponds to the left sentence bracket and can be filled
+in two different ways: in subordinate clauses introduced by a conjunction, the subordinating conjunction (the
+complementizer\is{complementizer}) occupies \cnull as in English. The verb remains in the right
+sentence bracket, as illustrated by (\mex{1}).
+\ea 
+\gll dass jeder diesen Mann kennt\\
+     that everybody this man knows\\
+\glt `that everybody knows this man'
+\z
+Figure~\vref{Abb-GB-Komplementierer} gives an analysis of (\mex{0}).
+\begin{figure}
+\centering
+\begin{forest}
+sn edges
+[CP
+[C$'$
+	[C$^0$[dass;that]]
+	[IP
+		[NP [jeder;everybody]]
+		[I$'$
+			[VP
+				[V$'$
+					[NP[diesen Mann;this man, triangle]]
+					[V$^0$[\trace$_j$]]]]
+			[I$^0$[kenn-$_j$ -t;know- -s]]]]]]
+\end{forest}
+\caption{\label{Abb-GB-Komplementierer}Sentence with a complementizer in \cnull}
+\end{figure}%
+In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via the \inull position:
+\vnull $\to$  \inull $\to$ \cnull.  Figure~\vref{Abb-GB-Verberststellung} shows the analysis of (\mex{1}):
+\ea
+\gll Kennt jeder diesen Mann?\\
+	 knows everybody this man\\
+\glt `Does everybody know this man?'
+\z
+\begin{figure}
+\centerline{%
+\begin{forest}
+sn edges
+[CP
+[C$'$
+	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
+	[IP
+		[NP [jeder;everybody]]
+		[I$'$
+			[VP
+				[V$'$
+					[NP [diesen Mann; this man, triangle]]
+					[V$^0$[\trace$_j$]]]]
+			[I$^0$ [\trace$_k$]]]]]]
+\end{forest}
+}
+\caption{\label{Abb-GB-Verberststellung}Verb position in GB}
+\end{figure}%
+The \cnull position is empty in the D"=structure of (\mex{0}). Since it is not occupied by a complementizer, the
+verb can move there.\is{verb position}
+
+
+\section{Long"=distance dependencies}
+
+
+The\is{long"=distance dependency|(}\is{verb position!-second-} SpecCP position corresponds to the prefield and can
+be filled by any XP in declarative clauses\is{declarative clause} in German. In this way, one can derive the
+sentences in (\mex{2}) from (\mex{1}) by moving a constituent in front of the verb:
+\ea
+\gll Gibt der Mann dem Kind jetzt den Mantel?\\
+     gives the.\nom{} man the.\dat{} child now the.\acc{} coat\\
+\glt `Is the man going to give the child the coat now?'
+\z
+
+\eal
+\ex 
+\gll Der Mann gibt dem Kind jetzt den Mantel.\\
+     the.\nom{} man gives the.\dat{} child now the.\acc{} coat\\
+\glt `The man is giving the child the coat now.'
+\ex 
+\gll Dem Kind gibt der Mann jetzt den Mantel.\\
+     the.\dat{} child gives the.\nom{} man now the.\acc{} coat\\
+\ex 
+\gll Den Mantel gibt der Mann dem Kind jetzt.\\
+	 the.\acc{} coat gives the.\nom{} man the.\dat{} child now\\
+\ex 
+\gll Jetzt gibt der Mann dem Kind den Mantel.\\
+	 now gives the.\nom{} man the.\dat{} child the.\acc{} coat\\
+\zl
+Since any constituent can be placed in front of the finite verb, German is treated typologically as one of the
+verb"=second languages\is{verb"=second language} (V2). Thus, it is a verb"=second language with SOV base order.
+English, on the other hand, is an SVO language without the V2 property, whereas Danish is a V2 language with SVO
+as its base order (see \citew{Oersnes2009b} for Danish).
+
+Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\ref{Abb-GB-Verberststellung}.
+\begin{figure}
+\centering
+\begin{forest}
+sn edges
+[CP
+[NP [diesen Mann$_i$;this man, triangle]]
+[C$'$
+	[C$^0$[(kenn-$_j$ -t)$_k$; know- -s]]
+	[IP
+		[NP [jeder;everybody]]
+		[I$'$
+			[VP
+				[V$'$
+					[NP[\trace$_i$]]
+					[V$^0$[\trace$_j$]]]]
+			[I$^0$ [\trace$_k$]]]]]]
+\end{forest}
+\caption{\label{Abb-GB-Vorfeldbesetzung}Fronting in \gbt}
+\end{figure}%
+
+\noindent
+The crucial factor for deciding which phrase to move is the \emph{information structure}\is{information structure}
+of the sentence, that is, material connected to previously mentioned or otherwise"=known information is 
+placed further left (preferably in the prefield) and new information tends to occur to the right. Fronting to the
+prefield in declarative clauses is often referred to as
+\emph{topicalization}\label{Seite-Topikalisierung}\is{topicalization}. But this is rather a
+misnomer, since the focus\is{focus} (informally: the constituent being asked for) can also occur in the prefield. Furthermore, expletive
+pronouns\is{pronoun!expletive} can occur there and these are non"=referential and as such cannot be
+linked to preceding or known information, hence expletives can never be topics.
+
+Transformation"=based analyses also work for so"=called \emph{long"=distance dependencies}, that is, dependencies
+over several phrase boundaries:
+\eal
+\label{bsp-Fernabhaengigkeit}
+\ex\label{bsp-um-zwei-millionen}
+\gll {}[Um zwei Millionen Mark]$_i$ soll er versucht haben, [eine Versicherung \_$_i$ zu betrügen].\footnotemark\\
+     {}\spacebr{}around two million Deutsche.Marks should he tried have \spacebr{}an insurance.company {} to deceive\\
+\footnotetext{
+         taz, 04.05.2001, p.\,20.
+}
+\glt `He apparently tried to cheat an insurance company out of two million Deutsche Marks.'
+\ex
+\gll "`Wer$_i$, glaubt er, daß er \_$_i$ ist?"' erregte sich ein Politiker vom Nil.\footnotemark\\
+     \spacebr{}who believes he that he {} is retort \textsc{refl} a politician from.the Nile\\
+\footnotetext{
+        Spiegel, 8/1999, p.\,18.
+}
+\glt `\,``Who does he think he is?'', a politician from the Nile exclaimed.'
+\ex\label{ex-wen-glaubst-du-dass}
+\gll Wen$_i$ glaubst du, daß ich \_$_i$ gesehen habe.\footnotemark\\
+     who believe you that I {} seen have\\
+\footnotetext{
+    \citew[\page84]{Scherpenisse86a}.
+    }
+\glt `Who do you think I saw?'
+\ex 
+\gll {}[Gegen ihn]$_i$ falle es den Republikanern hingegen schwerer, [~[~Angriffe \_$_i$] zu lancieren].\footnotemark\\
+	 {}\spacebr{}against him fall it the Republicans however more.difficult \hspaceThis{[~[~}attacks {} to launch\\
+\footnotetext{
+  taz, 08.02.2008, p.\,9.
+}
+\glt `It is, however, more difficult for the Republicans to launch attacks against him.'
+\zl
+The elements in the prefield in the examples in (\mex{0}) all originate from more deeply embedded phrases. In GB,
+it is assumed that long"=distance dependencies across sentence boundaries are derived in steps 
+\citep[\page 75--79]{Grewendorf88a}, that is, in the analysis of (\ref{ex-wen-glaubst-du-dass}), the interrogative
+pronoun is moved to the specifier position of the \emph{dass}"=clause and is moved from there to the specifier of
+the matrix clause. The reason for this is that there are certain restrictions on movement which must be checked
+locally.%
+\is{long"=distance dependency}
+
+\section{Passive}
+\label{Abschnitt-GB-Passiv}\label{sec-passive-gb}
+
+Before\is{passive} I turn to the analysis of the passive in Section~\ref{sec-case-asignment}, the first subsection will elaborate on the differences
+between structural\is{case!structural|(} and lexical\is{case!lexical|(} case.
+
+\subsection{Structural and lexical case}
+\label{Abschnitt-struktureller-Kasus}
+
+The case of many case-marked arguments is dependent on the syntactic environment in which the head
+of the argument is realized. These arguments are referred to as arguments with \emph{structural case}. Case"=marked arguments, which
+do not bear structural case, are said to have \emph{lexical case}.\footnote{%
+Furthermore, there is a so"=called \emph{agreeing case}\is{case!agreement} (see page~\pageref{page-Kasuskongruenz}) and \emph{semantic case}. Agreeing case is
+found in predicatives. This case also changes depending on the structure involved, but the change is
+due to the antecedent element changing its case. Semantic case depends on the function of certain
+phrases (\eg temporal accusative adverbials). Furthermore, as with lexical case of objects, semantic case does not change
+depending on the syntactic environment. For the analysis of the passive, which will be discussed in this section, only
+structural and lexical case will be relevant.}
+
+The following are examples of structural case:\footnote{
+        Compare \citew*[\page 200]{HM94a}.
+
+		(\mex{1}b) is a so"=called AcI\is{verb!AcI|uu} construction. AcI stands for \emph{Accusativus cum infinitivo}, which means ``accusative
+		with infinitive''. The logical subject of the embedded verb (\emph{kommen} `to come'
+                in this case) becomes the accusative object of the matrix verb \emph{lassen} `to let'.
+		Examples for AcI"=verbs are perception verbs\is{verb!perception} such as \emph{hören} `to hear' and \emph{sehen} `to see'
+		as well as \emph{lassen} `to let'.
+}
+\eal
+\ex 
+\gll Der Installateur kommt.\\
+	 the.\nom{} plumber comes\\
+\glt `The plumber is coming.'
+\ex 
+\gll Der Mann lässt den Installateur kommen.\\
+	 the man lets the.\acc{} plumber come\\
+\glt `The man is getting the plumber to come.'
+\ex 
+\gll das Kommen des Installateurs\\
+	 the coming of.the plumber\\
+\glt `the plumber's visit'
+\zl
+In the first example, the subject is in the nominative case\is{case!nominative}, whereas \emph{Installateur} `plumber' is
+in accusative\is{case!accusative} in the second example and even in the genitive\is{case!genitive} in the third following nominalization.\is{nominalization}
+The accusative case of objects is normally structural case. This case becomes nominative under passivization\is{passive}:
+\eal
+\ex 
+\gll Karl schlägt den Weltmeister.\\
+     Karl beats the.\acc{} world.champion\\
+\glt `Karl beats the world champion.'
+\ex 
+\gll Der Weltmeister wird geschlagen.\\
+	 the.\nom{} world.champion is beaten\\
+\glt `The world champion is being beaten.'
+\zl
+
+\noindent
+Unlike the accusative, the genitive\is{case!genitive} governed by a verb is a lexical case. The case of a genitive object does not change when
+the verb is passivized.
+\eal
+\ex
+\gll Wir gedenken der Opfer.\\
+     we remember the.\gen{} victims\\
+\ex 
+\gll Der Opfer wird gedacht.\\
+	 the.\gen{} victims are remembered\\
+\glt `The victims are being remembered.'
+\zl
+(\mex{0}b) is an example of the so"=called \emph{impersonal passive}\is{passive!impersonal}. Unlike example (\mex{-1}b), where the accusative
+object became the subject\is{subject}, there is no subject in (\mex{0}b). See Section~\ref{Abschnitt-Subjekt}.
+
+Similarly, there is no change in case with dative objects\is{case!dative|(}:
+\eal
+\ex 
+\gll Der Mann hat ihm geholfen.\\
+	 the man has him.\dat{} helped\\
+\glt `The man has helped him.'
+\ex 
+\gll Ihm wird geholfen.\\
+	 him.\dat{} is helped\\
+\glt `He is being helped.'
+\zl
+It still remains controversial as to whether some or all of the datives in verbal environments should be treated as instances of structural case.
+For reasons of space, I will not recount this discussion but instead refer the interested reader to Chapter~14 of \citew{MuellerLehrbuch1}.
+In what follows, I assume -- like \citet[\page 20]{Haider86} -- that the dative is in fact a lexical case.\is{case!lexical} 
+
+
+
+\subsection{Case assignment and the Case Filter}
+\label{sec-case-asignment}
+
+In GB, it is assumed that the subject receives case from (finite) I\is{category!functional!I} and
+that the case of the remaining arguments comes from
+V (\citealp[\page 50]{Chomsky81a}; \citealp[\page
+26]{Haider84b}; \citealp[\page 71--73]{FF87}). 
+\begin{principle-break}[Case Principle]\label{Kasusprinzip-GB}
+\begin{itemize}
+% hier stand `seinem', aber in den Abbildungen gibt es zwei Komplemente
+\item V assigns objective case (accusative) to its complement if it bears structural case.
+\item When finite, INFL assigns case to the subject.
+\end{itemize}
+\end{principle-break}
+The Case Filter\is{case!filter} rules out structures where case has not been assigned to an NP.
+
+Figure~\vref{Abb-GB-Aktiv} shows the Case Principle in action with the example in 
+(\mex{1}a).\footnote{%
+The figure does not correspond to \xbar theory in its classic form, since \emph{der Frau} `the woman' 
+is a complement which is combined with V$'$.  In classical \xbar theory, all complements have to be combined
+with \vnull. Furthermore, in the following figures the verb has been left in \vnull for reasons of clarity. In order
+to create a well"=formed S"=structure, the verb would have to move to its affix in \inull.%
+}
+\eal
+\ex 
+\gll {}[dass] der Mann der Frau den Jungen zeigt\\
+     \spacebr{}that the man the.\dat{} woman the.\acc{} boy shows\\
+\glt `that the man shows the boy to the woman'
+\ex 
+\gll{}[dass] der Junge der Frau gezeigt wird\\
+      \spacebr{}that the boy.\nom{} the.\dat{} woman shown is\\
+\glt `that the boy is shown to the woman'
+\zl
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[IP
+  [NP, name=subject [der Mann;the man, triangle]]
+  [I$'$
+	[VP
+		[V$'$
+			[NP, name=dobject [der Frau;the woman, triangle]]
+			[V$'$
+				[NP,   name=aobject [den Jungen;the boy, triangle]]
+				[V$^0$,name=verb    [zeig-;show-]]]]]
+	[I$^0$, name=Infl [-t;-s]]]]
+\draw[->,dotted] (Infl.north) .. controls (3.5,-0.3) and (-1.5,.5) .. ($(subject.north)+(-.1,.1)$);
+\draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5) .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.8,-3.0) and (0,-3.3) .. ($(dobject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.3,-4.3) and (1.8,-4.5) .. ($(aobject.north)+(0,.1)$);
+%\draw (-4,-7) to[grid with coordinates] (4,0.5);
+\end{forest} \hspace{1cm}
+\begin{tabular}[b]{ll@{}}
+\tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
+\tikz[baseline]\draw(0,1ex)--(1,1ex);&just theta role\\
+\tikz[baseline]\draw[dashed](0,1ex)--(1,1ex);&case and theta role
+\\
+\\
+\end{tabular}
+\caption{\label{Abb-GB-Aktiv}Case and theta-role assignment in active clauses}
+\end{figure}%
+%
+The passive morphology blocks the subject. The object that would get accusative in the active
+receives a semantic role in passives, but it does not get case. Therefore, it has to move to a position where case can be assigned to it 
+\citep[\page 124]{Chomsky81a}. Figure~\vref{Abb-GB-Passiv} shows how this works for example
+(\mex{0}b).
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[IP
+[NP, name=subject [der Junge$_i$;the boy ,triangle]]
+[I$'$
+	[VP
+		[V$'$
+			[NP, name=dobject [der Frau;the woman, triangle]]
+			[V$'$
+				[NP,   name=aobject [\_$_i$]]
+				[V$^0$,name=verb [gezeigt wir-;shown is, triangle]]]]]
+	[I$^0$ ,name=Infl [-\/d]]]]
+\draw[->,dotted] (Infl.north) .. controls (2.5,.35)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.2,-3.4) and (0,-3.1) .. ($(dobject.north)+(0,.1)$);
+\draw[->]        (verb.north) .. controls (2.0,-4.55) and (1.2,-4.35) .. ($(aobject.north)+(0,.1)$);
+%\draw (-4,-7) to[grid with coordinates] (4,0.5);
+\end{forest}\hspace{1cm}
+\begin{tabular}[b]{ll@{}}
+\tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
+\tikz[baseline]\draw(0,1ex)--(1,1ex);&just theta role\\
+\tikz[baseline]\draw[dashed](0,1ex)--(1,1ex);&case and theta role
+\\
+\\
+\end{tabular}
+\caption{\label{Abb-GB-Passiv}Case and theta-role assignment in passive clauses}
+\end{figure}%
+
+This movement"=based analysis works well for English\il{English} since the underlying object always has to
+be moved:
+\eal
+\ex[]{
+The mother gave [the girl] [a cookie].
+}
+\ex[]{
+{}[The girl] was given [a cookie] (by the mother).
+}
+\ex[*]{
+It was given [the girl] [a cookie].
+}
+\zl
+%
+(\mex{0}c) shows that filling the subject position with an expletive is not possible, so the object
+really has to move. However, \citet[Section~4.4.3]{Lenerz77} showed that such a movement is not obligatory in German:
+
+\eal
+\label{ex-passive-German-no-movment}
+\ex 
+\gll weil das Mädchen dem Jungen den Ball schenkte\\
+     because the.\nom{} girl the.\dat{} boy the.\acc{} ball gave\\
+\glt `because the girl gave the ball to the boy'
+\ex 
+\gll weil dem Jungen der Ball geschenkt wurde\\
+	 because the.\dat{} boy the.\nom{} ball given was\\
+\glt `because the ball was given to the boy'
+\ex 
+\gll weil der Ball dem Jungen geschenkt wurde\\
+     because the.\nom{} ball the.\dat{} boy given was\\
+\zl
+In comparison to (\mex{0}c), (\mex{0}b) is the unmarked order. \emph{der Ball} `the ball' in (\mex{0}b) occurs
+in the same position as \emph{den Ball} in (\mex{0}a), that is, no movement is necessary. Only the case differs.
+(\mex{0}c) is, however, somewhat marked in comparison to (\mex{0}b). The analysis which has been proposed for
+cases such as (\mex{0}b) involves abstract movement: the elements stay in their positions, but are connected to
+the subject position and receive their case information from there. \citet[\page 1311]{Grewendorf93}
+assumes that there is an empty expletive pronoun\is{empty element}\is{pronoun!expletive}
+in the subject position of sentences such as (\mex{0}b) as well as in the subject position of sentences with an
+impersonal passive\is{passive!impersonal} such as (\mex{1}):\footnote{
+	See \citew[\page 11--12]{Koster86a} for a parallel analysis for Dutch\il{Dutch} as well as 
+	\citew{Lohnstein2014a} for a movement"=based account of the passive that also involves an
+        empty expletive for the analysis of the impersonal passive.
+}
+\ea
+\gll weil heute nicht gearbeitet wird\\
+	 because today not worked is\\
+\glt `because there will be no work done today'
+\z
+A silent expletive pronoun is something that one cannot see or hear and that does not carry any meaning. For discussion of 
+these kind of empty elements, see Section~\ref{Abschnitt-UG-EPP} and Chapter~\ref{Abschnitt-Diskussion-leere-Elemente}.
+
+In the following chapters, I describe alternative treatments of the passive that do without mechanisms such as
+empty elements that are connected to argument positions and seek to describe the passive in a more
+general, cross"=linguistically consistent manner as the suppression of the most prominent argument.
+
+A further question which needs to be answered is why the accusative object does not receive case from the verb.
+This is captured by a constraint, which goes back to \citet[\page 178--185]{Burzio86a-u-gekauft} and is therefore
+referred to as \emph{Burzio's Generalization}.\is{Burzio's Generalization}\footnote{
+Burzio's original formulation was equivalent to the following: a verb assigns accusative, if and only if it assigns
+a semantic role to its subject.
+
+This claim is problematic from both sides. In (i), the verb does not assign a semantic role to the subject, however
+there is nevertheless accusative case:
+\ea
+\gll Mich friert.\\
+	 me.\acc{} freezes\\
+\glt `I am freezing.'
+\z
+One therefore has to differentiate between structural and lexical accusative and modify Burzio's Generalization
+accordingly. The existence of verbs like \emph{begegnen} `to bump into' is problematic for the other side of
+the implication. \emph{begegnen} has a subject but still does not assign accusative but rather
+dative:
+\ea
+\gll Peter begegnete einem Mann.\\
+     Peter met a.\dat{} man\\
+\glt `Peter met a man.'
+\z
+\citet[\page 185]{Burzio86a-u-gekauft} assumes that one"=place intransitive verbs have the potential to assign
+accusative. He supports this claim by pointing out the existence of the resultative
+constructions\is{resultative construction}, in which additional accusatives can be realized. (iii) is
+an example:
+\ea
+He talked my head off.
+\z
+However, there are also verbs such as \emph{verschwinden} `to disappear' which never assign
+accusative, not even in such constructions.
+
+See \citew{Haider99a} and \citew[\page 89]{Webelhuth95a} as well as the references cited there for further problems
+with Burzio's Generalization.
+}
+\ea
+Burzio's Generalization (modified):\\
+If V does not have an external argument, then it does not assign (structural) accusative case.
+\z
+
+\noindent
+%\interfootnotelinepenalty=100%
+\citet[\page 12]{Koster86a} has pointed out that the passive in English\il{English} cannot be derived by Case
+Theory since if one allowed empty expletive subjects for English as well as German and Dutch\il{Dutch}, then it would be possible
+to have analyses such as the following in (\mex{1}) where np is an empty expletive:
+\ea
+np was read the book.
+\z
+Koster rather assumes that subjects in English are either bound by other elements (that is, non"=expletive) or lexically filled, that
+is, filled by visible material.
+Therefore, the structure in (\mex{0}) would be ruled out and it would be ensured that \emph{the book} would have to be placed in front
+of the finite verb so that the subject position is filled.
+\is{passive|)}
+
+\section{Local reordering}
+\label{sec-GB-lokale-Umstellung}
+
+Arguments in the middle field can, in principle, occur in an almost arbitrary order. (\mex{1}) exemplifies this:
+\eal
+\label{ex-gb-umstellung}
+\ex 
+\gll {}[weil] der Mann der Frau das Buch gibt\\
+     \spacebr{}because the man the woman the book gives\\
+\glt `because the man gives the book to the woman'
+\ex 
+\gll {}[weil] der Mann das Buch der Frau gibt\\
+     \spacebr{}because the man the book the woman gives\\
+\ex\label{ex-das-buch-der-mann-der-frau-gibt} 
+\gll {}[weil] das Buch der Mann der Frau gibt\\
+     \spacebr{}because the book the man the woman gives\\
+\ex 
+\gll {}[weil] das Buch der Frau der Mann gibt\\
+     \spacebr{}because the book the woman the man gives\\
+\ex 
+\gll {}[weil] der Frau der Mann das Buch gibt\\
+     \spacebr{}because the woman the man the book gives\\
+\ex 
+\gll {}[weil] der Frau das Buch der Mann gibt\\
+     \spacebr{}because the woman the book the man gives\\
+\zl
+
+\noindent
+In (\mex{0}b--f), the constituents receive different stress and the number of contexts in which each
+sentence can be uttered is more restricted than (\mex{0}a) \citep{Hoehle82}. The order in (\mex{0}a)
+is therefore referred to as the \emph{neutral order}\is{neutral order} or \emph{unmarked order}\is{order!unmarked}.
+
+Two proposals have been made for analyzing these orders: the first suggestion assumes that the five orderings in (\mex{0}b--f) are derived from
+a single underlying order by means of \movea \citep{Frey93a}. As an example, the analysis of
+(\ref{ex-das-buch-der-mann-der-frau-gibt}) is given in Figure~\vref{fig-das-buch-der-mann-der-frau-gibt-movement}.
+\begin{figure}
+\begin{forest}
+sn edges
+[IP
+  [NP$_i$ [das Buch;the book, triangle]]
+  [IP
+    [NP [der Mann;the man, triangle]]
+    [I$'$
+ 	[VP
+		[V$'$
+			[NP [der Frau;the woman, triangle]]
+			[V$'$
+				[NP   [\trace$_i$]]
+				[V$^0$  [gib-;give-]]]]]
+	[I$^0$, name=Infl [-t;-s]]]] ]
+\end{forest}
+\caption{Analysis of local reordering as adjunction to IP}\label{fig-das-buch-der-mann-der-frau-gibt-movement}
+\end{figure}
+The accusative object \emph{das Buch} `the book' is moved to the left and adjoined to the top"=most IP.
+
+\is{scope|(}%
+An argument that has often been used to support this analysis is the fact that scope ambiguities
+exist in sentences with reorderings which are not present in sentences in the base order. The explanation of such ambiguities comes from the assumption that the scope of quantifiers
+can be derived from their position in the surface structure as well as their position in the deep structure. If the position in both the surface
+and deep structure are the same, that is when there has not been any movement, then there is only one reading possible. If movement has taken place,
+however, then there are two possible readings \citep[\page ]{Frey93a}:
+\eal
+\ex 
+\gll Es ist nicht der Fall, daß er mindestens einem Verleger fast jedes Gedicht anbot.\\
+     it is not the case that he at.least one publisher almost every poem offered\\
+\glt `It is not the case that he offered at least one publisher almost every poem.'
+\ex 
+\gll Es ist nicht der Fall, daß er fast jedes Gedicht$_i$ mindestens einem Verleger \_$_i$ anbot.\\
+	 it is not the case that he almost every poem at.least one publisher {} offered\\
+\glt `It is not the case that he offered almost every poem to at least one publisher.'
+\zl
+
+\noindent
+It turns out that approaches assuming traces run into problems as they predict certain readings for sentences with multiple traces which
+do not exist (see \citealp[\page 146]{Kiss2001a} and \citealp[Section~2.6]{Fanselow2001a}). 
+For instance in an example such as (\mex{1}), it should be possible to interpret \emph{mindestens einem Verleger} `at least one publisher' at
+the position of \_$_i$, which would lead to a reading where \emph{fast jedes Gedicht} `almost every poem' has scope over \emph{mindestens einem Verleger} 
+`at least one publisher'.
+\ea
+\gll Ich glaube, dass mindestens einem Verleger$_i$ fast jedes Gedicht$_j$ nur dieser Dichter \_$_i$ \_$_j$ angeboten hat.\\
+	 I believe that at.least one publisher almost every poem only this poet {} {} offered has\\
+\glt `I think that only this poet offered almost every poem to at least one publisher.'
+\z
+This reading does not exist, however.
+
+\citet[\page 308]{SE2002a} discuss analogous examples from Japanese\il{Japanese}, which they credit to Kazuko 
+Yatsushiro\aimention{Kazuko Yatsushiro}. They develop an analysis where the first step is to move the accusative object in front of the subject.
+Then, the dative object is placed in front of that and then in a third movement, the accusative is then moved once more. The last movement can
+take place to construct either the S"=structure\footnote{
+	The authors are working in the Minimalist framework. This means there is no longer S"=structure strictly speaking. I
+	have simply translated the analysis into the terms used here.
+}
+or as a movement to construct the phonological form. In the latter case, this movement will not have any semantic effects.
+While this analysis can predict the correct available readings, it does require a number of additional movement operations with intermediate steps.
+\is{scope|)}
+
+The alternative to a movement analysis is so"=called \emph{base generation}\is{base generation}: the starting structure generated by phrase structure
+rules is referred to as the \emph{base}. One variant of base generation assumes that the verb is
+combined with one argument at the time and that $\theta$"=roles are assigned in parallel to
+head-argument combinations. The order in which
+arguments are combined with the verb is not specified, which means that all of the orders in (\ref{ex-gb-umstellung}) can be
+generated directly without any transformations (compare this to the grammar in (\ref{psg-binaer}) on page~\pageref{psg-binaer}). This kind of analysis has
+been proposed for GB by \citet{Fanselow2001a}.\footnote{%
+	The base generation analysis is the natural analysis in the HPSG\indexhpsg framework. It has already been developed by Gunji\nocite{Gunji86a}
+	in 1986 for Japanese\il{Japanese} and will be discussed in more detail in Section~\ref{sec-HPSG-lokale-Umstellung}. \citet[\page 313--314]{SE2002a}
+	claim that they show that syntax has to be derivational, that is, a sequence of syntactic
+        trees has to be derived. I am of the opinion that this cannot generally be shown to be the
+        case. There is, for example, an analysis by \citet{Kiss2001a} which shows that scope
+        phenomena can be explained well by constraint"=based approaches.
+}
+For the discussion of different approaches to describing constituent position, see 
+\citew{Fanselow93a}.\is{constituent order|)}
+
+
+
+
+\section{Summary and classification}
+\label{sec-summary-gb}
+
+Works in GB and some contributions to the Minimalist Program (see Chapter~\ref{chap-mp}) have led to a number of new discoveries in both language"=specific and cross"=linguistic research. In
+the following, I will focus on some aspects of German syntax.
+
+The analysis of verb movement developed in Transformational Grammar by \citet*[\page34]{Bierwisch63}, \citet{Reis74a},
+\citet{Koster75a}, \citet[Chapter~1]{Thiersch78a} and \citet{denBesten83a} has become the standard analysis in almost
+all grammar models (possibly with the exception of Construction Grammar\indexcxg and Dependency Grammar\indexdg).
+
+The work by Lenerz on constituent order \citeyearpar{Lenerz77} has influenced analyses in other frameworks
+(the linearization rules in GPSG and HPSG go back to Lenerz' descriptions). Hai\-der's work on constituent order,
+case and passive \citeyearpar{Haider84b,Haider85,Haider85b,Haider86,Haider90a,Haider93a} has had a significant influence on LFG
+and HPSG analyses of German.
+
+The entire configurationality discussion\is{configurationality}, that is, whether it is better to assume that the 
+subject of finite verbs in German is inside or outside the VP, was important
+(for instance \citealp*{Haider82,Grewendorf83a,Kratzer84a,Webelhuth85a,%
+Sternefeld85b,%
+Scherpenisse86a,%S. 31, Chapter~4
+Fanselow87a,Grewendorf88a,Duerscheid89a,Webelhuth90,%
+Oppenrieder91a,%
+Wilder91a,Haider93a,Grewendorf93,%
+Frey93a,%
+%Duerscheid89a:60
+Lenerz94a,%
+Meinunger2000a%S. 30
+}) and German unaccusative verbs\is{verb!unaccusative} received their first detailed discussion in GB circles 
+\citep{Grewendorf89a,Fanselow92-ohne-anfuehrungszeichen}. The works by Fanselow and Frey on constituent order, in 
+particular with regard to information structure, have advanced German syntax quite considerably
+\citep{Fanselow88,Fanselow90,Fanselow93a,Fanselow2000a,Fanselow2001a,Fanselow2003d,Fanselow2003a,Fanselow2004a,Frey2000a-u,Frey2001a,Frey2004a,Frey2005a}.
+Infinitive constructions, complex predicates and partial fronting have also received detailed and successful treatments
+in the GB/MP frameworks
+(\citealp{Bierwisch63,Evers75a,Haider82,Haider86c,Haider90b,Haider91,Haider93a,Grewendorf83a,Grewendorf87a,Grewendorf88a,denBesten85b,Sternefeld85b,Fanselow87a,Fanselow2002a,SS88a,BK89a}, G.\,\citealp{GMueller96a,GMueller98a,VS98a}).
+%,WL2001a,Wurmbrand2001a-u}). 
+In the area of secondary predication, the work by Susanne \citet{Winkler97a} is particularly noteworthy.
+
+This list of works from subdisciplines of grammar is somewhat arbitrary (it corresponds more or less to my own
+research interests) and is very much focused on German. There are, of course, a wealth of other articles on other
+languages and phenomena, which should be recognized without having to be individually listed here.
+
+In the remainder of this section, I will critically discuss two points: the model of language acquisition of the Principles
+\& Parameters model and the degree of formalization inside Chomskyan linguistics (in particular the last few decades
+and the consequences this has). Some of these points will be mentioned again in Part~\ref{part-discussion}. 
+
+\subsection{Explaining language acquisition}
+\label{sec-acquisition-gb}
+
+One of the aims of Chomskyan research on grammar is to explain language acquisition. In GB, one
+assumed a very simple set of rules, which was the same for all languages (\xbart) as well as
+general principles that hold for all languages, but which could be parameterized for individual
+languages or language classes. It was assumed that a parameter was relevant for multiple phenomena.
+The Principles \& Parameters model was particularly fruitful and led to a number of interesting
+studies in which commonalities and differences between languages were uncovered. From the point of
+view of language acquisition, the idea of a parameter which is set according to the input has often
+been cricitized as it cannot be reconciled with observable facts: after setting a parameter, a
+learner would have to immediately have mastered certain aspects of that language. \citet[\page
+  146]{Chomsky86} uses the metaphor of switches which can be flipped one way or the other. As it is
+assumed that various areas of grammar are affected by parameters, setting one parameter should have
+a significant effect on the rest of the grammar of a given learner.  However, the linguistic
+behaviour of children does not change in an abrupt fashion as would be expected (\citealp[\page
+  731]{Bloom93a}; \citealp[\page 6]{Haider93a}; \citealp[\page 3]{Abney96a};
+\citealp[Section~9.1]{AW98a}; \citealp{Tomasello2000a,Tomasello2003a};
+\citealp{Newmeyer2005a})\NOTE{Seite}.  Furthermore, it has not been possible to prove that there is
+a correlation between a certain parameter and various grammatical phenomena. For more on this, see
+Chapter~\ref{chap-acquisition}.
+
+
+The Principles and Parameters model nevertheless remains interesting for cross"=linguistic
+research. Every theory has to explain why the verb precedes its objects in English\il{English} and follows them in 
+Japanese\il{Japanese}. One can name this difference a parameter and then classify languages
+accordingly, but whether this is actually relevant for language acquisition is being increasingly called in question.\is{language acquisition|)}
+
+\subsection{Formalization}
+\label{Asbchnitt-GB-Formalisierung}\label{sec-formalization-gb}
+
+In his 1963 work on Transformational Grammar, Bierwisch writes the following:\footnote{
+Es ist also sehr wohl möglich, daß mit den formulierten Regeln Sätze erzeugt werden können,
+die auch in einer nicht vorausgesehenen Weise aus der Menge der grammatisch richtigen Sätze herausfallen,
+die also durch Eigenschaften gegen die Grammatikalität verstoßen, die wir nicht wissentlich aus
+der Untersuchung ausgeschlossen haben. Das ist der Sinn der Feststellung, daß eine Grammatik
+eine Hypothese über die Struktur einer Sprache ist. Eine systematische Überprüfung der Implikationen
+einer für natürliche Sprachen angemessenen Grammatik ist sicherlich eine mit Hand nicht mehr
+zu bewältigende Auf"|gabe. Sie könnte vorgenommen werden, indem die Grammatik als Rechenprogramm in einem
+Elektronenrechner realisiert wird, so daß überprüft werden kann, in welchem Maße das Resultat
+von der zu beschreibenden Sprache abweicht.}
+\begin{quote}
+It is very possible that the rules that we formulated generate
+sentences which are outside of the set of grammatical sentences in an
+unpredictable way, that is, they violate grammaticality due to
+properties that we did not deliberately exclude in our examination. This
+is meant by the statement that a grammar is a hypothesis about the
+structure of a language. A systematic check of the implications of a
+grammar that is appropriate for natural languages is surely a task that
+cannot be done by hand any more. This task could be solved by
+implementing the grammar as a calculating task on a computer so that it
+becomes possible to verify to which degree the result deviates from the
+language to be described. \citep*[\page 163]{Bierwisch63}
+\end{quote}
+Bierwisch's claim is even more true in light of the empirical progress made in the last decades. For example,
+\citet{Ross67} identified restrictions for movement and long"=distance dependencies and \citet{Perlmutter78} discovered
+unaccusative verbs in the 70s. For German, see \citew{Grewendorf89a} and \citew{Fanselow92-ohne-anfuehrungszeichen}.
+Aside from analyses of these phenomena, restrictions on possible constituent positions have been developed
+\citep{Lenerz77}, as well as analyses of case assignment \citep*{YMJ87,Meurers99b,Prze99} and theories of
+verbal complexes\is{verbal complex} and the fronting of parts of phrases  (\citealp{Evers75a,Grewendorf88a,HN94a,Kiss95a}; G.\ \citealp{GMueller98a};
+\citealp{Meurers99c}; \citealp{Mueller99a,Mueller2002b}; \citealp{deKuthy2002a}). All these
+phenomena interact!
+
+Consider another quote:
+\begin{quote}
+A goal of earlier linguistic work, and one that is still a central goal of the
+linguistic work that goes on in computational linguistics, is to develop grammars
+that assign a reasonable syntactic structure to every sentence of English,
+or as nearly every sentence as possible. This is not a goal that is currently much
+in fashion in theoretical linguistics. Especially in Government-Binding theory
+(GB), the development of large fragments has long since been abandoned in
+favor of the pursuit of deep principles of grammar.
+The scope of the problem of identifying the correct parse cannot be appreciated
+by examining behavior on small fragments, however deeply analyzed.
+Large fragments are not just small fragments several times over---there is a
+qualitative change when one begins studying large fragments. As the range of
+constructions that the grammar accommodates increases, the number of undesired parses for sentences
+increases dramatically. \citep[\page 20]{Abney96a}
+\end{quote}
+%
+So, as Bierwisch and Abney point out, developing a sound theory of large fragment of a human
+language is a really demanding task. But what we aim for as theoretical linguists is much more: the aim is to formulate restrictions which ideally hold for all languages or at least
+for certain language classes. It follows from this, that one has to have an overview of the interaction of various phenomena in
+not just one but several languages. This task is so complex that individual researchers cannot manage it. This is
+the point at which computer implementations become helpful as they immediately flag inconsistencies in a theory. 
+After removing these inconsistencies, computer implementations can be used to systematically analyze test data
+or corpora and thereby check the empirical adequacy of the theory
+(Müller, \citeyear[Chapter~22]{Mueller99a}; \citeyear{MuellerCoreGram}; \citeyear{MuellerKernigkeit}; \citealp{OF98}; \citealp{Bender2008c}, see Section~\ref{sec-formal}).
+
+More than 50 years after the first important published work by Chomsky, it is apparent that there has not been
+one large"=scale implemented grammatical fragment on the basis of Transformational Grammar analyses. Chomsky
+has certainly contributed to the formalization of linguistics and developed important formal foundations which
+are still relevant in the theory of formal languages\is{language!formal} in computer science\is{computer science} and
+in theoretical computational linguistics \citep{Chomsky59a-u}. However, in 1981, he had already turned his back on rigid
+formalization:
+\begin{quote}
+%It is this point of view that lies behind the rough distinction between leading ideas and execution, 
+%and that motivates much of what follows. 
+I think that we are, in fact, beginning to approach a grasp of certain 
+basic principles of grammar at what may be the appropriate level of abstraction. At the same time, 
+it is necessary to investigate them and determine their empirical adequacy by developing quite specific mechanisms.
+We should, then, try to distinguish as clearly as we can between discussion that bears on leading ideas and
+discussion that bears on the choice of specific realizations of them. \citep*[\page 2--3]{Chomsky81a}
+\end{quote}
+This is made explicit in a letter to \emph{Natural Language and Linguistic Theory}:
+\begin{quote}
+Even in mathematics, the concept of formalization in our sense was not
+developed until a century ago, when it became important for advancing research
+and understanding. I know of no reason to suppose that linguistics is so much
+more advanced than 19th century mathematics or contemporary molecular
+biology that pursuit of Pullum's injunction would be helpful, but if that can be
+shown, fine. For the present, there is lively interchange and exciting progress
+without any sign, to my knowledge, of problems related to the level of formality
+of ongoing work. \citep[\page 146]{Chomsky90a}
+\end{quote}
+This departure from rigid formalization has led to there being a large number of publications inside
+Mainstream Generative Grammar with sometimes incompatible assumptions to the point where it is no longer clear
+how one can combine the insights of the various publications. 
+An example of this is the fact that the central notion of government\is{government} has several different definitions
+(see \citew{AS83a} for an overview\footnote{%
+A further definition can be found in \citew{AL84a-u}. This is, however, equivalent to an earlier version as shown
+by \citet[\page 104--106]{PP86a}.%
+}).
+
+This situation has been cricitized repeatedly since the 80s and sometimes very harshly by proponents of GPSG 
+(\citealp*[\page 6]{GKPS85a};
+\citealp{Pullum85a,Pullum89b}; \citealp[\page 48]{Pullum91b}; \citealp{KP90a}). 
+
+The lack of precision and working out of the details\footnote{
+	See \eg \citew[\page 550]{Kuhns86a}, \citew[\page 508]{CL92a}, \citew[\page262]{KT91a}, \citew[\page
+  3]{Kolb97a} and \citew[\page 580]{Freidin97a-u}, \citew[\page 25, 47]{Veenstra98a}, \citew[\page 888]{LLJ2000b} and
+  \citew[\page 397, 399, 400]{Stabler2010a} for the latter. 
+} and the frequent modification of basic assumptions\footnote{
+	See \eg \citew[\page 4]{Kolb97a}, \citew{Fanselow2009a} and the quote from Stabler on page~\pageref{Zitat-Stabler}.
+} has led to insights gained by Mainstream Generative Grammar rarely being translated into computer implementations.
+There are some implementations that are based on Transformational Grammar/GB/MP models or borrow ideas from Mainstream
+Generative Grammar
+\citep*{Petrick65a-u,ZFHW65a,Kay67a,Friedman69a,FBDPM71a-u,Morin73a-u,Marcus80a-u,AC86a,Kuhns86a,Correra87a,Stabler87a,Stabler92a-u,Stabler2001a,KT91a,Fong91a-u,CL92a,Lohnstein93a-u,FC94a,Nordgard94a,Veenstra98a,%
+FG2012a% 
+},\footnote{
+  See \citew{FC94a} for a combination of a GB approach with statistical methods.
+}
+but these implementations often do not use transformations or differ greatly from the theoretical assumptions of the
+publications. For example, \citet[\page 102--104]{Marcus80a-u} and
+\citet[\page 5]{Stabler87a} use special purpose rules for auxiliary movement\is{auxiliary movement}.\footnote{
+  \citet{NF86a-u,NF87a-u} has shown that Marcus' parser can only parse context"=free languages. Since natural languages
+  are of a greater complexity (see Chapter~\ref{Abschnitt-Generative-Kapazitaet}) and grammars of corresponding complexity
+  are allowed by current versions of Transformational Grammar, Marcus' parser can be neither an adequate implementation of
+  the Chomskyan theory in question nor a piece of software for analyzing natural language in general.
+}
+These rules reverse the order of \emph{John} and \emph{has} for the analysis of sentences such as (\mex{1}a) so that we get the order in
+  (\mex{1}b), which is then parsed with the rules for non"=inverted structures.
+\eal
+\ex Has John scheduled the meeting for Wednesday?
+\ex John has scheduled the meeting for Wednesday?
+\zl
+These rules for auxiliary movement are very specific and explicitly reference the category of the auxiliary. This does not correspond
+to the analyses proposed in GB in any way. As we have seen in Section~\ref{Abschnitt-GB-CP-IP-System-Englisch}, there are no special
+transformational rules for auxiliary movement. Auxiliary movement is carried out by the more general transformation \movealpha and
+the associated restrictive principles. It is not unproblematic that the explicit formulation of the rule refers to the category \emph{auxiliary}
+as is clear when one views Stabler's GB"=inspired phrase structure grammar: 
+\eal
+\ex\label{Regel-Aux-inv-Stabler} s $\to$ switch(aux\_verb,np), vp.
+\ex s([First$|$L0],L,X0,X) :- \begin{tabular}[t]{@{}l@{}}
+                              aux\_verb(First),\\
+                              np(L0,L1,X0,X1),\\
+                              vp([First$|$L1],L,X1,X).\\
+                              \end{tabular}
+\zl
+%
+The rule in (\mex{0}a) is translated into the Prolog predicate in (\mex{0}b). The expression [First$|$L0] after the s corresponds to the string, which
+is to be processed. The `$|$'"=operator divides the list into a beginning and a rest. \emph{First} is the first word to be processed
+and L0 contains all other words. In the analysis of (\mex{-1}a), First is \emph{has} and L0 is \emph{John scheduled the meeting for Wednesday}.
+In the Prolog clause, it is then checked whether First is an auxiliary (aux\_verb(First)) and if
+this is the case, then it will be tried to prove that the list L0 begins with a noun phrase. Since \emph{John} is an NP, this is successful. L1 is the sublist of L0 which remains after the analysis of L0, that is
+\emph{scheduled the meeting for Wednesday}. This list is then combined with the auxiliary (First) and now it will be checked whether the resulting
+list \emph{has scheduled the meeting for Wednesday} begins with a VP. This is the case and the remaining list L is empty. As a result, the
+sentence has been successfully processed.
+
+The problem with this analysis is that exactly one word is checked in the lexicon. Sentences such as (\mex{1}) can not be analyzed:\footnote{
+  For a discussion that shows that the coordination of lexical elements has to be an option in linguistic theories, see \citew{Abeille2006a}.
+} 
+\ea
+Could or should we pool our capital with that of other co-ops to address the needs of a regional
+``neighborhood''?\footnote{
+  \url{http://www.cooperativegrocer.coop/articles/index.php?id=595}. 28.03.2010.
+}
+\z
+In this kind of sentence, two modal verbs have been coordinated\is{coordination}. They then form an \xzero and -- following GB analyses -- can be
+moved together. If one wanted to treat these cases as Stabler does for the simplest case, then we would need to divide the list of words to be
+processed into two unlimited sub"=lists and check whether the first list contains an auxiliary or several coordinated auxiliaries. We would
+require a recursive predicate aux\_verbs which somehow checks whether the sequence \emph{could or should} is a well"=formed sequence of 
+auxiliaries. This should not be done by a special predicate but rather by syntactic rules responsible for the coordination of auxiliaries.
+The alternative to a rule such as (\mex{-1}a) would be the one in (\mex{1}), which is the one that
+is used in theories like GPSG \citep[\page 62]{GKPS85a}, LFG \citep[\page 491]{Falk84a-u}, some HPSG analyses
+(\citealp[\page 36]{GSag2000a-u}), and Construction Grammar
+\citep{Fillmore99a}:%% \footnote{
+%%   \citealp[\page 42]{ps2} Pollard \& Sag suggest a general schema that combines a head with all its arguments in one
+%%   go. This general schema also combines v(aux+), np, and vp directly and hence accounts for
+%%   auxiliary inversion without any movement transformation.
+%% }
+\ea
+s $\to$ v(aux+), np, vp.
+\z
+This rule would have no problems with coordination data like (\mex{-1}) as coordination of multiple auxiliaries would produce an object with the
+category v(aux+) (for more on coordination see Section~\ref{Abschnitt-Koordination}). If inversion
+makes it necessary to stipulate a special rule like (\ref{Regel-Aux-inv-Stabler}), then it is not clear why one could not simply use the transformation"=less rule in (\mex{0}).
+
+In the MITRE system \citep{ZFHW65a}, there was a special grammar for the surface structure, from which the deep structure was derived via
+reverse application of transformations, that is, instead of using one grammar to create deep structures which are then transformed into
+other structures, one required two grammars. The deep structures that were determined by the parser
+were used as input to a transformational component since this was the only way to ensure that
+the surface structures can actually be derived from the base structure \citep[\page 10]{Kay2011a}.
+
+There are other implementations discussed in this chapter that differ from transformation"=based analyses. For example, \citet[\page 265, Section~4]{KT91a}
+arrive at the conclusion that a declarative, constraint"=based approach to GB is more appropriate than a derivational one. \citet{Johnson89a}
+suggests a \emph{Parsing as Deduction} approach\is{Parsing as Deduction} which reformulates sub"=theories of GB (\xbart,
+Theta"=Theory\is{theta-Theory@$\theta$-Theory}, Case Theory, \ldots) as logical expressions.\footnote{
+	See \citew[\page 511]{CL92a} and \citew[\page 38]{FC94a} for another constraint"=based Parsing-as-Deduction approach.
+}
+These can be used independently of each other in a logical proof. In Johnson's analysis, \gbt is understood as a constraint"=based system. 
+More general restrictions are extracted from the restrictions on S"= and D"=structure which can then be used directly for parsing. This means that 
+transformations are not directly carried out by the parser. As noted by Johnson, the language fragment he models is very small. It contains no
+description of \emph{wh}"=movement, for example (p.\,114). 
+
+Probably the most detailed implementation of the GB/Barriers tradition is Stabler's Prolog implementation \citeyearpar{Stabler92a-u}.
+Stabler's achievement is certainly impressive, but his book confirms what has been claimed thus far: Stabler has to simply stipulate many
+things which are not explicitly mentioned in \emph{Barriers} (\eg using feature"=value pairs when formalizing \xbar theory, which was borrowed
+from GPSG\indexgpsg) and some assumptions cannot be properly formalized and are simply ignored (see \citew{Briscoe97a} for details).
+
+
+GB analyses\label{Seite-Representationelle-GB} which fulfill certain requirements can be reformulated so that they no longer make use of transformations.
+These transformation"=less approaches are also called \emph{representational}\is{representational model}, whereas the transformation"=based approaches are referred to as
+\emph{derivational}\is{derivation}. For representational analyses, there are only surface structures augmented by traces but none of these structures is connected
+to an underlying structure by means of transformations (see %\citew{McCawley68a}; Pullum2007a:3 sagt, dass das nicht MTS ist
+Koster \citeyear[\page ]{Koster78b-u}; \citeyear[\page 235]{Koster87a-u}; 
+%\citealp[\page 66, Fußnote~4]{Bierwisch83a}; 
+\citealp{KT91a}; \citealp[Section~1.4]{Haider93a}; 
+\citealp[\page 14]{Frey93a}; \citealp[\page 87--88, 177--178]{Lohnstein93a-u}; \citealp[\page 38]{FC94a}; \citealp[\page 58]{Veenstra98a}, for example).
+These analyses can be implemented in the same way as corresponding HPSG analyses\indexhpsg (see
+Chapter~\ref{Kapitel-HPSG}) as computer-processable fragments and this has in fact been carried out
+for example for the analysis of verb position in German,\footnote{%
+	This shows that ten Hacken's contrasting of HPSG with GB and LFG \citep[Section~4.3]{TenHacken2007a}
+        and the classification of these frameworks as belonging to different research paradigms is
+        completely mistaken. In his classification, ten Hacken refers mainly to the model"=theoretic
+        approach that HPSG assumes. However, LFG also has a model"=theoretic formalization
+        \citep{Kaplan95a}. Furthermore, there is also a model"=theoretic variant of GB
+	\citep{Rogers98a-u}. For further discussion, see Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch}. 
+}
+but such implemented analyses differ from GB analyses with regard to their basic architecture and in small, but important details such as how one deals with
+the interaction of long"=distance dependencies and coordination \citep{Gazdar81}. For a critical discussion and classification of movement analyses
+in Transformational Grammar, see \citew{Borsley2012a}. 
+
+Following this somewhat critical overview, I want to add a comment in order not to be misunderstood:
+I do demand that all linguistic work shall be completely formalized. There is simply
+not space for this in a, say, thirty page essay. Furthermore, I do not believe that all linguists
+should carry out formal work and implement their analyses as computational models. However, there
+has to be \emph{somebody} who works out the formal details and these basic theoretical assumptions
+should be accepted and adopted for a sufficient amount of time by the research community in
+question.
+
+
+
+\section*{Comprehension questions}
+
+\begin{enumerate}
+\item Give some examples of functional and lexical categories.
+\item How can one represent lexical categories with binary features and what advantages does this have?
+\end{enumerate}
+
+\section*{Exercises}
+
+
+\begin{enumerate}
+\item Draw syntactic trees for the following examples:
+\eal
+\ex 
+\gll dass die Frau den Mann liebt\\
+     that the.\nom{} woman the.\acc{} man loves\\
+\glt `that the woman loves the man'
+\ex 
+\gll dass der Mann geliebt wird\\
+     that the.\nom{} man loved is\\
+\glt `that the man is loved'
+\ex 
+\gll Der Mann wird geliebt.\\
+     the.\nom{} man is loved\\
+\glt `The man is loved.'
+\ex 
+\gll dass der Mann der Frau hilft\\
+     that the.\nom{} man the.\dat{} woman helps\\
+\glt `that the man helps the woman'
+\ex 
+\gll Der Mann hilft der Frau.\\
+     the man.\nom{} helps the.\dat{} woman\\
+\glt `The man is helping the woman.'
+\zl
+For the passive sentences, use the analysis where the subject noun phrase is moved from the object position, that is, the analysis
+without an empty expletive as the subject.
+\end{enumerate}
+
+
+
+\section*{Further reading}
+
+For Sections~\ref{Abschnitt-GB-allgemein}--\ref{sec-GB-lokale-Umstellung}, I used material from Peter Gallmann\aimention{Peter Gallmann}
+from 2003. This has been modified, however, at various points. I am solely responsible for any mistakes or inadequacies.
+For current materials by Peter Gallmann, see \url{http://www.syntax-theorie.de}. 
+
+In the book \emph{Syntaktische Analyseperspektiven}, \citet{Lohnstein2014a} presents a variant of GB
+which more or less corresponds to what is discussed
+in this chapter (CP/IP, movement"=based analysis of the passive). The chapters in said book have been written by proponents of various theories
+and all analyze the same newspaper article. This book is extremely interesting for all those who wish to compare the various theories out there.
+
+\citew{Haegeman90a-u} is a comprehensive introduction to GB. Those who do read German may consider
+the textbooks by \citew{FF87}, \citew{SS88a} and \citew{Grewendorf88a} since they are also
+addressing the phenomena that are covered in this book.
+
+In many of his publications, Chomsky discusses alternative, transformation"=less approaches as ``notational variants''.
+This is not appropriate, as analyses without transformations can make different predictions to transformation"=based approaches (\eg w.\,r.\,t.\ coordination
+and extraction. See Section~\ref{Abschnitt-Einordnung-GPSG} for a discussion of GPSG in this respect). In \citew{Gazdar81b}, one can find a comparison
+of GB and GPSG\indexgpsg as well as a discussion of the classification of GPSG as a notational variant of Transformational Grammar with contributions
+from Noam Chomsky, Gerald Gazdar and Henry Thompson\aimention{Henry S. Thompson}.
+
+
+\citet{Borsley99a-u} and \citet{KS2008a-u} have parallel textbooks for GB and HPSG\indexhpsg in English. For the comparison of Transformational Grammar
+and LFG, see \citew{BK82a}. \citew{Kuhn2007a} offers a comparison of modern deriviational analyses with constraint"=based LFG\indexlfg and HPSG approaches.
+\citet{Borsley2012a} contrasts analyses of long"=distance dependencies in HPSG with movement"=based analyses as in GB/Minimalism. Borsley discusses
+four types of data which are problematic for movement"=based approaches: extraction without fillers,
+extraction with multiple gaps (see also the discussion of (\ref{ex-atb-minimalism}) on
+p.\,\pageref{ex-atb-minimalism} and of (\ref{ex-atb-gazdar}) on p.\,\pageref{ex-atb-gazdar} of this
+book), extractions where fillers and gaps do not match and extraction without gaps.
+
+
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "grammatiktheorie-2"
+%%% End: 
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
+
+
+% 29:36
+
+% 1:04:00 Sport-Teams und Autoritäten
+
+% 1:30:00
+
+% 2:19:23
+
+% 2:31:56
+
+

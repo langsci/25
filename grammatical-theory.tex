@@ -1,0 +1,48 @@
+%% -*- coding:utf-8 -*-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie.tex,v $
+%%  $Revision: 1.3 $
+%%      $Date: 2010/01/18 14:55:27 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[output=long    % long|short|inprep              
+	        %,blackandwhite
+	        ,smallfont
+	        ,draftmode
+                ,bibtex
+                %,showindex
+		  ]{LSP/langsci}                          
+
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+%\setboolean{draft}{true}
+
+\usepackage{etoolbox}
+\newtoggle{draft}\togglefalse{draft}
+
+
+
+
+
+\newcommand{\NOTE}[1]{}
+%\newcommand{\NOTE}[1]{\marginpar{#1}}
+
+\newcommand{\LATER}[1]{}
+
+
+%\includeonly{1-begriffe,2-psg,3-tg,4-gpsg,5-merkmalstrukturen,6-lfg,7-cg,8-hpsg,9-cxg,dg,tag,
+%diskussion,movement-scrambling-passive,loesungen}
+%% %\includeonly{2-psg}
+%% %\includeonly{3-tg}
+%% %\include{inateness}
+
+
+\input grammatical-theory-include

@@ -1,0 +1,485 @@
+%% -*- coding:utf-8 -*-
+\chapter{Extraction, scrambling, and passive: one or several descriptive devices?}
+\label{chap-scrambling-extraction-passive}
+
+An anonymous reviewer suggested discussing one issue in which transformational theories differ from
+theories like LFG and HPSG. The reviewer claimed that Transformational Grammars use just one tool
+for the description of active/passive alternations, scrambling, and extraction, while theories like
+LFG and HPSG use different techniques for all three phenomena. If this claim were correct and if
+the analyses made correct predictions, the respective GB/Minimalism theories would be better
+than their competitors, since the general aim in science
+is to develop theories that need a minimal set of assumptions. I already commented on the analysis of
+passive in GB in Section~\ref{sec-passive-gb}, but I want to extend this discussion here and include
+a Minimalist analysis and one from Dependency Grammar. 
+
+The task of any passive analysis is to explain the difference in argument realization in examples
+like (\mex{1}):
+\eal
+\ex\label{ex-she-beats-him}
+She beats him.
+\ex\label{ex-he-was-beaten}
+He was beaten.
+\zl
+In these examples about chess, the accusative object of \emph{beat} is realized as the nominative
+in (\mex{0}b). In addition, it can be observed that the position of the elements is different: while
+\emph{him} is realized postverbally in object position in (\mex{0}a), it is realized preverbally in
+(\mex{0}b). In GB this is explained by a movement analysis. It is assumed that the object does not
+get case in passive constructions and hence has to move into the subject position where case is
+assigned by the finite verb. This analysis is also assumed in Minimalist work as in
+David Adger's textbook \citeyearpar{Adger2003a}, for instance. Figure~\vref{fig-passive-mp} shows his analysis
+of (\mex{1}):
+\ea
+Jason was killed.
+\z
+\begin{figure}
+\centerfit{
+\begin{forest}
+for tree={fit=rectangle}
+[TP
+  [Jason]
+  [{\tbar[\st{\textit{u}N*}]}
+     [{T[past,\st{nom}]}
+       [be{[Pass,\st{\textit{u}Infl}:past*]}]
+       [{T[past]}]]
+     [PassP
+       [\phonliste{be}]
+       [\vP
+         [\textit{v}
+           [\textit{kill}]
+           [{\textit{v}[\st{\textit{u}Infl}:Pass]}]]
+         [VP
+           [\phonliste{kill}]
+           [\phonliste{Jason}]]]]]]
+]
+\end{forest}
+}
+\caption{\label{fig-passive-mp}Adger's Minimalist movement-based analysis of the passive (p.\,231)}
+\end{figure}%
+TP stands for Tense Phrase and corresponds to the IP that was discussed in
+Chapter~\ref{chap-GB}. PassP is a functional head for passives\is{category!functional!PassP}. \vP\is{category!functional!v@\textit{v}} is
+a special category for the analysis of verb phrases that was originally introduced for the analysis
+of ditransitives \citep{Larson88a}
+%; \citealp[\page 315]{Chomsky95a}) auch für transitive Verben
+and VP is the normal VP that consists of verb and object. In Adger's analysis, the
+verb \emph{kill} moves from the verb position in VP to the head position of \textit{v}, the
+passive auxiliary \emph{be} moves from the head position of PassP to the head position of the Tense
+Phrase. Features like Infl are `checked' in combination with such movements. The exact implementation
+of these checking and valuing operations does not matter here. What is important is that
+\emph{Jason} moves from the object position to a position that was formerly known as the specifier
+position of T (see Footnote~\ref{fn-Chomsky-on-Specifiers} on
+page~\pageref{fn-Chomsky-on-Specifiers} on the notion of specifier). All these analyses assume that
+the participle cannot assign accusative to its object and that the object has to move to another
+position to get case or check features. How the fact that the participle cannot assign case is
+represented formally was hardly ever made explicit in the GB literature.\todostefan{Baker, Johnson, Roberts 1989 sagen, dass der akkusativ dem pro externen Argument zugewiesen wird}
+The following is a list of statements that can be found in the literature:
+\eal
+\ex We shall assume that a passivized verb loses the ability to assign structural ACCUSATIVE case to
+its complement. \citep[\page 183]{Haegeman94a-u}
+
+\ex das Objekt des Aktivsatzes wird zum Subjekt des Passivsatzes, weil die passivische Verbform
+keinen Akkusativ"=Kasus regieren kann (Akk-Kasus-Absorption). \citep[\page 172]{Lohnstein2014a} 
+\zl
+In addition, it is sometimes said that the external theta role is absorbed by the verb morphology
+(\citealp{Jaeggli86a}; 
+%\citealp[]{Roberts87a}; 
+\citealp[\page 183]{Haegeman94a-u}). Now, what would it entail if we made this explicit? There is some
+lexical item for verbs like \emph{beat}. The active form has the ability to assign accusative to its
+object, but the passive form does not. Since this is a property that is shared by all transitive
+verbs (by definition of the term transitive verb), this is some regularity that has to be
+captured. One way to capture this is the assumption of a special passive morpheme that suppresses
+the agent and changes something in the case specification of the stem it attaches too. How this
+works in detail was never made explicit.
+Let us compare this morpheme"=based analysis with lexical rule"=based analyses: as was explained in
+Section~\ref{Abschnitt-leere-Elemente-LRs-Transformations}, empty heads can be used instead of
+lexical rules in those cases in which the phonological form of the input and the output do not
+differ. So for example, lexical rules that license additional arguments as in
+resultative constructions, for instance, can be replaced by an empty head. However, as was explained in Section~\ref{Abschnitt-HPSG-Passiv}, lexical 
+rules are also used to model morphology. This is also true for Construction Grammar\indexcxg (see
+Gert Booij's work on Construction Morphology \citeyearpar{Booij2010a}, which is in many ways similar to Riehemann's work in
+HPSG \citeyearpar{Riehemann93a,Riehemann98a}). In the case of the passive lexical rule, the participle
+morphology is combined with the stem and the subject is suppressed in the corresponding valence
+list. This is exactly what is described in the GB/MP literature. The respective lexical rule for the
+analysis of \emph{ge-lieb-t} `loved' is depicted in Figure~\vref{fig-morpheme-vs-lexical-rule} to
+the left.
+\begin{figure}
+\hfill
+\begin{forest}
+[{[ \phon \phonliste{ ge } $\oplus$ \ibox{1} $\oplus$ \phonliste{ t } ]}
+   [ {[ \phon \ibox{1} ]}   ]]
+\end{forest}
+\hfill
+\begin{forest}
+[V
+  [V-Aff [ge]]
+  [V-Stem]
+  [V-Aff [t]]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-morpheme-vs-lexical-rule}Lexical rule"=based/constructionist
+  vs.\ morpheme"=based analysis}
+\end{figure}%
+The morpheme"=based analysis is shown to the right. To keep things simple, I assume a flat analysis,
+but those who insist on binary branching structures would have to come up with a way of deciding
+whether the \prefix{ge} or the \suffix{t} is combined first with the stem and in which way selection
+and percolation of features takes place. Independent of how morphology is done, the fact  that the inflected form (the top node in both figures) has different properties than the
+verb stem has to be represented somehow. In the morpheme"=based world, the morpheme is responsible for suppressing the agent and
+changing the case assignment properties, in the lexical rule/construction world this is done by the
+respective lexical rule. There is no difference in terms of needed tools and necessary stipulations.
+
+The situation in Minimalist theories is a little bit different. For instance, \citep[\page 229,
+  231]{Adger2003a} writes the following:
+\begin{quote}
+Passives are akin to unaccusatives, in that they do not assign accusative case to their object,
+and they do not appear to have a thematic subject. [\ldots] Moreover, the idea that the function of
+this auxiliary is to select an unaccusative little \vP simultaneously explains the lack of
+accusative case and the lack of a thematic subject. \citep[\page 229, 231]{Adger2003a}  
+\end{quote}
+So this is an explicit statement. The relation between a stem and a passive participle form that was
+assumed in GB analyses is now a verb stem that is combined with two different versions of
+\littlev. Which \textit{v} is chosen is determined by the governing head, a functional
+Perf\is{category!functional!Perf} head or a Pass\is{category!functional!Pass} head. This can be
+depicted as in Figure~\vref{fig-Pass-vs-Perf-and-little-v}.
+\begin{figure}
+\hfill
+\begin{forest}
+[\vP
+     [DP]
+     [\littlevbar
+       [\textit{v}{[\st{\textit{u}D}]}]
+       [VP
+         [\textit{kill} {[V, \st{\textit{u}D}]}]
+         [DP ]]]]
+\end{forest}
+\hfill
+\begin{forest}
+[\vP
+       [\textit{v}]
+       [VP
+         [\textit{kill} {[V, \st{\textit{u}D}]}]
+         [DP ]]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-Pass-vs-Perf-and-little-v}Analysis of the passive and the perfect and the
+  passive in a Minimalist theory involving two different versions of \littlev}
+\end{figure}%
+When \emph{kill} is used in the perfect or the passive, it is spelled out as \emph{killed}. If it
+is used in the active with a 3rd person singular subject it is spelled out as \emph{kills}. This can
+be compared with a lexical analysis, for instance the one assumed in HPSG. The analysis
+is shown in Figure~\vref{fig-LR-passive-HPSG}.
+\begin{figure}
+\hfill
+\begin{forest}
+[V\feattab{\spr   \sliste{ \ibox{1} },\\
+           \comps \sliste{ \ibox{2} },\\
+           \argst \sliste{ \ibox{1} NP[\str], \ibox{2} NP[\str] }}
+ [V\feattab{
+           \argst \sliste{ \ibox{1} NP[\str], \ibox{2} NP[\str] }}]]
+\end{forest}
+\hfill
+\begin{forest}
+[V\feattab{\spr   \sliste{ \ibox{2} },\\
+           \comps \sliste{ },\\
+           \argst \sliste{ \ibox{2} NP[\str] }}
+ [V\feattab{
+           \argst \sliste{ \ibox{1} NP[\str], \ibox{2} NP[\str] }}]]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{fig-LR-passive-HPSG}Lexical rule"=based analysis of the perfect and the passive in HPSG}
+\end{figure}%
+The left figure shows a lexical item that is licensed by a lexical rule that is applied to the stem
+\stem{kill}. The stem has two elements in its argument structure list and for the active forms the
+complete argument structure list is shared between the licenced lexical item and the stem. The first
+element of the \argstl is mapped to \spr and the other elements to \comps (in English). Passive is
+depicted in the right figure: the first element of the \argst with structural case is suppressed and
+since the element that was the second element in the \argstl of the stem \iboxb{2} is now the first element,
+this item is mapped to \spr. See Section~\ref{sec-hpsg-passive} for passive in HPSG and Section~\ref{Abschnitt-Arg-St} for comments on
+\argst and the differences between German and English\il{English}. 
+
+The discussion of Figures~\ref{fig-Pass-vs-Perf-and-little-v} and~\ref{fig-LR-passive-HPSG} are
+a further illustration of a point made in Section~\ref{Abschnitt-leere-Elemente-LRs-Transformations}:
+lexical rules can be replaced by empty heads and vice versa. While HPSG says there are stems that
+are related to inflected forms and corresponding to the inflection the arguments are realized in a
+certain way, Minimalist theories assume two variants of \littlev that differ in their selection of
+arguments. Now, the question is: are there empirical differences between the two approaches? I think
+there are differences if one considers the question of language acquisition. What children can
+acquire from data is that there are various inflected forms and that they are related somehow. What
+remains questionable is whether they really would be able to detect empty little \textit{v}s. One
+could claim of course that children operate with chunks of structures such as the ones in
+Figure~\ref{fig-Pass-vs-Perf-and-little-v}. But then a verb would be just a chunk consisting of
+\littlev and V and having some open slots. This would be indistinguishable from what the HPSG
+analysis assumes.
+
+
+As far as the ``lexical rules as additional tool'' aspect is concerned, the discussion is closed, but
+note that the standard GB/Minimalism analyses differ in another way from LFG and HPSG analyses,
+since they assume that passive has something to do with movement, that is, they assume that the same mechanisms
+are used that are used for nonlocal dependencies.\footnote{
+  There is another option in Minimalist theories. Since Agree\is{Agree} can check features
+  nonlocally, T can assign nominative to an embedded element. So, in principle the object may get
+  nominative in the VP without moving to T. However, \citet[\page 368]{Adger2003a} assumes that German has a
+  strong EPP feature on T, so that the underlying object has to move to the specifier of T. This is
+  basically the old GB analysis of passive in German with all its conceptual problems and disadvantages.
+}
+This works for languages like English in which
+the object has to be realized in postverbal position in the active and in preverbal position in the
+passive, but it fails for languages like German in which the order of constituents is more free.
+\citet[Section~4.4.3]{Lenerz77} discussed the examples in (\ref{ex-passive-German-no-movment}) on
+page~\pageref{ex-passive-German-no-movment} -- which are repeated here as
+(\ref{ex-passive-German-no-movment-two}) for convenience:
+\eal
+\label{ex-passive-German-no-movment-two}
+\ex 
+\gll weil das Mädchen dem Jungen den Ball schenkt\\
+     because the girl the.\dat{} boy the.\acc{} Ball gives\\
+\glt `because the girl gives the ball to the boy'
+\ex 
+\gll weil dem Jungen der Ball geschenkt wurde\\
+     because the.\dat{} boy the.\nom{} ball given was\\
+\ex 
+\gll weil der Ball dem Jungen geschenkt wurde\\
+     because the.\nom{} ball the.\dat{} boy given was\\
+\glt `because the ball was given to the boy'
+\zl
+While both orders in (\mex{0}b) and (\mex{0}c) are possible, the one with dative--nominative order
+in (\mex{0}b) is the unmarked one. There is a strong linearization preference in German demanding that
+animate NPs be serialized before inanimate ones \citep[\page 46]{Hoberg81a}. This linearization rule is
+unaffected by passivization. 
+Theories that assume that passive is movement either have to
+assume that the passive of (\mex{0}a) is (\mex{0}c) and (\mex{0}b) is derived from (\mex{0}c) by a
+further reordering operation (which would be implausible since usually one assumes that more marked
+constructions require more transformations), or they would have to come up with other
+explanations for the fact that the subject of the passive sentence has the same position as the
+object in active sentences. As was already explained in Section~\ref{sec-passive-gb}, one such explanation is to
+assume an empty expletive subject that is placed in the position where nominative is assigned and
+to somehow connect this expletive element to the subject in object position. While this somehow
+works, it should be clear that the price for rescuing a movement"=based analysis of passive is rather
+high: one has to assume an empty expletive element, that is, something that neither has a form nor a
+meaning. The existence of such an object could not be inferred from the input unless it is assumed
+that the structures in which it is assumed are given. Thus, a rather rich UG\indexug would have to be
+assumed. 
+
+The question one needs to ask here is: why does the movement"=based analysis have these problems and why
+does the valence"=based analysis not have them? The cause of the problem is that the analysis
+of the passive mixes two things: the fact that SVO languages like English encode subjecthood
+positionally, and the fact that the subject is suppressed in passives. If these two things are
+separated the problem disappears. The fact that the object of the active sentence in (\ref{ex-she-beats-him}) is
+realized as the subject in (\ref{ex-he-was-beaten}) is explained by the assumption that the first NP on the
+argument structure list with structural case is realized as subject and mapped to the respective valence feature: \spr in
+English. Such mappings can be language specific (see Section~\ref{Abschnitt-Arg-St} and
+\citew{MuellerGermanic} where I discuss Icelandic\il{Icelandic}, which is an SVO language with
+subjects with lexical case).
+
+In what follows, I discuss another set of examples that are sometimes seen as evidence for a
+movement"=based analysis. The examples in (\mex{1}) are instances of the so"=called remote passive\is{passive!remote}
+\citep[\page 175--176]{Hoehle78a}.\footnote{
+  See \citew[Section~3.1.4.1]{Mueller2002b} and \citew{Wurmbrand2003a} for corpus examples.
+}
+\eal
+\ex\iw{versuchen|(}
+\gll daß er auch von mir zu überreden versucht wurde\footnotemark\\
+     that he.\nom{} also from me to persuade tried got\\
+\footnotetext{
+        \citew*[\page 212]{Oppenrieder91a}\ia{Oppenrieder}.%
+}
+\glt `that an attempt to persuade him was also made by me'
+\ex 
+\gll weil    der Wagen oft zu reparieren versucht wurde\\
+     because the car.\nom{}   often to repair   tried     was\\
+\glt `because many attempts were made to repair the car'\label{bsp-zu-reparieren-versucht-wurde}
+%,
+\zl
+What is interesting about these examples is that the subject is the underlying object of a deeply
+embedded verb. This seems to suggest that the object is extracted out of the verb phrase. So the
+analysis of (\mex{0}b) would be (\mex{1}):
+\ea
+\gll weil    [\sub{IP} der Wagen$_i$ [\sub{VP} oft   [\sub{VP} [\sub{VP} [\sub{VP} \_$_i$ zu reparieren] versucht] wurde]\\
+     because {}        the car.\nom{} {}        often {}        {}        {}        {}    to repair       tried     was\\
+\z
+While this is a straight-forward explanation of the fact that
+(\ref{bsp-zu-reparieren-versucht-wurde}) is grammatical, another explanation is possible as well. In
+the HPSG analysis of German (and Dutch\il{Dutch}) it is assumed that verbs like those in
+(\ref{bsp-zu-reparieren-versucht-wurde}) form a verbal complex, that is, \emph{zu reparieren
+  versucht wurde} `to repair tried was' forms one unit. When two or more verbs form a complex, the
+highest verb attracts the arguments from the verb it embeds \citep{HN89a,HN94a,BvN98}. A verb like
+\emph{versuchen} `to try'
+selects a subject, an infinitive with \emph{zu} `to' and all complements that are selected by this
+infinitive. In the analysis of (\mex{1}), \emph{versuchen} `to try' selects for its subject, the
+object of \emph{reparieren} `to repair' and for the verb \emph{zu reparieren} `to repair'.
+\ea
+\gll weil er den Wagen zu reparieren versuchen will\\
+     because he.\nom{} the.\acc{} car to repair try wants\\
+\glt `because he wants to try to repair the car'
+\z
+Now if the passive lexical rule applies to \stem{versuch}, it suppresses the first argument of
+\stem{versuch} with structural case, which is the subject of \stem{versuch}. The next argument of
+\stem{versuch} is the object of \emph{zu reparieren}. Since this element is the first NP with
+structural case, it gets nominative as in (\ref{bsp-zu-reparieren-versucht-wurde}). So, this shows
+that there is an analysis of the remote passive that does not rely on movement. Since
+movement"=based analyses were shown to be problematic and since there are no data that cannot be
+explained without movement, analyses without movement have to be preferred.
+
+This leaves us with movement"=based accounts of local reordering (scrambling). The reviewer
+suggested that scrambling, passive, and nonlocal extraction may be analyzed with the same
+mechanism. It was long thought that scope facts made the assumption of movement"=based analyses of
+scrambling necessary, but it was pointed out by \citew[\page 146]{Kiss2001a} and
+\citew[Section~2.6]{Fanselow2001a} that the reverse is true: movement"=based accounts of scrambling
+make wrong predictions with regard to available quantifier scopings. I discussed the respective
+examples in Section~\ref{sec-GB-lokale-Umstellung} already and will not repeat the discussion
+here. The conclusion that has to be drawn from this is that passive, scrambling, and long distance
+extraction are three different phenomena that should be treated differently. The solution for the
+analysis of the passive that is adopted in HPSG is based on an analysis by \citet{Haider86}, who
+worked within the GB framework. The ``scrambling-as-base generation'' approach to local reordering
+that was used in HPSG right from the beginning \citep{Gunji86a} is also adopted by some practitioners
+of GB/Minimalism, \eg \citet{Fanselow2001a}.
+
+Having discussed the analyses in GB/Minimalism, I now turn to Dependency Grammar. 
+\citet{GO2009a} suggest that \emph{w}-fronting, topicalization, scrambling, extraposition,
+splitting, and also the remote passive should be analyzed by what they call
+\emph{rising}\is{rising}. The concept was already explained in Section~\ref{sec-nld-dg}. The
+Figures~\ref{fig-die-idee-wird-jeder-verstehen-dg-rising}
+and~\ref{fig-gestern-hat-sich-der-spieler-verletzt-dg-rising} show examples for the fronting and the scrambling of an object.
+\begin{figure}
+\centering
+\begin{forest}
+dg edges
+[V
+  [N, edge=dashed 
+    [Det [die;the] ]
+    [Idee;idea]] 
+  [wird;will] 
+  [N [jeder;everybody] ]
+  [V$_g$ [verstehen;understand]]]
+\end{forest}
+\caption{\label{fig-die-idee-wird-jeder-verstehen-dg-rising}Analysis of \emph{Die Idee wird jeder
+    verstehen.} `Everybody will understand the idea.' involving rising}
+\end{figure}%%
+\begin{figure}
+\centering
+\begin{forest}
+dg edges
+[V
+  [Adv [Gestern;yesterday] ]
+  [hat;has] 
+  [N, edge=dashed [sich;himself] ]
+  [N
+    [Det [der;the]]
+    [Spieler;player]]
+  [V$_g$ [verletzt;injured]]]
+\end{forest}
+\caption{\label{fig-gestern-hat-sich-der-spieler-verletzt-dg-rising}Analysis of \emph{Gestern hat
+    sich der Spieler verletzt.} `Yesterday, the player injured himself.' involving rising of the object of the main
+  verb \emph{verletzt} `injured'}
+\end{figure}%%
+Groß and Osborne assume that the object depends on the main verb in sentences with auxiliary verbs,
+while the subject depends on the auxiliary. Therefore, the object \emph{die Idee} `the idea' and
+the object \emph{sich} `himself' have to rise to the next higher verb in order to keep the
+structures projective\is{projectivity}.
+Figure~\vref{fig-dass-der-wagen-zu-reparieren-versucht-wurde-dg-rising} shows the analysis of the
+remote passive.
+\begin{figure}
+\centering
+\begin{forest}
+dg edges
+[Subjunction
+  [dass;that]
+  [V
+    [N, edge=dashed
+      [Det [der;the]]
+      [Wagen;car]]
+    [V
+      [V$_g$ [zu reparieren;to repair]]
+      [versucht;tried]]
+    [wurde;was]]]
+\end{forest}
+\caption{\label{fig-dass-der-wagen-zu-reparieren-versucht-wurde-dg-rising}Analysis of the remote
+  passive \emph{dass der Wagen zu reparieren versucht wurde} `that it was tried to repair the car' involving rising}
+\end{figure}%%
+The object of \emph{zu reparieren} `to repair' rises to the auxiliary \emph{wurde} `was'.
+
+Groß and Osborne use the same mechanism for all these phenomena, but it should be clear that there
+have to be differences in the exact implementation. Groß and Osborne say that English does not have
+scrambling, while German does. If this is to be captured, there must be a way to distinguish the two
+phenomena, since if this were not possible, one would predict that English has scrambling as well,
+since both German and English allow long distance fronting. \citet[\page 58]{GO2009a} assume
+that object nouns that rise must take the nominative. But if the kind of rising that they assume
+for remote passives is identical to the one that they assume for scrambling, they would predict that
+\emph{den Wagen} gets nominative in (\mex{1}) as well:
+\ea
+\gll dass den Wagen niemand repariert hat\\
+     that the.\acc{} car nobody.\nom{} repaired has\\
+\glt `that nobody repaired the car'
+\z
+Since \emph{den Wagen} `the car' and \emph{repariert} `repaired' are not adjacent, \emph{den Wagen} has to rise to the
+next higher head in order to allow for a projective realization of elements. So in order to assign
+case properly, one has to take into account the arguments that are governed by the head to which a
+certain element rises. Since the auxiliary \emph{hat} `has' already governs a nominative, the NP \emph{den
+  Wagen} has to be realized in the accusative. An analysis that assumes that both the accusative and
+nominative depend on \emph{hat} `has' in (\mex{0}) is basically the verbal complex analysis
+assumed in HPSG and some GB variants.
+
+Note, however, that this does not extend to nonlocal dependencies. Case is assigned locally by verbs or
+verbal complexes, but not to elements that come from far away. The long distance extraction of
+NPs is more common in southern variants of German and there are only a few verbs that do not take a
+nominative argument themselves. The examples below involve \emph{dünken} `to think', which governs an
+accusative and a sentential object and \emph{scheinen} `to seem', which governs a dative and a
+sentential object. If (\mex{1}a) is analyzed with \emph{den Wagen} rising to
+\emph{dünkt}, one might expect that \emph{den Wagen} `the car' gets nominative since there is no other element
+in the nominative. However, (\mex{0}b) is entirely out.
+
+\eal
+\ex[]{ 
+\gll Den Wagen dünkt mich, dass er repariert.\\
+     the.\acc{} car thinks me.\acc{}     that he.\nom{} repairs\\
+\glt `I think that he repairs the car'
+}
+\ex[*]{
+\gll Der Wagen dünkt mich, dass er repariert.\\
+     the.\nom{} car thinks me.\acc{}     that he.\nom{} repairs\\
+}
+\zl
+
+Similarly there is no agreement between the fronted element and the verb to which it attaches:
+\eal
+\ex[]{
+\gll Mir scheint, dass die Wagen ihm gefallen.\\
+     me.\dat.1\pl{} seems.3\sg{} that the cars.3\pl{} him please.3\pl{} \\
+\glt `He seems to me to like the cars.'
+}
+%% \ex 
+%% \gll Der Wagen scheint mir, dass ihm gefällt.\\
+%%      the car   seems   me   that him pleases\\
+\ex[]{
+\gll Die Wagen scheint mir, dass ihm gefallen.\\
+     the cars.3\pl{}  seem.3\sg{}     me.\dat{}   that him please.3\pl{}\\
+\glt `The cars, he seems to me to like.'
+}
+
+\ex[*]{
+\gll  Die Wagen scheinen mir, dass ihm gefällt.\\
+      the cars.3\pl{}  seem.3\pl{}     me.\dat{}   that him pleases.3\sg{}\\
+}
+\ex[*]{
+\gll Die Wagen scheinen mir, dass ihm gefallen.\\
+     the cars.3\pl{}  seem.3\pl{}     me.\dat{}   that him please.3\pl{}\\
+}
+\zl
+This shows that scrambling/remote passive and extraction should not be dealt with by the same mechanism or if they
+are dealt with by the same mechanism one has to make sure that there are specialized variants of the
+mechanism that take the differences into account. 
+I think what Groß and Osborne did is simply recode the attachment relations of phrase structure
+grammars. \emph{die Idee} `the idea' has some relation to \emph{wird jeder verstehen} `will
+everybody understand' in Figure~\ref{fig-die-idee-wird-jeder-verstehen-dg-rising}, as it does in GB, LFG, GPSG, HPSG, and
+other similar frameworks. In HPSG, \emph{die Idee} `the idea' is the filler in a filler-head configuration. The remote
+passive and local reorderings of arguments of auxiliaries, modal verbs, and other verbs that behave similarly
+are explained by verbal complex formation where all non-verbal arguments depend on the highest verb \citep{HN94a}.
+
+Concluding this chapter, it can be said that local reorderings and long"=distance dependencies are two
+different things that should be described with different tools (or there should be further
+constraints that differ for the respective phenomena when the same tool is used). Similarly, movement"=based analyses
+of the passive are problematic since passive does not necessarily imply reordering. 
+
+
+
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->

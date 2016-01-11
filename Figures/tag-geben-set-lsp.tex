@@ -1,0 +1,63 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,../LSP/lsp-styles/lsp-forest-setup,makros.2e}
+
+\usetikzlibrary{tikzmark}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+%\oneline{%
+%}
+
+\menge{ 
+\forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
+    \hspace{1em}
+    \begin{forest}
+    [VP
+            [NP$\downarrow$]
+            [\subnode{vp1}{VP}]]
+    \end{forest}
+    \hspace{1em}
+    \begin{forest}
+    [VP
+            [NP$\downarrow$]
+            [\subnode{vp2}{VP}]]
+    \end{forest}
+    \hspace{1em}
+    \begin{forest}
+    [VP
+            [NP$\downarrow$]
+            [\subnode{vp3}{VP}]]
+    \end{forest}
+    \hspace{1em}
+    \begin{forest}
+    [VP
+            [geben]
+            [\subnode{vp4}{VP}]]
+    \end{forest}
+    \hspace{1em}
+    \begin{forest}
+    [\subnode{vp}{VP}
+            [$\epsilon$]]
+    \end{forest}
+    \hspace{1em}
+}
+\begin{tikzpicture}[overlay,remember picture,out=-90,in=90,dashed]
+\draw (vp1) to (vp);
+\draw (vp2) to (vp);
+\draw (vp3) to (vp);
+\draw (vp4) to (vp);
+\end{tikzpicture}
+
+
+\end{document}

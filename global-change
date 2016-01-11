@@ -1,0 +1,26 @@
+#!/bin/tcsh -f
+
+
+foreach x (*.tex)
+echo $x
+#sed -e 's/\[ppp/\[{\\it ppp\\\/}/g'   $x >$x.neu
+#sed -e 's/_S/_{\\mbox{\\footnotesize S}}/g'   $x >$x.neu
+#sed -e 's/Lesetips/Literatur/g'   $x >$x.neu
+sed -e 's/\\end{figure}/\\end{figure}%/g'   $x >$x.neu
+#sed -e 's/ vform-/ \{\\sc vform}-/g'   $x >$x.neu
+end
+
+
+#foreach x (*.tex)
+#echo $x
+#sed -e 's/subind}{Scrambling/subind}{Scrambling@\{\\it Scrambling\\\/\}/g' $x >$x.neu
+#end
+
+foreach x (*.tex)
+printf "."
+mv -f $x $x.old
+mv $x.neu $x
+end
+
+printf "\n"
+

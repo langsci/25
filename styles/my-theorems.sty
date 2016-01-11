@@ -1,0 +1,19 @@
+\usepackage{theorem}
+
+\newtheorem{mydefinition}{Def.}
+\newtheorem{prinzip}{Prinzip}
+\newtheorem{principle}{Principle}
+
+{\theoremstyle{break}
+\newtheorem{schema}{Schema}
+\newtheorem{mydefinition-break}[mydefinition]{Def.}
+\newtheorem{prinzip-break}[prinzip]{Prinzip}
+\newtheorem{principle-break}[principle]{Principle}
+\newtheorem{ref-regel}{Reflexivierungsregel}
+\newtheorem{fest}{Feststellung}
+}
+
+% nur fuer GLDV99
+{%\theoremstyle{colon} geht nicht
+\newtheorem{principle-colon}[principle]{Principle}
+}

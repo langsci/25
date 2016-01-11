@@ -1,0 +1,188 @@
+\newcommand{\fa}{\Rightarrow_{>}}
+
+%%%%%% CCG stuff by B. Hoffman and M. Steedman
+%\newcommand{\bs}{\ensuremath{\backslash}}
+\newcommand{\bs}{\char`\\}
+
+%\newcommand{\Tr}{{\rm T}}
+\newcommand{\Bc}{\mbox{$\mathbf{B}$}}
+%\newcommand{\Tc}{\mbox{$\mathbf{T}$}}
+\newcommand{\Sc}{\mbox{$\mathbf{S}$}}
+
+% useful macros added by Gann Bierner and Jason Baldridge
+\newcommand{\cggf}[1]{\mbox{$\mathbf{#1}$}}   % gloss font
+\newcommand{\tf}[1]{\textit{#1}} % translation font
+\newcommand{\wat}[2]{\cggf{#1} `\tf{#2}'} % word and translation
+\newcommand{\cfont}{\mathsf}
+\newcommand{\cgcf}[1]{\mbox{$\cfont{#1}$}}   % category font
+\newcommand{\ccgsubcat}[1]{\mbox{$_{\cfont{#1}}$}}
+\newcommand{\ccgfb}[1]{\mbox{$_{\cfont{#1}}$}}
+\newcommand{\semf}[1]{\mbox{$#1$}}   % semantics font
+\newcommand{\con}[1]{\texttt{#1}}   % constant font
+%\newcommand{\C}[1]{\texttt{#1}}   % constant font
+\newcommand{\lexcat}[2]{\cggf{#1}~\mbox{$\vdash$}~\cgcf{#2}}   % lexical entry
+\newcommand{\cs}[2]{\cgcf{#1} : \semf{#2}}   % category and semantics
+\newcommand{\lcs}[3]{\lexcat{#1}{#2} : \semf{#3}} % lexical entry w/ semantics
+
+\newcommand{\alA}[1]{(#1)}
+\newcommand{\alB}[2]{(#1,#2)}
+\newcommand{\alC}[3]{(#1,#2,#3)}
+%\newcommand{\pB}[2]{~#2~#1}
+\newcommand{\pA}[2]{\con{#1}\alA{#2}}
+\newcommand{\pB}[3]{\con{#1}\alB{#2}{#3}}
+\newcommand{\pC}[4]{\con{#1}\alC{#2}{#3}{#4}}
+
+%\newcommand{\bu}{\S}%{\letterspace to 0.82\naturalwidth{\%\%}}%{\%}%
+
+% nice layout for presenting rules
+\newcommand{\unaryrule}[4] {   
+  \textit{#1}$:$\\
+  $\begin{array}{cccc} 
+    #3 & \Rightarrow_{\footnotesize #2} & #4
+  \end{array}$  
+}
+
+\newcommand{\binaryrule}[5] {   
+  \textit{#1}$:$\\
+  $\begin{array}{cccc} 
+    #3 & #4 & \Rightarrow_{\footnotesize #2} & #5
+  \end{array}$  
+}
+
+
+
+\newcommand{\starbind}{\makebox[0pt][l]{\raisebox{1pt}[0pt][0pt]{\makebox[1pt]{}\^}}\makebox[0.75em][l]{\raisebox{-2pt}[0pt][0pt]{*}}}
+\newcommand{\rhobind}{\makebox[0pt][l]{\raisebox{3pt}[0pt][0pt]{\makebox[1pt]{}\^}}\makebox[0.75em][l]{\raisebox{0pt}[0pt][0pt]{rho}}}
+%frig \mathbf for combinators to sans:
+\DeclareMathAlphabet{\mathbf}{OT1}{cmss}{bx}{n}
+
+% amazingly does #1 many c's
+% CCG derivations
+% arguments: #1 = no. of words, #2 = body
+\newcommand{\deriv}[2]
+{ %\arraycolsep=.25em
+   \renewcommand{\arraystretch}{.5}
+  \ensuremath{\begin{array}[t]{@{}*{#1}{c}@{}}
+     #2
+   \end{array}} }
+
+
+% centered multicolumn, 
+\newcommand{\cgmc}[2]{\multicolumn{#1}{@{}c}{\ensuremath{#2}}}
+%\newcommand{\less}{\\ \vspace{-.5ex}}
+% Rules, argument #1 gives the number of columns to cover.
+%% \newcommand{\uline}[1]%
+%% {\multicolumn{#1}{@{}c@{}}{\hrulefill} }
+\newcommand{\uline}[1]%
+{\cgmc{#1}{\hrulefill}}
+
+\newcommand{\fapply}[1]%
+{\cgmc{#1}{\hrulefill_{>}}}
+
+%\renewcommand<>{\fapply}[1]{\multicolumn{#1}{@{}c@{}}{\visible#2{\ensuremath{\hrulefill_{>}}}}}
+
+\newcommand{\bapply}[1]
+{ \cgmc{#1}{\hrulefill_{<}} }
+
+\newcommand{\fcomp}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}}}}
+\newcommand{\fxcomp}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}_{\times}}}}
+\newcommand{\fcomptwo}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}^2}}}
+\newcommand{\fxcomptwo}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}_{\times}^2}}}
+\newcommand{\fcompthree}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}^3}}}
+\newcommand{\bcomp}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}}}}
+\newcommand{\bxcomp}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}}}}
+\newcommand{\bcomptwo}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}^2}}}
+\newcommand{\bxcomptwo}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^2}}}
+\newcommand{\bcompthree}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}^3}}}
+\newcommand{\bxcompthree}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^3}}}
+\newcommand{\fsubst}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{S}}}}
+\newcommand{\bsubst}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{S}}}}
+\newcommand{\fxsubst}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{S}_{\times}}}}
+\newcommand{\bxsubst}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{S}_{\times}}}}
+\newcommand{\ftype}[1]
+{ \cgmc{#1}{\hrulefill_{{>}\mathbf{T}}}}
+\newcommand{\btype}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{T}}}}
+\newcommand{\ccgconj}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\Phi{>}}}}
+\newcommand{\boundary}[1]
+{ \cgmc{#1}{\hrulefill_{{<}\mathbf{\%}}}}
+\newcommand{\asterisk}[1]
+{ \cgmc{#1}{\hrulefill_{\mathbf{*}}}}
+\newcommand{\comb}[2] % an arbitrary combinator
+{ \cgmc{#1}{\hrulefill_{#2}}}
+\newcommand{\dcomp}[2] % an arbitrary dcomposition
+{ \cgmc{#1}{\dotfill_{#2}}}
+\newcommand{\unfreeze}[1]
+{\cgmc{#1}{\hrulefill_{\mathbf{@}}}  }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%For example:
+%
+%\deriv{3}{
+%{\rm Mary}&{\rm prefers}& {\rm corduroy}\\
+%\uline{1}& \uline{1}    & \uline{1}\\
+%\it NP   &\it (S\bs NP)/NP &\it  NP\\
+%         &     \fapply{2}\\
+%         & \cgmc{2}{\it S\bs NP}\\
+%\bapply{2}&\\
+%\cgmc{2}{\it S}&
+%}
+%
+%\deriv{5}{
+%\rm Mary &\rm  requests  &\rm  and   &\rm prefers &\rm corduroy\\
+%\uline{1}&\uline{1}&\uline{1}&\uline{1}&\uline{1}\\
+%\it NP &\it  (S\bs NP)/NP &\it CONJ&\it  (S\bs NP)/NP&\it       NP\\
+%&\conj{3}\\
+%&\cgmc{3}{\it  (S\bs NP)/NP}\\
+%&&\fapply{3}\\
+%&&\cgmc{3}{\it S\bs NP}\\
+%\bapply{4}\\
+%\cgmc{4}{\it S}
+%}
+%\deriv{6}{
+%\rm   Mary &\rm   prefers &\rm  and  &\rm  I &\rm     detest&\rm   corduroy\\
+%\uline{1}&\uline{1}&\uline{1}&\uline{1}&\uline{1}&\uline{1}\\
+%\it   NP &\it   (S\bs NP)/NP&\it CONJ&\it    NP &\it   (S\bs NP)/NP &\it  NP\\
+%\ftype{1}&&&\ftype{1}\\
+%\it S/(S\bs NP) &&&\it S/(S\bs NP)\\
+%\fcomp{2}&&\fcomp{2}\\
+%\cgmc{2}{\it S/NP}&& \cgmc{2}{\it                  S/NP}\\
+%\conj{5}\\
+%\cgmc{5}{\it                    S/NP}\\
+%&&\fapply{4}\\
+%&&\cgmc{3}{\it                                S}
+%}
+
+
+
+\newcommand{\hr}{\ensuremath{\hrulefill}}
+\newcommand{\forwardapp}{\ensuremath{\hrulefill_{>}}}
+\newcommand{\backwardapp}{\ensuremath{\hrulefill_{<}}}
+
+
+\newcommand{\forwardt}{\ensuremath{\hrulefill_{{>}\mathbf{T}}}}
+\newcommand{\backwardt}{\ensuremath{\hrulefill_{{<}\mathbf{T}}}}
+\newcommand{\forwardtop}{\ensuremath{\hrulefill_{{>}\mathbf{\uparrow}}}}
+\newcommand{\forwardtoptop}{\ensuremath{\hrulefill_{{>}\mathbf{\uparrow\uparrow}}}}
+
+\newcommand{\forwardc}{\ensuremath{\hrulefill_{{>}\mathbf{B}}}}
+\newcommand{\backwardc}{\ensuremath{\hrulefill_{{<}\mathbf{B}}}}
+\newcommand{\forwardczwei}{\ensuremath{\hrulefill_{{>}\mathbf{BB}}}}
+
+\newcommand{\conjapp}{\ensuremath{\hrulefill_{\mbox{\&}}}}

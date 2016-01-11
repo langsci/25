@@ -1,0 +1,1628 @@
+%% -*- coding:utf-8 -*-
+
+\chapter{Phrase structure grammar}
+\label{Kapitel-PSG}
+\is{phrase structure grammar|(}
+
+This chapter deals with phase structure grammars, which play an important role in several of the theories we will encounter in later chapters.
+
+\section{Symbols and rewrite rules}
+
+Words can be assigned to a particular part of speech on the basis of their inflectional properties
+and syntactic distribution. Thus, \emph{weil} `because' in (\mex{1})
+is a conjunction\is{conjunction}, whereas \emph{das} `the' and \emph{dem} `the' are
+articles\is{article} and therefore classed as determiners\is{determiner}. Furthermore, \emph{Buch} `book' and \emph{Mann} `man' are nouns\is{noun} 
+and \emph{gibt} `gives' is a verb\is{verb}.
+\ea\label{bsp-weil-er-das-buch-dem-mann-gibt}
+\gll weil er das Buch dem Mann gibt\\
+	 because he the book the man gives\\
+\glt `because he gives the man the book'
+\z
+Using the constituency tests we introduced in Section~\ref{konstituententests}, we can show that
+individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Mann} `the man',
+form constituents. These get then assigned certain symbols. Since nouns form an important part of
+the phrases \emph{das Buch} and \emph{dem Mann}, these are referred to as \emph{noun phrases} or
+NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as full NPs and can
+therefore also be assigned to the category NP.
+
+Phrase structure grammars come with rules specifying which symbols are assigned to certain kinds of words and how these are combined to create more
+complex units. A simple phrase structure grammar which can be used to analyze (\mex{0}) is given in (\mex{1}):\footnote{
+	I ignore the conjunction \emph{weil} `because' for now. Since the exact analysis of
+        German verb"=first and verb"=second clauses requires a number of additional assumptions, we will restrict ourselves to verb"=final clauses in this chapter.
+}$^,$\footnote{\label{fn-np-pron-ps-rule}
+	The rule NP $\to$ er may seem odd. We could assume the rule PersPron $\to$ er instead but then would have to posit a further rule which
+	would specify that personal pronouns can replace full NPs: NP $\to$ PersPron. The rule in (\mex{1}) combines the two aforementioned rules and states
+	that \emph{er} `he' can occur in positions where noun phrases can.
+}
+\ea
+\label{bsp-grammatik-psg}
+\begin{tabular}[t]{@{}l@{ }l}
+{NP} & {$\to$ D N}\\          
+{S}  & {$\to$ NP NP NP V}
+\end{tabular}\hspace{2cm}%
+\begin{tabular}[t]{@{}l@{ }l}
+{NP} & {$\to$ er}\\
+{D}  & {$\to$ das}\\
+{D}  & {$\to$ dem}\\
+\end{tabular}\hspace{8mm}
+\begin{tabular}[t]{@{}l@{ }l}
+{N} & {$\to$ Buch}\\
+{N} & {$\to$ Mann}\\
+{V} & {$\to$ gibt}\\
+\end{tabular}
+\z
+We can therefore interpret a rule such as NP $\to$\is{$\to$} D N as meaning that a noun phrase, that is, something which is assigned the symbol NP, can consist
+of a determiner (D) and a noun (N).
+
+We can analyze the sentence in (\mex{-1}) using the grammar in (\mex{0}) in the following way:
+first, we take the first word in the sentence and check if there is a rule in which this word occurs on the right"=hand
+side of the rule. If this is the case, then we replace the word with the symbol on the left"=hand side of the rule. This happens
+in lines 2--4, 6--7 and 9 of the derivation in (\mex{1})\vpageref*{bsp-anwendung-grammatik}. For
+instance, in line~2 \emph{er} is replaced by NP.
+If there are two or more symbols which occur together on the right"=hand side of a rule, then all
+these words are replaced with the symbol on the left. This happens in lines 5, 8 and 10. For
+instance, in line 5 and 8, D and N are rewritten as NP.
+%\begin{figure}
+\ea
+\label{bsp-anwendung-grammatik}
+\begin{tabular}[t]{@{}r|llllll@{\hspace{1.7cm}}l@{}}
+ & \multicolumn{6}{l@{}}{words and symbols} & rules that are applied\\\hline
+ 1 & er            & das          & Buch          & dem          & Mann & gibt                \\
+ 2 & {NP}          & das          & Buch          & dem          & Mann & gibt & {NP $\to$ er}  \\
+ 3 & NP            & {D}          & Buch          & dem          & Mann & gibt & {D $\to$ das}  \\
+ 4 & NP            & D            & {N}           & dem          & Mann & gibt & {N $\to$ Buch} \\
+ 5 & NP            &              & {NP}          & dem          & Mann & gibt & {NP $\to$ D N}\\
+ 6 & NP            &              & NP            & {D}          & Mann & gibt & {D $\to$ dem}  \\
+ 7 & NP            &              & NP            & D            & {N}  & gibt & {N $\to$ Mann} \\
+ 8 & NP            &              & NP            &              & {NP} & gibt & {NP $\to$ D N}\\
+ 9 & NP            &              & NP            &              & NP   & {V} & {V $\to$ gibt}  \\
+10 &               &              &               &              &      & {S} & {S $\to$ NP NP NP V}\\
+\end{tabular}
+\z
+%\vspace{-\baselineskip}\end{figure}%
+In (\mex{0}), we began with a string of words and it was shown that we can derive the structure of a sentence by applying the rules of
+a given phrase structure grammar. We could have applied the same steps in reverse order: starting
+with the sentence symbol S, we would have applied the steps~9--1 and arrived at the string of words.
+Selecting different rules from the grammar for rewriting symbols, we could use the grammar in (\mex{-1}) to get
+from S to the string \emph{er dem Mann das Buch gibt} `he the man the book gives'.
+We can say that this grammar licenses (or generates)\label{Seite-generiert} a set of sentences.\is{Generative Grammar}
+
+The derivation in (\mex{0}) can also be represented as a tree. This is shown by Figure~\vref{er-das-buch-dem-mann-gibt-flat}.
+\begin{figure}
+\centerline{
+\begin{forest}
+sn edges
+[S
+  [NP [er;he] ]
+  [NP
+    [Det [das;the] ]
+    [N [Buch;book] ] 
+  ]
+  [NP
+    [Det [dem;the] ]
+    [N [Mann;man] ] 
+  ]
+  [V [gibt;gives] ]
+]
+\end{forest}
+%
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=3\baselineskip}}
+%% \tikzset{level 2+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=8\baselineskip}}
+%% \tikzset{every leaf node/.append style={text depth=0pt}}
+%% \Tree[.S
+%%        [.NP er\\he ]
+%%        [.NP
+%%          [.Det das\\the ]
+%%          [.N Buch\\book ] ]
+%%        [.NP
+%%          [.Det der\\the ]
+%%          [.N Frau\\woman ] ]
+%%        [.V gibt\\gives ] ]
+%% \end{tikzpicture}
+}
+\caption{\label{er-das-buch-dem-mann-gibt-flat}Analysis of \emph{er das Buch dem Mann gibt} `he the
+book the woman gives'}
+\end{figure}%
+The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP nodes and the V node\is{dominance}.
+The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
+relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the mother node\is{node!mother}
+of the three NP nodes and the V node.
+The NP node and V are sisters\is{node!sister} since they have the same mother node.
+If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
+If there is exactly one daughter, then we have a unary\is{unary}\is{branching!unary} branching
+structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
+if they are directly next to each other.
+
+Phrase structure rules are often omitted in linguistic publications. Instead, authors opt for tree diagrams or the compact equivalent bracket notation
+such as (\mex{1}).
+\ea
+\gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{D} das] [\sub{N} Buch]]  [\sub{NP} [\sub{D} dem] [\sub{N} Mann]] [\sub{V} gibt]]\\
+     {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       man     {}      gives\\  
+\z
+Nevertheless, it is the grammatical rules which are actually important since these represent grammatical knowledge which is independent of specific structures.
+In this way, we can use the grammar in (\ref{bsp-grammatik-psg}) to parse or generate the sentence
+in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-mann-gibt}) in the order of objects: 
+\ea
+\gll {}[weil] er dem Mann das Buch gibt\\
+	 {}\spacebr{}because he.\nom{} the.\dat{} man the.\acc{} book gives\\
+\glt `because he gives the man the book'
+\z
+The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Mann}.
+
+At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
+(\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
+be used to analyze these kinds of sentences (see exercise \ref{ua-psg-eins}). Another possible grammar is given in (\mex{1}):
+
+\ea\label{psg-binaer}
+\begin{tabular}[t]{@{}l@{ }l@{}}
+NP & $\to$ D N  \\
+V  & $\to$ NP V\\
+\end{tabular}\hspace{2cm}%
+\begin{tabular}[t]{@{}l@{ }l}
+{NP} & {$\to$ er}\\
+{D}  & {$\to$ das}\\
+{D}  & {$\to$ dem}\\
+\end{tabular}\hspace{8mm}
+\begin{tabular}[t]{@{}l@{ }l}
+{N} & {$\to$ Buch}\\
+{N} & {$\to$ Mann}\\
+{V} & {$\to$ gibt}\\
+\end{tabular}
+\z
+This grammar licenses binary branching structures as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
+\begin{figure}
+\centerline{
+\begin{forest}
+sn edges
+[V
+  [NP [er;he] ]
+  [V
+    [NP
+      [Det [das;the] ]
+      [N [Buch;book] ] ]
+    [V
+      [NP
+        [Det [dem;the] ]
+        [N [Mann;man] ] ]
+      [V [gibt;gives] ] ] ] ]
+\end{forest}
+}
+\caption{\label{er-das-buch-dem-mann-gibt-bin}Analysis of \emph{er das Buch dem Mann gibt} with a
+  binary branching structure}
+\end{figure}%
+
+Both the grammar in (\mex{0}) and (\ref{bsp-grammatik-psg}) are too imprecise.
+If we adopt additional lexical entries for \emph{ich} `I' and \emph{den} `the' (accusative) in our grammar, then we would incorrectly
+license the ungrammatical sentences in (\mex{1}b--d):\footnote{
+	With the grammar in (\ref{psg-binaer}), we also have the additional problem that we cannot determine when an utterance is complete
+	since the symbol V is used for all combinations of V and NP. Therefore, we can also analyze the sentence in (i) with this grammar:
+  
+\eal
+\ex[*]{
+\gll der Mann erwartet\\
+     the man expects\\
+}
+\ex[*]{
+\gll des Mannes er das Buch dem Mann gibt\\
+	 the.\gen{} man.\gen{} he the.\dat{} book.\dat{} the man gives\\
+}
+\zl
+The number of arguments required by a verb must be somehow represented in the grammar. In the following chapters, we will see exactly
+how the selection of arguments by a verb (valence) can be captured in various grammatical theories.
+}
+\eal
+\ex[]{
+\gll er        das Buch        dem Mann       gibt\\
+     he.\nom{} the.\acc{} book the.\dat{} man gives\\
+\glt `He gives the book to the man.'
+}
+\ex[*]{
+\gll ich      das Buch        dem Mann       gibt\\
+     I.\nom{} the.\acc{} book the.\dat{} man gives\\
+}
+\ex[*]{
+\gll er        das        Buch den        Mann gibt\\
+     he.\nom{} the.\acc{} book the.\acc{} man gives\\
+}
+\ex[*]{
+\gll er        den        Buch       dem Mann gibt\\
+     he.\nom{} the.\mas{} book(\neu) the man  gives\\
+}
+\zl
+In (\mex{0}b), subject"=verb agreement\is{agreement|(} has been violated, in other words: \emph{ich} `I' and \emph{gibt} `gives' do not fit together.
+(\mex{0}c) is ungrammatical because the case requirements of the verb have not been satisfied: \emph{gibt} `gives' requires a dative object. Finally, (\mex{0}d) is ungrammatical
+because there is a lack of agreement between the determiner and the noun. It is not possible to combine \emph{den} `the', which is masculine and bears accusative case, 
+and \emph{Buch} `book' because \emph{Buch} is neuter gender. For this reason, the gender properties
+of these two elements are not the same and the elements can therefore not be combined.
+
+In the following, we will consider how we would have to change our grammar to stop it from licensing the sentences in (\mex{0}b--d).
+If we want to capture subject"=verb agreement, then we have to cover the following six cases in German, as the verb has to agree with the
+subject in both person\is{person} (1, 2, 3) and number\is{number} (sg, pl)\is{agreement}:
+\eal\jamwidth=8cm\relax%\settowidth\jamwidth{(3, sg)}
+\ex 
+\gll Ich schlafe.\\
+     I   sleep\\      \jam(1, sg)
+\ex 
+\gll Du schläfst.\\
+     you sleep\\      \jam(2, sg)
+\ex 
+\gll Er schläft.\\
+     he sleeps\\      \jam(3, sg)
+\ex 
+\gll Wir schlafen.\\
+     we sleep\\       \jam(1, pl)
+\ex 
+\gll Ihr schlaft.\\
+     you sleep\\       \jam(2, pl)
+\ex 
+\gll Sie schlafen.\\   
+     they sleep\\      \jam(3, pl)
+\zl
+It is possible to capture these relations with grammatical rules by increasing 
+the number of symbols we use. Instead of the rule S $\to$ NP NP NP V, we can use
+the following:
+\ea
+\begin{tabular}[t]{@{}l@{ }l}
+S  & $\to$ NP\_1\_sg NP NP V\_1\_sg\\
+S  & $\to$ NP\_2\_sg NP NP V\_2\_sg\\
+S  & $\to$ NP\_3\_sg NP NP V\_3\_sg\\
+S  & $\to$ NP\_1\_pl NP NP V\_1\_pl\\
+S  & $\to$ NP\_2\_pl NP NP V\_2\_pl\\
+S  & $\to$ NP\_3\_pl NP NP V\_3\_pl\\
+\end{tabular}
+\z
+This would mean that we need six different symbols for noun phrases and verbs respectively, as well as six rules rather than one.
+
+In order to account for case assignment by the verb, we can incorporate case information into the symbols in an analogous way. We would then
+get rules such as the following:
+\ea
+\label{ditrans-ps-regeln}
+\begin{tabular}[t]{@{}l@{ }l}
+S  & $\to$ NP\_1\_sg\_nom NP\_dat NP\_acc V\_1\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_2\_sg\_nom NP\_dat NP\_acc V\_2\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_3\_sg\_nom NP\_dat NP\_acc V\_3\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_1\_pl\_nom NP\_dat NP\_acc V\_1\_pl\_nom\_dat\_acc\\
+S  & $\to$ NP\_2\_pl\_nom NP\_dat NP\_acc V\_2\_pl\_nom\_dat\_acc\\
+S  & $\to$ NP\_3\_pl\_nom NP\_dat NP\_acc V\_3\_pl\_nom\_dat\_acc\\
+\end{tabular}
+\z
+Since it is necessary to differentiate between noun phrases in four cases, we have a total of six symbols for NPs in the nominative and three symbols for NPs with
+other cases. Since verbs have to match the NPs, that is, we have to differentiate between verbs which select three arguments and those selecting only one or two (\mex{1}),
+we have to increase the number of symbols we assume for verbs.\is{valence}
+\eal
+\ex[]{
+\gll Er schläft.\\
+	 he sleeps\\
+\glt `He is sleeping.'
+}
+\ex[*]{
+\gll Er schläft das Buch.\\
+	 he sleeps the book\\
+}
+\ex[]{
+\gll Er kennt das Buch.\\
+	 he knows the book\\
+\glt `He knows the book.'
+}
+\ex[*]{
+\gll Er kennt.\\
+	 he knows\\
+}
+\zl
+In the rules above, the information about the number of arguments required by a verb is included in the marking `nom\_dat\_acc'.
+
+In order to capture the determiner"=noun agreement in (\mex{1}), we have to incorporate information about gender\is{gender} (fem, mas, neu),
+number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak\footnote{
+These are inflectional classes for adjectives which are also relevant for some nouns such as \emph{Beamter} `civil servant', 
+\emph{Verwandter} `relative', \emph{Gesandter} `envoy', \ldots).
+For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.%
+}).
+\eal\settowidth\jamwidth{(Inflectional class)}
+\ex 
+\gll der Mann, die Frau, das Buch\\
+	 the man the woman the book\\\jambox{(gender)}
+\ex 
+\gll das Buch, die Bücher\\
+	 the book the books\\\jambox{(number)}
+\ex 
+\gll des Buches, dem Buch\\
+	 the.\gen{} book the.\dat{} book\\\jambox{(case)}
+\ex\is{inflectional class} 
+\gll ein Beamter, der Beamte\\
+	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
+\zl
+Instead of the rule NP $\to$ D N, we will have to use rules such as those in (\mex{1}):
+\ea
+%\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{@{}l@{ }l@{\hspace{4mm}}l@{ }l}
+NP\_3\_sg\_nom  & $\to$ D\_fem\_sg\_nom\_weak N\_fem\_sg\_nom\_weak \\
+NP\_3\_sg\_nom  & $\to$ D\_mas\_sg\_nom\_weak N\_mas\_sg\_nom\_weak \\
+NP\_3\_sg\_nom  & $\to$ D\_neu\_sg\_nom\_weak N\_neu\_sg\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ D\_fem\_pl\_nom\_weak N\_fem\_pl\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ D\_mas\_pl\_nom\_weak N\_mas\_pl\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ D\_neu\_pl\_nom\_weak N\_neu\_pl\_nom\_weak \\[2mm]
+\end{tabular}
+
+\begin{tabular}[t]{@{}l@{ }l@{\hspace{4mm}}l@{ }l}
+NP\_3\_sg\_nom  & $\to$ D\_fem\_sg\_nom\_stark N\_fem\_sg\_nom\_stark \\
+NP\_3\_sg\_nom  & $\to$ D\_mas\_sg\_nom\_stark N\_mas\_sg\_nom\_stark \\
+NP\_3\_sg\_nom  & $\to$ D\_neu\_sg\_nom\_stark N\_neu\_sg\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ D\_fem\_pl\_nom\_stark N\_fem\_pl\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ D\_mas\_pl\_nom\_stark N\_mas\_pl\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ D\_neu\_pl\_nom\_stark N\_neu\_pl\_nom\_stark \\[2mm]
+\end{tabular}
+\z
+(\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
+dative, and accusative. We would then require 48 symbols for determiners ($3*2*4*2$), 48 symbols for nouns and
+48 rules rather than one.\is{agreement|)} 
+
+\section{Expanding PSG with features}
+\label{sec-PSG-Merkmale}
+
+
+Phrase structure grammars which only use atomic symbols are problematic as they cannot capture certain generalizations.
+We as linguists can recognize that NP\_3\_sg\_nom stands for a noun phrase because it contains the letters NP. 
+However, in formal terms this symbol is just like any other symbol in the grammar and we cannot capture the commonalities
+of all the symbols used for NPs. Furthermore, unstructured symbols do not capture the fact that the rules in (\mex{0}) 
+all have something in common. In formal terms, the only thing that the rules have in common is that there is one symbol on the
+left"=hand side of the rule and two on the right.
+
+We can solve this problem by introducing features which are assigned to category symbols and therefore allow for the values of
+such features to be included in our rules. For example, we can assume the features person, number and case for the category
+symbol NP. For determiners and nouns, we would adopt an additional feature for gender and one for inflectional class.
+
+\ea
+\begin{tabular}[t]{@{}l@{ }l}
+NP(3,sg,nom)  & $\to$ D(fem,sg,nom,strong) N(fem,sg,nom,strong)\\
+NP(3,sg,nom)  & $\to$ D(mas,sg,nom,strong) N(mas,sg,nom,strong)\\
+\end{tabular}
+\z
+
+If we were to use variables rather than the values in (\mex{0}), we would get the following rules as in (\mex{1}):
+\ea
+\label{Regel-mit-Variablen}
+\begin{tabular}[t]{@{}l@{ }l@{ }l}
+NP({3},{Num},{Case}) & $\to$ & D(Gen,{Num},{Case},Infl) N(Gen,{Num},{Case},Infl)\\
+\end{tabular}
+\z
+The values of the variables here are not important. What is important is that they match. The value
+of the person feature (the first position in the NP(3,Num,Case)) is fixed at `3' by the rule. These
+kind of restrictions on the values can, of course, be determined in the lexicon: 
+\ea
+\begin{tabular}[t]{@{}l@{ }l}
+NP(3,sg,nom)  & $\to$ es\\
+D(mas,sg,nom,strong)  & $\to$ des\\
+\end{tabular}
+\z
+
+\noindent
+The rules in (\ref{ditrans-ps-regeln})  can be collapsed into a single schema as in (\mex{1}):
+\ea
+\label{ditrans-schema}
+\begin{tabular}[t]{@{}l@{ }l@{ }l}
+S  & $\to$ & NP({Per1},{Num1},{nom}) \\
+   &       & NP(Per2,Num2,{dat})\\
+   &       & NP(Per3,Num3,{acc})\\
+   &       & V({Per1},{Num1},ditransitive)\\
+\end{tabular}
+\z
+The identification of Per1 and Num1 on the verb and on the subject ensures that there is subject"=verb agreement.
+For the other NPs, the values of these features are irrelevant. The case of these NPs is explicitly determined.
+\is{phrase structure grammar|)}
+
+\section{Semantics}
+\label{sec-PSG-Semantik}
+
+In the introductory chapter and the previous sections, we have been dealing with syntactic aspects
+of language and the focus will remain very much on syntax for the remainder of this book. It is,
+however, important to remember that we use language to communicate, that is, to transfer information
+about certain situations, topics or opinions. If we want to accurately explain our capacity for
+language, then we also have to explain the meanings that our utterances have. To this end, it is
+necessary to understand their syntactic structure, but this alone is not enough. Furthermore,
+theories of language acquisition that only concern themselves with the acquisition of syntactic
+constructions are also inadequate. The syntax"=semantics interface\is{syntax"=semantics interface}
+is therefore important and every grammatical theory has to say something about how syntax and
+semantics interact. In the following, I will show how we can combine phrase structure rules with
+semantic information. To represent meanings, I will use first"=order predicate logic and
+$\lambda$"=calculus\is{$\lambda$"=calculus}. Unfortunately, it is not possible to provide a detailed
+discussion of the basics of logic so that even readers without prior knowledge can follow all the
+details, but the simple examples discussed here should be enough to provide some initial
+insights into how syntax and semantics interact and furthermore, how we can develop a linguistic
+theory to account for this.
+
+To show how the meaning of a sentence is derived from the meaning of its parts, we will consider (\mex{1}a). We
+assign the meaning in (\mex{1}b) to the sentence in (\mex{1}a). 
+\eal
+\ex\label{Bsp-Max-schlaeft}
+\gll Max schläft.\\
+     Max sleeps\\
+\glt `Max is sleeping.'
+\ex\label{Bsp-schlafen-max} 
+\relation{schlafen}(\relation{max})
+\zl
+Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use
+prime symbols to indicate
+that we are dealing with word meanings and not actual words. At first glance, it may not seem that we have really gained anything
+by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
+It is, however, important to concentrate on a single verb form as inflection is irrelevant when it comes to meaning. We can see this by comparing the 
+examples in (\mex{1}a) and (\mex{1}b):
+\eal
+\ex 
+\gll Jeder Junge schläft.\\
+     every boy sleeps\\
+\glt `Every boy sleeps.'
+\ex 
+\gll Alle Jungen schlafen.\\
+     all boys sleep\\
+\glt `All boys sleep.'	 
+\zl
+
+\noindent
+When looking at the meaning in (\mex{-1}b), we can consider which part of the meaning comes from each word.
+It seems relatively intuitive that \relation{max} comes from \emph{Max}, but the trickier question is what exactly
+\emph{schläft} `sleeps' contributes in terms of meaning. If we think about what characterizes a `sleeping' event, we
+know that there is typically an individual who is sleeping. This information is part of the meaning of the verb \emph{schlafen}
+`to sleep'. The verb meaning does not contain information about the sleeping individual, however, as this verb can be used
+with various subjects:
+ \eal
+\ex 
+\gll Paul schläft.\\
+     Paul sleeps\\
+\glt `Paul is sleeping.'
+\ex 
+\gll Mio schläft.\\
+     Mio sleeps\\
+\glt `Mio is sleeping.'
+\ex 
+\gll Xaver schläft.\\
+     Xaver sleeps\\
+\glt `Xaver is sleeping.'
+\zl
+We can therefore abstract away from any specific use of \relation{schlafen} and instead of, for example, \relation{max} in (\mex{-2}b), we
+use a variable (\eg x). This x can then be replaced by \relation{paul}, \relation{mio} or \relation{xaver} in a given sentence. To allow us
+to access these variables in a given meaning, we can write them with a $\lambda$ in front. Accordingly, \emph{schläft} `sleeps' will have
+the following meaning:
+\ea
+$\lambda x$ \relation{sleep}(x)
+\z
+
+The step from (\ref{Bsp-schlafen-max}) to (\mex{0}) is referred to as \emph{lambda abstraction}\is{lambda"=abstraction@$\lambda$"=abstraction}.
+The combination of the expression (\mex{0}) with the meaning of its arguments happens in the following way: we remove the $\lambda$ and the 
+corresponding variable and then replace all instances of the variable with the meaning of the
+argument. If we combine (\mex{0}) and \relation{max} as in (\mex{1}),
+we arrive at the meaning in (\ref{Bsp-schlafen-max}). 
+\ea
+$\lambda x$ \relation{sleep}(x) \relation{max}
+\z
+The process is called $\beta$"=reduction\is{beta"=reduction@$\beta$"=reduction} or 
+$\lambda$"=conversion\is{lambda"=conversion@$\lambda$"=conversion}. To show this further, let us consider an example with a transitive verb. The sentence
+in (\mex{1}a) has the meaning given in (\mex{1}b):
+\eal
+\ex\label{Bsp-Max-mag-Lotte} 
+\gll Max mag Lotte.\\
+     Max likes Lotte\\
+\glt `Max likes Lotte.'
+\ex \relation{like}(\relation{max}, \relation{lotte})
+\zl
+The $\lambda$"=abstraction of \emph{mag} `likes' is shown in (\mex{1}):
+\ea
+$\lambda y \lambda x$ \relation{like}(x, y)
+\z
+Note that it is always the first $\lambda$ that has to be used first. The variable $y$ corresponds
+to the object of \emph{mögen}. For languages like English it is assumed that the object forms a verb
+phrase (VP) together with the verb and this VP is combined with the subject. German differs from
+English in allowing more freedom in constituent order. The problems that result for form meaning
+mappings are solved in different ways by different theories. The respective solutions will be
+addressed in the following chapters.
+
+
+If we combine the representation in (\mex{0}) with that of the object \emph{Lotte}, we arrive at (\mex{1}a), and following
+$\beta$"=reduction, (\mex{1}b):
+\eal
+\label{lambbbda-moegen}
+\ex $\lambda y \lambda x$ \relation{like}(x, y) \relation{lotte}
+\ex $\lambda x$ \relation{like}(x, \relation{lotte})
+\zl
+
+\noindent
+This meaning can in turn be combined with the subject and we then get (\mex{1}a) and (\mex{1}b) after $\beta$"=reduction:
+\eal
+\ex $\lambda x$ \relation{like}(x, \relation{lotte}) \relation{max}
+\ex \relation{like}(\relation{max}, \relation{lotte})
+\zl
+
+\begin{sloppypar}
+\noindent
+After introducing lambda calculus, integrating the composition of meaning into our phrase structure rules is simple. A rule for the
+combination of a verb with its subject has to be expanded to include positions for the semantic contribution of the verb, the semantic
+contribution of the subject and then the meaning of the combination of these two (the entire sentence). The complete meaning is the
+combination of the individual meanings in the correct order. We can therefore take the simple rule in (\mex{1}a) and turn it into 
+(\mex{1}b):
+\end{sloppypar}
+\eal
+\ex S $\to$ NP(nom) V
+\ex S(V$'$ NP$'$) $\to$ NP(nom, NP$'$) V(V$'$)
+\zl
+V$'$ stands for the meaning of V and NP$'$ for the meaning of the NP(nom). V$'$ NP$'$ stands for the combination of V$'$ and NP$'$. When analyzing
+(\ref{Bsp-Max-schlaeft}), the meaning of V$'$ is $\lambda x$ schlafen(x) and the meaning of NP$'$ is \relation{max}. The combination of V$'$ NP$'$
+corresponds to (\mex{1}a) or after $\beta$"=reduction to (\ref{Bsp-schlafen-max}) -- repeated here as (\mex{1}b):
+\eal
+\ex $\lambda x$ \relation{sleep}(x) \relation{max}
+\ex \relation{sleep}(\relation{max})
+\zl
+
+\noindent
+For the example with a transitive verb in (\ref{Bsp-Max-mag-Lotte}), the rule in (\mex{1}) can be proposed:
+\ea
+S(V$'$ NP2$'$ NP1$'$) $\to$ NP(nom, NP1$'$) V(V$'$) NP(acc, NP2$'$)
+\z
+The meaning of the verb (V$'$) is first combined with the meaning of the object (NP2$'$) and then with the meaning of the subject (NP1$'$). 
+
+At this point, we can see that there are several distinct semantic rules for the phrase structure rules above. The hypothesis that we should analyze language
+in this way is called the \emph{rule"=by"=rule hypothesis}\is{rule"=by"=rule hypothesis} \citep{Bach76a}. A more general process for deriving the
+meaning of linguistic expression will be presented in Section~\ref{Sec-GPSG-Sem}.
+
+\section{Phrase structure rules for some aspects of German syntax}
+
+Whereas determining the direct constituents of a sentence is relative easy, since we can very much rely on the movement test due to the
+somewhat flexible order of constituents in German, it is more difficult to identify the parts of the noun phrase. This is the problem
+we will focus on in this section. To help motivate assumptions about \xbar~syntax to be discussed in Section~\ref{sec-xbar},
+we will also discuss prepositional phrases.
+
+
+\subsection{Noun phrases}
+\label{sec-psg-np}
+
+Up to now, we have assumed a relatively simple structure for noun phrases: our rules state that a noun phrase consists of a determiner and a
+noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a). This is shown by the following examples in (\mex{1}):
+\eal
+\label{Beispiele-NP-Adjunkte}
+\ex 
+\gll eine Frau\\
+	 a woman\\
+\ex 
+\gll eine Frau, die wir kennen\\
+	 a woman who we know\\
+\ex 
+\gll eine Frau aus Stuttgart\\
+	 a woman from Stuttgart\\
+\ex 
+\gll eine kluge Frau\\
+	 a smart woman\\
+\ex 
+\gll eine Frau aus Stuttgart, die wir kennen\\
+	 a woman from Stuttgart who we know\\
+\ex 
+\gll eine kluge Frau aus Stuttgart\\
+	 a smart woman from Stuttgart\\
+\ex 
+\gll eine kluge Frau, die wir kennen\\
+	 a smart woman who we know\\
+\ex 
+\gll eine kluge Frau aus Stuttgart, die wir kennen\\
+	 a smart woman from Stuttgart who we know\\
+\zl
+
+As well as determiners and nouns, noun phrases can also contain adjectives, prepositional phrases and relative clauses. 
+The additional elements in (\mex{0}) are adjuncts\is{adjunct|(}. They restrict the set of objects which the noun phrase 
+refers to. Whereas (\mex{0}a) refers to a being which has the property of being a woman, the referent of (\mex{0}b) must
+also have the property of being known to us.
+
+Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
+analyze (\mex{0}a). The question we are facing now is how we can modify this rule or which additional rules we would
+have to assume in order to analyze the other noun phrases in (\mex{0}). In addition to rule (\mex{1}a), one could propose 
+a rule such as the one in (\mex{1}b).\footnote{
+	See \citew[\page 238]{Eisenberg2004a} for the assumption of flat structures in noun phrases.
+}$^,$\footnote{
+	There are, of course, other features such as gender and number, which should be part of all the rules
+	discussed in this section. I have omitted these in the following for ease of exposition.
+}\todostefan{These footnottes have to be blocked from moving to the next page.}
+\eal
+\ex NP $\to$ Det N
+\ex NP $\to$ Det A N
+\zl
+However, this rule would still not allow us to analyze noun phrases such as (\mex{1}):
+\ea
+\label{Beispiel-alle-weitern-schlagkraeftigen-Argumente}
+\gll alle weiteren schlagkräftigen Argumente\\
+	 all further strong arguments\\
+\glt `all other strong arguments'
+\z
+In order to be able to analyze (\mex{0}), we require a rule such as (\mex{1}): 
+\ea 
+NP $\to$ Det A A N
+\z
+It is always possible to increase the number of adjectives in a noun phrase and setting an upper limit for
+adjectives would be entirely arbitrary. Even if we opt for the following abbreviation, there are still problems:
+
+\ea 
+NP $\to$ Det A* N
+\z
+The asterisk\is{*} in (\mex{0}) stands for any number of iterations. Therefore, (\mex{0}) encompasses rules with no adjectives
+as well as those with one, two or more.
+
+The problem is that according to the rule in (\mex{0}) adjectives and nouns do not form a constituent and we can therefore not explain why coordination 
+is still possible in (\mex{1}):
+\ea
+\gll alle [[geschickten Kinder] und [klugen Frauen]]\\
+	 all  \spacebr{}\spacebr{}skillful children and  \spacebr{}smart women\\
+\glt `all the skillful children and smart women'	 
+\z
+If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
+that the adjective and noun form a unit.
+
+The noun phrases with adjectives discussed thus far can be explained by the following rules:
+
+\eal
+\label{NP-Regeln}
+\ex NP $\to$ Det \nbar
+\ex\label{NP-Regeln-Adj} \nbar $\to$ A \nbar
+\ex\label{NP-Regeln-Nbar-N} \nbar $\to$ N
+\zl
+
+\noindent
+These rules state the following: a noun phrase consists of a determiner and a nominal element (\nbar). This nominal element
+can consist of an adjective and a nominal element (\mex{0}b), or just a noun (\mex{0}c). Since \nbar is also on the right"=hand side
+of the rule in (\mex{0}b), we can apply this rule multiple times and therefore account for noun phrases with multiple adjectives such as
+(\ref{Beispiel-alle-weitern-schlagkraeftigen-Argumente}). Figure~\vref{Abbildung-Adjektive-in-NP} shows the structure of a noun phrase
+without an adjective and that of a noun phrase with one or two adjectives.
+\begin{figure}
+\hfill%
+\begin{forest}
+sn edges
+[NP
+   [Det [eine;a] ]
+   [\nbar
+      [N [Frau;woman] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[NP
+   [Det [eine;a] ]
+   [\nbar
+      [A [kluge;smart] ]
+      [\nbar
+        [N [Frau;woman] ] ] ] ]
+\end{forest}
+%
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [Det [eine;a] ]
+    [\nbar
+    [A [glückliche;happy] ]
+       [\nbar
+       [A [kluge;smart] ]
+         [\nbar
+         [N [Frau;woman] ] ] ] ] ]
+\end{forest}
+\hfill\mbox{}
+%
+\caption{\label{Abbildung-Adjektive-in-NP}Noun phrases with differing numbers of adjectives}
+\end{figure}%
+The adjective \emph{klug} `smart' restricts the set of referents for the noun phrase. If we assume an
+additional adjective such as \emph{glücklich} `happy', then it only refers to those women who are happy
+as well as smart. These kinds of noun phrases can be used in contexts such as the following:
+
+\ea
+\label{Beispiel-Iteration-Adjektive}
+\gll A: Alle klugen Frauen sind unglücklich.\\
+\spacebr{} all smart women are unhappy\\
+
+\gll B: Nein, ich kenne eine glückliche kluge Frau.\\
+	\spacebr{} no I know a happy smart woman\\
+\z
+We observe that this discourse can be continued with \emph{Aber alle glücklichen
+  klugen Frauen sind schön} `but all happy, smart women are beautiful' and a corresponding answer. The possibility
+  to have even more adjectives in noun phrases such as \emph{eine glückliche kluge Frau} `a happy, smart
+  woman'\todoandrew{Komma zwischen den Adjektiven?} is accounted
+  for in our rule system in (\mex{-1}). In the rule (\ref{NP-Regeln-Adj}), \nbar occurs on the left as well as the right"=hand
+  side of the rule. This kind of rule is referred to as \emph{recursive}\is{recursion}.
+\is{adjunct|)}
+
+We have now developed a nifty little grammar that can be used to analyze noun phrases containing
+adjectival modifiers. As a result, the combination of an adjective and noun is given constituent
+status. One may wonder at this point if it would not make sense to also assume that determiners and
+adjectives form a constituent, as we also have the following kind of noun phrases: 
+\ea
+\gll diese schlauen und diese neugierigen Frauen\\
+	 these smart and these curious women\\
+\z
+Here, we are dealing with a different structure, however. Two full NPs have been
+conjoined\is{coordination} and part of the first conjunct has been deleted.
+\ea
+\gll diese schlauen \st{Frauen} und diese neugierigen Frauen\\
+	 these smart women and these curious women\\
+\z
+One can find similar phenomena at the sentence and even word level:
+\eal
+\ex 
+\gll dass Peter dem Mann das Buch \st{gibt} und Maria der Frau die Schallplatte gibt\\
+	 that Peter the man the book gives and Maria the woman the record gives\\
+\glt `that Peters gives the book to the man and Maria the record to the woman'
+\ex 
+\gll be- und ent"=laden\\
+	 \prt{} and \prt{}"=load\\
+\glt `load and unload'
+\zl
+% Dass in (\mex{-1}) wirklich keine normale symmetrische Koordination vorliegt, sieht man, wenn man
+% (\mex{-1}) mit (\mex{1}) vergleicht:
+% \ea
+% diese schlauen Frauen und klugen Männer
+% \z
+% Mit (\mex{0}) verweist man auf eine Gruppe, die aus schlauen Frauen und klugen Männern besteht,
+% wohingegen man mit (\mex{-2}) auf zwei Gruppen verweist, nämlich
+
+\noindent
+Thus far, we have discussed how we can ideally integrate adjectives into our rules for the structure of noun phrases.
+Other adjuncts such as prepositional phrases or relative clauses can be combined with \nbar in an analogous way to adjectives:
+\eal
+\ex\label{xbar-PP-Adjunkt-an-N} \nbar $\to$ \nbar PP
+\ex \nbar $\to$ \nbar relative clause
+\zl
+With these rules and those in (\ref{NP-Regeln}), it is possible -- assuming the corresponding rules for PPs and
+relative clauses -- to analyze all the examples in (\ref{Beispiele-NP-Adjunkte}).
+
+(\ref{NP-Regeln}c) states that it is possible for \nbar to consist of a single noun. A further important rule has not yet been
+discussed: we need another rule to combine nouns such as \emph{Vater} `father', \emph{Sohn} `son' or \emph{Bild} `picture', 
+so"=called \emph{relational nouns}\is{noun!relational}, with their arguments. Examples of these can be found in (\mex{1}a--b).
+(\mex{1}c) is an example of a nominalization of a verb with its argument:
+\eal
+\label{Beispiele-NP-relationale-Nomina}
+\ex 
+\gll der Vater von Peter\\
+	 the father of Peter\\
+\glt `Peter's father'
+\ex 
+\gll das Bild vom Gleimtunnel\\
+	 the picture of.the Gleimtunnel\\
+\glt `the picture of the Gleimtunnel'
+\ex 
+\gll das Kommen des Installateurs\\
+	 the coming of.the plumber\\
+\glt `the plumber's visit'
+\zl
+\noindent
+The rule that we need to analyze (\ref{Beispiele-NP-relationale-Nomina}a,b) is given in
+(\mex{1}):
+%\todostefan{Martin: It is not said why relational nouns should behave in a special way.}
+\ea
+\nbar $\to$ N PP
+\z
+
+
+Figure~\ref{Abbildung-NP-mit-PP-Argument} shows two structures with PP"=arguments. The tree on the right also contains an additional PP"=adjunct, which is licensed
+by the rule in (\ref{xbar-PP-Adjunkt-an-N}).
+\begin{figure}
+\centerfit{%
+\begin{forest}
+sn edges
+[NP
+ [Det [das;the] ]
+ [\nbar
+   [N [Bild;picture] ]
+   [PP [vom Gleimtunnel;of.the Gleimtunnel,triangle ] ] ] ]
+\end{forest}%
+\hspace{2em}%
+\begin{forest}
+sn edges
+[NP
+  [Det [das;the] ]
+  [\nbar
+    [\nbar
+      [N [Bild;picture] ]
+      [PP [vom Gleimtunnel;of.the Gleimtunnel,triangle ] ] ] 
+    [PP [im Gropiusbau;in.the Gropiusbau,triangle ] ] ] ]
+\end{forest}}
+\caption{\label{Abbildung-NP-mit-PP-Argument}Combination of a noun with PP complement
+  \emph{vom Gleimtunnel} to the right with an adjunct PP}
+\end{figure}%
+
+\noindent
+In addition to the previously discussed NP structures, there are other structures where the determiner or noun is missing.
+Nouns can be omitted via ellipsis. (\mex{1}) gives an example of noun phrases, where a noun that does not require a complement
+has been omitted. The examples in (\mex{2}) show NPs in which only one determiner and complement of the noun has been realized,
+but not the noun itself:%\todoandrew{Ist das nicht \emph{a smart one}?}
+\eal
+\label{ex-nounless-np}
+\ex 
+\gll eine kluge \_\\
+	 a smart\\
+\glt `a smart one'
+\ex 
+\gll eine kluge große \_\\
+     a    smart tall\\
+\glt `a smart tall one'
+
+\ex 
+\gll eine kluge \_ aus Hamburg\\
+	 a smart {} from Hamburg\\
+\glt `a smart one from Hamburg'
+\ex 
+\gll eine kluge \_, die alle kennen\\
+	 a smart {} who everyone knows\\
+\glt `a smart one who everyone knows'
+\zl
+
+\eal
+\label{ex-nounless-np-relational-noun}
+\ex 
+\gll (Nein, nicht der Vater von Klaus), der \_ von Peter war gemeint.\\
+	\spacebr{}no not the father of Klaus the {} of Peter was meant\\
+\glt `No, it wasn't the father of Klaus, but rather the one of Peter that was meant.'
+\ex 
+\gll (Nein, nicht das Bild von der Stadtautobahn), das \_ vom Gleimtunnel war beeindruckend.\\
+	 \spacebr{}no not the picture of the motorway the {} of.the Gleimtunnel was impressive\\
+\glt `No, it wasn't the picture of the motorway, but rather the one of the Gleimtunnel that was impressive.'
+\ex 
+\gll (Nein, nicht das Kommen des Tischlers), das \_ des Installateurs ist wichtig.\\
+	 \spacebr{}no not the coming of.the carpenter the {} of.the plumber is important\\
+\glt `No, it isn't the visit of the carpenter, but rather the visit of the plumber that is important.'
+\zl
+The underscore marks the position where the noun would normally occur. In English, the pronoun
+\emph{one} must often be used in the corresponding position, but in German the noun\is{noun} is
+simply omitted. (See \citet*[Section~4.12]{FLGR2012a} for English\il{English} examples without the
+pronoun \emph{one}.)
+%\todostefan{ich habe hier mit absicht ``often'' hinzugefügt, weil in den obengenannten beispielen
+%man nicht in allen Fällen ``one'' benutzen kann, vgl. (\mex{0}c)}
+In phrase structure grammars, this can be described by a so"=called \emph{epsilon production}\is{epsilon production}\is{empty element}.
+These rules replace a symbol with nothing (\mex{1}a). The rule in (\mex{1}b) is an equivalent variant which is responsible for the term \emph{epsilon production}:
+\eal
+\label{np-epsilon}
+\ex N $\to$
+\ex N $\to$ $\epsilon$
+\zl 
+
+\noindent
+The corresponding trees are shown in Figure~\vref{Abbildung-NP-ohne-Nomen}.
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [Det [eine;a] ]
+  [\nbar
+    [A [kluge;smart] ]
+    [\nbar
+      [N [\trace ] ] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [Det [das;the] ]
+  [\nbar
+    [N [\trace] ]
+    [PP [vom Gleimtunnel;of.the Gleimtunnel, triangle] ] ] ]
+\end{forest}
+\hfill%
+\mbox{}
+\caption{\label{Abbildung-NP-ohne-Nomen}Noun phrases without an overt head}
+\end{figure}%
+Going back to boxes, the rules in (\mex{0}) correspond to empty boxes with the same labels as the boxes
+of ordinary nouns. As we have considered previously, the actual content of the boxes is unimportant when
+considering the question of where we can incorporate them. In this way, the noun phrases in (\ref{Beispiele-NP-Adjunkte})
+can occur in the same sentences. The empty noun box also behaves like one with a genuine noun. If we
+do not open the empty box, we will not be able to ascertain the difference to a filled box. 
+
+It is not only possible to omit the noun from noun phrases, but the determiner can also remain unrealized in certain contexts.
+(\mex{1}) shows noun phrases in plural\is{plural}:
+\eal
+\ex 
+\gll Frauen\\
+	 women\\
+\ex 
+\gll Frauen, die wir kennen\\
+	 women who we know\\
+\ex 
+\gll kluge Frauen\\
+	 smart women\\
+\ex 
+\gll kluge Frauen, die wir kennen\\
+	 smart women who we know\\
+\zl
+The determiner can also be omitted in singular if the noun denotes a mass noun\is{noun!mass}: 
+\eal
+\ex 
+\gll Getreide\\
+	 grain\\
+\ex 
+\gll Getreide, das gerade gemahlen wurde\\
+	 grain that just ground was\\
+\glt `grain that has just been ground'
+\ex 
+\gll frisches Getreide\\
+	 fresh grain\\
+\ex 
+\gll frisches Getreide, das gerade gemahlen wurde\\
+	 fresh grain that just ground was\\
+\glt `fresh grain that has just been ground'
+\zl
+Finally, both the determiner and the noun can be omitted: 
+\eal
+\ex 
+\gll Ich helfe klugen.\\
+	 I help smart\\
+\glt `I help smart ones.'
+\ex 
+\gll Dort drüben steht frisches, das gerade gemahlen wurde.\\
+	 there over stands fresh that just ground was\\
+\glt `Over there is some fresh (grain) that has just been ground.'
+\zl
+Figure~\vref{Abbildung-NP-ohne-Det} shows the corresponding trees. 
+
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [Det [\trace] ]
+  [\nbar
+    [N [Frauen;women] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [Det [\trace] ]
+  [\nbar
+    [A [klugen;smart] ]
+    [\nbar
+      [N [\trace] ] ] ] ]
+\end{forest}
+\hfill
+\mbox{}
+\caption{\label{Abbildung-NP-ohne-Det}Noun phrases without overt determiner}
+\end{figure}%
+
+It is necessary to add two further comments to the rules we have developed up to this point: up to now, I have
+always spoken of adjectives. However, it is possible to have very complex adjective phrases in pre"=nominal position.
+These can be adjectives with complements (\mex{1}a,b) or adjectival participles (\mex{1}c,d):
+
+\eal
+\ex 
+\gll der seiner Frau treue Mann\\
+	 the his.\dat{} wife faithful man\\
+\glt `the man faithful to his wife'
+\ex 
+\gll der auf seinen Sohn stolze Mann\\
+	 the on his.\acc{} son proud man\\
+\glt `the man proud of his son'
+\ex 
+\gll der seine Frau liebende Mann\\
+	 the his.\acc{} woman loving man\\
+\glt `the man who loves his wife'
+\ex 
+\gll der von seiner Frau geliebte Mann\\
+     the by his.\dat{} wife loved man\\
+\glt `the man loved by his wife'	 
+\zl
+Taking this into account, the rule (\ref{NP-Regeln-Adj}) has to be modified in the following way:
+\ea
+\label{NP-Regeln-AP} 
+\nbar $\to$ AP \nbar
+\z
+An adjective phrase (AP) can consist of an NP and an adjective, a PP and an adjective or just an adjective:
+\eal
+\ex AP $\to$ NP A
+\ex AP $\to$ PP A
+\ex AP $\to$ A
+\zl
+There are two imperfections resulting from the rules we have developed thus far. These are the rules for adjectives
+or nouns without complements in (\mex{0}c) as well as (\ref{NP-Regeln-Nbar-N}) -- repeated here as (\mex{1}):
+\ea
+\nbar $\to$ N
+\z
+If we apply these rules, then we will generate unary branching subtrees, that is trees with a mother that
+only has one daughter. See Figure~\ref{Abbildung-NP-ohne-Det} for an example of this. If we maintain the
+parallel to the boxes, this would mean that there is a box which contains another box which is the one with 
+the relevant content.
+
+In principle, nothing stops us from placing this information directly into the larger box. Instead of
+the rules in (\mex{1}), we will simply use the rules in (\mex{2}):
+\eal
+\ex A $\to$ kluge
+\ex N $\to$ Mann
+\zl
+\eal
+\label{Lexikon-Projektion}
+\ex AP $\to$ kluge
+\ex \nbar $\to$ Mann
+\zl
+(\mex{0}a) states that \emph{kluge}  `smart' has the same properties as a full adjective phrase, in particular that it cannot be combined
+with a complement. This is parallel to the categorization of the pronoun \emph{er} `he' as an NP in the grammars
+(\ref{bsp-grammatik-psg}) and (\ref{psg-binaer}).
+
+Assigning \nbar to nouns which do not require a complement has the advantage that we do not have to explain why the analysis in (\mex{1}b) is possible as well
+as (\mex{1}a) despite there not being any difference in meaning.
+\eal
+\ex 
+\gll {}[\sub{NP} einige [\sub{\nbar} kluge [\sub{\nbar} [\sub{\nbar} [\sub{N} Frauen ] und  [\sub{\nbar} [\sub{N} Männer ]]]]]]\\
+	 {}      some   {}           smart {}          {}           {}       women  {} and {} {}          men\\
+\ex 
+\gll {}[\sub{NP} einige [\sub{\nbar} kluge [\sub{\nbar} [\sub{N} [\sub{N} Frauen ] und [\sub{N} Männer
+]]]]]\\
+	{}       some   {}           smart {}          {}       {}       women  {} and {} men\\
+\zl
+%
+In (\mex{0}a), two nouns have projected to \nbar and have then been joined by coordination. The result of coordination
+of two constituents of the same category is always a new constituent with that category. In the case of (\mex{0}a), this
+is also \nbar. This constituent is then combined with the adjective and the determiner. In (\mex{0}b), the nouns themselves
+have been coordinated. The result of this is always another constituent which has the same category as its parts. In this case,
+this would be N. This N becomes \nbar and is then combined with the adjective. If nouns which do not require complements were
+categorized as \nbar rather than N, we would not have the problem of spurious ambiguities. The
+structure in (\mex{1}) shows the only possible analysis.
+\ea
+\gll {}[\sub{NP} einige [\sub{\nbar} kluge [\sub{\nbar} [\sub{\nbar} Frauen ] und [\sub{\nbar} Männer
+]]]]\\
+      {}	some    {}           smart {}          {}           women  {}  and {} men\\
+\z
+
+\subsection{Prepositional phrases}
+\label{Abschnitt-PP-Syntax}
+
+Compared to the syntax of noun phrases, the syntax of prepositional phrases (PPs) is relatively straightforward. PPs normally 
+consist of a preposition and a noun phrase whose case is determined by that preposition. We can capture this with the following
+rule:
+\ea
+\label{Regel-PP-einfach}
+PP $\to$ P NP
+\z
+This rule must, of course, also contain information about the case of the NP. I have omitted this for ease of exposition as I did
+with the NP"=rules and AP"=rules above.
+
+The Duden grammar \citep[\S 1300]{Duden2005-Authors} offers examples such as those in (\mex{1}), which show that certain prepositional phrases
+serve to further define the semantic contribution of the preposition by indicating some measurement, for example:
+\eal
+\ex\label{Beispiel-Schritt-vor-dem-Abgrund} 
+\gll {}[[Einen Schritt] vor dem Abgrund] blieb er stehen.\\
+	 {}\spacebr{}\spacebr{}one step before the abyss remained he stand\\
+\glt `He stopped one step in front of the abyss.'
+\ex 
+\gll {}[[Kurz] nach dem Start] fiel die Klimaanlage aus.\\
+	 {}\spacebr{}\spacebr{}shortly after the take.off fell the air.conditioning out\\
+\glt `Shortly after take off, the air conditioning stopped working.'
+\ex 
+\gll {}[[Schräg] hinter der Scheune] ist ein Weiher.\\
+	 {}\spacebr{}\spacebr{}diagonally behind the barn is a pond\\
+\glt `There is a pond diagonally across from the barn.'
+\ex 
+\gll {}[[Mitten] im Urwald] stießen die Forscher auf einen alten Tempel.\\
+	 {}\spacebr{}\spacebr{}middle in.the jungle stumbled the researchers on an old temple\\
+\glt `In the middle of the jungle, the researches came across an old temple.'
+\zl
+To analyze the sentences in (\mex{0}a,b), one could propose the following rules in (\mex{1}):
+\eal
+\ex PP $\to$ NP PP
+\ex PP $\to$ AP PP
+\zl
+These rules combine a PP with an indiciation of measurement. The resulting constituent is another PP. It is
+possible to use these rules to analyze prepositional phrases in (\mex{-1}a,b), but it unfortunately also allows
+us to analyze those in (\mex{1}):
+\eal
+\ex[*]{
+\gll [\sub{PP} einen Schritt [\sub{PP} kurz [\sub{PP} vor dem Abgrund]]]\\
+	 {} one step {} shortly {} before the abyss\\
+}
+\ex[*]{
+\gll [\sub{PP} kurz [\sub{PP} einen Schritt [\sub{PP} vor dem Abgrund]]]\\
+	 {} shortly {} one step {} before the abyss\\
+}
+\zl
+Both rules in (\mex{-1}) were used to analyze the examples in (\mex{0}). Since the symbol PP occurs on both the left 
+and right"=hand side of the rules, we can apply the rules in any order and as many times as we like.
+% Fn: Semantik hilft nicht.
+
+We can avoid this undesired side"=effect by reformulating the previously assumed rules:
+\eal
+\ex PP $\to$ NP \pbar
+\ex PP $\to$ AP \pbar
+\ex PP $\to$ \pbar\label{Regel-PP-P}
+\ex \pbar $\to$ P NP
+\zl
+Rule (\ref{Regel-PP-einfach}) becomes (\mex{0}d). The rule in (\mex{0}c) states that a PP can consist of \pbar.
+Figure~\vref{Abbildung-PP} shows the analysis of (\mex{1}) using (\mex{0}c) and (\mex{0}d) as well as the analysis
+of an example with an adjective in the first position following the rules in (\mex{0}b) and (\mex{0}d):
+\ea
+\gll vor dem Abgrund\\
+	 before the abyss\\
+\glt `in front of the abyss'
+\z
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[PP
+  [\pbar
+    [P [vor;before] ]
+    [NP [dem Abgrund;the abyss, triangle] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[PP
+  [AP [kurz;shortly,triangle] ]
+  [\pbar
+    [P [vor;before] ]
+    [NP [dem Abgrund;the abyss,triangle] ] ] ]
+\end{forest}
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=8\baselineskip}}
+%% \Tree[.PP
+%%        [.{\pbar}
+%%          [.P vor;before ]
+%%          [.NP \edge[roof]; {dem Abgrund;the abyss} ] ] ] 
+%% \end{tikzpicture}
+%% \hfill
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=8\baselineskip}}
+%% \Tree[.PP
+%%        [.AP \edge[roof]; {kurz;shortly} ]
+%%        [.{\pbar}
+%%          [.P vor;before ]
+%%          [.NP \edge[roof]; {dem Abgrund;the abyss} ] ] ] 
+%% \end{tikzpicture}
+\hfill
+\mbox{}
+\caption{\label{Abbildung-PP}Prepositional phrases with and without measurement}
+\end{figure}%
+
+At this point, the attentive reader is probably wondering why there is no empty measurement phrase in
+the left figure of Figure~\ref{Abbildung-PP}, which one might expect in analogy to the empty determiner in Figure~\ref{Abbildung-NP-ohne-Det}.
+The reason for the empty determiner in Figure~\ref{Abbildung-NP-ohne-Det} is that the entire noun phrase
+without the determiner has a meaning similar to those with a determiner. The meaning normally contributed
+by the visible determiner has to somehow be incorporated in the structure of the noun phrase. If we
+did not place this meaning in the empty determiner, this would lead to more complicated assumptions about semantic
+combination: we only really require the mechanisms presented in Section~\ref{sec-PSG-Semantik} and these are
+very general in nature. The meaning is contributed by the words themselves and not by any rules. If we were
+to assume a unary branching rule such as that in the left tree in Figure~\ref{Abbildung-PP} instead of the
+empty determiner, then this unary branching rule would have to provide the semantics of the determiner. This
+kind of analysis has also been proposed by some researchers.\todostefan{Martin: obscure} See Chapter~\ref{Abschnitt-Diskussion-leere-Elemente} for
+more on empty elements.
+
+Unlike determiner"=less NPs, prepositional phrases without an indication of degree or measurement do
+not lack any meaning component for composition. It is therefore not necessary to assume an empty indication of measurement, which
+somehow contributes to the meaning of the entire PP. Hence, the rule in (\ref{Regel-PP-P}) states that a
+prepositional phrase consists of \pbar, that is, a combination of P and NP.\is{preposition|)}
+
+\section{\xbart}
+\label{sec-xbar}
+
+If\is{X theory@\xbar theory|(}  we look again at the rules that we have formulated in the previous section, we see that heads are always 
+combined with their complements to form a new constituent (\mex{1}a,b), which can then be combined with further constituents (\mex{1}c,d):
+
+\eal
+\ex \nbar $\to$ N PP
+\ex \pbar $\to$ P NP
+\ex\label{Regel-NP-Xbar}
+    NP $\to$ Det \nbar
+\ex PP $\to$ NP \pbar
+\zl
+%
+Grammarians working on English\il{English} noticed that parallel structures can be used for phrases which have adjectives or verbs as their head.
+I discuss adjective phrases at this point and postpone the discussion of verb phrases to Chapter~\ref{Kapitel-GB}. As in German, certain adjectives 
+in English can take complements with the important restriction that adjective phrases with complements cannot realize these pre"=nominally in English. 
+(\mex{1}) gives some examples of adjective phrases:
+\eal
+\ex He is proud.
+\ex He is very proud.
+\ex He is proud of his son.
+\ex He is very proud of his son.
+\zl
+Unlike prepositional phrases, complements of adjectives are normally optional. \emph{proud} can be used with or without a PP.
+The degree expression \emph{very} is also optional.
+
+The rules which we need for this analysis are given in (\mex{1}), with the corresponding structures in Figure~\vref{Abbildung-AP}.
+
+\begin{samepage}
+\eal
+\ex AP $\to$ \abar
+\ex AP $\to$ AdvP \abar
+\ex \abar $\to$ A PP
+\ex \abar $\to$ A
+\zl
+\end{samepage}
+
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[AP
+  [\abar
+    [A [proud] ] ] ]
+\end{forest}
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=6\baselineskip}}
+%% \Tree[.AP
+%%        [.{\abar}
+%%          [.A proud ] ] ]
+%% \end{tikzpicture}
+\hfill
+\begin{forest}
+sn edges
+[AP
+  [AdvP [very] ]
+  [\abar
+    [A [proud] ] ] ]
+\end{forest}
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=6\baselineskip}}
+%% \Tree[.AP
+%%        [.AdvP very ]
+%%        [.{\abar}
+%%          [.A proud ] ] ]
+%% \end{tikzpicture}
+\hfill
+\begin{forest}
+sn edges
+[AP
+  [\abar
+    [A [proud] ]
+    [PP [of his son,triangle] ] ] ]
+\end{forest}
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=6\baselineskip}}
+%% \Tree[.AP
+%%        [.{\abar}
+%%          [.A proud ]
+%%          [.PP \edge[roof]; {of his son} ] ] ]
+%% \end{tikzpicture}
+\hfill
+\begin{forest}
+sn edges
+[AP
+  [AdvP [very] ]
+  [\abar
+    [A [proud] ]
+    [PP [of his son,triangle] ] ] ]
+\end{forest}
+%% \begin{tikzpicture}
+%% \tikzset{level 1+/.style={level distance=2\baselineskip}}
+%% \tikzset{frontier/.style={distance from root=6\baselineskip}}
+%% \Tree[.AP
+%%        [.AdvP very ]
+%%        [.{\abar}
+%%          [.A proud ]
+%%          [.PP \edge[roof]; {of his son} ] ] ]
+%% \end{tikzpicture}
+\hfill
+\mbox{}
+\caption{\label{Abbildung-AP}English adjective phrases}
+\end{figure}%
+
+As was shown in Section~\ref{sec-PSG-Merkmale}, it is possible to generalize over very specific
+phrase structure rules and thereby arrive at more general rules. In this way, properties such as
+person, number and gender are no longer encoded in the category symbols, but rather only simple
+symbols such as NP, Det and N are used. It is only necessary to specify something about the values
+of a feature if it is relevant in the context of a given rule. We can take this abstraction a step
+further: instead of using explicit category symbols such as N, V, P and A for lexical categories and
+NP, VP, PP and AP for phrasal categories, one can simply use a variable for the word class in question and speak of X and XP.
+
+This form of abstraction can be found in so"=called \xbart (or X"=bar theory, the term \emph{bar}
+refers to the line above the symbol.), which was developed by \citet{Chomsky70a} and refined by
+\citet{Jackendoff77}. This form of abstract rules plays an important role in many different
+theories. For example: Government \& Binding\indexgb (Chapter~\ref{Kapitel-GB}), Generalized Phrase
+Structure Grammar\indexgpsg (Chapter~\ref{Kapitel-GPSG}) and Lexical Functional Grammar\indexlfg
+(Chapter~\ref{Kapitel-LFG}). In HPSG\indexhpsg (Chapter~\ref{Kapitel-HPSG}), \xbar theory also plays
+a role, but not all restrictions of the \xbar schema have been adopted.
+
+(\mex{1}) shows a possible instantiation of \xbar rules, where the category X has been used in place of N, as well as examples of word strings
+which can be derived by these rules:
+%\todostefan{martin meint ich solle hier NP statt Strichnotation verwenden}
+\eanoraggedright
+\label{psg-xbar-schema}
+\begin{tabular}[t]{@{}l@{\hspace{5mm}}l@{\hspace{5mm}}l@{}}
+\xbar\mbox{ rule} & \mbox{with specific categories} & \mbox{example strings}\\[2mm]
+$\overline{\overline{\mbox{X}}} \rightarrow \overline{\overline{\mbox{specifier}}}$~~\xbar &
+$\overline{\overline{\mbox{N}}} \rightarrow \overline{\overline{\mbox{DET}}}$~~\nbar & \mbox{the [picture of Paris]} \\
+$\xbar \rightarrow$ \xbar~~$\overline{\overline{\mbox{adjunct}}}$            & \nbar $\rightarrow$ \nbar~~$\overline{\overline{\mbox{REL\_CLAUSE}}}$ & \mbox{[picture of Paris]}\\
+                            &                                              & \mbox{[that everybody knows]}\\
+\xbar $\rightarrow \overline{\overline{\mbox{adjunct}}}$~~\xbar            & \nbar $\rightarrow \overline{\overline{\mbox{A}}}$~~\nbar & \mbox{beautiful [picture of Paris]}\\
+\xbar $\rightarrow$ \mbox{X}~~$\overline{\overline{\mbox{complement}}}*$   & \nbar $\rightarrow$ \mbox{N}~~$\overline{\overline{\mbox{P}}}$ & \mbox{picture [of Paris]}\\
+\end{tabular}
+\z
+
+Any word class can replace X (\eg V, A or P). The X without the bar stands for a lexical item in
+the above rules. If one wants to make the bar level explicit, then it is possible to write \xnull. 
+Just as with the rule in (\ref{Regel-mit-Variablen}), where we did not specify the case value of the
+determiner or the noun but rather simply required that the values on the right"=hand side of the
+rule match, the rules in (\mex{0}) require that the word class of an element on the right"=hand side
+of the rule (X or \xbar) matches that of the element on the left"=hand side of the rule (\xbar or
+$\overline{\overline{\mbox{X}}}$).
+
+A lexical element can be combined with all its complements\is{complement}. The `*'\is{*} in the last rule stands for
+an unlimited amount of repetitions of the symbol it follows. A special case is zero"fold occurrence of complements. There is no
+PP complement of \emph{Bild} `picture' present in \emph{das Bild} `the picture' and thus N becomes \nbar. The result of the
+combination of a lexical element with its complements is a new projection level of X: the projection level 1, which is marked by
+a bar. \xbar can then be combined with adjuncts. These can occur to the left or right of \xbar. The result of this combination is
+still \xbar, that is the projection level is not changed by combining it with an adjunct\is{adjunct}.
+Maximal projections are marked by two
+bars. One can also write XP\is{XP} for a projection of X with two bars. An XP consists of a specifier\is{specifier} and \xbar. Depending
+on one's theoretical assumptions, subjects of sentences (\citealp{Haider95b-u,Haider97a}\NOTE{Haider noch mal lesen};
+\citealp[Section~3.2.2]{Berman2003a}) and determiners in NPs \citep[\page
+210]{Chomsky70a} are specifiers. Furthermore, degree modifiers \citep[\page
+210]{Chomsky70a} in adjective phrases and measurement indicators in prepositional phrases are also counted as specifiers.
+
+Non"=head positions can only host maximal projections and therefore complements, adjuncts and specifiers always have two bars. 
+Figure~\vref{Abb-GB-Min-Max} gives an overview of the minimal and maximal structure of phrases.
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[XP
+  [\xbar [X] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+%where n children=0{}{},
+%sn edges
+%for tree={parent anchor=south, child anchor=north,align=center,base=bottom}
+[XP
+  [specifier]
+  [\xbar
+    [adjunct]
+    [\xbar
+      [complement] [X] ] ] ]
+\end{forest}
+\hfill\mbox{}
+\caption{\label{Abb-GB-Min-Max}Minimal and maximal structure of phrases}
+\end{figure}%
+
+Some categories do not have a specifier or have the option of having one. Adjuncts are optional and therefore
+not all structures have to contain an \xbar with an adjunct daughter.
+ In addition to the branching shown in the right"=hand figure, adjuncts to
+XP and head"=adjuncts\is{adjunct!head} are sometimes possible. There is only a single rule in (\ref{psg-xbar-schema})
+for cases in which a head precedes the complements, however an order in which the complement precedes the head is
+of course also possible. 
+This is shown in Figure~\ref{Abb-GB-Min-Max}.
+
+Figure~\vref{Abb-das-schoene-Bild-von-Paris} shows the analysis of the NP structures \emph{das Bild} `the picture'
+and \emph{das schöne Bild von Paris} `the beautiful picture of Paris'. The NP structures in Figure~\ref{Abb-das-schoene-Bild-von-Paris}
+and the tree for \emph{proud} in Figure~\ref{Abbildung-AP} show examples of minimally populated structures.
+The left tree in Figure~\ref{Abb-das-schoene-Bild-von-Paris} is also an example of a structure without an adjunct. The right"=hand structure
+in Figure~\ref{Abb-das-schoene-Bild-von-Paris} is an example for the maximally populated structure:
+specifier, adjunct, and complement are present.
+
+
+\begin{figure}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [DetP
+    [\detbar
+      [Det [das;the] ] ] ]
+  [\nbar
+    [N [Bild;picture] ] ] ]
+\end{forest}
+\hfill
+\begin{forest}
+sn edges
+[NP
+  [DetP
+    [\detbar
+      [Det [das;the] ] ] ]
+  [\nbar
+    [AP
+      [\abar
+        [A [schöne;beautiful] ] ] ]
+    [\nbar
+      [N [Bild;picture] ]
+      [PP 
+        [\pbar
+          [P [von;of] ]
+          [NP
+            [\nbar
+              [N [Paris;Paris] ] ] ] ] ] ] ] ]
+\end{forest}
+%
+\hfill\mbox{}
+\caption{\label{Abb-das-schoene-Bild-von-Paris}\xbar~analysis of \emph{das Bild} `the picture'
+  and \emph{das schöne Bild von Paris} `the beautiful picture of Paris'}
+\end{figure}%
+
+The analysis given in Figure~\ref{Abb-das-schoene-Bild-von-Paris} assumes that all non"=heads in a rule are
+phrases. One therefore has to assume that there is a determiner phrase even if the determiner is not combined with other elements.
+The unary branching of determiners is not elegant but it is consistent.\footnote{
+	For an alternative version of \xbar theory which does not assume elaborate structure for determiners see \citew{Muysken82a-andere-anfuehrungszeichen}.
+}
+The unary branchings for the NP \emph{Paris} in Figure~\ref{Abb-das-schoene-Bild-von-Paris} may also seem somewhat odd, but they actually become more
+plausible when one considers more complex noun phrases:
+\eal
+\ex 
+\gll das Paris der dreißiger Jahre\\
+	 the Paris of.the thirty years\\
+\glt `30's Paris'
+\ex 
+\gll die Maria aus Hamburg\\
+	 the Maria from Hamburg\\
+\glt `Maria from Hamburg'
+\zl
+Unary projections are somewhat inelegant but this should not concern us too much here, as we have
+already seen in the discussion of the lexical entries in (\ref{Lexikon-Projektion})
+that unary branching nodes can be avoided for the most part and that it is indeed desirable to avoid
+such structures. Otherwise, one gets spurious ambiguities. In the following
+chapters, we will discuss approaches such as Categorial Grammar and HPSG, which do not assume
+unary rules for determiners, adjectives and nouns. 
+
+Furthermore, other \xbar~theoretical assumptions will not be shared by several theories discussed in this book. In particular, the assumption that non"=heads always have
+to be maximal projections\is{projection!maximal} will be disregarded. \citet{Pullum85a} and
+\citet{KP90a} have shown that the respective theories are not necessarily less restrictive
+than theories which adopt a strict version of the \xbar theory. See also the discussion in Section~\ref{sec-Diskussion-X-Bar}.
+\is{X theory@\xbar theory|)}
+
+\section*{Comprehension questions}
+
+\begin{enumerate}
+\item Why are phrase structure grammars that use only atomic categories inadequate for the description of natural languages?
+\item Assuming the grammar in (\ref{psg-binaer}), state which steps (replacing symbols) one has to take to get to the symbol 
+	 V in the sentence (\mex{1}).
+\ea
+\gll er das Buch dem Mann gibt\\
+	 he the book the man gives\\
+\glt `He gives the book to the man.'
+\z
+Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
+\item Give a representation of the meaning of (\mex{1}) using predicate logic:
+\eal
+\ex 
+\gll Ulrike kennt Hans.\\
+	 Ulrike knows Hans\\
+\ex 
+\gll Joshi freut sich.\\
+	 Joshi is.happy \refl{}\\
+\glt `Joshi is happy.'
+\zl
+\end{enumerate}
+
+
+\section*{Exercises}
+
+\begin{enumerate}
+\item\label{ua-psg-eins}
+	On page~\pageref{page-unendlich-viele-grammatiken}, I claimed that there is an infinite number of
+	grammars we could use to analyze (\ref{bsp-weil-er-das-buch-dem-mann-gibt}).
+	Why is this claim correct?
+\item Try to come up with some ways in which we can tell which of these possible grammars is or are the best?
+
+\item\label{uebung-np-empty} A fragment for noun phrase syntax was presented in Section~\ref{sec-psg-np}.
+Why is the interaction of the rules in (\mex{1}) problematic?
+\eal
+\ex NP $\to$ Det \nbar
+\ex \nbar $\to$ N
+\ex Det $\to$ $\epsilon$
+\ex N $\to$ $\epsilon$
+\zl
+
+\item Why is it not a good idea to mark \emph{books} as NP in the lexicon?
+
+\item Can you think of some reasons why it is not desirable to assume the following rule for nouns such as \emph{books}:
+\ea
+NP $\to$ Modifier* books Modifier*
+\z
+The rule in (\mex{0}) combines an unlimited number of modifiers with the noun \emph{books} followed by an unlimited number
+of modifiers. We can use this rule to derive phrases such as those in (\mex{1}):
+\eal
+\ex books
+\ex interesting books
+\ex interesting books from Stuttgart\\
+\zl
+Make reference to coordination data in your answer. Assume that symmetric coordination\is{coordination} requires that both
+coordinated phrases or words have the same syntactic category.
+
+\item \citet{FLGR2012a} suggested treating nounless structures like those in (\mex{1}) as involving
+  a phrasal construction that combines the determiner \emph{the} with an adjective.
+\eal
+\ex Examine the plight of the very poor.
+\ex Their outfits range from the flamboyant to the functional.
+\ex The unimaginable happened.
+\zl
+(\mex{1}) shows a phrase structure rule that corresponds to their construction:
+\ea
+NP $\to$ the Adj
+\z
+Adj stands for something that can be a single word like \emph{poor} or complex like \emph{very
+  poor}.
+
+Revisit the German data in (\ref{ex-nounless-np}) and (\ref{ex-nounless-np-relational-noun})  and
+explain why such an analysis and even a more general one as in (\mex{1}) would
+not extend to German.
+\ea
+NP $\to$ Det Adj
+\z
+
+\item Why can \xbart not account for German adjective phrases without additional assumptions? (This
+  task is for (native) speakers of German only.)
+
+\item Come up with a phrase structure grammar that can be used to analyze the sentence in (\mex{1}), but also
+rules out the sentences in (\mex{2}).
+
+      \eal
+      \ex[]{
+      \gll Der Mann hilft der Frau.\\
+           the.\nom{} man helps the.\dat{} woman\\
+      \glt `The man helps the woman.'
+      }
+      \ex[]{
+      \gll Er gibt ihr das Buch.\\
+           he.\nom{} gives her.\dat{} the book\\
+      \glt `He gives her the book.'
+      }
+      \ex[]{
+      \gll Er wartet auf ein Wunder.\\
+           he.\nom{} waits on a miracle\\
+	  \glt `He is waiting for a miracle.'
+      }
+%      \ex[]{
+%       Er wartet neben dem Bushäuschen auf ein Wunder.
+%       }
+      \zl%\enlargethispage{1\baselineskip}
+      \eal
+      \ex[*]{
+      \gll  Der Mann hilft er.\\
+		    the.\nom{} man helps he.\nom{}\\
+      }
+      \ex[*]{
+      \gll  Er gibt ihr den Buch.\\
+            he.\nom{} gives her.\dat{} the.\mas{} book.\neu{}\\
+      }
+      \zl
+\item Consider which additional rules would have to be added to the grammar you developed in the previous exercise
+	  in order to be able to analyze the sentences in (\mex{1}):
+
+\eal
+\ex 
+\gll Der Mann hilft der Frau jetzt.\\
+     the.\nom{} man helps the.\dat{} woman now\\
+\glt `The man helps the woman now.'
+\ex 
+\gll Der Mann hilft der Frau neben dem Bushäuschen.\\
+     the.\nom{} man helps the.\dat{} woman next to.the bus.shelter\\
+\glt `The man helps the woman next to the bus shelter.'
+\ex 
+\gll Er gibt ihr das Buch jetzt.\\
+     he.\nom{} gives her.\dat{} the.\acc{} book now\\
+\glt 'He gives her the book now.'
+\ex 
+\gll Er gibt ihr das Buch neben dem Bushäuschen.\\
+     he.\nom{} gives her.\dat{} the.\acc{} book next to.the bus.shelter\\
+\glt `He gives her the book next to the bus shelter.'
+\ex 
+\gll Er wartet jetzt auf ein Wunder.\\
+     he.\nom{} waits now on a miracle\\
+\glt `He is waiting for a miracle now.'
+\ex 
+\gll Er wartet neben dem Bushäuschen auf ein Wunder.\\
+     he.\nom{} waits next to.the.\dat{} bus.shelter on a miracle\\
+\glt `He is waiting for a miracle next to the bus shelter.'
+\zl
+\item Install a Prolog system (\eg SWI"=Prolog\footnote{
+\url{http://www.swi-prolog.org/} 
+})
+and try out your grammar. Details for the notation can be found in the corresponding handbook
+under the key word Definite Clause Grammar (DCG)\is{Definite Clause Grammar (DCG)}.
+\end{enumerate}
+
+
+\section*{Further reading}
+
+The expansion of phrase structure grammars to include features was proposed as early as 1963 by \citet{Harman63a}.
+
+The phrase structure grammar for noun phrases discussed in this chapter covers a large part of the syntax
+of noun phrases but cannot explain certain NP structures. Furthermore, it has the problem, which exercise~\ref{uebung-np-empty}
+is designed to show. A discussion of these phenomena and a solution in the framework of HPSG can be found in \citew{Netter98a} and \citew{Kiss2005a}.
+
+The discussion of the integration of semantic information into phrase structure grammars was very short. A detailed discussion of predicate logic and
+its integration into phrase structure grammars -- as well as a discussion of quantifier scope -- can be found in \citew{BB2005a}. 
+
+
+%      <!-- Local IspellDict: en_US-w_accents -->
