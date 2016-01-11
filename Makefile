@@ -20,8 +20,7 @@ all: grammatical-theory.pdf
 testtime:
 	latex grammatical-theory-eng.tex; latex grammatical-theory-eng.tex; latex grammatical-theory-eng.tex; dvips grammatical-theory-eng.dvi; ps2pdf grammatical-theory-eng.ps
 
-SOURCE=/Users/stefan/Library/texmf/tex/latex/Stauffenburg/stauffenburg.sty\
-	/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
+SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	grammatical-theory.tex           \
 	grammatical-theory-include.tex   \
 	1-begriffe.tex\
