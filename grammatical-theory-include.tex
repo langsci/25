@@ -31,8 +31,8 @@
 \usepackage{ragged2e}
 
 % Haitao Liu
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun}
+%\usepackage{xeCJK}
+%\setCJKmainfont{SimSun}
 
 
 \hypersetup{bookmarksopenlevel=0}
@@ -567,7 +567,11 @@ or the Language Science Press coordinator at \href{mailto:contact@langsci-press.
 Berlin, \today\hfill Stefan Müller
 
 
-
+\renewcommand{\rm}{\upshape}
+\renewcommand{\mathrm}{\text}
+\renewcommand{\it}{\itshape}
+\renewcommand{\sc}{\scshape}
+\renewcommand{\bf}{\bfseries}
 \mainmatter
 
 \part{Background and specific theories}
@@ -584,7 +588,7 @@ Berlin, \today\hfill Stefan Müller
 \include{9-cxg}
 \include{dg}
 \include{tag}
-%\include{ot}
+\include{ot}
 
 \part{General discussion}
 \label{part-discussion}
@@ -594,21 +598,21 @@ Berlin, \today\hfill Stefan Müller
 \include{competence}
 \include{acquisition}
 \include{complexity}
-%\include{branching}
-%\include{locality}
-%\include{recursion}
+% %\include{branching}
+% %\include{locality}
+% %\include{recursion}
 \include{branching-locality-recursion}
 \include{empty}
 \include{movement}
 \include{phrasal}
 \include{coregram}
 \include{conclusions}
-
-%\renewcommand{\appendixpagename}{Appendix}
-%\renewcommand{\appendixtocname}{Appendix}
-\appendix
-%\appendixpage
-%\part{Appendix}
+ 
+% %\renewcommand{\appendixpagename}{Appendix}
+% %\renewcommand{\appendixtocname}{Appendix}
+% \appendix
+% %\appendixpage
+% %\part{Appendix}
 \include{loesungen}
 
 \input{gt-index-cross}
