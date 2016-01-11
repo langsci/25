@@ -1,0 +1,126 @@
+%%
+%% This is file `ogonek.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ogonek.dtx  (with options: `style')
+%% 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%%                          ogonek package
+%%
+%% Purpose: to provide best possible ogonek in every situation
+%%
+%% The copyright holder of this file is Janusz S. Bie\'n
+%% (JSBien@plearn.edu.pl)
+%%
+%% The code consists of parts written by J. S. Bie\'n, L. Holenderski,
+%% D. H\"ubel and Igor Moo, who finally assembled this file. Any bugs
+%% can (and should) be attributed to him.
+%%
+%% Note: you are not allowed to modify this file.
+%% Note: I don't make any changes in T1 definitions so aAeE(iIuU)
+%%       checking does not work there.
+%%
+\def\fileversion{v0.51}
+\def\filedate{95/07/17}
+\def\docdate {94/12/21}
+\NeedsTeXFormat{LaTeX2e}[95/06/01]
+
+\ProvidesPackage{ogonek}[\filedate\space\fileversion\space
+     Provides macro `\string\k' for ogonek]
+\newcommand\ogonek@obsolete[1]{%
+  \PackageWarningNoLine{ogonek}{Option #1 is now obsolete \MessageBreak
+     due to dynamic encodings testing}
+  }
+\DeclareOption{T1}{\ogonek@obsolete{T1}}
+\DeclareOption{OT1}{\ogonek@obsolete{OT1}}
+\DeclareOption{OT1P}{\ogonek@obsolete{OT1P}}
+\DeclareOption{OT4}{\ogonek@obsolete{OT4}}
+\let\@testogonekletter\@gobble
+\DeclareOption{PL}{
+  \def\@testogonekletter#1{%
+    \ifx a#1\else    \ifx A#1\else
+    \ifx e#1\else    \ifx E#1\else
+      \PackageWarning{ogonek}%
+{Unusual Polish letter #1 with ogonek}\fi
+\fi \fi \fi
+  }
+}
+\DeclareOption{LT}{
+  \def\@testogonekletter#1{%
+    \ifx a#1\else    \ifx A#1\else
+    \ifx e#1\else    \ifx E#1\else
+    \ifx i#1\else    \ifx I#1\else
+    \ifx u#1\else    \ifx U#1\else
+\PackageWarning{ogonek}%
+       {Unusual Lithuanian letter #1 with ogonek}\fi
+\fi \fi \fi \fi \fi \fi \fi
+    }
+}
+\ProcessOptions
+\dimendef\pl@left=0 \dimendef\pl@down=1
+\dimendef\pl@right=2 \dimendef\pl@temp=3
+
+\def\sob#1#2#3#4#5{% parameters: letter and fractions hl,ho,vl,vo
+\setbox0\hbox{#1}\setbox1\hbox{$_\mathchar'454$}\setbox2\hbox{p}%
+\pl@right=#2\wd0 \advance\pl@right by-#3\wd1
+\pl@down=#5\ht1 \advance\pl@down by-#4\ht0
+\pl@left=\pl@right \advance\pl@left by\wd1
+\pl@temp=-\pl@down \advance\pl@temp by\dp2 \dp1=\pl@temp
+\leavevmode\kern\pl@right\lower\pl@down\box1\kern-\pl@left #1}
+\def\aob{\sob a{.66}{.20}{0}{.90}}
+\def\Aob{\sob A{.80}{.50}{0}{.90}}
+\def\eob{\sob e{.50}{.35}{0}{.93}}
+\def\Eob{\sob E{.60}{.35}{0}{.90}}
+\def\iob{\sob i{.66}{.20}{0}{.90}}
+\def\Iob{\sob I{.80}{.50}{0}{.90}}
+\def\uob{\sob u{.66}{.20}{0}{.90}}
+\def\Uob{\sob U{.60}{.35}{0}{.90}}
+\def\@iIuUogonek#1{%
+\ifx i#1\iob\else
+\ifx I#1\Iob\else
+\ifx u#1\uob\else
+\ifx U#1\Uob\else\sob {#1}{.50}{.35}{0}{.90}\fi
+\fi \fi \fi
+}
+\def\@oldfontsogonek#1{%
+\ifx a#1\aob\else
+\ifx A#1\Aob\else
+\ifx e#1\eob\else
+\ifx E#1\Eob\else
+\@iIuUogonek{#1}
+\fi \fi \fi \fi
+   }
+\newcommand\n@me[2]{\expandafter#1\csname#2\endcsname}
+\AtBeginDocument{%
+  \n@me\ifx{T@T1}\relax \else \PackageInfo{ogonek}{T1 is known} \fi
+  \n@me\ifx{T@OT1}\relax
+  \else \PackageInfo{ogonek}{Defining ogonek for OT1}
+    \DeclareTextCommand\k{OT1}[1]{%
+       \@testogonekletter{#1}\@oldfontsogonek{#1}}
+    \fi
+  \n@me\ifx{T@OT4}\relax
+  \else \PackageInfo{ogonek}{Defining ogonek for OT4}
+    \DeclareTextCommand\k{OT4}[1]{%
+       \@testogonekletter{#1}\@iIuUogonek{#1}}
+    \DeclareTextComposite\k{OT4}{a}{"A1}
+    \DeclareTextComposite\k{OT4}{A}{"81}
+    \DeclareTextComposite\k{OT4}{e}{"A6}
+    \DeclareTextComposite\k{OT4}{E}{"86}
+    \fi
+  \n@me\ifx{T@OT1P}\relax
+  \else \PackageInfo{ogonek}{Defining ogonek for OT1P}
+    \DeclareTextCommand\k{OT1P}[1]{%
+       \@testogonekletter{#1}\@iIuUogonek{#1}}
+    \DeclareTextComposite\k{OT1P}{a}{"A1}
+    \DeclareTextComposite\k{OT1P}{A}{"81}
+    \DeclareTextComposite\k{OT1P}{e}{"A6}
+    \DeclareTextComposite\k{OT1P}{E}{"86}
+    \fi
+  }
+\endinput
+%%
+%% End of file `ogonek.sty'.
