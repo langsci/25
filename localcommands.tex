@@ -1,37 +1,4 @@
-
-
-% http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
-\usepackage{etex}\reserveinserts{28}
-
-% http://tex.stackexchange.com/questions/229500/tikzmark-and-xelatex
-% temporary fix, remove later
-%\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
-
-%\usepackage[section]{placeins}
-
-\usepackage{eurosym} % should go once Berthold fixes unicode
-
-% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
-% for subscripts
-\usepackage{amsmath}
-\usepackage{unicode-math} 
 \newcommand\mathdash{\text{\normalfont -}}
-
-% \justify to switch of \raggedright in translations
-\usepackage{ragged2e}
-
-% Haitao Liu
-%\usepackage{xeCJK}
-%\setCJKmainfont{SimSun}
-
-
-\hypersetup{bookmarksopenlevel=0}
-
-\iftoggle{draft}{
-\usepackage{todonotes}
-}{
-\usepackage[disable]{todonotes}
-}
 
 \newcommand{\todostefan}[1]{\todo[color=green!40]{\footnotesize #1}\xspace}
 \newcommand{\todosatz}[1]{\todo[color=red!40]{\footnotesize #1}\xspace}
@@ -62,59 +29,14 @@
 %% \addtocounter{lsptempcnt}{#1}%
 %% \arabic{lsptempcnt}}%
 
-
-\usepackage{metalogo} % xelatex
-
-\usepackage{multicol}
-
-\usepackage{LSP/lsp-styles/lsp-forest-setup}
-
-\usepackage{bookmark}
-
-\forestset{
-      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
-      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
-      no path/.style={edge path={}},
-      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
-}
-
-
-\usepackage{my-ccg-ohne-colortbl}
-
-
-
 %\displaywidowpenalty=10000\relax
 %\predisplaypenalty=-200\relax
-
-
-
-\usepackage{jambox}
-
-
-
-\usepackage{german}\selectlanguage{USenglish}
-
-
-\usepackage[final]{epsfig}
-\usepackage{graphicx}
 
 
 %\newcommand{\mod}{\textsc{mod}\xspace}  % wegen beamer.cls nicht in abbrev.sty
 
 %\usepackage[figuresright]{rotating}
 
-
-\usepackage{makros.2e,article-ex,additional-langsci-index-shortcuts,
-eng-date,
-lastpage,float,comment,my-theorems,soul,tabularx}
-
-% loaded in macros.2e \usepackage[english]{varioref}
-% do not stop and warn! This will be tested in the final version
-\vrefwarning
-
-
-
-\usepackage{ogonek}        % For Ewa Dabrowska
 
 % http://tex.stackexchange.com/questions/203/how-to-obtain-verbatim-text-in-a-footnote
 % somehow does not work
@@ -142,14 +64,10 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 
 \newcommand{\page}{}
 
-\usepackage{mycommands}% \dash
 
 \let\mc=\multicolumn
 
-% still needed
-\usepackage{tikz-qtree}
 
-\usepackage{LSP/lsp-styles/lsp-gb4e}
 %\exewidth{\exnrfont (34)}
 % should be set up for the whole series in langsci.cls
 \renewcommand{\fnexfont}{\footnotesize\upshape}
@@ -174,25 +92,6 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 \makeatother
 
 
-\usepackage{subfig}
-
-%\renewcommand{\xbar}{X̅\xspace}
-
-
-% should be removed once that the \Tree figures are removed
-\usepackage{forest}
-
-\usepackage{pstricks,pst-node}
-
-%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
-\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
-\psset{linewidth=0.5pt}
-\setcounter{secnumdepth}{4}
-
-
-\usepackage{dgmacros,pst-tree,trees,dalrymple} % Mary Dalrymples macros
-
-
 % to set the MRSes for scope underspecification
 %http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
 \usepackage{tcolorbox}
@@ -204,7 +103,6 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 %\newtcbox{\mybox}[1][]{enhanced,boxrule=0pt,colframe=white,colback=white,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1} %,top=3pt,bottom=3pt}
                                 %use shorten <=2pt,shorten >=2pt in the pictures.
 
-
 \newcommand{\mynode}[2]{\mybox[#1]{#2}}
 
 
@@ -212,16 +110,6 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 % Instead of using the package tikzmark, you can define your own \tikzmark being a regular node. There's no need to use tcolorbox package.
 \newcommand{\mysubnode}[2]%
     {\tikz[baseline=(#1.base), remember picture]\node[outer sep=0pt, inner sep=0pt] (#1) {#2};}
-
-
-%%% trick for using adjustbox
-\let\pstricksclipbox\clipbox
-\let\clipbox\relax
-
-% http://tex.stackexchange.com/questions/206728/aligning-several-forest-trees-in-centered-way/206731#206731
-% for aligning TAG trees
-\usepackage[export]{adjustbox}
-
 
 % http://tex.stackexchange.com/questions/230300/doing-something-like-psframebox-in-tikz#230306
 \tikzset{
@@ -233,23 +121,6 @@ frbox/.style={
   }
 }
 \newcommand\TZbox[1]{\tikz\node[frbox,baseline] {#1};}
-
-% draw a grid for getting the coordinates
-\usepackage{tikz-grid}
-
-% for offsets in trees
-\newlength{\offset}
-\newlength{\offsetup}
-
-\ifxetex
-\usepackage{eng-hyp-utf8}
-\else
-\usepackage{eng-hyp}
-\fi
-
-\usepackage{appendix}
-
-
 
 \renewcommand{\rm}{\upshape}
 \renewcommand{\mathrm}{\text}
