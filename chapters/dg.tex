@@ -22,11 +22,11 @@ constituent order, which is one reason for its popularity among researchers work
 languages: the New Prague School\is{New Prague School} (Sgall, Hajičová, Panevova) developed Dependency Grammar further,
 beginning in the 1960s \citep{HS2003a-u}.  Igor\,A.\ Meľčuk, A.\,K.\ Žolkovskij worked since the 1960s
 in the Soviet Union on a model called Meaning–text theory, which was also used in Machine
-Translation projects \citep{Melcuk64a-u,Melcuk81a,Melcuk88a-u,Kahane2003a-u}. Meľčuk left the
+Translation projects \citep{Melcuk64a-u,Melcuk81a,Melcuk88a-u,Kahane2003a-u}. \mel left the
 Soviet Union towards Canada in the 1970s and now works in Montréal. 
 
 
-Dependency Grammar is very wide-spread in Germany and among Germanists
+Dependency Grammar is very wide-spread in Germany and among scholars of German linguistics
 worldwide. It is used very successfully for teaching German as a foreign language
 \citep{HB69a-u,HB98a}. Helbig and Buscha, who worked in Leipzig, East Germany, started to
 compile valence dictionaries \citep{HS69a-u} and later researchers working at the Institut für
@@ -73,7 +73,7 @@ Richard Hudson started to work in a dependency grammar-based framework called Wo
 in the 1980s \citep{Hudson84a-u,Hudson2007a-u} and Sleator and Temperly have been working on Link
 Grammar\is{Link Grammar} since the 1990s \citep{ST91a-u,GLS95a-u}.
 Fred Karlsson's Constraint Grammars \citeyearpar{Karlsson90a-u} are developed for many languages (bigger fragments are available
-for Danish\il{Danish}, Portugese\il{Portugese}, Spanish\il{Spanish}, English\il{English}, Swedish\il{Swedish}, Norwegian\il{Norwegian}, French\il{French}, German\il{German}, Esperanto\il{Esperanto}, Italian\il{Italian}, and
+for Danish\il{Danish}, Portuguese\il{Portuguese}, Spanish\il{Spanish}, English\il{English}, Swedish\il{Swedish}, Norwegian\il{Norwegian}, French\il{French}, German\il{German}, Esperanto\il{Esperanto}, Italian\il{Italian}, and
 Dutch\il{Dutch}) and are used for school teaching,
 corpus annotation\is{corpus annotation} and machine translation\is{machine translation}. An online
 demo is available at the project website.\footnote{
@@ -100,7 +100,7 @@ demo is available at the project website.\footnote{
 %% central syntactic relation is that of dependency between words; constituent structure is not
 %% recognized except in the special case of coordinate structures.
 %
-%% wikipedia: Word grammar is an example of cognitive linguistics, which models language as part of general knowledge and not as a specialised mental faculty.[1] This is in contrast to the nativism of Noam Chomsky and his students.
+%% wikipedia: Word grammar is an example of cognitive linguistics, which models language as part of general knowledge and not as a specialized mental faculty.[1] This is in contrast to the nativism of Noam Chomsky and his students.
 
 %Osborne 23.11.2009
 %The dependency grammar I am developing overlaps in important areas with HPSG.  It is nonderivational, monostratal, and strongly lexical.  My interest at present concerning HPSG is to determine the extent to which the HPSG understanding of the lexicon can be adopted as a basis for my dependency grammar.  The notion of lexical rules that relate lexical entries to each other seems promising to me. 
@@ -147,11 +147,22 @@ fragments exist:
 \item Mandarin Chinese\il{Mandarin Chinese} \citep{LW2006a-u,Liu2009a-u}
 \item Old Icelandic\il{Old Icelandic} \citep{Maas77a}
 \item Russian\il{Russian}   \citep{HZ60a-u,Melcuk64a-u,Covington90a}
-%\todostefan{add referecnes for single languages by Karlsson}
+%\todostefan{SK: \citew{KP91a-u,IKKLP92a-u,Coch96a}} 
+% Hays 1964
+% Melcuk Machine Translation, Coch ist auch MTT
+% Somers86a-u
+
+% LR87a Englisch (und Französisch) nur Generierung, keine Fernabhängigkeiten
+% Coch96a MTT, 
+% IKKLP92a French English, MTT
+
+% Baumgärtner, Heringer, Kunze
+  
+%\todostefan{add references for single languages by Karlsson}
 %% \item Danish\il{Danish}, 
 %Bick, Eckhard (2001), En Constraint Grammar Parser for Dansk, in Peter Widell & Mette Kunøe (eds.) 8. Møde om Udforskningen af Dansk Sprog, 12.-13. oktober 2000, pp. 40-50, Århus University
 
-%% \item Portugese\il{Portugese}, 
+%% \item Portuguese\il{Portuguese}, 
 %Bick, Eckhard (2003). "A Constraint Grammar Based Question-Answering System for Portuguese". In: Fernando Moura Pires & Salvador (eds.) Progress in Artificial Intelligence (Proceedings of EPIA'2003, Beja, Dec. 2003), pp. 414-418. Springer 
 
 %% \item Spanish\il{Spanish}, 
@@ -438,7 +449,7 @@ use the labels E and A for \emph{Ergänzung} and \emph{Angabe}, respectively.
 So
 %% \todostefan{S: OK but you still don't have presented a DG. How a DG produce a dependency tree?
 %% And in this paper you don't explain how DGs formalize the linearization. See Kahane 2001 for a detailled discussion.
-%% And Gerdes \& Kahane 2001 or Debusmann \& Duchier 2001 for toplogical DG.}
+%% And Gerdes \& Kahane 2001 or Debusmann \& Duchier 2001 for topological DG.}
 far we have seen dependency graphs that had connections to words that were linearized in a
 certain order. However, in principle the order of the dependents is not determined by the dependency
 and therefore a Dependency Grammar has to contain additional statements that take care of the
@@ -525,7 +536,7 @@ In order to exclude such linearizations in languages in which they are impossibl
 that is crossing branches like those in Figure~\ref{fig-dass-die-Frauen-Tueren-oeffnen-dg} are not
 allowed. This basically reintroduces the concept of constituency into the framework, since this
 means that all dependents of a head have to be realized close to the head unless special mechanisms for
-liberation are used (see for instance Section~\ref{sec-nld-dg} on nonlocal dependencies).\footnote{\label{fn-projective-dg-vs-constitunets}%
+liberation are used (see for instance Section~\ref{sec-nld-dg} on nonlocal dependencies).\footnote{\label{fn-projective-dg-vs-constituents}%
   While this results in units that are also assumed in phrase structure grammars, there is a
   difference: the units have category labels in phrase structure grammars (for instance NP), which is not the case in
   Dependency Grammars. In Dependency Grammars on just refers to the label of the head (for instance
@@ -663,10 +674,10 @@ ordered before the subject.
 \z
 For a discussion of Groß \& Osborne's account of (\ref{ex-gestern-hat-sich-der-spieler-verletzt}) see page~\pageref{fig-gestern-hat-sich-der-spieler-verletzt-dg-rising}.
 } \citet{Hudson90a-u}, \citet[Section~5.3]{Eroms2000a} and \citet{GO2009a} assume that subjects depend on auxiliaries
-rather than on the main verb.\LATER{S: the classical ref for that is Mel'cuk 1988:129-144, who
+rather than on the main verb.\LATER{S: the classical ref for that is Melcuk 1988:129-144, who
   gives a bunch of criteria.} 
 % Silvain Kahane 11.04.2015
-%% for the auxiliary as head Mel'cuk 1988, Hudson 1984, 1990, 2001, etc
+%% for the auxiliary as head Melcuk 1988, Hudson 1984, 1990, 2001, etc
 %
 %% for the participle as head:
 %
@@ -810,7 +821,7 @@ dg edges
 There are several possibilities to analyze nonlocal dependencies in Dependency
 Grammar. The easiest is the one we already saw in the previous sections. One just focuses on the dependency relations
 and assumes that the order with the verb in second position is just one of the possible
-linearization variants (\citealp[Section 9.6.2]{Eroms2000a}; \citealp{GO2009a}). Figure~\vref{fig-diesen-mann-kennt-jeder-dg} shows the analysis of
+linearization variants (\citealp[Section~9.6.2]{Eroms2000a}; \citealp{GO2009a}). Figure~\vref{fig-diesen-mann-kennt-jeder-dg} shows the analysis of
 (\mex{1}):
 \ea
 \label{ex-Diesen-Mann-kent-jeder-dg}
@@ -928,7 +939,7 @@ promote the dependency of an embedded head to a higher head in the structure. Su
 suggested by \citet{Kunze68a-u}, \citet{Hudson97a,Hudson2000a}, \citet{Kahane97a}, \citet{KNR98a},
 and \citet{GO2009a}. 
 %% \todostefan{S: This analysis has been proposed many times in DG. I think the first to consider that is Hudson. See his paper Discontinuity of 2000 (on his web page)
-%% In Kahane, Nasr and Rambow 1998 (ACL) we formalized this orperation and called it lifting.
+%% In Kahane, Nasr and Rambow 1998 (ACL) we formalized this operation and called it lifting.
 %% This has been also described by Norbert Bröker (paper in the same issue of TAL) in a LFG style.
 %% It has been implemented for German word order by Debusmann \& Duchier (ACL 2001)
 %% I wrote dozen of papers on the formalization of extraction showing the link between such an idea,
@@ -1112,7 +1123,7 @@ used in Esperanto\il{Esperanto}, that is, they are O, I, A, and E, respectively.
 were defined semantically as specified in Table~\ref{table-pos-tesniere}.\footnote{
   As 
 %\citet[\page ]{Klein71a-u} and 
-% Klein hat Beispiele wie Schlag. Die würde Tesniere aber vielleicht als
+% Klein hat Beispiele wie Schlag. Die würde Tesnière aber vielleicht als
 % Translationen erklären.
 \citet[\page 77]{Weber97a} points out this categorization is not without problems: in what
   sense is \emph{Angst} `fear' a substance? Why should \emph{glauben} `believe' be a concrete
@@ -1125,7 +1136,7 @@ were defined semantically as specified in Table~\ref{table-pos-tesniere}.\footno
 \begin{tabular}{lll}
 \lsptoprule
          & substance & process\\
-\hline%\lspmidrule
+\midrule
 concrete & noun & verb \\
 abstract & adjective & adverb\\
 \lspbottomrule
@@ -1312,7 +1323,7 @@ The adjunct \emph{in exactly thirty seconds flat} can refer either to \emph{whip
 \ex Robin came in in exactly thirty seconds flat and Robin found a chair in exactly thirty seconds flat
 and Robin pulled off her logging boots in exactly thirty seconds flat.
 \zl
-The Tesnièrean analysis in Figure~\vref{fig-dg-adjunct-attachment-wrong} corresponds to (\mex{0}c), while an analysis that
+The Tesnièreian analysis in Figure~\vref{fig-dg-adjunct-attachment-wrong} corresponds to (\mex{0}c), while an analysis that
 treats the conjunction as the head as in Figure~\vref{fig-dg-adjunct-attachment-right} corresponds
 to (\mex{0}b).
 \begin{figure}
@@ -1640,7 +1651,7 @@ dg edges
 % S:
 %this clearly not a syntactic structure. You must use different conventions. See for instance the semantic graph of MTT.
 %Moreover it is strange to propose a direct interface between semantics and word order. In mots DGs, semantics is lnked to an unordered dependency tree and this tree to the linear order.
-%The necessary seperation between the syntactic dependencies and the linear order is extensively discussed in the begining of TEsnière's book.
+%The necessary separation between the syntactic dependencies and the linear order is extensively discussed in the beginning of TEsnière's book.
 %
 This analysis is equivalent to analyses in the Minimalist Program\indexmp that assume a NegP\is{category!functional!Neg} and it
 has the same problem: the category of the whole object is Adv, but it should be V. This is a problem
@@ -1648,7 +1659,7 @@ since higher predicates may select for a V rather than an Adv. See for instance 
 embedded sentences like (\ref{ex-dass-er-nicht-singen-darf}) below.
 
 The same is true for constituent negation or other scope bearing elements. For example, the analysis of (\mex{1})
-would have to be the one in Figure~\vref{dg-alledged-murderer}.
+would have to be the one in Figure~\vref{dg-alleged-murderer}.
 \ea
 \gll der angebliche Mörder\\
      the alleged murderer\\
@@ -1662,7 +1673,7 @@ dg edges
   [N, name=n [Mörder;murderer]]]
 \draw (n.south)--(det.north);
 \end{forest}
-\caption{\label{dg-alledged-murderer}Analysis that would result if one considered all scope-bearing adjuncts
+\caption{\label{dg-alleged-murderer}Analysis that would result if one considered all scope-bearing adjuncts
   to be heads}
 \end{figure}%
 This structure would have the additional problem of being non-projective.\is{projectivity} Eroms does treat the determiner
@@ -1808,7 +1819,7 @@ für Deutsche Sprache, Mannheim: \url{http://www.ids-mannheim.de/kl/projekte/kor
 }
 \glt `Blood oranges give the juice a strong color.'
 \z
-The dependency graph of this sentence is given in Figure~\vref{fig-dem-saft-eine-kraefitge-farbe-dg}.
+The dependency graph of this sentence is given in Figure~\vref{fig-dem-saft-eine-kraeftige-farbe-dg}.
 \begin{figure}[htb]
 \centerline{
 \begin{forest}
@@ -1824,7 +1835,7 @@ dg edges
   [N [Blutorangen;blood.oranges] ] ]
 \end{forest}
 }
-\caption{\label{fig-dem-saft-eine-kraefitge-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
+\caption{\label{fig-dem-saft-eine-kraeftige-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
 \end{figure}%
 
 Such apparent multiple frontings\is{fronting!apparent multiple} are not restricted to NPs. Various types of dependents can be
@@ -1838,7 +1849,7 @@ the \vf behaves like a verbal projection containing a visible verb: such \emph{V
 internally structured topologically, they may have a filled \nf and even a particle that fills the
 right sentence bracket. See \citew{Mueller2005d,MuellerGS} for further data, discussion, and a
 detailed analysis. The equivalent of the analysis in Gross \& Osborne's framework \citeyearpar{GO2009a} would be something like the graph that is shown
-in Figure~\vref{fig-dem-saft-eine-kraefitge-farbe-empty-dg}, but note that \citet[\page 73]{GO2009a}
+in Figure~\vref{fig-dem-saft-eine-kraeftige-farbe-empty-dg}, but note that \citet[\page 73]{GO2009a}
 explicitly reject empty elements, and in any case an empty element that is stipulated just to get the
 multiple fronting cases right would be entirely ad hoc.\footnote{
   I stipulated such an empty element in a linearization-based variant of HPSG allowing for
@@ -1862,7 +1873,7 @@ dg edges
   [N [Blutorangen;blood.oranges] ] ]
 \end{forest}
 }
-\caption{\label{fig-dem-saft-eine-kraefitge-farbe-empty-dg}Dependency graph for \emph{Dem Saft eine
+\caption{\label{fig-dem-saft-eine-kraeftige-farbe-empty-dg}Dependency graph for \emph{Dem Saft eine
     kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.' with an empty
   verbal head for the \vf}
 \end{figure}%
@@ -1971,7 +1982,7 @@ Dependency Grammars by moving the head one level up to replace the dominating no
 structure, the N is shifted into the position of the NP and all other connections remain the
 same. Figure~\vref{fig-a-book-psg-dg} illustrates.
 %\todostefan{S: the equivalence between flat headed
-%  constituency trees (= PS) and DT has been stated by Lecerf 1960, 1961 (in French only). that's a different thing than the equivalence between gramamtical formalisms}
+%  constituency trees (= PS) and DT has been stated by Lecerf 1960, 1961 (in French only). that's a different thing than the equivalence between grammatical formalisms}
 \begin{figure}
 \hfill%
 \begin{forest}
@@ -2092,7 +2103,7 @@ not to allow for flat structures. For instance, \citet[\page 364]{GSag2000a-u} a
 auxiliary inversion in HPSG. In such a flat rule the specifier/subject and the other complements are
 combined with the verb in one go. This would also work for more than two valence features that correspond
 to grammatical functions like subject, direct object, indirect object. See also
-Footnore~\ref{fn-flat-dg-rules} on flat rules.
+Footnote~\ref{fn-flat-dg-rules} on flat rules.
 } However, as we have seen, some researchers allow for crossing edges, that is, for
 discontinuous constituents. In what follows, I show how such Dependency Grammars can be formalized in
 HPSG.
@@ -2266,7 +2277,7 @@ Using this constraint we have \domvs that basically contain all the words in an 
 permutation. What we are left with is a pure Dependency Grammar without any constraints on
 projectivity.
 %\todostefan{S: ok but nobody in DG does that.
-%There are plenty of works about how to relax the projectovity without suppressing it.}
+%There are plenty of works about how to relax the projectivity without suppressing it.}
 With such a grammar we could analyze the non-projecting structure of Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-dg} and much more. The analysis in terms of domain union is shown in Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-domains}. 
 \begin{figure}
 \centerline{%
@@ -2382,7 +2393,7 @@ does not precede its verbal dependent \emph{kommt} `comes'. But this explanation
 the example in Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-dg}. Here, all dependents are
 linearized correctly, it is just the discontinuity of \emph{die} and \emph{Türen} that is
 inappropriate. If it is required that \emph{die} and \emph{Türen} are continuous, we have basically let
-constituents back in (see Footnote~\ref{fn-projective-dg-vs-constitunets} on page~\pageref{fn-projective-dg-vs-constitunets}). 
+constituents back in (see Footnote~\ref{fn-projective-dg-vs-constituents} on page~\pageref{fn-projective-dg-vs-constitunets}). 
 
 Similarly, non"=projective analyses without any constraints regarding continuity would permit the
 word salad in (\mex{1}b):
@@ -2464,7 +2475,7 @@ be represented somewhere. I will discuss this in the following subsection.
 As \citet{Oliva2003a} has pointed out, the equivalence of Dependency Grammar and HPSG only holds up as far
 as \headvs are concerned.
 %\todostefan{S: many DG have several level of representations. You cannot compare HSG wioth only one
-%level of MTT. MTT has 7 level of repressentations.} 
+%level of MTT. MTT has 7 level of representations.} 
 That is, the node labels in dependency graphs correspond to the \headvs in
 an HPSG. There are, however, additional features like \cont for the semantics and \slasch for
 nonlocal dependencies. These values usually differ between a lexical head and its phrasal
@@ -2522,7 +2533,7 @@ head together with its dependents is a function of the semantic contribution of 
 %% }
 %% \ex[]{
 %% \gll vom Hafen\\
-%%      from.the habour\\
+%%      from.the harbor\\
 %% }
 %% \ex[*]{
 %% \gll vom dem Hafen\\
@@ -2888,7 +2899,7 @@ The original work on Dependency Grammar by \citet{Tesniere59a-u} is also availab
 
 % Limits: Gross2003a-u
 
-% formal foundations: Discontinuität, Semantics Broeker2003a-u
+% formal foundations: Diskontinuität, Semantics Broeker2003a-u
 
 % Hoberg2006 63: Wortstellung
 
@@ -2945,7 +2956,7 @@ Groß, T. M. (1999). Theoretical Foundations of Dependency Syntax. München: iud
 Hudson. R. A. (2007) Language Networks: The New Word Grammar. Oxford University Press.
 Hudson. R. A. (2010) An Introduction to Word Grammar. Cambridge University Press.
 Liu, Haitao (2009) Dependency Grammar: from theory to practice. Beijing: Science Press. 
-Mel'cuk, I. A. (1988) Dependency syntax: theory and practice. Albany: State University Press of New York.
+Melcuk, I. A. (1988) Dependency syntax: theory and practice. Albany: State University Press of New York.
 Schubert, K. (1987) Metataxis: contrastive dependency syntax for machine translation. Dordrecht: Foris.
 Starosta, S. (1988) The case for lexicase. London: Pinter.
 Weber, H.J. (1997) Dependenzgrammatik. Ein interaktives Arbeitsbuch, Tübingen: Gunter Narr.

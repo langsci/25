@@ -101,7 +101,7 @@ vp/np   & np\\
 \end{figure}%
 A derivation in CG is basically a binary branching tree, it is however mostly represented as follows:
 an arrow under a pair of categories indicates that these have been combined via a combinatorial rule. The direction of this arrow indicates the direction
-of this combinaton. The result is given beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to Figure~\ref{abb-cg-transitives-Verb}.
+of this combination. The result is given beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to Figure~\ref{abb-cg-transitives-Verb}.
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -172,8 +172,8 @@ s: eat'(x, apples')\bs np_{3S}:x\\
 }
 \z
 When combining a functor with an argument, it must be ensured that the argument fits the functor, that is, it must be unifiable\is{unification} with it
-(for more on unification see Section~\ref{sec-unifikation}). The unification of np:y with np: \relation{apples} results in np: \relation{apples} since \relation{apples}
-is more specific than the variable y. Apart from its occurance in the term np:y, y occurs in the description of the verb in another position (s:
+(for more on unification see Section~\ref{sec-unification}). The unification of np:y with np: \relation{apples} results in np: \relation{apples} since \relation{apples}
+is more specific than the variable y. Apart from its occurrence in the term np:y, y occurs in the description of the verb in another position (s:
 \relation{eat}(x, y)\bs np\sub{3S}:x) and therefore also receives the value \relation{apples}
 there. Thus, the result of this combination is s: \relation{eat}(x, \relation{apples})\bs np$_{3S}$:x 
 as shown in (\mex{0}).
@@ -318,34 +318,6 @@ np   & (s\bs np)/\mathit{PstP} & \mathit{PstP}/np_{by} & np_{by}/np & np\\
 }}
 \caption{\label{abb-CG-Passiv}Analysis of the passive using a lexical rule}
 \end{figure}%
-% Der semantische Beitrag von \emph{touch} ist $\lambda u\lambda v\relation{touch}(v,u)$. Der
-% semantische Beitrag ($\alpha'$) wird durch den semantischen Teil der Regel in
-% (\ref{Lexikonregel-Passiv-CG}) auf $\lambda y\lambda x \alpha'(x) (y)$ abgebildet. Setze man in
-% diesen Ausdruck für $\alpha'$ die Bedeutung von \emph{touch} ein erhält man den Ausdruck in
-% (\mex{1}a) und nach den entsprechenden Kombinations- und Reduktionsschritten einen Ausdruck, der der
-% Bedeutung des Passivsatzes entspricht.
-%\note{Bedeutung von touch muss andersrum sein -> Analyse geht  nicht auf}
-% \eal
-% \settowidth\jamwidth{(Kombination mit \relation{john})}
-% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (y)$ 
-% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (y)$ \relation{mary}      \jambox{(Kombination mit \relation{mary})}
-% \ex $\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (\relation{mary})$                 \jambox{($\beta$"=Reduktion)}
-% \ex $\lambda x \lambda u\lambda v~\relation{touch}(u,v)(x) (\relation{mary})$ \relation{john} \jambox{(Kombination mit \relation{john})}
-% \ex $\lambda u\lambda v~\relation{touch}(u,v)(\relation{john}) (\relation{mary})$             \jambox{($\beta$"=Reduktion)}
-% \ex $\lambda v~\relation{touch}(\relation{mary},v)(\relation{john})$                          \jambox{($\beta$"=Reduktion)}
-% \ex $\relation{touch}(\relation{mary},\relation{john})$                                       \jambox{($\beta$"=Reduktion)}
-% \zl
-% geht nicht auf
-% \eal
-% \settowidth\jamwidth{(Kombination mit \relation{john})}
-% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(v,u)(y) (x)$ 
-% \ex $\lambda y\lambda x \lambda u\lambda v~\relation{touch}(v,u)(y) (x)$ \relation{mary}      \jambox{(Kombination mit \relation{mary})}
-% \ex $\lambda x \lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (x)$                 \jambox{($\beta$"=Reduktion)}
-% \ex $\lambda x \lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (x)$ \relation{john} \jambox{(Kombination mit \relation{john})}
-% \ex $\lambda u\lambda v~\relation{touch}(v,u)(\relation{mary}) (\relation{john})$             \jambox{($\beta$"=Reduktion)}
-% \ex $\lambda v~\relation{touch}(\relation{mary},v)(\relation{john})$                          \jambox{($\beta$"=Reduktion)}
-% \ex $\relation{touch}(\relation{mary},\relation{john})$                                       \jambox{($\beta$"=Reduktion)}
-% \zl
 
 \noindent
 The question as to how to analyze the pair of sentences in (\mex{1}) still remains unanswered.\footnote{
@@ -490,7 +462,7 @@ a projection of a verb trace, whereas complementizers require projections of ove
 \gll Isst [er ihn \_ ]\\
      eats \spacebr{}he it\\
 \zl
-This description of verb position in German captures the central insights of the GB analysis in Section~\ref{ABschnitt-Verbstellung-GB}.\is{verb position|)}
+This description of verb position in German captures the central insights of the GB analysis in Section~\ref{Abschnitt-Verbstellung-GB}.\is{verb position|)}
 
 \section{Local reordering}
 \label{Abschnitt-CG-lokale-Umstellung}
@@ -520,7 +492,7 @@ Tagalog\il{Tagalog}     & S\{/NP[nom], /NP[acc] \} & free order, verb-initial\\
 Japanese\il{Japanese} & S\{$\backslash$NP[nom], $\backslash$NP[acc] \} & free order, verb-final\\
 \end{tabular}
 \z
-\citet[Section~3.1]{Hoffmann95a-u} has proposed an analysis analagous to that of Japanese for Turkish\il{Turkish} and this could also be used in conjunction with an analysis
+\citet[Section~3.1]{Hoffmann95a-u} has proposed an analysis analogous to that of Japanese for Turkish\il{Turkish} and this could also be used in conjunction with an analysis
 of verb position for German. This would correspond to the GB/MP\indexgb analysis of \citet{Fanselow2001a} or the HPSG analysis\indexhpsg presented in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}.
 \is{constituent order|}
 
@@ -537,7 +509,7 @@ These apples, Harry must have been eating.
 \zl
 The fronted NP \emph{these apples} and the relative pronoun \emph{which} are both functors in the analysis of (\mex{0}) which take s/np as their argument.
 Using the machinery introduced up to now, we cannot assign the category s/np to the strings in (\mex{0}) although it is intuitively the case that \emph{Harry devours}
-is a sentence missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type raising} and forward\is{composition!foward}
+is a sentence missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type raising} and forward\is{composition!forward}
 and backward composition\is{composition!backward}. Both of these operations will be introduced in the following sections.
 
 \subsection{Type Raising}
@@ -825,7 +797,7 @@ which]\sub{(n$\backslash$n)/(s/np)} the government prescribes
 The complex expression \emph{the height of the lettering on the covers of} becomes np/np after composition and the rest of the analysis
 proceeds as that of (\mex{-1}a).
 
-In additon to entries such as those in (\ref{le-relpron-Steedman}), we also need further entries to analyze sentences such as (\mex{1}), where
+In addition to entries such as those in (\ref{le-relpron-Steedman}), we also need further entries to analyze sentences such as (\mex{1}), where
 the relative phrase has been extracted from the middle of the clause (see \citealp[\page 410]{Pollard88a}):
 \ea
 Fido is the dog which we put downstairs.

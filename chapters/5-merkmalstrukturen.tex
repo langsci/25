@@ -13,8 +13,7 @@
 
 
 \chapter{Feature descriptions}
-\label{Kap-Merkmalbeschreibungen}%
-\label{Kapitel-Merkmalstrukturen}\label{chap-feature-descriptions}
+\label{chap-feature-descriptions}
 
 In the previous chapter, we talked about sets of feature"=value pairs, which can be used to describe linguistic objects. In this chapter, we will introduce
 feature descriptions which play a role in theories such as LFG, HPSG, Construction Grammar, versions of Categorial Grammar and TAG (and even some
@@ -252,12 +251,12 @@ Type hierarchies\label{Seite-Typhierarchie} play an important role in capturing 
 the inheritance of constraints and information will be explained with reference to a further example in what follows. One can think of type hierarchies as an effective
 way of organizing information. In an encyclopedia, the individual entries are linked in such a way that the entries for monkey and mouse will each contain a pointer
 to mammal. The description found under mammal does therefore not have to be repeated for the subordinate concepts. In the same way, if one wishes to describe various
-electrical devices, one can use the hierarchy in Figure~\vref{fig-elektr-geraet}.
+electric appliances, one can use the hierarchy in Figure~\vref{fig-electric-appliance}.
 \begin{figure}
 \centering
 %% \begin{forest}
 %% typehierarchy
-%% [\type{electrical applicance}
+%% [\type{electric appliance}
 %%   [\type{printing device}
 %%     [\type{printer}
 %%       [\type{laser printer}]
@@ -271,7 +270,7 @@ electrical devices, one can use the hierarchy in Figure~\vref{fig-elektr-geraet}
 %% \draw (scanning.south)--(copier.north);
 %% \end{forest}
 \begin{tabular}{cccc}
-\multicolumn{4}{c}{\mynode{ed}{\type{electrical device}}}\\[6ex]
+\multicolumn{4}{c}{\mynode{ed}{\type{electric appliance}}}\\[6ex]
 \mynode{p}{\type{printing device}} & & \mynode{sc}{\type{scanning device}} & \mynode{other}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\[6ex]
 \mynode{printer}{\type{printer}}   & \mynode{copy}{\type{photocopier}}  & \mynode{scanner}{\type{scanner}}\\[6ex]
 \mynode{l-p}{\type{laser printer}}  & \mynode{other-p}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}  & \mynode{negscan}{\type{negative scanner}} & \mynode{other-sc}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\
@@ -289,14 +288,14 @@ electrical devices, one can use the hierarchy in Figure~\vref{fig-elektr-geraet}
      (scanner.south)--(negscan.north)
      (scanner.south)--(other-sc.north);
 \end{tikzpicture}
-\caption{\label{fig-elektr-geraet}Non"=linguistic example of multiple inheritance}
+\caption{\label{fig-electric-appliance}Non"=linguistic example of multiple inheritance}
 \end{figure}%
-The most general type \type{electrical device} is the highest in Figure~\ref{fig-elektr-geraet}. Electrical devices have certain properties, \eg 
+The most general type \type{electrical device} is the highest in Figure~\ref{fig-electric-appliance}. Electrical devices have certain properties, \eg 
 a power supply with a certain power consumption. All subtypes of  \type{electrical device} ``inherit'' this property. In this way, \type{printing device} and
 \type{scanning device} also have a power supply with a specific power consumption. A
 \type{printing device} can produce information and a \type{scanning device} can read in information. A \type{photocopier} can both produce information and read it. Photocopiers have both the properties of scanning and printing devices.
 This is expressed by the connection between the two superordinate types and \type{photocopier} in
-Figure~\ref{fig-elektr-geraet}. If a type is at the same time the subtype of several superordinate types, then we
+Figure~\ref{fig-electric-appliance}. If a type is at the same time the subtype of several superordinate types, then we
 speak of \emph{multiple inheritance}\is{inheritance!multiple}. If devices can print, but not scan, they are of type \emph{printer}. This type can have further more
 specific subtypes, which in turn may have particular properties, \eg \type{laser printer}. New
 features can be added to subtypes, but it is also possible to make values of inherited features more
@@ -335,7 +334,7 @@ for ``Julia Barbanow''. This corresponds to the two following disjunctively conn
 }
 \z
 Since we have type hierarchies as a means of expression, we can sometimes do without disjunctive specification of values and instead state the supertype\is{type}:
-for \type{printer} $\vee$  \type{photocopier}, one can simply write \type{printing device} if one assumes the type hierarchy in Figure~\vref{fig-elektr-geraet}.%
+for \type{printer} $\vee$  \type{photocopier}, one can simply write \type{printing device} if one assumes the type hierarchy in Figure~\vref{fig-electric-appliance}.%
 \is{disjunction|)}
 
 \section{Structure sharing}
@@ -461,7 +460,7 @@ can be potentially repeated an infinite number of times.
 \is{cycle!in feature description|)}
 
 \section{Unification}
-\label{sec-unifikation}
+\label{sec-unification}
 
 \mbox{}\is{unification|(}%
 Grammatical rules\todostefan{Read Ristad} are written exactly like lexical entries in HPSG and Construction Grammar and are done so with the help of feature descriptions.
@@ -583,7 +582,7 @@ gender & fem\\
 Mann `man'\\
 \ms{
 gender & mas\\
-case & nominative $\vee$ dative $\vee$ accusativ~\\
+case & nominative $\vee$ dative $\vee$ accusative~\\
 }
 \zl
 Unlike (\mex{0}b), (\mex{0}a) does not contain a case feature since we do not need to say anything special about case in the description of \emph{Frau}.

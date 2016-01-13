@@ -23,26 +23,26 @@ testtime:
 SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	grammatical-theory.tex           \
 	grammatical-theory-include.tex   \
-	1-begriffe.tex\
-	2-psg.tex\
-	3-gb.tex \
-	3-minimalism.tex \
-	4-gpsg.tex \
-	5-merkmalstrukturen.tex \
-	6-lfg.tex \
-	7-cg.tex\
-	8-hpsg.tex \
-	9-cxg.tex \
-	dg.tex\
-	tag.tex\
-	innateness.tex\
-	acquisition.tex\
-	complexity.tex\
-	phrasal.tex\
-	empty.tex\
-	recursion.tex\
-	conclusions.tex\
-	loesungen.tex
+	chapters/1-begriffe.tex\
+	chapters/2-psg.tex\
+	chapters/3-gb.tex \
+	chapters/3-minimalism.tex \
+	chapters/4-gpsg.tex \
+	chapters/5-merkmalstrukturen.tex \
+	chapters/6-lfg.tex \
+	chapters/7-cg.tex\
+	chapters/8-hpsg.tex \
+	chapters/9-cxg.tex \
+	chapters/dg.tex\
+	chapters/tag.tex\
+	chapters/innateness.tex\
+	chapters/acquisition.tex\
+	chapters/complexity.tex\
+	chapters/phrasal.tex\
+	chapters/empty.tex\
+	chapters/recursion.tex\
+	chapters/conclusions.tex\
+	chapters/loesungen.tex
 
 .SUFFIXES: .tex
 
@@ -128,7 +128,7 @@ public: grammatical-theory.pdf
 commit:
 	svn commit -m "published version to the web"
 
-o-public: o-public-lehrbuch commit 
+o-public: o-public-lehrbuch 
 #o-public-bib
 
 o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf 
