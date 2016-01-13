@@ -71,7 +71,7 @@ The number of arguments is determined by the construction instead, that is, by a
 element must occur together and that the entire complex has a particular meaning. This view is fundamentally different from analyses in GB\indexgb,
 Categorial Grammar\indexcg, LFG\footnote{
 	See \citew{Alsina96a} and \citew*{ADT2008a,ADT2013a}, however. For more discussion of this point, see
-        Sections~\ref{sec-aspect-at-clause-level} and~\ref{Abschnit-phrasal-LI}.%
+        Sections~\ref{sec-aspect-at-clause-level} and~\ref{sec-phrasal-LI}.%
 }\indexlfg and HPSG\indexhpsg.
 In the aforementioned theories, it is commonly assumed that arguments are always selected by lexical heads and not independently licensed by phrasal
 rules. See \citew{Simpson83a}, \citew{Neeleman94a}, \citew{Wunderlich97c}, \citew{Wechsler97a}, and
@@ -82,7 +82,7 @@ Like the theories discussed in Chapters~\ref{Kapitel-GPSG}--\ref{Kapitel-HPSG}, 
 Furthermore, no empty elements\is{empty element} are assumed in most variants of the theory and the assumption of lexical integrity\is{lexical integrity} is maintained
  as in LFG and HPSG. 
 It can be shown that these assumptions are incompatible with phrasal analyses of resultative constructions\is{construction!resultative} (see
-Section~\ref{Abschnit-phrasal-LI} and \citealp{Mueller2006d,Mueller2007d}). This point will not be explained further here. Instead, I will discuss the work of Fillmore and Kay to prepare the reader
+Section~\ref{sec-phrasal-LI} and \citealp{Mueller2006d,Mueller2007d}). This point will not be explained further here. Instead, I will discuss the work of Fillmore and Kay to prepare the reader
 to be able to read the original articles and subsequent publications. Although the literature on Construction Grammar is now relatively vast, there is very
 little work on the basic formal\is{formalization} assumptions or analyses that have been formalized precisely.
 Examples of more formal works are \citew{KF99a,Kay2002a}, \citew{MR2001a}, and \citew{Goldberg2003a}.
@@ -124,7 +124,7 @@ be given in Section~\ref{sec-formal-bcg}. While the framework was developed furt
 and Fillmore, there are still authors working in the original framework (for instance \citealp{Fried2013a-u}). I will therefore present the basic mechanisms here to make it possible
 to understand the original ideas and put them into a broader context.
 
-As we saw in Section~\ref{Abschnitt-HPSG-Kosntituentenstruktur}, dominance relations in HPSG are modeled like other properties of linguistic objects using feature"=value
+As we saw in Section~\ref{sec-HPSG-constituent-structure}, dominance relations in HPSG are modeled like other properties of linguistic objects using feature"=value
 pairs. In general, CxG uses feature"=value pairs to describe linguistic objects, but dominance relations are represented by boxes \citep{KF99a,Goldberg2003a}: 
 
 \ea
@@ -238,7 +238,7 @@ HPSG -- in addition to the schemata -- has separate type hierarchies specifying 
 
 In Kay and Fillmore, valence information is represented in a set (\textsc{val}\isfeat{val}). The Valence Principle states that local filler"=daughters have to
 be identified with an element in the valence set of the mother.\footnote{%
-  Sets in BCG work differently from those used in HPSG. A discussion of this is deffered to Section~\ref{sec-formal-bcg}.%
+  Sets in BCG work differently from those used in HPSG. A discussion of this is deferred to Section~\ref{sec-formal-bcg}.%
 } The Subset Principle states that the set values of the head"=daughter are subsets of the
 corresponding sets of the mother. This is the exact opposite approach to the one taken in Categorial Grammar\indexcg and HPSG\indexhpsg. In HPSG
 grammars, valence lists at the mother nodes are shorter, whereas in Berkeley CxG at least as many elements are present on the mother
@@ -931,7 +931,7 @@ sign is listemically licensed only if it satisfies some listeme, and a sign is c
 licensed if it is the mother of some well-formed construct.''
 }
 \ea
-\label{meta-konstruktionsstatemnet}
+\label{meta-construction-statemnet}
 $\Phi$ is a Well"=Formed Structure according to a grammar $G$ if and only if:
 \begin{enumerate}
 \item there is a construction $C$ in $G$, and
@@ -973,11 +973,11 @@ In (\mex{0}), the features \textsc{head-dtr} and \textsc{non-head-dtrs} belong t
 to the value of the \textsc{mother} feature and therefore has no daughters represented in the sign itself.
 Using the feature geometry in (\mex{0}), it is in principle possible to formulate restrictions on the daughters of the object
 in the \textsc{non-head-dtrs} list, which would be completely ruled out under the assumption of the
-feature geometry in (\ref{feat-geom-swb}) and the restriction in (\ref{meta-konstruktionsstatemnet}).
+feature geometry in (\ref{feat-geom-swb}) and the restriction in (\ref{meta-construction-statemnet}).
 
 There are several arguments against this feature geometry, which will be discussed in the following
 subsections. The first one is an empirical one: there may be idioms that span clauses. The second
-argument concerns the status of the meta statement in (\ref{meta-konstruktionsstatemnet}) and the
+argument concerns the status of the meta statement in (\ref{meta-construction-statemnet}) and the
 third one computational complexity.
 
 \subsubsubsection{Idioms that cross constituent boundaries}
@@ -1130,7 +1130,7 @@ The restrictions on \emph{Pferd} clauses in (\mex{0}) are too strict, however, s
 variants of the idiom that do not have the accusative pronoun in the \vf:
 \eal
 \ex 
-%Und von wegen, die dort lebenende Menschen hätte keine Bedürfnisse wie Strassen, schulen,
+%Und von wegen, die dort lebende Menschen hätte keine Bedürfnisse wie Strassen, schulen,
 %Krankenhäuser, 
 \gll ich glaub es tritt mich ein Pferd wenn ich einen derartigen Unsinn lese.\footnotemark\\
      I believe \expl{} kicks me a horse when I a such nonsense read\\
@@ -1180,8 +1180,8 @@ Minimalism, CG, LFG and DG can not.
 
 \subsubsubsection{Complicated licensing of constructions}
   
-In addition to these empirical problems, there is a conceptual problem with (\ref{meta-konstruktionsstatemnet}):
-(\ref{meta-konstruktionsstatemnet}) is not part of the formalism of typed feature structures but
+In addition to these empirical problems, there is a conceptual problem with (\ref{meta-construction-statemnet}):
+(\ref{meta-construction-statemnet}) is not part of the formalism of typed feature structures but
 rather a meta"=statement.
 %% \footnote{
 %%   It seems to me that it could be formalized as a type constraint:
@@ -1194,7 +1194,7 @@ rather a meta"=statement.
 %% supertype of derivational constructions and syntactic constructions. The details of this have to be
 %% worked out. 
 %% }
-Therefore,\label{page-sbcg-formalization} grammars which use (\ref{meta-konstruktionsstatemnet}) cannot be described with the normal formalism. The formalization given in
+Therefore,\label{page-sbcg-formalization} grammars which use (\ref{meta-construction-statemnet}) cannot be described with the normal formalism. The formalization given in
 \citet{Richter2004a-u} cannot be directly applied to SBCG, which means that the formal foundations
 of SBCG still have to be worked out.\footnote{
   A note of caution is necessary since there were misunderstandings in the past regarding the degree
@@ -1203,19 +1203,19 @@ of SBCG still have to be worked out.\footnote{
   fragments. I implemented one in the TRALE system myself. The reader is referred to \citet{Richter2004a-u} to get an idea what kind
   of deeper formalization is talked about here.
 }
-Furthermore, the original problem that (\ref{meta-konstruktionsstatemnet}) was designed to solve is
+Furthermore, the original problem that (\ref{meta-construction-statemnet}) was designed to solve is
 not solved by introducing the new feature geometry and the meta statement. Instead, the problem
 is just moved to another level since we now need a theory about what is a permissible meta"=statement and what is not. As such, a grammarian
 could add a further clause to the meta statement stating that $\Phi$ is only a well"=formed structure if it is true of the daughters of a relevant construction C
 that they are the \textsc{mother} value of a construction C$'$. It would be possible to formulate constraints in the meta"=statement about the construction C$'$ or individual
 values inside the corresponding feature structures.
 In this way, locality would have been abandoned since it is possible to refer to daughters of daughters.
-By assuming (\ref{meta-konstruktionsstatemnet}), the theoretical inventory has been increased without any explanatory gain.
+By assuming (\ref{meta-construction-statemnet}), the theoretical inventory has been increased without any explanatory gain.
 
 \subsubsubsection{Computational complexity}
 
 One motivation behind restrictions on locality was to reduce the computational complexity of the
-formalism (Ivan Sag, p.\,c.\,2011, See Chapter~\ref{Abschnitt-Generative-Kapazitaet} on computational complexity and generative power).
+formalism (Ivan Sag, p.\,c.\,2011, See Chapter~\ref{sec-generative-capacity} on computational complexity and generative power).
 However, the locality restrictions of SBCG can be circumvented easily by structure sharing \citep[Section~9.6.1]{MuellerGTBuch2}. To see this consider a
 construction with the following form:
 \ea
@@ -1352,7 +1352,7 @@ sharings\is{structure sharing} of all the features at the outermost level of a s
 \textsc{sem}, and \textsc{cntxt} (see \citealp[\page 98]{Sag2012a} for these features)\footnote{
   Note that these structure sharings are necessary. It is not an option to leave the values of these
   features unspecified in the argument structure list. Since we have a model-theoretic view on
-  things, an unspecified value would make the respective structures infinitely umbiguous, since
+  things, an unspecified value would make the respective structures infinitely ambiguous, since
   infinitely many instantiation of these features are possible.%  
 } and the whole point of grouping features is to avoid such multiple
 individual structure sharings in situations in which there is a systematic relation between feature values.
@@ -1538,7 +1538,7 @@ that the form contribution of the determiner must occur before that of the noun.
 Part of the information represented under f is the orthographic form (f.orth). The inheritance relation is given explicitly
 in the construction as in  \citet{KF99a}.
 
-The construction in (\mex{0}) can be represented in a similar way to the format used in Chapter~\ref{Kap-Merkmalbeschreibungen}:\is{construction!Determiner Noun}
+The construction in (\mex{0}) can be represented in a similar way to the format used in Chapter~\ref{chap-feature-descriptions}:\is{construction!Determiner Noun}
 \ea
 \label{AVM-DetNoun}
 \ms[DetNoun]{
@@ -1698,7 +1698,7 @@ Evokes creates an instance of an object of a certain type (in the example, \emph
 It is then possible to refer to the properties of this object in a schema/construction.
 
 The feature description in (\mex{1}) is provided in the notation from
-Chapter~\ref{Kap-Merkmalbeschreibungen}. It is the equivalent to
+Chapter~\ref{chap-feature-descriptions}. It is the equivalent to
 (\mex{0}).\isfeat{evokes}\is{cycle!in feature description}
 \ea
 \ibox{1} \ms[hypotenuse]{
@@ -2288,7 +2288,7 @@ suggested,\footnote{
   implemented in the Babel System \citep{Babel}. See \citep{Mueller99h} on restricting
   discontinuity. Linearization"=based approaches were argued to not be able to account for
   apparent multiple frontings in German \citep{Mueller2005d,MuellerGS} and hence
-  linearizeation"=based approaches were replaced by more traditional variants that allow for
+  linearization"=based approaches were replaced by more traditional variants that allow for
   continuous constituents only.
 } the \slasch"=based analysis would be favorable.
 
@@ -2370,14 +2370,14 @@ for theories like HPSG, SBCG and Simpler Syntax \citep[\page 600]{Jackendoff2011
 
 The difference between mathematical and computational formalization is a rather strange distinction to make. I
 think that a formal and precise description is a prerequisite for implementation (see the discussion
-in Section~\ref{Asbchnitt-GB-Formalisierung} and Section~\ref{sec-formalization-minimalism}). Apart from this, a computer implementation of SBCG is
+in Section~\ref{sec-formalization-gb} and Section~\ref{sec-formalization-minimalism}). Apart from this, a computer implementation of SBCG is
 trivial, given the systems that we have for processing HPSG grammars. In order to show this, I want
 to address one issue that van Trijp discusses. He claims that SBCG cannot be directly
-implemented. On issues of complexity of constraint solving systems he quotes \citep[Section 4.2.2]{LM2006a}:
+implemented. On issues of complexity of constraint solving systems he quotes \citep[Section~4.2.2]{LM2006a}:
 \begin{quote}
 Actual implementations of HPSG typically handle the problem by guiding the linguistic processor
 using a (rule-based) phrase structure backbone, but the disadvantage of this approach is that the ``organization and formulation of the grammar is different from
-that of the linguistic theory'' \citep[Section 4.2.2]{LM2006a}. \citep[\page ]{vanTrijp2013a}
+that of the linguistic theory'' \citep[Section~4.2.2]{LM2006a}. \citep[\page ]{vanTrijp2013a}
 \end{quote}
 He concludes:
 \begin{quote}
@@ -2508,7 +2508,7 @@ dtrs   & \ibox{2} \\
 The value of \textsc{dtrs} is a list and hence \iboxt{2} stands for the list of daughters on the right
 hand side of the phrase structure rule as well. The type \type{construction} is a supertype of all
 constructions and hence (\mex{0}) can be used to analyze all phrases that are licensed by the
-grammar. In fact, (\mex{0}) is one way to put the meta constraint in (\ref{meta-konstruktionsstatemnet}).
+grammar. In fact, (\mex{0}) is one way to put the meta constraint in (\ref{meta-construction-statemnet}).
 
 So, this shows that the version of SBCG that has been developed by \citet{Sag2012a} has a
 straightforward implementation in TRALE.\footnote{%
@@ -2659,7 +2659,7 @@ Grammar, Embodied Construction Grammar, and Fluid Construction Grammar. The firs
 be viewed as notational variants of (Constructional) HPSG\indexhpsg (for SBCG with regard to this
 point, see \citew[\page 411]{Sag2007a} and \citew[\page 486]{Sag2010b}), or put differently, sister
 theories of HPSG. This is also true to a large extend for FCG, although \citet{vanTrijp2013a} spends
-25 pages working out the alledged differences. As I have shown in Section~\ref{sec-fcg}, HPSG and FCG are
+25 pages working out the alleged differences. As I have shown in Section~\ref{sec-fcg}, HPSG and FCG are
 rather similar and I would say that these theories are sister theories as well. 
 
 Due to the origins of all three theories, respective analyses can differ quite considerably: HPSG is a strongly lexicalized theory, where

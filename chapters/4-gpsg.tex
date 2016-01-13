@@ -381,7 +381,7 @@ With the rule in (\mex{0}), it is possible that the type \sliste{ \type{e}, \sli
     \type{e}, \type{t} }} corresponds to an expression which still has to be combined with two expressions of
 	type \type{e} in order to result in an expression of \type{t}. The first combination step with \type{e} will yield \sliste{ \type{e}, \type{t} }
 	and the second step of combination with a further \type{e} will give us \type{t}. This is similar to what we saw with $\lambda$"=expressions on
-	page~\pageref{lambbbda-moegen}: $\lambda y \lambda x$ \relation{like}(x, y) has to combine with a y and an x. The result in this example was 
+	page~\pageref{lambda-moegen}: $\lambda y \lambda x$ \relation{like}(x, y) has to combine with a y and an x. The result in this example was 
 	\relation{mögen}(\relation{max}, \relation{lotte}), that is, an expression that is either true or false in the relevant world.
 
 In \citew{GKPS85a}, an additional type is assumed for worlds in which an expression is true or false. For reasons of simplicity, I will omit this here. The types
@@ -391,7 +391,7 @@ that we need for sentences, NPs and N$'$s, determiners and VPs are given in (\me
 \ex TYP(S)   = \type{t}
 \ex TYP(NP)  = \sliste{ \sliste{ \type{e}, \type{t} }, \type{t} }
 \ex TYP(N$'$)  = \sliste{ \type{e}, \type{t} }
-% Richter/Sterenfeld 2012: Es fehlt bei TYP(Det) = \sliste{ N$'$, NP } in den Klammern die TYP-Aufrufe
+% Richter/Sternefeld 2012: Es fehlt bei TYP(Det) = \sliste{ N$'$, NP } in den Klammern die TYP-Aufrufe
 \ex TYP(Det) = \sliste{ TYP(N$'$), TYP(NP) }
 \ex TYP(VP)  = \sliste{ \type{e}, \type{t} }
 \zl
@@ -493,7 +493,7 @@ V2  $\to$ W, AdvP
 By means of the subject introducing metarule in (\ref{subjekt-meta}), the V3"=rule in (\ref{regel-ditransitiv-adv}) is derived from a V2"=rule.
 Since there can be several adjuncts in one sentence, a metarule such as (\ref{Adjunkt-MR}) must be allowed to apply multiple times. The recursive
 application of metarules is often ruled out in the literature due to reasons of generative capacity\is{capacity!generative} (see
-Chapter~\ref{Abschnitt-Generative-Kapazitaet}) (\citealp{Thompson82a-u}; \citealp[\page 146]{Uszkoreit87a}). If one uses the Kleene star\is{Kleene star}\is{*},
+Chapter~\ref{sec-generative-capacity}) (\citealp{Thompson82a-u}; \citealp[\page 146]{Uszkoreit87a}). If one uses the Kleene star\is{Kleene star}\is{*},
 then it is possible to formulate the adjunct metarule in such as way that it does not have to apply recursively \citep[\page
 146]{Uszkoreit87a}:
 %% Kein Problem, wenn Mengen erzeugt werden, da in einer Menge jedes Element nur einmal enthalten
@@ -1054,7 +1054,7 @@ shown that context"=free grammars are not able to describe natural language in g
 could be shown that there are languages that need more powerful grammar formalisms than
 context"=free grammars (\citealp{Shieber85a,Culy85a}; see \citew{Pullum86a} for a historical
 overview). The so-called \emph{generative capacity} of grammar formalisms is discussed in
-Chapter~\ref{Abschnitt-Generative-Kapazitaet}.
+Chapter~\ref{sec-generative-capacity}.
 
 Following the emergence of constraint"=based models such as HPSG (see Chapter~\ref{Kapitel-HPSG}) and
 unification-based variants of Categorial Grammar (see Chapter~\ref{Kapitel-CG} and
