@@ -1,0 +1,178 @@
+
+
+% http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
+\usepackage{etex}\reserveinserts{28}
+
+% http://tex.stackexchange.com/questions/229500/tikzmark-and-xelatex
+% temporary fix, remove later
+%\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
+
+%\usepackage[section]{placeins}
+
+\usepackage{eurosym} % should go once Berthold fixes unicode
+
+
+% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
+% for subscripts
+\usepackage{amsmath}
+\usepackage{unicode-math} 
+
+
+% \justify to switch of \raggedright in translations
+\usepackage{ragged2e}
+
+% Haitao Liu
+%\usepackage{xeCJK}
+%\setCJKmainfont{SimSun}
+
+
+
+% http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
+\usepackage{etex}\reserveinserts{28}
+
+% http://tex.stackexchange.com/questions/229500/tikzmark-and-xelatex
+% temporary fix, remove later
+%\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
+
+%\usepackage[section]{placeins}
+
+\usepackage{eurosym} % should go once Berthold fixes unicode
+
+% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
+% for subscripts
+\usepackage{amsmath}
+\usepackage{unicode-math} 
+
+
+% \justify to switch of \raggedright in translations
+\usepackage{ragged2e}
+
+% Haitao Liu
+%\usepackage{xeCJK}
+%\setCJKmainfont{SimSun}
+
+
+\hypersetup{bookmarksopenlevel=0}
+
+\iftoggle{draft}{
+\usepackage{todonotes}
+}{
+\usepackage[disable]{todonotes}
+}
+
+
+
+\usepackage{metalogo} % xelatex
+
+\usepackage{multicol}
+
+\usepackage{LSP/lsp-styles/lsp-forest-setup}
+
+\usepackage{bookmark}
+
+\forestset{
+      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
+      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
+      no path/.style={edge path={}},
+      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
+}
+
+
+\usepackage{my-ccg-ohne-colortbl}
+
+
+\usepackage{jambox}
+
+
+
+\usepackage{german}\selectlanguage{USenglish}
+
+
+\usepackage[final]{epsfig}
+\usepackage{graphicx}
+
+
+\usepackage{makros.2e,article-ex,additional-langsci-index-shortcuts,
+eng-date,
+lastpage,float,comment,my-theorems,soul,tabularx}
+
+% loaded in macros.2e \usepackage[english]{varioref}
+% do not stop and warn! This will be tested in the final version
+\vrefwarning
+
+
+\usepackage{ogonek}        % For Ewa Dabrowska
+
+
+\usepackage{mycommands}% \dash
+
+
+% still needed
+\usepackage{tikz-qtree}
+
+\usepackage{LSP/lsp-styles/lsp-gb4e}
+
+
+\usepackage{subfig}
+
+%\renewcommand{\xbar}{X̅\xspace}
+
+
+% should be removed once that the \Tree figures are removed
+\usepackage{forest}
+
+\usepackage{pstricks,pst-node}
+
+%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
+\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
+\psset{linewidth=0.5pt}
+\setcounter{secnumdepth}{4}
+
+
+\usepackage{dgmacros,pst-tree,trees,dalrymple} % Mary Dalrymples macros
+
+
+%%% trick for using adjustbox
+\let\pstricksclipbox\clipbox
+\let\clipbox\relax
+
+% http://tex.stackexchange.com/questions/206728/aligning-several-forest-trees-in-centered-way/206731#206731
+% for aligning TAG trees
+\usepackage[export]{adjustbox}
+
+% draw a grid for getting the coordinates
+\usepackage{tikz-grid}
+
+% for offsets in trees
+\newlength{\offset}
+\newlength{\offsetup}
+
+\ifxetex
+\usepackage{eng-hyp-utf8}
+\else
+\usepackage{eng-hyp}
+\fi
+
+\usepackage{appendix}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
