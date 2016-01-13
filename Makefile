@@ -23,6 +23,8 @@ testtime:
 SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	grammatical-theory.tex           \
 	grammatical-theory-include.tex   \
+	localcommands.tex \
+	localpackages.tex \
 	chapters/1-begriffe.tex\
 	chapters/2-psg.tex\
 	chapters/3-gb.tex \

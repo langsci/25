@@ -2,6 +2,24 @@
 \input{localpackages.tex}
 \input{localcommands.tex}
 \begin{document}
+
+\frontmatter
+\maketitle
+
+% Mit Widmung geht es auf S. 7 los
+\thispagestyle{empty}~\newpage\setcounter{page}{7}% for printing 2up
+
+\tableofcontents
+
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/ontheway}
+\include{chapters/langsci}
+
+\mainmatter
+
+\part{Background and specific theories}
+
 \include{chapters/1-begriffe}
 \include{chapters/2-psg}
 \include{chapters/3-gb}
@@ -17,6 +35,7 @@
 \include{chapters/ot}
 
 \part{General discussion}\label{part-discussion}
+
 \include{chapters/innateness}
 \include{chapters/mts}
 \include{chapters/competence}
