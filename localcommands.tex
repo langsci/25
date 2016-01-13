@@ -1,0 +1,133 @@
+\newcommand\mathdash{\text{\normalfont -}}
+
+\newcommand{\todostefan}[1]{\todo[color=green!40]{\footnotesize #1}\xspace}
+\newcommand{\todosatz}[1]{\todo[color=red!40]{\footnotesize #1}\xspace}
+\newcommand{\todoandrew}[1]{\todo[color=blue!40]{\footnotesize #1}\xspace}
+
+\newcommand{\inlinetodostefan}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
+\newcommand{\inlinetodoandrew}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
+
+
+%% \newcommand{\remarkstefan}[1]{\todo[color=green!40]{\footnotesize #1}\xspace}
+%% \newcommand{\remarkbjarne}[1]{\todo[color=red!40]{\footnotesize #1}\xspace}
+
+%% \newcommand{\inlineremarkstefan}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
+%% \newcommand{\inlineremarkbjarne}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
+
+\newcommand{\treeag}{TAG\indextag}
+
+%% is done by package option 
+\ifdraft
+\proofmodetrue
+\fi
+
+
+%% % taken from covington.sty (check)
+%% %\newcounter{lsptempcnt}
+
+%% \newcommand{\mex}[1]{\setcounter{lsptempcnt}{\value{equation}}%
+%% \addtocounter{lsptempcnt}{#1}%
+%% \arabic{lsptempcnt}}%
+
+%\displaywidowpenalty=10000\relax
+%\predisplaypenalty=-200\relax
+
+
+%\newcommand{\mod}{\textsc{mod}\xspace}  % wegen beamer.cls nicht in abbrev.sty
+
+%\usepackage[figuresright]{rotating}
+
+
+% http://tex.stackexchange.com/questions/203/how-to-obtain-verbatim-text-in-a-footnote
+% somehow does not work
+%\usepackage{fancyvrb}
+
+%\newcommand{\tag}{TAG\indextag} % has to be here, conflict with latexbeamer
+
+% mit der Index-Version geht die Silbentrennung nicht
+\renewcommand{\word}[1]{\emph{#1}}
+
+%\newcommand{\dom}{\textsc{dom}\xspace}
+
+\newcommand{\prt}{\textsc{prt}}
+%\newcommand{\refl}{\textsc{refl}}
+
+%% \newcommand{\snom}{\textit{snom}}
+%% \newcommand{\sgen}{\textit{sgen}}
+%% \newcommand{\sacc}{\textit{sacc}}
+
+%\usepackage{my-index-shortcuts}
+
+\newcommand{\tes}{Tesnière\xspace}
+\newcommand{\dom}{\textsc{dom}\xspace}
+
+
+\newcommand{\page}{}
+
+
+\let\mc=\multicolumn
+
+
+%\exewidth{\exnrfont (34)}
+% should be set up for the whole series in langsci.cls
+\renewcommand{\fnexfont}{\footnotesize\upshape}
+%\let\oldglt\glt
+%\def\glt{\oldglt\justify}
+%\def\glt{\nopagebreak\vskip.17\baselineskip\transfont\parindent0ex}
+
+\makeatletter
+\def\ea{\ifnum\@xnumdepth=0\begin{exe}\else\begin{xlist}[iv.]\fi\ex}
+\def\eal{\begin{exe}\exnrfont\ex\begin{xlist}[iv.]}
+
+\def\gll%                  % Introduces 2-line text-and-gloss.
+    {\bgroup %\begin{flushleft}
+      \raggedright
+     \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
+	 \def\baselinestretch{1}\@selfnt\fi
+%        \vskip\baselineskip\def\baselinestretch{1}%
+%        \@selfnt\vskip-\baselineskip\fi%
+    \bgroup
+    \twosent
+   }
+\makeatother
+
+
+% to set the MRSes for scope underspecification
+%http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+% for texlive 2015
+\newtcbox{\mybox}[1][]{empty,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1,top=2pt,bottom=2pt}
+
+% for texlive 2013
+%\newtcbox{\mybox}[1][]{enhanced,boxrule=0pt,colframe=white,colback=white,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1} %,top=3pt,bottom=3pt}
+                                %use shorten <=2pt,shorten >=2pt in the pictures.
+
+\newcommand{\mynode}[2]{\mybox[#1]{#2}}
+
+
+% http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
+% Instead of using the package tikzmark, you can define your own \tikzmark being a regular node. There's no need to use tcolorbox package.
+\newcommand{\mysubnode}[2]%
+    {\tikz[baseline=(#1.base), remember picture]\node[outer sep=0pt, inner sep=0pt] (#1) {#2};}
+
+% http://tex.stackexchange.com/questions/230300/doing-something-like-psframebox-in-tikz#230306
+\tikzset{
+frbox/.style={
+  rounded corners,
+  draw,
+  thick,
+  inner sep=5pt
+  }
+}
+\newcommand\TZbox[1]{\tikz\node[frbox,baseline] {#1};}
+
+\renewcommand{\rm}{\upshape}
+\renewcommand{\mathrm}{\text}
+\renewcommand{\it}{\itshape}
+\renewcommand{\sc}{\scshape}
+\renewcommand{\bf}{\bfseries}
+
+\newcommand{\deriv}[2]{}
+\newcommand{\bs}{}
+\newcommand{\mel}{}
