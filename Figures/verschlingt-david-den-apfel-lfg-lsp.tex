@@ -37,7 +37,7 @@
 
 \begin{forest}
 sn edges
-[CP
+[\subnode{cp}{CP}
   [\centtab{\up~=~\down\\
     \subnode{cbar}{\cbar}}
     [\centtab{\up~=~\down\\
@@ -49,21 +49,22 @@ sn edges
         [David;David]]
       [\centtab{(\upsp \textsc{obj}) = \down\\
         \subnode{npobj}{NP}}
-        [ein Sandwich;a sandwich, triangle]]]]]
+        [den Apfel;the apple, triangle]]]]]
 \end{forest}\hfill
 \raisebox{15em}{%
 \mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'\\
                      subj & \mynode{fdavid}{\lfgms{ pred &  `DAVID' \\
                                            }}\\
                      tense & {\small PRESENT}\\
-                     obj  & \mynode{fsand}{\lfgms{ pred & `SANDWICH'\\
+                     obj  & \mynode{fapple}{\lfgms{ pred & `Apfel'\\
                                                  }}}}}
 \begin{tikzpicture}[overlay,remember picture] 
+\draw[->] (cp)     to[out= 0,in=180] (all.west);
 \draw[->] (cbar)   to[out=10,in=180] (all.west);
 \draw[->] (c)      to[out=10,in=180] (all.west);
 \draw[->] (vp)     to[out= 0,in=180] (all.west);
 \draw[->] (npsubj) to[out=15,in=200] (fdavid.west);
-\draw[->] (npobj)  to[out= 0,in=200] (fsand.west);
+\draw[->] (npobj)  to[out= 0,in=200] (fapple.west);
 \end{tikzpicture}
 \end{document}
 

@@ -590,45 +590,7 @@ shows the analysis with a topicalized constituent in the prefield.\todostefan{Dr
 
 \begin{figure}
 \centerline{%
-\begin{tabular}{@{}ccc}
-\multicolumn{2}{c}{\rnode{cp}{CP}}\\[3ex]
-\rnode{npacc_oben}{(\up \textsc{df})= (\up \textsc{comp}* \textsc{gf})}  & \multicolumn{2}{c}{\rnode{c1_oben}{\up=\down}}\\
-(\up \textsc{df})=\down                     & \multicolumn{2}{c}{\rnode{c1}{C$'$}}\\
-\rnode{npacc}{NP}\\[2ex]
-                                         & \rnode{c_oben}{\up=\down} & {\rnode{vp_oben}{\up=\down}}\\
-                                         & \rnode{c}{C}              & {\rnode{vp}{VP}}\\[2ex]
-                                         &                          & \rnode{npnom_oben}{(\up \textsc{subj})=\down}\\
-                                         &                          & \rnode{npnom}{NP} \\[3ex]
-d\rnode{s}{en Apfe}l   & \rnode{ver}{verschlingt}  & \rnode{David}{David}\\
-the apple              & devours                   & David\\
-\end{tabular}%
-\ncline{cp}{c1_oben}\ncline{cp}{npacc_oben}%
-\ncline{c1}{c_oben}\ncline{c1}{vp_oben}%
-\ncline{vp}{npnom_oben}%
-\ncline{c}{ver}\ncline{npnom}{David}\ncline{npacc}{s}%
-\raisebox{3em}{\rnode{alles}{\lfgms{ pred & `verschlingen\sliste{\subj,\obj}'\\
-         subj & \rnode{fdavid}{\lfgms{ pred &  `David' \\
-                                      case & nom\\
-                   }}\\
-         tense & PRESENT\\
-         topic & \rnode{fsand}{\lfgms{ pred & `Apfel'\\
-                                    case & acc\\
-                   }}\\
-         obj & \rnode{obj}{}
-       }}}
-% to do
-%\anodecurve[r]{vp}[l]{alles}{3em}%
-\ltor{vp}{alles}
-%\anodecurve[r]{c1}[l]{alles}{3em}%
-\ltor{c1}{alles}
-%\anodecurve[r]{c}[l]{alles}{6em}%
-\ltor{c}{alles}
-%\anodecurve[r]{npnom}[l]{fdavid}{3em}%
-\ltor{npnom}{fdavid}
-%\anodecurve[r][20]{npacc}[l][35]{fsand}{4em}%
-\ltor{npacc}{fsand}
-%\nodecurve[r]{fsand}[r]{obj}{15em}
-\nccurve[ncurv=2.2]{fsand}{obj}
+\includegraphics{Figures/den-apfel-verschlingt-david-lfg-lsp-crop}
 }
 \caption{\label{Abbildung-V2-LFG}Analysis of verb second}
 \end{figure}%

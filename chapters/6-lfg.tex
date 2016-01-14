@@ -867,38 +867,7 @@ analysis proposed by \citet[\page 41]{Berman2003a}.\todostefan{do all LFG figure
  
 \begin{figure}
 \centerline{%
-\begin{tabular}{@{}ccc}
-\multicolumn{2}{c}{\rnode{cp}{CP}}\\[2ex]
-\multicolumn{2}{c}{\rnode{c1_oben}{\up~=~\down}}\\
-\multicolumn{2}{c}{\rnode{c1}{C$'$}}\\[2ex]
-\rnode{c_oben}{\up~=~\down} & \multicolumn{2}{c}{\rnode{vp_oben}{\up~=~\down}}\\
-\rnode{c}{C}              & \multicolumn{2}{c}{\rnode{vp}{VP}}\\[2ex]
-                         & \rnode{npnom_oben}{(\upsp \textsc{subj}) = \down} & \rnode{npacc_oben}{(\upsp \textsc{obj}) = \down}\\
-                         & \rnode{npnom}{NP} & \rnode{npacc}{NP}\\[3ex]
-\rnode{ver}{Verschlingt}  & \rnode{David}{David} & ei\rnode{s}{n Sandwic}h?\\
-devours                   & David                & a sandwich
-\end{tabular}%
-\ncline{cp}{c1_oben}%
-\ncline{c1}{c_oben}\ncline{c1}{vp_oben}%
-\ncline{vp}{npnom_oben}\ncline{vp}{npacc_oben}%
-\ncline{c}{ver}\ncline{npnom}{David}\ncline{npacc}{s}%
-\raisebox{3em}{\rnode{alles}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'\\
-         subj & \rnode{fdavid}{\lfgms{ pred &  `DAVID' \\
-                   }}\\
-         tense & {\small PRESENT}\\
-         obj  & \rnode{fsand}{\lfgms{ pred & `SANDWICH'\\
-                   }}\\
-       }}}
-% to do \anodecurve[r]{vp}[l]{alles}{3em}%
-\ltor{vp}{alles}
-% to do \anodecurve[r]{c1}[l]{alles}{3em}%
-\ltor{c1}{alles}
-% to do \anodecurve[r]{c}[l]{alles}{6em}%
-\ltor{c}{alles}
-% to do \anodecurve[r]{npnom}[l]{fdavid}{3em}%
-\ltor{rpnom}{fdavid}
-% to do \anodecurve[r]{npacc}[l]{fsand}{3em}%
-\ltor{npacc}{fsand}
+\includegraphics{Figures/verschlingt-david-den-apfel-lfg-lsp-crop}
 }
 \caption{\label{Abb-Verbstellung-LFG}Analysis of verb placement following \citet[\page 41]{Berman2003a}}
 \end{figure}%
@@ -1021,94 +990,14 @@ Figure~\vref{Abb-SOV-LFG} shows the analysis for (\mex{1}a).
 \zl
 \begin{figure}
 \centerline{%
-\begin{tabular}{@{}ccc}
-\multicolumn{2}{c}{\rnode{vp1}{VP}}\\[3ex]
-%
-\rnode{npnom_oben}{(\upsp \textsc{subj}) = \down} & \multicolumn{2}{c}{\rnode{vp2}{VP}}\\
-\rnode{npnom}{NP} \\[3ex]
-%
-                                          & \rnode{npacc_oben}{(\upsp \textsc{obj}) = \down}  & \rnode{vp3}{VP}\\
-                                          & \rnode{npacc}{NP}\\[3ex]
-%
-                                          &  & \rnode{v}{V}\\[3ex]
-%
-\rnode{David}{David}                       & d\rnode{s}{en Apf}el                   & \rnode{ver}{verschlingt} \\
-David                                     & the apple                               & devours
-\end{tabular}%
-\ncline{vp1}{npnom_oben}\ncline{vp1}{vp2}%
-\ncline{vp2}{npacc_oben}\ncline{vp2}{vp3}%
-\ncline{vp3}{v}%
-\ncline{v}{ver}\ncline{npnom}{David}\ncline{npacc}{s}%
-\hspace{2em}\raisebox{3em}{\rnode{alles}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'\\
-         subj & \rnode{fdavid}{\lfgms{ agr cas & NOM \\
-                                      pred &  `DAVID' \\
-                   }}\\
-         tense & {\small PRESENT}\\
-         obj  & \rnode{fsand}{\lfgms{ agr cas & ACC \\
-                                     pred & `APFEL'\\
-                   }}\\
-       }}}
-% to do \anodecurve[r]{vp1}[l]{alles}{5em}[2em]%
-\ltor{vp1}{alles}
-% to do \anodecurve[r]{vp2}[l]{alles}{3em}%
-\ltor{vp2}{alles}
-% to do \anodecurve[r]{vp3}[l]{alles}{6em}%
-\ltor{vp3}{alles}
-% to do \anodecurve[r]{v}[l]{alles}{6em}%
-\ltor{v}{alles}
-% to do \anodecurve[r][-15]{npnom}[l][45]{fdavid}{5em}%
-\ltor{npnom}{fdavid}
-% to do \anodecurve[r][-45]{npacc}[l][45]{fsand}{3em}%
-\ltor{npacc}{fsand}
+\includegraphics{Figures/david-den-apfel-verschlingt-lfg-lsp-crop}
 }
 \caption{\label{Abb-SOV-LFG}Analysis of SOV order following \citet{Berman96a-u}}
 \end{figure}%
 The analysis of (\mex{0}b) is shown in Figure~\vref{Abb-OSV-LFG}.
 \begin{figure}
 \centerline{%
-\begin{tabular}{@{}ccc}
-\multicolumn{2}{c}{\rnode{vp1}{VP}}\\[3ex]
-%
-\rnode{npacc_oben}{(\upsp \textsc{obj}) = \down} & \multicolumn{2}{c}{\rnode{vp2}{VP}}\\
-\rnode{npacc}{NP}\\[3ex]
-%
- & \rnode{npnom_oben}{(\upsp \textsc{subj}) = \down}    & \rnode{vp3}{VP}\\
-                         & \rnode{npnom}{NP}  \\[3ex]
-%
-                                          &                                             & \rnode{v}{V}\\[3ex]   
-%
-d\rnode{s}{en Apf}el                       & \rnode{David}{David}                      & \rnode{ver}{verschlingt} \\
-the apple                                 & David                                       & devours\\
-\end{tabular}%
-\ncline{vp1}{npacc_oben}\ncline{vp1}{vp2}%
-\ncline{vp2}{npnom_oben}\ncline{vp2}{vp3}%
-\ncline{vp3}{v}%
-\ncline{v}{ver}\ncline{npnom}{David}\ncline{npacc}{s}%
-\hspace{2em}\raisebox{3em}{\rnode{alles}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'\\
-         subj & \rnode{fdavid}{\lfgms{ agr cas & NOM \\
-                                      pred &  `DAVID' \\
-                   }}\\
-         tense & {\small PRESENT}\\
-         obj  & \rnode{fsand}{\lfgms{ agr cas & ACC \\
-                                     pred & `APFEL'\\
-                   }}\\
-       }}}
-% to do \anodecurve[r]{vp1}[l]{alles}{5em}[2em]%
-\ltor{vp1}{alles}
-% to do \anodecurve[r]{vp2}[l]{alles}{3em}%
-\ltor{vp2}{alles}
-% to do \anodecurve[r]{vp3}[l]{alles}{6em}%
-\ltor{vp3}{alles}
-%% to do \anodecurve[r]{zp1}[l]{alles}{3em}%
-\ltor{zp1}{alles}
-%% to do \anodecurve[r]{zp2}[l]{alles}{3em}%
-\ltor{zp2}{alles}
-% to do \anodecurve[r]{v}[l]{alles}{6em}%
-\ltor{v}{alles}
-% to do \anodecurve[r][0]{npnom}[l][45]{fdavid}{5em}%
-\ltor{npnom}{fdavid}
-% to do \anodecurve[r][0]{npacc}[l][45]{fsand}{3em}%
-\ltor{npacc}{fsand}
+\includegraphics{Figures/den-apfel-david-verschlingt-lfg-lsp-crop}
 }
 \caption{\label{Abb-OSV-LFG}Analysis of OSV order following \citet{Berman96a-u}}
 \end{figure}%

@@ -52,7 +52,7 @@ sn edges
                 \subnode{npsubj}{NP}}
         [David;David]]]]]
 \end{forest}\hfill
-\raisebox{15em}{%
+\raisebox{13em}{%
 \mynode{all}{\lfgms{ pred & `verschlingen\sliste{\subj,\obj}'\\
          subj & \mynode{fdavid}{\lfgms{ pred &  `David' \\
                                       case & nom\\
@@ -71,7 +71,11 @@ sn edges
 \draw[->] (npsubj) to[out=15,in=200] (fdavid.west);
 \draw[->] (npobj)  to[out= 0,in=215] (fapple.west);
 %
-\draw     (obj)    to[out= 0,in=  0] (fapple.east);
+% the arc in the f-structure
+%\draw     (obj)    .. controls +(right:10em) and +(up:4em)
+%                   .. (fapple.east);
+
+\draw      (obj)   to[out=0,in=0,distance=6em] (fapple.east);
 \end{tikzpicture}
 \end{document}
 
