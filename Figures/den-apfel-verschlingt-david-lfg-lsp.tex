@@ -1,0 +1,79 @@
+%% -*- coding:utf-8 -*-
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e,dalrymple}
+
+\usetikzlibrary{tikzmark}
+
+
+    % to set the MRSes for scope underspecification
+%http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+% for texlive 2015
+\newtcbox{\mybox}[1][]{empty,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1,top=2pt,bottom=2pt}
+
+% for texlive 2013
+%\newtcbox{\mybox}[1][]{enhanced,boxrule=0pt,colframe=white,colback=white,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1} %,top=3pt,bottom=3pt}
+                                %use shorten <=2pt,shorten >=2pt in the pictures.
+
+
+\newcommand{\mynode}[2]{\mybox[#1]{#2}}
+
+\newcommand{\centtab}[1]{\begin{tabular}[t]{@{}c@{}}#1\end{tabular}}
+
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{forest}
+sn edges
+[\subnode{cp}{CP}
+  [\centtab{(\up \textsc{df})= (\up \textsc{comp}* \textsc{gf})\\
+            (\up \textsc{df})=\down \\
+            \subnode{npobj}{NP}}
+        [den Apfel;the apple, triangle]]
+  [\centtab{\up~=~\down\\
+    \subnode{cbar}{\cbar}}
+    [\centtab{\up~=~\down\\
+     \subnode{c}{C}} [verschlingt;devours]]
+    [\centtab{\up~=~\down\\
+     \subnode{vp}{VP}}
+      [\centtab{(\upsp \textsc{subj}) = \down\\
+                \subnode{npsubj}{NP}}
+        [David;David]]]]]
+\end{forest}\hfill
+\raisebox{15em}{%
+\mynode{all}{\lfgms{ pred & `verschlingen\sliste{\subj,\obj}'\\
+         subj & \mynode{fdavid}{\lfgms{ pred &  `David' \\
+                                      case & nom\\
+                   }}\\
+         tense & PRESENT\\
+         topic & \mynode{fapple}{\lfgms{ pred & `Apfel'\\
+                                    case & acc\\
+                   }}\\
+         obj & \mynode{obj}{}
+       }}}
+\begin{tikzpicture}[overlay,remember picture] 
+\draw[->] (cp)     to[out= 0,in=180] (all.west);
+\draw[->] (cbar)   to[out=10,in=180] (all.west);
+\draw[->] (c)      to[out=10,in=180] (all.west);
+\draw[->] (vp)     to[out= 0,in=180] (all.west);
+\draw[->] (npsubj) to[out=15,in=200] (fdavid.west);
+\draw[->] (npobj)  to[out= 0,in=215] (fapple.west);
+%
+\draw     (obj)    to[out= 0,in=  0] (fapple.east);
+\end{tikzpicture}
+\end{document}
+
+
+

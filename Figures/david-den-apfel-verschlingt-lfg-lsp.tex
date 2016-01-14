@@ -1,0 +1,69 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../LSP/langsci}                          
+
+
+\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e,dalrymple}
+
+\usetikzlibrary{tikzmark}
+
+
+    % to set the MRSes for scope underspecification
+%http://tex.stackexchange.com/questions/218417/replacing-tree-dvips-connect-nodes-in-a-tabular-environment/218458#218458
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+% for texlive 2015
+\newtcbox{\mybox}[1][]{empty,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1,top=2pt,bottom=2pt}
+
+% for texlive 2013
+%\newtcbox{\mybox}[1][]{enhanced,boxrule=0pt,colframe=white,colback=white,shrink tight,nobeforeafter,on line,before upper=\vphantom{gM},remember as=#1} %,top=3pt,bottom=3pt}
+                                %use shorten <=2pt,shorten >=2pt in the pictures.
+
+
+\newcommand{\mynode}[2]{\mybox[#1]{#2}}
+
+\newcommand{\centtab}[1]{\begin{tabular}[t]{@{}c@{}}#1\end{tabular}}
+
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{forest}
+sn edges
+[\subnode{vp1}{VP}
+  [\centtab{(\upsp \textsc{subj}) = \down\\
+                 \subnode{npsubj}{NP}}
+         [David;David]]
+  [\subnode{vp2}{VP}
+     [\centtab{(\upsp \textsc{obj}) = \down\\
+      \subnode{npobj}{NP}}
+       [den Apfel;the apple, triangle]]
+     [\subnode{vp3}{VP}
+       [\subnode{v}{V}
+             [verschlingt;devours]]]]]
+\end{forest}\hfill
+\raisebox{10em}{%
+\mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'\\
+                     subj & \mynode{fdavid}{\lfgms{ pred &  `DAVID' \\
+                                           }}\\
+                     tense & {\small PRESENT}\\
+                     obj  & \mynode{fapple}{\lfgms{ pred & `Apfel'\\
+                                                 }}}}}
+\begin{tikzpicture}[overlay,remember picture] 
+\draw[->] (vp1)    to[out= 0,in=180] (all.west);
+\draw[->] (vp2)    to[out= 0,in=180] (all.west);
+\draw[->] (vp3)    to[out= 0,in=180] (all.west);
+\draw[->] (v)      to[out= 0,in=180] (all.west);
+\draw[->] (npsubj) to[out=15,in=210] (fdavid.west);
+\draw[->] (npobj)  to[out= 0,in=210] (fapple.west);
+\end{tikzpicture}
+\end{document}
+
+
+
