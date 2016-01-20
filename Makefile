@@ -1,4 +1,4 @@
-LSP-STYLES=~/Documents/Dienstlich/Projekte/OALI/Git-HUB/latex/LSP/
+LSP-STYLES=~/Documents/Dienstlich/Projekte/OALI/Git-HUB/latex/langsci/
 
 all: grammatical-theory.pdf
 
@@ -114,7 +114,7 @@ cover: grammatical-theory.pdf
 
 
 lsp-styles:
-	rsync -a $(LSP-STYLES) LSP/
+	rsync -a $(LSP-STYLES) langsci
 
 
 
