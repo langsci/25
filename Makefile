@@ -49,7 +49,10 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 .SUFFIXES: .tex
 
 
+# removing the bbl file is important since otherwise the -min-crossrefs option may not work
+
 %.pdf: %.tex $(SOURCE)
+	rm $*.bbl
 	xelatex -no-pdf $* |grep -v math
 	bibtex  -min-crossrefs=200 $*
 	xelatex -no-pdf $* |grep -v math
