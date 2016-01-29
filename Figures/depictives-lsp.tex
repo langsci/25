@@ -7,9 +7,15 @@
 	        %,blackandwhite
 	        ,smallfont
 	        %,draftmode  
+                ,bibtex
                 ,copyright=CC-BY-ND
 		  ]{../LSP/langsci}                          
 
+
+%deceive the driver
+\def\pdftexversion{140}
+%use the old driver for dvipdfm
+\def\pgfsysdriver{pgfsys-dvipdfm.def} 
 
 \usepackage{forest,../LSP/lsp-styles/lsp-forest-setup,makros.2e}
 
