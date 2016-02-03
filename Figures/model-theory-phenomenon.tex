@@ -1,0 +1,56 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=tbls,
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+		  ]{../langsci/langscibook}                          
+
+
+\usepackage{makros.2e}
+
+\usepackage{pstricks,pst-node}
+
+%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
+\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
+\psset{linewidth=0.5pt}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+%\oneline{%
+\begin{pspicture}(0,0)(9.4,4.2)
+%\psgrid
+\rput[Bl](0,0){%
+\begin{tabular}[b]{@{}ccc@{}}
+phenomenon && model\\
+\rnode{phen}{\fbox{\begin{tabular}{c}
+linguistic\\
+objects\\
+\end{tabular}}}&&\rnode{modell}{\fbox{\begin{tabular}{c}
+feature\\
+structures\\
+\end{tabular}}}\\[10ex]
+&\rnode{theorie}{\fbox{\begin{tabular}{c}
+feature\\
+descriptions\\
+\end{tabular}}}\\
+&formal theory\\
+\end{tabular}}
+%\anodeconnect[l]{modell}[r]{phen}%
+\ncline{->}{modell}{phen}\nbput{models}
+%\ncdiag[angleA=180,angleB=45]{->}{modell}{theorie}
+\psline{<-}(5.4,1.6)(6,2.4)
+\rput[Bl](6,2){licensed by the theory} % früher Erfüllung, jetzt FR Änderung
+\psline{->}(5,1.7)(5.6,2.4)
+\rput[Bl](3.4,2.0){determines}
+%\nccurve{<-}{modell}{theorie}\nbput{legt fest}
+\ncline{->}{theorie}{phen}\naput{predicts}%
+%\aanodeconnect[b]{modell}[tr]{theorie}%
+%\anodeconnect[tl]{theorie}[b]{phen}%
+\end{pspicture}
+
+
+\end{document}
