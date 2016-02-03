@@ -140,6 +140,11 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 	scp -p $? home.hpsg.fu-berlin.de:/home/stefan/public_html/Pub/
 
 
+gt.bib: ../../../Bibliographien/biblio.bib
+	bibtool -r ../../hpsg/.bibtool77-no-comments  -x grammatical-theory.aux -o gt-tmp.bib
+	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
+	\rm -r gt-tmp.bib
+
 
 PUB_FILE=stmue.bib
 
@@ -149,14 +154,16 @@ o-public-bib: $(PUB_FILE)
 
 
 
+
+
 #-f '(author){%n(author)}{%n(editor)}:{%2d(year)#%s(year)#no-year}'
 
 #$(IN_FILE).dvi
-$(PUB_FILE): ../hpsg/make_bib_header ../hpsg/make_bib_html_number  ../hpsg/.bibtool77-no-comments grammatical-theory.aux ../hpsg/la.aux ../HPSG-Lehrbuch/hpsg-lehrbuch.aux ../complex/complex-csli.aux 
-	sort -u grammatical-theory.aux ../hpsg/la.aux ../HPSG-Lehrbuch/hpsg-lehrbuch.aux ../complex/complex-csli.aux  >tmp.aux
-	bibtool -r ../hpsg/.bibtool77-no-comments  -x tmp.aux -o $(PUB_FILE).tmp
+$(PUB_FILE): ../../hpsg/make_bib_header ../../hpsg/make_bib_html_number  ../../hpsg/.bibtool77-no-comments grammatical-theory.aux ../../hpsg/la.aux ../../HPSG-Lehrbuch/hpsg-lehrbuch-3.aux ../../complex/complex-csli.aux ../../../Bibliographien/biblio.bib
+	sort -u grammatical-theory.aux ../../hpsg/la.aux ../../HPSG-Lehrbuch/hpsg-lehrbuch-3.aux ../../complex/complex-csli.aux  >tmp.aux
+	bibtool -r ../../hpsg/.bibtool77-no-comments  -x tmp.aux -o $(PUB_FILE).tmp
 	sed -e 's/-u//g'  $(PUB_FILE).tmp  >$(PUB_FILE).tmp.neu
-	../hpsg/make_bib_header
+	../../hpsg/make_bib_header
 	cat bib_header.txt $(PUB_FILE).tmp.neu > $(PUB_FILE)
 	rm $(PUB_FILE).tmp $(PUB_FILE).tmp.neu
 
