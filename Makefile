@@ -141,7 +141,8 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 
 
 gt.bib: ../../../Bibliographien/biblio.bib
-	bibtool -r ../../hpsg/.bibtool77-no-comments  -x grammatical-theory.aux -o gt-tmp.bib
+	xelatex bib-creation; bibtex bib-creation; xelatex bib-creation
+	bibtool -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
 	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
 	\rm -r gt-tmp.bib
 
