@@ -41,7 +41,7 @@ Implemented fragments exist for the following languages:
 In addition, \citet*[\page 15]{BCPW2007a} mention an implementation for Classical Arabic\il{Arabic}.
 
 Some of the systems for the processing of Categorial Grammars have been augmented by probabilistic\is{statistics}
-components, so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some systems can derive lexical items from corpora and \citet{Briscoe2000a} and \citet{Villavicencio2002a} use statistical
+components, so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some systems can derive lexical items from corpora, and \citet{Briscoe2000a} and \citet{Villavicencio2002a} use statistical
 information in their UG"=based\is{Universal Grammar (UG)} language acquisition models.\is{language acquisition}
 
 
@@ -78,7 +78,7 @@ This rule combines an X looking for a Y with a Y and requires that Y occurs to t
 The result of this combination is an X that no longer requires a Y. X/Y is called the \emph{functor}\is{functor}
 and Y is the \emph{argument}\is{argument} of the functor.
 
-Valence is encoded only once in Categorial Grammar, as in \gbt, in the lexicon. In GPSG\indexgpsg, valence information was present in grammatical rules
+As in \gbt, valence is encoded only once in Categorial Grammar, in the lexicon. In GPSG\indexgpsg, valence information was present in grammatical rules
 and in the \subcatf of the lexical entry.
 
 Figure~\vref{abb-cg-transitives-Verb} shows how a lexical entry for a transitive verb is combined
@@ -99,7 +99,7 @@ vp/np   & np\\
 }
 \caption{\label{abb-cg-transitives-Verb}Combination of a verb and its object (preliminary)}
 \end{figure}%
-A derivation in CG is basically a binary branching tree, it is however mostly represented as follows:
+A derivation in CG is basically a binary branching tree; it is, however, mostly represented as follows:
 an arrow under a pair of categories indicates that these have been combined via a combinatorial rule. The direction of this arrow indicates the direction
 of this combination. The result is given beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to Figure~\ref{abb-cg-transitives-Verb}.
 \begin{figure}
@@ -116,7 +116,7 @@ sn edges
 \caption{\label{Abb-CG-als-Baum}Derivation in Figure~\ref{abb-cg-transitives-Verb} as a tree diagram}
 \end{figure}%
 One usually assumes left associativity\is{left associativity}
-for `/', that is, (vp/pp)/np = vp/pp/np.\is{/|)}
+for `/'; that is, (vp/pp)/np = vp/pp/np.\is{/|)}
 
 If we look at the lexical entries in (\ref{LE-CG}), it becomes apparent that the category v does not appear. The lexicon only determines what the product of
 combination of a lexical entry with its arguments is. The symbol for vp can also be eliminated: an (English) vp is something that requires an NP to its left in
@@ -211,14 +211,14 @@ Jacob & eats         & apples\\
 \hr & \hr          & \hr \\
 np:\relation{jacob}  & (s\bs np)/np: \lambda y.\lambda x.eat'(x, y) & np:apples'\\
          & \multicolumn{2}{c@{}}{\forwardapp}\\
-         & \multicolumn{2}{c@{}}{\begin{tabular}[t]{@{}l@{}l@{}}
-                              s\bs np&: $\lambda y.\lambda x.eat'(x, y)\; apples'$\\
-                                     &= $\lambda x.eat'(x, apples')$\\
+         & \multicolumn{2}{c@{}}{\begin{tabular}[t]{@{}l@{~}l@{}}
+                              $s\bs np$ &: $\lambda y.\lambda x.eat'(x, y)\; apples'$\\[4pt]
+                                      &= $\lambda x.eat'(x, apples')$\\
                               \end{tabular}}\\
 \multicolumn{3}{@{}c@{}}{\backwardapp}\\
-\multicolumn{3}{c@{}}{\begin{tabular}[t]{@{}l@{}l@{}}
-                    s&: $\lambda x.eat'(x, apples')\; jacob'$\\
-                     &= $eat'(jacob', apples')$\\
+\multicolumn{3}{c@{}}{\begin{tabular}[t]{@{}l@{~}l@{}}
+                    $s$ &: $\lambda x.eat'(x, apples')\; jacob'$\\[4pt]
+                      &= $eat'(jacob', apples')$\\
                               \end{tabular}}\\
 }}
 \caption{\label{Abb-Semantik-CG}Meaning composition in Categorial Grammar}
@@ -472,7 +472,7 @@ saturation of arguments always took place in a fixed order: the argument furthes
 combined first with the functor, \eg (s\bs np)/pp first combined with
 the PP, and the result of this combination was combined with the NP.
 
-There are a number of possibilities to analyze ordering variants in German: \citet{Uszkoreit86b} suggests accounting for possible orders lexically, that is, that
+There are a number of possibilities to analyze ordering variants in German: \citet{Uszkoreit86b} suggests accounting for possible orders lexically; that is, that
 each possible order corresponds to a lexical item. One would therefore have at least six lexical items for a ditransitive verb. \citet[\page 257]{Briscoe2000a} and 
 \citet[\page 96--98]{Villavicencio2002a} propose a variant of this analysis where the order of arguments is modified in the syntax: a syntactic rule can, for example, change
 the order (S/PRT)/NP into (S/NP)/PRT.
@@ -508,7 +508,8 @@ These apples, Harry must have been eating.
 \ex apples which Harry devours
 \zl
 The fronted NP \emph{these apples} and the relative pronoun \emph{which} are both functors in the analysis of (\mex{0}) which take s/np as their argument.
-Using the machinery introduced up to now, we cannot assign the category s/np to the strings in (\mex{0}) although it is intuitively the case that \emph{Harry devours}
+Using the machinery introduced up to now, we cannot assign the category s/np to the strings
+\emph{Harry must have been eating} and \emph{Harry devours} in (\mex{0}) although it is intuitively the case that \emph{Harry devours}
 is a sentence missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type raising} and forward\is{composition!forward}
 and backward composition\is{composition!backward}. Both of these operations will be introduced in the following sections.
 
@@ -810,7 +811,7 @@ s/np but rather (s/pp)/np and as such, cannot be directly combined with the rela
 about which John talked
 \z
 In the lexical entry (\ref{le-relpron-Steedman}b), \emph{which} requires something to the left of it, which requires a noun phrase in order to form a complete
-prepositional phrase, that is, \emph{which} selects a preposition. Morrill noted that there is a need
+prepositional phrase; that is, \emph{which} selects a preposition. Morrill noted that there is a need
 to postulate further lexical items for cases like (\mex{1}) in which the relative pronoun occurs in the middle of the fronted phrase.
 \ea
 the contract [the loss of which after so much wrangling] John would finally have to pay for
@@ -825,9 +826,9 @@ for the derivation of a pied-piping construction with an argument NP or a PP:
 \zl
 These lexical items are still not enough, however, as (\mex{0}b) contains a PP but this PP corresponds to an argument PP, which is required
 for (\ref{Beispiel-about-which}). To analyze (\ref{Beispiel-Minister}), which involves a PP adjunct, we need to assume the category (s\bs np)/(s\bs np)  for the prepositional
-phrase \emph{in the middle of whose seremon}. We therefore also require at least three additional items for relative pronouns.
+phrase \emph{in the middle of whose sermon}. We therefore also require at least three additional items for relative pronouns.
 
-By introducing new operations, Morrill manages to reduce the number of lexical entries for \emph{which}, however, the fact remains
+By introducing new operations, Morrill manages to reduce the number of lexical entries for \emph{which}; however, the fact remains
 that he has to mention the categories which can occur in pied-piping constructions in the lexical entry of the relative pronoun.
 
 Furthermore, the observation that relative clauses consist of a phrase with a relative pronoun plus a sentence missing a relative phrase
