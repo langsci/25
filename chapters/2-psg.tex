@@ -37,13 +37,13 @@ complex units. A simple phrase structure grammar which can be used to analyze (\
 \ea
 \label{bsp-grammatik-psg}
 \begin{tabular}[t]{@{}l@{ }l}
-{NP} & {$\to$ D N}\\          
+{NP} & {$\to$ Det N}\\          
 {S}  & {$\to$ NP NP NP V}
 \end{tabular}\hspace{2cm}%
 \begin{tabular}[t]{@{}l@{ }l}
 {NP} & {$\to$ er}\\
-{D}  & {$\to$ das}\\
-{D}  & {$\to$ dem}\\
+{Det}  & {$\to$ das}\\
+{Det}  & {$\to$ dem}\\
 \end{tabular}\hspace{8mm}
 \begin{tabular}[t]{@{}l@{ }l}
 {N} & {$\to$ Buch}\\
@@ -51,8 +51,8 @@ complex units. A simple phrase structure grammar which can be used to analyze (\
 {V} & {$\to$ gibt}\\
 \end{tabular}
 \z
-We can therefore interpret a rule such as NP $\to$\is{$\to$} D N as meaning that a noun phrase, that is, something which is assigned the symbol NP, can consist
-of a determiner (D) and a noun (N).
+We can therefore interpret a rule such as NP $\to$\is{$\to$} Det N as meaning that a noun phrase, that is, something which is assigned the symbol NP, can consist
+of a determiner (Det) and a noun (N).
 
 We can analyze the sentence in (\mex{-1}) using the grammar in (\mex{0}) in the following way:
 first, we take the first word in the sentence and check if there is a rule in which this word occurs on the right"=hand
@@ -61,7 +61,7 @@ in lines 2--4, 6--7 and 9 of the derivation in (\mex{1})\vpageref*{bsp-anwendung
 instance, in line~2 \emph{er} is replaced by NP.
 If there are two or more symbols which occur together on the right"=hand side of a rule, then all
 these words are replaced with the symbol on the left. This happens in lines 5, 8 and 10. For
-instance, in line 5 and 8, D and N are rewritten as NP.
+instance, in line 5 and 8, Det and N are rewritten as NP.
 %\begin{figure}
 \ea
 \label{bsp-anwendung-grammatik}
@@ -69,12 +69,12 @@ instance, in line 5 and 8, D and N are rewritten as NP.
  & \multicolumn{6}{l@{}}{words and symbols} & rules that are applied\\\hline
  1 & er            & das          & Buch          & dem          & Mann & gibt                \\
  2 & {NP}          & das          & Buch          & dem          & Mann & gibt & {NP $\to$ er}  \\
- 3 & NP            & {D}          & Buch          & dem          & Mann & gibt & {D $\to$ das}  \\
- 4 & NP            & D            & {N}           & dem          & Mann & gibt & {N $\to$ Buch} \\
- 5 & NP            &              & {NP}          & dem          & Mann & gibt & {NP $\to$ D N}\\
- 6 & NP            &              & NP            & {D}          & Mann & gibt & {D $\to$ dem}  \\
- 7 & NP            &              & NP            & D            & {N}  & gibt & {N $\to$ Mann} \\
- 8 & NP            &              & NP            &              & {NP} & gibt & {NP $\to$ D N}\\
+ 3 & NP            & Det          & Buch          & dem          & Mann & gibt & {Det $\to$ das}  \\
+ 4 & NP            & Det          & N             & dem          & Mann & gibt & {N $\to$ Buch} \\
+ 5 & NP            &              & NP            & dem          & Mann & gibt & {NP $\to$ Det N}\\
+ 6 & NP            &              & NP            & Det          & Mann & gibt & {Det $\to$ dem}  \\
+ 7 & NP            &              & NP            & Det          & N    & gibt & {N $\to$ Mann} \\
+ 8 & NP            &              & NP            &              & NP   & gibt & {NP $\to$ Det N}\\
  9 & NP            &              & NP            &              & NP   & {V} & {V $\to$ gibt}  \\
 10 &               &              &               &              &      & {S} & {S $\to$ NP NP NP V}\\
 \end{tabular}
@@ -127,9 +127,9 @@ book the woman gives'}
 \end{figure}%
 The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP nodes and the V node\is{dominance}.
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
-relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the mother node\is{node!mother}
+relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
-The NP node and V are sisters\is{node!sister} since they have the same mother node.
+The NP node and V are \emph{sisters}\is{node!sister} since they have the same mother node.
 If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
 If there is exactly one daughter, then we have a unary\is{unary}\is{branching!unary} branching
 structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
@@ -138,7 +138,7 @@ if they are directly next to each other.
 Phrase structure rules are often omitted in linguistic publications. Instead, authors opt for tree diagrams or the compact equivalent bracket notation
 such as (\mex{1}).
 \ea
-\gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{D} das] [\sub{N} Buch]]  [\sub{NP} [\sub{D} dem] [\sub{N} Mann]] [\sub{V} gibt]]\\
+\gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{Det} das] [\sub{N} Buch]]  [\sub{NP} [\sub{Det} dem] [\sub{N} Mann]] [\sub{V} gibt]]\\
      {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       man     {}      gives\\  
 \z
 Nevertheless, it is the grammatical rules which are actually important since these represent grammatical knowledge which is independent of specific structures.
@@ -157,13 +157,13 @@ be used to analyze these kinds of sentences (see exercise \ref{ua-psg-eins}). An
 
 \ea\label{psg-binaer}
 \begin{tabular}[t]{@{}l@{ }l@{}}
-NP & $\to$ D N  \\
+NP & $\to$ Det N  \\
 V  & $\to$ NP V\\
 \end{tabular}\hspace{2cm}%
 \begin{tabular}[t]{@{}l@{ }l}
-{NP} & {$\to$ er}\\
-{D}  & {$\to$ das}\\
-{D}  & {$\to$ dem}\\
+{NP}  & {$\to$ er}\\
+{Det} & {$\to$ das}\\
+{Det} & {$\to$ dem}\\
 \end{tabular}\hspace{8mm}
 \begin{tabular}[t]{@{}l@{ }l}
 {N} & {$\to$ Buch}\\
@@ -205,8 +205,8 @@ license the ungrammatical sentences in (\mex{1}b--d):\footnote{
      the man expects\\
 }
 \ex[*]{
-\gll des Mannes er das Buch dem Mann gibt\\
-	 the.\gen{} man.\gen{} he the.\dat{} book.\dat{} the man gives\\
+\gll des        Mannes     er        das Buch dem Mann gibt\\
+     the.\gen{} man.\gen{} he.\nom{} the.\acc{} book the.\dat{} man gives\\
 }
 \zl
 The number of arguments required by a verb must be somehow represented in the grammar. In the following chapters, we will see exactly
@@ -264,13 +264,13 @@ It is possible to capture these relations with grammatical rules by increasing
 the number of symbols we use. Instead of the rule S $\to$ NP NP NP V, we can use
 the following:
 \ea
-\begin{tabular}[t]{@{}l@{ }l}
-S  & $\to$ NP\_1\_sg NP NP V\_1\_sg\\
-S  & $\to$ NP\_2\_sg NP NP V\_2\_sg\\
-S  & $\to$ NP\_3\_sg NP NP V\_3\_sg\\
-S  & $\to$ NP\_1\_pl NP NP V\_1\_pl\\
-S  & $\to$ NP\_2\_pl NP NP V\_2\_pl\\
-S  & $\to$ NP\_3\_pl NP NP V\_3\_pl\\
+\begin{tabular}[t]{@{}l@{ }l@{~~}l@{~~}l@{~~}l}
+S  & $\to$ NP\_1\_sg & NP & NP & V\_1\_sg\\
+S  & $\to$ NP\_2\_sg & NP & NP & V\_2\_sg\\
+S  & $\to$ NP\_3\_sg & NP & NP & V\_3\_sg\\
+S  & $\to$ NP\_1\_pl & NP & NP & V\_1\_pl\\
+S  & $\to$ NP\_2\_pl & NP & NP & V\_2\_pl\\
+S  & $\to$ NP\_3\_pl & NP & NP & V\_3\_pl\\
 \end{tabular}
 \z
 This would mean that we need six different symbols for noun phrases and verbs respectively, as well as six rules rather than one.
@@ -279,13 +279,13 @@ In order to account for case assignment by the verb, we can incorporate case inf
 get rules such as the following:
 \ea
 \label{ditrans-ps-regeln}
-\begin{tabular}[t]{@{}l@{ }l}
-S  & $\to$ NP\_1\_sg\_nom NP\_dat NP\_acc V\_1\_sg\_nom\_dat\_acc\\
-S  & $\to$ NP\_2\_sg\_nom NP\_dat NP\_acc V\_2\_sg\_nom\_dat\_acc\\
-S  & $\to$ NP\_3\_sg\_nom NP\_dat NP\_acc V\_3\_sg\_nom\_dat\_acc\\
-S  & $\to$ NP\_1\_pl\_nom NP\_dat NP\_acc V\_1\_pl\_nom\_dat\_acc\\
-S  & $\to$ NP\_2\_pl\_nom NP\_dat NP\_acc V\_2\_pl\_nom\_dat\_acc\\
-S  & $\to$ NP\_3\_pl\_nom NP\_dat NP\_acc V\_3\_pl\_nom\_dat\_acc\\
+\begin{tabular}[t]{@{}l@{ }l@{~~}l@{~~}l@{~~}l}
+S  & $\to$ NP\_1\_sg\_nom & NP\_dat & NP\_acc & V\_1\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_2\_sg\_nom & NP\_dat & NP\_acc & V\_2\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_3\_sg\_nom & NP\_dat & NP\_acc & V\_3\_sg\_nom\_dat\_acc\\
+S  & $\to$ NP\_1\_pl\_nom & NP\_dat & NP\_acc & V\_1\_pl\_nom\_dat\_acc\\
+S  & $\to$ NP\_2\_pl\_nom & NP\_dat & NP\_acc & V\_2\_pl\_nom\_dat\_acc\\
+S  & $\to$ NP\_3\_pl\_nom & NP\_dat & NP\_acc & V\_3\_pl\_nom\_dat\_acc\\
 \end{tabular}
 \z
 Since it is necessary to differentiate between noun phrases in four cases, we have a total of six symbols for NPs in the nominative and three symbols for NPs with
@@ -314,44 +314,44 @@ we have to increase the number of symbols we assume for verbs.\is{valence}
 In the rules above, the information about the number of arguments required by a verb is included in the marking `nom\_dat\_acc'.
 
 In order to capture the determiner"=noun agreement in (\mex{1}), we have to incorporate information about gender\is{gender} (fem, mas, neu),
-number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak\footnote{
+number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak)\footnote{
 These are inflectional classes for adjectives which are also relevant for some nouns such as \emph{Beamter} `civil servant', 
-\emph{Verwandter} `relative', \emph{Gesandter} `envoy', \ldots).
+\emph{Verwandter} `relative', \emph{Gesandter} `envoy'.
 For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.%
-}).
+}.
 \eal\settowidth\jamwidth{(Inflectional class)}
 \ex 
 \gll der Mann, die Frau, das Buch\\
-	 the man the woman the book\\\jambox{(gender)}
+	 the.\mas{} man(\mas) the.\fem{} woman(\fem) the.\neu{} book(\neu)\\\jambox{(gender)}
 \ex 
 \gll das Buch, die Bücher\\
-	 the book the books\\\jambox{(number)}
+	 the book.\sg{} the books.\pl\\\jambox{(number)}
 \ex 
 \gll des Buches, dem Buch\\
-	 the.\gen{} book the.\dat{} book\\\jambox{(case)}
+	 the.\gen{} book.\gen{} the.\dat{} book\\\jambox{(case)}
 \ex\is{inflectional class} 
 \gll ein Beamter, der Beamte\\
 	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
 \zl
-Instead of the rule NP $\to$ D N, we will have to use rules such as those in (\mex{1}):
+Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):
 \ea
 %\resizebox{\linewidth}{!}{
-\begin{tabular}[t]{@{}l@{ }l@{\hspace{4mm}}l@{ }l}
-NP\_3\_sg\_nom  & $\to$ D\_fem\_sg\_nom\_weak N\_fem\_sg\_nom\_weak \\
-NP\_3\_sg\_nom  & $\to$ D\_mas\_sg\_nom\_weak N\_mas\_sg\_nom\_weak \\
-NP\_3\_sg\_nom  & $\to$ D\_neu\_sg\_nom\_weak N\_neu\_sg\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ D\_fem\_pl\_nom\_weak N\_fem\_pl\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ D\_mas\_pl\_nom\_weak N\_mas\_pl\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ D\_neu\_pl\_nom\_weak N\_neu\_pl\_nom\_weak \\[2mm]
+\begin{tabular}[t]{@{}l@{ }l@{~~}l}
+NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom\_weak & N\_fem\_sg\_nom\_weak \\
+NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom\_weak & N\_mas\_sg\_nom\_weak \\
+NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom\_weak & N\_neu\_sg\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom\_weak & N\_fem\_pl\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom\_weak & N\_mas\_pl\_nom\_weak \\
+NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom\_weak & N\_neu\_pl\_nom\_weak \\[2mm]
 \end{tabular}
 
-\begin{tabular}[t]{@{}l@{ }l@{\hspace{4mm}}l@{ }l}
-NP\_3\_sg\_nom  & $\to$ D\_fem\_sg\_nom\_stark N\_fem\_sg\_nom\_stark \\
-NP\_3\_sg\_nom  & $\to$ D\_mas\_sg\_nom\_stark N\_mas\_sg\_nom\_stark \\
-NP\_3\_sg\_nom  & $\to$ D\_neu\_sg\_nom\_stark N\_neu\_sg\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ D\_fem\_pl\_nom\_stark N\_fem\_pl\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ D\_mas\_pl\_nom\_stark N\_mas\_pl\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ D\_neu\_pl\_nom\_stark N\_neu\_pl\_nom\_stark \\[2mm]
+\begin{tabular}[t]{@{}l@{ }l@{~~}l}
+NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom\_stark & N\_fem\_sg\_nom\_stark \\
+NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom\_stark & N\_mas\_sg\_nom\_stark \\
+NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom\_stark & N\_neu\_sg\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom\_stark & N\_fem\_pl\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom\_stark & N\_mas\_pl\_nom\_stark \\
+NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom\_stark & N\_neu\_pl\_nom\_stark \\[2mm]
 \end{tabular}
 \z
 (\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
@@ -375,8 +375,8 @@ symbol NP. For determiners and nouns, we would adopt an additional feature for g
 
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
-NP(3,sg,nom)  & $\to$ D(fem,sg,nom,strong) N(fem,sg,nom,strong)\\
-NP(3,sg,nom)  & $\to$ D(mas,sg,nom,strong) N(mas,sg,nom,strong)\\
+NP(3,sg,nom)  & $\to$ Det(fem,sg,nom,strong) N(fem,sg,nom,strong)\\
+NP(3,sg,nom)  & $\to$ Det(mas,sg,nom,strong) N(mas,sg,nom,strong)\\
 \end{tabular}
 \z
 
@@ -384,7 +384,7 @@ If we were to use variables rather than the values in (\mex{0}), we would get th
 \ea
 \label{Regel-mit-Variablen}
 \begin{tabular}[t]{@{}l@{ }l@{ }l}
-NP({3},{Num},{Case}) & $\to$ & D(Gen,{Num},{Case},Infl) N(Gen,{Num},{Case},Infl)\\
+NP({3},{Num},{Case}) & $\to$ & Det(Gen,{Num},{Case},Infl) N(Gen,{Num},{Case},Infl)\\
 \end{tabular}
 \z
 The values of the variables here are not important. What is important is that they match. The value
@@ -393,7 +393,7 @@ kind of restrictions on the values can, of course, be determined in the lexicon:
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
 NP(3,sg,nom)  & $\to$ es\\
-D(mas,sg,nom,strong)  & $\to$ des\\
+Det(mas,sg,nom,strong)  & $\to$ des\\
 \end{tabular}
 \z
 
@@ -442,8 +442,7 @@ assign the meaning in (\mex{1}b) to the sentence in (\mex{1}a).
 \ex\label{Bsp-schlafen-max} 
 \relation{schlafen}(\relation{max})
 \zl
-Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use
-prime symbols to indicate
+Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
 that we are dealing with word meanings and not actual words. At first glance, it may not seem that we have really gained anything
 by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
 It is, however, important to concentrate on a single verb form as inflection is irrelevant when it comes to meaning. We can see this by comparing the 
@@ -460,7 +459,17 @@ examples in (\mex{1}a) and (\mex{1}b):
 \zl
 
 \noindent
-When looking at the meaning in (\mex{-1}b), we can consider which part of the meaning comes from each word.
+To enhance readability I will use English translations of the predicates in semantic representations
+from now on.\footnote{
+  Note that I do not claim that English is suited as representation language for semantic relations
+  and concepts that can be expressed in other languages.
+}
+So the meaning of (\mex{-1}a) is represented as (\mex{1}) rather then (\mex{-1}b):
+\ea
+\label{sleep-max}
+\relation{sleep}(\relation{max})
+\z
+When looking at the meaning in (\mex{-0}), we can consider which part of the meaning comes from each word.
 It seems relatively intuitive that \relation{max} comes from \emph{Max}, but the trickier question is what exactly
 \emph{schläft} `sleeps' contributes in terms of meaning. If we think about what characterizes a `sleeping' event, we
 know that there is typically an individual who is sleeping. This information is part of the meaning of the verb \emph{schlafen}
@@ -480,21 +489,21 @@ with various subjects:
      Xaver sleeps\\
 \glt `Xaver is sleeping.'
 \zl
-We can therefore abstract away from any specific use of \relation{schlafen} and instead of, for example, \relation{max} in (\mex{-2}b), we
-use a variable (\eg x). This x can then be replaced by \relation{paul}, \relation{mio} or \relation{xaver} in a given sentence. To allow us
+We can therefore abstract away from any specific use of \relation{sleep} and instead of, for example, \relation{max} in (\mex{-2}b), we
+use a variable (\eg $x$). This $x$ can then be replaced by \relation{paul}, \relation{mio} or \relation{xaver} in a given sentence. To allow us
 to access these variables in a given meaning, we can write them with a $\lambda$ in front. Accordingly, \emph{schläft} `sleeps' will have
 the following meaning:
 \ea
-$\lambda x$ \relation{sleep}(x)
+$\lambda x~\relation{sleep}(x)$
 \z
-
-The step from (\ref{Bsp-schlafen-max}) to (\mex{0}) is referred to as \emph{lambda abstraction}\is{lambda"=abstraction@$\lambda$"=abstraction}.
+%
+The step from (\ref{sleep-max}) to (\mex{0}) is referred to as \emph{lambda abstraction}\is{lambda"=abstraction@$\lambda$"=abstraction}.
 The combination of the expression (\mex{0}) with the meaning of its arguments happens in the following way: we remove the $\lambda$ and the 
 corresponding variable and then replace all instances of the variable with the meaning of the
 argument. If we combine (\mex{0}) and \relation{max} as in (\mex{1}),
 we arrive at the meaning in (\ref{Bsp-schlafen-max}). 
 \ea
-$\lambda x$ \relation{sleep}(x) \relation{max}
+$\lambda x~\relation{sleep}(x)$ \relation{max}
 \z
 The process is called $\beta$"=reduction\is{beta"=reduction@$\beta$"=reduction} or 
 $\lambda$"=conversion\is{lambda"=conversion@$\lambda$"=conversion}. To show this further, let us consider an example with a transitive verb. The sentence
@@ -508,7 +517,7 @@ in (\mex{1}a) has the meaning given in (\mex{1}b):
 \zl
 The $\lambda$"=abstraction of \emph{mag} `likes' is shown in (\mex{1}):
 \ea
-$\lambda y \lambda x$ \relation{like}(x, y)
+$\lambda y \lambda x~\relation{like}(x, y)$
 \z
 Note that it is always the first $\lambda$ that has to be used first. The variable $y$ corresponds
 to the object of \emph{mögen}. For languages like English it is assumed that the object forms a verb
@@ -522,14 +531,14 @@ If we combine the representation in (\mex{0}) with that of the object \emph{Lott
 $\beta$"=reduction, (\mex{1}b):
 \eal
 \label{lambda-moegen}
-\ex $\lambda y \lambda x$ \relation{like}(x, y) \relation{lotte}
-\ex $\lambda x$ \relation{like}(x, \relation{lotte})
+\ex $\lambda y \lambda x~\relation{like}(x, y) \relation{lotte}$
+\ex $\lambda x~\relation{like}(x, \relation{lotte})$
 \zl
 
 \noindent
 This meaning can in turn be combined with the subject and we then get (\mex{1}a) and (\mex{1}b) after $\beta$"=reduction:
 \eal
-\ex $\lambda x$ \relation{like}(x, \relation{lotte}) \relation{max}
+\ex $\lambda x~\relation{like}(x, \relation{lotte}) \relation{max}$
 \ex \relation{like}(\relation{max}, \relation{lotte})
 \zl
 
@@ -546,10 +555,10 @@ combination of the individual meanings in the correct order. We can therefore ta
 \ex S(V$'$ NP$'$) $\to$ NP(nom, NP$'$) V(V$'$)
 \zl
 V$'$ stands for the meaning of V and NP$'$ for the meaning of the NP(nom). V$'$ NP$'$ stands for the combination of V$'$ and NP$'$. When analyzing
-(\ref{Bsp-Max-schlaeft}), the meaning of V$'$ is $\lambda x$ schlafen(x) and the meaning of NP$'$ is \relation{max}. The combination of V$'$ NP$'$
+(\ref{Bsp-Max-schlaeft}), the meaning of V$'$ is $\lambda x~\relation{sleep}(x)$ and the meaning of NP$'$ is \relation{max}. The combination of V$'$ NP$'$
 corresponds to (\mex{1}a) or after $\beta$"=reduction to (\ref{Bsp-schlafen-max}) -- repeated here as (\mex{1}b):
 \eal
-\ex $\lambda x$ \relation{sleep}(x) \relation{max}
+\ex $\lambda x~\relation{sleep}(x) \relation{max}$
 \ex \relation{sleep}(\relation{max})
 \zl
 
@@ -605,6 +614,7 @@ noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a).
 	 a smart woman from Stuttgart who we know\\
 \zl
 
+\noindent
 As well as determiners and nouns, noun phrases can also contain adjectives, prepositional phrases and relative clauses. 
 The additional elements in (\mex{0}) are adjuncts\is{adjunct|(}. They restrict the set of objects which the noun phrase 
 refers to. Whereas (\mex{0}a) refers to a being which has the property of being a woman, the referent of (\mex{0}b) must
@@ -653,7 +663,7 @@ is still possible in (\mex{1}):
 If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
 that the adjective and noun form a unit.
 
-The noun phrases with adjectives discussed thus far can be explained by the following rules:
+The noun phrases with adjectives discussed thus far can be captured by the following rules:
 
 \eal
 \label{NP-Regeln}
@@ -826,7 +836,7 @@ sn edges
 In addition to the previously discussed NP structures, there are other structures where the determiner or noun is missing.
 Nouns can be omitted via ellipsis. (\mex{1}) gives an example of noun phrases, where a noun that does not require a complement
 has been omitted. The examples in (\mex{2}) show NPs in which only one determiner and complement of the noun has been realized,
-but not the noun itself:%\todoandrew{Ist das nicht \emph{a smart one}?}
+but not the noun itself. The underscore marks the position where the noun would normally occur. 
 \eal
 \label{ex-nounless-np}
 \ex 
@@ -863,10 +873,12 @@ but not the noun itself:%\todoandrew{Ist das nicht \emph{a smart one}?}
 	 \spacebr{}no not the coming of.the carpenter the {} of.the plumber is important\\
 \glt `No, it isn't the visit of the carpenter, but rather the visit of the plumber that is important.'
 \zl
-The underscore marks the position where the noun would normally occur. In English, the pronoun
-\emph{one} must often be used in the corresponding position, but in German the noun\is{noun} is
-simply omitted. (See \citet*[Section~4.12]{FLGR2012a} for English\il{English} examples without the
-pronoun \emph{one}.)
+In English, the pronoun
+\emph{one} must often be used in the corresponding position,\footnote{
+  See \citet*[Section~4.12]{FLGR2012a} for English\il{English} examples without the
+  pronoun \emph{one}.
+} but in German the noun\is{noun} is
+simply omitted.
 %\todostefan{ich habe hier mit absicht ``often'' hinzugefügt, weil in den obengenannten beispielen
 %man nicht in allen Fällen ``one'' benutzen kann, vgl. (\mex{0}c)}
 In phrase structure grammars, this can be described by a so"=called \emph{epsilon production}\is{epsilon production}\is{empty element}.
@@ -1308,7 +1320,7 @@ further: instead of using explicit category symbols such as N, V, P and A for le
 NP, VP, PP and AP for phrasal categories, one can simply use a variable for the word class in question and speak of X and XP.
 
 This form of abstraction can be found in so"=called \xbart (or X"=bar theory, the term \emph{bar}
-refers to the line above the symbol.), which was developed by \citet{Chomsky70a} and refined by
+refers to the line above the symbol), which was developed by \citet{Chomsky70a} and refined by
 \citet{Jackendoff77}. This form of abstract rules plays an important role in many different
 theories. For example: Government \& Binding\indexgb (Chapter~\ref{Kapitel-GB}), Generalized Phrase
 Structure Grammar\indexgpsg (Chapter~\ref{Kapitel-GPSG}) and Lexical Functional Grammar\indexlfg
@@ -1514,7 +1526,7 @@ of modifiers. We can use this rule to derive phrases such as those in (\mex{1}):
 \eal
 \ex books
 \ex interesting books
-\ex interesting books from Stuttgart\\
+\ex interesting books from Stuttgart
 \zl
 Make reference to coordination data in your answer. Assume that symmetric coordination\is{coordination} requires that both
 coordinated phrases or words have the same syntactic category.
@@ -1586,7 +1598,7 @@ rules out the sentences in (\mex{2}).
 \glt `The man helps the woman now.'
 \ex 
 \gll Der Mann hilft der Frau neben dem Bushäuschen.\\
-     the.\nom{} man helps the.\dat{} woman next to.the bus.shelter\\
+     the.\nom{} man helps the.\dat{} woman next.to the bus.shelter\\
 \glt `The man helps the woman next to the bus shelter.'
 \ex 
 \gll Er gibt ihr das Buch jetzt.\\
@@ -1594,7 +1606,7 @@ rules out the sentences in (\mex{2}).
 \glt 'He gives her the book now.'
 \ex 
 \gll Er gibt ihr das Buch neben dem Bushäuschen.\\
-     he.\nom{} gives her.\dat{} the.\acc{} book next to.the bus.shelter\\
+     he.\nom{} gives her.\dat{} the.\acc{} book next.to the bus.shelter\\
 \glt `He gives her the book next to the bus shelter.'
 \ex 
 \gll Er wartet jetzt auf ein Wunder.\\
@@ -1602,11 +1614,11 @@ rules out the sentences in (\mex{2}).
 \glt `He is waiting for a miracle now.'
 \ex 
 \gll Er wartet neben dem Bushäuschen auf ein Wunder.\\
-     he.\nom{} waits next to.the.\dat{} bus.shelter on a miracle\\
+     he.\nom{} waits next.to the.\dat{} bus.shelter on a miracle\\
 \glt `He is waiting for a miracle next to the bus shelter.'
 \zl
 \item Install a Prolog system (\eg SWI"=Prolog\footnote{
-\url{http://www.swi-prolog.org/} 
+\url{http://www.swi-prolog.org} 
 })
 and try out your grammar. Details for the notation can be found in the corresponding handbook
 under the key word Definite Clause Grammar (DCG)\is{Definite Clause Grammar (DCG)}.
