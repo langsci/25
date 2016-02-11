@@ -40,6 +40,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	chapters/innateness.tex\
 	chapters/acquisition.tex\
 	chapters/complexity.tex\
+	chapters/locality.tex\
 	chapters/phrasal.tex\
 	chapters/empty.tex\
 	chapters/recursion.tex\
