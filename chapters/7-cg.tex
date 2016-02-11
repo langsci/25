@@ -18,7 +18,7 @@ The 2569"=page grammar of the \emph{Institut für Deutsche Sprache} in Mannheim 
 \citet{Fanselow81a-u} worked on morphology in the framework of Montague Grammar.  \citet{Uszkoreit86d},
 \citet{Karttunen86a,Karttunen89a-u} and \citet*{CKZ88a} developed combinations of unification"=based approaches and Categorial Grammar.
 
-The basic operations for combining linguistic objects are rather simple and well"=understood, so
+The basic operations for combining linguistic objects are rather simple and well"=understood so
 that it is no surprise that there are many systems for the development and processing of Categorial Grammars
 \citep*{YK90a-u,Carpenter1994a-u,BvN94a-u,Llore1995a-u,Koenig99a-u,Moot2002a-u,WB2003a-u,BCPW2007a,Morrill2012a}. An
 important contribution has been made by Mark Steedman's group (see for instance \citealp*{CHS2002a-u,CC2007a-u}).
@@ -41,7 +41,7 @@ Implemented fragments exist for the following languages:
 In addition, \citet*[\page 15]{BCPW2007a} mention an implementation for Classical Arabic\il{Arabic}.
 
 Some of the systems for the processing of Categorial Grammars have been augmented by probabilistic\is{statistics}
-components, so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some systems can derive lexical items from corpora, and \citet{Briscoe2000a} and \citet{Villavicencio2002a} use statistical
+components so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some systems can derive lexical items from corpora, and \citet{Briscoe2000a} and \citet{Villavicencio2002a} use statistical
 information in their UG"=based\is{Universal Grammar (UG)} language acquisition models.\is{language acquisition}
 
 
@@ -228,7 +228,7 @@ After forward and backward application, $\beta$"=reduction is immediately applie
 \subsection{Adjuncts}
 
 As\is{adjunct|(} noted in Section~\ref{sec-intro-arg-adj}, adjuncts are optional. In phrase
-structure grammars, this can be captured for example by rules that have a certain element (for
+structure grammars, this can be captured, for example, by rules that have a certain element (for
 instance a VP) on the left"=hand side of the rule and the same element and an adjunct on the
 right"=hand side of the rule. Since the symbol on the left is the same as the one on the right, this rule can be
 applied arbitrarily many times. (\mex{1}) shows some examples of this:
@@ -383,7 +383,7 @@ isst & er  & ihn \\
 }}
 \caption{\label{Abbildung-CG-gibt-der-Mann-der-Frau-das-Buch}Analysis of verb-initial sentences following Steedman}
 \end{figure}%
-In Figure~\ref{Abbildung-CG-der-Mann-der-Frau-das-Buch-gibt} the verb is first combined with an
+In Figure~\ref{Abbildung-CG-der-Mann-der-Frau-das-Buch-gibt}, the verb is first combined with an
 accusative object, whereas in Figure~\ref{Abbildung-CG-gibt-der-Mann-der-Frau-das-Buch}, the verb is first combined with the subject. For criticism of these kinds of analyses
 with variable branching, see \citew{Netter92} and \citew{Mueller2005c,MuellerGS}.
 
@@ -432,7 +432,7 @@ A problem with this kind of analysis is that the verb \emph{isst} `eats', as wel
 Since adjuncts can occur before, after or between arguments of the verb in German, one would expect that \emph{morgen} `tomorrow' can occur before the verb
 \emph{isst}, since \emph{isst} is just a normal argument of the verbal trace in final position. As adjuncts do not change the categorial status of a projection, the phrase \emph{morgen isst er ihn} `tomorrow he eats him' should be able to
 occur in the same positions as \emph{isst er ihn}. This is not the case, however. If we replace
-\emph{isst er ihn} by \emph{morgen isst er ihn} in (\mex{1}a) the result is (\mex{1}b), which is ungrammatical.
+\emph{isst er ihn} by \emph{morgen isst er ihn} in (\mex{1}a), the result is (\mex{1}b), which is ungrammatical.
 \eal
 \ex[]{
 \gll Deshalb isst er ihn.\\
@@ -526,7 +526,7 @@ In (\mex{0}a), a verb or verb phrase selects an NP to its left (s\bs np). In (\m
 an NP to its left (s\bs np). 
 
 Type raising simply reverses the direction of selection: the VP in (\mex{0}a) is the functor and the
-NP is the argument, whereas in  (\mex{0}b), it is the type raised NP, which acts as the functor,
+NP is the argument, whereas in  (\mex{0}b), it is the type raised NP which acts as the functor,
 and the VP is the argument. In each case, the result of the combination is the same. This change of selectional direction may just seem like a trick at first glance, but as we will see, this
 trick can be extremely useful. First, however, we will introduce forward and backward composition.
 \is{type raising|)}
@@ -826,7 +826,7 @@ for the derivation of a pied-piping construction with an argument NP or a PP:
 \zl
 These lexical items are still not enough, however, as (\mex{0}b) contains a PP but this PP corresponds to an argument PP, which is required
 for (\ref{Beispiel-about-which}). To analyze (\ref{Beispiel-Minister}), which involves a PP adjunct, we need to assume the category (s\bs np)/(s\bs np)  for the prepositional
-phrase \emph{in the middle of whose sermon}. We therefore also require at least three additional items for relative pronouns.
+phrase \emph{in the middle of whose sermon}. We, therefore, also require at least three additional items for relative pronouns.
 
 By introducing new operations, Morrill manages to reduce the number of lexical entries for \emph{which}; however, the fact remains
 that he has to mention the categories which can occur in pied-piping constructions in the lexical entry of the relative pronoun.
