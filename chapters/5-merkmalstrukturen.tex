@@ -290,14 +290,14 @@ electric appliances, one can use the hierarchy in Figure~\vref{fig-electric-appl
 \end{tikzpicture}
 \caption{\label{fig-electric-appliance}Non"=linguistic example of multiple inheritance}
 \end{figure}%
-The most general type \type{electrical device} is the highest in Figure~\ref{fig-electric-appliance}. Electrical devices have certain properties, \eg 
+The most general type \type{electrical device} is the highest in Figure~\ref{fig-electric-appliance}. Electrical devices have certain properties, \eg, 
 a power supply with a certain power consumption. All subtypes of  \type{electrical device} ``inherit'' this property. In this way, \type{printing device} and
 \type{scanning device} also have a power supply with a specific power consumption. A
 \type{printing device} can produce information and a \type{scanning device} can read in information. A \type{photocopier} can both produce information and read it. Photocopiers have both the properties of scanning and printing devices.
 This is expressed by the connection between the two superordinate types and \type{photocopier} in
 Figure~\ref{fig-electric-appliance}. If a type is at the same time the subtype of several superordinate types, then we
 speak of \emph{multiple inheritance}\is{inheritance!multiple}. If devices can print, but not scan, they are of type \emph{printer}. This type can have further more
-specific subtypes, which in turn may have particular properties, \eg \type{laser printer}. New
+specific subtypes, which in turn may have particular properties, \eg, \type{laser printer}. New
 features can be added to subtypes, but it is also possible to make values of inherited features more
 specific. For example, the material that can be scanned with a \type{negative scanner} is far more
 restricted than that of the supertype \type{scanner}, since negative scanners can only scan negatives.
@@ -452,7 +452,7 @@ mother    & \ms[person]{
 }
 \z
 %\vspace{-\baselineskip}\end{figure}%
-Structures such as those described in (\mex{0}) are called cyclic because one ends up going in a circle if one follows a particular path: \eg the path 
+Structures such as those described in (\mex{0}) are called cyclic because one ends up going in a circle if one follows a particular path: \eg, the path 
 \textsc{father$|$""children$|$""\ldots$|$""father$|$""children$|$\ldots}\footnote{
 	The dots here stand for the path to \iboxt{2} in the list which is the value of \textsc{children}. See Exercise~\ref{ua-liste}.%
 }
@@ -479,7 +479,7 @@ If one unifies two descriptions, the result is a description which contains info
 
 The way unification works can be demonstrated with feature descriptions describing people. One can imagine that Bettina Kant goes to the private detective
 Max Müller and wants to find a specific person. Normally, those who go to a detective's office only come with a partial description of the person they
-are looking for, \eg the gender, hair color or date of birth. Perhaps even the registration number of the car belonging to the person is known.
+are looking for, \eg, the gender, hair color or date of birth. Perhaps even the registration number of the car belonging to the person is known.
 
 It is then expected of the detective that he or she provides information fitting the description. If
 we are looking for a blonde female named Meier (\mex{1}a), then we
