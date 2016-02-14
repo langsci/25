@@ -143,10 +143,10 @@ The symbols on the left of transformational rules do not necessarily have to be 
 as in Figure~\ref{fig-Passivtransformation}.
 
 Rewrite grammars were divided into four complexity classes\is{complexity class} based on the properties they
-have. The simplest grammars are assigned to the class 3, whereas the most complex are of type~0. The so"=called 
-context"=free grammars\is{context-free grammar} we have dealt with thus far are of type~2. Transformational grammars which allow symbols to
-be replaced by arbitrary other symbols are of type~0 \citep{PR73a-u}.\label{page-TG-Typ0} Research on the complexity
-of natural languages shows that the highest complexity level (type~0) is too complex for natural language. It follows from this
+have. The simplest grammars are assigned to the class 3, whereas the most complex are of Type-0. The so"=called 
+context"=free grammars\is{context-free grammar} we have dealt with thus far are of Type-2. Transformational grammars which allow symbols to
+be replaced by arbitrary other symbols are of Type-0 \citep{PR73a-u}.\label{page-TG-Typ0} Research on the complexity
+of natural languages shows that the highest complexity level (Type-0) is too complex for natural language. It follows from this
 -- assuming that one wants to have a restrictive formal apparatus for the description of grammatical knowledge \citep[\page 62]{Chomsky65a} -- that
 the form and potential power of transformations has to be restricted.\footnote{
 	For more on the power of formal languages, see Chapter~\ref{sec-generative-capacity}.
@@ -504,7 +504,7 @@ the highest argument is not treated as the external argument. It would therefore
 \label{Abschnitt-X-Bar}
 
 In\is{X theory@\xbar theory|(} GB, it is assumed that all syntactic structures licensed by the core grammar\is{core grammar}\footnote{
- \citet[\page 7--8]{Chomsky81a} distinguishes between a regular area of language which is determined by a grammar that
+ \citet[\page 7--8]{Chomsky81a} distinguishes between a regular area of language that is determined by a grammar that
  can be acquired using genetically determined language"=specific knowledge and a periphery\is{periphery}, to which irregular parts
  of language such as idioms (\eg, \emph{to pull the wool over sb.'s eyes}) belong. See Section~\ref{Abschnitt-musterbasiert}.
 }
@@ -2021,8 +2021,9 @@ description of \emph{wh}"=movement, for example (p.\,114).
 
 Probably the most detailed implementation of the GB/Barriers tradition is Stabler's Prolog implementation \citeyearpar{Stabler92a-u}.
 Stabler's achievement is certainly impressive, but his book confirms what has been claimed thus far: Stabler has to simply stipulate many
-things which are not explicitly mentioned in \emph{Barriers} (\eg, using feature"=value pairs when formalizing \xbar theory, which was borrowed
-from GPSG\indexgpsg) and some assumptions cannot be properly formalized and are simply ignored (see \citealp{Briscoe97a} for details).
+things which are not explicitly mentioned in \emph{Barriers} (\eg, using feature"=value pairs when
+formalizing \xbar theory, a practice that was borrowed from GPSG\indexgpsg) and some assumptions
+cannot be properly formalized and are simply ignored (see \citealp{Briscoe97a} for details). 
 
 
 GB analyses\label{Seite-Representationelle-GB} which fulfill certain requirements can be reformulated so that they no longer make use of transformations.
@@ -2035,7 +2036,7 @@ Koster \citeyear[\page ]{Koster78b-u}; \citeyear[\page 235]{Koster87a-u};
 \citealp[\page 14]{Frey93a}; \citealp[\page 87--88, 177--178]{Lohnstein93a-u}; \citealp[\page 38]{FC94a}; \citealp[\page 58]{Veenstra98a}, for example).
 These analyses can be implemented in the same way as corresponding HPSG analyses\indexhpsg (see
 Chapter~\ref{Kapitel-HPSG}) as computer-processable fragments and this has in fact been carried out
-for example for the analysis of verb position in German,\footnote{%
+for example for the analysis of verb position in German.\footnote{%
 	This shows that ten Hacken's contrasting of HPSG with GB and LFG \citep[Section~4.3]{TenHacken2007a}
         and the classification of these frameworks as belonging to different research paradigms is
         completely mistaken. In his classification, ten Hacken refers mainly to the model"=theoretic
@@ -2043,7 +2044,7 @@ for example for the analysis of verb position in German,\footnote{%
         \citep{Kaplan95a}. Furthermore, there is also a model"=theoretic variant of GB
 	\citep{Rogers98a-u}. For further discussion, see Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch}. 
 }
-but such implemented analyses differ from GB analyses with regard to their basic architecture and in small, but important details such as how one deals with
+However, such implemented analyses differ from GB analyses with regard to their basic architecture and in small, but important details such as how one deals with
 the interaction of long"=distance dependencies and coordination \citep{Gazdar81}. For a critical discussion and classification of movement analyses
 in Transformational Grammar, see \citew{Borsley2012a}. 
 

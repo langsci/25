@@ -11,14 +11,32 @@ generalizations and the way one can derive such generalizations.
 In Chapter~\ref{chap-innateness}, it was shown that all the evidence that has previously been
 brought forward in favor of innate linguistic knowledge is in fact controversial. In some cases, the
 facts are irrelevant to the discussion and in other cases, they could be explained in other
-ways. Sometimes, the chains of argumentation are not logically sound or its premises are not
+ways. Sometimes, the chains of argumentation are not logically sound or the premises are not
 supported. In other cases, the argumentation is circular. As a result, the question of whether there
 is innate linguistic knowledge still remains unanswered. All theories that presuppose the existence
 of this kind of knowledge are making very strong assumptions. If one assumes, as \citet{Kayne94a-u}
 for example, that all languages have the underlying structure [specifier [head complement]] and that
-movement is exclusively to the left, then, while it is possible to develop a very elegant system,
-the basic assumptions must be part of innate linguistic knowledge since there is no evidence for the
-assumption that utterance in all natural languages have the structure that Kayne suggests.
+movement is exclusively to the left, then
+%, while it is possible to develop a very elegant system,
+these two basic assumptions must be part of innate linguistic knowledge since there is no evidence for the
+assumption that utterances in all natural languages have the structure that Kayne suggests. As an
+example, the reader may check Laenzlinger's proposal for German \citeyearpar[\page 224]{Laenzlinger2004a}, which is depicted in
+Figure~\ref{Abbildung-Remnant-Movement-Satzstruktur} on
+page~\pageref{Abbildung-Remnant-Movement-Satzstruktur}. According to Laenzlinger, (\mex{1}a) is derived from the underlying
+structure in (\mex{1}b):
+\eal
+\ex[]{
+\gll weil der Mann wahrscheinlich diese Sonate nicht oft gut gespielt hat\\
+     because the man probably this sonata not often well played has\\
+\glt `because the man probably had not played this sonata well often'
+}
+\ex[*]{
+\gll weil der Mann wahrscheinlich nicht oft gut hat gespielt diese Sonate\\
+     because the man probably not often well has played this sonata\\ 
+}
+\zl
+(\mex{0}b) is entirely unacceptable, so the respective structure cannot be acquired from input and hence the
+principles and rules that license it would have to be innate.
 
 As we have seen, there are a number of alternative theories that are much more surface"=oriented than
 most variants of Transformational Grammar. These alternative theories often differ with
@@ -26,7 +44,7 @@ regard to particular assumptions that have been discussed in the preceding secti
 have led to a proliferation of lexical items in Categorial Grammar (see Section~\ref{sec-pied-piping-cg}). As has been shown by \citet{Jacobs2008a}, \citet{Jackendoff2008a}
 and others, approaches such as Categorial Grammar that assume that every phrase must have a functor/""head cannot explain certain constructions in a plausible way.
 Inheritance"=based phrasal analyses that only list heads with a core meaning in the lexicon and have the constructions in which the heads occur determine the meaning
-of a complex expression, turn out to have difficulties with derivational morphology and with
+of a complex expression turn out to have difficulties with derivational morphology and with
 accounting for alternative ways of argument realization (see Section~\ref{sec-val-morph},
 \ref{inheritance-sec}, and~\ref{sec-mapping-between-levels}).
 We therefore need a theory that handles argument structure changing processes in the lexicon and still has some kind of phrase structure or relevant schemata. Some variants
@@ -51,10 +69,10 @@ cross"=linguistic generalizations: something that is inflection/derivation in on
 
 It is possible to formulate principles that hold for both words and phrases and furthermore, it is possible to capture
 cross"=linguistic generalizations or generalizations that hold for certain groups of languages. For example, languages can be divided
-into those with fixed constituent order and those with more free or completely free constituent order. The corresponding types can be represented
+into those with fixed constituent order and those with more flexible or completely free constituent order. The corresponding types can be represented
 with their constraints in a type hierarchy. Different languages can use a particular part of the hierarchy and also formulate
 different constraints for each of the types (see \citealp[Section~9.2]{AW98a}).
-HPSG\indexhpsg differs from theories such LFG\indexlfg and TAG\indextag in that phrases are not
+HPSG\indexhpsg differs from theories such as LFG\indexlfg and TAG\indextag in that phrases are not
 ontologically different from words. This means that there are no special c"=structures or tree structures. Descriptions of complex phrases simply have additional
 features that say something about their daughters. In this way, it is possible to formulate cross"=linguistic generalizations
 about dominance schemata. In LFG, the c"=structure rules are normally specified separately for each language.
@@ -63,7 +81,7 @@ about dominance schemata. In LFG, the c"=structure rules are normally specified 
 % Vererbungshierarchien für c"=Strukturannotationen verwenden kann.
 Another advantage of consistent description is that one can capture similarities between words and lexical rules and also between
 words and phrases. For example, a complementizer such as \emph{dass} `that' shares a number of
-properties with a simple verb or with coordinated verbs in initial position.
+properties with a simple verb or with coordinated verbs in initial position:
 \eal
 \ex
 \gll {}[dass] Maria die Platte kennt und liebt\\
@@ -74,7 +92,7 @@ properties with a simple verb or with coordinated verbs in initial position.
 	 {}\spacebr{}knows and loves Maria the record\\
 \glt `Does Mary know and love the record?'
 \zl
-The difference between the linguistic objects mainly lies in the kind of phrase they select: the complementizer requires a sentence
+The difference between the two linguistic objects mainly lies in the kind of phrase they select: the complementizer requires a sentence
 with a visible finite verb, whereas the verb in initial position requires a sentence without a visible finite verb.
 
 In Section~\ref{Abschnitt-Vererbung-HPSG}, a small part of an inheritance hierarchy was
@@ -83,7 +101,7 @@ that probably play a role in the grammars of all natural languages: there are he
 kind of combinatorial operation, it would not be possible to establish a relation between two concepts. The ability to create relations, however, is
 one of the basic properties of language.
 
-As well as more general types, the type hierarchy of a particular language contains language"=specific types or those specific to a particular class
+In addition to more general types, the type hierarchy of a particular language contains language"=specific types or those specific to a particular class
 of languages. All languages presumably have one and two"=place predicates and for most languages (if not all), it makes sense to talk about verbs\is{verb}.
 It is then possible to talk about one and two"=place verbs. Depending on the language, these can then be subdivided into intransitive and transitive.
 Constraints are formulated for the various types that can either hold generally or be language"=specific.
@@ -94,8 +112,8 @@ position that licenses a verb with an \initialv +.
 
 The differing settings of the \initialv for German and English is reminiscent of
 parameters\is{parameter}\is{acquisition|(} from GB"=Theory. There is one crucial difference,
-however: it is not assumed that a language learner sets the \initialv once and for all for all
-heads. The use of an \initialv is compatible with models of acquisition that assume that learners
+however: it is not assumed that a language learner sets the \initialv for all
+heads once and for all. The use of an \initialv is compatible with models of acquisition that assume that learners
 learn individual words with their positional properties. It is certainly possible for the respective
 words to exhibit different values for a particular feature. Generalizations about the position of
 entire word classes are only learned at a later point in the acquisition process.\is{acquisition|)}
@@ -141,7 +159,7 @@ are the pronouns\is{pronoun} \emph{er} `he', \emph{sie} `she' etc.\ as well as p
 In this way, \emph{geliebt} `loved' can be recategorized as an adjective stem that must then be combined with adjectival endings (\emph{geliebt-e}).
 The relevant descriptions of complex stems/words are subtypes of \type{complex-stem}
 or \type{word}. These subtypes describe the form that complex words such as \emph{geliebte} must have. For a technical implementation of this, see
-\citew[Section~3.2.7]{Mueller2002b}. All words can be combined to form phrases using dominance schemata. The hierarchy given here is of course by no means complete.
+\citew[Section~3.2.7]{Mueller2002b}. Using dominance schemata, all words can be combined to form phrases. The hierarchy given here is of course by no means complete.
 There are a number of additional valence classes and one could also assume more general types that simply describe one, two and three"=place predicates. 
 Such types are probably plausible for the description of other languages. Here, we are only dealing with a small part of the type hierarchy in order to have
 a comparison to the Croftian hierarchy: in Figure~\ref{Abbildung-Hierarchie}, there are no types for
@@ -159,43 +177,43 @@ Other languages have an ergative"=absolutive system\is{case!ergative}\is{case!ab
 
 The assumption of innate linguistic knowledge is not necessary for the theory of language sketched
 here. As the discussion in Section~\ref{chap-innateness} has shown, the question of whether this kind of knowledge
-exists has still not been answered conclusively. If it should turn out that this knowledge actually exists, the question arises of what exactly is innate. It would be a plausible assumption
+exists has still not been answered conclusively. Should it turn out that this knowledge actually exists, the question arises of what exactly is innate. It would be a plausible assumption
 that the part of the inheritance hierarchy that is relevant for all languages is innate together with the relevant principles. It could, however, also be the case that only a part of the more generally
 valid types and principles is innate since something being innate does not follow from the fact that
 it is present in all languages (see also Section~\ref{Abschnitt-Universalien-Zusammenfassung}).
 
 \todostefan{Hier vielleicht noch etwas zur Variation sagen. Warum können benachbarte Dialekte nicht wild variieren?}
-In sum, one can say that theories that describe linguistic objects using a consistent descriptive inventory and then make use of inheritance hierarchies to capture
-generalizations, are the ones best suited to represent similarities between languages. Furthermore, this kind of theory is compatible with both a positive and negative
+In sum, one can say that theories that describe linguistic objects using a consistent descriptive inventory and make use of inheritance hierarchies to capture
+generalizations are the ones best suited to represent similarities between languages. Furthermore,
+this kind of theory is compatible with both a positive and a negative
 answer to the question of whether there is innate linguistic knowledge.\il{German|)}
 
 \section{How to develop linguistic theories that capture cross-linguistic generalizations}
 \label{sec-develop-theories-coregram}
 
-In the previous section I argued for a uniform representation of linguistic knowledge on all
-descriptive levels and that type hierarchies are a good tool for representing generalizations. This
+In the previous section I argued for a uniform representation of linguistic knowledge at all
+descriptive levels and for type hierarchies as a good tool for representing generalizations. This
 section explores a way to develop grammars that are motivated by facts from several languages.
 
 If one looks at the current practice in various linguistic schools one finds two extreme ways of
-approaching language. On the one hand we have the Mainstream Generative Grammar (MGG) camp and on the
-other hand we have the Construction Grammar/Cognitive Grammar camp. I hasten to say, that what I say
+approaching language. On the one hand, we have the Mainstream Generative Grammar (MGG) camp and, on the
+other hand, we have the Construction Grammar/Cognitive Grammar camp. I hasten to say that what I state
 here does not hold for all members of these groups, but for the extreme cases. The caricature of the
 MGG scientist is that he is looking for underlying structures. Since these have to be the same for
 all languages (poverty of the stimulus), it is sufficient to look at one language, say English. The
 result of this research strategy is that one ends up with models that were suggested by the most
-influential linguist for English and that one then tries to find ways to accommodate other
+influential linguist for English and that others then try to find ways to accommodate other
 languages. Since English has an NP VP structure, all languages have to have it. Since English reorders
-constituent in passive sentences, passive is movement and all languages have to work this way. I
-discussed the respective analyses of German in more detail in the Section~\ref{sec-case-assignment}
-and Chapter~\ref{chap-scrambling-extraction-passive} and showed that the assumption that passive is movement
-makes unwanted predictions for German since the subject of passives stays in the object
+constituents in passive sentences, passive is movement and all languages have to work this way. I
+discussed the respective analyses of German in more detail in Section~\ref{sec-case-assignment}
+and in Chapter~\ref{chap-scrambling-extraction-passive} and showed that the assumption that passive is movement
+makes unwanted predictions for German, since the subject of passives stays in the object
 position in German. Furthermore, this analysis requires the assumption of invisible expletives, that is,
 entities that cannot be seen and do not have any meaning.
 
 On the other extreme of the spectrum we find people working in Construction Grammar or without any
-framework at all and who claim
-that all languages are so different that we not even can use the same vocabulary to analyze them and
-within languages we have so many different objects that it is impossible (or too early) to state any
+framework at all who claim that all languages are so different that we cannot even use the same
+vocabulary to analyze them. Moreover, within languages, we have so many different objects that it is impossible (or too early) to state any
 generalizations. Again, what I describe here are extreme positions and clichés.
 
 In what follows, I sketch the procedure that we apply in the CoreGram project\footnote{
@@ -240,17 +258,16 @@ Indo-Iranian). Figure~\ref{fig-lang-fams} provides an overview.
 \caption{Language families and groups of the languages covered in the CoreGram project}\label{fig-lang-fams}
 \end{figure}%
 We work out fully formalized, computer"=processable grammar fragments in the framework of
-HPSG\indexhpsg that all have a semantics component. The details will not be discussed here, but the
+HPSG\indexhpsg that have a semantics component. The details will not be discussed here, but the
 interested reader is referred to \citew{MuellerCoreGram}. 
 
 As was argued in previous sections, the assumption of innate language"=specific knowledge should be
-kept to a minimum. This is also what Chomsky suggested in his Minimalist Program. It is even possible
-that there is no language"=specific innate knowledge at all, a view taken in Construction
-Grammar/Cognitive Grammar. So instead of imposing constraints from one language onto other languages, a bottom-up approach seems
+kept to a minimum. This is also what Chomsky suggested in his Minimalist Program. There may even be no language"=specific innate knowledge at all, a view taken in Construction
+Grammar/Cognitive Grammar. So, instead of imposing constraints from one language onto other languages, a bottom-up approach seems
 to be more appropriate: grammars for individual languages should be motivated language"=internally. Grammars that share certain properties can be grouped in classes. This makes it possible
-to capture generalizations about groups of languages and language as such. Let us consider some
-example languages: German, Dutch, Danish, English and French. If we start developing grammars for German and
-Dutch, we find that they share a lot of properties: for instance, both are SOV and V2 languages, both have a
+to capture generalizations about groups of languages and natural language as such. Let us consider a
+few example languages: German, Dutch, Danish, English and French. If we start developing grammars for German and
+Dutch, we find that they share a lot of properties: for instance, both are SOV and V2 languages and both have a
 verbal complex. One main difference is the order of elements in the verbal complex. The situation
 can be depicted as in Figure~\vref{fig-german-dutch}.
 \begin{figure}
@@ -280,25 +297,25 @@ can be depicted as in Figure~\vref{fig-german-dutch}.
 \end{figure}%
 There are some properties that are shared between German and Dutch (Set 3). For instance, the
 argument structure of lexical items, a list containing descriptions of syntactic and semantic properties of
-arguments, and the linking of these arguments to the meaning of the lexical items is contained in Set 3. In
-addition to the constraints for SOV languages, the verb position in V2 clauses and the fronting of a
+arguments and the linking of these arguments to the meaning of the lexical items, is contained in Set 3. In
+addition to the constraints for SOV languages, the verb position and the fronting of a
 constituent in V2 clauses are contained in Set 3. The respective constraints are shared between the
-two grammars. Although these sets are arranged in a hierarchy in the figures this has nothing to do
-with the type hierarchies that have been discussed in the previous subsection. These type
-hierarchies are part of our linguistic theories and parts of such hierarchies can be in different
+two grammars. Although these sets are arranged in a hierarchy in Figure~\ref{fig-german-dutch} and
+the following figures this has nothing to do with the type hierarchies that have been discussed in the previous subsection. These type
+hierarchies are part of our linguistic theories and various parts of such hierarchies can be in different
 sets: those parts of the type hierarchy that concern more general aspects can be in Set~3 in
 Figure~\ref{fig-german-dutch} and those that are specific to Dutch or German are in the respective
 other sets. When we add another language, say Danish, we get further differences. While German and Dutch are SOV, Danish
 is an SVO language. Figure~\vref{fig-german-dutch-danish} shows the resulting situation: the
-top-most node represents constraints that hold for all the languages considered so far (for instance the argument
+topmost node represents constraints that hold for all the languages considered so far (for instance the argument
 structure constraints, linking and V2) and the node below it (Set~4) contains
 constraints that hold for German and Dutch only.\footnote{
-  In principle, there could be constraints that hold for Dutch and Danish but not for German and for
-  German and Danish, but not for Dutch. These constraints would be removed from Set 1 and Set 2
-  respectively and put into another constraint set higher up in the hierarchy. These sets are not
+  In principle, there could be constraints that hold for Dutch and Danish but not for German or for
+  German and Danish, but not for Dutch. These constraints would be removed from Set 1 and Set 2,
+  respectively, and inserted into another constraint set higher up in the hierarchy. These sets are not
   illustrated in the figure and I keep the names Set~1 and Set~2 from Figure~\ref{fig-german-dutch} for the constraint sets for German
   and Dutch.
-} For instance Set~4 contains constraints regarding verbal complexes and SOV order.
+} For instance, Set~4 contains constraints regarding verbal complexes and SOV order.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -323,7 +340,7 @@ constraints that hold for German and Dutch only.\footnote{
 %    \node [right=of Set11] {SVO};
 
      \end{tikzpicture}
-\caption{\label{fig-german-dutch-danish}Shared Properties of German, Dutch, and Danish}
+\caption{\label{fig-german-dutch-danish}Shared properties of German, Dutch, and Danish}
 \end{figure}%
 The union of Set 4 and Set 5 is Set 3 of Figure~\ref{fig-german-dutch}.
 
@@ -372,14 +389,14 @@ first glance, one would expect that all languages have valence representations a
 these and the semantics of lexical items (argument structure lists in the HPSG framework). However,
 \citet{KM2012a} argue for an analysis of Oneida\il{Oneida} (a Northern Iroquoian language) that does not
 include a representation of syntactic valence. If this analysis is correct, syntactic argument
-structure would not be universal. It would of course be characteristic of a large number of
+structure would not be universal. It would, of course, be characteristic of a large number of
 languages, but it would not be part of the top"=most set. So this leaves us with just one candidate
 for the top"=most set from the area of syntax: the constraints that license the combination of two or more linguistic
 objects. This is basically Chomsky's External Merge\is{Merge!External} without the binarity restriction\is{branching!binary}\footnote{
   Note that binarity is more restrictive than flat structures: there is an additional constraint
   that there have to be exactly two daughters. As was argued in Section~\ref{Abschnitt-NPN-Konstruktion} one needs phrasal
   constructions with more than two constituents.
-}. In addition, the top"=most set would of course contain the basic machinery for representing phonology and semantics.  
+}. In addition, the top"=most set would, of course, contain the basic machinery for representing phonology and semantics.  
 
 
 It should be clear from what has been said so far that the goal of every scientist who works this
@@ -398,15 +415,15 @@ language-specific, that is, the notion of \emph{subject} for Tagalog is differen
 the category \emph{noun} in English is different from the category \emph{noun} in Persian and so on. Even if one
 follows such extreme positions, one can still derive generalizations regarding constituent structure,
 head-argument relations and so on. However, I believe that some categories can fruitfully be used
-cross-linguistically, if not universally, then at least for language classes. As \citet[\page
+cross-linguistically; if not universally, then at least for language classes. As \citet[\page
   692]{Newmeyer2010a} notes with regard to the notion of \emph{subject}: calling two items \emph{subject}
 in one language does not entail that they have identical properties. The same is true for two
 linguistic items from different languages: calling a Persian linguistic item \emph{subject} does not entail
 that it has exactly the same properties as an English linguistic item that is called
-\emph{subject}. The same is, of course, true for all other categories and relations, for instance parts of speech:
+\emph{subject}. The same is, of course, true for all other categories and relations, for instance, parts of speech:
 Persian nouns do not share all properties with English nouns.\footnote{
   Note that using labels like \emph{Persian Noun} and \emph{English Noun} (see for instance
-  \citew[Section~2]{Haspelmath2010a} for such a suggestion regarding case, e.\,g.\ Russian Dative,
+  \citew[Section~2]{Haspelmath2010a} for such a suggestion regarding case, \eg, Russian Dative,
   Korean Dative, \ldots) is somehow strange since
   it implies that both Persian nouns and English nouns are somehow nouns. Instead of using the
   category \emph{Persian Noun} one could assign objects of the respective class to the class
@@ -423,16 +440,16 @@ Persian nouns do not share all properties with English nouns.\footnote{
   %% whether languages like Makah have a Noun-Verb distinction or not. This is true, but as a result of
   %% the choice
 }
-\citet[\page 697]{Haspelmath2010b} writes: \emph{Generative linguists try to use as many crosslinguistic
+\citet[\page 697]{Haspelmath2010b} writes: ``Generative linguists try to use as many crosslinguistic
   categories in the description of individual languages as possible, and this often leads to
-  insurmountable problems.} If the assumption of a category results in problems, they have to be
+  insurmountable problems.'' If the assumption of a category results in problems, they have to be
 solved. If this is not possible with the given set of categories/features, new ones have to be
 assumed. This is not a drawback of the methodology, quite the opposite is true: if we have found
 something that does not integrate nicely into what we already have, this is a sign that we have discovered
 something new and exciting. %For instance, 
 If we stick to language-particular categories and features, it is much
-harder to notice that a special phenomenon is involved since all categories and features are
-specific for one language anyway. Note also that not all speakers of a language community have
+harder to notice that a special phenomenon is involved, since all categories and features are
+specific to one language anyway. Note also that not all speakers of a language community have
 exactly the same categories. If one were to take the idea of language-particular category symbols to
 an extreme, one would end up with person specific category symbols like \emph{Klaus-English-noun}.
 
@@ -461,37 +478,38 @@ the two. The grammar predicted that examples like (\mex{0}) are grammatical. Sim
 constraints of the grammar can interact to rule out certain structures. So predictions about
 ungrammaticality/impossible structures are in fact made as well.
 
-Secondly, the top-most constraint set holds for all languages seen so far. It can be regarded as a
+Secondly, the topmost constraint set holds for all languages seen so far. It can be regarded as a
 hypothesis about properties that are shared by all languages. This constraint set contains
 constraints about the connection between syntax and information structure and such constraints allow
 for V2 languages but rule out languages with the verb in penultimate position (see \citew[\page
   50]{Kayne94a-u} for the claim that such languages do not exist. Kayne develops a complicated
-syntactic system that predicts this). Of course if a language is found that puts the verb in penultimate
+syntactic system that predicts this). Of course, if a language is found that places the verb in penultimate
 position for the encoding of sentence types or some other communicative effect, a more
-general top-most set has to be defined, but this is parallel for Minimalist theories: if languages
+general topmost set has to be defined. But this is parallel for Minimalist theories: if languages
 are found that are incompatible with basic assumptions, the basic assumptions have to be revised. As
-with the language particular constraints, the constraints from the top-most set make certain
+with the language particular constraints, the constraints in the topmost set make certain
 predictions about what can be and what cannot be found in languages.
 
 Frequently discussed examples such as those languages that form questions by reversing the order of the words in a
-string \citep{MMGRRBW2003a} need not be ruled out in the grammar since they are ruled out by
-language external constraints: we simply do not have enough working memory to do such complex computations\is{performance}.
+string \citep{MMGRRBW2003a} need not be ruled out by the grammar, since they are ruled out by
+language external constraints: we simply lack the working memory to do such complex computations\is{performance}.
 
-A variant of this argument comes from David Pesetzky\aimention{David Pesetzky} and was raised in Facebook discussions of an
-article by Paul Ibbotson\aimention{Paul Ibbotson} and Michael Tomasello\aimention{Michael Tomasello} in the Guardian\footnote{
+A variant of this argument comes from David Pesetsky\aimention{David Pesetsky} and was raised in Facebook discussions of an
+article by Paul Ibbotson\aimention{Paul Ibbotson} and Michael Tomasello\aimention{Michael Tomasello}
+published in The Guardian\footnote{
 \emph{The roots of language: what makes us different from other animals?}. published 05.11.2015. \url{http://www.theguardian.com/science/head-quarters/2015/nov/05/roots-language-what-makes-us-different-animals}
 }. 
 %% how [Tomasello’s] ‘prefabricated phrases’ proposal could scale up so these kids end up speaking a verb-second language (when and how do they learn a structure-dependent rule that moves a particular verb and something else to designated positions) — and how he [Tomasello] would explain the frequent appearance of verb-second vs. the non-existence of obligatory verb-third crosslinguistically.
-Pesetzky claimed that Tomasello's theory of language
+Pesetsky claimed that Tomasello's theory of language
 acquisition could not explain why we find V2 languages but no V3 languages. First, I do not know of
 anything that blocks V3 languages in current Minimalist theories. So per se the fact that V3
-languages may not exist cannot be used to support any of the competing approaches. Of course the
+languages may not exist cannot be used to support any of the competing approaches. Of course, the
 question could be asked whether the V3 pattern would be useful for reaching our communicative goals
 and whether it can be easily acquired. Now, with V2 as a pattern it is clear that we have exactly
-one position that can be used for special purposes in the V2 sentence (topic or focus). For mono"=valent and bi"=valent verbs we
+one position that can be used for special purposes in the V2 sentence (topic or focus). For monovalent and bivalent verbs we
 have an argument that can be placed in initial position. The situation is different for the
-hypothetical V3 languages, though: If we have mono"=valent verbs like \emph{sleep}, there is nothing
-for the second position. As Pesetzky pointed out in the answer to my comment on a blog post, languages solve such
+hypothetical V3 languages, though: If we have monovalent verbs like \emph{sleep}, there is nothing
+for the second position. As Pesetsky pointed out in the answer to my comment on a blog post, languages solve such
 problems by using expletives. For instance some languages insert an expletive to mark subject
 extraction in embedded interrogative sentences, since otherwise the fact that the subject is
 extracted would not be recognizable by the hearer. So the expletive helps to make the structure
@@ -504,8 +522,8 @@ something in the special, designated position:
 \z
 In order to do the same in V3 languages one would have to put two expletives in front of the
 verb. So there seem to be many disadvantages of a V3 system that V2 systems do not have and hence
-one would expect that V3 systems are less likely to come into existence and if they do exist that
-they will be subject to change in the course of time, \eg, omission of the expletive with
+one would expect that V3 systems are less likely to come into existence. If they existed, they would
+be expected to be subject to change in the course of time; \eg, omission of the expletive with
 intransitives, optional V2 with transitives and finally V2 in general. With the new modeling
 techniques for language acquisition and agent"=based community simulation one can actually simulate
 such processes and I guess in the years to come, we will see exciting work in this area. 
@@ -516,20 +534,20 @@ role in the analysis of all sentences in all languages even if there is no evide
 morphosyntactic distinctions in a particular language (see also \citealp[\page 55]{CR2010a}). In the
 latter case, Cinque assumes that the respective tree nodes are empty. Cinque's results could be
 incorporated in the model advocated here. We would define part of speech categories and
-morpho-syntactic features in the top-most set and state linearization constraints that enforce the
+morpho-syntactic features in the topmost set and state linearization constraints that enforce the
 order that Cinque encoded directly in his tree structure. In languages in which such categories are
 not manifested by lexical material, the constraints would never apply. Neither empty elements nor
-elaborate tree structures would be needed. So, we have shown that Cinque's data could be
-covered in a better way in an HPSG with a rich UG but we, nevertheless, refrain from introducing 400 categories (or
-features) into the theories of all languages and, again, we point out that this is implausible from a
-genetic\is{gene} point of view and wait for other, probably functional, explanations of the Cinque data.
+elaborate tree structures would be needed. Thus Cinque's data could be
+covered in a better way in an HPSG with a rich UG but I, nevertheless, refrain from introducing 400 categories (or
+features) into the theories of all languages and, again, I point out that such a rich and
+language-specific UG is implausible from a genetic\is{gene} point of view. Therefore, I wait for other, probably functional, explanations of the Cinque data.
 
 Note also that implicational universals\is{universal!implicative} can be derived from hierarchically organized constraint sets
 as the ones proposed here. For instance, one
 can derive from Figure~\ref{fig-german-dutch-danish-english-french} the implicational statement that
-all SVO languages are V2 languages since there is no language that has constraints from Set~4 that
-does not also have the constraints of Set~7. Of course this implicational statement is wrong, since there are
-lots and lots of SOV languages and just exceptionally few V2 languages. So as soon as we add other
+all SVO languages are V2 languages, since there is no language that has constraints from Set~4 that
+does not also have the constraints of Set~7. Of course, this implicational statement is wrong, since there are
+lots and lots of SOV languages and just exceptionally few V2 languages. So, as soon as we add other
 languages as for instance Persian or Japanese, the picture will change.
 
 The methodology suggested here differs from what is done in MGG in that the general constraints that
@@ -539,8 +557,8 @@ different languages and grammars, in the worst case they are derived from insigh
 from one or more Indo"=European languages. Quite often impressionistic data is used to motivate
 rather far"=reaching fundamental design decisions \citep{Fanselow2009a,SR2012a,Haider2016a}. It is interesting to note
 that this is exactly what members of the MGG camp accuse typologists of. \citet{EL2009a} pointed out
-that counter examples can be found for many alleged universals. A frequently uttered reply is that
-unanalyzed data cannot refute grammatical hypotheses (see for instance \citealp[\page 454]{Freidin2009a}). In the very same way it has to be said that unanalyzed data
+that counterexamples can be found for many alleged universals. A frequent response to this is that
+unanalyzed data cannot refute grammatical hypotheses (see, for instance, \citealp[\page 454]{Freidin2009a}). In the very same way it has to be said that unanalyzed data
 should not be used to build theories on \citep{Fanselow2009a}. In the CoreGram project, we aim to develop broad"=coverage
 grammars of several languages, so those constraints that make it to the top node are motivated and
 not stipulated on the basis of intuitive implicit knowledge about language.
