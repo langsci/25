@@ -11,7 +11,7 @@
 \emph{Tree Adjoining Grammar} (TAG)\is{Tree Adjoining Grammar (TAG)|(}
 was developed by Aravind Joshi at the University of Pennsylvania in the USA \citep*{JLT75a-u}. 
 Several important dissertations in TAG have been supervised by Aravind
-Joshi and Anthony Kroch at the University of Pennsylvania (\eg, \citew{Rambow94a}).
+Joshi and Anthony Kroch at the University of Pennsylvania (\eg, \citealp{Rambow94a}).
 Other research centers with a focus on TAG are Paris~7 (Anne Abeill\'{e}), Columbia University in the USA
 (Owen Rambow) and Düsseldorf, Germany (Laura Kallmeyer).
 \citew{Rambow94a} and \citew{Gerdes2002b-u} are more detailed studies of German.\footnote{
@@ -26,10 +26,10 @@ The expressive power of Generalized Phrase Structure Grammar\indexgpsg was delib
 phrase structure grammars\is{context"=free grammar} (Type-2 languages) and it has in fact been demonstrated that this is not enough \citep{Shieber85a,Culy85a}.\footnote{%
 	See \citet{Pullum86a} for a historical overview of the complexity debate and G.\ \citew{GMueller2011a} for argumentation for the non"=context"=free nature
 	of German, which follows parallel to  Culy with regard to the N-P-N construction\is{construction!N-P-N} (see Section~\ref{Abschnitt-NPN-Konstruktion}).%
-	} Grammatical theories such as HPSG\indexhpsg and CxG\indexcxg can generate/describe so"=called type-0 languages and are thereby far above the level
+	} Grammatical theories such as HPSG\indexhpsg and CxG\indexcxg can generate/describe so"=called Type-0 languages and are thereby far above the level
 	of complexity presently assumed for natural languages. 
 The assumption is that this complexity lies somewhere between context"=free\is{complexity class}\is{context"=free grammar}
-and context"=sensitive\is{context"=sensitive grammar} (Type 1) languages. This class is thus referred to as \emph{mildly context sensitive}\is{mildly context"=sensitive grammar}.
+and context"=sensitive\is{context"=sensitive grammar} (Type-1) languages. This class is thus referred to as \emph{mildly context sensitive}\is{mildly context"=sensitive grammar}.
 Certain TAG"=variants are inside of this language class and it is assumed that they can produce exactly those structures that occur in
 natural languages. For more on complexity, see Section~\ref{Abschnitt-Kompetenz-Performanz-TAG} and Chapter~\ref{sec-generative-capacity}.
 
@@ -60,7 +60,7 @@ languages is a grammar of Yiddish\il{Yiddish} for which there was no TAG grammar
 \subsection{Representation of valence information}
 
 Figure~\vref{abb-elementare-Baeume}\is{valence|(} shows so"=called elementary trees\is{elementary tree}.
-These are present in the lexicon and can be combined to create larger trees:
+These are present in the lexicon and can be combined to create larger trees.
 \begin{figure}
 \hfill
 \begin{forest}
@@ -169,8 +169,8 @@ tag
 }
 \caption{\label{abb-Adjunktion}Adjunction}
 \end{figure}%
-Adjunction trees can be inserted into other trees. Upon insertion, a node in a tree corresponding to
-the node marked by `*' in the adjunction tree is split up and the adjunction tree is entered in its place.%
+Adjunction trees can be inserted into other trees. Upon insertion, the target node (bearing  the
+same category as the node marked with `*') is replaced by the adjunction tree.
 \is{adjunction|)}\is{adjunct|)}
 
 TAG differs considerably from the simple phrase structure grammars we encountered in
@@ -245,7 +245,8 @@ tag
 \end{figure}%
 The nodes in trees are numbered from top to bottom and from left to right. The result of this numbering of nodes for \emph{likes} 
 is shown in Figure~\vref{Abbildung-Knotenpositionen}. The top"=most node in the tree for  \emph{likes} is S and has the position 0.
-Beneath S, there is an NP and a VP node. These nodes are again numbered starting at 0. NP has the position 0 and VP the position 1.
+Beneath S, there is an NP and a VP node. These nodes are again numbered starting at
+0.\todostefan{Timm: Noch üblicher ist es vielleicht, mit 1 anzufangen. D.h. nur der Wurzelknoten hat die Adresse 0.} NP has the position 0 and VP the position 1.
 The VP node has in turn two daughters: V and the object NP. V receives number 0 and the object NP
 1. This makes it possible to combine these numbers and then it is possible to unambiguously access individual elements in the tree. The position for the subject NP
 is 00 since this is a daughter of S and occurs in first position. The object NP has the numeric sequence 011 since it is below S (0),
@@ -256,11 +257,11 @@ in the VP (the second daughter of S = 1) and occurs in second position (the seco
 \begin{forest}
 tag
 [S {(0)}
-	[NP$\downarrow$ {(00)}]
-	[VP {(01)}
-		[V {(010)}
+	[NP$\downarrow$ {(1)}]
+	[VP {(2)}
+		[V {(2.1)}
 			[likes]]
-		[NP$\downarrow$ {(011)}]]]
+		[NP$\downarrow$ {(2.2)}]]]
 \end{forest}
 }
 \caption{\label{Abbildung-Knotenpositionen}Node positions in the elementary tree for \emph{likes}}
@@ -271,8 +272,8 @@ With these tree positions, the derivation tree for (\mex{0}) can be represented 
 \centerline{%
 \begin{forest}
 [likes, l sep+=1em
-	[Max,edge label={node[midway,left]{00~~}}]
-	[Anouk,edge label={node[midway,right]{~011}}]]
+	[Max,edge label={node[midway,left]{1~~}}]
+	[Anouk,edge label={node[midway,right]{~2.2}}]]
 \end{forest}
 }
 \caption{\label{Abbildung-Ableitungsbaum}Derivation tree for \emph{Max likes Anouk.}}
@@ -294,7 +295,7 @@ arg: $-$\\\hline
 \hfill
 \begin{tabular}[t]{|l|}\hline
 like(x$_1$, x$_2$)\\\hline
-arg: \sliste{ x$_1$, 00 }, \sliste{ x$_2$, 011 }\\\hline
+arg: \sliste{ x$_1$, 1 }, \sliste{ x$_2$, 2.2 }\\\hline
 \end{tabular}
 \hfill
 \begin{tabular}[t]{|l|}\hline
@@ -382,7 +383,7 @@ For more on this kind of examples, see \citew{Bech55a}.
 \glt `because somebody promised him to read the book'
 \z
 In (\mex{0}), \emph{das Buch} `the book' is the object of \emph{zu lesen} `to read', and \emph{ihm}
-`him' and \emph{jemand} `somebody' are dependent on \emph{versprochen} bzw.\ \emph{hat}, respectively.
+`him' and \emph{jemand} `somebody' are dependent on \emph{versprochen} and \emph{hat}, respectively.
 These cases can be analyzed by LD/LP"=TAG developed by \citet{Joshi87b} and Free Order TAG
 (FO"=TAG\is{TAG!Free Order (FO"=TAG)}) \citep*[\page 21]{BJR91a} since both of these TAG variants allow for
 crossing edges.\is{projectivity}
@@ -513,33 +514,35 @@ It is clear that it is not possible to derive a tree in this way where an argume
 finite sets of elementary trees. In every derivational step, a set is selected and the elements of that set are simultaneously added to the tree.
 Figure~\vref{Abbildung-MC-TAG-versprach} shows an elementary tree for \emph{versprach} `promised' consisting of multiple components.
 \begin{figure}
-~\\[2ex]
-\centerline{%
-\menge{
-\hspace{2ex}
-\begin{forest}
-tag
-[S
-	[NP$_1^1\downarrow$]
-	[S,name=s1]]
-\end{forest}
-\hspace{1cm}
-\begin{forest}
-tag
-[S,name=s2
-	[NP$_1^1$
-		[e]]
-	[VP
-		[NP$_1^2\downarrow$]
-		[S*]
-		[V$_1$
-			[versprach]]]]
-% to do
-%\draw(s1.south)--(s2.north);
-\end{forest}
-\hspace{2ex}}
-}
-\caption{\label{Abbildung-MC-TAG-versprach}Elementary tree for \emph{versprach} consisting of multiple components}
+%% ~\\[2ex]
+%% \centerline{%
+%% \menge{
+%% \forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
+%% \hspace{2ex}
+%% \begin{forest}
+%% [S
+%% 	[NP$_1^1\downarrow$]
+%% 	[\subnode{s1}{S} ]]
+%% \end{forest}
+%% \hspace{1.5cm}
+%% \begin{forest}
+%% [\subnode{s2}{S}
+%% 	[NP$_1^1$
+%% 		[e]]
+%% 	[VP
+%% 		[NP$_1^2\downarrow$]
+%% 		[S*]
+%% 		[V$_1$
+%% 			[versprach]]]]
+%% \end{forest}
+%% \hspace{2ex}
+%% \begin{tikzpicture}[overlay,remember picture,out=-70,in=110,dashed]
+%% \draw (s1) to (s2);
+%% \end{tikzpicture}
+%% }
+%% }
+\includegraphics{Figures/tag-versprach-lsp-crop}
+\caption{\label{Abbildung-MC-TAG-versprach}Elementary tree set for \emph{versprach} consisting of multiple components}
 \end{figure}%
 This tree contains a trace of NP$_1^1$ that was moved to the left. The bottom"=left S node and the top"=right S node are connected by a dashed line
 that indicates the dominance relation. However, immediate dominance is not required. Therefore, it is possible to insert the two subtrees into another tree
@@ -606,7 +609,7 @@ with abstract auxiliary entities can be avoided easily: one can instead use the 
 analysis going back to \citet{Haider86}, which was presented in Section~\ref{Abschnitt-HPSG-Passiv}.
 
 There\is{inheritance!multiple|(} are also proposals in TAG that use inheritance to deal with valence changing processes 
-in general and the passive in particular (\citew{Candito96a} and \citew*{KSYJ2006a} following Candito). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
+in general and the passive in particular (\citealp{Candito96a} and \citealp*{KSYJ2006a} following Candito). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
 the Chapter on Construction Grammar, inheritance is not a suitable descriptive tool for valence changing processes. This is because these kinds of processes
 interact syntactically and semantically in a number of ways and can also be applied multiple times
 (\citealp{Mueller2006d,Mueller2007d}; \citeyear[Section~7.5.2]{MuellerLehrbuch1};
@@ -716,9 +719,9 @@ operation must take place at the relevant position.\il{English|)}\is{long"=dista
 
 In Section~\ref{Abschnitt-MC-TAG}, we introduced Multi"=Component"=TAG. There are a large number of TAG variants with different formal properties.
 \citet[\page
-]{Rambow94a} gives an overview of the variants existing in 1994. In the following, we will discuss
-two interesting variants of TAG: Feature Structure"=Based TAG = FTAG\indexftag  \citep{VSJ88a} and
-Vector"=TAG (V"=TAG, \citew{Rambow94a}). 
+]{Rambow94a} gives an overview of the variants existing in 1994. In the following, I will discuss
+two interesting variants of TAG: Feature Structure"=Based TAG (FTAG\indexftag, \citealp{VSJ88a}) and
+Vector"=TAG (V"=TAG, \citealp{Rambow94a}). 
 
 \subsection{FTAG}
 
@@ -1115,8 +1118,8 @@ described by grammar, but is rather due to processing problems with the hearer i
      that the dog  barks  that the cat   chases that the mouse caught   has\\
 \glt `that the dog that chases the cat that caught the mouse barks'
 \ex 
-\gll dass der Hund, [$_1$ der die Katze, [$_2$ die die Maus gefangen hat, $_2$] jagt $_1$] bellt\\
-     that the dog {} that the cat {} that the mouse caught has {} caught {} barks\\
+\gll dass der Hund, [$_1$ der  die Katze, [$_2$ die  die Maus  gefangen hat,~$_2$] jagt~$_1$] bellt\\
+     that the dog   {}    that the cat    {}    that the mouse caught   has        chases    barks\\
 \zl
 
 \noindent
@@ -1154,8 +1157,9 @@ Since (\mex{1}) is possible in German, LTAG is not sufficient to analyze all lan
      that him     the book     nobody     to read      promise         be.allowed.to\\
 \glt `that nobody is allowed to promise him to read the book' 
 \z
-Therefore, they propose the extension of TAG discussed in Section~\ref{Abschnitt-MC-TAG}; so"=called \emph{tree"=local multi"=component LTAG} (Tree"=local MC"=LTAG).
-They show that tree"=local MC-TAG can analyze (\mex{0}) but not (\mex{1}) with the correct semantics. They claim that these orders are not possible in German
+Therefore, they propose the extension of TAG discussed in Section~\ref{Abschnitt-MC-TAG}; so"=called
+\emph{tree"=local multi"=component LTAG} (Tree"=local MC"=LTAG or TL-MCTAG).
+They show that TL-MCTAG can analyze (\mex{0}) but not (\mex{1}) with the correct semantics. They claim that these orders are not possible in German
 and argue that in this case, unlike the relative clause examples, one has both options, that is, the
 unavailability of such patterns can be explained as a performance phenomenon or as a
 competence phenomenon.
@@ -1167,8 +1171,8 @@ If we treat this as a performance phenomenon, then we are making reference to th
 for the hearer. The fact that these orders do not occur in corpora can be explained with reference to the principle of cooperativeness\is{cooperativeness}.
 Speakers normally want to be understood and therefore formulate their sentences in such a way that the hearer can understand them.
 Verbal complexes in German with more than four verbs are hardly ever found since it is possible to simplify very complex sentences with multiple verbs in the 
-right sentence bracket by extraposing\is{extraposition} material and therefore avoiding ambiguity\is{ambiguity} see \citew[\page 5]{Netter91} and
-\citew[\page 262]{MuellerLehrbuch1}).
+right sentence bracket by extraposing\is{extraposition} material and therefore avoiding ambiguity\is{ambiguity} (see \citealp[\page 5]{Netter91} and
+\citealp[\page 262]{MuellerLehrbuch1}).
 
 The alternative to a performance explanation would involve using a grammatical formalism which is
 just powerful enough to allow embedding of two verbs and reordering of their arguments, but rules
@@ -1312,7 +1316,7 @@ Chapter~\ref{sec-generative-capacity}.
 \section{Summary and classification}
 
 In sum, we have seen the following: LTAG is lexicalized, that is, there is at least one lexical element in every tree.
-There are not any trees that correspond to the rule S $\to$ NP, VP since no words are mentioned in this rule.
+There are not any trees that correspond to the rule S $\to$ NP VP since no words are mentioned in this rule.
 Instead, there are always complex trees that contain the subject NP and the VP. Inside the VP, there can be as much structure
 as is necessary to ensure that the verb is contained in the tree. As well as the head, elementary trees in LTAG always contain
 the arguments of the head. For transitive verbs, this means that both the subject and the object have to be components of the
@@ -1340,8 +1344,8 @@ the derived tree (extended domains of locality\is{locality}).
 
 \citet*{KKNV95a} show that it is possible to transfer HPSG grammars that fulfill certain requirements into TAG grammars. This is interesting
 as in this way one arrives at a grammar whose complexity behavior is known\is{capacity!generative}. Whereas HPSG grammars are generally
-in the type-0 area, TAG grammars can, depending on the variant, fall into the realm of type-2 languages (context"=free) or even in the
-larger set of the mildly context"=sensitive grammars\is{mildly context"=sensitive grammar}. \citet*{YMTT2001a} have developed a procedure for translating FB"=LTAG grammars into
+in the Type-0 area, TAG grammars can, depending on the variant, fall into the realm of Type-2 languages (context"=free) or even in the
+larger set of the mildly context"=sensitive grammars\is{mildly context"=sensitive grammar} \citep{Joshi85a-u}. \citet*{YMTT2001a} have developed a procedure for translating FB"=LTAG grammars into
 HPSG grammars.
 
 

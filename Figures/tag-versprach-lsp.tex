@@ -1,0 +1,61 @@
+%% -*- coding:utf-8 -*-
+\documentclass[ number=1
+                ,series=lnls,
+                ,isbn=978-3-944675-21-3,
+                ,url=http://langsci-press.org/catalog/book/14,
+	        ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        ,smallfont
+	        %,draftmode  
+                ,bibtex
+                ,copyright=CC-BY-ND
+		  ]{../langsci/langscibook}                          
+
+
+\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e}
+
+%% % for fixing texlive 2015
+
+%% %% %deceive the driver
+%% \def\pdftexversion{140}
+%% %% %use the old driver for dvipdfm
+%% \def\pgfsysdriver{pgfsys-dvipdfm.def} 
+
+% does not help
+
+
+\usetikzlibrary{tikzmark}
+
+% compile with texlive 2013
+
+\begin{document}
+\thispagestyle{empty}
+
+\menge{
+\forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
+\hspace{2ex}
+\begin{forest}
+[S
+	[NP$_1^1\downarrow$]
+	[\subnode{s1}{S} ]]
+\end{forest}
+\hspace{1.5cm}
+\begin{forest}
+[\subnode{s2}{S}
+	[NP$_1^1$
+		[e]]
+	[VP
+		[NP$_1^2\downarrow$]
+		[S*]
+		[V$_1$
+			[versprach]]]]
+\end{forest}
+\hspace{2ex}
+\begin{tikzpicture}[overlay,remember picture,out=-70,in=110,dashed]
+\draw (s1) to (s2);
+\end{tikzpicture}
+}
+
+
+
+\end{document}
