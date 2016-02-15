@@ -36,7 +36,7 @@ Kaufmann2009a-u% Java
 }.\footnote{
 \citet{UBCCDDEEMMO-96a} and \citet{Bolc:Czuba:ea:96a-u} compare systems that were available or were
 developed at the beginnings of the 1990s. \citet{MelnikHandWritten}
-compares LKB and TRALE. See also \citew[Sections~5.1]{MuellerCoreGram}.
+compares LKB and TRALE. See also \citew[Section~5.1]{MuellerCoreGram}.
 }
 Currently, the LKB system\is{Linguistic Knowledge Builder (LKB)} by Ann Copestake and the TRALE
 system, that was developed by Gerald Penn \citep*{MPR2002a-u,Penn2004a-u}, have the most users. The
@@ -293,7 +293,7 @@ sn edges
 \label{sec-HPSG-constituent-structure}
 
 As already noted, feature descriptions in HPSG serve as the sole descriptive inventory of morphological rules, lexical entries and syntactic rules.
-The trees we have seen thus far are only visualizations of the part whole relations and do not have any theoretical status. There are also no
+The trees we have seen thus far are only visualizations of the part"=whole relations and do not have any theoretical status. There are also no
 rewrite rules in HPSG.\is{phrase structure grammar}\footnote{
 	However, phrase structure rules are used in some computer implementations of HPSG in order to improve
         the efficiency of processing.}
@@ -323,10 +323,10 @@ sn edges
 \z
 In (\mex{0}), there is exactly one head daughter (\textsc{head-dtr}\isfeat{head-dtr}).
 The head daughter is always the daughter containing the head. In a structure with the daughters 
-\emph{das} and \emph{Bild von Maria}, the latter would be the head daughter. In principle, there can be
+\emph{das} `the' and \emph{Bild von Maria} `picture of Maria', the latter would be the head daughter. In principle, there can be
 multiple non"=head daughters. If we were to assume a flat structure for a sentence with a ditransitive verb, as in Figure~\vref{er-das-buch-dem-mann-gibt-flat},
 we would have three non"=head daughters.\isfeat{non-head-dtrs} It also makes sense to assume binary
-branching structures without heads (see \citew[Chapter~11]{MuellerLehrbuch1} for an analysis of
+branching structures without heads (see \citealp[Chapter~11]{MuellerLehrbuch1} for an analysis of
 relative clauses). In such structures we would also have more than one non"=head daughter, namely exactly two.
 
 Before it is shown how it is ensured that only those head"=argument structures are licensed in which the argument matches the requirements of the head, I will
@@ -818,7 +818,7 @@ It is assumed that verbs have an event variable\is{event} of the type \type{even
 \is{linking|(}
 Until now, we did not assign elements in the valence list\is{valence} to argument roles\is{semantic role} in the semantic representation. This connection is referred to
 as \emph{linking}. (\mex{1}) shows how linking works in HPSG. The referential indices of the argument
-noun phrases are structure shared with one of the semantic roles of the relation contributed by the
+noun phrases are structure"=shared with one of the semantic roles of the relation contributed by the
 head.\is{argument}\todostefan{nom, acc, dat}
 \ea
 \label{le-geben}
@@ -937,8 +937,7 @@ As an alternative to the selection of the head by the modifier, one could assume
 \citet[\page 161]{ps}. \citet[Section~1.9]{ps2} revised the earlier analysis since the semantics of
 modification could not be captured.\footnote{
 		See \citew*{BMS2001a}, however. \citet*{BMS2001a} pursue a hybrid analysis where there are adjuncts which select heads and also adjuncts that are selected
-		by a head. \textit{Minimal Recursion Semantics}
-        (MRS)\indexmrs is the semantic theory underlying this analysis. Using this semantics, the problems
+		by a head. Minimal Recursion Semantics\indexmrs is the semantic theory underlying this analysis. Using this semantics, the problems
 		arising for \citet*{ps} with regard to the semantics of modifiers are avoided.
 }
 
@@ -1159,7 +1158,7 @@ is a subtype of \type{word}. Since lexical rules have a type, it is possible to 
 
 The lexical rules discussed thus far work well for the personal passive. For the impersonal passive,
 however, we would require a second lexical rule. Furthermore, we would have two different lexical
-items for the passive and the perfect, although the forms are always identical.  In the following,
+items for the passive and the perfect, although the forms are always identical in German.  In the following,
 I will discuss the basic assumptions that are needed for a theory of the passive that can sufficiently
 explain both personal and impersonal passives and thereby only require one lexical item for the
 participle form.
@@ -1382,7 +1381,7 @@ sn edges
 }
 \caption{\label{verb-movement-syn-simple}Analysis of \emph{Kennt jeder diesen Mann?} `Does everyone know this man?'}
 \end{figure}%
-The combination of the trace with \emph{diesen Mann} `this man' and \emph{jeder} èverbody' follows the rules and principles that we have encountered thus far.
+The combination of the trace with \emph{diesen Mann} `this man' and \emph{jeder} `everbody' follows the rules and principles that we have encountered thus far.
 This begs the immediate question as to what licenses the verb \emph{kennt}
 in Figure~\ref{verb-movement-syn-simple} and what status it has.
 
@@ -1421,7 +1420,7 @@ has exactly those properties of the verb that the verb would have had, were it i
 position. The information that must be shared is therefore all locally relevant syntactic and
 semantic information, that is, all information under \local. Since \phon is not part of the \local features, it is not shared and this is why the \phon values of the trace and verb can
 differ. Up to now, one crucial detail has been missing in the analysis: the \local value of the
-trace cannot be directly structure shared with a requirement of the initial verb since the verb
+trace cannot be directly structure"=shared with a requirement of the initial verb since the verb
 \emph{kennt} can only select the properties of the projection of the trace and the \subcatl of the
 selected projection is the empty list. This leads us to the problem that was pointed out in the
 discussion of (\ref{bsp-kennt-gibt}). It must therefore be ensured that all information about the verb trace is available
@@ -2123,8 +2122,7 @@ In the first decade of HPSG history (\citealp*{ps,ps2,NNP94}), despite the diffe
 in that it was a strongly lexicalized theory. The syntactic make-up and semantic content of a phrase was determined by the head (hence the term \emph{head-driven}).
 In cases where head-driven analyses were not straight-forwardly possible, because no head could be identified in the phrase in question, then it was commonplace to
 assume empty heads\is{empty element}. An example of this is the analysis of relative clauses in \citet[Chapter~5]{ps2}.
-Since an empty head can be assigned any syntactic valence and an arbitrary semantics (for discussion of this point, see Chapter~\ref{Abschnitt-Diskussion-leere-Elemente})
-, one has not really explained anything as one needs very good reasons for assuming an empty head, for example that this empty position can be realized in other
+Since an empty head can be assigned any syntactic valence and an arbitrary semantics (for discussion of this point, see Chapter~\ref{Abschnitt-Diskussion-leere-Elemente}), one has not really explained anything as one needs very good reasons for assuming an empty head, for example that this empty position can be realized in other
 contexts. This is, however, not the case for empty heads that are only proposed in order to save theoretical assumptions. Therefore, \citet{Sag97a} developed
 an analysis of relative clauses without any empty elements. As in the analyses sketched for (\mex{-1}) and (\mex{0}), the relative phrases are combined directly
 with the partial clause in order to form the relative clause. For the various observable types of relative clauses in English, Sag proposes different dominance rules.
