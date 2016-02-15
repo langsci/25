@@ -872,6 +872,7 @@ analysis proposed by \citet[\page 41]{Berman2003a}.\todostefan{do all LFG figure
 \caption{\label{Abb-Verbstellung-LFG}Analysis of verb placement following \citet[\page 41]{Berman2003a}}
 \end{figure}%
 
+{\interfootnotelinepenalty=10%
 \noindent
 After what we learned about phrase structure rules in Chapters~\ref{Kapitel-PSG} and~\ref{Kapitel-GPSG}, it may seem strange to allow VPs without V. This is not a problem in LFG,
 however, since for the analysis of a given sentence, it only has to be ensured that all the necessary parts (and only these) are present. This is ensured by the constraints on 
@@ -903,7 +904,6 @@ Two\is{constituent order} possibilities for treating local reordering have been 
 If one assumes that traces are relevant for the semantic interpretation of a given structure, then the first option has the same problems as movement"=based GB analyses.
 These have already been discussed in Section~\ref{sec-GB-lokale-Umstellung}.
 
-%{\interfootnotelinepenalty=10%
 In what follows, I will present the analysis proposed by  \citet[Section~2.1.3]{Berman96a-u} in a
 somewhat simplified form. Case and grammatical functions of verbal arguments are determined
 in the lexicon \citep[\page 22]{Berman96a-u}. (\mex{1}) shows the lexical entry for the verb \emph{verschlingen} `devour':\footnote{%
@@ -914,13 +914,17 @@ The four cases in German can be represented using two binary features ({\small G
 }$^,$\footnote{%
 	Alternative analyses derive the grammatical function of an NP from its case (\citew[\page
   37]{Berman2003a} for German; \citew[\page 187, \page 201]{Bresnan2001a} for German and Russian).
+
 \ea
 \label{Kasus-Implikation-Berman}
 \upshape      (\downsp \case) = \mdacc{} $\Rightarrow$ (\upsp \obj) = \down{}
 \z
+
+\noindent
   \citet[Section~2.1]{Karttunen89a-u} makes a similar suggestion for Finnish\il{Finnish} in the framework of Categorial Grammar\indexcxg.
   Such analyses are not entirely unproblematic as case cannot always be reliably paired with grammatical functions. In German, as well as temporal
   accusatives (ii.a), there are also verbs with two accusative objects (ii.b--c) and predicative accusatives (ii.d).
+
 \eal
 \ex 
 \gll Er arbeitete den ganzen Tag.\\
@@ -936,11 +940,14 @@ The four cases in German can be represented using two binary features ({\small G
 	 she called him.\acc{} a.\acc{} liar\\
 \zl
 All of these accusatives can occur in long"=distance dependencies (see Section~\ref{Abschnitt-NLA-LFG}):
+
 \ea
 \gll Wen glaubst du, dass ich getroffen habe.\\
 	 who believe you that I met have\\
 \glt `Who do you think I met?'
 \z
+
+\noindent
 \emph{wen} is not the object of \emph{glauben} `believe' and as such cannot be included in the
 f"=structure of \emph{glauben} `believe'. One would have to reformulate the implication in
 (i) as a disjunction of all possible grammatical functions of the accusative and in addition account for the fact that accusatives can come from a more deeply embedded f"=structure.
@@ -964,7 +971,7 @@ that the verb is not combined with an adjunct or an argument, but rather forms a
 \z
 At first sight, this may seem odd since a V such as \emph{verschlingen} `devour' does not have the same distribution as a verb with its arguments. However, one should recall that the
 constraints pertaining to coherence and completeness of f"=structures play an important role so that the theory cannot make incorrect predictions.
-%}% footnote breaks
+}% footnote breaks
 
 Since the verb can occur in initial position, it is marked as optional in the rule in (\mex{0}) (see Section~\ref{Abschnitt-Verbstellung-LFG}).
 
