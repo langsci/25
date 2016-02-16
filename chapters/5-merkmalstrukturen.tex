@@ -173,7 +173,7 @@ search for the respective descriptions in a list.
 If the order of the elements is irrelevant, then we could use sets\is{set} rather than lists.
 Sets are written inside curly brackets.\footnote{
 The definition of a set requires many technicalities. 
-In this book, sets would be used for the collection of semantic information only. This can be done equally
+In this book, I would use sets only for collecting semantic information. This can be done equally
 well using lists, which is why I do not introduce sets here and instead use lists.%
 }
 
@@ -198,7 +198,7 @@ children     & \liste{ \ldots, \ldots{} }\\
 Types are written in \textit{italics}. 
 
 The specification of a type determines which properties a modelled object has. It is then only
-possible for a theorie to say something about these properties.
+possible for a theory to say something about these properties.
 Properties such as \textsc{operating voltage} are not relevant for objects of the type \textit{person}. If we know the type of a given object, then we
 also know that this object must have certain properties even if we do not yet know their exact values. In this way, (\mex{1}) is still a description of
 Max Meier even though it does not contain any information about Max' date of birth:
@@ -387,9 +387,10 @@ mother    & \ms[person]{
              }\\
 }
 \z
-Notice that under the paths \textsc{father$|$children} and \textsc{mother$|$children}, we find a list of a description of a person with the first name Klaus.
-The question of whether the feature description is of one or two children of Peter and Anna cannot be answered. It is certainly possible that we are
-dealing with two different children from previous partnerships who both happen to be called
+Notice that under the paths \textsc{father$|$children} and \textsc{mother$|$children}, we find a
+list containing a description of a person with the first name Klaus. The question of whether the
+feature description is of one or two children of Peter and Anna cannot be answered. It is certainly
+possible that we are dealing with two different children from previous partnerships who both happen to be called
 Klaus.
 
 By using structure sharing, it is possible to specify the identity of the two values:
@@ -447,7 +448,7 @@ father      & \ms[person]{
 mother    & \ms[person]{
               firstname  & anna\\
               lastname & meier\\
-              kinder   & \liste{ \ibox{1}, \ibox{2} }\\
+              children   & \liste{ \ibox{1}, \ibox{2} }\\
              }\\
 }
 \z
@@ -533,12 +534,12 @@ files. His files could contain the following information:
 \ms[person]{
 firstname   & katharina\\
 lastname   & meier\\
-gender & weiblich\\
+gender & female\\
 date-of-birth & 15.10.1965\\
 }
 \z
 These data are compatible with the search criteria. If we were to unify the descriptions in (\mex{-3}a) and (\mex{0}), we would get (\mex{-2}).
-If we assume that the detective has done all his work, then Bettina Kant now knows that the person she is looking for has the properties of her
+If we assume that the detective has done a good job, then Bettina Kant now knows that the person she is looking for has the properties of her
 original search plus the newly discovered properties.
 \is{unification|)}
 
@@ -860,7 +861,7 @@ Relational constraints such as \emph{append} do in fact constitute an expansion 
 of feature values to other values, that is, one can write programs which compute a particular value depending on other values. 
 This poses the question as to whether one needs such powerful descriptive tools in a linguistic theory and if we do allow them, what kind of complexity we afford them.
 A theory which can do without relational constraints should be preferred over one that uses
-relational constraints (see  \citew[Chapter~20]{MuellerLehrbuch1} for a comparison of theories).
+relational constraints (see \citealp[Chapter~20]{MuellerLehrbuch1} for a comparison of theories).
 
 For the concatenation of lists, there is a possible implementation in feature structures without
 recourse to relational constraints. Find out how this can be done. Give your sources and document
@@ -876,7 +877,7 @@ combinatorial possibilities of such structures could not be discussed in detail 
 at least part of these properties is important for work in computational linguistics and in
 developing one's own analyses. For more information, I refer the interested reader to the following publications: 
 %
-\citet{Shieber86a} is a short introduction to the theory of Unification Grammar. There is a relatively general overview followed by the discussion of important grammar types
+\citet{Shieber86a} is a short introduction to the theory of Unification Grammar. It offers a relatively general overview followed by the discussion of important grammar types
 such as DCG\is{Definite Clause Grammar (DCG)}, \lfg, \gpsg,
 HPSG, PATR-II\is{PATR-II}.
 %
