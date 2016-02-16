@@ -52,6 +52,12 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 # removing the bbl file is important since otherwise the -min-crossrefs option may not work
 
+# there are two different index.format files.
+# they contain special characters for delimination. Standard is ", but this is used
+# for German. "+" is used as operator in the book and appears in the index of symbols.
+# So I use "." as a separator for the subject index and "+" as separator for the authors index.
+# St. Mü. 16.02.2016
+
 %.pdf: %.tex $(SOURCE)
 	\rm -f $*.bbl
 	xelatex -no-pdf $* |grep -v math
@@ -64,7 +70,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	\rm $*.adx
 	authorindex -i -p $*.aux > $*.adx
 	sed -e 's/}{/|hyperpage}{/g' $*.adx > $*.adx.hyp
-	makeindex -gs index.format -o $*.and $*.adx.hyp
+	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
