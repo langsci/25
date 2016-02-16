@@ -17,10 +17,10 @@ The more in"=depth works on German are \citew{Berman96a-u,Berman2003a} and \cite
 LFG has well-designed formal foundations \citep{KB82a-u,Kaplan95a}, and hence first implementations
 were available rather quickly \citep*{FR83b,FR83a,Yasukawa1984a-u,BH86a-u,%
 ED86a-u,% CHARON Parser
-Kohl92a-u,KGPRM92a-u,% ACORD project CHARON Generator
 WA86a-u,%
 Delmonte90a-u,% Italien
 HHP91a-u,% Chinesisches kommerzielles System
+Kohl92a-u,KGPRM92a-u,% ACORD project CHARON Generator
 KM96a-u,%
 Mayo97a-u,Mayo99a-u,%Konstanzer system
 BS2005b-u,BS2005a-u,%SxLFG
@@ -69,7 +69,7 @@ The following is a list of languages with implemented LFG fragments, probably in
 %\item Chinese\il{Mandarin Chinese}
 \item Danish\il{Danish} \citep{Oersnes2002b-u,OW2003a-u,OW2004a-u},
 \item English\il{English} \citep*{HHP91a-u,BDFK99a-u,RKKCMJ2002a-u,KM2007a-u},
-\item French\il{French} \citep*{Zweigenbaum91a-u,Frank96b-u,FZ2002a-u,BDFK99a-u,CK2001a-u,BSL2005a-u,SdA2015a-u},
+\item French\il{French} \citep*{Zweigenbaum91a-u,Frank96b-u,FZ2002a-u,BDFK99a-u,CK2001a-u,BSL2005a-u,SdA2016a-u},
 % Knueppel2001a-u
 %
 %
@@ -149,7 +149,7 @@ mediate between these representational levels.
 
 \subsection{Functional structure}
 
-In LFG, grammatical functions such as subject and object play a very important role. Unlike in all other theories discussed in this book, they are primitives
+In LFG, grammatical functions such as subject and object play a very important role. Unlike in most other theories discussed in this book, they are primitives
 of the theory. A sentence such as (\mex{1}a) will be assigned a functional structure as in (\mex{1}b):
 
 
@@ -185,7 +185,7 @@ is externally controlled\is{control}\\
 \objtheta: & secondary \textsc{obj} functions that are related to a special, language \\
            & specific set of grammatical roles; English has \objtheme only.\\
 %
-\obltheta: & a\isfeat{obl} group of thematically restricted oblique functions as for instance
+\obltheta: & a\isfeat{obl} group of thematically restricted oblique functions, as for instance
          {\obl\downlett{GOAL}} or {\obl\downlett{AGENT}}. These often correspond to adpositional
          phrases in c-structure.\\
 \lspbottomrule
@@ -412,7 +412,7 @@ David devoured a sandwich that Peter sleeps.%\\
 \zl
 
 \noindent
-The constraints on completeness and coherence together ensure that only those arguments required in
+The constraints on completeness and coherence together ensure that all and only those arguments required in
 the \pred specification are actually realized.
 Both of those constraints taken together correspond to the Theta Criterion\is{Theta Criterion} in \gbt (see
 page~\pageref{theta-Kriterium}).\footnote{
@@ -669,7 +669,7 @@ which syntactic structure is comprised (\emph{lexical integrity}\is{lexical inte
 
 Syntactic rules cannot create new words or make reference to the internal structure of words. Every terminal node (each ``leaf'' of the tree) is a word. It follows from this that
 analyses such as the GB analysis of \citet{Pollock89a-u} in Figure~\vref{abb-Pollock} for the French example in (\mex{1})  are ruled out (the figure is taken from
-\citew[\page 617]{Kuhn2007a}): 
+\citealp[\page 617]{Kuhn2007a}): 
 
 % Felix sagt: So ist es richtig. Weicht von Jonas ab.
 \ea
@@ -760,7 +760,7 @@ In later work, the assignment of grammatical functions was taken over by Lexical
 \LATER{\citep{Levin87a}}\citep{BresnanK89a-u}. It is assumed that thematic roles\is{semantic role|(} are ordered in a universally valid hierarchy (\citealp{BresnanK89a-u}; \citealp[\page
 307]{Bresnan2001a}): agent\is{agent} $>$ beneficiary\is{beneficiary} $>$ experiencer/goal\is{experiencer}\is{goal} $>$ instrument\is{instrument} $>$ patient/theme\is{patient}\is{theme} $>$
 locative. Patient"=like roles are marked as unrestricted ([$-$r]) in a corresponding representation, the so"=called a"=structure\is{a"=structure}. Secondary patient"=like roles are marked
-as \emph{objective}, ([+o]) and all other roles are marked as non"=objective ([$-$o]).
+as \emph{objective} ([+o]) and all other roles are marked as non"=objective ([$-$o]).
 For the transitive verb \emph{schlagen} `to beat', we have the following:
 \ea
 \begin{tabular}[t]{@{}llll@{}}
@@ -828,8 +828,9 @@ a-structure & \emph{helfen} `help' & $\langle$ x & y~~ $\rangle$\\
            &          & \hspaceThis{$\langle$}$\varnothing$       & \objtheta
 \end{tabular}
 \z
-Since there is neither a [$-$o] nor a [$-$r] argument, no argument is connected to the subject function. The result is an association of arguments and grammatical functions, which
-corresponds to that found in impersonal passives.
+Since there is neither a [$-$o] nor a [$-$r] argument, no argument is connected to the subject
+function. The result is an association of arguments and grammatical functions that corresponds to
+the one found in impersonal passives.
 
 These mapping principles may seem complex at first glance, but they play a role in analyzing
 an entire range of phenomena, \eg, the analysis of unaccusative verbs\is{verb!unaccusative}
@@ -912,8 +913,7 @@ The four cases in German can be represented using two binary features ({\small G
   for {\small GOV}, then an element with {\small OBL}$-$  is compatible with both nominative and accusative. Since this underspecification is not needed in the following discussion,
   I will omit this feature decomposition and insert the case values directly.
 }$^,$\footnote{%
-	Alternative analyses derive the grammatical function of an NP from its case (\citew[\page
-  37]{Berman2003a} for German; \citew[\page 187, \page 201]{Bresnan2001a} for German and Russian).
+	Alternative analyses derive the grammatical function of an NP from its case (\citealp[\page 37]{Berman2003a} for German; \citealp[\page 187, \page 201]{Bresnan2001a} for German and Russian\il{Russian}).
 
 \ea
 \label{Kasus-Implikation-Berman}
@@ -970,7 +970,8 @@ that the verb is not combined with an adjunct or an argument, but rather forms a
 \rulenode{(V)\\* \up~=~\down}}
 \z
 At first sight, this may seem odd since a V such as \emph{verschlingen} `devour' does not have the same distribution as a verb with its arguments. However, one should recall that the
-constraints pertaining to coherence and completeness of f"=structures play an important role so that the theory cannot make incorrect predictions.
+constraints pertaining to coherence and completeness of f"=structures play an important role so that
+the theory does not make incorrect predictions.
 }% footnote breaks
 
 Since the verb can occur in initial position, it is marked as optional in the rule in (\mex{0}) (see Section~\ref{Abschnitt-Verbstellung-LFG}).
