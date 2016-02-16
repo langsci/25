@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   $RCSfile: grammatiktheorie.tex,v $
+%%  $Revision: 1.3 $
+%%      $Date: 2010/01/18 14:55:27 $
+%%     Author: Stefan Mueller (CL Uni-Bremen)
+%%    Purpose: 
+%%   Language: LaTeX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\documentclass[ ,output=long    % long|short|inprep              
+	        %,blackandwhite
+	        ,smallfont
+                ,bibtex
+%	        ,draftmode  
+%                ,showindex
+%                ,openreview
+%                ,copyright=CC-BY-ND
+		  ]{langsci/langscibook}                          
+
+
+
+\usepackage{ifthen}
+\provideboolean{draft}
+\setboolean{draft}{false}
+%\setboolean{draft}{true}
+
+\usepackage{etoolbox}
+\newtoggle{draft}\togglefalse{draft}
+
+
+%\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+\begin{document}
+
+
+\nocite{*}
+
+
+\bibliography{bib-abbr,biblio}
+
+
+\end{document}
+
+
