@@ -7,10 +7,10 @@
 Transformational Grammar\is{Transformational Grammar|(} and its subsequent incarnations (such as Government and Binding Theory
 and Minimalism) were developed by Noam Chomsky at MIT in Boston \citep{Chomsky57a,Chomsky65a,Chomsky75a,Chomsky81a,Chomsky86b,Chomsky95a-u}.
 Manfred \citet{Bierwisch63} was the first to implement Chomsky's ideas for German. In the 60s, the decisive impulse came from the 
-\emph{Arbeitsstelle Strukturelle Grammatik} `Workgroup for Structural Grammar', which was part of the Academy of Science of the GDR. (See
-\citew{Bierwisch92} and \citew{Vater2010a} for a historic overview.)
-As well as Bierwisch's work, the following other works focussing on German, which have been written as part of this research
-program, should also be mentioned: \citew{Fanselow87a}, \citew{FF87}, \citew{SS88a}, \citew{Grewendorf88a}, \citew{Haider93a},
+\emph{Arbeitsstelle Strukturelle Grammatik} `Workgroup for Structural Grammar', which was part of the Academy of Science of the GDR. See
+\citealp{Bierwisch92} and \citealp{Vater2010a} for a historic overview.
+As well as Bierwisch's work, the following other works focussing on German, which have been written
+as part of this research program, should also be mentioned: \citew{Fanselow87a}, \citew{FF87}, \citew{SS88a}, \citew{Grewendorf88a}, \citew{Haider93a},
 \citew{Sternefeld2006a-u}.
 
 The different implementations of Chomskyan theories are often grouped under the heading \emph{Generative Grammar}\index{Generative Grammar}.
@@ -24,7 +24,7 @@ emerged such that the aforementioned theories are now \emph{model theoretic}
 theories\is{model"=theoretic grammar} rather than generative"=enumerative ones\footnote{
 Model theoretic approaches are always constraint"=based and the terms \emph{model theoretic} and \emph{constraint"=based} are 
 sometimes used synonymously. 
-} (See Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch} for discussion). In 1957, Chomsky defined the term \emph{Generative Grammar}
+} (See Chapter~\ref{Abschnitt-Generativ-Modelltheoretisch} for discussion). In 1965, Chomsky defined the term \emph{Generative Grammar}
 in the following way (see also \citealp[\page 162]{Chomsky95a-u}):
 \begin{quote}
 A grammar of a language purports to be a description of the ideal speaker-hearer's intrinsic
@@ -60,9 +60,11 @@ In the previous\is{transformation|(} chapter, I introduced simple phrase structu
 grammars. \citet[Chapter~5]{Chomsky57a} criticized this kind of rewrite grammars since -- in his
 opinion -- it is not clear how one can capture the relationship between active and passive sentences or
 the various ordering possibilities of constituents in a sentence. While it is of course possible to
-formulate different rules for active and passive sentences in a phrase structure grammar, it would
+formulate different rules for active and passive sentences in a phrase structure grammar (\eg one
+pair of rules for intransitive (\mex{1}), one for transitive (\mex{2}) and one for ditransitive verbs (\mex{3})), it would
 not adequately capture the fact that the same phenomenon occurs in the example pairs in (\mex{1})--(\mex{3}):
 \eal
+\label{ex-transformations-intr}
 \ex 
 \gll weil dort noch jemand arbeitet\\
      because there still somebody works\\
@@ -83,6 +85,7 @@ not adequately capture the fact that the same phenomenon occurs in the example p
 \glt `because the world champion was beaten'
 \zl
 \eal
+\label{ex-transformations-ditr}
 \ex 
 \gll weil der Mann der Frau den Schlüssel stiehlt\\
 	 because the man the woman the key steals\\
@@ -173,9 +176,9 @@ our language ability must be innate. The question of exactly what is innate and 
 controversial and the various positions on the question have changed over the course of the last decades. Some notable works on this topic are \citew{Pinker94a}, 
 \citew{Tomasello95a}, \citew{Wunderlich2004a}, \citew*{HCF2002a} and \citew{Chomsky2007a}. For more on this discussion, see Chapter~\ref{chap-innateness}.
 
-\citet{Chomsky81a} also assumes that there are general, innate principles which linguistic structure cannot violate. These principles are parameterized, that is,
+\citet{Chomsky81a} also assumes that there are general, innate principles which linguistic structure cannot violate. These principles are parametrized, that is,
 there are options. Parameter\is{parameter!head position}\is{parameter} settings can differ between languages.
-An example for a parameterized principle is shown in (\mex{1}):
+An example for a parametrized principle is shown in (\mex{1}):
 \ea
 Principle: A head occurs before or after its complement(s) depending
 on the value of the parameter \textsc{position}.
@@ -216,10 +219,12 @@ After these introductory comments on language acquisition, the following section
 Chomsky\is{T model|(}
 criticized simple PSGs for not being able to adequately capture certain correlations. An example of this is the relationship between
 active and passive sentences. In phrase structure grammars, one would have to formulate active and passive rules for intransitive,
-transitive and ditransitive verbs. The fact that the passive can otherwise be consistently described as the suppression of the most
-prominent argument is not captured by phrase structure rules. Chomsky therefore assumes that there is an underlying structure, the
-so"=called \emph{Deep Structure}\is{Deep Structure|see{D"=Structure}}\is{D"=structure}, and that other structures are derived from this. 
-The general architecture of the so-called T~model is discussed in the following subsections.
+transitive and ditransitive verbs (see the discussion of
+(\ref{ex-transformations-intr})--(\ref{ex-transformations-ditr}) above). The fact that the passive
+can otherwise be consistently described as the suppression of the most prominent argument is not
+captured by phrase structure rules. Chomsky therefore assumes that there is an underlying structure,
+the so"=called \emph{Deep Structure}\is{Deep Structure|see{D"=Structure}}\is{D"=structure}, and that
+other structures are derived from this.  The general architecture of the so-called T~model is discussed in the following subsections.
 
 \subsubsection{D-structure and S-structure}
 
@@ -253,7 +258,6 @@ for tree = {edge={->},l=4\baselineskip}
 
 \caption{\label{Abb-T-Modell}The T~model}
 \end{figure}%
-
 S"=structure feeds into Phonetic Form (PF)\is{Phonetic Form (PF)} and Logical Form (LF)\is{Logical Form (LF)}.
 The model is referred to as the \emph{T-model} (or Y-model)
 because D"=structure, S"=structure, PF and LF form an upside"=down T (or Y). We will
@@ -288,7 +292,7 @@ D"=structure. For example, a sentence with a ditransitive verb has the following
 \zl
 The following transformational rules for the movements above are assumed: (\mex{0}b) is derived from (\mex{0}a) by fronting the verb, 
 and (\mex{0}c) is derived from (\mex{0}b) by fronting the nominative noun phrase. In \gbt, there is only one very general transformation:
-Move-$\alpha$\is{Move-$\alpha$} = ``Move anything anywhere!''. The nature of what exactly can be moved where and for which reason is determined
+Move~$\alpha$\is{Move~$\alpha$} = ``Move anything anywhere!''. The nature of what exactly can be moved where and for which reason is determined
 by principles. Examples of such principles are the Theta Criterion and the Case Filter, which will be
 dealt with below.
 
@@ -327,7 +331,7 @@ Phonological operations are represented at\is{Phonetic Form (PF)|(} the level of
 is actually pronounced. For example, so"=called \emph{wanna}"=contraction takes place at PF \citep[\page 20--21]{Chomsky81a}.
 \eal
 \ex The students want to visit Paris.
-\ex The students wannna visit Paris.
+\ex The students wanna visit Paris.
 \zl
 The contraction\is{contraction} in (\mex{0}) is licensed by the optional rule in (\mex{1}):
 \ea
@@ -411,7 +415,7 @@ For example, the fact that the verb \emph{know} needs two arguments belongs to i
 Dividing heads into valence classes is also referred to as \emph{subcategorization}\is{subcategorization}:\label{Seite-Subkategoriesierung} 
 \emph{know} is subcategorized for a subject and an object.
 This term comes from the fact that a head is already categorized with regard to its
-part of speech (verb, noun, adjective, \ldots) and then further sub"-classes (\eg, intransitive or
+part of speech (verb, noun, adjective, \ldots) and then further sub"-classes (\eg intransitive or
 transitive verb) are formed with regard to valence information. Sometimes the phrase \emph{X subcategorizes for Y} is used, which means \emph{X selects Y}.
 % or even \emph{X governs Y}. Martin: government ist in GB was anderes.
 \emph{know} is referred to as the predicate\is{predicate} since 
@@ -431,7 +435,7 @@ Adjuncts\is{adjunct} modify semantic predicates and when the semantic aspect is 
 also called \emph{modifiers}\is{modifier}. Adjuncts are not present in the argument structure
 of predicates.
 
-Following GB assumptions, arguments occur in specific positions in the clause -- in so"=called argument positions\is{argument!position} (\eg, the sister of 
+Following GB assumptions, arguments occur in specific positions in the clause -- in so"=called argument positions\is{argument!position} (\eg the sister of 
 an \xnull element, see Section~\ref{sec-xbar}). The Theta Criterion\is{Theta Criterion} states that elements in argument positions have to be assigned
 a semantic role\is{semantic role} -- a so"=called theta role\is{theta role@$\theta$-role} -- and
 each role can be assigned only once \citep[\page 36]{Chomsky81a}: 
@@ -460,7 +464,7 @@ someone who has lost or is lacking something)
 If a verb has several theta roles of this kind to assign, Class~1 normally has the highest rank, whereas Class~3 has the lowest.
 Unfortunately, the assignment of semantic roles to actual arguments of verbs has received a rather inconsistent treatment in the 
 literature. This problem has been discussed by \citet{Dowty91a}, who suggests using proto"=roles. An argument is assigned the
-proto"=agent role if it has sufficiently many of the properties that were identified by Dowty as prototypical properties of agents (\eg, animacy\is{animacy}, volitionality).%
+proto"=agent role if it has sufficiently many of the properties that were identified by Dowty as prototypical properties of agents (\eg animacy\is{animacy}, volitionality).%
 \nocite{Gruber65a-u,Fillmore68,Fillmore71a-u,Jackendoff72a-u,Dowty91a}
 
 The mental lexicon contains \emph{lexical entries} with the specific properties of syntactic words needed to use that word grammatically.
@@ -506,7 +510,7 @@ the highest argument is not treated as the external argument. It would therefore
 In\is{X theory@\xbar theory|(} GB, it is assumed that all syntactic structures licensed by the core grammar\is{core grammar}\footnote{
  \citet[\page 7--8]{Chomsky81a} distinguishes between a regular area of language that is determined by a grammar that
  can be acquired using genetically determined language"=specific knowledge and a periphery\is{periphery}, to which irregular parts
- of language such as idioms (\eg, \emph{to pull the wool over sb.'s eyes}) belong. See Section~\ref{Abschnitt-musterbasiert}.
+ of language such as idioms (\eg \emph{to pull the wool over sb.'s eyes}) belong. See Section~\ref{Abschnitt-musterbasiert}.
 }
 correspond to the \xbar schema (see Section~\ref{sec-xbar}).\footnote{
    \citet[\page 210]{Chomsky70a} allows for grammatical rules that deviate from the \xbar schema.
@@ -554,7 +558,7 @@ Using this cross"=classification, it is possible to formulate generalizations. O
 verbs: all lexical categories which are [~+V~] are either adjectives or verbs. Furthermore, one can
 say of [~+N~] categories (nouns and adjectives) that they can bear case. 
 
-Apart from this, some authors have tried to associate the head position with the feature values in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} (see \eg, \citealp[\page 52]{Grewendorf88a};
+Apart from this, some authors have tried to associate the head position with the feature values in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} (see \eg \citealp[\page 52]{Grewendorf88a};
 \citealp[\page 124]{Haftka96a}; G.\ \citealp[\page 238]{GMueller2011a}). With prepositions and nouns,
 the head precedes the complement in German:
 \eal
@@ -647,12 +651,11 @@ discontinuous\is{constituent!discontinuous} constituents
 
 In \xbart, one normally assumes that there are at most two projection levels (X$'$ and X$''$). However, there are some versions of Mainstream
 Generative Grammar and other theories which allow three or more levels \citep{Jackendoff77,Uszkoreit87a}. In this chapter, I follow the
-standard assumption that there are two levels, that is, phrases have at least three projection levels:
-
+standard assumption that there are two projection levels, that is, phrases have at least three levels:
 
 \begin{itemize}
 \item X$^0$ = head
-\item X$'$ = intermediate projection (X bar) 
+\item X$'$ = intermediate projection (\xbar, read: X bar) 
 \item XP = highest projection (=~X$''$ = $\overline{\overline{\mbox{X}}}$), also called \emph{maximal projection}\is{projection!maximal} 
 \end{itemize}
 \is{X theory@\xbar theory|)}
@@ -761,15 +764,13 @@ sn edges
 \end{figure}%
 
 
-Yes/no-questions\label{Seite-GB-Entscheidungsfragen-Englisch} in English such as those in (\mex{1}) are formed by moving the 
-auxiliary verb\is{auxiliary movement} in front of the subject.
+Yes/no-questions\label{Seite-GB-Entscheidungsfragen-Englisch} in English such as those in (\mex{1}) are formed by moving the auxiliary verb\is{auxiliary inversion} in front of the subject.
 \ea
 Will Ann read the newspaper?
 \z
 Let us assume that the structure of questions corresponds to the structure of sentences with complementizers. This means that questions are also
 CPs. Unlike the sentences in (\mex{-1}), however, there is no subordinating conjunction. In the D"=structure of questions, the \cnull position is
 empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-GB-Ja-Nein} shows an analysis of (\mex{0}).
-
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -789,7 +790,7 @@ sn edges
 }
 \caption{\label{Abb-GB-Ja-Nein}English polar question}
 \end{figure}%
-The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary movement}
+The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary inversion}
 
 
 
@@ -950,7 +951,7 @@ As shown in Figure~\ref{Abb-GB-Topo}, it is assumed that the highest argument of
 has a special status. It is taken for granted that the subject always occurs outside of the VP, which is why it is referred
 to as the external argument.\is{argument!external} The VP itself does not have a specifier. In more recent work, however, the subject
 is generated in the specifier of the VP \citep{FS86a-u,KS91a-u}. In some languages, it is assumed that it moves to a position
-outside of the VP. In other languages such as German, this is the case at least under certain conditions (\eg, definiteness, see
+outside of the VP. In other languages such as German, this is the case at least under certain conditions (\eg definiteness, see
 \citealp{Diesing92a}). I am presenting the classical GB analysis here, where the subject is outside the VP. All arguments other than
 the subject are complements of the V, that are realized within the VP, that is, they are internal arguments. If the verb requires just one complement, then this is the
 sister of the head V$^0$ and the daughter of V$'$ according to the \xbar schema. The accusative object is the prototypical complement.
@@ -1025,9 +1026,9 @@ The assumption of verb"=final order\label{page-verbletzt} as the base order is m
 % >
 % > Habe gerade folgendes gefunden:
 % >
-% >> Interestingly, because head-final languages (\eg, Turkish and
+% >> Interestingly, because head-final languages (\eg Turkish and
 % >> Japanese) mark prominence in phonological phrases initially through
-% >> pitch and intensity and head-initial languages (\eg, Italian and
+% >> pitch and intensity and head-initial languages (\eg Italian and
 % >> English) mark prominence in phonological phrases finally through
 % >> duration (Nespor et al., 2008),
 % >
@@ -1054,8 +1055,8 @@ The assumption of verb"=final order\label{page-verbletzt} as the base order is m
 \zl
 This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.
 
-Verbs which are derived from a noun by back-formation\is{back-formation} (\eg, \emph{uraufführen} 
-`to perform something for the first time', can often not be divided into their component parts and
+Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
+`to perform something for the first time'), can often not be divided into their component parts and
 V2 clauses are therefore ruled out (This was first mentioned by \citet{Hoehle91b} in unpublished
 work. The first published source is \citew[\page 62]{Haider93a}):
 \eal
@@ -1065,15 +1066,15 @@ work. The first published source is \citew[\page 62]{Haider93a}):
 \glt `because they are performing the play for the first time today'
 }
 \ex[*]{
-\gll Sie ur-auf"|führen heute das Stück.\\
-	 they \textsc{pref}-\textsc{part}-lead today the play\\
+\gll Sie ur-auf-führen heute das Stück.\\
+     they \textsc{pref}-\textsc{part}-lead today the play\\
 }
 \ex[*]{
 \gll Sie führen heute das Stück ur-auf.\\
-	 they lead today the play \textsc{pref}-\textsc{part}\\
+     they lead today the play \textsc{pref}-\textsc{part}\\
 }
 \zl
-The examples show that there is only one possible position for the verb. This order is the one that is assumed to be the base order.
+The examples show that there is only one possible position for this kind of verb. This order is the one that is assumed to be the base order.
 \item Verbs in non"=finite clauses and in finite subordinate clauses with a conjunction are
 always in final position (I am ignoring the possibility of extraposing constituents):
 \eal
@@ -1087,7 +1088,7 @@ always in final position (I am ignoring the possibility of extraposing constitue
 \glt `that the clown gives Kurt-Martin the goods'
 \zl
 
-\item If one compares the position of the verb in German to Danish\il{Danish} (Danish is an SVO language
+\item If one compares the position of the verb in German with Danish\il{Danish} (Danish is an SVO language
 like English), then one can clearly see that the verbs in German form a cluster at the end of the sentence,
 whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
 \eal
@@ -1268,7 +1269,7 @@ sentences in (\mex{2}) from (\mex{1}) by moving a constituent in front of the ve
 Since any constituent can be placed in front of the finite verb, German is treated typologically as one of the
 verb"=second languages\is{verb"=second language} (V2). Thus, it is a verb"=second language with SOV base order.
 English, on the other hand, is an SVO language without the V2 property, whereas Danish is a V2 language with SVO
-as its base order (see \citew{Oersnes2009b} for Danish).
+as its base order (see \citealp{Oersnes2009b} for Danish).
 
 Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\ref{Abb-GB-Verberststellung}.
 \begin{figure}
@@ -1355,7 +1356,7 @@ do not bear structural case, are said to have \emph{lexical case}.\footnote{%
 Furthermore, there is a so"=called \emph{agreeing case}\is{case!agreement} (see page~\pageref{page-Kasuskongruenz}) and \emph{semantic case}. Agreeing case is
 found in predicatives. This case also changes depending on the structure involved, but the change is
 due to the antecedent element changing its case. Semantic case depends on the function of certain
-phrases (\eg, temporal accusative adverbials). Furthermore, as with lexical case of objects, semantic case does not change
+phrases (\eg temporal accusative adverbials). Furthermore, as with lexical case of objects, semantic case does not change
 depending on the syntactic environment. For the analysis of the passive, which will be discussed in this section, only
 structural and lexical case will be relevant.}
 
@@ -1422,7 +1423,7 @@ Similarly, there is no change in case with dative objects\is{case!dative|(}:
 	 him.\dat{} is helped\\
 \glt `He is being helped.'
 \zl
-It still remains controversial as to whether some or all of the datives in verbal environments should be treated as instances of structural case.
+It still remains controversial as to whether all datives should be treated as lexical or whether some or all of the datives in verbal environments should be treated as instances of structural case.
 For reasons of space, I will not recount this discussion but instead refer the interested reader to Chapter~14 of \citew{MuellerLehrbuch1}.
 In what follows, I assume -- like \citet[\page 20]{Haider86} -- that the dative is in fact a lexical case.\is{case!lexical} 
 
@@ -1448,7 +1449,8 @@ Figure~\vref{Abb-GB-Aktiv} shows the Case Principle in action with the example i
 (\mex{1}a).\footnote{%
 The figure does not correspond to \xbar theory in its classic form, since \emph{der Frau} `the woman' 
 is a complement which is combined with V$'$.  In classical \xbar theory, all complements have to be combined
-with \vnull. Furthermore, in the following figures the verb has been left in \vnull for reasons of clarity. In order
+with \vnull. This leads to a problem in ditransitive\is{verb!ditransitive} structures since the structures have to be binary (see \citew{Larson88a} for a treatment of double object constructions).
+Furthermore, in the following figures the verb has been left in \vnull for reasons of clarity. In order
 to create a well"=formed S"=structure, the verb would have to move to its affix in \inull.%
 }
 \eal
@@ -1491,8 +1493,9 @@ sn edges
 \caption{\label{Abb-GB-Aktiv}Case and theta-role assignment in active clauses}
 \end{figure}%
 %
-The passive morphology blocks the subject. The object that would get accusative in the active
-receives a semantic role in passives, but it does not get case. Therefore, it has to move to a position where case can be assigned to it 
+The passive morphology blocks the subject and absorbs the structural accusative. The object that would get accusative in the active
+receives only a semantic role in its base position in the passive, but it does not get case the
+absorbed case. Therefore, it has to move to a position where case can be assigned to it 
 \citep[\page 124]{Chomsky81a}. Figure~\vref{Abb-GB-Passiv} shows how this works for example
 (\mex{0}b).
 \begin{figure}
@@ -1524,8 +1527,7 @@ sn edges
 \caption{\label{Abb-GB-Passiv}Case and theta-role assignment in passive clauses}
 \end{figure}%
 
-This movement"=based analysis works well for English\il{English} since the underlying object always has to
-be moved:
+This movement"=based analysis works well for English\il{English} since the underlying object always has to move:
 \eal
 \ex[]{
 The mother gave [the girl] [a cookie].
@@ -1584,7 +1586,6 @@ This is captured by a constraint, which goes back to \citet[\page 178--185]{Burz
 referred to as \emph{Burzio's Generalization}.\is{Burzio's Generalization}\footnote{
 Burzio's original formulation was equivalent to the following: a verb assigns accusative if and only if it assigns
 a semantic role to its subject.
-
 This claim is problematic from both sides. In (i), the verb does not assign a semantic role to the subject, however
 there is nevertheless accusative case:
 \ea
@@ -1601,15 +1602,17 @@ dative:
      Peter met a.\dat{} man\\
 \glt `Peter met a man.'
 \z
-\citet[\page 185]{Burzio86a-u-gekauft} assumes that one"=place intransitive verbs have the potential to assign
-accusative. He supports this claim by pointing out the existence of the resultative
-constructions\is{resultative construction}, in which additional accusatives can be realized. (iii) is
-an example:
-\ea
-He talked my head off.
-\z
-However, there are also verbs such as \emph{verschwinden} `to disappear' which never assign
-accusative, not even in such constructions.
+%% verschwinden is unaccusative and hence takes an object as argument.
+%%
+%% \citet[\page 185]{Burzio86a-u-gekauft} assumes that one"=place intransitive verbs have the potential to assign
+%% accusative. He supports this claim by pointing out the existence of the resultative
+%% constructions\is{resultative construction}, in which additional accusatives can be realized, as \eg
+%% in (iii):
+%% \ea
+%% He talked my head off.
+%% \z
+%% However, there are also verbs such as \emph{verschwinden} `to disappear' which never assign
+%% accusative, not even in such constructions.
 
 See \citew{Haider99a} and \citew[\page 89]{Webelhuth95a} as well as the references cited there for further problems
 with Burzio's Generalization.
@@ -1686,7 +1689,7 @@ sn edges
 \end{forest}
 \caption{Analysis of local reordering as adjunction to IP}\label{fig-das-buch-der-mann-der-frau-gibt-movement}
 \end{figure}%
-The accusative object \emph{das Buch} `the book' is moved to the left and adjoined to the top"=most IP.
+The accusative object \emph{das Buch} `the book' is moved to the left and adjoined to the topmost IP.
 
 \is{scope|(}%
 An argument that has often been used to support this analysis is the fact that scope ambiguities
@@ -1710,13 +1713,12 @@ It turns out that approaches assuming traces run into problems as they predict c
 do not exist (see \citealp[\page 146]{Kiss2001a} and \citealp[Section~2.6]{Fanselow2001a}). 
 For instance in an example such as (\mex{1}), it should be possible to interpret \emph{mindestens einem Verleger} `at least one publisher' at
 the position of \_$_i$, which would lead to a reading where \emph{fast jedes Gedicht} `almost every poem' has scope over \emph{mindestens einem Verleger} 
-`at least one publisher'.
+`at least one publisher'. However, this reading does not exist.
 \ea
 \gll Ich glaube, dass mindestens einem Verleger$_i$ fast jedes Gedicht$_j$ nur dieser Dichter \_$_i$ \_$_j$ angeboten hat.\\
 	 I believe that at.least one publisher almost every poem only this poet {} {} offered has\\
 \glt `I think that only this poet offered almost every poem to at least one publisher.'
 \z
-This reading does not exist, however.
 
 \citet[\page 308]{SE2002a} discuss analogous examples from Japanese\il{Japanese}, which they credit to Kazuko 
 Yatsushiro\aimention{Kazuko Yatsushiro}. They develop an analysis where the first step is to move the accusative object in front of the subject.
@@ -1734,7 +1736,11 @@ rules is referred to as the \emph{base}. One variant of base generation assumes 
 combined with one argument at a time and that $\theta$"=roles are assigned in parallel to
 head"=argument combinations. The order in which
 arguments are combined with the verb is not specified, which means that all of the orders in (\ref{ex-gb-umstellung}) can be
-generated directly without any transformations (compare this to the grammar in (\ref{psg-binaer}) on page~\pageref{psg-binaer}). This kind of analysis has
+generated directly without any transformations.\footnote{
+ Compare this to the grammar in (\ref{psg-binaer}) on page~\pageref{psg-binaer}. This grammar
+ combines a V and an NP to form a new V. Since nothing is said about the case of the argument in the
+ phrase structure rule, the NPs can be combined with the verb in any order.
+} This kind of analysis has
 been proposed for GB by \citet{Fanselow2001a}.\footnote{%
 	The base generation analysis is the natural analysis in the HPSG\indexhpsg framework. It has already been developed by Gunji\nocite{Gunji86a}
 	in 1986 for Japanese\il{Japanese} and will be discussed in more detail in Section~\ref{sec-HPSG-lokale-Umstellung}. \citet[\page 313--314]{SE2002a}
@@ -1799,7 +1805,7 @@ and the consequences this has). Some of these points will be mentioned again in 
 
 One of the aims of Chomskyan research on grammar is to explain language acquisition. In GB, one
 assumed a very simple set of rules, which was the same for all languages (\xbart), as well as
-general principles that hold for all languages, but which could be parameterized for individual
+general principles that hold for all languages, but which could be parametrized for individual
 languages or language classes. It was assumed that a parameter was relevant for multiple phenomena.
 The Principles \& Parameters model was particularly fruitful and led to a number of interesting
 studies in which commonalities and differences between languages were uncovered. From the point of
@@ -1913,7 +1919,7 @@ This departure from rigid formalization has led to there being a large number of
 Mainstream Generative Grammar with sometimes incompatible assumptions to the point where it is no longer clear
 how one can combine the insights of the various publications. 
 An example of this is the fact that the central notion of government\is{government} has several different definitions
-(see \citew{AS83a} for an overview\footnote{%
+(see \citealp{AS83a} for an overview\footnote{%
 A further definition can be found in \citew{AL84a-u}. This is, however, equivalent to an earlier version as shown
 by \citet[\page 104--106]{PP86a}.%
 }).
@@ -1923,11 +1929,11 @@ This situation has been cricitized repeatedly since the 80s and sometimes very h
 \citealp{Pullum85a,Pullum89b}; \citealp[\page 48]{Pullum91b}; \citealp{KP90a}). 
 
 The lack of precision and working out of the details\footnote{
-	See \eg, \citew[\page 550]{Kuhns86a}, \citew[\page 508]{CL92a}, \citew[\page262]{KT91a}, \citew[\page
+	See \eg \citew[\page 550]{Kuhns86a}, \citew[\page 508]{CL92a}, \citew[\page262]{KT91a}, \citew[\page
   3]{Kolb97a} and \citew[\page 580]{Freidin97a-u}, \citew[\page 25, 47]{Veenstra98a}, \citew[\page 888]{LLJ2000b} and
   \citew[\page 397, 399, 400]{Stabler2010a} for the latter. 
 } and the frequent modification of basic assumptions\footnote{
-	See \eg, \citew[\page 4]{Kolb97a}, \citew{Fanselow2009a} and the quote from Stabler on page~\pageref{Zitat-Stabler}.
+	See \eg \citew[\page 4]{Kolb97a}, \citew{Fanselow2009a} and the quote from Stabler on page~\pageref{Zitat-Stabler}.
 } has led to insights gained by Mainstream Generative Grammar rarely being translated into computer implementations.
 There are some implementations that are based on Transformational Grammar/GB/MP models or borrow ideas from Mainstream
 Generative Grammar
@@ -1938,7 +1944,7 @@ FG2012a%
 }
 but these implementations often do not use transformations or differ greatly from the theoretical assumptions of the
 publications. For example, \citet[\page 102--104]{Marcus80a-u} and
-\citet[\page 5]{Stabler87a} use special purpose rules for auxiliary movement\is{auxiliary movement}.\footnote{
+\citet[\page 5]{Stabler87a} use special purpose rules for auxiliary inversion\is{auxiliary inversion}.\footnote{
   \citet{NF86a-u,NF87a-u} has shown that Marcus' parser can only parse context"=free languages. Since natural languages
   are of a greater complexity (see Chapter~\ref{sec-generative-capacity}) and grammars of corresponding complexity
   are allowed by current versions of Transformational Grammar, Marcus' parser can be neither an adequate implementation of
@@ -1950,9 +1956,9 @@ These rules reverse the order of \emph{John} and \emph{has} for the analysis of 
 \ex Has John scheduled the meeting for Wednesday?
 \ex John has scheduled the meeting for Wednesday?
 \zl
-These rules for auxiliary movement are very specific and explicitly reference the category of the auxiliary. This does not correspond
-to the analyses proposed in GB in any way. As we have seen in Section~\ref{Abschnitt-GB-CP-IP-System-Englisch}, there are no special
-transformational rules for auxiliary movement. Auxiliary movement is carried out by the more general transformation \movealpha and
+These rules for auxiliary inversion are very specific and explicitly reference the category of the auxiliary. This does not correspond
+to the analyses proposed in GB in any way. As we have seen in
+Section~\ref{Abschnitt-GB-CP-IP-System-Englisch}, there are no special transformational rules for auxiliary inversion. Auxiliary inversion is carried out by the more general transformation \movealpha and
 the associated restrictive principles. It is not unproblematic that the explicit formulation of the rule refers to the category \emph{auxiliary}
 as is clear when one views Stabler's GB"=inspired phrase structure grammar: 
 \eal
@@ -2019,9 +2025,10 @@ More general restrictions are extracted from the restrictions on S"= and D"=stru
 transformations are not directly carried out by the parser. As noted by Johnson, the language fragment he models is very small. It contains no
 description of \emph{wh}"=movement, for example (p.\,114). 
 
-Probably the most detailed implementation of the GB/Barriers tradition is Stabler's Prolog implementation \citeyearpar{Stabler92a-u}.
-Stabler's achievement is certainly impressive, but his book confirms what has been claimed thus far: Stabler has to simply stipulate many
-things which are not explicitly mentioned in \emph{Barriers} (\eg, using feature"=value pairs when
+Probably the most detailed implementation in the tradition of GB and Barriers -- the theoretical
+stage after GB (see \citealp{Chomsky86b}) -- is Stabler's Prolog implementation
+\citeyearpar{Stabler92a-u}. Stabler's achievement is certainly impressive, but his book confirms what has been claimed thus far: Stabler has to simply stipulate many
+things which are not explicitly mentioned in \emph{Barriers} (\eg using feature"=value pairs when
 formalizing \xbar theory, a practice that was borrowed from GPSG\indexgpsg) and some assumptions
 cannot be properly formalized and are simply ignored (see \citealp{Briscoe97a} for details). 
 
@@ -2029,11 +2036,11 @@ cannot be properly formalized and are simply ignored (see \citealp{Briscoe97a} f
 GB analyses\label{Seite-Representationelle-GB} which fulfill certain requirements can be reformulated so that they no longer make use of transformations.
 These transformation"=less approaches are also called \emph{representational}\is{representational model}, whereas the transformation"=based approaches are referred to as
 \emph{derivational}\is{derivation}. For representational analyses, there are only surface structures augmented by traces but none of these structures is connected
-to an underlying structure by means of transformations (see %\citew{McCawley68a}; Pullum2007a:3 sagt, dass das nicht MTS ist
+to an underlying structure by means of transformations (see \eg %\citew{McCawley68a}; Pullum2007a:3 sagt, dass das nicht MTS ist
 Koster \citeyear[\page ]{Koster78b-u}; \citeyear[\page 235]{Koster87a-u}; 
 %\citealp[\page 66, Fußnote~4]{Bierwisch83a}; 
 \citealp{KT91a}; \citealp[Section~1.4]{Haider93a}; 
-\citealp[\page 14]{Frey93a}; \citealp[\page 87--88, 177--178]{Lohnstein93a-u}; \citealp[\page 38]{FC94a}; \citealp[\page 58]{Veenstra98a}, for example).
+\citealp[\page 14]{Frey93a}; \citealp[\page 87--88, 177--178]{Lohnstein93a-u}; \citealp[\page 38]{FC94a}; \citealp[\page 58]{Veenstra98a}).
 These analyses can be implemented in the same way as corresponding HPSG analyses\indexhpsg (see
 Chapter~\ref{Kapitel-HPSG}) as computer-processable fragments and this has in fact been carried out
 for example for the analysis of verb position in German.\footnote{%
@@ -2109,12 +2116,13 @@ which more or less corresponds to what is discussed
 in this chapter (CP/IP, movement"=based analysis of the passive). The chapters in said book have been written by proponents of various theories
 and all analyze the same newspaper article. This book is extremely interesting for all those who wish to compare the various theories out there.
 
-\citew{Haegeman90a-u} is a comprehensive introduction to GB. Those who do read German may consider
+\citew{Haegeman94a-u} is a comprehensive introduction to GB. Those who do read German may consider
 the textbooks by \citew{FF87}, \citew{SS88a} and \citew{Grewendorf88a} since they are also
 addressing the phenomena that are covered in this book.
 
 In many of his publications, Chomsky discusses alternative, transformation"=less approaches as ``notational variants''.
-This is not appropriate, as analyses without transformations can make different predictions to transformation"=based approaches (\eg, w.\,r.\,t.\ coordination
+This is not appropriate, as analyses without transformations can make different predictions to
+transformation"=based approaches (\eg with respect to coordination
 and extraction. See Section~\ref{Abschnitt-Einordnung-GPSG} for a discussion of GPSG in this respect). In \citew{Gazdar81b}, one can find a comparison
 of GB and GPSG\indexgpsg as well as a discussion of the classification of GPSG as a notational variant of Transformational Grammar with contributions
 from Noam Chomsky, Gerald Gazdar and Henry Thompson\aimention{Henry S. Thompson}.
