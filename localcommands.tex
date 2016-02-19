@@ -145,3 +145,12 @@ frbox/.style={
 
 % needed for bibtex sorting. Usually provided from the bib file, but this fails for the first run.
 \providecommand*{\donothing}[1]{}
+
+
+% since all the theories are different, we start counting from scratch for every chapter.
+% Thanks to Antonio MyP for pointing this out.
+
+\makeatletter
+\@addtoreset{principle}{chapter}
+\@addtoreset{schema}{chapter}
+\makeatother
