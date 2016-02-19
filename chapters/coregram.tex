@@ -105,7 +105,6 @@ In addition to more general types, the type hierarchy of a particular language c
 of languages. All languages presumably have one and two"=place predicates and for most languages (if not all), it makes sense to talk about verbs\is{verb}.
 It is then possible to talk about one and two"=place verbs. Depending on the language, these can then be subdivided into intransitive and transitive.
 Constraints are formulated for the various types that can either hold generally or be language"=specific.
-
 In English\il{English}, verbs have to occur before their complements and therefore have the
 \initialv $+$, whereas verbs in German have the \initialv $-$ and it is the lexical rule for initial
 position that licenses a verb with an \initialv $+$.
@@ -146,16 +145,18 @@ typehierarchy
 \caption{\label{Abbildung-Hierarchie}Section of an inheritance hierarchy with lexical entries and dominance schemata}
 \end{figure}%
 For inflected words, the relevant roots\is{root} are in the lexicon. Examples of this are \stem{schlaf} `sleep', \stem{lieb} `love' and \stem{geb}
-`give'. In Figure~\ref{Abbildung-Hierarchie}, there are different subtypes of \type{root}, the general type for roots: \type{intrans-verb} for intransitive
+`give'. In Figure~\ref{Abbildung-Hierarchie}, there are different subtypes of \type{root}, the
+general type for roots: \eg \type{intrans-verb} for intransitive
 verbs and \type{trans-verb} for transitive verbs. Transitive verbs can be further subdivided into strictly transitive verbs (those with nominative and accusative
 arguments) and ditransitive verbs (those with nominative and both accusative and dative arguments). The hierarchy above would of course have to be refined considerably
 as there are even further sub"=classes for both transitive and intransitive verbs. For example, one can divide intransitive verbs into unaccusative\is{verb!unaccusative}
 and unergative\is{verb!unergative} verbs and even strictly transitive verbs would have to be divided into further sub"=classes (see \citealp[Section~2]{Welke2009a}). 
 
 In addition to a type for roots, the above figure contains types for stems\is{stem} and words\is{word}. Complex stems are complex objects that are
-derived from simple roots but still have to be inflected (\stem{lesbar} `readable', \stem{besing} `to extol'). Words are objects that do not inflect. Examples of these
+derived from simple roots but still have to be inflected (\stem{lesbar} `readable', \stem{besing}
+`to sing about'). Words are objects that do not inflect. Examples of these
 are the pronouns\is{pronoun} \emph{er} `he', \emph{sie} `she' etc.\ as well as prepositions. An inflected\is{inflection} form can be formed from a verbal stem
-(\emph{geliebt} `loved', \emph{besingt} `extols'). Relations between inflected words and (complex) stems can be formed again using derivation\is{derivation} rules. 
+(\emph{geliebt} `loved', \emph{besingt} `sings about'). Relations between inflected words and (complex) stems can be formed again using derivation\is{derivation} rules. 
 In this way, \emph{geliebt} `loved' can be recategorized as an adjective stem that must then be combined with adjectival endings (\emph{geliebt-e}).
 The relevant descriptions of complex stems/words are subtypes of \type{complex-stem}
 or \type{word}. These subtypes describe the form that complex words such as \emph{geliebte} must have. For a technical implementation of this, see
@@ -178,7 +179,8 @@ Other languages have an ergative"=absolutive system\is{case!ergative}\is{case!ab
 The assumption of innate linguistic knowledge is not necessary for the theory of language sketched
 here. As the discussion in Section~\ref{chap-innateness} has shown, the question of whether this kind of knowledge
 exists has still not been answered conclusively. Should it turn out that this knowledge actually exists, the question arises of what exactly is innate. It would be a plausible assumption
-that the part of the inheritance hierarchy that is relevant for all languages is innate together with the relevant principles. It could, however, also be the case that only a part of the more generally
+that the part of the inheritance hierarchy that is relevant for all languages is innate together
+with the relevant principles (\eg the constraints on Head-Argument structures and the Semantics Principle). It could, however, also be the case that only a part of the more generally
 valid types and principles is innate since something being innate does not follow from the fact that
 it is present in all languages (see also Section~\ref{Abschnitt-Universalien-Zusammenfassung}).
 
@@ -212,7 +214,7 @@ position in German. Furthermore, this analysis requires the assumption of invisi
 entities that cannot be seen and do not have any meaning.
 
 On the other extreme of the spectrum we find people working in Construction Grammar or without any
-framework at all who claim that all languages are so different that we cannot even use the same
+framework at all (see footnote~\ref{fn-ffs} on page~\ref{fn-ffs} for discussion) who claim that all languages are so different that we cannot even use the same
 vocabulary to analyze them. Moreover, within languages, we have so many different objects that it is impossible (or too early) to state any
 generalizations. Again, what I describe here are extreme positions and clichés.
 
@@ -310,7 +312,7 @@ is an SVO language. Figure~\vref{fig-german-dutch-danish} shows the resulting si
 topmost node represents constraints that hold for all the languages considered so far (for instance the argument
 structure constraints, linking and V2) and the node below it (Set~4) contains
 constraints that hold for German and Dutch only.\footnote{
-  In principle, there could be constraints that hold for Dutch and Danish but not for German or for
+  In principle, there could be constraints that hold for Dutch and Danish, but not for German or for
   German and Danish, but not for Dutch. These constraints would be removed from Set 1 and Set 2,
   respectively, and inserted into another constraint set higher up in the hierarchy. These sets are not
   illustrated in the figure and I keep the names Set~1 and Set~2 from Figure~\ref{fig-german-dutch} for the constraint sets for German
@@ -406,7 +408,7 @@ the resulting grammars should be motivated by data of the respective languages a
 other languages. In situations where more than one analysis would be compatible with a given dataset
 for language X, the evidence from language Y with similar constructs is most welcome and can be used
 as evidence in favor of one of the two analyses for language X. I call this approach the
-\emph{bottom-up approach with cheating}: unless there is contradicting evidence we can reuse
+\emph{bottom-up approach with cheating}: unless there is contradicting evidence, we can reuse
 analyses that have been developed for other languages.  
 
 Note that this approach is compatible with the rather agnostic view advocated by
@@ -423,7 +425,7 @@ that it has exactly the same properties as an English linguistic item that is ca
 \emph{subject}. The same is, of course, true for all other categories and relations, for instance, parts of speech:
 Persian nouns do not share all properties with English nouns.\footnote{
   Note that using labels like \emph{Persian Noun} and \emph{English Noun} (see for instance
-  \citew[Section~2]{Haspelmath2010a} for such a suggestion regarding case, \eg Russian Dative,
+  \citealp[Section~2]{Haspelmath2010a} for such a suggestion regarding case, \eg Russian Dative,
   Korean Dative, \ldots) is somehow strange since
   it implies that both Persian nouns and English nouns are somehow nouns. Instead of using the
   category \emph{Persian Noun} one could assign objects of the respective class to the class
@@ -481,7 +483,7 @@ ungrammaticality/impossible structures are in fact made as well.
 Secondly, the topmost constraint set holds for all languages seen so far. It can be regarded as a
 hypothesis about properties that are shared by all languages. This constraint set contains
 constraints about the connection between syntax and information structure and such constraints allow
-for V2 languages but rule out languages with the verb in penultimate position (see \citew[\page
+for V2 languages but rule out languages with the verb in penultimate position (see \citealp[\page
   50]{Kayne94a-u} for the claim that such languages do not exist. Kayne develops a complicated
 syntactic system that predicts this). Of course, if a language is found that places the verb in penultimate
 position for the encoding of sentence types or some other communicative effect, a more
@@ -497,7 +499,7 @@ language external constraints: we simply lack the working memory to do such comp
 A variant of this argument comes from David Pesetsky\aimention{David Pesetsky} and was raised in Facebook discussions of an
 article by Paul Ibbotson\aimention{Paul Ibbotson} and Michael Tomasello\aimention{Michael Tomasello}
 published in The Guardian\footnote{
-\emph{The roots of language: what makes us different from other animals?}. published 05.11.2015. \url{http://www.theguardian.com/science/head-quarters/2015/nov/05/roots-language-what-makes-us-different-animals}
+\emph{The roots of language: What makes us different from other animals?} Published 05.11.2015. \url{http://www.theguardian.com/science/head-quarters/2015/nov/05/roots-language-what-makes-us-different-animals}
 }. 
 %% how [Tomasello’s] ‘prefabricated phrases’ proposal could scale up so these kids end up speaking a verb-second language (when and how do they learn a structure-dependent rule that moves a particular verb and something else to designated positions) — and how he [Tomasello] would explain the frequent appearance of verb-second vs. the non-existence of obligatory verb-third crosslinguistically.
 Pesetsky claimed that Tomasello's theory of language
@@ -550,21 +552,22 @@ does not also have the constraints of Set~7. Of course, this implicational state
 lots and lots of SOV languages and just exceptionally few V2 languages. So, as soon as we add other
 languages as for instance Persian or Japanese, the picture will change.
 
-The methodology suggested here differs from what is done in MGG in that the general constraints that
-are supposed to hold for all languages are just stipulated on the basis of general speculations
-about language. In the best case, these general assumptions are fed by a lot of experience with
-different languages and grammars, in the worst case they are derived from insights gathered
-from one or more Indo"=European languages. Quite often impressionistic data is used to motivate
-rather far"=reaching fundamental design decisions \citep{Fanselow2009a,SR2012a,Haider2016a}. It is interesting to note
-that this is exactly what members of the MGG camp accuse typologists of. \citet{EL2009a} pointed out
+The methodology suggested here differs from what is done in MGG, since MGG stipulates the general
+constraints that are supposed to hold for all languages on the basis of general specualtions about
+language. In the best case, these general assumptions are fed by a lot of experience with different
+languages and grammars, in the worst case they are derived from insights gathered from one or more
+Indo"=European languages. Quite often impressionistic data is used to motivate rather far"=reaching
+fundamental design decisions \citep{Fanselow2009a,SR2012a,Haider2016a}. It is interesting to note
+that this is exactly what members of the MGG camp reproach typologists for. \citet{EL2009a} pointed out
 that counterexamples can be found for many alleged universals. A frequent response to this is that
-unanalyzed data cannot refute grammatical hypotheses (see, for instance, \citealp[\page 454]{Freidin2009a}). In the very same way it has to be said that unanalyzed data
-should not be used to build theories on \citep{Fanselow2009a}. In the CoreGram project, we aim to develop broad"=coverage
-grammars of several languages, so those constraints that make it to the top node are motivated and
-not stipulated on the basis of intuitive implicit knowledge about language.
+unanalyzed data cannot refute grammatical hypotheses (see, for instance, \citealp[\page
+  454]{Freidin2009a}). In the very same way it has to be said that unanalyzed data should not be
+used to build theories on \citep{Fanselow2009a}. In the CoreGram project, we aim to develop
+broad"=coverage grammars of several languages, so those constraints that make it to the top node are
+motivated and not stipulated on the basis of intuitive implicit knowledge about language.
 
 Since it is data"=oriented and does not presuppose innate language"=specific knowledge, this research strategy is compatible with work carried out in Construction Grammar (see
-\citew[\page 481]{Goldberg2013b} for an explicit statement to this end) and in any case it should also be compatible with the Minimalist
+\citealp[\page 481]{Goldberg2013b} for an explicit statement to this end) and in any case it should also be compatible with the Minimalist
 world.
 
 
