@@ -9,7 +9,7 @@ Head-Driven Phrase Structure Grammar (HPSG)\is{Head-Driven Phrase Structure
 Ivan Sag in the mid-80's in Stanford and in the Hewlett Packard research laboratories in Palo Alto
 \citep{ps,ps2}. Like LFG, HPSG is part of so"=called West Coast linguistics. Another similarity to
 LFG is that HPSG aims to provide a theory of competence which is compatible with performance
-(\citew{SW2011a,SW2015a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).  
+(\citealp{SW2011a,SW2015a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).  
 
 The formal properties of the description language for HPSG grammars are well"=understood and there are
 many systems for processing such grammars
@@ -40,8 +40,8 @@ compares LKB and TRALE. See also \citew[Section~5.1]{MuellerCoreGram}.
 }
 Currently, the LKB system\is{Linguistic Knowledge Builder (LKB)} by Ann Copestake and the TRALE
 system, that was developed by Gerald Penn \citep*{MPR2002a-u,Penn2004a-u}, have the most users. The
-DELPH"=IN consortium\is{DELPH-IN} and various TRALE users\is{TRALE} have developed many small and some
-large fragments of various languages. The following is a list of implementations in different systems:
+DELPH"=IN consortium\is{DELPH-IN} -- whose grammar fragments are based on the LKB -- and various TRALE users\is{TRALE} have developed many small and some
+large grammar fragments of various languages. The following is a list of implementations in different systems:
 \begin{itemize}
 %
 \item Arabic\il{Arabic} \citep*{HBZ2010a-u,Hahn2011a-u,MIRA2012a-u,BH2014a-u,LBL2015a-u,AHMW2015a-u},
@@ -137,10 +137,13 @@ The following URLs point to pages on which grammars can be tested:
 HPSG has the following characteristics: it is a lexicon"=based theory, that is, the majority of
 linguistic constraints are situated in the descriptions of words or roots. HPSG is sign-based in the
 sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and meaning of linguistic signs are always
-represented together. Typed feature structures are used to model all relevant information. These
+represented together. Typed feature structures are used to model all relevant information.\footnote{
+Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
+and typed feature structures should consult Chapter~\ref{chap-feature-descriptions} first.
+} These
 structures can be described with feature descriptions such as in (\mex{1}). Lexical entries, phrases
 and principles are always modeled and described with the same formal means.  Generalizations about
-word classes or rule schemata are captured with inheritance hierarchies. Phonology, syntax and
+word classes or rule schemata are captured with inheritance hierarchies (see Section~\ref{sec-formalismus-typen}). Phonology, syntax and
 semantics are represented in a single structure. There are no separate levels of representation such
 as PF or LF in Government \& Binding Theory.  (\mex{1}) shows an excerpt from the representation of
 a word such as \emph{Grammatik} `grammar'.
@@ -173,10 +176,11 @@ HPSG has adopted various insights from other theories and newer analyses have be
 Functor"=argument structures, the treatment of valence information and function
 composition\is{function composition} have been adopted from
 Categorial Grammar\indexcg. Function composition plays an important role in the analysis of verbal
-complexes in languages like German and Korean. The ID/LP format as well as the
-Slash mechanism for long"=distance dependencies both come from GPSG\indexgpsg. The analysis assumed here for verb position in German was
-developed in the framework of Government \&
-Binding\indexgb.
+complexes in languages like German and Korean. The Immediate Dominance\is{dominance!immediate}/Linear Precedence\is{linear precedence}\is{ID/LP grammar} format
+(ID/LP format, see Section~\ref{sec-IDLP-intro}) as well as the Slash mechanism for long"=distance
+dependencies (see Section~\ref{sec-nld-gpsg}) both come from GPSG\indexgpsg. The analysis assumed
+here for verb position in German is inspired by the one that was developed in the framework of Government \& Binding\indexgb
+(see Section~\ref{sec-verb-position-gb}).
 
 \subsection{Representation of valence information}
 
@@ -190,7 +194,7 @@ verbs.
       S & NP[\type{nom}], V                             & \emph{X schläft} `X is sleeping'\\
       S & NP[\type{nom}], NP[\type{acc}], V                         & \emph{X Y erwartet} `X expects Y'\\
       S & NP[\type{nom}], PP[\type{über}], V           & \emph{X über Y spricht} `X talks about Y'\\
-      S & NP[\type{nom}], NP[\type{dat}], NP[\type{acc}], V                     & \emph{X Y Z gibt} `X gives Y to Z'\\
+      S & NP[\type{nom}], NP[\type{dat}], NP[\type{acc}], V                     & \emph{X Y Z gibt} `X gives Z to Y'\\
       S & NP[\type{nom}], NP[\type{dat}], PP[\type{mit}], V        & \emph{X Y mit Z dient} `X serves Y with Z'\\
       \end{tabular}
 %}
@@ -284,16 +288,16 @@ sn edges
 		[{\ibox{2} NP[\type{acc}]}
 			[Maria;Maria]]
 		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
-			[erwartet;awaits]]]]
+			[erwartet;expects]]]]
 \end{forest}}
-\caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter awaits Maria'}
+\caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter expects Maria.'}
 \end{figure}%
 
 \subsection{Representation of constituent structure}
 \label{sec-HPSG-constituent-structure}
 
 As already noted, feature descriptions in HPSG serve as the sole descriptive inventory of morphological rules, lexical entries and syntactic rules.
-The trees we have seen thus far are only visualizations of the part"=whole relations and do not have any theoretical status. There are also no
+The trees we have seen thus far are only visualizations of the constituent structure and do not have any theoretical status. There are also no
 rewrite rules in HPSG.\is{phrase structure grammar}\footnote{
 	However, phrase structure rules are used in some computer implementations of HPSG in order to improve
         the efficiency of processing.}
@@ -386,13 +390,33 @@ such as those in (\mex{1}) are identical.\label{Seite-HPSG-Koordination}
 	 {}\spacebr{}the man and \spacebr{}the woman\\
 \ex 
 \gll Er [kennt] und [liebt] diese Schallplatte.\\
-	 he \spacebr{}knows and \spacebr{}loves this record\\
+	 he.\nom{} \spacebr{}knows and \spacebr{}loves this.\acc{} record\\
 \ex 
 \gll Er ist [dumm] und [arrogant].\\
 	he is \spacebr{}dumb and \spacebr{}arrogant\\
 \zl
+(\mex{0}b) should be compared with the examples in (\mex{1}). In (\mex{1}a), the verbs select for an
+accusative and a dative object, respectively and in (\mex{1}b), the verbs select for an accusative
+and a prepositional object:
+\eal
+\ex[*]{
+\gll Er kennt und hilft dieser Frau / diese Frau.\\
+     he.\nom{} knows and helps this.\dat{} woman {} this.\acc{} woman\\
+\glt Intended: `He knows and helps this woman.'
+}
+\ex[*]{ 
+\gll weil er auf Maria kennt und wartet\\
+     because he for Maria knows and waits\\
+\glt Intended: `because he knows Maria and waits for her'
+}
+\zl
+While the English translation of (\mex{0}a) is fine, since both \emph{knows} and \emph{helps} take an
+accusative, (\mex{0}a) is out, since \emph{kennt} `knows' takes an accusative and \emph{hilft}
+`helps' a dative object. Similarly, (\mex{0}b) is out since \emph{kennt} `knows' selects an accusative object and
+\emph{wartet} `waits' selects for a prepositional phrase containing the preposition \emph{auf} `for'.
+
 If valence and the part of speech information were not represented in one common sub-structure, we would
-have to state separately that utterances such as (\mex{0}) require that both
+have to state separately that utterances such as (\mex{-1}) require that both
 conjuncts have the same valence and part of speech.\is{coordination|)}
 
 After this general introduction of the feature geometry that is assumed here, we can now turn to the head"=argument schema\is{schema!head"=argument}:
@@ -454,7 +478,7 @@ adjunct\is{adjunct}, \ldots) or both.
 %%   constituency was primary and whether one could dispense with one of these concepts. See
 %%   Section~\ref{sec-dependency-vs-constituency} for further discussion.
 %% } 
-If we assume a feature \initial\isfeat{initial} for all heads, then heads which precede their arguments would have the \initialv `+' and heads following their
+If we assume a feature \initial\isfeat{initial} for all heads, then heads which precede their arguments would have the \initialv `$+$' and heads following their
   arguments would have the value `--'. The linearization rules in (\mex{1}) ensure that ungrammatical orders such as (\mex{2}b,d) are
   ruled out.\footnote{
   Noun phrases pose a problem for (\mex{1}): determiners have been treated as argument until now and were included in the \subcatl of the
@@ -467,11 +491,11 @@ If we assume a feature \initial\isfeat{initial} for all heads, then heads which 
 
 \eal
 \ex\label{lp-ini-arg} 
-Head[\initial+] $<$ Argument
+Head[\initial$+$] $<$ Argument
 \ex 
 Argument $<$ Head[\initial --]
 \zl
-Prepositions have an \initialv `+' and therefore have to precede arguments. Verbs in final position bear the value `$-$' and have to follow
+Prepositions have an \initialv `$+$' and therefore have to precede arguments. Verbs in final position bear the value `$-$' and have to follow
 their arguments.
 \eal
 \ex[]{
@@ -484,11 +508,11 @@ their arguments.
 }
 \ex[]{
 \gll {}dass [er [ihn umfüllt]]\\
-     {}that \spacebr{}he \spacebr{}it refills\\
+     {}that \spacebr{}he \spacebr{}it decants\\
 }
 \ex[*]{
 \gll {}dass [er [umfüllt ihn]]\\
-     {}that \spacebr{}he \spacebr{}refills him\\
+     {}that \spacebr{}he \spacebr{}decants it\\
 }
 \zl
 
@@ -646,8 +670,7 @@ synsem$|$loc$|$cat$|$head \ibox{1}\\
 head-dtr$|$synsem$|$loc$|$cat$|$head \ibox{1}\\
 } 
 \z
-The arrow\is{\impl} corresponds to the arrow that is used in implications\is{implication} in
-logic. (\mex{0}) can be read as follows:
+The arrow\is{\impl} corresponds to a logical implication\is{implication}, as mentioned above. Therefore, (\mex{0}) can be read as follows:
 if a structure is of type \type{headed"=phrase}, then it must hold that the value of
 \textsc{synsem$|$""loc$|$""cat$|$""head} is identical to the value of \textsc{head-dtr$|$""synsem$|$""loc$|$cat$|$head}.
   
@@ -1045,18 +1068,20 @@ Lexical rule for personal passives following \citet{Kiss92}:\\
                            subcat & \liste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} \\
                          } \\
 } $\mapsto$ \\
-\onems[word]{
+\flushright\onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part } \\
                           subcat & \liste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} \\
                         } \\
 }
 \z
-This lexical rule takes a verb stem as its input\footnote{
-	The term \emph{stem} includes roots (\stem{helf} `help-', products of derivation
-        (\stem{besing} `to extol') and compounds. The lexical rule can therefore also be applied to
+
+\noindent
+This lexical rule takes a verb stem\footnote{
+	The term \emph{stem} includes roots (\stem{helf} `help-'), products of derivation
+        (\stem{besing} `to sing about') and compounds. The lexical rule can therefore also be applied to
         stems like \stem{helf} and derived forms such as \stem{besing}.%
-}, which requires a nominative argument, an accusative argument and possibly further arguments (if \iboxt{3} is not the empty
+} as its input, which requires a nominative argument, an accusative argument and possibly further arguments (if \iboxt{3} is not the empty
 list) and licenses a lexical entry that requires a nominative argument and possibly the arguments in \ibox{3}. The output
 of the lexical rule specifies the \vformv of the output word. This is important as the auxiliary and
 the main verb must go together. For example, it is not possible to use the perfect participle instead of the passive participle since these differ
@@ -1079,9 +1104,10 @@ in their valence in Kiss' approach:
 \zl
 
 \noindent
-There are a few conventions for the meaning of lexical rules: all information that is not mentioned
+There are a few conventions for the interpretation of lexical rules: all information that is not mentioned
 in the output sign is taken over from the input sign. Thus, the meaning of the verb is not mentioned
-in the passive rule, which makes sense as the passive rule is a meaning preserving rule. The \contvs of the input and output are identical. It is important here that the linking
+in the passive rule, which makes sense as the passive rule is a meaning preserving rule. The \contvs
+of the input and output are not mentioned in the rule and hence are identical. It is important here that the linking
 information its retained. As an example consider the application of the rule to the verb stem
 \stem{schlag} `beat': 
 \eal
@@ -1167,14 +1193,16 @@ participle form.
 
 In\is{principle!Case|(} Section~\ref{Abschnitt-struktureller-Kasus}, the difference between structural
 and lexical case was motivated. In the HPSG literature, it is assumed following \citet{Haider86}
-that the dative is a lexical case. Lexical cases are specified in the descriptions of the selected
-arguments. Arguments with structural case are also specified as taking structural cases in the lexicon, but the actual
-case value is not provided. In order for the grammar not to make any false predictions, it has to be ensured that the structural cases receive a unique value dependent on their
+that the dative is a lexical case. For arguments marked with a lexical case, their case value is
+directly specified in the description of the argument. Arguments with structural case are also
+specified in the lexicon as taking structural case, but the actual case value is not provided. In
+order for the grammar not to make any false predictions, it has to be ensured that the structural
+cases receive a unique value dependent on their 
 environment. This is handled by the Case Principle:\footnote{%
 	The Case Principle has been simplified here. Cases of so-called `raising'\is{raising} require special treatment.
 	For more details, see \citew{Meurers99b}, \citew{Prze99b} and \citew[Chapter~14,
     Chapter~17]{MuellerLehrbuch1}. The Case Principle given in these publications is very similar to the one proposed by \citet*{YMJ87}
-	and can therefore also explain the case systems of the languages discussed by Yip, Maling and Jackendoff, notably the complicated
+	and can therefore also explain the case systems of the languages discussed in their work, notably the complicated
 	case system of Icelandic.\is{Icelandic}
 }
 \begin{principle-break}[\hypertarget{case-p}{Case Principle}]
@@ -1211,7 +1239,7 @@ SUBJECT $=>$ & DIRECT $=>$ & INDIRECT $=>$ & OBLIQUES $=>$ & GENITIVES $=>$  & O
 
 \noindent
 This hierarchy corresponds to the different syntactic activeness of grammatical functions.
-Elements that occur further left tend to to occur in specific syntactic constructions more often. Examples for
+Elements that occur further left tend to occur in specific syntactic constructions more often. Examples for
 syntactic constructions where obliqueness plays a role are the following:
 \begin{itemize}
 \item Ellipsis\is{ellipsis} \citep{Klein85}
@@ -1240,7 +1268,7 @@ Lexical rule for personal and impersonal passive (simplified):\\
                            subcat & \liste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
                          } \\
 } $\mapsto$ \\
-\onems[word]{
+\flushright\onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat \ms{ head & \ms{ vform & ppp } \\
                           subcat & \ibox{2} \\
@@ -1280,19 +1308,19 @@ used for (\mex{1}).
 \zl
 It is the auxiliary that determines which arguments are realized (\citealp{Haider86}; \citealp[Chapter~17]{MuellerLehrbuch1}).
 The lexical rule in (\ref{pass-lr-mlr-str}) licenses a form that can be used both in passive and perfect. Therefore, the
-\vformv is of \type{ppp}, which stands for \emph{participle}.
+\vformv is of \type{ppp}, which stands for \emph{participle perfect passive}.
 \is{principle!Case|)}
 
 One should note that this analysis of the passive works without movement of constituents. The problems with the GB analysis\indexgb do not arise here.
 Reordering of arguments (see Section~\ref{Abschnitt-HPSG-lokale-Umstellung}) is independent of passivization. The accusative object is not mentioned
 at all unlike in \gpsg, \cg or Bresnan's LFG analysis\indexlfg from before the introduction of
-Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)}. The passive can be analyzed directly as the suppression of the subject. Everything else follows from interaction with other principles of grammar.\is{passive|(}
+Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-LMT}). The passive can be analyzed directly as the suppression of the subject. Everything else follows from interaction with other principles of grammar.\is{passive|(}
 
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
 
 The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
-to describing verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
+to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
 The analysis of (\mex{1}) can be summarized as follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special form of the 
 verb in initial position that selects a projection of the verb trace. This special lexical item is licensed by a lexical rule. The connection between the
 verb and the trace is treated like long"=distance dependencies in GPSG via identification of information in the tree or feature structure (structure sharing\is{structure sharing}).
@@ -1336,7 +1364,7 @@ Figure~\ref{Abbildung-Verbstellung-HPSG}, there are two maximal verb projections
 \emph{jeder diesen Mann \_$_k$} with the trace as the head and \emph{kennt jeder diesen Mann \_$_k$} with \emph{kennt} as the head.
 
 This analysis will be explained in more detail in what follows. For the trace in Figure~\ref{Abbildung-Verbstellung-HPSG}, one could assume
-the following lexical entry:
+the lexical entry in (\mex{1}):
 
 \eas
 Verb trace for \emph{kennt} `knows':\\
@@ -1490,7 +1518,7 @@ synsem$|$loc & \ibox{1} \ms{ cat$|$head & \ms[verb]{ vform & fin\\
                                              }\\
                   }\\
 } $\mapsto$\\
-\ms{
+\hfill\ms{
 synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
                                           initial & $+$\\
                                           dsl     & none\\
@@ -1509,8 +1537,9 @@ synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
 \noindent
 The verb licensed by this lexical rule selects a maximal projection of the verb trace which has the same local properties as the input verb.
 This is achieved by the coindexation of the \local values of the input verb and the \dsl values of the selected verb projection.
-Only finite verbs in final position (\textsc{initial}$-$) can be the input for this rule. The output is a verb in initial-position (\textsc{initial}+).
-
+Only finite verbs in final position (\textsc{initial}$-$) can be the input for this rule. The output
+is a verb in initial-position (\textsc{initial}+).
+%
 The corresponding extended analysis is given in Figure~\vref{verb-movement-syn}. V1-LR stands for the verb-initial lexical rule.
 \begin{figure}
 \centering
@@ -1617,7 +1646,7 @@ sn edges
 		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
-\caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: normal order}
+\caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: unmarked order}
 \end{figure}%
 The arguments of the verb are combined with the verb starting with the last element of the \subcatl,
 as explained in Section~\ref{sec-HPSG-constituent-structure}. 
@@ -1694,8 +1723,11 @@ Gunji\nocite{Gunji86a} proposed similar HPSG analyses for Japanese\il{Japanese} 
 
 The\is{long"=distance dependency|(} analysis of long"=distance dependencies utilizes techniques that were originally developed in GPSG:
 information about missing constituents is passed up the tree (or feature structure).\footnote{
-	Nothing is actually `passed up' in a literal sense in feature structures or trees. For expository purposes, it makes sense
-	to explain the analysis as if the structure were built bottom"=up, but linguistic knowledge is independent of the direction
+	In HPSG, nothing is actually `passed up' in a literal sense in feature structures or
+        trees. This could be seen as one of the most important differences between deterministic
+        (\eg HPSG) and derivational theories like transformational grammars (see
+        Section~\ref{sec-dtc}). Nevertheless, it makes sense for expository purposes to explain
+        the analysis as if the structure were built bottom"=up, but linguistic knowledge is independent of the direction
 	of processing. In recent computer implementations, structure building is mostly carried out
         bottom"=up but there were other systems which worked top"=down. The only thing that is
         important in the analysis of nonlocal dependencies is that the information about the missing
@@ -1811,7 +1843,7 @@ The Head"=Filler Schema licenses the highest node in Figure~\vref{Abbildung-Dies
 \onems{ 
 %synsem$|$nonloc$|$slash  \eliste\\
 head-dtr$|$synsem       \onems{ loc$|$cat \onems{ head \ms[verb]{vform & fin\\
-                                                                 initial & \upshape +\\
+                                                                 initial & \upshape $+$\\
                                                                 }\\
                                                   subcat \liste{}\\
                                                }\\
@@ -1829,7 +1861,7 @@ This schema combines a finite, verb-initial clause (\textsc{initial}+) that has 
 In this structure, no arguments are saturated. Nothing can be extracted from the filler daughter itself, which is ensured
 by the specification of the \textsc{slash} value of the non"=head daughter. Figure~\vref{Abbildung-Diesen-Mann-kennt-jeder} shows a more detailed
 variant of the analysis of fronting to the prefield.
-
+%
 \begin{figure}
 \centerfit{
 \begin{forest}
@@ -1860,9 +1892,9 @@ sn edges
 }
 \caption{\label{Abbildung-Diesen-Mann-kennt-jeder}Analysis of \emph{Diesen Mann kennt jeder.} `Everyone knows this man.' combined with the verb movement analysis for verb-initial order}
 \end{figure}%
-
+%
 The verb movement trace for \emph{kennt} `knows' is combined with a nominative NP and an extraction trace.
-The extraction trace stands for the accusative object in the above example. The accusative object is
+The extraction trace stands for the accusative object in our example. The accusative object is
 described in the \subcatl of the verb \iboxb{4}. Following the mechanism for verb movement, the valence information that was originally contained
 in the entry for \emph{kennt} (\sliste{ \ibox{3}, \ibox{4} }) is present on the verb trace. The combination of the projection of the verb trace with
 the extraction trace works in exactly the same way as for non-fronted arguments. The \slashv of the extraction trace is passed up the tree
@@ -1921,7 +1953,7 @@ corresponding schema for the combination of constituents. This additional featur
 \citep[Section~9.3]{MuellerLehrbuch1} for the combination of a determiner with a noun. It is assumed that the noun selects
 its determiner. For the noun \emph{Zerstörung} `destruction', we have the following \catv:
 \ea
-\ms{ head & \ms[noun]{ initial & \upshape +\\
+\ms{ head & \ms[noun]{ initial & \upshape $+$\\
                      }\\
      spr & \sliste{ Det }\\
            subcat & \sliste{ NP[\gen], PP[\type{durch}] }\\[2mm]
@@ -1969,7 +2001,7 @@ sn edges
 \caption{NP analysis with valence features \spr}\label{Abbildung-die-Zerstorung} 
 \end{figure}%
 Following the linearization rules discussed in Section~\ref{Abschnitt-LP-Regeln-HPSG}, it is ensured that the noun occurs before the complements as the
-\initialv of the noun is `+'. The LP"=rule in (\mex{1}) leads to the determiner being ordered to the left of the noun.
+\initialv of the noun is `$+$'. The LP"=rule in (\mex{1}) leads to the determiner being ordered to the left of the noun.
 \ea
 specifier $<$ head
 \z
@@ -2088,7 +2120,8 @@ approaches are discussed in Section~\ref{sec-dg-multiple-frontings}.
 In HPSG, feature descriptions are used to model all properties of linguistic objects: roots, words, lexical rules and dominance schemata are
 all described using the same formal tools. Unlike GPSG\indexgpsg and LFG\indexlfg, there are no separate phrase structure rules. Thus, although
 HPSG stands for Head"=Driven Phrase Structure Grammar, it is not a phrase structure grammar. In HPSG implementations, a phrase structure backbone
-is often used to increase the efficiency of processing. However, this is not part of the theory and not linguistically necessary.
+is often used to increase the efficiency of processing. However, this is not part of the theory and
+linguistically not necessary.
 
 HPSG differs from Categorial Grammar\indexcg in that it assumes considerably more features and also in that the way in which features are grouped plays
 an important role for the theory.
@@ -2123,8 +2156,10 @@ In the first decade of HPSG history (\citealp*{ps,ps2,NNP94}), despite the diffe
 in that it was a strongly lexicalized theory. The syntactic make-up and semantic content of a phrase was determined by the head (hence the term \emph{head-driven}).
 In cases where head-driven analyses were not straight-forwardly possible, because no head could be identified in the phrase in question, then it was commonplace to
 assume empty heads\is{empty element}. An example of this is the analysis of relative clauses in \citet[Chapter~5]{ps2}.
-Since an empty head can be assigned any syntactic valence and an arbitrary semantics (for discussion of this point, see Chapter~\ref{Abschnitt-Diskussion-leere-Elemente}), one has not really explained anything as one needs very good reasons for assuming an empty head, for example that this empty position can be realized in other
-contexts. This is, however, not the case for empty heads that are only proposed in order to save theoretical assumptions. Therefore, \citet{Sag97a} developed
+Since an empty head can be assigned any syntactic valence and an arbitrary semantics (for discussion
+of this point, see Chapter~\ref{Abschnitt-Diskussion-leere-Elemente}), one has not really explained
+anything as one needs very good reasons for assuming an empty head, for example that this empty
+position can be realized in other contexts. This is, however, not the case for empty heads that are only proposed in order to save theoretical assumptions. Therefore, \citet{Sag97a} developed
 an analysis of relative clauses without any empty elements. As in the analyses sketched for (\mex{-1}) and (\mex{0}), the relative phrases are combined directly
 with the partial clause in order to form the relative clause. For the various observable types of relative clauses in English, Sag proposes different dominance rules.
 His analysis constitutes a departure from strong lexicalism: in \citew{ps2}, there are six dominance schemata, whereas there are 23 in \citew{GSag2000a-u}. 

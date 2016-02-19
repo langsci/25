@@ -344,7 +344,7 @@ It is possible to analyze the sentences in (\mex{0}a,b) using the rules in (\mex
 \eal
 \ex Det[\textsc{case} nom] $\to$ der
 \ex N[27] $\to$ Mann
-\ex V[6, +\textsc{fin}] $\to$ liest
+\ex V[6, $+$\textsc{fin}] $\to$ liest
 \ex N2[\textsc{case} acc] $\to$ ihn
 \zl
 
@@ -382,7 +382,7 @@ The rule in (\mex{1}) is used to bind off long"=distance dependencies.
 \ea
 V3[+\textsc{fin}] $\to$ X[+\textsc{top}], V3[+\textsc{mc}]/X
 \z
-The following linearization rule ensures that the +\textsc{top}-constituent precedes the sentence in which it is missing:
+The following linearization rule ensures that the $+$\textsc{top}-constituent precedes the sentence in which it is missing:
 \ea
 {}[+\textsc{top}] $<$ X
 \z
@@ -393,10 +393,10 @@ Figure~\vref{fig-der-mann-liest-ihn} shows the structure licensed by the grammar
 \centering
 \begin{forest}
 sn edges
-[{V3[+\textsc{fin}, +\textsc{mc}]}
-   [{N2[nom, +\textsc{top}]} [der Mann;the man, triangle]]
+[{V3[+\textsc{fin}, $+$\textsc{mc}]}
+   [{N2[nom, $+$\textsc{top}]} [der Mann;the man, triangle]]
    [{V3[+\textsc{mc}]/N2[nom]}
-     [{V[6, +\textsc{mc}]} [liest;reads]]
+     [{V[6, $+$\textsc{mc}]} [liest;reads]]
      [{N2[acc]} [ihn;him]]]]
 \end{forest}
 \caption{\label{fig-der-mann-liest-ihn}Analysis of \emph{Der Mann liest ihn.} `The man reads it.'}
@@ -432,7 +432,7 @@ V3/X  $\to$ W
 \eal
 \ex Det[\textsc{case} nom] $\to$ der
 \ex N[27] $\to$ Mann
-\ex V[6, +\textsc{fin}] $\to$ liest
+\ex V[6, $+$\textsc{fin}] $\to$ liest
 \ex N2[\textsc{case} acc] $\to$ ihn
 \zl
 

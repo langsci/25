@@ -165,7 +165,7 @@ the rule in (\mex{-1}) corresponds to the classical \xbar~rules that we encounte
 the head daughter, the information about the genitive of \nbar is also present at the NP node.
 
 \subsection{Local reordering}
-\label{GPSG-lokale-Umstellung}
+\label{GPSG-lokale-Umstellung}\label{sec-IDLP-intro}
 
 The first phenomenon to be discussed is local reordering of arguments. As was already discussed in
 Section~\ref{sec-GB-lokale-Umstellung}, arguments in the middle field can occur in an almost
@@ -236,7 +236,7 @@ desirable to capture this property of the German language and represent it beyon
 rules. In Transformational Grammar, the relationship between the orders is captured by means of movement: the Deep Structure corresponds
 to verb"=final order with a certain order of arguments and the surface order is derived by means of \movealpha. Since GPSG is a non"=transformational
 theory, this kind of explanation is not possible. Instead, GPSG imposes restrictions on \emph{immediate dominance}\is{dominance!immediate} (ID), which differ
-from those which refer to \emph{linear precedence}\is{linear precedence} (LP): rules such as (\mex{1}) are to be understood as dominance rules, which do not
+from those which refer to \emph{linear precedence}\is{linear precedence}\is{ID/LP grammar} (LP): rules such as (\mex{1}) are to be understood as dominance rules, which do not
 have anything to say about the order of the daughters \citep{Pullum82a}.
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
@@ -342,7 +342,7 @@ rules to other phrase structure rules. A metarule can be understood as a kind of
 another rule for each rule with a certain form and these newly created rules will in turn license local trees.
 
 For the example at hand, we can formulate a metarule which says the following: if there is a rule with the form ``V2 consists of something'' in the grammar,
-then there also has to be another rule ``V3 consists of whatever V2 consists + an NP in the nominative''. In formal terms, this looks as follows:
+then there also has to be another rule ``V3 consists of whatever V2 consists $+$ an NP in the nominative''. In formal terms, this looks as follows:
 \ea
 \label{subjekt-meta}
 V2  $\to$ W $\mapsto$\\
@@ -717,7 +717,7 @@ is an empty verb in final position and links this to the verb in initial positio
 means which we will see in more detail in the following section.\is{verb position|)}
 
 \section{Long"=distance dependencies as the result of local dependencies}
-\label{Abschnitt-GPSG-Fernabhaengigkeiten}
+\label{Abschnitt-GPSG-Fernabhaengigkeiten}\label{sec-nld-gpsg}
 
 One\is{long"=distance dependency|(} of the main innovations of GPSG is its treatment of long"=distance dependencies as a sequence of local dependencies \citep{Gazdar81}.
 This approach will be explained taking constituent fronting to the prefield in German as an
@@ -805,7 +805,7 @@ stands for an arbitrary category. This is a new X and it is independent from the
 
 Figure~\vref{fig-nld-gpsg} shows the interaction of the rules for the analysis of
 (\mex{1}).\footnote{%
-  The \textsc{fin} feature has been omitted on some of the nodes since it is redundant: +\textsc{mc}"=verbs always require the \textsc{fin} value `+'.
+  The \textsc{fin} feature has been omitted on some of the nodes since it is redundant: $+$\textsc{mc}"=verbs always require the \textsc{fin} value `+'.
 }
 \ea
 \gll Dem Mann gibt er das Buch.\\
@@ -816,7 +816,7 @@ Figure~\vref{fig-nld-gpsg} shows the interaction of the rules for the analysis o
 \centerline{%
 \begin{forest}
 sn edges
-[{V3[+\textsc{fin}, +\textsc{mc}]}
+[{V3[+\textsc{fin}, $+$\textsc{mc}]}
   [{N2[dat,+\textsc{top}]} [dem Mann;the man,triangle] ]
   [{V3[+\textsc{mc}]/N2[dat]}
     [{V[8,+\textsc{mc}]} [gibt;gives] ]
