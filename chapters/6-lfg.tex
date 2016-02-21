@@ -155,7 +155,7 @@ of the theory. A sentence such as (\mex{1}a) will be assigned a functional struc
 
 \eal
 \ex David devoured a sandwich.
-\ex \lfgms{ pred & `DEVOUR\sliste{\subj, \obj}'\\
+\ex \lfgms{ pred & `DEVOUR\sliste{\lfgsubj, \lfgobj}'\\
          subj & \lfgms{ pred &  `DAVID' \\
                    }\\
          obj  & \lfgms{ spec & A\\
@@ -168,7 +168,7 @@ of the theory. A sentence such as (\mex{1}a) will be assigned a functional struc
 Every lexical item contributes a \textsc{pred}\isfeat{pred} feature with a corresponding value.
 The grammatical functions governed by a head (government = subcategorization)
 are determined in the specification of \textsc{pred}.\footnote{
-In the structure in (\mex{0}b), the \subj{} and \obj{} in the list following \emph{devour} are identical to the values of \subj{} and \obj{} in the structure. For reasons of presentation, this will not be explicitly indicated in this structure and following structures.
+In the structure in (\mex{0}b), the \lfgsubj{} and \lfgobj{} in the list following \emph{devour} are identical to the values of \lfgsubj{} and \lfgobj{} in the structure. For reasons of presentation, this will not be explicitly indicated in this structure and following structures.
 }
 Corresponding functions are called \emph{governable grammatical functions}\is{grammatical function!governable}. Examples of this are shown in Table~\vref{Tabelle-GOV} \citep{Dalrymple2006a}.
 \begin{table}
@@ -230,15 +230,15 @@ f"=structures are characterized using functional descriptions, for example, one 
 using the following expression:
 
 \ea
-($f$ \tense)
+($f$ \lfgtense)
 \z
 
 \noindent
 It is possible to say something about the value which this feature should have in the feature description. The following descriptions express the fact that in the structure $f$,
-the feature \tense{} must have the value \past.
+the feature \lfgtense{} must have the value \lfgpast.
 
 \ea
-($f$ \tense) = \past
+($f$ \lfgtense) = \lfgpast
 \z
 
 \noindent
@@ -247,7 +247,7 @@ ensures that the \subjf in $f$ is the f"=structure $g$:
 
 \ea
 \label{ex-LFG-constraint}
-($f$ \subj) = $g$
+($f$ \lfgsubj) = $g$
 \z
 
 \noindent
@@ -256,9 +256,9 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \ex David sneezed.
 \ex
 \begin{tabular}[t]{l}
-($f$ \pred) = {\small `SNEEZE\arglist{\subj}'}\\
-($f$ \tense) = {\small PAST}\\
-($f$ \subj) = $g$\\
+($f$ \pred) = {\small `SNEEZE\arglist{\lfgsubj}'}\\
+($f$ \lfgtense) = \lfgpast\\
+($f$ \lfgsubj) = $g$\\
 ($g$ \pred) = {\small `DAVID'}
 \end{tabular}
 \zl
@@ -266,9 +266,9 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \noindent
 The description in (\mex{0}b) describes the following structure:
 \ea
-$f$: \lfgms{ pred  & `SNEEZE\arglist{\subj}'\\
-             tense & PAST\\
-             subj  & $g$: \onems{ pred `DAVID' }\\
+$f$: \lfgms{ pred  & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+             tense & \lfgpast\\
+             subj  & $g$: \onems{ pred {\small `DAVID'} }\\
         }
 \z
 
@@ -292,7 +292,7 @@ interested in minimal structures that contain the information provided in the de
 %% \end{tabular}
 %% &
 %% \lfgms{
-%% pred & `SNEEZE\arglist{\subj}'\\
+%% pred & `SNEEZE\arglist{\lfgsubj}'\\
 %% tense & PAST\\
 %% subj  & \rnode{i}{\lfgms{ pred & `DAVID' \\
 %%                       }}\\
@@ -305,9 +305,9 @@ interested in minimal structures that contain the information provided in the de
   \tree{I$'$}{\tree{VP}{\tree{V$'$}{\tree{V}{\le{sneezed}}}}}}%
 \hspace*{4em}%
 \raisebox{-2em}{\lfgms{
-pred & `SNEEZE\arglist{\subj}'\\
-tense & PAST\\
-subj  & \rnode{i}{\lfgms{ pred & `DAVID' \\
+pred & {\small `SNEEZE\arglist{\lfgsubj}}'\\
+tense & \lfgpast\\
+subj  & \rnode{i}{\lfgms{ pred & {\small `DAVID'} \\
                       }}\\
 }}\\
 \ltor[-15]{b}[175]{i}
@@ -324,8 +324,8 @@ A phrase and its head always correspond to the same f"=structure:
 \rnode{sneezed}{sneezed}\\
 \end{tabular}
 \hspace*{4em}
-\rnode{d}{\raisebox{-2em}{\fd{\fdand{\feat{\pred}{\small `SNEEZE\arglist{\subj}'}
-                    \feat{\tense}{\small PAST}}}}}
+\rnode{d}{\raisebox{-2em}{\lfgms{ pred & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+                                  tense & \lfgpast}}}
 \ncline{v1}{v}\ncline{v}{sneezed}%
 \ltor{a}{d}
 \Aput*{$\phi$}
@@ -346,9 +346,9 @@ In LFG grammars of English, the CP/IP system is assumed as in \gbt (see Section~
     \tree[c]{I}{\le{is}}
     \tree[d]{VP}{\tree[e]{V$'$}{\tree[f]{V}{\le{yawning}}}}}}}%
 \hspace*{4em}%
-{\rnode{o}{\raisebox{-2em}{\fd{\fdand{\feat{\pred}{\small `YAWN\arglist{\subj}'}
-                    \feat{\tense}{\small PRES}
-           \feat{\subj}{\fdand{\feat{\pred}{\small `DAVID'}}}}}}}}
+{\rnode{o}{\raisebox{-2em}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
+                                   tense & \lfgpres\\
+                                   subj  & \lfgms{ pred & {\small `DAVID'}}}}}}
 \ltor{a}{o}
 \ltor{b}{o}
 \ltor[10]{c}{o}
@@ -380,8 +380,8 @@ why (\mex{1}a) is ruled out by the theory.
 \ex[*]{David devoured.
 }
 \ex[]{
-\lfgms{ pred & `DEVOUR\sliste{\subj,\obj}'\\
-         subj & \lfgms{ pred &  `DAVID' \\
+\lfgms{ pred & {\small `DEVOUR\sliste{\lfgsubj,\lfgobj}'}\\
+         subj & \lfgms{ pred & {\small `DAVID'} \\
                    }\\
        }
 }
@@ -398,14 +398,14 @@ David devoured a sandwich that Peter sleeps.%\\
 %`David verschlang ein Sandwich, daß Peter schläft.'
 }
 \ex[]{
-\lfgms{ pred & `DEVOUR\sliste{\subj,\obj}'\\
-         subj & [ \textsc{pred}  `DAVID' ] \\
+\lfgms{ pred & {\small `DEVOUR\sliste{\lfgsubj,\lfgobj}'}\\
+         subj & [ \textsc{pred} {\small `DAVID'} ] \\
          obj  & \lfgms{ spec &  A\\
-                     pred & `SANDWICH'\\
+                     pred & {\small `SANDWICH'}\\
                    }\\
-         comp & \lfgms{ pred & `SLEEP\sliste{\subj}'\\
-                     subj & \lfgms{ pred & `PETER'\\
-                               }\\
+         comp & \lfgms{ pred & {\small `SLEEP\sliste{\lfgsubj}'}\\
+                        subj & \lfgms{ pred & {\small `PETER'}\\
+                                     }\\
                    } 
        }
 }
@@ -447,37 +447,37 @@ Phrases which are licensed by the annotated c"=structure in (\mex{0}) can be vis
 \ea
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down}
-\rulenode{NP\\*(\up\ \obj) = \down}}
+\rulenode{NP\\*(\up\ \lfgobj) = \down}}
 \z
 %
 The annotation on the NP signals that the \textsc{obj} value in the f"=structure of the mother
-\mbox{(\up\ \obj)} is identical to the f"=structure of the NP node, that is, to everything that is
+\mbox{(\up\ \lfgobj)} is identical to the f"=structure of the NP node, that is, to everything that is
 contributed from the material below the NP node (\down). 
 This is shown in the figure in (\mex{1}):
 \ea
 \talltree[a]{V$'$}{\le[b]{V} \le[c]{NP}}%
 \hspace*{3em}%
-\rnode{d}{\fd{\fdand{\feat{\obj}{\rnode{e}{[\ ]}}}}}
+\rnode{d}{\fd{\fdand{\feat{\lfgobj}{\rnode{e}{[\ ]}}}}}
 \ltor{a}{d}
 \ltor[20]{b}{d}
 \ltor{c}[190]{e}
 \z
-In the equation (\up\ \obj) = \down{},  the arrows `\up' and `\down' correspond to feature structures. `\up' and
+In the equation (\up\ \lfgobj) = \down{},  the arrows `\up' and `\down' correspond to feature structures. `\up' and
 `\down' stand for the $f$ and $g$ in equations such as (\ref{ex-LFG-constraint}).
 
 (\mex{1}) is an example with an intransitive verb
 and the corresponding visualization is in (\mex{2}):
 
 \ea
-\catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\arglist{\subj}'}\\*
-                     (\up\ \tense) = \small PAST}
+\catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\arglist{\lfgsubj}'}\\*
+                     (\up\ \lfgtense) = \lfgpast}
 \z
 
 \ea
 \tree{V}{\le{sneezed}}
 \hspace*{4em}
-\rnode{d}{\mbox{\fd{\fdand{\feat{\pred}{\small `SNEEZE\arglist{\subj}'}
-                    \feat{\tense}{\small PAST}}}}}
+\rnode{d}{\mbox{\lfgms{ pred & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+                        tense & \lfgpast}}}
 \ltor{top}{d}
 \z
 \is{f"=structure|)}\is{c"=structure|)}\il{English|)}
@@ -497,7 +497,7 @@ is a translation of my translation of the original material into German.)
 }
 Under a glue"=based approach, it is assumed that f"=structure is the level of syntactic representation which is crucial for the semantic interpretation of
 a phrase, that is, unlike \gbt, it is not the position of arguments in the tree which play a role in the composition of meaning, but rather functional relations such as 
-\subj and \obj. Glue semantics assumes that each substructure of the f"=structure corresponds to a semantic resource connected to a meaning and furthermore, that the meaning
+\lfgsubj and \lfgobj. Glue semantics assumes that each substructure of the f"=structure corresponds to a semantic resource connected to a meaning and furthermore, that the meaning
 of a given f"=structure comes from the sum of these parts. The way the meaning is assembled is
 regulated by certain instructions for the combination of semantic resources. These instructions are given
 as a set of logic premises written in linear logic\is{linear logic} as \emph{glue language}\is{glue language}. The computation of the meaning of an utterance corresponds to a logical conclusion.
@@ -523,8 +523,8 @@ The syntactic structure for the sentence in (\mex{1}a) together with its semanti
   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 \hspace*{3em}%
-{\fd{\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\arglist{\subj}'}
-           \feat{\subj}{\rnode{i}{\fdand{\feat{\pred}{\small `DAVID'}}}}}}}}%
+{\rnode{s}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
+                   subj & \rnode{i}{[ \textsc{pred} {\small `DAVID'} ]}}}}%
 \hspace*{2em}%
 \mt{\relation{yawn}(\relation{david})}{\rnode{x}{\;[\ ]}}
 \ltor{ip}{s}
@@ -538,31 +538,31 @@ The semantic structure of this sentence is connected to the f"=structure via the
 derived from the following lexical information for the verb \emph{yawned}:
 
 \ea
-\mt{\lambda x. \relation{yawn}(x)}{(\up\ \subj)_\sigma\ \linimp\ \ups}
+\mt{\lambda x. \relation{yawn}(x)}{(\up\ \lfgsubj)_\sigma\ \linimp\ \ups}
 \z
 
 \noindent 
 This formula is referred to as the \emph{meaning constructor}\is{meaning constructor}. Its job is to combine the meaning of \emph{yawned} -- a one place predicate
 $\lambda x. \relation{yawn}(x)$ -- with the formula\is{\linimp}
-\mbox{$(\up\ \subj)_\sigma\ \linimp\ \ups$} in linear logic. Here, the connective \linimp\ is the
+\mbox{$(\up\ \lfgsubj)_\sigma\ \linimp\ \ups$} in linear logic. Here, the connective \linimp\ is the
 \emph{linear implication} symbol of linear logic. The symbol contains the meaning that \emph{if} a
-semantic resource $(\up\;\subj)_\sigma$ for the meaning of the subject is available,
+semantic resource $(\up\;\lfgsubj)_\sigma$ for the meaning of the subject is available,
 \emph{then} a semantic resource for $\up_\sigma$ must be created which will stand for the entire meaning of the sentence.
 Unlike the implication operator of classic logic, the linear implication must consume and produce
-semantic resources: the formula \mbox{$(\up\ \subj)_\sigma\ \linimp\ \ups$} states that if a
-semantic resource \mbox{$(\up\  \subj)_\sigma$} is found, it is consumed and the semantic resource
+semantic resources: the formula \mbox{$(\up\ \lfgsubj)_\sigma\ \linimp\ \ups$} states that if a
+semantic resource \mbox{$(\up\  \lfgsubj)_\sigma$} is found, it is consumed and the semantic resource
 \ups is produced.
 
 Furthermore, it is assumed that a proper name such as \emph{David} contributes its own semantic structure as a semantic resource. In an utterance such as \emph{David yawned},
-this resource is consumed by the verb \emph{yawned}, which requires a resource for its \subj in order to produce the resource for the entire sentence. This corresponds to the intuition
+this resource is consumed by the verb \emph{yawned}, which requires a resource for its \lfgsubj in order to produce the resource for the entire sentence. This corresponds to the intuition
 that a verb in any given sentence requires the meaning of its arguments in order for the entire sentence to be understood.
   
 The f"=structure of \emph{David yawned} with the instantiated meaning construction contributed by \emph{David} and \emph{yawned} is given in (\mex{1}):
 
 \eanoraggedright
  ~\\[-\baselineskip]
-\fd{$y:$\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\arglist{\subj}'}
-           \feat{\subj}{$d:$\fdand{\feat{\pred}{\small `DAVID'}}}}}}~\\[1em]
+\fd{$y:$\rnode{s}{\fdand{\feat{\textsc{pred}}{\small `YAWN\arglist{\lfgsubj}'}
+           \feat{\textsc{subj}}{$d:$\fdand{\feat{\textsc{pred}}{\small `DAVID'}}}}}}~\\[1em]
 {$\begin{array}[t]{lr@{\;:\;}l}
 \BF{David}&{\relation{david}}&{d_\sigma}\\*[1ex]
 \BF{yawn}&{\lambda x. \relation{yawn}(x)}&{d_\sigma \linimp\ y_\sigma}
@@ -595,9 +595,9 @@ proceed as shown in (\mex{1}), which is based on \citew[\page 92]{Dalrymple2006a
 \ea
 \label{ex:davidyawneddeduction}
 \begin{tabular}[t]{r@{~:~}lp{18em}}
-{\relation{david}} & $d_\sigma$ & The meaning \relation{david} is associated with the semantic structure of \subj\ 
+{\relation{david}} & $d_\sigma$ & The meaning \relation{david} is associated with the semantic structure of \lfgsubj\ 
 $d_\sigma$.\\[1em] $\lambda
-x. \relation{yawn}(x)$ & $d_\sigma \linimp\ y_\sigma$ & If we find the semantic resource for the \subj\ $d_\sigma$ on the glue side, 
+x. \relation{yawn}(x)$ & $d_\sigma \linimp\ y_\sigma$ & If we find the semantic resource for the \lfgsubj\ $d_\sigma$ on the glue side, 
 this resource is consumed and the semantic resource for the entire sentence $y_\sigma$ is produced. On the meaning side,
 we apply the function $\lambda x. \relation{yawn}(x)$ to the meaning associated with $d_\sigma$.\\[1em]
 \hline\multicolumn{3}{c}{}\\
@@ -628,14 +628,14 @@ contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one
 \eal
 \ex\label{ex-david-devoured-a-sandwich-at-noon-yesterday} David devoured a sandwich at noon yesterday.
 \ex\label{fstruc-david-devoured-a-sandwich-at-noon-yesterday} 
-\lfgms{ pred & `DEVOUR\sliste{\subj,\obj}'\\
+\lfgms{ pred & `DEVOUR\sliste{\lfgsubj,\lfgobj}'\\
          subj & \lfgms{ pred &  `DAVID' \\
                       }\\
          obj  & \lfgms{ spec & A\\
                         pred & `SANDWICH'\\
                       }\\
          adj & \menge{ \lfgms{ pred & `YESTERDAY' },
-                        \lfgms{ \pred & `AT\arglist{\obj}'\\
+                        \lfgms{ \pred & `AT\arglist{\lfgobj}'\\
                                 obj   & \lfgms{ pred & `NOON' }\\
                               } }\\
 }
@@ -748,8 +748,8 @@ work \citep[\page 8]{Bresnan82a}:
 \ea
 Passivization rule:\\
 \begin{tabular}{@{}l@{~$\mapsto$~}l@{}}
-(\subj) & $\varnothing$/(\obl)\\
-(\obj)  & (\subj)
+(\lfgsubj) & $\varnothing$/(\obl)\\
+(\lfgobj)  & (\lfgsubj)
 \end{tabular}
 \z
 The first rule states that the subject is either not realized ($\varnothing$) or it is realized as
@@ -773,26 +773,26 @@ a-structure & \emph{schlagen} `beat' & $\langle$ x & y~~ $\rangle$\\
 \noindent
 The mapping of a"=structure to f"=structure is governed by the following restrictions:
 \ealnoraggedright\label{lmt} 
-\ex Subject"=Mapping"=Principle:\is{principle!Subject"=Mapping} The most prominent role marked with [$-$o] is mapped to \subj if it is initial in the a"=structure.
-Otherwise, the role marked with [$-$r] is mapped to \subj.
+\ex Subject"=Mapping"=Principle:\is{principle!Subject"=Mapping} The most prominent role marked with [$-$o] is mapped to \lfgsubj if it is initial in the a"=structure.
+Otherwise, the role marked with [$-$r] is mapped to \lfgsubj.
 
 \ex The argument roles are connected to grammatical functions as shown in the following table. Non"=specified values for o and r are to be understood as `+':
 
 \begin{tabular}[t]{@{}lll@{}}
          & [$-$r] & [$+$r]\\
-{}[$-$o] & \subj  & \obltheta\\
-{}[$+$o] & \obj   & \objtheta\\
+{}[$-$o] & \lfgsubj  & \obltheta\\
+{}[$+$o] & \lfgobj   & \objtheta\\
 \end{tabular}
 \ex \emph{Function-Argument Biuniqueness}: Every a"=structure role must be associated to exactly one function and vice versa. 
 \zl
-For the argument structure in (\mex{-1}), the principle in (\mex{0}a) ensures that the agent x receives the grammatical function \subj. (\mex{0}b) adds an o"=feature with the value `+'
-so that the patient y is associated with \obj:
+For the argument structure in (\mex{-1}), the principle in (\mex{0}a) ensures that the agent x receives the grammatical function \lfgsubj. (\mex{0}b) adds an o"=feature with the value `+'
+so that the patient y is associated with \lfgobj:
 \ea
 \begin{tabular}[t]{@{}llll@{}}
            &          & Agent & Patient\\
 a-structure & \emph{schlagen} `beat' & $\langle$ x & y~~ $\rangle$\\
            &          & \hspaceThis{$\langle$}[$-$o]    & [$-$r] \\\cline{3-4}
-           &          & \hspaceThis{$\langle$}\subj       & \obj
+           &          & \hspaceThis{$\langle$}\lfgsubj       & \lfgobj
 \end{tabular}
 \z
 
@@ -803,7 +803,7 @@ Under passivization, the most prominent role is suppressed so that only the [$-$
            &          & Agent & Patient\\
 a-structure & \emph{schlagen} `beat' & $\langle$ x & y~~ $\rangle$\\
            &          & \hspaceThis{$\langle$}[$-$o]    & [$-$r] \\\cline{3-4}
-           &          & \hspaceThis{$\langle$}$\varnothing$       & \subj
+           &          & \hspaceThis{$\langle$}$\varnothing$       & \lfgsubj
 \end{tabular}
 \z
 
@@ -816,7 +816,7 @@ given in the a"=structure, since this case (dative) is linked to a semantic role
            &          & Agent & Beneficiary\is{beneficiary}\\
 a-structure & \emph{helfen} `help' & $\langle$ x & y~~ $\rangle$\\
            &          & \hspaceThis{$\langle$}[$-$o]    & [$+$o]/DAT \\\cline{3-4}
-           &          & \hspaceThis{$\langle$}\subj       & \objtheta
+           &          & \hspaceThis{$\langle$}\lfgsubj       & \objtheta
 \end{tabular}
 \z
 Passivization will yield the following:
@@ -835,8 +835,7 @@ the one found in impersonal passives.
 These mapping principles may seem complex at first glance, but they play a role in analyzing
 an entire range of phenomena, \eg the analysis of unaccusative verbs\is{verb!unaccusative}
 \citep{BZ90a}. For the analysis of the passive, we can now say that the passive suppresses the
-highest [$-$o] role. Any mention of some other possibly present object in the passive rule is no
-longer necessary.
+highest [$-$o] role. Mentioning an eventual object in the passive rule is no longer necessary.
 %
 \is{Lexical Mapping Theory (LMT)|)}\is{linking|)}\is{passive|)}\is{semantic role|)}
 
@@ -886,7 +885,7 @@ C$'$ is licensed by a special rule:
 \rulenode{VP\\*\up~=~\down}}
 \z
 In LFG rules, there is normally only one element annotated with `\up~=~\down', namely the head. In (\mex{0}), there are two such elements, which is why both equally contribute to the
-f"=structure of the mother. The head domain of V has been extended to C. The information about \subj and \obj comes from the VP and the information about \pred from C.%
+f"=structure of the mother. The head domain of V has been extended to C. The information about \lfgsubj and \lfgobj comes from the VP and the information about \pred from C.%
 \is{head domain!extended|)}\is{verb"=final language}
 
 \section{Local reordering}
@@ -917,7 +916,7 @@ The four cases in German can be represented using two binary features ({\small G
 
 \ea
 \label{Kasus-Implikation-Berman}
-\upshape      (\downsp \case) = \mdacc{} $\Rightarrow$ (\upsp \obj) = \down{}
+\upshape      (\downsp \case) = \mdacc{} $\Rightarrow$ (\upsp \lfgobj) = \down{}
 \z
 
 \noindent
@@ -954,10 +953,10 @@ f"=structure of \emph{glauben} `believe'. One would have to reformulate the impl
 }
 \ea
 \label{le-verschlingen}
-\catlexentry{verschlingt}{V}{(\up\ \pred) = {\small `VERSCHLINGEN\arglist{\subj, \obj}'}\\*
-                     (\up\ \subj{} {\small AGR CAS}) = NOM\\*
-                     (\up\ \obj{} {\small AGR CAS}) = ACC\\*
-                     (\up\ \tense) = \small PRESENT}
+\catlexentry{verschlingt}{V}{(\up\ \pred) = {\small `VERSCHLINGEN\arglist{\lfgsubj, \lfgobj}'}\\*
+                     (\up\ \lfgsubj{} {\small AGR CAS}) = NOM\\*
+                     (\up\ \lfgobj{} {\small AGR CAS}) = ACC\\*
+                     (\up\ \lfgtense) = \small PRESENT}
 \z
 
 \noindent
@@ -980,7 +979,7 @@ The following rule can be used additionally to combine the verb with its subject
 \ea
 \label{lfg-vp-regel}
 \phraserule{VP}{
-\rulenode{NP\\* (\upsp \subj|\obj|\objtheta) = \down}
+\rulenode{NP\\* (\upsp \lfgsubj|\lfgobj|\objtheta) = \down}
 \rulenode{VP\\* \up~=~\down}}
 \z
 The `|'\is{$\vert$} here stands for a disjunction\is{disjunction}, that is, the NP can either be the subject or the object of the superordinate f"=structure. Since VP occurs both on the left
@@ -1033,7 +1032,7 @@ In example (\mex{1}), the displaced constituent \emph{Chris} is characterized by
 \label{ex-Chris-we-think}
 Chris, we think that David saw.
 \z
-For one, it has an argument function which is normally realized in a different position (the \obj function of \emph{saw} in the above example) and additionally it has a discourse function:
+For one, it has an argument function which is normally realized in a different position (the \lfgobj function of \emph{saw} in the above example) and additionally it has a discourse function:
 a certain emphasis of the information"=structural status in this construction (\textsc{topic} in the matrix clause).
 In LFG, \textsc{topic} and \textsc{focus} are assumed to be grammaticalized discourse functions (furthermore, \textsc{subj} is classified as the default discourse function). Only
 grammaticalized discourse functions are represented on the level of f"=structure, that is, those
@@ -1046,12 +1045,12 @@ and \textsc{focus} are identified with an f"=structure that bears an argument fu
 gives the f"=structure for the sentence in (\ref{ex-Chris-we-think}):
 
 \ea
-\lfgms{ pred & `THINK\sliste{ \subj, comp }' \\
+\lfgms{ pred & `THINK\sliste{ \lfgsubj, comp }' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
                      }\\
-        comp & \lfgms{ pred & `SEE\sliste{ \subj, \obj }'\\
+        comp & \lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }'\\
                        subj & \lfgms{ pred & `DAVID' \\
                                     }\\
                        obj  & \rnode{obj}{}\\
@@ -1081,7 +1080,7 @@ The f"=structure corresponding to (\mex{1}a) is given in (\mex{1}b):
 \eal
 \ex Chris, we saw.
 \ex 
-\lfgms{ pred & `SEE\sliste{ \subj, \obj }' \\
+\lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
@@ -1107,15 +1106,15 @@ Example (\mex{1}a) shows a case of even deeper embedding than in (\ref{ex-Chris-
 \eal
 \ex Chris, we think Anna claims that David saw.
 \ex 
-\lfgms{ pred & `THINK\sliste{ \subj, comp }' \\
+\lfgms{ pred & `THINK\sliste{ \lfgsubj, comp }' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
                      }\\
-        comp & \lfgms{ pred & `CLAIM\sliste{ \subj, comp }\\
+        comp & \lfgms{ pred & `CLAIM\sliste{ \lfgsubj, comp }\\
                        subj & \lfgms{ pred & `ANNA' \\
                                    }\\
-                       comp & \lfgms{ pred & `SEE\sliste{ \subj, \obj }\\
+                       comp & \lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }\\
                                       subj & \lfgms{ pred & `DAVID' \\
                                                    }\\
                                       obj  & \rnode{obj}{}\\
@@ -1277,15 +1276,14 @@ The c"=structure rule for the NP can also be omitted and a triangle can be drawn
 
 Section~\ref{Abschnitt-Format-LFG} was based extensively on the textbook and introductory article of \citet{Dalrymple2001a-u,Dalrymple2006a}. Additionally, I have drawn from
 teaching materials of Jonas Kuhn from 2007. \citew{Bresnan2001a} is a comprehensive textbook in English for the advanced reader. Some of the more in"=depth analyses of
-German in LFG are \citew{Berman96a-u,Berman2003a}.  
+German in LFG are \citew{Berman96a-u,Berman2003a}.  \citew{SdA2016a-u} is an introduction to LFG that uses French\il{French} examples. The authors demonstrate how the XLE system can be used for the development of a
+French\il{French} LFG grammar. The textbook also discusses the Finite State Morphology component that comes
+with the XLE system.
 
 \citet{Levelt89a} developed a model of language production based on LFG.
  \citet{Pinker84a-u} -- one of the best"=known researchers on language acquisition -- used LFG as the model for his theory of acquisition. For another theory on first and second
  language acquisition that uses LFG, see \citew{Pienemann2005a}. 
 
-\citet{SdA2016a-u} demonstrate how the XLE system can be used for the development on a
-French\il{French} LFG grammar. The textbook also discusses the Finite State Morphology component that comes
-with the XLE system.
 
 
 %      <!-- Local IspellDict: en_US-w_accents -->

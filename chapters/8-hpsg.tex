@@ -155,7 +155,7 @@ Lexical item for the word \emph{Grammatik} `grammar':\\
 phonology   & \phonliste{ Grammatik } \\[1mm]
 syntax-semantics & \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}\\
                                                                                                }\\[6mm]
-                                                                               subcat & \liste{ DET[\textsc{case}~\ibox{1}] } \\
+                                                                               subcat & \liste{ Det[\textsc{case}~\ibox{1}] } \\
                                                                              } \\[6mm]
                                           content & \ldots \ms[grammatik]{ inst & X \\
                                                                                     }\\
@@ -342,7 +342,7 @@ relevant to the present discussion:
 phon   & \phonliste{ Grammatik } \\[1mm]
 synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}\\
                                                                       }\\[6mm]
-                                                     subcat & \liste{ DET[\textsc{case}~\ibox{1}] } \\
+                                                     subcat & \liste{ Det[\textsc{case}~\ibox{1}] } \\
                                                     } \\[6mm]
                                 cont & \ms[mrs]{
                                        ind & \ibox{2} \ms{ per & third\\
@@ -843,7 +843,7 @@ Until now, we did not assign elements in the valence list\is{valence} to argumen
 as \emph{linking}. (\mex{1}) shows how linking works in HPSG. The referential indices of the argument
 noun phrases are structure"=shared with one of the semantic roles of the relation contributed by the
 head.\is{argument}\todostefan{nom, acc, dat}
-\ea
+\eas
 \label{le-geben}
 \emph{gibt} `gives':\\
 \ms
@@ -859,7 +859,7 @@ head.\is{argument}\todostefan{nom, acc, dat}
                                         goal  & \ibox{3} \\ }} \\
            } \\
 }
-\z
+\zs
 Since we use general terms such as \textsc{agent} and \textsc{patient} for argument roles, it is possible to state generalizations about valence classes and
 the realization of argument roles. For example, one can divide verbs into verbs taking an agent, verbs with an agent and theme, verbs with agent and patient etc.
 These various valence/linking patterns can be represented in type hierarchies\is{type hierarchy} and
@@ -910,7 +910,18 @@ requirements are fulfilled by MRS. Due to space considerations, we cannot go int
 
 Analogous\is{adjunct|(} to the selection of arguments by heads via \subcat, adjuncts can also select their heads using a feature (\textsc{modified})\isfeat{mod}.
 Adjectives, prepositional phrases that modify nouns, and relative clauses select an almost complete nominal projection, that is, a noun that only still needs to
-be combined with a determiner to yield a complete NP. (\mex{1}) shows part of the lexical entry for \emph{interessantes} `interesting':
+be combined with a determiner to yield a complete NP. (\mex{1}) shows a description of the respective \type{synsem}
+object. The symbol \nbar, which is familiar from \xbart (see Section~\ref{sec-xbar}), is used as abbreviation
+for this feature description.
+\ea
+AVM that is abbreviated as \nbar:\\
+\ms{
+  cat \ms{ head   & noun\\
+           subcat & \sliste{ Det }\\
+  }
+}
+\z
+(\mex{1}) shows part of the lexical item for \emph{interessantes} `interesting':
 \eas\is{adjective}
 \label{le-interessantes}
 \catv for \emph{interessantes} `interesting':\\

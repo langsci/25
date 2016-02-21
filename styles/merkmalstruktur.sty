@@ -152,7 +152,7 @@ $%
 \tabcolsep0pt\arraycolsep0pt%
 $%
 \left[%
-\begin{tabular}{@{}>{\scshape}l@{\hspace{5pt}}l@{}}%
+\begin{tabular}{@{}>{\scshape}l@{\hspace{5pt}}>{}l@{}}%
 #1%
 \end{tabular}%
 \rule{0mm}{5mm}%
@@ -169,9 +169,9 @@ $%
 %
 \def\xxtonems[#1]#2{%
 $\left[%
-\begin{tabular}{>{\scshape}l}%
+\begin{tabular}{>{\upshape\scshape}l}%
 #2%
-{\normalfont\itshape #1}%
+{\normalfont\itshape #1}% 
 \end{tabular}% 
 \right]$%
 \vspace{1mm}%
