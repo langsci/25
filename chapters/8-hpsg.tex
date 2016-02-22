@@ -1500,7 +1500,14 @@ synsem$|$loc \ibox{1} \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
 }
 \zs
 Through sharing of the \localv and the \dsl value in (\mex{0}), the syntactic and semantic information of the verb trace
-is present at its maximal projection, and the verb in initial position can check whether the projection of the trace is compatible.
+is present at its maximal projection, and the verb in initial position can check whether the
+projection of the trace is compatible.\footnote{
+  Note that the description in (\mex{0}) is cyclic since the tag \ibox{1} is used inside itself. See
+  Section~\ref{sec-cyclic-fd} on cyclic feature descriptions. This cyclic description is the most
+  direct way to express that a linguistic object with certain local properties is missing and to pass this
+  information on along the head path as the value of the \dslf. This will be even clearer when we look
+  at the final version of the verb trace in (\ref{le-verbspur}) on page~\pageref{le-verbspur}.
+}%
 \is{trace!verb|)}
 
 The special lexical item for verb-initial position is licensed by the following lexical rule\is{lexical rule!verb"=initial position|(}:\footnote{
