@@ -333,34 +333,37 @@ For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.
 \gll ein Beamter, der Beamte\\
 	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
 \zl
-Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):
+\addlines         
+Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{
+  To keep things simple, these rules do not incorporate information regarding the inflection class.
+}
 \ea
 %\resizebox{\linewidth}{!}{
 \begin{tabular}[t]{@{}l@{ }l@{~~}l}
-NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom\_weak & N\_fem\_sg\_nom\_weak \\
-NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom\_weak & N\_mas\_sg\_nom\_weak \\
-NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom\_weak & N\_neu\_sg\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom\_weak & N\_fem\_pl\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom\_weak & N\_mas\_pl\_nom\_weak \\
-NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom\_weak & N\_neu\_pl\_nom\_weak \\[2mm]
+NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom & N\_fem\_sg\_nom \\
+NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom & N\_mas\_sg\_nom \\
+NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom & N\_neu\_sg\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom & N\_fem\_pl\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom & N\_mas\_pl\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\[2mm]
 \end{tabular}
 
 \begin{tabular}[t]{@{}l@{ }l@{~~}l}
-NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom\_stark & N\_fem\_sg\_nom\_stark \\
-NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom\_stark & N\_mas\_sg\_nom\_stark \\
-NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom\_stark & N\_neu\_sg\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom\_stark & N\_fem\_pl\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom\_stark & N\_mas\_pl\_nom\_stark \\
-NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom\_stark & N\_neu\_pl\_nom\_stark \\[2mm]
+NP\_3\_sg\_nom  & $\to$ Det\_fem\_sg\_nom & N\_fem\_sg\_nom \\
+NP\_3\_sg\_nom  & $\to$ Det\_mas\_sg\_nom & N\_mas\_sg\_nom \\
+NP\_3\_sg\_nom  & $\to$ Det\_neu\_sg\_nom & N\_neu\_sg\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_fem\_pl\_nom & N\_fem\_pl\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_mas\_pl\_nom & N\_mas\_pl\_nom \\
+NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\[2mm]
 \end{tabular}
 \z
 (\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
-dative, and accusative. We would then require 48 symbols for determiners ($3*2*4*2$), 48 symbols for nouns and
-48 rules rather than one.\is{agreement|)} 
+dative, and accusative. We would then require 24 symbols for determiners ($3*2*4$), 24 symbols for nouns and
+24 rules rather than one. If inflection class is taken into account, the number of symbols and the
+number of rules doubles.\is{agreement|)} 
 
 \section{Expanding PSG with features}
 \label{sec-PSG-Merkmale}
-
 
 Phrase structure grammars which only use atomic symbols are problematic as they cannot capture certain generalizations.
 We as linguists can recognize that NP\_3\_sg\_nom stands for a noun phrase because it contains the letters NP. 
@@ -371,29 +374,36 @@ left"=hand side of the rule and two on the right.
 
 We can solve this problem by introducing features which are assigned to category symbols and therefore allow for the values of
 such features to be included in our rules. For example, we can assume the features person, number and case for the category
-symbol NP. For determiners and nouns, we would adopt an additional feature for gender and one for inflectional class.
+symbol NP. For determiners and nouns, we would adopt an additional feature for gender and one for
+inflectional class. (\mex{1}) shows two rules augmented by the respective values in brackets:\footnote{
+  Chapter~\ref{chap-feature-descriptions} introduces attribute value structures. In these structure we always
+have pairs of a feature name and a feature value. In such a setting, the order of values is not
+important, since every value is uniquely identified by the corresponding feature name. Since we do not have a feature name
+in schemata like (\mex{0}), the order of the values is important.
+}
 
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
-NP(3,sg,nom)  & $\to$ Det(fem,sg,nom,strong) N(fem,sg,nom,strong)\\
-NP(3,sg,nom)  & $\to$ Det(mas,sg,nom,strong) N(mas,sg,nom,strong)\\
+NP(3,sg,nom)  & $\to$ Det(fem,sg,nom) N(fem,sg,nom)\\
+NP(3,sg,nom)  & $\to$ Det(mas,sg,nom) N(mas,sg,nom)\\
 \end{tabular}
 \z
-
-If we were to use variables rather than the values in (\mex{0}), we would get the following rules as in (\mex{1}):
+If we were to use variables rather than the values in (\mex{0}), we would get rule schemata as the
+one in (\mex{1}):
 \ea
 \label{Regel-mit-Variablen}
 \begin{tabular}[t]{@{}l@{ }l@{ }l}
-NP({3},{Num},{Case}) & $\to$ & Det(Gen,{Num},{Case},Infl) N(Gen,{Num},{Case},Infl)\\
+NP({3},{Num},{Case}) & $\to$ & Det(Gen,{Num},{Case}) N(Gen,{Num},{Case})\\
 \end{tabular}
 \z
-The values of the variables here are not important. What is important is that they match. The value
-of the person feature (the first position in the NP(3,Num,Case)) is fixed at `3' by the rule. These
+The values of the variables here are not important. What is important is that they match. For this
+to work, it is important that the values are ordered; that is, in the category of a determiner, the gender is always first, number
+second and so on. The value of the person feature (the first position in the NP(3,Num,Case)) is fixed at `3' by the rule. These
 kind of restrictions on the values can, of course, be determined in the lexicon: 
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
 NP(3,sg,nom)  & $\to$ es\\
-Det(mas,sg,nom,strong)  & $\to$ des\\
+Det(mas,sg,nom)  & $\to$ des\\
 \end{tabular}
 \z
 
@@ -804,8 +814,7 @@ The rule that we need to analyze (\ref{Beispiele-NP-relationale-Nomina}a,b) is g
 \ea
 \nbar $\to$ N PP
 \z
-
-
+%
 Figure~\ref{Abbildung-NP-mit-PP-Argument} shows two structures with PP"=arguments. The tree on the right also contains an additional PP"=adjunct, which is licensed
 by the rule in (\ref{xbar-PP-Adjunkt-an-N}).
 \begin{figure}
@@ -1207,6 +1216,7 @@ prepositional phrase consists of \pbar, that is, a combination of P and NP.\is{p
 \section{\xbart}
 \label{sec-xbar}
 
+\addlines
 If\is{X theory@\xbar theory|(}  we look again at the rules that we have formulated in the previous section, we see that heads are always 
 combined with their complements to form a new constituent (\mex{1}a,b), which can then be combined with further constituents (\mex{1}c,d):
 
