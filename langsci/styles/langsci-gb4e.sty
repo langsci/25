@@ -137,7 +137,7 @@
 \newif\if@xrec\@xrecfalse
 \@definecounter{fnx}
 
-%%%% adapted from latex.tex to get examples in footnotes right
+%% %%%% adapted from latex.tex to get examples in footnotes right
 %% \long\def\@footnotetext#1{%
 %%     \@noftnotefalse\setcounter{fnx}{0}%
 %%     \insert\footins{\reset@font\footnotesize
@@ -153,7 +153,7 @@
 
 \renewcommand\@footnotetext[1]{%
   \@noftnotefalse\setcounter{fnx}{0}%
-	\oldFootnotetext{#1}}
+	\oldFootnotetext{#1}\@noftnotetrue}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
