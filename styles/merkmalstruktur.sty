@@ -110,41 +110,59 @@ $%
 
 %----------------- new -------------------
 
+
 \setlength{\extrarowheight}{1pt}
 
-\def\ms{\futurelet\msLook\msdecide}
-\def\msdecide{\ifx\msLook[\let\next=\xxtms%
-\else\let\next=\xxms\fi\next}
-%
-\def\xxtms[#1]#2{%
-\mbox{%
-\tabcolsep0pt\arraycolsep0pt%
-$%
-\left[%
-\begin{tabular}{>{\upshape\scshape}l@{\hspace{5pt}}>{\normalfont\itshape}l}%
-#2%
-\multicolumn{2}{>{\normalfont\itshape}l}{#1}%
-\end{tabular}%
-\right]%
-$%
-}%
-\vspace{1mm}%
+\newcommand{\ms}[2][]{%
+  \mbox{%
+    \delimiterfactor=1000 \delimitershortfall=0pt
+    \tabcolsep=0pt
+    $\left[%
+    \begin{tabular}{>{\upshape\scshape}l@{\hspace{5pt}}>{\normalfont\itshape}l}
+    #2%
+    \if\relax\detokenize{#1}\relax\else
+     \\ \multicolumn{2}{>{\normalfont\itshape}l}{#1}%
+    \fi
+    \end{tabular}%
+    \right]$%
+  }%
+  \vspace{1mm}%
 }
+
+
+%% \def\ms{\futurelet\msLook\msdecide}
+%% \def\msdecide{\ifx\msLook[\let\next=\xxtms%
+%% \else\let\next=\xxms\fi\next}
+%% %
+%% \def\xxtms[#1]#2{%
+%% \mbox{%
+%% \tabcolsep0pt\arraycolsep0pt%
+%% $%
+%% \left[%
+%% \begin{tabular}{>{\upshape\scshape}l@{\hspace{5pt}}>{\normalfont\itshape}l}%
+%% #2%
+%% \multicolumn{2}{>{\normalfont\itshape}l}{#1}%
+%% \end{tabular}%
+%% \right]%
+%% $%
+%% }%
+%% \vspace{1mm}%
+%% }
  
-\def\xxms#1{%
-\mbox{%
-\tabcolsep0pt\arraycolsep0pt%
-$%
-\left[%
-\begin{tabular}{>{\upshape\scshape}l@{\hspace{5pt}}>{\normalfont\itshape}l}%
-#1%
-\end{tabular}%
-\rule{0mm}{5mm}%
-\right]%
-$%
-}%
-\vspace{1mm}%
-}
+%% \def\xxms#1{%
+%% \mbox{%
+%% \tabcolsep0pt\arraycolsep0pt%
+%% $%
+%% \left[%
+%% \begin{tabular}{>{\upshape\scshape}l@{\hspace{5pt}}>{\normalfont\itshape}l}%
+%% #1%
+%% \end{tabular}%
+%% \rule{0mm}{5mm}%
+%% \right]%
+%% $%
+%% }%
+%% \vspace{1mm}%
+%% }
 
 % without italics and no types
 \def\lfgms#1{%
@@ -152,7 +170,7 @@ $%
 \tabcolsep0pt\arraycolsep0pt%
 $%
 \left[%
-\begin{tabular}{@{}>{\scshape}l@{\hspace{5pt}}>{}l@{}}%
+\begin{tabular}{@{}>{\scshape}l@{\hspace{5pt}}>{\small}l@{}}%
 #1%
 \end{tabular}%
 \rule{0mm}{5mm}%
