@@ -173,6 +173,7 @@ If this structure would be used in a larger structure that is spelled out, the d
 \emph{crash} since the conceptual system could not make sense of the N feature that is still present
 at the P node.
 
+\addlines
 Selectional features are atomic, that is, the preposition cannot select an NP[\type{acc}] as in GB
 and the other theories in this book unless NP[\type{acc}] is assumed to be atomic. Therefore, an
 additional mechanism is assumed that can check other features in addition to selectional
@@ -623,7 +624,7 @@ element. \citet[\page 218]{Adger2003a} formulates this constraint as follows:
 Locality of matching\is{locality!of matching}: Agree holds between a feature F on X and a matching feature F on Y if and only
 if there is no intervening Z[F].
 \z
-Intervention is defined as follows:
+Intervention is defined as in (\mex{1}):
 \ea
 \label{def-intervention}
 Intervention\is{intervention}: In a structure [X \ldots{} Z \ldots{} Y], Z intervenes between X and Y iff X
@@ -764,6 +765,7 @@ Now the assumption is that the argument of \emph{gestorben} `died' behaves like 
 argument of \emph{getanzt} `danced' behaves like a subject. If adjectival passives predicate over the object
 it is explained why (\mex{-1}b) is possible, while (\mex{-1}a) is not. 
 
+%\addlines[2]
 \citet[\page 140]{Adger2003a} assumes the structure in Figure~\vref{fig-little-v-unaccusative} for \vPs with unaccusative verbs.
 \begin{figure}
 \begin{forest}
@@ -779,7 +781,8 @@ it is explained why (\mex{-1}b) is possible, while (\mex{-1}a) is not.
 It is assumed that this unaccusative variant of \littlev plays a role in the analysis of the
 passive. Unaccusative verbs are similar to passivized verbs in that they do have a subject that
 somehow also has object properties. The special version of \littlev is selected by the Passive head
-\emph{werden} `be', which forms a Passive Phrase\is{category!functional!Passive} (abbreviated as PassP). See Figure~\vref{fig-passive-schlagen-mp} for the analysis of (\mex{1}):
+\emph{werden} `be', which forms a Passive Phrase\is{category!functional!Passive} (abbreviated as
+PassP). See Figure~\vref{fig-passive-schlagen-mp} for the analysis of the example in (\mex{1}):
 \ea
 \gll dass er geschlagen wurde\\
      that he beaten was\\
@@ -787,6 +790,7 @@ somehow also has object properties. The special version of \littlev is selected 
 \z
 \begin{figure}
 \centerfit{
+%\begin{sideways}  
 \begin{forest}
 for tree={fit=rectangle}
 [TP
@@ -803,6 +807,7 @@ for tree={fit=rectangle}
        [\textit{werden} {[Pass,\st{\textit{u}Infl}:past*]}]
        [{T[past]}]]]
 \end{forest}
+%\end{sideways}
 }
 \caption{\label{fig-passive-schlagen-mp}Minimalist analysis of the passive without movement but with
 nonlocal case assignment via Agree}
