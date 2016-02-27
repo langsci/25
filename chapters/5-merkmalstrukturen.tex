@@ -180,6 +180,7 @@ well using lists, which is why I do not introduce sets here and instead use list
 \section{Types}
 \label{sec-formalismus-typen}
 
+\addlines[2]
 In\is{type|(} the previous section, we introduced feature descriptions consisting of feature"=value pairs and showed that it makes sense to allow for
 complex values for features. In this section, feature descriptions will be augmented to include types. Feature descriptions which are assigned a type
 are also called \emph{typed feature descriptions}. Types say something about which features can or must belong to a 
@@ -192,7 +193,7 @@ date-of-birth & 10.10.1985\\
 gender & male\\
 father      & \ldots\\
 mother     & \ldots\\
-children     & \liste{ \ldots, \ldots{} }\\   
+children     & \liste{ \ldots, \ldots{} }
 }
 \z
 Types are written in \textit{italics}. 
@@ -206,7 +207,7 @@ Max Meier even though it does not contain any information about Max' date of bir
 \ms[person]{
 firstname   & max\\
 lastname   & meier\\
-gender & male\\
+gender & male
 }
 \z
 We know, however, that Max Meier must have been born on some day since this is a description of the type \textit{person}.
@@ -221,7 +222,7 @@ date-of-birth & date\\
 gender & gender\\
 father      & person\\
 mother    & person\\
-children    & list of person\\   
+children    & list of person~
 }
 \z
 In (\mex{0}) and (\mex{-1}), the values of features such as \textsc{firstname} are in italics. These values are also types. They are different from
@@ -238,7 +239,7 @@ date-of-birth & date\\
 gender & female\\
 father      & person\\
 mother    & person\\
-children    & list of person\\   
+children    & list of person~   
 }
 \z
 At this point, we could ask ourselves if we really need the feature \textsc{gender}. The necessary information is already represented in the type \type{woman}.
@@ -247,6 +248,7 @@ surface again in the discussion of linguistic analyses.
 Both alternatives differ mostly in the fact that the information which is modelled by types is not
 immediately accessible for structure sharing, which is discussed in Section~\ref{sec-strukturteilung}.
 
+\addlines
 Type hierarchies\label{Seite-Typhierarchie} play an important role in capturing linguistic generalizations, which is why type hierarchies and
 the inheritance of constraints and information will be explained with reference to a further example in what follows. One can think of type hierarchies as an effective
 way of organizing information. In an encyclopedia, the individual entries are linked in such a way that the entries for monkey and mouse will each contain a pointer
@@ -318,7 +320,7 @@ feature descriptions, this ``or'' is expressed by a `$\vee$'\is{$\vee$}.
 \ea
 \ms[person]{
 firstname  & julia\\
-lastname & warbanow $\vee$ barbanow\\
+lastname & warbanow $\vee$ barbanow
 }
 \z
 Some internet search engines do not allow for searches with `or'. In these cases, one has to carry out two distinct search operations: one for ``Julia Warbanow'' and then another
@@ -326,11 +328,11 @@ for ``Julia Barbanow''. This corresponds to the two following disjunctively conn
 \ea
 \ms[person]{
  firstname  & julia\\
- lastname & warbanow\\
+ lastname & warbanow
 } $\vee $
 \ms[person]{
  firstname  & julia\\
- lastname & barbanow\\
+ lastname & barbanow
 }
 \z
 Since we have type hierarchies as a means of expression, we can sometimes do without disjunctive specification of values and instead state the supertype\is{type}:
@@ -375,16 +377,16 @@ father      & \ms[person]{
               firstname  & peter\\
               lastname & meier\\
               children   & \liste{ \ms[person]{
-                                 firstname & klaus\\
-                                 }, \ldots }\\
+                                 firstname & klaus
+                                 }, \ldots }
              }\\
 mother    & \ms[person]{
               firstname  & anna\\
               lastname & meier\\
               children   & \liste{ \ms[person]{
-                                 firstname & klaus\\
-                                 }, \ldots }\\
-             }\\
+                                 firstname & klaus
+                                 }, \ldots }
+             }
 }
 \z
 Notice that under the paths \textsc{father$|$children} and \textsc{mother$|$children}, we find a
@@ -393,8 +395,8 @@ feature description is of one or two children of Peter and Anna cannot be answer
 possible that we are dealing with two different children from previous partnerships who both happen to be called
 Klaus.
 
-By using structure sharing, it is possible to specify the identity of the two values:
-
+By using structure sharing, it is possible to specify the identity of the two values as in (\mex{1}).
+\begin{figure}
 \ea
 \ms[person]{
 firstname    & max\\
@@ -404,17 +406,18 @@ father      & \ms[person]{
               firstname  & peter\\
               lastname & meier\\
               children   & \liste{ \ibox{1} \ms[person]{
-                                 firstname & klaus\\
-                                 }, \ldots }\\
+                                 firstname & klaus
+                                 }, \ldots }
              }\\
 mother    & \ms[person]{
               firstname  & anna\\
               lastname & meier\\
-              children & \liste{ \ibox{1}, \ldots }\\
-             }\\
+              children & \liste{ \ibox{1}, \ldots }
+             }
 }
 \z
-
+\vspace{-\baselineskip}
+\end{figure}%
 In (\mex{0}), Klaus is a single child that belongs to both parents. Everything inside the brackets which immediately follow \iboxt{1} is equally present in both
 positions. One can think of \iboxt{1} as a pointer or reference to a structure which has only been described once. One question still remains open: what about Max?
 Max is also a child of his parents and should therefore also occur in a list of the children of his parents. There are two points in (\mex{0}) where there are three
@@ -432,7 +435,7 @@ appears in each of these lists and furthermore, we have to ensure that the child
 identical to the entire object being described. Otherwise, the description would permit a situation where Max's
 parents could have a second child also called Max.  The description given in
 (\mex{1})\vpageref{bsp-avm-zyklen} can capture all facts correctly.
-%\begin{figure}
+\begin{figure}
 \ea
 \label{bsp-avm-zyklen}
 \ibox{2} \ms[person]{
@@ -443,17 +446,17 @@ father      & \ms[person]{
               firstname  & peter\\
               lastname & meier\\
               children   & \liste{ \ibox{1} \ms[person]{
-                                 firstname & klaus\\
-                                 }, \ibox{2} }\\
+                                 firstname & klaus
+                                 }, \ibox{2} }
              }\\
 mother    & \ms[person]{
               firstname  & anna\\
               lastname & meier\\
-              children   & \liste{ \ibox{1}, \ibox{2} }\\
-             }\\
+              children   & \liste{ \ibox{1}, \ibox{2} }
+             }
 }
 \z
-%\vspace{-\baselineskip}\end{figure}%
+\vspace{-\baselineskip}\end{figure}%
 Structures such as those described in (\mex{0}) are called cyclic because one ends up going in a circle if one follows a particular path: \eg the path 
 \textsc{father$|$""children$|$""\ldots$|$""father$|$""children$|$\ldots}\footnote{
 	The dots here stand for the path to \iboxt{2} in the list which is the value of \textsc{children}. See Exercise~\ref{ua-liste}.%
@@ -491,12 +494,12 @@ do not want to get descriptions of a male red-head (\mex{1}b). The descriptions 
 \ms[person]{
 lastname   & meier\\
 gender & female\\
-haircolor  & blonde\\
+haircolor  & blonde
 }
 \ex \ms[person]{
 lastname   & meier\\
 gender & male\\
-haircolor & red\\
+haircolor & red
 }
 \zl
 The description in (\mex{1}) would be a possible result for a search for a blonde, female individual called Meier:
@@ -507,7 +510,7 @@ firstname    & katharina\\
 lastname   & meier\\
 gender & female\\
 date-of-birth & 15.10.1965\\
-haircolor  & blonde\\
+haircolor  & blonde
 }
 \z
 Katharina Meier could also have other properties unknown to the detective. The important thing is that the properties known to the detective match those
@@ -520,7 +523,7 @@ lastname   & meier\\
 gender & female\\
 date-of-birth & 15.10.1965\\
 haircolor  & blond\\
-children     & \liste{}\\
+children     & \liste{}
 }
 \z
 (\mex{0}) contains information about children, which is neither contained in
@@ -536,7 +539,7 @@ files. His files could contain the following information:
 firstname   & katharina\\
 lastname   & meier\\
 gender & female\\
-date-of-birth & 15.10.1965\\
+date-of-birth & 15.10.1965
 }
 \z
 These data are compatible with the search criteria. If we were to unify the descriptions in (\mex{-3}a) and (\mex{0}), we would get (\mex{-2}).
@@ -816,15 +819,15 @@ firstname \type{max}\\
 lastname \type{meier}\\
 father    \ms[person]{
               firstname  & peter\\
-              lastname & meier\\
-             }\\
+              lastname & meier
+             }
 }\hspace{0.5cm}\onems{
 firstname  \type{max}\\
 lastname \type{meier}\\
 father   \ms[person]{
               firstname  & peter\\
-             lastname & müller\\
-             }\\
+             lastname & müller
+             }
 }
 \z
 \ea
@@ -833,15 +836,15 @@ firstname   \type{max}\\
 lastname  \type{meier}\\
 father     \ms[person]{
               firstname & peter\\
-              lastname & meier\\
-             }\\
+              lastname & meier
+             }
 }\hspace{0.5cm}\onems{
 firstname   \type{max}\\
 lastname  \type{meier}\\
 mother      \ms[person]{
               firstname  & ursula\\
-              lastname & müller\\
-             }\\
+              lastname & müller
+             }
 }
 \z
 

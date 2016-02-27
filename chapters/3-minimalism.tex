@@ -782,7 +782,7 @@ It is assumed that this unaccusative variant of \littlev plays a role in the ana
 passive. Unaccusative verbs are similar to passivized verbs in that they do have a subject that
 somehow also has object properties. The special version of \littlev is selected by the Passive head
 \emph{werden} `be', which forms a Passive Phrase\is{category!functional!Passive} (abbreviated as
-PassP). See Figure~\vref{fig-passive-schlagen-mp} for the analysis of the example in (\mex{1}):
+PassP). See Figure~\ref{fig-passive-schlagen-mp} for the analysis of the example in (\mex{1}):
 \ea
 \gll dass er geschlagen wurde\\
      that he beaten was\\
@@ -953,6 +953,7 @@ human-specific ability to use language (faculty of language in the narrow sense)
 assume --, then the individual syntactic categories are not part of UG and data from other languages cannot be used
 to motivate the assumption of invisible categories in another language.
 
+\addlines
 \subsubsection{Functional projections and modularization of linguistic knowledge}
 
 The assumption that movement must be licensed by feature checking has led to an inflation of the number of (silent) functional 
@@ -967,7 +968,8 @@ head \citep[\page 54, 61]{CR2010a}. For an explicitly formalized proposal in whi
 feature is consumed during a combination operation see \citew[\page 335]{Stabler2001a}. Stabler's \emph{Minimalist
     Grammars}\indexmg are discussed in more detail in Section~\ref{Abschnitt-MG}.
 } 
-\citet[\page 297]{Rizzi97a-u} suggests the structure in Figure~\vref{Abbildung-Rizzi} (see also Grewendorf \citeyear[\page 85, 240]{Grewendorf2002a}; \citeyear{Grewendorf2009a}).
+\citet[\page 297]{Rizzi97a-u} suggests the structure in Figure~\vref{Abbildung-Rizzi} (see also Grewendorf \citeyear[\page 85, 240]{Grewendorf2002a}; \citeyear{Grewendorf2009a}).\pagebreak
+
 \begin{figure}
 \centering
 \newlength\mytextheight
@@ -1791,6 +1793,9 @@ elements of subsets in order to access their features. This adds to the overall 
 proposal and is clearly dispreferred over the HPSG solution, which uses one part of speech value per linguistic object.
 }
 
+For further problems concerning labeling and massive overgeneration by recent formulations of Merge
+see \citew{FSP2016a}.
+
 Summarizing, one can say that labeling, which was introduced to simplify the theory and reduce the
 amount of language specific innate knowledge that has to be assumed, can only be made to function with a
 considerable amount of stipulations. For instance, the combination of lexical elements requires the
@@ -1969,7 +1974,7 @@ conjunction) can be formulated such that the coordination of two $+$\textsc{min}
 item. In Chomsky's system an analogous rule cannot be defined, since the coordination of two lexical
 items is not a lexical item any longer.
 
-
+\addlines
 Like Chomsky in his recent Minimalist work, Categorial Grammar \citep{Ajdukiewicz35a-u} and HPSG
 (Pollard \biband Sag \citeyear{ps}; \citeyear[\page 39--40]{ps2}) do not (strictly) adhere to
 \xbart. Both theories assign the symbol NP to pronouns (for CG see \citew[p.\,615]{SB2006a-u}, see
@@ -2298,6 +2303,8 @@ Apart from reintroducing \xnull categories, the coordination problem can be solv
 definition of Merge in a way that allows heads to specify the direction of combination with their
 arguments: \citet[p.\,635]{Stabler2010b} suggests marking the position of an argument relative to its head
 together with the selection feature and gives the following redefinition of External Merge.
+% in (\mex{1}).
+%\begin{figure}
 \ea
 em(t$_1$[$\alpha$], t$_2$[x]) = $\left\{ \begin{tabular}{@{}ll@{}}
                                          \begin{forest}
@@ -2313,6 +2320,7 @@ em(t$_1$[$\alpha$], t$_2$[x]) = $\left\{ \begin{tabular}{@{}ll@{}}
                                          \end{tabular}
 \right.$
 \z
+%\end{figure}%
 The position of the equal sign specifies on which side of the head an argument has to be
 realized. This corresponds to forward\is{forward application} and backward Application\is{backward
   application} in Categorial Grammar\indexcg (see Section~\ref{sec-forward-backward-application}). 
@@ -2340,11 +2348,11 @@ information structure). \pmex{1} gives an example: the lexical item for the word
 \ms[word]{
 phon   & \phonliste{ 'gramər } \\[1mm]
 synsem$|$loc & \ms[loc]{ cat  & \ms[cat]{ head & \type{noun}\\
-                                          spr & \sliste{ DET } \\
+                                          spr & \sliste{ DET }
                                       } \\[6mm]
                          cont & \ldots \ms[grammar]{ inst & X \\
-                                   }\\
-            }\\
+                                   }
+            }
 }
 \z
 The part of speech of \emph{grammar} is \type{noun}. In order to form a complete phrase, it requires

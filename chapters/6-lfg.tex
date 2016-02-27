@@ -122,6 +122,7 @@ it can increase the efficiency of processing and make the complete processing ro
 \citealp{KRKMVC2004a-u,RKKCMJ2002a-u}). Josef van Genabith's group in Dublin is working on the induction of
 LFG grammars from corpora (\eg \citealp{JGCCR99a-u,DBCGW2005a-u,CBFDRCW2005a-u,CG2006a-u,GWG2007a-u,CBDRGW2008a-u,SG2009a-u}). 
 
+\pagebreak
 Some of the systems can be tested online:
 \begin{itemize}
 \item \url{http://iness.uib.no/xle-web/xle-web}
@@ -389,6 +390,7 @@ why (\mex{1}a) is ruled out by the theory.
 
 \subsection{Coherence}
 
+%\addlines
 The Coherence Condition requires that all argument functions in a given f"=structure have to be selected in the value of the local 
  \textsc{pred} attribute. (\mex{1}a) is ruled out because \textsc{comp} does not appear under the arguments of \emph{devour}.
 
@@ -465,8 +467,7 @@ This is shown in the figure in (\mex{1}):
 In the equation (\up\ \lfgobj) = \down{},  the arrows `\up' and `\down' correspond to feature structures. `\up' and
 `\down' stand for the $f$ and $g$ in equations such as (\ref{ex-LFG-constraint}).
 
-(\mex{1}) is an example with an intransitive verb
-and the corresponding visualization is in (\mex{2}):
+(\mex{1}) is an example with an intransitive verb and (\mex{2}) is the corresponding visualization:
 
 \ea
 \catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\arglist{\lfgsubj}'}\\*
@@ -502,6 +503,7 @@ of a given f"=structure comes from the sum of these parts. The way the meaning i
 regulated by certain instructions for the combination of semantic resources. These instructions are given
 as a set of logic premises written in linear logic\is{linear logic} as \emph{glue language}\is{glue language}. The computation of the meaning of an utterance corresponds to a logical conclusion.
 
+\addlines[2]
 This conclusion is reached on the basis of logical premises contributed by the words in an
 expression or possibly even by a syntactic construction itself. The requirements on how the meaning
 of the parts can be combined to yield the full meaning are expressed in linear logic, a
@@ -513,29 +515,46 @@ their meaning more than once. A sentence such as \emph{Peter knocked twice.} doe
 \emph{twice} must be included in the full meaning of the sentences. Similarly, the sentence cannot
 mean the same as \emph{Peter knocked twice twice.}, since the semantic contribution of a given word cannot be used twice.
 
-The syntactic structure for the sentence in (\mex{1}a) together with its semantic representation is given in (\mex{1}b):
-
+The syntactic structure for the sentence in (\mex{1}a) together with its semantic representation is
+given in (\mex{1}b):
+%Figure~\vref{c-f-sem-david-yawned}:
 \eal
 \ex David yawned.
 \ex ~\\[-\baselineskip]
 \hspace*{-2em}
 {\ctree[ip]{IP}{%
-  \tree[b]{NP}{\tree[n]{N}{\le{David}}}
-  \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
+  \tree[b]{NP}{\tree[n]{N}{\le{\em David}}}
+  \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{\em yawned}}}}}}%
 \hspace*{3em}%
-{\rnode{s}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
-                   subj & \rnode{i}{[ \textsc{pred} {\small `DAVID'} ]}}}}%
+{\fd{\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\arglist{\subj}'}
+           \feat{\subj}{\rnode{i}{\fdand{\feat{\pred}{\small `DAVID'}}}}}}}}%
 \hspace*{2em}%
-\mt{\relation{yawn}(\relation{david})}{\rnode{x}{\;[\ ]}}
+\mt{\relation{yawn}(\relation{david})}{\rnode{x}{~[\ ]}}
 \ltor{ip}{s}
 \Aput*{$\phi$}
 \ltord[-10]{s}[220]{x}
 \Bput*{$\sigma$}
 \zl
-
-\noindent 
+%% \begin{figure}
+%% \centerline{%
+%% {\ctree[ip]{IP}{%
+%%   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
+%%   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
+%% \hspace*{3em}%
+%% {\rnode{s}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
+%%                    subj & \rnode{i}{[ \textsc{pred} {\small `DAVID'} ]}}}}%
+%% \hspace*{2em}%
+%% \mt{\relation{yawn}(\relation{david})}{\rnode{x}{\;[\ ]}}
+%% \ltor{ip}{s}
+%% \Aput*{$\phi$}
+%% \ltord[-10]{s}[220]{x}
+%% \Bput*{$\sigma$}
+%% }
+%% \caption{c-structure, f-structure and semantics of \emph{David yawned.}}\label{c-f-sem-david-yawned}
+%% \end{figure}%
+% 
 The semantic structure of this sentence is connected to the f"=structure via the correspondence function $\sigma$ (depicted here as a dashed line). The semantic representation is
-derived from the following lexical information for the verb \emph{yawned}:
+derived from the lexical information for the verb \emph{yawned}, which is given in (\mex{1}).
 
 \ea
 \mt{\lambda x. \relation{yawn}(x)}{(\up\ \lfgsubj)_\sigma\ \linimp\ \ups}
@@ -771,6 +790,7 @@ a-structure & \emph{schlagen} `beat' & $\langle$ x & y~~ $\rangle$\\
 \z
 
 \noindent
+%\addlines
 The mapping of a"=structure to f"=structure is governed by the following restrictions:
 \ealnoraggedright\label{lmt} 
 \ex Subject"=Mapping"=Principle:\is{principle!Subject"=Mapping} The most prominent role marked with [$-$o] is mapped to \lfgsubj if it is initial in the a"=structure.

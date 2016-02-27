@@ -130,6 +130,8 @@ $%
 }
 
 
+
+
 %% \def\ms{\futurelet\msLook\msdecide}
 %% \def\msdecide{\ifx\msLook[\let\next=\xxtms%
 %% \else\let\next=\xxms\fi\next}
@@ -164,6 +166,54 @@ $%
 %% \vspace{1mm}%
 %% }
 
+
+\newcommand{\onems}[2][]{%
+  \mbox{%
+    \delimiterfactor=1000 \delimitershortfall=0pt
+    \tabcolsep=0pt
+    $\left[%
+    \begin{tabular}{>{\upshape\scshape}l}
+    #2%
+    \if\relax\detokenize{#1}\relax\else
+     \\ {\normalfont\itshape #1}%
+    \fi
+    \end{tabular}%
+    \right]$%
+  }%
+  \vspace{1mm}%
+}
+
+
+%% \def\onems{\tabcolsep0pt\arraycolsep0pt\futurelet\onemsLook\onemsdecide}
+%% \def\onemsdecide{\ifx\onemsLook[\let\next=\xxtonems%
+%% \else\let\next=\xxonems\fi\next}
+%% %
+%% \def\xxtonems[#1]#2{%
+%% $\left[%
+%% \begin{tabular}{>{\upshape\scshape}l}%
+%% #2%
+%% {\normalfont\itshape #1}% 
+%% \end{tabular}% 
+%% \right]$%
+%% \vspace{1mm}%
+%% }
+
+%% \def\xxonems#1{%
+%% \mbox{%
+%% $%
+%% \left[%
+%% \begin{tabular}{>{\upshape\scshape}l}%
+%% #1%
+%% \end{tabular}%
+%% \rule{0mm}{5mm}%
+%% \right]%
+%% $%
+%% }%
+%% \vspace{1mm}%
+%% }
+
+
+
 % without italics and no types
 \def\lfgms#1{%
 \mbox{%
@@ -181,33 +231,6 @@ $%
 }
 
 
-\def\onems{\tabcolsep0pt\arraycolsep0pt\futurelet\onemsLook\onemsdecide}
-\def\onemsdecide{\ifx\onemsLook[\let\next=\xxtonems%
-\else\let\next=\xxonems\fi\next}
-%
-\def\xxtonems[#1]#2{%
-$\left[%
-\begin{tabular}{>{\upshape\scshape}l}%
-#2%
-{\normalfont\itshape #1}% 
-\end{tabular}% 
-\right]$%
-\vspace{1mm}%
-}
- 
-\def\xxonems#1{%
-\mbox{%
-$%
-\left[%
-\begin{tabular}{>{\upshape\scshape}l}%
-#1%
-\end{tabular}%
-\rule{0mm}{5mm}%
-\right]%
-$%
-}%
-\vspace{1mm}%
-}
 
 \newlength{\MyetagLength}
 \settowidth{\MyetagLength}{{$\scriptstyle 1$}}
