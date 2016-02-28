@@ -147,13 +147,14 @@ The structure can be written using feature"=value pairs as follows:
 \ea
 \ms{
 phon & \phonliste{ the man }\\
-dtrs & \sliste{ [ phon \phonliste{ the } ], [ phon \phonliste{ man } ] }\\
+dtrs & \sliste{ [ phon \phonliste{ the } ], [ phon \phonliste{ man } ] }
 }
 \z
 
 
 \subsection{The head"=complement construction}
 
+\addlines
 \citet{KF99a} assume the following construction for the combination of heads with their complements:
 
 \ea
@@ -549,11 +550,12 @@ phonology of a linguistic sign) or binary rules that combine a particular sign w
 morpheme\is{derivation}. These rules can semantically embed the original sign (that is, add
 \emph{cause} to \emph{kill}).\il{Turkish|)}  
 
+\addlines
 The problem of repeated combination with causativization affixes is an instance of a more general
 problem: derivational morphology cannot be handled by inheritance as was already pointed out by
 \citet{KN93a} with respect to cases like \emph{preprepreversion}.
 
-If we assume that changes in valence such as passive, causativization and middles\is{Middle Construction} should be described with the same means
+If we assume that argument alternations such as passive, causativization and the Middle Construction\is{Middle Construction} should be described with the same means
 across languages, then evidence from Lithuanian and Turkish form an argument against
 inheritance"=based analyses of the passive \citep{Mueller2006d,Mueller2007d,MWArgSt}. See also
 Section~\ref{sec-inheritance-passive-LFG} for the discussion of an inheritance"=based approach to passive in LFG and Section~\ref{sec-inheritance-passive-SimSyn}
@@ -632,6 +634,7 @@ If we want to say something about the meaning of the entire construction, then o
 with the semantics contributed by each of the adjuncts. These computations are not trivial and require relational constraints (small computer programs), which
 should be avoided if there are conceptually simpler solutions for describing a particular phenomenon.
 
+\addlines
 The alternative would be to use discontinuous constructions. Analyses with discontinuous constituents have been proposed in both 
 HPSG \citep{Reape94a} and Embodied Construction Grammar \citep{BC2005a}. If we apply Bergen and Chang's analysis to German,
 the italicized words in (\mex{1}) would be part of a ditransitive construction.
@@ -877,7 +880,7 @@ Head"=Complement Construction following \citet*[481]{SWB2003a}:\\
 \onems{
 mother$|$syn$|$val$|$comps  \eliste\\
 head-dtr \ibox{0} \ms[word]{
-                  syn$|$val$|$comps & \ibox{A}\\
+                  syn$|$val$|$comps & \ibox{A}
                   }\\
 dtrs  \sliste{ \ibox{0} } $\oplus$ \ibox{A} \type{nelist} \\
 }
@@ -890,7 +893,7 @@ The analysis of the phrase \emph{ate a pizza} takes the form in (\mex{1}).\footn
   SBCG uses a \formf in addition to the \phonf, which is used for phonological information as in
   earlier versions of HPSG \citep[Section~3.1, Section~3.6]{Sag2012a}. The \formf is usually provided in example analyses.
 }
-
+\begin{figure}
 \ea
 \label{feat-geom-swb}
 \ms[head-comp-cx]{
@@ -901,7 +904,7 @@ mother & \ms[phrase]{
                       comps & \eliste\\
                     }\\
 %         sem   & \ibox{2}\\
-         sem   & \ldots\\
+         sem   & \ldots
          }\\
 head-dtr & \ibox{1} \ms[word]{
            form & \phonliste{ ate }\\
@@ -909,15 +912,17 @@ head-dtr & \ibox{1} \ms[word]{
                       spr   & \sliste{ NP[\type{nom}]} \\
                       comps & \sliste{ \ibox{2} NP[\type{acc}] }\\
                     }\\
-           sem   & \ldots\\
+           sem   & \ldots
            % sem   & \ibox{2} \ms[eat]{
            %         agens & \ibox{1}\\
            %         thema & \ibox{5}\\ 
            %         }\\
            }\\
-dtrs & \sliste{ \ibox{1}, \ibox{2} }\\
+dtrs & \sliste{ \ibox{1}, \ibox{2} }
 }
 \z
+\vspace{-\baselineskip}
+\end{figure}%
 The difference to HPSG in the version of \citet{ps2} is that for Sag, Wasow \& Bender, signs do not have
 daughters and this makes the selection of daughters impossible.
 As a result, the \synsemf\isfeat{synsem} becomes superfluous (selection of the \phonv and of the
@@ -945,14 +950,15 @@ $\Phi$ is a Well"=Formed Structure according to a grammar $G$ if and only if:
 \z
 
 \noindent
-For comparison, a description is given here with the feature geometry that was assumed in
-Section~\ref{Abschnitt-Spr}:
+For comparison, a description is given in (\mex{1}) with the feature geometry that was assumed in
+Section~\ref{Abschnitt-Spr}.
+\begin{figure}
 \ea
 \onems[head-complement-phrase]{
 phon   \phonliste{ ate, a, pizza }\\
 synsem$|$loc  \ms{ cat   & \ms{ head   & verb\\
                             spr & \sliste{ NP[\type{nom}] }\\
-                            comps & \eliste\\
+                            comps & \eliste
                           }\\
                     cont  & \ldots\\ %\ibox{2}\\
                   }\\
@@ -960,18 +966,20 @@ head-dtr  \onems[word]{
            phon \phonliste{ ate }\\ 
            synsem$|$loc \ms{ cat & \ms{ head  & verb\\
                                           spr   & \sliste{ NP[\type{nom}] }\\
-                                          comps & \sliste{ \ibox{2} NP[\type{acc}] }\\
+                                          comps & \sliste{ \ibox{2} NP[\type{acc}] }
                                         }\\
-                               cont & \ldots\\
+                               cont & \ldots
 % \ibox{2} \ms[essen]{
 %                                       agens & \ibox{1}\\
 %                                       thema & \ibox{3}\\ 
 %                                       }\\
-                             }\\
+                             }
            }\\
-non-head-dtrs  \sliste{ [ \textsc{synsem} \ibox{2} ] }\\
+non-head-dtrs  \sliste{ [ \textsc{synsem} \ibox{2} ] }
 }
 \z
+\vspace{-\baselineskip}
+\end{figure}%
 In (\mex{0}), the features \textsc{head-dtr} and \textsc{non-head-dtrs} belong to those features that phrases of type 
 \type{head"=complement"=phrase} have. In (\ref{feat-geom-swb}), however, the phrase corresponds only
 to the value of the \textsc{mother} feature and therefore has no daughters represented in the sign itself.
@@ -1091,26 +1099,25 @@ the constraints in (\mex{1}).
 \oneline{%
 \onems[phrase]{
 synsem$|$loc \ms{ cat$|$listeme & very-surprised\\
-                  cont$|$main   & \relation{surprised}(x\ind{2})\\
+                  cont$|$main   & $\relation{surprised}(x\ind{2})$
                 }\\
-dtrs \onems{ filler-dtr  \ms[word]{ synsem$|$loc & \ibox{1} \\
+dtrs \onems{ filler-dtr  \ms[word]{ synsem$|$loc & \ibox{1}
                                   }\\
           h-dtr  \onems{ lf$|$exc  `\upshape a horse kicks x\ind{2}'\\
                              (dtrs$|$h-dtr)$^+$ \onems[word]{
-                                                     synsem$|$loc$|$cat \ms{ head    & \ms{ tense &
-                                                         pres\\ }\\
-                                                                             listeme & treten\\
+                                                     synsem$|$loc$|$cat \ms{ head    & \ms{ tense & pres }\\
+                                                                             listeme & treten
                                                                            }\\
                                                      arg-st \liste{ NP[\textsc{listeme} \type{pferd},
                                                          \textsc{def} $-$, \type{sg}],\\
                                                        \ms{ loc \ibox{1} \onems{ cat$|$head$|$case \type{acc}\\
                                                                                  cont \ms[ppro]{
-                                                                                   index & \ibox{2}\\
-                                                                                 }\\
-                                                          } }}\\
-                                                     }\\
-                             }\\                              
-          }\\
+                                                                                   index & \ibox{2}
+                                                                                 }
+                                                          } }}
+                                                     }
+                             }        
+          }
 }}
 \z
 %\vspace{-\baselineskip}
@@ -1228,9 +1235,9 @@ mother & \ms[sign]{ phon & phonological-object\\
                     form & morphological-object\\
               syn  & syntactic information\\
               sem  & semantic information\\
-              nasty & \ibox{1}\\
+              nasty & \ibox{1}
             }\\
-dtrs & \ibox{1} list of signs\\
+dtrs & \ibox{1} list of signs
 }
 \z
 The feature \textsc{nasty} in the \textsc{mother} sign refers to the value of \textsc{dtrs} and hence all the
@@ -1261,9 +1268,9 @@ Extraction trace: \\
  synsem & \ms{ loc   & \ibox{1}\\
                nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
                                                 %extra & \liste{} \\
-                             to-bind$|$slash & \eliste\\
-                           } \\
-             }\\
+                             to-bind$|$slash & \eliste
+                           } 
+             }
 }
 \zs
 For the trace-based analysis of extraction it is crucial that only information under
@@ -1272,18 +1279,20 @@ For the trace-based analysis of extraction it is crucial that only information u
 pronounced, their \textsc{phonology} value would be incompatible with any \textsc{phonology} value of
 a filler. 
 
+\addlines
 In a lexical approach, one would assume an additional lexical item with an element in \slasch or
 \textsc{gap}.
 \ea
-Lexical introduction of nonlocal dependencies in SBCG according to \citet[\page 163]{Sag2012a}:\\
+Lexical introduction of nonlocal dependencies in SBCG according to \citet[\page 163]{Sag2012a}:\\*
 \ms{
 form & \phonliste{ like }\\
 arg-st & \liste{ \ibox{1} \ms{ NP\\
                                gap & \eliste },  \ibox{2} \ms{ NP\\
-                                                               gap & \eliste } }\\
+                                                               gap & \eliste } 
+               }\\
 syn    & \ms{ val & \sliste{ \ibox{1} }\\
-              gap & \sliste{ \ibox{2} }\\
-}\\
+              gap & \sliste{ \ibox{2} }
+}
 }
 \z
 The analysis of (\mex{1}) then results in a linguistic object in which the second element of the
@@ -1554,14 +1563,14 @@ dtrs   & \liste{ \ms[Determiner]{
                  f|orth & \ibox{1}~~\\
                  case   & \ibox{3}\\
                  number & \ibox{4}\\
-                 gender & \ibox{6}\\
-                 }, \ms[CommonNoun]{
+                 gender & \ibox{6}
+                 }, \ms[CommonNoun~~]{
                     f|orth & \ibox{2}\\
                     case   & \ibox{3}\\
                     number & \ibox{4}\\
                     gender & \ibox{6}\\
-                    m      & \ibox{5}\\
-                 } } \\
+                    m      & \ibox{5}
+                 } }
 }
 \z
 
@@ -1708,8 +1717,8 @@ Chapter~\ref{chap-feature-descriptions}. It is the equivalent to
 \ea
 \ibox{1} \ms[hypotenuse]{
 evokes & \liste{ \ms[right-triangle]{
-                 long-side & \ibox{1}\\
-                 } }\\
+                 long-side & \ibox{1}
+                 } }
 }
 \z
 The type \type{hypotenuse} is a subtype of \type{line-segment}.
@@ -1869,10 +1878,11 @@ subsets of these roles (see Figure~\ref{fig-as-trijp}). This is called \emph{mat
 This would make it possible to account for \emph{dine}: one could
 say that there is something that is eaten, but that no Theme role is made available for linking to
 grammatical functions. To account for the extension of argument roles as it is observed in the
-caused motion construction \citep[Chapter~7]{Goldberg95a}, \citet{SvT2011a} suggest a process called \emph{merging}. Merging is seen
+Caused"=Motion Construction\is{construction!Caused"=Motion} \citep[Chapter~7]{Goldberg95a}, \citet{SvT2011a} suggest a process called \emph{merging}. Merging is seen
 as a repair strategy: if an utterance involves an intransitive verb and some other material, the
 utterance cannot be processed with matching alone. For example, when processing Goldberg's example
-in (\mex{1}), \emph{he sneezed} could be parsed, but \emph{the foam} and \emph{off the cappuccino} would be unintegrated.
+in (\mex{1}), \emph{he sneezed} could be parsed, but \emph{the foam} and \emph{off the cappuccino}
+would be unintegrated (see Chapter~\ref{chap-phrasal} for an extended discussion of such constructions).
 \ea
 He sneezed the foam off the cappuccino.\footnote{
 \citew[\page 42]{Goldberg2006a}.
@@ -1890,6 +1900,7 @@ repair strategy would never kick in. Consider (\mex{1}):\footnote{
      beat   the man  dead\\
 \glt `Beat the man to death!' or `Beat the dead man!'
 \z
+\addlines
 (\mex{0}) has two readings: the resultative reading in which \emph{tot} `dead' expresses the result of the
 beating and another reading in which \emph{tot} is a depictive predicate. The second reading is
 dispreferred, since the activity of beating dead people is uncommon, but the structure is parallel to
@@ -1926,7 +1937,7 @@ syntactic environments a verb can be used. This information can be weighted and 
 probability of \emph{dine} to be used transitively would be extremely low. Steels and van Trijp
 would connect their lexical items to phrasal constructions via so-called coapplication links and the
 strength of the respective link would be very low for \emph{dine} and the transitive construction and
-reasonably high for \emph{sneeze} and the caused-motion construction. This would explain the
+reasonably high for \emph{sneeze} and the Caused"=Motion Construction\is{construction!Caused"=Motion}. This would explain the
 phenomena (and in a usage"=based way), but it would be a lexical approach, as it is common in CG, HPSG,
 SBCG, and DG.
 
@@ -2436,33 +2447,33 @@ repeated here as (\mex{1}):
 (syntactic) constraints on \type{head-argument-phrase}:\\
 \onems[head-argument-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2} \\
+                          subcat & \ibox{2}
                         }\\
 head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} } \\
+                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ [ synsem \ibox{3} ] } \\
+non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
 \zs
 This can be translated into a phrase structure grammar in a straight-forward way:
 \eal
 \ex \onems[head-argument-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2} \\
+                          subcat & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} } \\
+                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] } \\
+non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 } $\to$ \ibox{4}, \ibox{5}
 \ex \onems[head-argument-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2} \\
+                          subcat & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} } \\
+                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] } \\
+non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 } $\to$ \ibox{5}, \ibox{4}
 \zl
 The left hand side of the rule is the mother node of the tree, that is, the sign that is licensed by
@@ -2498,23 +2509,23 @@ Now, the translation of a parallel schema using a \textsc{mother} feature like (
 \eal
 \ex \onems[head-argument-cx~]{
 mother$|$synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2} \\
+                                  subcat & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} } \\
+                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] } \\
+non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 }
 
 \ex 
 \ibox{6} $\to$ \ibox{4}, \ibox{5} where \onems[head-argument-cx~]{
 mother \ibox{6} $|$synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2} \\
+                          subcat & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} } \\
+                                             subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] } \\
+non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 }
 \zl
 (\mex{0}b) is only one of the two phrase structure rules that correspond to (\mex{0}a), but since
@@ -2526,9 +2537,10 @@ daughters in a \textsc{dtrs} list, the connection to phrase structure rules is e
 \ea 
 \ibox{1} $\to$ \ibox{2} where \ms[construction~]{
 mother & \ibox{1} \\
-dtrs   & \ibox{2} \\
+dtrs   & \ibox{2}
 }
 \z
+\addlines[2]
 The value of \textsc{dtrs} is a list and hence \iboxt{2} stands for the list of daughters on the right
 hand side of the phrase structure rule as well. The type \type{construction} is a supertype of all
 constructions and hence (\mex{0}) can be used to analyze all phrases that are licensed by the
@@ -2608,6 +2620,7 @@ governing verb.
 \ea
 I am waiting for my man.
 \z 
+\addlines
 So, assuming strict locality of selection requires that all phenomena that cannot be treated locally
 have to be analyzed by passing information up.
 %% \footnote{
