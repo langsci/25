@@ -579,11 +579,11 @@ sn edges, for tree={l+=\baselineskip}
 	[\ibox{1} NP{[\type{nom}]}
 		[er;he]]
 	[V{[\type{fin}, \subcat \sliste{ \ibox{1} }]}, name=fin2
-		[\ibox{2} NP{[\textit{acc}]}
-			[das Buch;the book,triangle]]
+		[\ibox{2} NP{[\textit{dat}]}
+			[dem Mann;the man,triangle]]
 		[V{[\type{fin}, \subcat \liste{ \ibox{1}, \ibox{2} }]}, name=fin3
-			[\ibox{3} NP{[\textit{dat}]}
-				[dem Mann;the man,triangle]]
+			[\ibox{3} NP{[\textit{acc}]}
+				[das Buch;the book,triangle]]
 			[V{[\type{fin}, \subcat \liste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
 				[gibt;gives]]]]]	
 tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\offset,0)$);
@@ -597,13 +597,13 @@ tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\of
 GPSG\indexgpsg has the Head Feature Convention\is{Head Feature Convention (HFC)} that ensures that head features on the mother node are identical to those on the node of the head daughter.
 In HPSG, there is a similar principle. Unlike GPSG, head features are explicitly contained as a group of features in the feature structures.
 They are listed under the path \textsc{synsem$|$loc$|$cat$|$head}. (\mex{1}) shows the lexical item
-for \emph{gibt} `gives':\todostefan{nom, dat, acc?}
+for \emph{gibt} `gives':
 \eas
 \emph{gibt} `gives':\\
 \onems[word]{ 
      phon    \phonliste{ gibt }\\
      synsem$|$loc$|$cat \ms{ head   & \ms[verb]{ vform & fin} \\
-                             subcat & \liste{ NP[\type{nom}], NP[\type{acc}], NP[\type{dat}] }
+                             subcat & \liste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
                            }
 }
 \zs
@@ -615,33 +615,33 @@ The \emph{Head Feature Principle} takes the following form:
 The \textsc{head} value of any headed phrase is structure-shared with the \textsc{head} value of the head daughter.
 \end{principle-break}
 Figure~\vref{fig-projektion-head-feat-ausf} is a variant of Figure~\ref{fig-projektion-head-feat} with the structure sharing made
-explicit.\todostefan{nom, dat, acc?}
+explicit.
 \begin{figure}
 \centering
 \begin{forest}
 sn edges
 [\ms{head & \ibox{1}\\
-     subcat & \liste{ }\\
+     subcat & \liste{ }
      }
 	[{\ibox{2} NP{[\type{nom}]}}
 		[er;he]]
 	[\ms{
-                                                                                   head & \ibox{1}\\
-                                                                                   subcat & \liste{ \ibox{2} }\\
-                                                                                    }
-		[\ibox{3} NP{[\textit{acc}]}
-			[das Buch;the book, triangle]]
+             head & \ibox{1}\\
+             subcat & \liste{ \ibox{2} }
+             }
+		[\ibox{3} NP{[\textit{dat}]}
+			[dem Mann;the man, triangle]]
 		[\ms{
                                                                                    head & \ibox{1}\\
-                                                                                   subcat & \liste{ \ibox{2}, \ibox{3} }\\
+                                                                                   subcat & \liste{ \ibox{2}, \ibox{3} }
                                                                                     }
-			[\ibox{4} NP{[\textit{dat}]}
-				[dem Mann;the man, triangle]]
+			[\ibox{4} NP{[\textit{acc}]}
+				[das Buch;the book, triangle]]
 			[\ms{
                                                                                    head & \ibox{1} \ms[verb]{
-                                                                                                  vform & fin\\
+                                                                                                  vform & fin
                                                                                                   }\\
-                                                                                   subcat & \liste{ \ibox{2}, \ibox{3}, \ibox{4} }\\
+                                                                                   subcat & \liste{ \ibox{2}, \ibox{3}, \ibox{4} }
                                                                                     }
 				[gibt;gives]]]]]	
 \end{forest}
@@ -718,12 +718,12 @@ non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 (\mex{1}) gives a description of a structure licensed by Schema~\ref{schema-bin-prel}.
 As well as valence information, the head information is specified in (\mex{1}) and it is also apparent how the Head Feature Principle
 ensures the projection of features: the head value of the entire structure \iboxb{1} corresponds to
-the head value of the verb \emph{gibt} `gives'.\todostefan{nom, dat, acc}
+the head value of the verb \emph{gibt} `gives'.
 \ea
 \onems[head-argument-phrase~]{
-      phon  \phonliste{ dem Mann gibt }\\
+      phon  \phonliste{ das Buch gibt }\\
       synsem$|$loc$|$cat \ms{ head & \ibox{1}\\
-                              subcat & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{acc}] }
+                              subcat & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }
                             }\\
       head-dtr \onems[word]{ phon \phonliste{ gibt }\\
                              synsem$|$loc$|$cat \ms{ head & \ibox{1} \ms[verb]{vform & fin
@@ -732,8 +732,8 @@ the head value of the verb \emph{gibt} `gives'.\todostefan{nom, dat, acc}
                                                    }
                        } \\
       non-head-dtrs \liste{ \onems{ 
-                                        phon \phonliste{ dem Mann }\\
-                                        synsem \ibox{3} \onems{ loc$|$cat \ms{ head  & \ms[noun]{ cas & dat
+                                        phon \phonliste{ das Buch }\\
+                                        synsem \ibox{3} \onems{ loc$|$cat \ms{ head  & \ms[noun]{ cas & acc
                                                                                                 } \\
                                                                                subcat &  \eliste
                                                                              }
@@ -837,8 +837,8 @@ with reference to tree configurations. There are, however, a number of open ques
            { ind & \ibox{1} event \\
              rels & \liste{ \ms[geben]{ event & \ibox{1} \\
                                         agent & index \\
-                                        theme & index \\
-                                        goal  & index }}
+                                        goal  & index \\
+                                        theme & index }}
            } 
 \z
 It is assumed that verbs have an event variable\is{event} of the type \type{event}, which is represented under \textsc{ind} just as with indices for nominal objects.
@@ -846,21 +846,21 @@ It is assumed that verbs have an event variable\is{event} of the type \type{even
 Until now, we did not assign elements in the valence list\is{valence} to argument roles\is{semantic role} in the semantic representation. This connection is referred to
 as \emph{linking}. (\mex{1}) shows how linking works in HPSG. The referential indices of the argument
 noun phrases are structure"=shared with one of the semantic roles of the relation contributed by the
-head.\is{argument}\todostefan{nom, acc, dat}
+head.\is{argument}
 \eas
 \label{le-geben}
 \emph{gibt} `gives':\\
 \ms
 { cat & \ms{ head & \ms[verb]
                      { vform & fin } \\
-             subcat & \liste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2}, NP[\type{dat}]\ind{3}   } \\
+             subcat & \liste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
            } \\
   cont &  \ms[mrs]
            { ind & \ibox{4} event \\
              rels & \liste{ \ms[geben]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
-                                        theme & \ibox{2} \\
-                                        goal  & \ibox{3} }}
+                                        goal  & \ibox{2} \\
+                                        theme & \ibox{3}  }}
            }
 }
 \zs
@@ -869,23 +869,23 @@ the realization of argument roles. For example, one can divide verbs into verbs 
 These various valence/linking patterns can be represented in type hierarchies\is{type hierarchy} and
 these classes can be assigned to the specific lexical entries, that is, one can have them inherit
 constraints from the respective types\is{inheritance}. A type constraint for verbs with agent, theme
-and goal takes the form of (\mex{1}):\todostefan{nom, acc, dat}
+and goal takes the form of (\mex{1}):
 \ea
 \label{ex-agens-theme-goal-linking}
 \onems
 { cat$|$subcat \liste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
   cont  \ms[mrs]
            { ind & \ibox{4} event \\
-             rels & \liste{ \ms[agent-theme-goal-rel~]{ event & \ibox{4} \\
+             rels & \liste{ \ms[agent-goal-theme-rel~~]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
-                                        theme & \ibox{2} \\
-                                        goal  & \ibox{3} }}
+                                        goal  & \ibox{2} \\
+                                        theme & \ibox{3} }}
            }
 }
 \z
 []\ind{1} stands for an object of unspecified syntactic category with the index
 \iboxt{1}. 
-The type for the relation \relation{geben} is a subtype of \type{agent-theme-goal-rel}.
+The type for the relation \relation{geben} is a subtype of \type{agent-goal-theme-rel}.
 The lexical entry for the word \emph{geben} `give' or rather the root \stem{geb} has the linking pattern in (\mex{0}).
 
 For more on theories of linking in HPSG, see \citew{Davis96a-u}, \citew{Wechsler91a-u} und \citew{DK2000b-u}.
@@ -1078,7 +1078,7 @@ what the respective lexical rule would look like:
 
 \ea
 \label{pass-lr-mlr}
-Lexical rule for personal passives following \citet{Kiss92}:\\
+Lexical rule for personal passives adapted from \citet{Kiss92}:\\
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
@@ -1099,7 +1099,13 @@ This lexical rule takes a verb stem\footnote{
         (\stem{besing} `to sing about') and compounds. The lexical rule can therefore also be applied to
         stems like \stem{helf} and derived forms such as \stem{besing}.%
 } as its input, which requires a nominative argument, an accusative argument and possibly further arguments (if \iboxt{3} is not the empty
-list) and licenses a lexical entry that requires a nominative argument and possibly the arguments in \ibox{3}. The output
+list) and licenses a lexical entry that requires a nominative argument and possibly the arguments in
+\ibox{3}.\footnote{
+  This rule assumes that arguments of ditransitive verbs are in the order nominative, accusative,
+  dative. Throughout this chapter, I assume a nominative, dative, accusative order, which
+  corresponds to the unmarked order of arguments in the German clause. The version of the passive
+  lexical rule that will be suggested below is compatible with both orders of arguments.
+} The output
 of the lexical rule specifies the \vformv of the output word. This is important as the auxiliary and
 the main verb must go together. For example, it is not possible to use the perfect participle instead of the passive participle since these differ
 in their valence in Kiss' approach:
@@ -1225,7 +1231,7 @@ environment. This is handled by the Case Principle:\footnote{%
 \begin{principle-break}[\hypertarget{case-p}{Case Principle}]
 \label{case-p}
 \begin{itemize}
-\item In a list containing the subject as well as complements of a verbal head, the least oblique element with
+\item In a list containing the subject as well as complements of a verbal head, the first element with
 structural case receives nominative.
 \item All other elements in the list with structural case receive accusative.
 \item In nominal environments, elements with structural case are assigned genitive\is{case!genitive}.
@@ -1237,39 +1243,39 @@ structural case receives nominative.
 \ea
 \label{ex-verben-active}
 \begin{tabular}[t]{@{}l@{~}l@{~}l}
-a. & \emph{schläft} `sleeps':     & \subcat \sliste{ NP[\type{str}]$_j$ }\\
+a. & \emph{schläft} `sleeps':       & \subcat \sliste{ NP[\type{str}]$_j$ }\\
 b. & \emph{unterstützt} `supports': & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{str}]$_k$ }\\
-c. & \emph{hilft} `helps':       & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$ }\\
-d. & \emph{schenkt} `gives':     & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{str}]$_k$, NP[\type{ldat}]$_l$ }\\
-\end{tabular}\todostefan{Reihenfolge anpassen}
+c. & \emph{hilft} `helps':          & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$ }\\
+d. & \emph{schenkt} `gives':        & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
+\end{tabular}
 \z
-\emph{str} stands for \emph{structural} and \emph{ldat} for lexical dative. It is commonly assumed in HPSG that elements in the valence list
-are ordered corresponding to the Obliqueness Hierarchy\is{obliqueness} in \citet{KC77a} and \citet{Pullum77a}:
-\begin{table}[H]
-\resizebox{\linewidth}{!}{%
-\begin{tabular}{@{}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{}}
-SUBJECT $=>$ & DIRECT $=>$ & INDIRECT $=>$ & OBLIQUES $=>$ & GENITIVES $=>$  & OBJECTS OF \\
-             & OBJECT      & OBJECT        &               &                 & COMPARISON 
-\end{tabular}%
-}\label{page-obliquen-h}
-\end{table}%
-
-\noindent
-This hierarchy corresponds to the different syntactic activeness of grammatical functions.
-Elements that occur further left tend to occur in specific syntactic constructions more often. Examples for
-syntactic constructions where obliqueness plays a role are the following:
-\begin{itemize}
-\item Ellipsis\is{ellipsis} \citep{Klein85}
-\item Topic Drop\is{prefield!ellipsis}\is{Topic Drop} \citep{Fries88b}
-\item Free relatives\is{relative clause!free}
-      \citep{Bausewein90,Pittner95b,Mueller99b}
-\item Passive\is{passive} \citep{KC77a}
-\item Depictive predicates\is{depictive predicate} \citep{Mueller2001c,Mueller2002b,Mueller2008a}
-\item Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard und Sag:
-  \citeyear{PS92}; \citeyear[Chapter~6]{ps2})
-\end{itemize}
-
-\noindent
+\emph{str} stands for \emph{structural} and \emph{ldat} for lexical dative. 
+%% It is commonly assumed in HPSG that elements in the valence list
+%% are ordered corresponding to the Obliqueness Hierarchy\is{obliqueness} in \citet{KC77a} and \citet{Pullum77a}:
+%% \begin{table}[H]
+%% \resizebox{\linewidth}{!}{%
+%% \begin{tabular}{@{}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{\hspace{1ex}}l@{}}
+%% SUBJECT $=>$ & DIRECT $=>$ & INDIRECT $=>$ & OBLIQUES $=>$ & GENITIVES $=>$  & OBJECTS OF \\
+%%              & OBJECT      & OBJECT        &               &                 & COMPARISON 
+%% \end{tabular}%
+%% }\label{page-obliquen-h}
+%% \end{table}%
+%%
+%% \noindent
+%% This hierarchy corresponds to the different syntactic activeness of grammatical functions.
+%% Elements that occur further left tend to occur in specific syntactic constructions more often. Examples for
+%% syntactic constructions where obliqueness plays a role are the following:
+%% \begin{itemize}
+%% \item Ellipsis\is{ellipsis} \citep{Klein85}
+%% \item Topic Drop\is{prefield!ellipsis}\is{Topic Drop} \citep{Fries88b}
+%% \item Free relatives\is{relative clause!free}
+%%       \citep{Bausewein90,Pittner95b,Mueller99b}
+%% \item Passive\is{passive} \citep{KC77a}
+%% \item Depictive predicates\is{depictive predicate} \citep{Mueller2001c,Mueller2002b,Mueller2008a}
+%% \item Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard und Sag:
+%%   \citeyear{PS92}; \citeyear[Chapter~6]{ps2})
+%% \end{itemize}
+%% \noindent
 The Case Principle ensures that the subjects of the verbs listed above have to be realized in the nominative and also that objects with structural case are assigned
 accusative.
 
@@ -1303,7 +1309,7 @@ we arrive at the following \subcat lists:
 a. & \emph{geschlafen wird} `slept is':      & \subcat \sliste{ }\\
 b. & \emph{unterstützt wird} `supported is': & \subcat \sliste{ NP[\type{str}]$_k$ }\\
 c. & \emph{geholfen wird}:  `helped is'      & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\
-d. & \emph{geschenkt wird}: `given is'       & \subcat \sliste{ NP[\type{str}]$_k$, NP[\type{ldat}]$_l$ }\\
+d. & \emph{geschenkt wird}: `given is'       & \subcat \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
 (\mex{0}) differs from (\ref{ex-verben-active}) in that a different NP is in first position. If this NP has structural case, it will receive nominative case.
