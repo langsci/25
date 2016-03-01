@@ -157,9 +157,9 @@ Lexical item for the word \emph{Grammatik} `grammar':\\
 \ms[word]{
 phonology   & \phonliste{ Grammatik } \\[1mm]
 syntax-semantics & \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
-                                                                                               }\\[6mm]
-                                                                               subcat & \liste{ Det[\textsc{case}~\ibox{1}] }
-                                                                             } \\[6mm]
+                                                                                               }\\[3mm]
+                                                                               subcat & \sliste{ Det[\textsc{case}~\ibox{1}] }\\[1mm]
+                                                                             } \\[10mm]
                                           content & \ldots \ms[grammatik]{ inst & X 
                                                                                     }
             }
@@ -299,6 +299,7 @@ sn edges
 \subsection{Representation of constituent structure}
 \label{sec-HPSG-constituent-structure}
 
+\addlines
 As already noted, feature descriptions in HPSG serve as the sole descriptive inventory of morphological rules, lexical entries and syntactic rules.
 The trees we have seen thus far are only visualizations of the constituent structure and do not have any theoretical status. There are also no
 rewrite rules in HPSG.\is{phrase structure grammar}\footnote{
@@ -324,7 +325,7 @@ sn edges
   phon     & \phonliste{ dem Mann }\\[1mm]
   head-dtr & \onems{ phon \phonliste{ Mann }
                  }\\
-  non-head-dtrs & \liste{ \onems{ phon \phonliste{ dem }
+  non-head-dtrs & \sliste{ \onems{ phon \phonliste{ dem }
                             }}
 }
 \z
@@ -344,16 +345,16 @@ relevant to the present discussion:
 \ms[word]{
 phon   & \phonliste{ Grammatik } \\[1mm]
 synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
-                                                                      }\\[6mm]
-                                                     subcat & \liste{ Det[\textsc{case}~\ibox{1}] } 
+                                                                      }\\[3mm]
+                                                     subcat & \sliste{ Det[\textsc{case}~\ibox{1}] }\\[1pt] 
                                                     } \\[6mm]
                                 cont & \ms[mrs]{
                                        ind & \ibox{2} \ms{ per & third\\
                                                            num & sg\\
                                                            gen & fem\\
                                                          }\\
-                                       rels & \liste{ \ms[grammatik]{ inst & \ibox{2} 
-                                                                     } }
+                                       rels & \sliste{ \ms[grammatik]{ inst & \ibox{2} 
+                                                                    } }
                                         }
                               }\\
                nonloc & \ms{ inher$|$slash   & \eliste{}\\
@@ -362,6 +363,7 @@ synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \
             }
 }
 \z
+%\addlines
 In the outer layer, there are the features \phon and \synsem. As previously mentioned, \phon contains the phonological representation of a linguistic
 object. The value of \synsem is a feature structure which contains syntactic and semantic information that can be selected by other heads.
 The daughters of phrasal signs are represented outside of \synsem. This ensures that there is a
@@ -381,6 +383,7 @@ Semantics}\indexmrs \citep*{CFPS2005a}. An MRS structure is comprised of an inde
 relations which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
 and interrogative clauses\is{interrogative clause} (\citealp{ps2}; \citealp{Sag97a};
 \citealp{GSag2000a-u}; \citealp{Holler2005a-u}), which will not be discussed here.
+\pagebreak
 
 As can be seen, the description of the word \emph{Grammatik} `grammar' becomes relatively complicated. In theory, it would be possible to list all properties
 of a given object directly in a single list of feature"=value pairs. This would, however, have the disadvantage that the identity of groups of feature"=value pairs could not be
@@ -472,6 +475,7 @@ This remainder is also the \subcatv of the mother.
 \subsection{Linearization rules}
 \label{Abschnitt-LP-Regeln-HPSG}
 
+\addlines
 Dominance schemata do not say anything\indexgpsg about the order of the daughters. As in GPSG, linearization rules are specified separately.
 Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, argument\is{argument},
 adjunct\is{adjunct}, \ldots) or both.
@@ -581,10 +585,10 @@ sn edges, for tree={l+=\baselineskip}
 	[V{[\type{fin}, \subcat \sliste{ \ibox{1} }]}, name=fin2
 		[\ibox{2} NP{[\textit{dat}]}
 			[dem Mann;the man,triangle]]
-		[V{[\type{fin}, \subcat \liste{ \ibox{1}, \ibox{2} }]}, name=fin3
+		[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2} }]}, name=fin3
 			[\ibox{3} NP{[\textit{acc}]}
 				[das Buch;the book,triangle]]
-			[V{[\type{fin}, \subcat \liste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
+			[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
 				[gibt;gives]]]]]	
 tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\offset,0)$);
       \draw[<->] ($(fin2.south west)+(\offsetup,0)$) to ($(fin3.north west)+(\offset,0)$);
@@ -603,7 +607,7 @@ for \emph{gibt} `gives':
 \onems[word]{ 
      phon    \phonliste{ gibt }\\
      synsem$|$loc$|$cat \ms{ head   & \ms[verb]{ vform & fin} \\
-                             subcat & \liste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+                             subcat & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
                            }
 }
 \zs
@@ -621,19 +625,19 @@ explicit.
 \begin{forest}
 sn edges
 [\ms{head & \ibox{1}\\
-     subcat & \liste{ }
+     subcat & \sliste{ }
      }
 	[{\ibox{2} NP{[\type{nom}]}}
 		[er;he]]
 	[\ms{
              head & \ibox{1}\\
-             subcat & \liste{ \ibox{2} }
+             subcat & \sliste{ \ibox{2} }
              }
 		[\ibox{3} NP{[\textit{dat}]}
 			[dem Mann;the man, triangle]]
 		[\ms{
                                                                                    head & \ibox{1}\\
-                                                                                   subcat & \liste{ \ibox{2}, \ibox{3} }
+                                                                                   subcat & \sliste{ \ibox{2}, \ibox{3} }
                                                                                     }
 			[\ibox{4} NP{[\textit{acc}]}
 				[das Buch;the book, triangle]]
@@ -641,7 +645,7 @@ sn edges
                                                                                    head & \ibox{1} \ms[verb]{
                                                                                                   vform & fin
                                                                                                   }\\
-                                                                                   subcat & \liste{ \ibox{2}, \ibox{3}, \ibox{4} }
+                                                                                   subcat & \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }
                                                                                     }
 				[gibt;gives]]]]]	
 \end{forest}
@@ -721,9 +725,9 @@ ensures the projection of features: the head value of the entire structure \ibox
 the head value of the verb \emph{gibt} `gives'.
 \ea
 \onems[head-argument-phrase~]{
-      phon  \phonliste{ das Buch gibt }\\
+      phon  \phonliste{ das Buch gibt }\\[1mm]
       synsem$|$loc$|$cat \ms{ head & \ibox{1}\\
-                              subcat & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }
+                              subcat & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }\\[1pt]
                             }\\
       head-dtr \onems[word]{ phon \phonliste{ gibt }\\
                              synsem$|$loc$|$cat \ms{ head & \ibox{1} \ms[verb]{vform & fin
@@ -731,7 +735,7 @@ the head value of the verb \emph{gibt} `gives'.
                                                      subcat & \ibox{2}  $\oplus$ \sliste{ \ibox{3} }
                                                    }
                        } \\
-      non-head-dtrs \liste{ \onems{ 
+      non-head-dtrs \sliste{ \onems{ 
                                         phon \phonliste{ das Buch }\\
                                         synsem \ibox{3} \onems{ loc$|$cat \ms{ head  & \ms[noun]{ cas & acc
                                                                                                 } \\
@@ -790,7 +794,7 @@ representation is based on Minimal Recursion Semantics\indexmrs (MRS):\footnote{
                                  num & sg \\
                                  gen & neu
                                } \\
-             rels & \liste{ \ms[buch]{ inst & \ibox{1} }}
+             rels & \sliste{ \ms[buch]{ inst & \ibox{1} } }
            }
 \z
 \textsc{ind} stands for index and \textsc{rels} is a list of relations. Features such as person\isfeat{per},\is{Person} number\isfeat{num} and
@@ -835,10 +839,10 @@ with reference to tree configurations. There are, however, a number of open ques
 \label{mrs-geben}
 \ms[mrs]
            { ind & \ibox{1} event \\
-             rels & \liste{ \ms[geben]{ event & \ibox{1} \\
+             rels & \sliste{ \ms[geben]{ event & \ibox{1} \\
                                         agent & index \\
                                         goal  & index \\
-                                        theme & index }}
+                                        theme & index } }
            } 
 \z
 It is assumed that verbs have an event variable\is{event} of the type \type{event}, which is represented under \textsc{ind} just as with indices for nominal objects.
@@ -853,14 +857,14 @@ head.\is{argument}
 \ms
 { cat & \ms{ head & \ms[verb]
                      { vform & fin } \\
-             subcat & \liste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
+             subcat & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
            } \\
   cont &  \ms[mrs]
            { ind & \ibox{4} event \\
-             rels & \liste{ \ms[geben]{ event & \ibox{4} \\
+             rels & \sliste{ \ms[geben]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
                                         goal  & \ibox{2} \\
-                                        theme & \ibox{3}  }}
+                                        theme & \ibox{3}  } }
            }
 }
 \zs
@@ -873,13 +877,13 @@ and goal takes the form of (\mex{1}):
 \ea
 \label{ex-agens-theme-goal-linking}
 \onems
-{ cat$|$subcat \liste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
+{ cat$|$subcat \sliste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
   cont  \ms[mrs]
            { ind & \ibox{4} event \\
-             rels & \liste{ \ms[agent-goal-theme-rel~~]{ event & \ibox{4} \\
+             rels & \sliste{ \ms[agent-goal-theme-rel~~]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
                                         goal  & \ibox{2} \\
-                                        theme & \ibox{3} }}
+                                        theme & \ibox{3} } }
            }
 }
 \z
@@ -887,7 +891,7 @@ and goal takes the form of (\mex{1}):
 \iboxt{1}. 
 The type for the relation \relation{geben} is a subtype of \type{agent-goal-theme-rel}.
 The lexical entry for the word \emph{geben} `give' or rather the root \stem{geb} has the linking pattern in (\mex{0}).
-
+%
 For more on theories of linking in HPSG, see \citew{Davis96a-u}, \citew{Wechsler91a-u} und \citew{DK2000b-u}.
 \is{linking|)}
 
@@ -932,7 +936,7 @@ AVM that is abbreviated as \nbar:\\
 \ms{ head & \ms[adj]{ %prd & $-$ \\
                         mod &  \nbar~~
                       } \\
-              subcat & \liste{}
+              subcat & \sliste{}
 }
 \zs
 \emph{interessantes} is an adjective that does not take any arguments and therefore has an empty \subcatl. Adjectives such as \emph{treu} `loyal' would
@@ -949,7 +953,7 @@ The \catv is given in (\mex{1}):
 \ms{ head & \ms[adj]{ %prd & $-$ \\
                         mod &  \nbar~~
                       } \\
-              subcat & \liste{ NP[\type{dat}] }
+              subcat & \sliste{ NP[\type{dat}] }
 }
 \z
 \emph{dem König treues} `loyal to the king' forms an adjective phrase, which modifies \emph{Mädchen}.
@@ -1003,10 +1007,10 @@ Head"=adjunct structures are licensed by the Schema~\ref{ha-schema-prel}\is{sche
 \type{head"=adjunct"=phrase} \impl\\
 \onems{ 
 head"=dtr$|$synsem \ibox{1} \\[2mm]
-non-head"=dtrs \liste{ \onems{ synsem$|$loc$|$cat \ms{ head$|$mod & \ibox{1} \\
-                                                       subcat     & \liste{}
+non-head"=dtrs \sliste{ \onems{ synsem$|$loc$|$cat \ms{ head$|$mod & \ibox{1} \\
+                                                       subcat     & \sliste{}
                                                      }
-                           }}
+                           } }
 }
 \end{schema}
 %\end{samepage}
@@ -1024,6 +1028,7 @@ empty list, which is why only completely saturated adjuncts are allowed in head"
 	 the sausage in\\
 }
 \zl
+%\addlines[2]
 Example (\mex{0}a) requires some further explanation. The preposition \emph{in} (as used in (\mex{0}a)) has the following \catv:
 
 \ea
@@ -1042,7 +1047,7 @@ After combining \emph{in} with the nominal phrase \emph{der Speisekammer} `the p
 head & \ms[prep]{
        mod & \nbar~~
        } \\
-subcat & \liste{ }
+subcat & \sliste{ }
 }
 \zs
 
@@ -1082,17 +1087,18 @@ Lexical rule for personal passives adapted from \citet{Kiss92}:\\
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           subcat & \liste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                           subcat & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                          } 
 } $\mapsto$ \\
 \flushright\onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part } \\
-                          subcat & \liste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                          subcat & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                         }
 }
 \z
 
+\addlines
 \noindent
 This lexical rule takes a verb stem\footnote{
 	The term \emph{stem} includes roots (\stem{helf} `help-'), products of derivation
@@ -1103,8 +1109,22 @@ list) and licenses a lexical entry that requires a nominative argument and possi
 \ibox{3}.\footnote{
   This rule assumes that arguments of ditransitive verbs are in the order nominative, accusative,
   dative. Throughout this chapter, I assume a nominative, dative, accusative order, which
-  corresponds to the unmarked order of arguments in the German clause. The version of the passive
-  lexical rule that will be suggested below is compatible with both orders of arguments.
+  corresponds to the unmarked order of arguments in the German clause. \citet{Kiss2001a} argued that
+  a representation of the unmarked order is needed to account for scope facts in
+  German. Furthermore, the order of the arguments corresponds to the order one would assume for
+  English, which has the advantage that cross"=linguistic generalizations can be captured. In
+  earlier work I assumed that the order is nominative, accusative, dative since this order encodes a
+  prominence hierarchy that is relevant in a lot of areas in German grammar. Examples are: ellipsis\is{ellipsis} \citep{Klein85},
+  Topic Drop\is{prefield!ellipsis}\is{Topic Drop} \citep{Fries88b}, free relatives\is{relative clause!free}
+  \citep{Bausewein90,Pittner95b,Mueller99b},
+%% \item Passive\is{passive} \citep{KC77a}
+  depictive secondary predicates\is{depictive predicate} \citep{Mueller2001c,Mueller2002b,Mueller2008a},
+  Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard und Sag: \citeyear{PS92};
+  \citeyear[Chapter~6]{ps2}). This order also corresponds to the Obliqueness
+  Hierarchy\is{obliqueness} suggested by \citet{KC77a} and \citet{Pullum77a}. In order to capture
+  this hierarchy, a special list with nominative, accusative, dative order would have to be assumed.
+
+  The version of the passive lexical rule that will be suggested below is compatible with both orders of arguments.
 } The output
 of the lexical rule specifies the \vformv of the output word. This is important as the auxiliary and
 the main verb must go together. For example, it is not possible to use the perfect participle instead of the passive participle since these differ
@@ -1141,15 +1161,15 @@ Input \stem{schlag} `beat' :\\
 \onems{
 phon \phonliste{ schlag }\\[2mm]
 synsem$|$loc \ms{ cat & \ms{ head   & verb\\
-                             subcat & \liste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
+                             subcat & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
                            }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
-                         rels & \liste{ \ms[schlagen]{
+                         rels & \sliste{ \ms[schlagen]{
                                          event   & \ibox{3}\\
                                          agent   & \ibox{1}\\
                                          patient & \ibox{2}
-                                        }\\ 
+                                        } 
                                       }\\[-1ex]
                          }\\
                 }\\
@@ -1164,15 +1184,15 @@ Output \emph{geschlagen} `beaten':\\
 phon \phonliste{ geschlagen }\\[2mm]
 synsem$|$loc \ms{ cat  & \ms{ head   & \ms[verb]{ vform & passive-part
                                                 } \\
-                              subcat & \liste{ NP[\type{nom}]\ind{2} } \\
+                              subcat & \sliste{ NP[\type{nom}]\ind{2} } \\
                             }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
-                         rels & \liste{ \ms[schlagen]{
+                         rels & \sliste{ \ms[schlagen]{
                                          event   & \ibox{3}\\
                                          agent   & \ibox{1}\\
                                          patient & \ibox{2}
-                                        }\\ 
+                                        } 
                                       }
                          }
                 }
@@ -1183,23 +1203,27 @@ The agent role is connected to the subject of \stem{schlag}. After passivization
 the patient role of \stem{schlag} becomes the subject of the participle. Argument linking is not affected by this and thus the nominative argument is
 correctly assigned to the patient role.
 
-Lexical rules such as (\ref{pass-lr-mlr}) can also be captured with feature descriptions \citep{Meurers2001a}:\label{pageref-lr-mit-dtr}
+As \citet{Meurers2001a} has shown, lexical rules can also be captured with feature
+descriptions.\label{pageref-lr-mit-dtr} (\mex{1}) shows the feature description representation of (\ref{pass-lr-mlr}).
+\begin{figure}
 \ea
 \label{passiv-lr-mit-dtr}
 \onems[acc-passive-lexical-rule]{
      phon $f\iboxb{1}$\\
      synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part
                                        } \\
-                             subcat & \liste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
+                             subcat & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
                            } \\
 lex-dtr \onems[stem]{
         phon \ibox{1}\\
         synsem$|$loc$|$cat~ \ms{ head & verb \\ 
-                  subcat & \liste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                  subcat & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                 }
      }
 }
 \z
+\vspace{-\baselineskip}
+\end{figure}%
 What is on the left"=hand side of the rule in (\ref{pass-lr-mlr}), is contained in the value of \textsc{lex-dtr}\isfeat{lex-dtr} in (\mex{0}).
 Since this kind of lexical rule is fully integrated into the formalism, feature structures corresponding to these lexical rules also have their own
 type. If the result of the application of a given rule is an inflected word, then the type of the lexical rule (\type{acc-passive-lexical-rule} in our example)
@@ -1288,7 +1312,7 @@ Lexical rule for personal and impersonal passive (simplified):\\
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           subcat & \liste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
+                           subcat & \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
                          } 
 } $\mapsto$ \\
 \flushright\onems[word]{
@@ -1399,7 +1423,7 @@ synsem$|$loc \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin
                             }\\
                   cont & \ms{
                          ind & \ibox{3}\\
-                         rels & \liste{ \ms[kennen]{
+                         rels & \sliste{ \ms[kennen]{
                                          event       & \ibox{3}\\
                                          experiencer & \ibox{1}\\
                                          theme       & \ibox{2}
@@ -1465,6 +1489,7 @@ It is normally not the case that \emph{kennen} `know' selects a complete sentenc
 	 knows \spacebr{}the man the woman the book\\
 }
 \zl
+\addlines
 In the preceding discussion, the dependency between the fronted verb and the verb trace was expressed by coindexation. In HPSG, identity is always
 enforced by structure sharing. The verb in initial position must therefore require that the trace
 has exactly those properties of the verb that the verb would have had, were it in final
@@ -1501,7 +1526,7 @@ synsem$|$loc \ibox{1} \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
                             }\\
                   cont & \ms{
                          ind & \ibox{4}\\
-                         rels & \liste{ \ms[kennen]{
+                         rels & \sliste{ \ms[kennen]{
                                          event       & \ibox{4}\\
                                          experiencer & \ibox{2}\\
                                          theme       & \ibox{3}
@@ -1518,7 +1543,7 @@ projection of the trace is compatible.\footnote{
   Section~\ref{sec-cyclic-fd} on cyclic feature descriptions. This cyclic description is the most
   direct way to express that a linguistic object with certain local properties is missing and to pass this
   information on along the head path as the value of the \dslf. This will be even clearer when we look
-  at the final version of the verb trace in (\ref{le-verbspur}) on page~\pageref{le-verbspur}.
+  at the final version of the verb trace in (\ref{le-verbspur}) on page~\pageref{le-verbspur}.%
 }%
 \is{trace!verb|)}
 
@@ -1558,7 +1583,7 @@ synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
                                                                }\\
                                                          subcat \eliste
                                                        }
-                                              }}
+                                              } }
                          }
 }
 \end{tabular}
@@ -1810,9 +1835,8 @@ follow the subject:
 \z
 \citet{Fanselow2004c} argues that certain phrases can be placed in the Vorfeld without having a
 special pragmatic function. For instance, (expletive) subjects in active sentences (\mex{1}a),
-temporal adverbials (\mex{1}b), dative objects of psychological verbs (\mex{1}c) and objects in
-passives (\mex{1}d) can be placed in the Vorfeld, even though
-they are neither topic nor focus.
+temporal adverbials (\mex{1}b), sentence adverbials (\mex{1}c), dative objects of psychological verbs (\mex{1}d) and objects in
+passives (\mex{1}e) can be placed in the Vorfeld, even though they are neither topic nor focus.
 \eal
 \ex
 \gll Es regnet.\\
@@ -1842,7 +1866,9 @@ by ordering the accusative object as in (\mex{1}), one can reach certain effects
      knows this man everybody\\
 \glt `Does everybody know this man?'
 \z
-If one assumes that the initial element in the Mittelfeld is fronted, it is explained why the
+If one assumes that there are frontings to the \vf that do not have information structural constraints
+attached to them and that information structural constraints are associated with reorderings in the
+Mittelfeld, then the assumption that the initial element in the Mittelfeld is fronted explains why the
 examples in (\mex{-1}) are not information structurally marked. The elements in the Vorfeld are
 unmarked in the initial position in the Mittelfeld as well:
 \eal
@@ -1916,11 +1942,11 @@ Trace of the accusative object of \emph{kennen} (preliminary):\\
  synsem & \ms{ loc   & \ibox{1} \ms{ cat \ms{ head & \ms[noun]{
                                                      cas & acc
                                                      } \\
-                                              subcat & \liste{}
+                                              subcat & \sliste{}
                                             } 
                                    }\\
 nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
-                                                %extra & \liste{} \\
+                                                %extra & \sliste{} \\
               to-bind$|$slash & \eliste
             } 
 }
@@ -1958,15 +1984,15 @@ The Head"=Filler Schema licenses the highest node in Figure~\vref{Abbildung-Dies
 head-dtr$|$synsem       \onems{ loc$|$cat \onems{ head \ms[verb]{vform & fin\\
                                                                  initial & \upshape $+$
                                                                 }\\
-                                                  subcat \liste{}
+                                                  subcat \sliste{}
                                                }\\
                              nonloc \ms{ inher$|$slash &  \sliste{ \ibox{1} }\\
                                          to-bind$|$slash &  \sliste{ \ibox{1} }
                                        }
                         }\\
-non-head-dtrs  \liste{ \onems{ synsem \onems{ loc \ibox{1}\\
-                                           nonloc$|$inher$|$slash \liste{}
-                                 }}}
+non-head-dtrs  \sliste{ \onems{ synsem \onems{ loc \ibox{1}\\
+                                           nonloc$|$inher$|$slash \sliste{}
+                                 }} }
    }
 \end{schema}
 \vspace{-\baselineskip}
@@ -2026,7 +2052,7 @@ Extraction trace: \\
  phon & \phonliste{} \\[1mm]
  synsem & \ms{ loc   & \ibox{1}\\
                nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
-                                                %extra & \liste{} \\
+                                                %extra & \sliste{} \\
                              to-bind$|$slash & \eliste
                            }
              }
@@ -2165,11 +2191,11 @@ phon \phonliste{ schlag }\\[2mm]
 synsem$|$loc \ms{ cat & \ms{ head   & verb\\
                              spr    & \eliste \\
                              subcat & \ibox{1} \\
-                             arg-st & \ibox{1} \liste{ NP[\type{str}]\ind{2}, NP[\type{str}]\ind{3} }
+                             arg-st & \ibox{1} \sliste{ NP[\type{str}]\ind{2}, NP[\type{str}]\ind{3} }
                            }\\
                   cont & \ms{
                          ind & \ibox{4} event\\
-                         rels & \liste{ \ms[schlagen]{
+                         rels & \sliste{ \ms[schlagen]{
                                          event   & \ibox{4}\\
                                          agent   & \ibox{2}\\
                                          patient & \ibox{3}
@@ -2184,11 +2210,11 @@ phon \phonliste{ beat }\\[2mm]
 synsem$|$loc \ms{ cat & \ms{ head   & verb\\
                              spr    & \sliste{ \ibox{1} } \\
                              subcat & \ibox{2} \\
-                             arg-st & \liste{ \ibox{1} NP[\type{str}]\ind{3}} $\oplus$ \ibox{2} \liste{ NP[\type{str}]\ind{4} }
+                             arg-st & \sliste{ \ibox{1} NP[\type{str}]\ind{3}} $\oplus$ \ibox{2} \sliste{ NP[\type{str}]\ind{4} }
                            }\\
                   cont & \ms{
                          ind & \ibox{5} event\\
-                         rels & \liste{ \ms[beat]{
+                         rels & \sliste{ \ms[beat]{
                                          event   & \ibox{5}\\
                                          agent   & \ibox{3}\\
                                          patient & \ibox{4}
