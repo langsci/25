@@ -666,6 +666,7 @@ standard assumption that there are two projection levels, that is, phrases have 
 \subsection{CP and IP in English}
 \label{Abschnitt-GB-CP-IP-System-Englisch}\label{sec-GB-CP-IP-System-English}
 
+%\addlines
 Most work in Mainstream Generative Grammar is heavily influenced by previous publications dealing with English. If one wants to understand GB analyses of
 German and other languages, it is important to first understand the analyses of English and, for this reason, this will be the focus of this section.
 The CP/IP system is also assumed in LFG grammars of English and thus the following section also provides a foundation for understanding some of the
@@ -865,6 +866,7 @@ Following this excursus on the analysis of English sentences, we can now turn to
 \subsection{The structure of the German clause}
 \label{sec-German-clause}
 
+%\addlines[2]
 The CP/IP model has been adopted by many scholars for the analysis of German.\footnote{
   For GB analyses without IP, see \citew{BK89a}, \citew[\page 157]{Hoehle91},
   \citew{Haider93a,Haider97a} and \citew[Section~IV.3]{Sternefeld2006a-u}. Haider assumes
@@ -1336,6 +1338,7 @@ crossing several phrase boundaries:
 }
 \glt `It is, however, more difficult for the Republicans to launch attacks against him.'
 \zl
+\addlines
 The elements in the prefield in the examples in (\mex{0}) all originate from more deeply embedded phrases. In GB,
 it is assumed that long"=distance dependencies across sentence boundaries are derived in steps 
 \citep[\page 75--79]{Grewendorf88a}, that is, in the analysis of (\ref{ex-wen-glaubst-du-dass}), the interrogative
@@ -1448,6 +1451,7 @@ V (\citealp[\page 50]{Chomsky81a}; \citealp[\page
 \end{principle-break}
 The Case Filter\is{case!filter} rules out structures where case has not been assigned to an NP.
 
+\addlines
 Figure~\vref{Abb-GB-Aktiv} shows the Case Principle in action with the example in 
 (\mex{1}a).\footnote{%
 The figure does not correspond to \xbar theory in its classic form, since \emph{der Frau} `the woman' 
@@ -1678,13 +1682,13 @@ a single underlying order by means of \movea \citep{Frey93a}. As an example, the
 \begin{forest}
 sn edges
 [IP
-  [NP$_i$ [das Buch;the book, triangle]]
+  [{NP[acc]$_i$} [das Buch;the book, triangle]]
   [IP
-    [NP [der Mann;the man, triangle]]
+    [{NP[nom]} [der Mann;the man, triangle]]
     [I$'$
  	[VP
 		[V$'$
-			[NP [der Frau;the woman, triangle]]
+			[{NP[dat]} [der Frau;the woman, triangle]]
 			[V$'$
 				[NP   [\trace$_i$]]
 				[V$^0$  [gib-;give-]]]]]
@@ -1692,7 +1696,8 @@ sn edges
 \end{forest}
 \caption{Analysis of local reordering as adjunction to IP}\label{fig-das-buch-der-mann-der-frau-gibt-movement}
 \end{figure}%
-The accusative object \emph{das Buch} `the book' is moved to the left and adjoined to the topmost IP.
+% removed "accusative" due to typesetting reasons
+The object \emph{das Buch} `the book' is moved to the left and adjoined to the topmost IP.
 
 \is{scope|(}%
 An argument that has often been used to support this analysis is the fact that scope ambiguities
@@ -1772,6 +1777,7 @@ The work by \citet{Lenerz77} on constituent order has influenced analyses in oth
 case and passive \citeyearpar{Haider84b,Haider85,Haider85b,Haider86,Haider90a,Haider93a} has had a significant influence on LFG
 and HPSG analyses of German.
 
+\addlines[2]
 The entire configurationality discussion\is{configurationality}, that is, whether it is better to assume that the 
 subject of finite verbs in German is inside or outside the VP, was important
 (for instance \citealp*{Haider82,Grewendorf83a,Kratzer84a,Kratzer96a,Webelhuth85a,%
@@ -1832,7 +1838,7 @@ accordingly, but whether this is actually relevant for language acquisition is b
 
 \subsection{Formalization}
 \label{sec-formalization-gb}
-\addlines
+%\addlines
 
 In his 1963 work on Transformational Grammar, Bierwisch writes the following:\footnote{
 Es ist also sehr wohl möglich, daß mit den formulierten Regeln Sätze erzeugt werden können,
@@ -2077,7 +2083,7 @@ question.
 
 \section*{Exercises}
 
-
+\addlines
 \begin{enumerate}
 \item Draw syntactic trees for the following examples:
 \eal

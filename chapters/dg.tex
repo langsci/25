@@ -25,13 +25,13 @@ A.\,K.\ Žolkovskij started in the 1960s in the Soviet Union to work on a model 
 Translation projects \citep{Melcuk64a-u,Melcuk81a,Melcuk88a-u,Kahane2003a-u}. \mel left the
 Soviet Union towards Canada in the 1970s and now works in Montréal. 
 
-
 Dependency Grammar is very wide-spread in Germany and among scholars of German linguistics
 worldwide. It is used very successfully for teaching German as a foreign language
 \citep{HB69a-u,HB98a}. Helbig and Buscha, who worked in Leipzig, East Germany, started to
 compile valence dictionaries \citep{HS69a-u} and later researchers working at the Institut für
 Deutsche Sprache (Institute for German Language) in Mannheim began similar lexicographic projects \citep{SKSR2004a-u}. 
 
+%\largerpage[3]
 The following enumeration is a probably incomplete list of linguists who are/were based in Germany: 
 Vilmos \citet{Agel2000a-u}, Kassel; 
 Klaus \citet{Baumgaertner65a-u,Baumgaertner70a}, Leipzig later Stuttgart;
@@ -46,7 +46,7 @@ Henning \citet{Lobin93a-u}, Gießen;
 Klaus \citet{Schubert87a-u}, Hildesheim;
 Heinz Josef \citet{Weber97a}, Trier;
 Klaus \citet{Welke88a-u,Welke2011a-u}, Humboldt University Berlin;
-Edeltraud \citet{Werner93a-u}, Halle-Wittenberg.
+Edeltraud \citet{Werner93a-u}, Halle-Wittenberg.\pagebreak
 
 
 Although work has been done in many countries and continuously over the decades since 1959, a
@@ -262,7 +262,14 @@ important than hydrogen in forming water. In contrast to this, the verb is more 
 the nominal phrases it combines with to form a complete clause. In languages like English and
 German, the verb determines the form of its dependents, for instance their case.
  
+%\addlines[2]
+% This seems to be a true bug. Both \addlines and largerpage affect the next page only.
+%\largerpage[2]
+\addlines[3]
 One way to depict dependencies is shown in Figure~\vref{fig-the-child-reads-the-book-dg}.
+% moved this on top of the figure
+The highest node is the verb \emph{reads}. Its valence is a nominative NP (the subject) and an
+accusative NP (an object). 
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -279,8 +286,7 @@ dg edges
 }
 \caption{\label{fig-the-child-reads-the-book-dg}Analysis of \emph{The child reads a book.}}
 \end{figure}%
-The highest node is the verb \emph{reads}. Its valence is a nominative NP (the subject) and an
-accusative NP (an object). This is depicted by the dependency links between the node representing the verb and the
+This is depicted by the dependency links between the node representing the verb and the
 nodes representing the respective nouns. The nouns themselves require a determiner, which again is shown by the dependency
 links to \emph{the} and \emph{a} respectively. Note that the analysis presented here corresponds to
 the NP analysis that is assumed in HPSG for instance, that is, the noun selects its specifier (see
@@ -297,6 +303,10 @@ The verb is the head of the clause and the nouns are called \emph{dependents}. A
 for head and dependent are \emph{nucleus}\is{nucleus} and \emph{satellite}\is{satellite}, respectively. 
 
 An alternative way to depict the dependencies, which is used in the Dependency Grammar variant Word Grammar\indexwg \citep{Hudson2007a-u}, is provided in Figure~\vref{fig-the-child-reads-the-book-dg-sentence}.
+% moved this on top of the figure
+This graph displays the grammatical functions rather than information about part of speech, but apart
+from this it is equivalent to the representation in Figure~\ref{fig-the-child-reads-the-book-dg}. The highest node in Figure~\ref{fig-the-child-reads-the-book-dg} is labeled with the \textsc{root}
+arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links are indicated by the direction of the arrows.
 \begin{figure}
 %http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
 \centerline{%
@@ -313,11 +323,12 @@ An alternative way to depict the dependencies, which is used in the Dependency G
 }
 \caption{\label{fig-the-child-reads-the-book-dg-sentence}Alternative presentation of the analysis of \emph{The child reads a book.}}
 \end{figure}%
-This graph displays the grammatical functions rather than information about part of speech, but apart
-from this it is equivalent to the representation in Figure~\ref{fig-the-child-reads-the-book-dg}. The highest node in Figure~\ref{fig-the-child-reads-the-book-dg} is labeled with the \textsc{root}
-arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links are indicated by the direction of the arrows.
 
 A third form of representing the same dependencies provided in Figure~\vref{fig-the-child-reads-the-book-dg-words} has the tree format again.
+% moved this before the figure
+This tree results if we pull the root node in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}
+upwards. 
+%
 \begin{figure}
 %http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
 \centerline{%
@@ -331,9 +342,8 @@ sn edges
 \end{forest}
 }
 \caption{\label{fig-the-child-reads-the-book-dg-words}Alternative presentation of the analysis of \emph{The child reads a book.}}
-\end{figure}%%
-This tree results if we pull the root node in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}
-upwards. Since we have a clear visualization of the dependency relation that represents the nucleus
+\end{figure}%
+Since we have a clear visualization of the dependency relation that represents the nucleus
 above the dependents, we do not need to use arrows to encode this information. However, some
 variants of Dependency Grammar -- for instance \wg{} -- use mutual dependencies. So for instance, some
 theories assume that \emph{his} depends on \emph{child} and \emph{child} depends on
@@ -356,11 +366,13 @@ $\chi \to \varphi_1 \ldots \varphi_i * \varphi_{i+2} \ldots \varphi_n, where~0 <
 The asterisk in (\mex{0}) corresponds to the word of the category $\chi$. In our example, $\chi$
 would be V, the position of the `$*$' would be taken by \emph{reads}, and $\varphi_1$ and
 $\varphi_3$ would be N. Together with the rule in (\mex{1}b) for the determiner-noun combination, the rule in (\mex{1}a) would license
-the dependency tree in Figure~\ref{fig-the-child-reads-the-book-dg}.
+the dependency tree in Figure~\ref{fig-the-child-reads-the-book-dg}.%\pagebreak
 \eal
 \ex V $\to$ N $*$ N
 \ex N $\to$ D $*$
-\zl
+\zl\pagebreak
+
+\noindent
 Alternatively, several binary rules can be assumed that combine a head with
 its subject, direct object, or indirect object \citep{Kahane2009a}. Dependency rules will be discussed in
 more detail in Section~\ref{sec-dependency-vs-constituency}, where dependency grammars are compared with phrase structure grammars.
@@ -398,6 +410,7 @@ more detail in Section~\ref{sec-dependency-vs-constituency}, where dependency gr
 
 \subsection{Adjuncts}
 
+\addlines
 Another metaphor that was used by \tes is the drama metaphor. The core participants of an event are
 the \emph{actants}\is{actant} and apart from this there is the background, the stage, the general setting. The actants
 are the arguments in other theories and the stage-describing entities are called
@@ -545,6 +558,7 @@ serializations of constituents \citep{GK2001a,Hellwig2003a}.
 
 \subsection{Semantics}
 
+\addlines
 \tes already distinguished the participants of a verb in a way that was later common in theories of
 semantic roles. He suggested that the first actant is the agent, the second one a patient and the
 third a benefactive \citep[Chapter~106]{Tesniere2015a-u}.
@@ -665,7 +679,8 @@ placed before the subject.
 \glt `The player injured himself yesterday.'
 \z
 For a discussion of Groß \& Osborne's account of (\ref{ex-gestern-hat-sich-der-spieler-verletzt}) see page~\pageref{fig-gestern-hat-sich-der-spieler-verletzt-dg-rising}.
-} \citet{Hudson90a-u}, \citet[Section~5.3]{Eroms2000a} and \citet{GO2009a} assume that subjects depend on auxiliaries
+} 
+\citet{Hudson90a-u}, \citet[Section~5.3]{Eroms2000a} and \citet{GO2009a} assume that subjects depend on auxiliaries
 rather than on the main verb.\LATER{S: the classical ref for that is \mel 1988:129-144, who
   gives a bunch of criteria.} 
 % Silvain Kahane 11.04.2015
@@ -680,7 +695,9 @@ rather than on the main verb.\LATER{S: the classical ref for that is \mel 1988:1
 %de Marneffe, M.-C., Manning D. (2008). Stanford typed dependencies manual. Technical report, Stanford University.
 %
 This requires some argument transfer as it is common in \cg (see
-Section~\ref{Kategorialgrammatik-Komposition}) and \hpsg \citep{HN94a}. The adapted analysis that
+Section~\ref{Kategorialgrammatik-Komposition}) and%
+%\addlines[-3]
+\hpsg \citep{HN94a}. The adapted analysis that
 treats the subject of the participle as a subject of the auxiliary is given in Figure~\vref{fig-passive-subj-raised-dg}.\is{passive|)}
 \begin{figure}
 \centering
@@ -773,6 +790,8 @@ Section~\ref{sec-linearization-problems-dg} for further details on linearization
 
 \section{Local reordering}
 
+%\addlines
+\largerpage[2]
 The situation regarding local reordering is the same. The dependency relations of the sentence
 in (\mex{1}b) are shown in Figure~\vref{fig-scrambling-dg}. The analysis of the sentence with normal order in (\mex{1}a)
 has already been given in Figure~\ref{fig-vl-dg}.
@@ -815,6 +834,7 @@ Grammar. The easiest one is the one we have already seen in the previous section
 and assume that the order with the verb in second position is just one of the possible
 linearization variants (\citealp[Section~9.6.2]{Eroms2000a}; \citealp{GO2009a}). Figure~\vref{fig-diesen-mann-kennt-jeder-dg} shows the analysis of
 (\mex{1}):
+%\largerpage
 \ea
 \label{ex-Diesen-Mann-kent-jeder-dg}
 \gll {}[Diesen Mann] kennt jeder.\\
@@ -838,6 +858,7 @@ dg edges
 \caption{\label{fig-diesen-mann-kennt-jeder-dg}Analysis of \emph{Diesen Mann kennt jeder.} `This
   man, everybody knows.' without special treatment of fronting}
 \end{figure}%
+\largerpage[2]
 Now, this is the simplest case, so let us look at the example in (\mex{1}), which really involves a
 \emph{nonlocal} dependency:
 \ea
@@ -925,7 +946,7 @@ pronouns come from different clauses: \emph{du} belongs to the matrix verb \emph
 extraposition target the left-most and right-most positions of a clause, respectively. This can be
 modeled in constituency"=based approaches in a straightforward way, as has been shown in the previous chapters.
 
-
+\addlines[2]
 As an alternative to discontinuous constituents, one could assume additional mechanisms that
 promote the dependency of an embedded head to a higher head in the structure. Such an analysis was
 suggested by \citet{Kunze68a-u}, \citet{Hudson97a,Hudson2000a}, \citet{Kahane97a}, \citet{KNR98a},
@@ -2308,7 +2329,7 @@ It is clear that such discontinuity is unwanted and hence one has to have restri
 possible restriction is to require projectivity and hence equivalence to phrase structure grammars in the sense that was
 discussed above.
 
-There is some dispute going on about the question of whether constituency/dependency is
+There is some dispute going on about the question of whether constituency/""dependency is
 primary/necessary to analyze natural language: while %\citet[\page 83]{Korhonen77a}, 
 \citet{Hudson80a}, and \citet{Engel96a} claim that dependency is
 sufficient, a claim  that is shared by dependency grammarians (according to \citealp{Engel96a}), \citet{Leiss2003a} claims

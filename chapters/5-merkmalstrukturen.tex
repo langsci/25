@@ -49,10 +49,10 @@ If we were to write these as a list of feature"=value pairs, we would arrive at 
 \eas
 Feature-value pair for \emph{Mannes}:\\
 \ms{
-Case   & genitive\\
-Gender   & masculine\\
-Number & singular\\
-Person  & 3\\
+case   & genitive\\
+gender   & masculine\\
+number & singular\\
+person  & 3\\
 }
 \zs
 It is possible to describe a variety of different things using feature descriptions. For example, we can describe a person as in (\mex{1}):
@@ -82,6 +82,7 @@ mother     & \ldots\\
 \z
 The value of the \textsc{father} feature is another feature description containing the same features as (\mex{-1}).
 
+\addlines
 In feature descriptions, a \emph{path}\is{path} is a sequence of features which immediately follow each other.
 The \emph{value of a path} is the feature description at the end of the path. Therefore,
 the value of \textsc{father$|$date-of-birth} is \emph{10.05.1960}.
@@ -180,7 +181,7 @@ well using lists, which is why I do not introduce sets here and instead use list
 \section{Types}
 \label{sec-formalismus-typen}
 
-\addlines[2]
+%\addlines[2]
 In\is{type|(} the previous section, we introduced feature descriptions consisting of feature"=value pairs and showed that it makes sense to allow for
 complex values for features. In this section, feature descriptions will be augmented to include types. Feature descriptions which are assigned a type
 are also called \emph{typed feature descriptions}. Types say something about which features can or must belong to a 
@@ -248,7 +249,7 @@ surface again in the discussion of linguistic analyses.
 Both alternatives differ mostly in the fact that the information which is modelled by types is not
 immediately accessible for structure sharing, which is discussed in Section~\ref{sec-strukturteilung}.
 
-\addlines
+%\addlines
 Type hierarchies\label{Seite-Typhierarchie} play an important role in capturing linguistic generalizations, which is why type hierarchies and
 the inheritance of constraints and information will be explained with reference to a further example in what follows. One can think of type hierarchies as an effective
 way of organizing information. In an encyclopedia, the individual entries are linked in such a way
@@ -305,6 +306,7 @@ features can be added to subtypes, but it is also possible to make values of inh
 specific. For example, the material that can be scanned with a \type{negative scanner} is far more
 restricted than that of the supertype \type{scanner}, since negative scanners can only scan negatives.
 
+\addlines
 The objects that are modeled always have a maximally specific type. In the example above, this means that we can have objects of the type \type{laser printer} and \type{negative scanner}
 but not of the type \type{printing device}. This is due to the fact that \type{printing device} is not maximally specific since this type has two subtypes.
 
@@ -579,16 +581,16 @@ differs from other singular forms, which can be seen by adding \emph{Mann} into 
 \emph{Frau} `woman' and \emph{Mann} `man':
 \eal
 \ex\label{avm-frau}
-Frau `woman'\\*
+Frau `woman':\\*[1pt]
 \ms{
 gender & fem\\
 %kasus & Kasus\\
 }
 \ex\label{avm-mann}
-Mann `man'\\
+Mann `man':\\*[2pt]
 \ms{
 gender & mas\\
-case & nominative $\vee$ dative $\vee$ accusative~\\
+case & nominative $\vee$ dative $\vee$ accusative~~\\
 }
 \zl
 Unlike (\mex{0}b), (\mex{0}a) does not contain a case feature since we do not need to say anything special about case in the description of \emph{Frau}.

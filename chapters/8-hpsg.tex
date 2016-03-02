@@ -268,6 +268,7 @@ sn edges
 \caption{\label{abb-peter-schlaeft}Analysis of \emph{Peter schläft} `Peter sleeps' in \emph{dass
     Peter schläft} `that Peter sleeps'}
 \end{figure}%
+\addlines
 In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \subcatl is combined with its head in each
 local tree. The elements that are combined with the selecting head are then no longer present in the \subcatl of the mother node.
 V[\subcat \sliste{ }] corresponds to a complete phrase (VP or S). The boxes with numbers show the structure sharing (see Section~\ref{sec-strukturteilung}).
@@ -299,7 +300,6 @@ sn edges
 \subsection{Representation of constituent structure}
 \label{sec-HPSG-constituent-structure}
 
-\addlines
 As already noted, feature descriptions in HPSG serve as the sole descriptive inventory of morphological rules, lexical entries and syntactic rules.
 The trees we have seen thus far are only visualizations of the constituent structure and do not have any theoretical status. There are also no
 rewrite rules in HPSG.\is{phrase structure grammar}\footnote{
@@ -455,7 +455,7 @@ Schema~\ref{schema-bin-prel} can be read as follows: if an object is of the type
 on the right"=hand side of the implication. In concrete terms, this means that these objects always have a valence list which corresponds to 
 \iboxt{1}, that they have a head daughter with a valence list that can be divided into two sublists  \ibox{1} and \sliste{ \ibox{2} } and
 also that they have a non"=head daughter whose syntactic and semantic properties (\synsemv) are compatible with the last element of the
-\subcatl of the head daughter \iboxb{2}. (\mex{1}) shows the corresponding feature description for the example in (\ref{Bsp-Peter-schlaeft}). 
+\subcatl of the head daughter \iboxb{2}. (\mex{1}) provides the corresponding feature description for the example in (\ref{Bsp-Peter-schlaeft}). 
 \ea
 \onems[head-argument-phrase]{
 phon \phonliste{ Peter schläft }\\
@@ -468,6 +468,8 @@ non-head-dtrs \sliste{ \onems{ phon \phonliste{ Peter }\\
                              } }
 }
 \z
+% for the example on the next page
+\addlines
 NP[\type{nom}] is an abbreviation for a complex feature description. Schema~\ref{schema-bin-prel} divides the \subcatl of the head daughter into
 a single"=element list and what is left. Since \emph{schläft} `sleeps' only has one element in its \subcatl, what remains is the empty list.
 This remainder is also the \subcatv of the mother.
@@ -475,7 +477,6 @@ This remainder is also the \subcatv of the mother.
 \subsection{Linearization rules}
 \label{Abschnitt-LP-Regeln-HPSG}
 
-\addlines
 Dominance schemata do not say anything\indexgpsg about the order of the daughters. As in GPSG, linearization rules are specified separately.
 Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, argument\is{argument},
 adjunct\is{adjunct}, \ldots) or both.
@@ -495,7 +496,7 @@ If we assume a feature \initial\isfeat{initial} for all heads, then heads which 
   164--165]{Mueller99a} or by introducing a special valence feature for determiners
   \citep[Section~9.4]{ps2}. For an approach using such a
   feature, see Section~\ref{Abschnitt-Spr}.%  
-}\todostefan{Andrew McIntyre?: Problem goes away, if D is the head.}
+}\LATER{Andrew McIntyre?: Problem goes away, if D is the head.}
 
 \eal
 \ex\label{lp-ini-arg} 
@@ -611,6 +612,7 @@ for \emph{gibt} `gives':
                            }
 }
 \zs
+\addlines
 The \emph{Head Feature Principle} takes the following form:
 \begin{principle-break}[\emph{Head~Feature~Principle}]\is{principle!Head Feature}
 \label{prinzip-hfp}
@@ -1366,6 +1368,7 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
 
+\addlines[2]
 The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
 to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
 The analysis of (\mex{1}) can be summarized as follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special form of the 
@@ -1411,8 +1414,8 @@ Figure~\ref{Abbildung-Verbstellung-HPSG}, there are two maximal verb projections
 \emph{jeder diesen Mann \_$_k$} with the trace as the head and \emph{kennt jeder diesen Mann \_$_k$} with \emph{kennt} as the head.
 
 This analysis will be explained in more detail in what follows. For the trace in Figure~\ref{Abbildung-Verbstellung-HPSG}, one could assume
-the lexical entry in (\mex{1}):
-
+the lexical entry in (\mex{1}).
+%\begin{figure}
 \eas
 Verb trace for \emph{kennt} `knows':\\
 \onems{
@@ -1433,6 +1436,8 @@ synsem$|$loc \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin
                 }
 }
 \zs
+%\vspace{-\baselineskip}
+%\end{figure}%
 This lexical entry differs from the normal verb \emph{kennt} only in its \phonv.
 %
 The syntactic aspects of an analysis with this trace are represented in Figure~\vref{verb-movement-syn-simple}.
@@ -1474,9 +1479,13 @@ of overt verbs:
 	 knows \spacebr{}everybody this man\\
 \glt `Does everybody know this man?'
 \zl
+
+\noindent
 It is normally not the case that \emph{kennen} `know' selects a complete sentence and nothing else as would be necessary for the analysis of 
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
 \emph{kennt}. If it could contain a trace belonging to \emph{gibt} `gives', for example, we would be able to analyze sentences such as (\mex{1}b):
+%\addlines bug here?
+\largerpage
 \eal
 \ex[]{
 \gll Gibt [der Mann der Frau das Buch \_$_{gibt}$]?\\
@@ -1489,7 +1498,8 @@ It is normally not the case that \emph{kennen} `know' selects a complete sentenc
 	 knows \spacebr{}the man the woman the book\\
 }
 \zl
-\addlines
+
+\noindent
 In the preceding discussion, the dependency between the fronted verb and the verb trace was expressed by coindexation. In HPSG, identity is always
 enforced by structure sharing. The verb in initial position must therefore require that the trace
 has exactly those properties of the verb that the verb would have had, were it in final
@@ -1536,6 +1546,7 @@ synsem$|$loc \ibox{1} \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
                 }
 }
 \zs
+\largerpage
 Through sharing of the \localv and the \dsl value in (\mex{0}), the syntactic and semantic information of the verb trace
 is present at its maximal projection, and the verb in initial position can check whether the
 projection of the trace is compatible.\footnote{
@@ -1972,7 +1983,7 @@ that is the concatenation of the \textsc{inherited} values of the daughters minu
 \end{samepage}
 
 \noindent
-The Head"=Filler Schema licenses the highest node in Figure~\vref{Abbildung-Diesen-Mann-kennt-jeder}.
+The Head"=Filler Schema (Schema~\ref{hf-schemaa}) licenses the highest node in Figure~\vref{Abbildung-Diesen-Mann-kennt-jeder}.
 %
 \begin{figure}
 \begin{schema}[Head"=Filler Schema]

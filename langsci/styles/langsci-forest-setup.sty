@@ -13,9 +13,11 @@
 % a workaround is to use a different pgf driver.
 % See email from Akira Kakuto to Stefan Müller 15.01.2016
 
-%deceive the driver
+% Danger! This breaks ps tricks:
+
+%% %deceive the driver
 \def\pdftexversion{140}
-%use the old driver for dvipdfm
+%% %use the old driver for dvipdfm
 \def\pgfsysdriver{pgfsys-dvipdfm.def} 
 
 % http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
@@ -76,8 +78,10 @@
 % a specific style that specifies the word tier: all nodes that do not have any children
 % to do: make this style default and change all other figures explicitely as is described here:
 % http://tex.stackexchange.com/questions/167983/getting-rid-of-a-default-where-specification
+
+% anchor=north -> anchor parent after forest update
 \forestset{
-sn edges/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top},
+sn edges/.style={for tree={parent anchor=south, child anchor=north,anchor=north,align=center,base=top},
                  where n children=0{tier=word,delay=with translation}{} %,delay=with translation
                  },
 sn edges without translation/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top},

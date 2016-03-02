@@ -452,6 +452,7 @@ assign the meaning in (\mex{1}b) to the sentence in (\mex{1}a).
 \ex\label{Bsp-schlafen-max} 
 \relation{schlafen}(\relation{max})
 \zl
+\addlines[2]
 Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
 that we are dealing with word meanings and not actual words. At first glance, it may not seem that we have really gained anything
 by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
@@ -469,7 +470,7 @@ examples in (\mex{1}a) and (\mex{1}b):
 \zl
 
 \noindent
-To enhance readability I will use English translations of the predicates in semantic representations
+To enhance readability I use English translations of the predicates in semantic representations
 from now on.\footnote{
   Note that I do not claim that English is suited as representation language for semantic relations
   and concepts that can be expressed in other languages.
@@ -639,7 +640,9 @@ a rule such as the one in (\mex{1}b).\footnote{
 }$^,$\footnote{
 	There are, of course, other features such as gender and number, which should be part of all the rules
 	discussed in this section. I have omitted these in the following for ease of exposition.
-}\todostefan{These footnotes have to be blocked from moving to the next page.}
+}
+%\todostefan{These footnotes have to be blocked from moving to the next page.}
+% reformulating one line to be shorter plus enlarging the page by two lines did the trick.
 \eal
 \ex NP $\to$ Det N
 \ex NP $\to$ Det A N
@@ -664,6 +667,8 @@ NP $\to$ Det A* N
 The asterisk\is{*} in (\mex{0}) stands for any number of iterations. Therefore, (\mex{0}) encompasses rules with no adjectives
 as well as those with one, two or more.
 
+% because of moving footnotes
+\addlines[2]
 The problem is that according to the rule in (\mex{0}) adjectives and nouns do not form a constituent and we can therefore not explain why coordination 
 is still possible in (\mex{1}):
 \ea
@@ -674,8 +679,10 @@ is still possible in (\mex{1}):
 If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
 that the adjective and noun form a unit.
 
-The noun phrases with adjectives discussed thus far can be captured by the following rules:
-
+%The noun phrases with adjectives discussed thus far can be captured by the following rules:
+%
+% Shorter for layout:
+The following rules capture the noun phrases with adjectives discussed thus far:
 \eal
 \label{NP-Regeln}
 \ex NP $\to$ Det \nbar
@@ -885,7 +892,7 @@ but not the noun itself. The underscore marks the position where the noun would 
 \zl
 In English, the pronoun
 \emph{one} must often be used in the corresponding position,\footnote{
-  See \citet*[Section~4.12]{FLGR2012a} for English\il{English} examples without the
+  See \citet[Section~4.12]{FLGR2012a} for English\il{English} examples without the
   pronoun \emph{one}.
 } but in German the noun\is{noun} is
 simply omitted.
@@ -931,6 +938,7 @@ considering the question of where we can incorporate them. In this way, the noun
 can occur in the same sentences. The empty noun box also behaves like one with a genuine noun. If we
 do not open the empty box, we will not be able to ascertain the difference to a filled box. 
 
+\addlines[2]
 It is not only possible to omit the noun from noun phrases, but the determiner can also remain unrealized in certain contexts.
 (\mex{1}) shows noun phrases in plural\is{plural}:
 \eal
@@ -1216,7 +1224,7 @@ prepositional phrase consists of \pbar, that is, a combination of P and NP.\is{p
 \section{\xbart}
 \label{sec-xbar}
 
-\addlines
+%\addlines
 If\is{X theory@\xbar theory|(}  we look again at the rules that we have formulated in the previous section, we see that heads are always 
 combined with their complements to form a new constituent (\mex{1}a,b), which can then be combined with further constituents (\mex{1}c,d):
 
@@ -1370,7 +1378,7 @@ a bar. \xbar can then be combined with adjuncts. These can occur to the left or 
 still \xbar, that is the projection level is not changed by combining it with an adjunct\is{adjunct}.
 Maximal projections are marked by two
 bars. One can also write XP\is{XP} for a projection of X with two bars. An XP consists of a specifier\is{specifier} and \xbar. Depending
-on one's theoretical assumptions, subjects of sentences (\citealp{Haider95b-u,Haider97a}\NOTE{Haider noch mal lesen};
+on one's theoretical assumptions, subjects of sentences (\citealp{Haider95b-u,Haider97a}\todostefan{Haider noch mal lesen};
 \citealp[Section~3.2.2]{Berman2003a}) and determiners in NPs \citep[\page
 210]{Chomsky70a} are specifiers. Furthermore, degree modifiers \citep[\page
 210]{Chomsky70a} in adjective phrases and measurement indicators in prepositional phrases are also counted as specifiers.
@@ -1470,6 +1478,7 @@ plausible when one considers more complex noun phrases:
 	 the Maria from Hamburg\\
 \glt `Maria from Hamburg'
 \zl
+%\addlines[2]
 Unary projections are somewhat inelegant but this should not concern us too much here, as we have
 already seen in the discussion of the lexical entries in (\ref{Lexikon-Projektion})
 that unary branching nodes can be avoided for the most part and that it is indeed desirable to avoid
@@ -1510,6 +1519,7 @@ Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
 
 \section*{Exercises}
 
+\addlines[2]
 \begin{enumerate}
 \item\label{ua-psg-eins}
 	On page~\pageref{page-unendlich-viele-grammatiken}, I claimed that there is an infinite number of
@@ -1543,7 +1553,7 @@ Make reference to coordination data in your answer. Assume that symmetric coordi
 coordinated phrases or words have the same syntactic category.
 
 \item \citet{FLGR2012a} suggested treating nounless structures like those in (\mex{1}) as involving
-  a phrasal construction that combines the determiner \emph{the} with an adjective.
+  a phrasal construction combining the determiner \emph{the} with an adjective.
 \eal
 \ex Examine the plight of the very poor.
 \ex Their outfits range from the flamboyant to the functional.

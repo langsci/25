@@ -15,17 +15,23 @@
 % ibox in Merkmalstrukturen + 0.5ex, da sonst Ausrichtung nicht klappt
 %\newcommand{\ibox}[1]{\hspace{0.5ex}\mbox{\rule[-1.2ex]{0mm}{2.3ex}\fbox{{\tiny\textrm #1}}}\hspace{0.5ex}}
 
-\def\ibox#1{\mbox{}\setbox2=\hbox{$\scriptstyle #1$}\lower.2ex\vbox{\hrule
-        \hbox{\vrule\kern1.25pt 
-        \vbox{\kern1.25pt\box2\kern1.25pt}\kern1.25pt\vrule}\hrule}}
+%% \def\ibox#1{\mbox{}\setbox2=\hbox{$\scriptstyle #1$}\lower.2ex\vbox{\hrule
+%%         \hbox{\vrule\kern1.25pt 
+%%         \vbox{\kern1.25pt\box2\kern1.25pt}\kern1.25pt\vrule}\hrule}}
 
 % im Text ist zusaetzlicher Platz falsch
 %\newcommand{\iboxt}[1]{\raisebox{0.36ex}{\fbox{{\tiny\textrm{#1}}}}}
 
-% based on TeXbook exercise 21.3
-\def\iboxt#1{\setbox2=\hbox{$\scriptstyle #1$}\lower.2ex\vbox{\hrule
-        \hbox{\vrule\kern1.25pt 
-        \vbox{\kern1.25pt\box2\kern1.25pt}\kern1.25pt\vrule}\hrule}}
+
+\newcommand{\iboxt}[1]{{%
+  \setlength{\fboxsep}{1.25pt}%
+  \fbox{$\scriptstyle #1$}%
+}}
+
+
+\newcommand{\ibox}[1]{%
+  \iboxt{#1}\,%
+}
 
 \newcommand{\iboxb}[1]{(\,\iboxt{#1}\,)}
 

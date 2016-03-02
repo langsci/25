@@ -78,6 +78,7 @@ rules. See \citew{Simpson83a}, \citew{Neeleman94a}, \citew{Wunderlich97c}, \cite
 \citew{Mueller2002b} for corresponding work in LFG, GB, Wunderlich's\aimention{Dieter Wunderlich}
 Lexical Decomposition Grammar\is{Lexical Decomposition Grammar} and HPSG. 
 
+\addlines
 Like the theories discussed in Chapters~\ref{Kapitel-GPSG}--\ref{Kapitel-HPSG}, CxG is also a non"=transformational\is{transformation} theory.
 Furthermore, no empty elements\is{empty element} are assumed in most variants of the theory and the assumption of lexical integrity\is{lexical integrity} is maintained
  as in LFG and HPSG. 
@@ -131,15 +132,20 @@ As we saw in Section~\ref{sec-HPSG-constituent-structure}, dominance relations i
 pairs. In general, CxG uses feature"=value pairs to describe linguistic objects, but dominance relations are represented by boxes \citep{KF99a,Goldberg2003a}: 
 
 \ea
+\setlength{\extrarowheight}{1pt}
+%\renewcommand{\arraystretch}{1.2}
+%\setlength{\tabcolsep}{10pt}
 \begin{tabular}{|ll|}\hline
+&\\[-8pt]
 \multicolumn{2}{|l|}{phon \phonliste{ the man }}\\
+%
+% DTRS
 \begin{tabular}[t]{|l|}\hline
 phon \phonliste{ the } \\\hline
 \end{tabular}&%
 \begin{tabular}[t]{|l|}\hline
 phon \phonliste{ man } \\\hline
-\end{tabular}\\
-  &\\\hline
+\end{tabular}\\[18pt]\hline
 \end{tabular}
 \z
 The structure can be written using feature"=value pairs as follows:
@@ -154,7 +160,6 @@ dtrs & \sliste{ [ phon \phonliste{ the } ], [ phon \phonliste{ man } ] }
 
 \subsection{The head"=complement construction}
 
-\addlines
 \citet{KF99a} assume the following construction for the combination of heads with their complements:
 
 \ea
@@ -175,7 +180,7 @@ loc   & \upshape $+$     \\
 \end{tabular}\\
 \hline
 \end{tabular} & \begin{tabular}[t]{@{}l@{}}\\
-+\\
+$+$\\
 \end{tabular}\\
 & &\\\hline
 \end{tabular}
@@ -189,20 +194,25 @@ The verb phrase construction\is{construction!verb phrase} is a sub-construction 
  
 \ea
 Verb phrase Construction:\\
-\begin{tabular}{|ll|}\hline
-{cat v} & \\
+\begin{tabular}{|ll@{~}l|}\hline
+{cat v} & & \\
+% DTRs
 \begin{tabular}[t]{|l@{~}l|}\hline
 role & head\\
 lex  & \upshape $+$   \\\hline
 \end{tabular}
 &%
-\begin{tabular}[t]{|l@{~}l|l}\cline{1-2}
+\begin{tabular}[t]{|l@{~}l|}\hline
 role         & filler   \\
-loc          & \upshape $+$        & \upshape $+$\\
+loc          & \upshape $+$\\
 {gf} & {$\neg$subj}\\
-\cline{1-2}
+\hline
+\end{tabular} & \begin{tabular}[t]{@{}l@{}}
+\\[8pt]
+$+$\\
+\\
 \end{tabular}\\
-& \\\hline
+& & \\\hline
 \end{tabular}
 \z
 
@@ -952,7 +962,7 @@ $\Phi$ is a Well"=Formed Structure according to a grammar $G$ if and only if:
 \noindent
 For comparison, a description is given in (\mex{1}) with the feature geometry that was assumed in
 Section~\ref{Abschnitt-Spr}.
-\begin{figure}
+%\begin{figure}
 \ea
 \onems[head-complement-phrase]{
 phon   \phonliste{ ate, a, pizza }\\
@@ -978,8 +988,8 @@ head-dtr  \onems[word]{
 non-head-dtrs  \sliste{ [ \textsc{synsem} \ibox{2} ] }
 }
 \z
-\vspace{-\baselineskip}
-\end{figure}%
+%\vspace{-\baselineskip}
+%\end{figure}%
 In (\mex{0}), the features \textsc{head-dtr} and \textsc{non-head-dtrs} belong to those features that phrases of type 
 \type{head"=complement"=phrase} have. In (\ref{feat-geom-swb}), however, the phrase corresponds only
 to the value of the \textsc{mother} feature and therefore has no daughters represented in the sign itself.
@@ -1174,6 +1184,7 @@ at hand cannot be used to argue for models that allow for the representation of 
 trees of depth greater one, but I still believe that such idioms can be found. Of course this is an
 open empirical question. 
 
+\addlines[-1]
 What is not an open empirical question though is whether humans store chunks with complex internal
 structure or not. It is clear that we do and much Construction Grammar literature emphasizes
 this. Constructional HPSG can represent such chunks, but SBCG cannot since linguistic signs do not
@@ -1259,7 +1270,8 @@ assuming a trace as in earlier versions of HPSG (see Section~\ref{sec-nld-HPSG})
 \textsc{gap} list (\slasch in earlier versions of HPSG). The \localf in Standard HPSG is used to
 bundle all those information that is shared between a filler and the gap. The lexical entry for the
 trace was given as (\ref{le-extraktionsspur}) on page~\pageref{le-extraktionsspur} and is repeated
-here for convenience:
+as (\mex{1}) for convenience.
+\begin{figure}
 \eas
 \label{le-extraction-trace-two}
 Extraction trace: \\
@@ -1273,13 +1285,15 @@ Extraction trace: \\
              }
 }
 \zs
+\vspace{-2\baselineskip}
+\end{figure}%
 For the trace-based analysis of extraction it is crucial that only information under
 \textsc{category} and \cont is shared between filler and gap. This information is bundled under
 \local. Information about daughters and phonology of the filler is not shared. Since traces are not
 pronounced, their \textsc{phonology} value would be incompatible with any \textsc{phonology} value of
-a filler. 
+a filler.\pagebreak
 
-\addlines
+%\addlines
 In a lexical approach, one would assume an additional lexical item with an element in \slasch or
 \textsc{gap}.
 \ea
@@ -1302,6 +1316,7 @@ Bagels, I like.
 \z
 In a trace-based account, the \textsc{form} value of the extracted element would be the empty list.
 
+\addlines
 Now, the problem is that not everybody agrees with the traceless analysis of unbounded
 dependencies. For instance, \citet{LH2006a} wrote a monograph discussing various versions of
 traceless accounts of extraction and argue against them. \citet{Chaves2009a} suggested solutions to
@@ -1397,26 +1412,21 @@ individual structure sharings in situations in which there is a systematic relat
 The feature geometry of constructional HPSG has the \phonv outside of \synsem. Therefore verbs can
 select for syntactic and semantic properties of their arguments but not for their phonology. For
 example, they can require that an object has accusative case but not that it starts with a
-vowel. SBCG allows for the selection of phonological information (the feature is called \form here) and one could try to justify this
-by pointing out that there are cases of selection in which the form of the selected argument depends
-on the form of the head. For example, the indefinite article in English has to be either \emph{a} or
-\emph{an} depending on whether the noun it is combined with starts with a vowel or not:
+vowel. SBCG allows for the selection of phonological information (the feature is called \form here)
+and one example of such a selection is the indefinite article in English, which has to be either \emph{a} or
+\emph{an} depending on whether the noun or nominal projection it is combined with starts with a
+vowel or not (Flickinger, Mail to the HPSG mailing list, 01.03.2016):
 \eal
 \ex an institute
 \ex a  house
 \zl
-So \emph{institute} could select for \emph{an}, while \emph{house} selects for \emph{a}. However,
-the situation is more complicate since prenominal adjectives influence the choice of determiner:
-\eal
-\ex a famous institute
-\ex an interesting house
-\zl
-In (\mex{0}) a phrasal nominal constituent is combined with the determiner and this shows that the
-phonology of the determiner has to be determined on the phrasal level and cannot be lexically
-encoded (unless one is willing to represent information about preceding adjuncts in the head noun
-somehow). The general question is whether there are phenomena that require a selection of \formvs by
-heads or whether all phonological phenomena are best handled by constraints on phonology on the
-phrasal level.
+\addlines
+The distinction can be modeled by assuming a selection feature for determiners.\footnote{
+  In Standard HPSG there is mutual selection between the determiner and the noun. The noun selects
+  the determiner via \spr and the determiner selects the noun via a feature called
+  \textsc{specified}\isfeat{specified}. This feature is similar to the \modf, which was explained in Section~\ref{sec-adjuncts-hpsg}.
+} An alternative would be of course to capture all phonological phenomena by formulating constraints on phonology on the
+phrasal level (see \citealp{BK94b} and \citealp{Walther99a-u} for phonology in HPSG).
 
 Note also that the treatment of raising and nonlocal dependencies in SBCG admits nonlocal selection of phonology
 values, since the \formv of the filler is present at the \argstl of the head from which the argument
@@ -1520,7 +1530,8 @@ format \citep{PMAZ2006a-u}. In the following, I will briefly present the formali
 
 \eas
 \label{CxG-DetNoun}
-\raisebox{3mm}{%
+\raisebox{2mm}{%
+\setlength{\extrarowheight}{1pt}
 \begin{tabular}[t]{|l@{}l@{~$\leftrightarrow$~}l|}\hline
 \multicolumn{3}{|l|}{\textbf{Construction} DetNoun}\\
 \hspace{1em}\mbox{}& \multicolumn{2}{@{}l|}{\textbf{subcase of} RefExp}\\
@@ -1551,7 +1562,11 @@ that the form contribution of the determiner must occur before that of the noun.
 Part of the information represented under f is the orthographic form (f.orth). The inheritance relation is given explicitly
 in the construction as in  \citet{KF99a}.
 
-The construction in (\mex{0}) can be represented in a similar way to the format used in Chapter~\ref{chap-feature-descriptions}:\is{construction!Determiner Noun}
+%\addlines
+The construction in (\mex{0}) can be represented in a similar way to the format used in
+Chapter~\ref{chap-feature-descriptions}:\is{construction!Determiner Noun} (\mex{1}) shows how this
+is done.
+\begin{figure}
 \ea
 \label{AVM-DetNoun}
 \ms[DetNoun]{
@@ -1573,8 +1588,9 @@ dtrs   & \liste{ \ms[Determiner]{
                  } }
 }
 \z
-
-\noindent
+\vspace{-\baselineskip}
+\end{figure}%
+%\noindent
 The structure in (\mex{0}) corresponds to a construction where the determiner directly precedes the noun because the form contribution of the determiner
 has been combined with that of the noun. This strict adjacency constraint makes sense as the claim that the determiner must precede the noun is not restrictive enough
 since sequences such as (\mex{1}b) would be allowed:
@@ -1626,6 +1642,7 @@ longer ones and that animate nouns tend to occur before inanimate ones.
 \ex S $\to$ NP[nom], NP[dat], NP[acc], V
 \ex S $\to$ NP[nom], NP[acc], PP, V
 \zl
+\addlines[2]
 It is possible to capture these generalizations in ECG if one specifies linearization constraints for more general constructions and more specific constructions
 inherit them from these. As an example, consider the Active"=Ditransitive Construction\is{construction!Active Ditransitive} discussed by
 \citet[\page 170]{BC2005a}:
@@ -1636,6 +1653,7 @@ inherit them from these. As an example, consider the Active"=Ditransitive Constr
 \ea
 ~\\*[-1.5\baselineskip]
 \label{CxG-Active-Ditransitive}
+\setlength{\extrarowheight}{1pt}
 \begin{tabular}[t]{|l@{}l@{~$\leftrightarrow$~}l|}\hline
 \multicolumn{3}{|l|}{\textbf{Construction} Active-Ditransitive}\\
 \hspace{1em}\mbox{}& \multicolumn{2}{@{}l|}{\textbf{subcase of} Pred-Expr}\\
@@ -1676,6 +1694,7 @@ This restriction could therefore be factored out as follows:
 \ea
 \label{CxG-Active-Agent-Verb}
 ~\\*[-1.5\baselineskip]
+\setlength{\extrarowheight}{1pt}
 \begin{tabular}[t]{|l@{}l@{~$\leftrightarrow$~}l|}\hline
 \multicolumn{3}{|l|}{\textbf{Construction} Active-Agent-Verb}\\
 \hspace{1em}\mbox{}& \multicolumn{2}{@{}l|}{\textbf{subcase of} Pred-Expr}\\
@@ -1697,6 +1716,7 @@ triangle \citep[Chapter~5]{Langacker87a-u}.
 \citet[\page 67]{Chang2008a-u} gives the following formalization:\is{hypotenuse}
 \ea
 ~\\*[-1.5\baselineskip]
+\setlength{\extrarowheight}{1pt}
 \begin{tabular}[t]{|l@{}l@{~$\leftrightarrow$~}l|}\hline
 \multicolumn{3}{|l|}{\textbf{Schema} hypotenuse}\\
 \hspace{1em}\mbox{}& \multicolumn{2}{@{}l|}{\textbf{subcase of} line-segment}\\
@@ -1765,6 +1785,7 @@ comes with a name and can be depicted as follows:
 \end{tabular}
 }
 \z
+\addlines
 Linguistic objects have a form and a meaning pole. The two poles could be organized into a single feature
 description by using a \textsc{syn} and a \textsc{sem} feature, but in FCG papers the two poles are
 presented separately and connected via a double arrow. (\mex{1}) is an example:
@@ -1900,7 +1921,7 @@ repair strategy would never kick in. Consider (\mex{1}):\footnote{
      beat   the man  dead\\
 \glt `Beat the man to death!' or `Beat the dead man!'
 \z
-\addlines
+%\addlines
 (\mex{0}) has two readings: the resultative reading in which \emph{tot} `dead' expresses the result of the
 beating and another reading in which \emph{tot} is a depictive predicate. The second reading is
 dispreferred, since the activity of beating dead people is uncommon, but the structure is parallel to
@@ -2276,6 +2297,7 @@ parts of phrases is given in (\mex{1}):
      this   book has the man  me  promised     his    wife to give   who yesterday here performed is\\
 \glt `The man who performed here yesterday promised me to give this book to his wife.'
 \z 
+\addlines[2]
 We see that material that refers to \emph{der Mann} `the man', namely the relative clause \emph{der gestern
   hier aufgetreten ist} `who performed here yesterday', appears to the right. And the object of
 \emph{geben} `to give', which would normally
@@ -2293,8 +2315,8 @@ Summing up the discussion of parsimony, it has to be said that van Trijp has to 
 on how continuity is ensured. The formalization of this is not trivial and only after this is done
 can FCG be compared with the \slasch"=based approach.
 
-In addition to all the points discussed so far, there is a logical flaw in van Trijp's argumentation:
-he states that:
+In addition to all the points discussed so far, there is a logical flaw in van Trijp's argumentation.
+He states that:
 \begin{quote}
 whereas the filler-gap analysis cannot explain \textsc{why} \emph{do}-support does not occur
   in \emph{wh}-questions where the subject is assigned questioning focus, this follows naturally
@@ -2394,6 +2416,7 @@ Chapter~\ref{Abschnitt-Diskussion-Performanz}). But if we are neutral with respe
 issues, we are fine. In fact, there is psycholinguistic work that couples HPSG grammars to
 performance models \citep{Konieczny96a-u} and similar work exists for TAG \citep{SJ93a,DK2008a-u}. 
 
+\addlines
 Finally, there is also work in Construction Grammar that abstracts away from performance
 considerations. For instance, Adele Goldberg's book from \citeyear{Goldberg95a} does
 not contain a worked out theory of performance facts. It contains boxes in which grammatical
@@ -2424,7 +2447,7 @@ and TRALE\is{TRALE} (Richter 2006). However, none of these platforms supports a 
 implementation of an SBCG grammar as a general constraint system, so SBCG’s
 performance-independence hypothesis remains conjecture until proven otherwise.
 \end{quote}
-\addlines
+%\addlines
 There are two issues that should be kept apart here: efficiency and faithfulness to the
 theory. First, as Levine and Meurers point out, there were many constraint solving systems at the
 beginning of the 90's. So there are computer systems that can and have been used to implement
@@ -2456,6 +2479,7 @@ head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
 non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
 \zs
+%\addlines
 This can be translated into a phrase structure grammar in a straight-forward way:
 \eal
 \ex \onems[head-argument-phrase~]{
@@ -2541,7 +2565,7 @@ mother & \ibox{1} \\
 dtrs   & \ibox{2}
 }
 \z
-\addlines[2]
+%\addlines[2]
 The value of \textsc{dtrs} is a list and hence \iboxt{2} stands for the list of daughters on the right
 hand side of the phrase structure rule as well. The type \type{construction} is a supertype of all
 constructions and hence (\mex{0}) can be used to analyze all phrases that are licensed by the
@@ -2572,6 +2596,7 @@ to implement a set of grammars.
 
 \subsubsubsection{Static constraints vs.\ dynamic mappings and signature $+$ grammar vs.\ open-endedness}
 
+\addlines
 The cool thing about Fluid Construction Grammar is its fluidity, that is there are certain
 constraints that can be adapted if there is pressure, the inventory of the theory is open-ended, so
 categories and features can be added if need be.
@@ -2621,7 +2646,7 @@ governing verb.
 \ea
 I am waiting for my man.
 \z 
-\addlines[2]
+%\addlines[2]
 So, assuming strict locality of selection requires that all phenomena that cannot be treated locally
 have to be analyzed by passing information up.
 %% \footnote{
@@ -2666,6 +2691,7 @@ between HPSG/SBCG and FCG.
 
 \subsubsubsection{A note on engineering}
 
+\addlines[2]
 My biggest problem with FCG is that linguistic and engineering aspects are mixed.\footnote{
 This is not a problem if all FCG papers are read as papers documenting the FCG-system (see
 Footnote~\ref{Steels-FCG-System} on page~\pageref{Steels-FCG-System}) since then it
