@@ -171,6 +171,7 @@ information about inflection. Complete words can be combined in the syntax with 
 from which purely phrasal approaches suffer are thereby avoided. Nevertheless generalizations about lexeme classes and the utterances that can be formed can be
 captured in the hierarchy.
 
+\addlines[2]
 There are also principles in addition to inheritance hierarchies: the Semantics Principle\is{principle!Semantics} presented in Section~\ref{Abschnitt-HPSG-Semantik} holds
 for all languages. The Case Principle\is{principle!case} that we also saw is a constraint that only applies to a particular
 class of languages, namely nominative"=accusative languages\is{case!nominative}\is{case!accusative}.
@@ -182,9 +183,8 @@ exists has still not been answered conclusively. Should it turn out that this kn
 that the part of the inheritance hierarchy that is relevant for all languages is innate together
 with the relevant principles (\eg the constraints on Head-Argument structures and the Semantics Principle). It could, however, also be the case that only a part of the more generally
 valid types and principles is innate since something being innate does not follow from the fact that
-it is present in all languages (see also Section~\ref{Abschnitt-Universalien-Zusammenfassung}).
+it is present in all languages (see also Section~\ref{Abschnitt-Universalien-Zusammenfassung}).\todostefan{Hier vielleicht noch etwas zur Variation sagen. Warum können benachbarte Dialekte nicht wild variieren?}
 
-\todostefan{Hier vielleicht noch etwas zur Variation sagen. Warum können benachbarte Dialekte nicht wild variieren?}
 In sum, one can say that theories that describe linguistic objects using a consistent descriptive inventory and make use of inheritance hierarchies to capture
 generalizations are the ones best suited to represent similarities between languages. Furthermore,
 this kind of theory is compatible with both a positive and a negative
@@ -235,6 +235,8 @@ typologically diverse languages in parallel:
 \item French\il{French}
 \end{itemize}
 \noindent
+%\addlines % wow this eats a figure and part of a footnote 03.03.2016
+%\largerpage
 These languages belong to diverse language families 
 (Indo-European, % Germanic: German, Danish, Yiddish, English, Romance: Spanish, French,
                 % Indo-Iranian: Hindi, Persian
@@ -297,6 +299,7 @@ can be depicted as in Figure~\vref{fig-german-dutch}.
      \end{tikzpicture}
 \caption{\label{fig-german-dutch}Shared properties of German and Dutch}
 \end{figure}%
+%\largerpage[2]
 There are some properties that are shared between German and Dutch (Set 3). For instance, the
 argument structure of lexical items, a list containing descriptions of syntactic and semantic properties of
 arguments and the linking of these arguments to the meaning of the lexical items, is contained in Set 3. In
@@ -318,6 +321,8 @@ constraints that hold for German and Dutch only.\footnote{
   illustrated in the figure and I keep the names Set~1 and Set~2 from Figure~\ref{fig-german-dutch} for the constraint sets for German
   and Dutch.
 } For instance, Set~4 contains constraints regarding verbal complexes and SOV order.
+% moved on top of the figure
+The union of Set 4 and Set 5 is Set 3 of Figure~\ref{fig-german-dutch}.
 \begin{figure}
 \centering
 \begin{tikzpicture}
@@ -344,7 +349,6 @@ constraints that hold for German and Dutch only.\footnote{
      \end{tikzpicture}
 \caption{\label{fig-german-dutch-danish}Shared properties of German, Dutch, and Danish}
 \end{figure}%
-The union of Set 4 and Set 5 is Set 3 of Figure~\ref{fig-german-dutch}.
 
 If we add further languages, further constraint sets will be
 distinguished. Figure~\vref{fig-german-dutch-danish-english-french} shows the situation that results
@@ -386,6 +390,7 @@ but not by French, but the general idea should be clear: by systematically worki
 arrive at constraint sets that directly correspond to those that have been established in the typological
 literature.
 
+%\addlines[-1]
 The interesting question is what will be the topmost set if we consider enough languages. At
 first glance, one would expect that all languages have valence representations and linkings between
 these and the semantics of lexical items (argument structure lists in the HPSG framework). However,
