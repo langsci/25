@@ -946,7 +946,7 @@ pronouns come from different clauses: \emph{du} belongs to the matrix verb \emph
 extraposition target the left-most and right-most positions of a clause, respectively. This can be
 modeled in constituency"=based approaches in a straightforward way, as has been shown in the previous chapters.
 
-\addlines[2]
+%\addlines[2]
 As an alternative to discontinuous constituents, one could assume additional mechanisms that
 promote the dependency of an embedded head to a higher head in the structure. Such an analysis was
 suggested by \citet{Kunze68a-u}, \citet{Hudson97a,Hudson2000a}, \citet{Kahane97a}, \citet{KNR98a},
@@ -1064,7 +1064,8 @@ Figure~\ref{fig-wen-glaubst-du-dass-dg-rising}, Figure~\ref{fig-wen-glaubst-du-d
 extraction link from \emph{dass} `that' to \emph{wen} `who'. One could use the graphic representation of Engel,
 Eroms, and Gross \& Osborne to display the Word Grammar dependencies: one would simply add dashed
 lines from the V$_{prt}$ node and from the Subjunction node to the N node dominating \emph{wen}
-`who'.\footnote{
+`who'.
+
 While this looks simple, I want to add that Word Grammar employs further principles that have to be
 fulfilled by well"=formed  structures. In the following I explain the \emph{No-tangling Principle},
 the \emph{No-dangling Principle} and the \emph{Sentence-root Principle}.
@@ -1081,10 +1082,11 @@ In every non-compound sentence there is just one word whose parent
 is not a word but a contextual element.
 \end{principle}
 
+\noindent
 The No-tangling Principle ensures that there are no crossing dependency lines, that is, it ensures
 that structures are projective \citep[\page 23]{Hudson2000a}. Since non-local dependency relations are established via the
 specific dependency mechanism, one wants to rule out the non"=projective analysis. This principle
-also rules out (i.b), where \emph{green} depends on \emph{peas} but is not adjacent to
+also rules out (\mex{1}b), where \emph{green} depends on \emph{peas} but is not adjacent to
 \emph{peas}. Since \emph{on} selects \emph{peas} the arrow from \emph{on} to \emph{peas} would cross
 the one from \emph{peas} to \emph{green}.
 \eal
@@ -1096,20 +1098,19 @@ He lives green on peas.
 }
 \zl
 The No-dangling Principle makes sure that there are no isolated word groups that are not connected to the main part
-of the structure. Without this principle (i.b) could be analyzed with the isolated word
+of the structure. Without this principle (\mex{0}b) could be analyzed with the isolated word
 \emph{green} \citep[\page 23]{Hudson2000a}.
 
 The Sentence-root Principle is needed to rule out structures with more than one highest
 element. \emph{glaubst} `believe' is the root in Figure~\ref{fig-wen-glaubst-du-dass-wg}. There is
 no other word that dominates it and selects for it. The principle makes sure that there is no other
 root. So the principle rules out situations in which all elements in a phrase are roots, since
-otherwise the No-dangling Principle would lose its force since it could be fulfilled trivially \citep[\page 25]{Hudson2000a}.
+otherwise the No-dangling Principle would lose its force as it could be fulfilled trivially \citep[\page 25]{Hudson2000a}.
 
-I added this rather complicated set of principles in a footnote here in order to get a fair
+I added this rather complicated set of principles here in order to get a fair
 comparison with phrase structure"=based proposals. If continuity is assumed for phrases in general,
 the three principles do not have to be stipulated. So, for example, \lfg and \hpsg
 do not need these three principles.
-}
 
 Note that \citet[\page 16]{Hudson97a} assumes that the element in the \vf is extracted even for simple
 sentences like (\ref{ex-Diesen-Mann-kent-jeder-dg}). I will show in Section~\ref{sec-linearization-problems-dg} why I think that
@@ -1490,6 +1491,7 @@ page~\pageref{passiv-lr-mit-dtr} and
 Section~\ref{Abschnitt-leere-Elemente-LRs-Transformations}). The affixes are integrated into the
 lexical rules or into realization functions that specify the morphological form of the item that is licensed by the lexical rule.
 
+\addlines[2]
 Concluding it can be said that transfer corresponds to 
 \begin{itemize}
 \item binary"=branching phrase structure rules,
@@ -1702,13 +1704,14 @@ dg edges
 This structure would have the additional problem of being non-projective.\is{projectivity} Eroms does treat the determiner
 differently from what is assumed here, so this type of non"=projectivity may not be a problem for
 him. However, the head analysis of negation would result in non"=projectivity in so"=called coherent
-constructions in German. The following sentence has two readings: in the first reading, the negation
+constructions in German. The sentence in (\mex{1}) has two readings: in the first reading, the negation
 scopes over \emph{singen} `sing' and in the second one over \emph{singen darf} `sing may'.
 \ea\label{ex-dass-er-nicht-singen-darf} 
 \gll dass er nicht singen darf\\
      that he not sing may\\
 \glt `that he is not allowed to sing' or `that he is allowed not to sing'
 \z
+\addlines
 The reading in which \emph{nicht} `not' scopes over the whole verbal complex would result in the
 non-projective structure that is given in Figure~\vref{dg-nicht-singen-darf}.
 \begin{figure}
@@ -1842,6 +1845,7 @@ für Deutsche Sprache, Mannheim: \url{http://www.ids-mannheim.de/kl/projekte/kor
 }
 \glt `Blood oranges give a strong color to the juice.'
 \z
+\addlines[2]
 The dependency graph of this sentence is given in Figure~\vref{fig-dem-saft-eine-kraeftige-farbe-dg}.
 \begin{figure}[htb]
 \centerline{
@@ -2499,6 +2503,7 @@ be represented somewhere. I will discuss this in the following subsection.
 \label{sec-dg-daughters-mothers}
 \label{sec-dg-is-simpler}
 
+%\addlines
 As \citet{Oliva2003a} points out, the equivalence of Dependency Grammar and HPSG only holds up as far
 as \headvs are concerned.
 %\todostefan{S: many DG have several level of representations. You cannot compare HSG wioth only one
