@@ -284,8 +284,9 @@ nodes.
 
 \citet{KJ2003a} use a variant of \emph{Minimal Recursion
 Semantics}\indexmrs as their semantic representational formalism
-\citep*{CFPS2005a}. I will use a considerably simplified representation here, as I did in the HPSG
-chapter. For the elementary trees \emph{Max}, \emph{likes} and \emph{Anouk}, we can assume the semantic representations in (\mex{1}).
+\citep*{CFPS2005a}. I will use a considerably simplified representation here, as I did in
+Section~\ref{Abschnitt-HPSG-Semantik} on semantics in HPSG. For the elementary trees \emph{Max},
+\emph{likes} and \emph{Anouk}, we can assume the semantic representations in (\mex{1}). 
 \ea
 Semantic representations for elementary trees:\\*
 \begin{tabular}[t]{|l|}\hline
@@ -326,6 +327,7 @@ cases with embedded verbs. Interested readers are referred to the original artic
 \section{Local reordering}
 \label{Abschnitt-MC-TAG}\label{sec-ld-lp-tag}
 
+\addlines
 In\is{constituent order|(} TAG, there is a family of trees for each word. In order to account for ordering variants, one can assume that there
 are six trees corresponding to a ditransitive verb and that each of these corresponds to a different ordering of the arguments.
 Trees are connected to one another via lexical rules\is{lexical rule}. This lexical rule"=based
@@ -444,6 +446,7 @@ The left tree in Figure~\ref{Abbildung-Kontrollverben-TAG} contains traces in th
 NP slots in higher trees positions. An interesting difference to other theories is that these traces\is{empty element} only exist in the tree. They are not
 represented as individual entries in the lexicon as the lexicon only contains words and the corresponding trees.
 
+%\largerpage
 The tree for \emph{versprach} `promised' can be inserted into any S node in the tree for \emph{zu überführen} `to indict' and results in
 trees such as those in the Figures~\ref{Abbildung-TAG-Permutation-one} and~\ref{Abbildung-TAG-Permutation-two}.
 %\thefiguresref{Abbildung-TAG-Permutation-one}{Abbildung-TAG-Permutation-two}.
@@ -587,6 +590,7 @@ and TT-MC-TAG\is{Tree Adjoining Grammar (TAG)!Tree Tuple MC-TAG (TT-MC-TAG)} \ci
 
 \section{Verb position}
 
+%\largerpage
 The position of the verb\is{verb position|(} can be analyzed in a parallel way to the GPSG analysis:
 the verb can be realized in initial or in final position in a given linearization domain. Since the
 verb position has an effect on the clause type and hence on semantics, a lexical rule"=based
@@ -607,6 +611,7 @@ an accusative object is explicitly mentioned in the input of the lexical rule. K
 uses a semantic null role for a non-realized object of intransitive verbs (p.\,56). Such an analysis
 with abstract auxiliary entities can be avoided easily: one can instead use the HPSG\indexhpsg
 analysis going back to \citet{Haider86}, which was presented in Section~\ref{Abschnitt-HPSG-Passiv}.
+\largerpage
 
 There\is{inheritance!multiple|(} are also proposals in TAG that use inheritance to deal with valence changing processes 
 in general and the passive in particular (\citealp{Candito96a} and \citealp*{KSYJ2006a} following Candito). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
@@ -1027,6 +1032,7 @@ for the ditransitive verb \emph{geben} `give'.
 \caption{\label{Abbildung-Lexical-Set-geben-V-TAG}Lexicon set for \emph{geben} `to give' in V"=TAG
   according to \citet[\page 6]{Rambow94a}}
 \end{figure}%
+\addlines
 The lexicon set consists of a tree for the verb, an empty element of the category VP and three trees where a VP has been combined with
 an NP. As in MC"=TAG, dominance relations are also indicated. The dominance constraints in Figure~\ref{Abbildung-Lexical-Set-geben-V-TAG}
 ensure that all lower VP nodes dominate the highest VP node of the tree further to the right. The order of the arguments of the verb as

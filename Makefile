@@ -58,13 +58,18 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 # So I use "." as a separator for the subject index and "+" as separator for the authors index.
 # St. Mü. 16.02.2016
 
+# Since having the references missing results in different page layout
+# \addlines throws errors. These are skipped with nonstopmode
+# no, I rather call addlines in draft mode and make sure before that it 
+# works properly.
+
 %.pdf: %.tex $(SOURCE)
 	\rm -f $*.bbl
-	xelatex -no-pdf $* |grep -v math
+	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
 	bibtex  -min-crossrefs=200 $*
-	xelatex -no-pdf $* |grep -v math
+	xelatex -no-pdf -interaction=nonstopmode $* 
 	bibtex  -min-crossrefs=200 $*
-	xelatex $* -no-pdf |egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+	xelatex $* -no-pdf
 	correct-toappear
 	correct-index
 	\rm $*.adx
@@ -73,7 +78,9 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
-	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+	xelatex $* 
+
+#	xelatex $* -no-pdf |egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
 
 
 # idx = author index
