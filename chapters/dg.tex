@@ -2,7 +2,6 @@
 \chapter{Dependency Grammar}
 \label{Kapitel-DG}
 
-
 Dependency Grammar is the oldest framework described in this book. Its modern version was developed by the
 French linguist Lucien Tesnière (1893--1954). His foundational work \emph{Eléments de syntaxe
   structurale} `Elements of structural syntax' was basically finished in 1938 only three years after
@@ -21,8 +20,8 @@ linearization of constituents, it is often felt to be more appropriate for langu
 constituent order, which is one reason for its popularity among researchers working on Slavic\il{Slavic}
 languages: the New Prague School\is{New Prague School} represented by Sgall, Hajičová and Panevova developed Dependency Grammar further,
 beginning in the 1960s (see \citealp{HS2003a-u} for an overview).  Igor\,A.\ Meľčuk and
-A.\,K.\ Žolkovskij started in the 1960s in the Soviet Union to work on a model called Meaning–Text Theory, which was also used in Machine
-Translation projects \citep{Melcuk64a-u,Melcuk81a,Melcuk88a-u,Kahane2003a-u}. \mel left the
+A.\,K.\ Žolkovskij started in the 1960s in the Soviet Union to work on a model called \mtt, which was also used in machine
+translation projects \citep{Melcuk64a-u,Melcuk81a,Melcuk88a-u,Kahane2003a-u}. \mel left the
 Soviet Union towards Canada in the 1970s and now works in Montréal. 
 
 Dependency Grammar is very wide-spread in Germany and among scholars of German linguistics
@@ -51,13 +50,15 @@ Edeltraud \citet{Werner93a-u}, Halle-Wittenberg.\pagebreak
 
 Although work has been done in many countries and continuously over the decades since 1959, a
 periodical international conference was established as late as 2011.\footnote{
-  \url{http://depling.org/}. 10.04.2015.
+% \url is replaced here, since it does cruel things to (our) fonts, which means that the first footnote number
+% comes out too high. 04.03.2016 bug 
+  \href{http://depling.org/}{http://depling.org/}. 10.04.2015.
 }$^,$\footnote{
-  A conference on Meaning Text Theory has taken place biannually since 2003.
+  A conference on \mtt has taken place biannually since 2003.
 }
 
-From early on, Dependency Grammar was used in computational projects. Meľčuk worked on Machine
-Translation in the Soviet Union \citep{Melcuk64a-u} and David G.\ Hays worked on Machine Translation
+From early on, Dependency Grammar was used in computational projects. Meľčuk worked on machine
+translation in the Soviet Union \citep{Melcuk64a-u} and David G.\ Hays worked on machine translation
 in the United States \citep{HZ60a-u}. Jürgen Kunze, based in East Berlin at the German Academy of
 Sciences, where he had a chair for computational linguistics, also started to work on machine
 translation in the 1960s. A book that describes the formal background of the linguistic work was
@@ -416,7 +417,7 @@ the \emph{actants}\is{actant} and apart from this there is the background, the s
 are the arguments in other theories and the stage-describing entities are called
 \emph{circumstants}. These circumstants are modifiers and usually analyzed as adjuncts in the other
 theories described in this book. As far as the representation of dependencies is concerned, there is
-not much of a difference between arguments and adjuncts in Dependency Grammar:
+not much of a difference between arguments and adjuncts in Dependency Grammar.
 Figure~\vref{fig-the-child-often-reads-the-book-slowly} shows the analysis of (\mex{1}):
 \ea
 The child often reads the book slowly.
@@ -544,7 +545,7 @@ means that all dependents of a head have to be realized close to the head unless
 liberation are used (see for instance Section~\ref{sec-nld-dg} on nonlocal dependencies).\footnote{\label{fn-projective-dg-vs-constituents}%
   While this results in units that are also assumed in phrase structure grammars, there is a
   difference: the units have category labels in phrase structure grammars (for instance NP), which is not the case in
-  Dependency Grammars. In Dependency Grammars one just refers to the label of the head (for instance
+  Dependency Grammars. In Dependency Grammars, one just refers to the label of the head (for instance
   the N that belongs to \emph{child} in Figure~\ref{fig-the-child-often-reads-the-book-slowly}) or
   one refers to the head word directly (for instance, the word \emph{child} in
   Figure~\ref{fig-the-child-reads-the-book-dg-words}). So there are fewer nodes in Dependency
@@ -574,8 +575,7 @@ have to be solved and it is clear that dependency graphs representing dependenci
 into account linear order are not sufficient. An unordered dependency graph assigns grammatical
 functions to a dependent of a head and hence it is similar in many respects to an \lfg
 f"=structure.\footnote{
-Tim Osborne (p.\,c.\ 2015) reminds me that this is not true in all cases: for instance non
-predicative prepositions are not reflected in f"=structures, but of course they are present in
+Tim Osborne (p.\,c.\ 2015) reminds me that this is not true in all cases: for instance non"=predicative prepositions are not reflected in f"=structures, but of course they are present in
 dependency graphs.
 } For a sentence
 like (\ref{ex-david-devoured-a-sandwich-at-noon-yesterday}) on page~\pageref{ex-david-devoured-a-sandwich-at-noon-yesterday}, repeated here as (\mex{1}), one gets
@@ -593,7 +593,7 @@ as no surprise that \citet[\page 308]{Broeker2003a-u} suggested to use glue sema
 Grammar as well. Glue semantics was already introduced in Section~\ref{glue-semantics}.
 
 There are some variants of Dependency Grammar that have explicit treatments of
-semantics. One example is Meaning Text Theory \citep{Melcuk88a-u}. Word Grammar is another one
+semantics. One example is \mtt \citep{Melcuk88a-u}. Word Grammar is another one
 (Hudson \citeyear[Chapter~7]{Hudson91a-u}; \citeyear[Chapter~5]{Hudson2007a-u}). The notations of
 these theories cannot be introduced here. It should be noted though that theories like Hudson's Word
 Grammar are rather rigid about linear order and do not assume that all the sentences in
@@ -641,13 +641,13 @@ dg edges
 \caption{\label{fig-passive-dg}Analysis of [\emph{dass}] \emph{der Weltmeister geschlagen wird}
   `that the world champion is (being) beaten' parallel to the analyses provided by \citet[\page 53--54]{Engel2014a}}
 \end{figure}%
-This figure is an intuitive depiction of what is going on in passive. A formalization would
+This figure is an intuitive depiction of what is going on in passive constructions. A formalization would
 probably amount to a lexical rule for the personal passive. See \citew[\page
   629--630]{Hellwig2003a} for an explicit suggestion of a lexical rule for the analysis of the
 passive in English.
 
 Note that \emph{der Weltmeister} `the world champion' is not an argument of the passive auxiliary
-\emph{wird} `is' in Engel's analysis. This means that subject verb agreement\is{agreement} cannot be determined
+\emph{wird} `is' in Engel's analysis. This means that subject--verb agreement\is{agreement} cannot be determined
 locally and some elaborated mechanism has to be developed for ensuring agreement.\footnote{%
 This problem would get even more pressing for cases of the so-called remote passive\is{remote passive}:
 \eal
@@ -1166,7 +1166,7 @@ may depend on adjectives or adverbs.
 %% This is very good definition for this time, directly inspired by the definition of POS of Jespersen
 %% 1924.} 
 This situation is depicted in the general dependency graph in
-Figure~\vref{fig-tesniere-general-stemma}. The `*' means that there can be arbitrarily many
+Figure~\vref{fig-tesniere-general-stemma}. The `*' means that there can be an arbitrary number of
 dependencies between Es.
 \begin{figure}
 \begin{forest}
@@ -1247,7 +1247,7 @@ Both nouns are connected to the dominating verb and both nouns dominate the same
 An alternative to such a special treatment of coordination would be to treat the conjunction as the
 head and the conjuncts as its dependents.\footnote{%
 I did not use \tes's category labels here to spare the
-reader the work of translating I to V and N to O.}
+reader the work of translating I to V and O to N.}
 The only problem of such a proposal would be the
 category of the conjunction. It cannot be Conj since the governing verb does not select a Conj, but
 an N. The trick that could be applied here is basically the same trick as in Categorial Grammar (see
@@ -2335,7 +2335,7 @@ discussed above.
 
 There is some dispute going on about the question of whether constituency/""dependency is
 primary/necessary to analyze natural language: while %\citet[\page 83]{Korhonen77a}, 
-\citet{Hudson80a}, and \citet{Engel96a} claim that dependency is
+\citet{Hudson80a} and \citet{Engel96a} claim that dependency is
 sufficient, a claim  that is shared by dependency grammarians (according to \citealp{Engel96a}), \citet{Leiss2003a} claims
 that it is not. In order to settle the issue, let us take a look at some examples:
 \ea
@@ -2383,7 +2383,7 @@ But note that this does not hold in the general case. Take for instance the exam
      that Peter comes    resolves not whether Klaus plays\\
 \glt `That Peter comes does not resolve the question of whether Klaus comes.'
 \z
-Here the words \emph{dass} and \emph{kommt} appear twice. Without any notion of constituency or
+Here the word \emph{kommt} appears twice. Without any notion of constituency or
 restrictions regarding adjacency, linear order and continuity, we cannot assign a dependency graph
 unambiguously. For instance, the graph in Figure~\vref{fig-dass-peter-kommt-klaert-nicht-ob-non-projective} is perfectly compatible with the
 meaning of this sentence: \emph{dass} dominates \emph{kommt} and \emph{kommt} dominates
@@ -2427,12 +2427,14 @@ constituents back in (see Footnote~\ref{fn-projective-dg-vs-constituents} on pag
 Similarly, non"=projective analyses without any constraints regarding continuity would permit the
 word salad in (\mex{1}b):
 \eal
-\ex
+\ex[]{
 \gll Deshalb klärt, dass Peter kommt, ob Klaus spielt.\\
      therefore resolves that Peter comes whether Klaus plays\\
-\ex
+}
+\ex[*]{
 \gll Deshalb klärt dass ob Peter Klaus kommt spielt.\\
      therefore resolves that whether Peter Klaus comes plays\\
+}
 %% Haider, das Beispiel ist vielleicht nicht so gut,
 %% weil man argumentieren könnte, dass die Relativsätze in einer bestimmten Reihenfolge stehen
 %% müssen, da die Bezugsnomen in einer bestimmten Reihenfolge stehen. 06.11.2014
@@ -2517,7 +2519,7 @@ lexical material and the complete phrase is given in (\mex{1}):\footnote{
 }
 \eal
 \ex \emph{a}: $\lambda P \lambda Q \exists x (P(x) \wedge Q(x))$
-\ex \emph{book}: $\lambda y\;(\relation{book}(y)))$
+\ex \emph{book}: $\lambda y\;(\relation{book}(y))$
 \ex \emph{a book}: $\lambda Q \exists x (\relation{book}(x) \wedge Q(x))$
 \zl
 Now, the problem for the Dependency Grammar notation is that there is no NP node that could be
@@ -2540,7 +2542,7 @@ head of the phrase. So for \emph{a book} we would get the following representati
 \ea
 \ms{
 cont & $\lambda Q \exists x (\relation{book}(x) \wedge Q(x))$\\
-lexical-cont & $\lambda y\;(\relation{book}(y)))$
+lexical-cont & $\lambda y\;(\relation{book}(y))$
 }
 \z
 With this kind of representation one could maintain analyses in which the semantic contribution of a
