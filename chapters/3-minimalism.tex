@@ -902,8 +902,9 @@ these projections and since the order of the Object Phrases is not restricted, b
 
 At the start of the 90s, Chomsky suggested a major rethink of the basic theoretical assumptions of GB and only keeping
 those parts of the theory which are absolutely necessary. In the \emph{Minimalist Program}, Chomsky gives the central motivations for the far"=reaching
-revisions of GB theory \citep{Chomsky93b-u,Chomsky95a-u}. Until the beginning of the 90s, it was assumed that Case Theory, the Theta Criterion, 
-\xbar theory, Subjacency, Binding Theory, Control Theory etc.\ all belonged to the innate faculty
+revisions of GB theory \citep{Chomsky93b-u,Chomsky95a-u}. Until the beginning of the 90s, it was
+assumed that Case Theory\is{Case Theory}, the Theta"=Criterion\is{theta-criterion@Theta"=Criterion}, \xbart, Subjacency\is{Subjacency}, Binding
+Theory\is{Binding Theory}, Control Theory\is{Control Theory} etc.\ all belonged to the innate faculty
 for language \citep[\page 804]{Richards2015a}. This, of 
 courses, begs the question of how this very specific linguistic knowledge made its way into our genome. The Minimalist Program follows up on this
 point and attempts to explain properties of language through more general cognitive principles and to reduce the amount of innate language"=specific 
@@ -935,6 +936,7 @@ the number of basic, structure building operations which license structures to t
 Move corresponds to the operation \movea, which was already discussed in Chapter~\ref{chap-gb}, and
 Merge is the combination of (two) linguistic objects.
 
+%\addlines[2]
 It is generally assumed that exactly two objects can be combined \citep[\page 226]{Chomsky95a-u}.
 For Move, it is assumed that there must be a reason for a given movement operation. The reason for
 movement is assumed to be that an element can check some feature\is{feature checking} in the position it is moved to. This idea was already presented in the analysis of the passive in
@@ -954,7 +956,6 @@ human-specific ability to use language (faculty of language in the narrow sense)
 assume --, then the individual syntactic categories are not part of UG and data from other languages cannot be used
 to motivate the assumption of invisible categories in another language.
 
-%\addlines
 \subsubsection{Functional projections and modularization of linguistic knowledge}
 
 The assumption that movement must be licensed by feature checking has led to an inflation of the number of (silent) functional 
@@ -1049,6 +1050,7 @@ TopP and ForceP, \citet*{WHBH2007a-u} postulate an OuterTopP\is{category!functio
 \citet[\page 31]{Poletto2000a-u} suggests both a HearerP\is{category!functional!Hearer} and a SpeakerP\is{category!functional!Speaker} for the 
 position of clitics in Italian\il{Italian}.
 
+\addlines
 \citet[\page 106]{Cinque99a-u} adopts the 32 functional heads in Table~\vref{Tabelle-Cinque} in his work.
 \begin{table}
 \begin{tabular}[t]{@{}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{}}
@@ -2066,6 +2068,7 @@ the two Merge operations are not sets but pairs. The head in a pair is marked by
 `$>$'). Bracketed expressions like \{ $\alpha$, \{ $\alpha$, $\beta$ \} \}  (discussed in
    Section~\ref{Abschnitt-Labeling}) are replaced by trees like the one in \pmex{1}.
 \ea
+\label{tree-stabler-mg}
 \begin{forest}
 baseline
 [>
@@ -2075,7 +2078,7 @@ baseline
    [2]]]
 \end{forest}
 \z
-1 is the head in \pmex{0}, 2 is the complement and 3 the specifier. The pointer points to the part
+1 is the head in (\ref{tree-stabler-mg}), 2 is the complement and 3 the specifier. The pointer points to the part
 of the structure that contains the head. The daughters in a tree are ordered, that is, 3 is
 serialized before 1 and 1 before 2. 
 
@@ -2388,6 +2391,7 @@ head-dtr$|$synsem$|$loc$|$cat$|$head \ibox{1}\\
 \z
 Identity is represented by boxes with the same number. 
 
+%\addlines
 \citet[\page 30]{GSag2000a-u} represent all daughters of a linguistic object in a list that is given
 as the value of the \textsc{daughters} attribute\isfeat{daughters}. The value of the feature \textsc{head-daughter} is
 identified with one of the elements of the \textsc{daughters} list:
@@ -2403,6 +2407,7 @@ head-dtr & \ibox{1}\\
 dtrs & \liste{ $\alpha$, \ibox{1} $\beta$ }\\
 }%
 \zl
+\addlines[2]
 $\alpha$ and $\beta$ are shorthands for descriptions of linguistic objects. The important point
 about the two descriptions in \pmex{0} is that the head daughter is identical to one of the two
 daughters, which is indicated by the \ibox{1} in front of $\alpha$ and $\beta$, respectively. In the
@@ -2413,23 +2418,44 @@ correspond to the label\is{label} in Chomsky's definition. This notation corresp
 is used by Stabler: \pref{gs-a} is equivalent to \pmexa{1} and \pref{gs-b} is equivalent to
 \pmexb{1}.
 
-\eal
-\ex\label{stabler-a}
+%% \eal
+%% \ex\label{stabler-a}
+%%  \begin{forest}
+%%     baseline
+%%     [<
+%%       [$\alpha$]
+%%       [$\beta$]]
+%%     \end{forest}
+
+%% \ex\label{stabler-b}
+%%    \begin{forest}
+%%    baseline
+%%    [>
+%%     [$\alpha$]
+%%     [$\beta$]]
+%%     \end{forest}
+%% \zl  
+\ea
+%\label{stabler-a}
+\begin{tabular}[t]{@{}l@{~~}l@{\hspace{2cm}}l@{~~}l@{}}
+a. & 
  \begin{forest}
     baseline
     [<
       [$\alpha$]
       [$\beta$]]
     \end{forest}
-
-\ex\label{stabler-b}
+&
+b. & 
+\label{stabler-b}
    \begin{forest}
    baseline
    [>
     [$\alpha$]
     [$\beta$]]
     \end{forest}
-\zl  
+\end{tabular}
+\z
 
 \noindent
 An alternative structuring of this basic information, discussed by \citet[Chapter 9]{ps2},
@@ -2460,10 +2486,11 @@ mentioned, but \citet[\page 164]{ps2} restrict the head daughter to be a finite 
 assumes that CP and v*P are phases. If this constraint is incorporated into the definition in
 \pref{Definition-IM}, the restrictions on the label of t$_1$ would have to be extended
 accordingly. In HPSG, sentences like \pmex{1} have been treated as VPs, not as CPs and hence Pollard \&
-Sag's requirement that the head daughter in the Head Filler Schema be verbal corresponds to Chomsky’s restriction.
+Sag's requirement that the head daughter in the Head Filler Schema be verbal corresponds to Chomsky's restriction.
 \ea
 Bagels, I like.
 \z
+%\largerpage
 Hence, despite minor presentational differences, we may conclude that the formalization of Internal
 Merge and that of the Head-Filler Schema are very similar.
 % Nee, das sind ja ganz viele Varianten.
@@ -2514,7 +2541,7 @@ his analysis of TPs and CPs. Hence both remnant movement and argument compositio
 recent Minimalist proposals. The HPSG alternative, however,  would appear to need less theoretical
 apparatus and hence has to be preferred for reasons of parsimony. 
 
-\addlines[2]
+%\addlines[2]
 Finally, it should be mentioned that all transformational accounts have problems with Across the
 Board extraction\is{Across the Board Extraction} like \pref{ex-bagels-i-like-and-ellison-hates} and \pmex{1} in which one element corresponds to several gaps.
 \eal
@@ -2525,6 +2552,7 @@ Bagels, I like and Ellison hates.\footnote{
 }
 \ex The man who$_i$ [Mary loves \_$_i$] and [Sally hates \_$_i$] computed my tax.
 \zl
+\addlines[2]
 This problem was solved for GPSG by \citet{Gazdar81} and the solution carries over to HPSG. The
 Minimalist community tried to address these problems by introducing operations like sideward
 movement\is{sideward movement} \citep{Nunes2004a-u} where constituents can be inserted into sister trees. So in the
@@ -2546,7 +2574,9 @@ long"=distance dependencies. As was noted in footnote~\ref{fn-Kayne-Extrapositio
 page~\pageref{fn-Kayne-Extraposition}, there is dislocation to the right (extraposition\is{extraposition}) as well
 as fronting. Although these should certainly be analyzed as long"=distance dependencies, they differ from other
 long"=distance dependencies in various respects (see Section~\ref{Abschnitt-Fernabhängigkeiten}). For analyses of
-extraposition in the HPSG framework, see \citew{Keller95b}, \citew{Bouma96}, and \citew[Chapter~13]{Mueller99a}. 
+extraposition in the HPSG framework, see \citew{Keller95b}, \citew{Bouma96}, and 
+%\citew[Chapter~13]{Mueller99a}. 
+\citew{Mueller99a}. 
 
 Apart from the schema for long"=distance dependencies, there are of course other schemata in HPSG which are not
 present in MG or Minimalism. These are schemata which describe constructions without heads or are necessary to
@@ -2599,9 +2629,10 @@ the so"=called root node, can be checked with external merge. The only way featu
 means of movement. This means that a head may not combine with a partially saturated linguistic object, that is,
 with a linguistic object that has an unchecked selection feature. I will discuss this design
 decision with reference to an example provided by \citet[\page 95]{Adger2003a}. The noun
-\emph{letters} selects for a P and Ps select for an N. The analysis of (\mex{1}a) corresponds to the
-left tree in Figure~\vref{fig-letters-to-peter-adger}. 
-\addlines
+\emph{letters} selects for a P and Ps select for an N. 
+%The analysis of (\mex{1}a) corresponds to the left tree in
+%Figure~\vref{fig-letters-to-peter-adger}. 
+The analysis of (\mex{1}a) is depicted left in Figure~\vref{fig-letters-to-peter-adger}. 
 \eal
 \ex[]{
 letters to Peter
@@ -2630,6 +2661,7 @@ baseline
 \hfill\mbox{}
 \caption{\label{fig-letters-to-peter-adger}The analysis of \emph{letters to Peter} according to \citet[\page 95]{Adger2003a}}
 \end{figure}%
+\addlines[2]
 The string in (\mex{0}b) is ruled out since the uninterpretable N feature of the preposition
 \emph{to} is not checked. So this integrates the constraint that all
 dependent elements have to be maximal into the core mechanism. This makes it impossible to analyze examples like (\mex{1})
@@ -2656,7 +2688,10 @@ was suggested by \citet{Bruening2009a} in the Minimalist framework.
 
 Apart from this illustrative example with a fused preposition, there are other cases in which one may want to combine unsaturated
 linguistic objects. I already discussed coordination examples above. Another example is the verbal
-complex in languages like German, Dutch\il{Dutch}, Japanese\il{Japanese}, and Korean\il{Korean}. Of course there are analyses of these languages
+complex in languages like German, Dutch\il{Dutch}, 
+%Japanese\il{Japanese}, and Korean\il{Korean}. 
+and Japanese\il{Japanese}. 
+Of course there are analyses of these languages
 that do not assume a verbal complex (G.\ \citealp{GMueller98a,Wurmbrand2003b}), but these are not without problems. Some of the problems were
 discussed in the previous section as well.
 
@@ -2688,7 +2723,7 @@ then on formalization.
 
 \subsection{Explaining language acquisition}
 
-\citet[\page 135]{Chomsky2008a} counts theories in the MP as Principle and Parameter analyses and
+\citet[\page 135]{Chomsky2008a} counts theories in the MP as Principle \& Parameter analyses and
 identifies MP parameters as being in the lexicon. Also, see \citew[\page 396]{Hornstein2013a}. UG is
 defined as possibly containing non"=language"=specific components, which are genetically determined
 \citep[\page 7]{Chomsky2007a}. UG consists of unbounded Merge and the condition that expressions
@@ -2703,10 +2738,12 @@ Section~\ref{Abschnitt-merkmalsgetriebene-Bewegung} also form part of UG (howeve
 parameters, the same arguments used against GB approaches to language acquisition that were
 mentioned in Section~\ref{sec-acquisition-gb} are still relevant for theories of language
 acquisition in the Minimalist Program. See Chapter~\ref{chap-acquisition} for an in"=depth
-discussion of approaches to language acquisition and the Principles \& Parameters model as well as
-input"=based approaches.
+discussion of approaches to language acquisition and the 
+Principles \& Parameters 
+%P \& P 
+model as well as input"=based approaches.
 
-%\addlines[2]
+%\addlines[-3]
 Chomsky's main goal in the Minimalist Program is to simplify the theoretical assumptions regarding
 formal properties of language and the computational mechanisms that are used so much as to make it
 plausible that they or relevant parts of them are part of our genetic endowment. But if we
@@ -2728,14 +2765,16 @@ they are weak, should be acquired from data alone.
 \subsection{Formalization}
 \label{sec-formalization-minimalism}
 
+\addlines[2]
 Section~\ref{sec-formalization-gb} commented on the lack of formalization in transformational
 grammar up until the 1990s. The general attitude towards formalization did not change in the
 minimalist era and hence there are very few formalizations and implementations of Minimalist theories.
 
 \citet{Stabler2001a} shows how it is possible to formalize and implement Kayne's\aimention{Richard S. Kayne} theory of remnant movement. In
 Stabler's implementation\footnote{
-	His system can be downloaded from his website:
-\url{http://www.linguistics.ucla.edu/people/stabler/coding.html}. 31.03.2010.
+%	His system can be downloaded from his website:
+	His system is available at:
+\url{http://www.linguistics.ucla.edu/people/stabler/coding.html}. 05.03.2016.
 }, there are no transderivational constraints\is{transderivational constraint}, no numerations\is{numeration}\footnote{
 	There is a numeration lexicon in \citet[Chapter~9]{Veenstra98a}. This lexicon consists of a set of numerations, which contain functional
 	heads, which can be used in sentences of a certain kind. For example, Veenstra assumes numerations for sentences with bivalent verbs
@@ -2748,7 +2787,10 @@ Stabler's implementation\footnote{
 \ea
 \gll Der Mann, der behauptet hat, dass Maria gelacht hat, steht neben der Palme, die im letzten Jahr gepflanzt wurde.\\
      the man who claimed has that Maria laughed has stands next.to the palm.tree which in last year planted was\\
-\glt `The man who claimed that Maria laughed is standing next to the palm tree that was planted last year.'
+%\glt `The man who claimed that Maria laughed is standing next to the palm tree that was planted
+%last year.'
+%\glt `The man who claimed that Maria laughed is standing next to the palm tree planted last year.'
+\glt `The man who claimed Maria laughed is standing next to the palm tree that was planted last year.'
 \z
 In (i), there are two relative clauses with verbs of differing valence, an embedded sentence with a monovalent verb and the matrix clause.
 Under a traditional understanding of numerations, Veenstra would have to assume an infinite numeration lexicon containing all possible
