@@ -77,21 +77,21 @@
 %\def\glt{\oldglt\justify}
 %\def\glt{\nopagebreak\vskip.17\baselineskip\transfont\parindent0ex}
 
-\makeatletter
-\def\ea{\ifnum\@xnumdepth=0\begin{exe}\else\begin{xlist}[iv.]\fi\ex}
-\def\eal{\begin{exe}\exnrfont\ex\begin{xlist}[iv.]}
+%% \makeatletter
+%% \def\ea{\ifnum\@xnumdepth=0\begin{exe}\else\begin{xlist}[iv.]\fi\ex}
+%% \def\eal{\begin{exe}\exnrfont\ex\begin{xlist}[iv.]}
 
-\def\gll%                  % Introduces 2-line text-and-gloss.
-    {\raggedright
-\bgroup %\begin{flushleft}
-     \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
-	 \def\baselinestretch{1}\@selfnt\fi
-%        \vskip\baselineskip\def\baselinestretch{1}%
-%        \@selfnt\vskip-\baselineskip\fi%
-    \bgroup
-    \twosent
-   }
-\makeatother
+%% \def\gll%                  % Introduces 2-line text-and-gloss.
+%%     {\raggedright
+%% \bgroup %\begin{flushleft}
+%%      \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
+%% 	 \def\baselinestretch{1}\@selfnt\fi
+%% %        \vskip\baselineskip\def\baselinestretch{1}%
+%% %        \@selfnt\vskip-\baselineskip\fi%
+%%     \bgroup
+%%     \twosent
+%%    }
+%% \makeatother
 
 
 % to set the MRSes for scope underspecification
@@ -157,13 +157,3 @@ frbox/.style={
 
 
 
-%% \let\addlinesold=\addlines
-%% % there is one optional argument. Second element in brackets is the default 
-%% \renewcommand{\addlines}[1][1]{
-%% \todosatz{addlines}
-%% \addlinesold[#1]
-%% }
-
-
-% for addlines to work
-\strictpagecheck
