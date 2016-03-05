@@ -667,7 +667,7 @@ standard assumption that there are two projection levels, that is, phrases have 
 \subsection{CP and IP in English}
 \label{Abschnitt-GB-CP-IP-System-Englisch}\label{sec-GB-CP-IP-System-English}
 
-\addlines
+%\addlines
 Most work in Mainstream Generative Grammar is heavily influenced by previous publications dealing with English. If one wants to understand GB analyses of
 German and other languages, it is important to first understand the analyses of English and, for this reason, this will be the focus of this section.
 The CP/IP system is also assumed in LFG grammars of English and thus the following section also provides a foundation for understanding some of the
@@ -687,7 +687,8 @@ affixes. Figure~\vref{Abb-Old-School-Hilfsverb} shows a sample
 analysis of a sentence with an auxiliary, which uses the rule in (\mex{0}b). 
 %
 \begin{figure}
-\centerline{%
+\begin{floatrow}
+\ffigbox{%
 \begin{forest}
 sn edges
 [S
@@ -700,8 +701,24 @@ sn edges
 		[V$^0$[read]]
 		[NP[the newspaper, triangle]]]]]
 \end{forest}
-}
-\caption{\label{Abb-Old-School-Hilfsverb}English sentence with an auxiliary verb following \citet[\page 19]{Chomsky81a}}
+}{\caption{\label{Abb-Old-School-Hilfsverb}Sentence with an auxiliary verb following
+    \citet[\page 19]{Chomsky81a}}}
+\ffigbox{%
+\begin{forest}
+sn edges
+[IP
+  [NP
+  	[Ann]]
+  [I$'$
+  	[I$^0$
+  		[will]]
+	[VP
+  	[V$'$
+		[V$^0$[read]]
+		[NP[the newspaper, triangle]]]]]]
+\end{forest}}
+{\caption{\label{Abb-GB-Hilfsverb}Sentence with auxiliary verb in the CP/IP system}}
+\end{floatrow}
 \end{figure}%
 
 Together with its complements, the verb forms a structural unit: the VP. The constituent status of
@@ -717,23 +734,23 @@ Figure~\vref{Abb-GB-Hilfsverb} shows an IP with an auxiliary in the \inull posit
 the \xbar template: \inull is a head, which takes the VP as its complement and thereby forms I$'$. The subject\is{subject} is the specifier\is{specifier} 
 of the IP.
 %
-\begin{figure}
-\centerline{%
-\begin{forest}
-sn edges
-[IP
-  [NP
-  	[Ann]]
-  [I$'$
-  	[I$^0$
-  		[will]]
-	[VP
-  	[V$'$
-		[V$^0$[read]]
-		[NP[the newspaper, triangle]]]]]]
-\end{forest}}
-\caption{\label{Abb-GB-Hilfsverb}English sentence with auxiliary verb in the CP/IP system}
-\end{figure}%
+%% \begin{figure}
+%% \centerline{%
+%% \begin{forest}
+%% sn edges
+%% [IP
+%%   [NP
+%%   	[Ann]]
+%%   [I$'$
+%%   	[I$^0$
+%%   		[will]]
+%% 	[VP
+%%   	[V$'$
+%% 		[V$^0$[read]]
+%% 		[NP[the newspaper, triangle]]]]]]
+%% \end{forest}}
+%% \caption{\label{Abb-GB-Hilfsverb}English sentence with auxiliary verb in the CP/IP system}
+%% \end{figure}%
 % nach vorn verschoben
 % Wie man sieht, entspricht die Struktur dem \xbars: \inull ist ein Kopf, der die VP als Komplement
 % nimmt und eine I$'$ bildet. Das Subjekt\is{Subjekt} ist der Spezifikator\is{Spezifikator} der IP.
@@ -750,7 +767,9 @@ of (\mex{0}a).
 \begin{figure}
 % node labels for moving elements will be typeset by the \tmove command
 % here we have to provide invisible boxes to get the line drawing right.
-\centerline{%
+%\centerline{%
+\begin{floatrow}
+\ffigbox{
 \begin{forest}
 sn edges
 [CP
@@ -764,20 +783,8 @@ sn edges
 				[V$'$
 					[V$^0$[read]]
 					[NP[the newspaper, triangle]]]]]]]]
-\end{forest}}
-\caption{\label{Abb-GB-Englisch-CP}English complementizer phrase}
-\end{figure}%
-
-%\addlines
-Yes/no-questions\label{Seite-GB-Entscheidungsfragen-Englisch} in English such as those in (\mex{1}) are formed by moving the auxiliary verb\is{auxiliary inversion} in front of the subject.
-\ea
-Will Ann read the newspaper?
-\z
-Let us assume that the structure of questions corresponds to the structure of sentences with complementizers. This means that questions are also
-CPs. Unlike the sentences in (\mex{-1}), however, there is no subordinating conjunction. In the D"=structure of questions, the \cnull position is
-empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-GB-Ja-Nein} shows an analysis of (\mex{0}).
-\begin{figure}
-\centerline{%
+\end{forest}}{\caption{\label{Abb-GB-Englisch-CP}Complementizer phrase}}
+\ffigbox{%
 \begin{forest}
 sn edges
 [CP
@@ -792,22 +799,43 @@ sn edges
 					[V$^0$[read]]
 					[NP[the newspaper, triangle]]]]]]]]
 \end{forest}
-}
-\caption{\label{Abb-GB-Ja-Nein}English polar question}
+}{\caption{Polar question}\label{Abb-GB-Ja-Nein}}
+\end{floatrow}
 \end{figure}%
-The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary inversion}
 
-
-
-\emph{wh}-questions are formed by the additional movement of a constituent in front of the
-auxiliary; that is into the specifier position of the CP. 
-Figure~\vref{Abb-GB-Wh} shows the analysis of (\mex{1}): 
+%\addlines
+Yes/no-questions\label{Seite-GB-Entscheidungsfragen-Englisch} in English such as those in (\mex{1}) are formed by moving the auxiliary verb\is{auxiliary inversion} in front of the subject.
 \ea
-What will Ann read?
+Will Ann read the newspaper?
 \z
-%
+%\addlines
+Let us assume that the structure of questions corresponds to the structure of sentences with complementizers. This means that questions are also
+CPs. Unlike the sentences in (\mex{-1}), however, there is no subordinating conjunction. In the D"=structure of questions, the \cnull position is
+empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-GB-Ja-Nein} shows an analysis of (\mex{0}).
+%% \begin{figure}
+%% \centerline{%
+%% \scalebox{.99}{%
+%% \begin{forest}
+%% sn edges
+%% [CP
+%% [C$'$
+%% 	[C$^0$[will$_k$]]
+%% 	[IP
+%% 		[NP[Ann]]
+%% 		[I$'$
+%% 			[I$^0$[\trace$_k$]]
+%% 			[VP
+%% 				[V$'$
+%% 					[V$^0$[read]]
+%% 					[NP[the newspaper, triangle]]]]]]]]
+%% \end{forest}
+%% }
+%% }
+%% \caption{\label{Abb-GB-Ja-Nein}English polar question}
+%% \end{figure}%
 \begin{figure}
-\centerline{%
+\begin{floatrow}
+\ffigbox{%
 \begin{forest}
 sn edges
 [CP
@@ -823,17 +851,8 @@ sn edges
 					[V$^0$[read]]
 					[NP[\trace$_i$]]]]]]]]
 \end{forest}
-}
-\caption{\label{Abb-GB-Wh}English \emph{wh}"=question}
-\end{figure}%
-As before, the movement of the object of \emph{read} is indicated by a trace. This is important when constructing the meaning of
-the sentence. The verb assigns some semantic role to the element in its object position. Therefore,
-one has to be able to ``reconstruct'' the fact that \emph{what} actually originates in this position. This is ensured by coindexation of the trace with \emph{what}.\il{English|)}
-
-Until now, I have not yet discussed sentences without auxiliaries such as (\ref{ex-that-ann-reads-the-newspaper}). In order to analyze this kind of sentences, one has to assume that the
-inflectional affix is present in the \inull position. An example analysis is given in Figure~\vref{Abb-GB-englischer-Satz-ohne-Hilfsverb}.
-\begin{figure}
-\centerline{%
+}{\caption{\emph{wh}"=question}\label{Abb-GB-Wh}}
+\ffigbox{%
 \begin{forest}
 sn edges
 [IP
@@ -844,9 +863,63 @@ sn edges
 			[V$'$
 				[V$^0$[read-]]
 				[NP[the newspaper, triangle]]]]]]
-\end{forest}}
-\caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}English sentence without auxiliary}
+\end{forest}}{
+\caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}Sentence without auxiliary}}
+\end{floatrow}
 \end{figure}%
+The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary inversion}
+
+
+
+\emph{wh}-questions are formed by the additional movement of a constituent in front of the
+auxiliary; that is into the specifier position of the CP. 
+Figure~\vref{Abb-GB-Wh} shows the analysis of (\mex{1}): 
+\ea
+What will Ann read?
+\z
+%
+%% \begin{figure}
+%% \centerline{%
+%% \begin{forest}
+%% sn edges
+%% [CP
+%% [NP[what$_i$]]
+%% [C$'$
+%% 	[C$^0$[will$_k$]]
+%% 	[IP
+%% 		[NP[Ann]]
+%% 		[I$'$
+%% 			[I$^0$[\trace$_k$]]
+%% 			[VP
+%% 				[V$'$
+%% 					[V$^0$[read]]
+%% 					[NP[\trace$_i$]]]]]]]]
+%% \end{forest}
+%% }
+%% \caption{\label{Abb-GB-Wh}English \emph{wh}"=question}
+%% \end{figure}%
+As before, the movement of the object of \emph{read} is indicated by a trace. This is important when constructing the meaning of
+the sentence. The verb assigns some semantic role to the element in its object position. Therefore,
+one has to be able to ``reconstruct'' the fact that \emph{what} actually originates in this position. This is ensured by coindexation of the trace with \emph{what}.\il{English|)}
+
+%\addlines[2]
+Until now, I have not yet discussed sentences without auxiliaries such as (\ref{ex-that-ann-reads-the-newspaper}). In order to analyze this kind of sentences, one has to assume that the
+inflectional affix is present in the \inull position. An example analysis is given in Figure~\vref{Abb-GB-englischer-Satz-ohne-Hilfsverb}.
+%% \begin{figure}
+%% \centerline{%
+%% \begin{forest}
+%% sn edges
+%% [IP
+%% 	[NP[Ann]]
+%% 	[I$'$
+%% 		[I$^0$[-s]]
+%% 		[VP
+%% 			[V$'$
+%% 				[V$^0$[read-]]
+%% 				[NP[the newspaper, triangle]]]]]]
+%% \end{forest}}
+%% \caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}English sentence without auxiliary}
+%% \end{figure}%
 Since the inflectional affix precedes the verb, some kind of movement operation still needs to take place.
 For theory"=internal reasons, one does not wish to assume movement operations to positions lower in the
 tree, hence the verb has to move to the affix and not the other way around.
@@ -868,6 +941,7 @@ Following this excursus on the analysis of English sentences, we can now turn to
 \label{sec-German-clause}
 
 %\addlines[2]
+%\largerpage
 The CP/IP model has been adopted by many scholars for the analysis of German.\footnote{
   For GB analyses without IP, see \citew{BK89a}, \citew[\page 157]{Hoehle91},
   \citew{Haider93a,Haider97a} and \citew[Section~IV.3]{Sternefeld2006a-u}. Haider assumes
@@ -989,6 +1063,7 @@ sn edges
 \section{Verb position}
 \label{Abschnitt-Verbstellung-GB}\label{sec-verb-position-gb}
 
+\addlines[-1]
 In German, the position of the heads of VP and IP (\vnull and \inull) are to the right of their
 complements and \vnull and \inull form part of the right sentence bracket.
 The subject and all other constituents (complements and adjuncts) all occur to the left of \vnull
@@ -1059,7 +1134,7 @@ The assumption of verb"=final order\label{page-verbletzt} as the base order is m
 	 he starts tomorrow \textsc{prt}\\
 \glt `He is starting tomorrow.'
 \zl
-This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.
+This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.\pagebreak
 
 Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
 `to perform something for the first time'), can often not be divided into their component parts and
@@ -1094,6 +1169,7 @@ always in final position (I am ignoring the possibility of extraposing constitue
 \glt `that the clown gives Kurt-Martin the goods'
 \zl
 
+\addlines[-1]
 \item If one compares the position of the verb in German with Danish\il{Danish} (Danish is an SVO language
 like English), then one can clearly see that the verbs in German form a cluster at the end of the sentence,
 whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
@@ -1106,6 +1182,7 @@ whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
      that he must have seen him\\
 \glt `that he must have seen him'
 \zl
+\pagebreak
 \item\label{SOV-Skopus}\is{scope|(} The scope relations of the adverbs in (\ref{bsp-absichtlich-nicht-anal}) depend on their order:
 the left"=most adverb has scope over the two following elements.\footnote{%
 At this point, it should be mentioned that there seem to be exceptions from the rule that modifiers to the left take scope over those to
@@ -1213,7 +1290,25 @@ sn edges
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$[kenn-$_j$ -t;know- -s]]]]]]
 \end{forest}
-\caption{\label{Abb-GB-Komplementierer}Sentence with a complementizer in \cnull}
+\caption{\label{Abb-GB-Komplementierer}Sentence with a complemen\-ti\-zer in \cnull}
+%% \ffigbox{%
+%% \scalebox{.9}{%
+%% \begin{forest}
+%% sn edges
+%% [CP
+%% [C$'$
+%% 	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
+%% 	[IP
+%% 		[NP [jeder;everybody]]
+%% 		[I$'$
+%% 			[VP
+%% 				[V$'$
+%% 					[NP [diesen Mann; this man, triangle]]
+%% 					[V$^0$[\trace$_j$]]]]
+%% 			[I$^0$ [\trace$_k$]]]]]]
+%% \end{forest}}
+%% }{\caption{\label{Abb-GB-Verberststellung}Verb position in GB}}
+%% \end{floatrow}
 \end{figure}%
 In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via the \inull position:
 \vnull $\to$  \inull $\to$ \cnull.  Figure~\vref{Abb-GB-Verberststellung} shows the analysis of (\mex{1}):
@@ -1339,7 +1434,7 @@ crossing several phrase boundaries:
 }
 \glt `It is, however, more difficult for the Republicans to launch attacks against him.'
 \zl
-\addlines
+%\addlines
 The elements in the prefield in the examples in (\mex{0}) all originate from more deeply embedded phrases. In GB,
 it is assumed that long"=distance dependencies across sentence boundaries are derived in steps 
 \citep[\page 75--79]{Grewendorf88a}, that is, in the analysis of (\ref{ex-wen-glaubst-du-dass}), the interrogative
@@ -1501,6 +1596,7 @@ sn edges
 \caption{\label{Abb-GB-Aktiv}Case and theta-role assignment in active clauses}
 \end{figure}%
 %
+\addlines
 The passive morphology blocks the subject and absorbs the structural accusative. The object that would get accusative in the active
 receives only a semantic role in its base position in the passive, but it does not get case the
 absorbed case. Therefore, it has to move to a position where case can be assigned to it 
@@ -1729,6 +1825,7 @@ the position of \_$_i$, which would lead to a reading where \emph{fast jedes Ged
 \glt `I think that only this poet offered almost every poem to at least one publisher.'
 \z
 
+\addlines[-1]
 \citet[\page 308]{SE2002a} discuss analogous examples from Japanese\il{Japanese}, which they credit to Kazuko 
 Yatsushiro\aimention{Kazuko Yatsushiro}. They develop an analysis where the first step is to move the accusative object in front of the subject.
 Then, the dative object is placed in front of that and then, in a third movement, the accusative is moved once more. The last movement can
@@ -1778,7 +1875,7 @@ The work by \citet{Lenerz77} on constituent order has influenced analyses in oth
 case and passive \citeyearpar{Haider84b,Haider85,Haider85b,Haider86,Haider90a,Haider93a} has had a significant influence on LFG
 and HPSG analyses of German.
 
-\addlines
+%\addlines
 The entire configurationality discussion\is{configurationality}, that is, whether it is better to assume that the 
 subject of finite verbs in German is inside or outside the VP, was important
 (for instance \citealp*{Haider82,Grewendorf83a,Kratzer84a,Kratzer96a,Webelhuth85a,%
@@ -2018,6 +2115,7 @@ This rule would have no problems with coordination data like (\mex{-1}) as coord
 category v(aux+) (for more on coordination see Section~\ref{Abschnitt-Koordination}). If inversion
 makes it necessary to stipulate a special rule like (\ref{Regel-Aux-inv-Stabler}), then it is not clear why one could not simply use the transformation"=less rule in (\mex{0}).
 
+\addlines
 In the MITRE system \citep{ZFHW65a}, there was a special grammar for the surface structure, from which the deep structure was derived via
 reverse application of transformations, that is, instead of using one grammar to create deep structures which are then transformed into
 other structures, one required two grammars. The deep structures that were determined by the parser
@@ -2042,7 +2140,7 @@ things which are not explicitly mentioned in \emph{Barriers} (\eg using feature"
 formalizing \xbar theory, a practice that was borrowed from GPSG\indexgpsg) and some assumptions
 cannot be properly formalized and are simply ignored (see \citealp{Briscoe97a} for details). 
 
-\addlines
+%\addlines
 GB analyses\label{Seite-Representationelle-GB} which fulfill certain requirements can be reformulated so that they no longer make use of transformations.
 These transformation"=less approaches are also called \emph{representational}\is{representational model}, whereas the transformation"=based approaches are referred to as
 \emph{derivational}\is{derivation}. For representational analyses, there are only surface structures augmented by traces but none of these structures is connected

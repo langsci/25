@@ -54,10 +54,12 @@
 }
 
  
-\usepackage{my-ccg-ohne-colortbl}
+\usepackage{styles/my-ccg-ohne-colortbl}
 
 
 \usepackage{langsci/styles/jambox}
+
+\usepackage{langsci/styles/langsci-optional}
 
 
 
@@ -68,11 +70,13 @@
 \usepackage{graphicx}
 
 
-\usepackage{makros.2e,article-ex,additional-langsci-index-shortcuts,
-eng-date,
-lastpage,float,comment,my-theorems,soul,tabularx}
+\usepackage{styles/makros.2e,styles/article-ex,styles/additional-langsci-index-shortcuts,
+styles/eng-date,styles/my-theorems}
 
-\usepackage{langsci/styles/langsci-optional}
+
+
+\usepackage{lastpage,float,comment,soul,tabularx}
+
 
 % loaded in macros.2e \usepackage[english]{varioref}
 % do not stop and warn! This will be tested in the final version
@@ -126,9 +130,9 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 \newlength{\offsetup}
 
 \ifxetex
-\usepackage{eng-hyp-utf8}
+\usepackage{styles/eng-hyp-utf8}
 \else
-\usepackage{eng-hyp}
+\usepackage{styles/eng-hyp}
 \fi
 
 \usepackage{appendix}
@@ -159,6 +163,8 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 %
 \usepackage{subdepth}
 
+
+%\usepackage{caption}
 
 
 

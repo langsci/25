@@ -560,7 +560,7 @@ serializations of constituents \citep{GK2001a,Hellwig2003a}.
 
 \subsection{Semantics}
 
-\addlines
+%\addlines
 \tes already distinguished the participants of a verb in a way that was later common in theories of
 semantic roles. He suggested that the first actant is the agent, the second one a patient and the
 third a benefactive \citep[Chapter~106]{Tesniere2015a-u}.
@@ -719,10 +719,12 @@ dg edges
 
 \section{Verb position}
 
+%\addlines[-1]
+\largerpage[-1]
 In many Dependency Grammar publications on German, linearization issues are not dealt with and
 authors just focus on the dependency relations. The dependency relations between a verb
 and its arguments are basically the same in verb-initial and verb-final sentences. If we compare the
-dependency graphs of the sentences in (\mex{1}) given in the Figures~\ref{fig-vl-dg} and~\ref{fig-vi-dg}, we see that only the position of the verb is
+dependency graphs of the sentences in (\mex{1}) given in\pagebreak[4] the Figures~\ref{fig-vl-dg} and~\ref{fig-vi-dg}, we see that only the position of the verb is
 different, but the dependency relations are the same, as it should be.\footnote{
   \citet{Eroms2000a} uses the part of speech Pron for pronouns like \emph{jeder}
   `everybody'. If information about part of speech plays a role in selection, this makes necessary a
@@ -767,8 +769,6 @@ dg edges
 }
 \caption{\label{fig-vl-dg}Analysis of [\emph{dass}] \emph{jeder diesen Mann kennt} `that everybody knows this man'}
 \end{figure}%
-
-
 \begin{figure}
 \centerline{
 \begin{forest}
@@ -782,7 +782,8 @@ dg edges
     [Mann;man] ] ]
 \end{forest}
 }
-\caption{\label{fig-vi-dg}Analysis of \emph{Kennt jeder diesen Mann?} `Does everybody know this man?'}
+\caption{\label{fig-vi-dg}Analysis of \emph{Kennt jeder diesen Mann?} `Does everybody know this
+    man?'}
 \end{figure}%
 The correct ordering of the verb with respect to its arguments and adjuncts is ensured by
 linearization constraints that refer to the respective topological fields. See Section~\ref{sec-dg-linearization} and
@@ -791,8 +792,7 @@ Section~\ref{sec-linearization-problems-dg} for further details on linearization
 
 \section{Local reordering}
 
-%\addlines
-\largerpage[2]
+%\largerpage[2]
 The situation regarding local reordering is the same. The dependency relations of the sentence
 in (\mex{1}b) are shown in Figure~\vref{fig-scrambling-dg}. The analysis of the sentence with normal order in (\mex{1}a)
 has already been given in Figure~\ref{fig-vl-dg}.
@@ -937,6 +937,7 @@ dg edges
 \caption{\label{fig-wen-glaubst-ich-du-dass-dg}Unwanted dependency graph of *\,\emph{Wen glaubst ich
     du, dass gesehen habe?} `Who do you think I saw?'}
 \end{figure}%
+\addlines[2]
 Note that the order of elements in (\mex{0}) is compatible with statements that refer to
 topological fields as suggested by \citet[\page 50]{Engel2014a}: there is a \vf filled by \emph{wen}
 `who', there is a left sentence bracket filled by
@@ -947,7 +948,6 @@ pronouns come from different clauses: \emph{du} belongs to the matrix verb \emph
 extraposition target the left-most and right-most positions of a clause, respectively. This can be
 modeled in constituency"=based approaches in a straightforward way, as has been shown in the previous chapters.
 
-%\addlines[2]
 As an alternative to discontinuous constituents, one could assume additional mechanisms that
 promote the dependency of an embedded head to a higher head in the structure. Such an analysis was
 suggested by \citet{Kunze68a-u}, \citet{Hudson97a,Hudson2000a}, \citet{Kahane97a}, \citet{KNR98a},
@@ -1014,6 +1014,7 @@ its subject, object and so on, he assumes further dependencies for extracted ele
      who believe you that I seen have\\
 \glt `Who do you believe that I saw?'
 \z
+\addlines
 Hudson states that the use of multiple dependencies in Word Grammar\indexwg corresponds to structure
 sharing\is{structure sharing} in HPSG\indexhpsg \citep[\page 15]{Hudson97a}. Nonlocal dependencies are modeled as a series
 of local dependencies as it is done in \gpsg and \hpsg. This is important since it allows one to
@@ -1215,6 +1216,9 @@ or a phrase.
 
 Figure~\vref{fig-dg-junction} illustrates the junction relation: the two conjuncts \emph{John}
 and \emph{Mary} are connected with the conjunction \emph{and}.\LATER{read \citep{Osborne2006a-u}}
+%
+% moved to top.
+It is interesting to note that both of the conjuncts are connected to the head \emph{laugh}. 
 \begin{figure}
 \begin{forest}
 dg edges
@@ -1226,7 +1230,6 @@ dg edges
 \end{forest}
 \caption{\label{fig-dg-junction}Analysis of coordination using the special relation \emph{junction}}
 \end{figure}%
-It is interesting to note that both of the conjuncts are connected to the head \emph{laugh}. 
 
 In the case of two coordinated nouns we get dependency graphs like the one in Figure~\vref{fig-dg-junction-all-girls-and-boys}.
 \begin{figure}
@@ -1492,7 +1495,7 @@ page~\pageref{passiv-lr-mit-dtr} and
 Section~\ref{Abschnitt-leere-Elemente-LRs-Transformations}). The affixes are integrated into the
 lexical rules or into realization functions that specify the morphological form of the item that is licensed by the lexical rule.
 
-\addlines[2]
+%\addlines[2]
 Concluding it can be said that transfer corresponds to 
 \begin{itemize}
 \item binary"=branching phrase structure rules,
@@ -1712,7 +1715,7 @@ scopes over \emph{singen} `sing' and in the second one over \emph{singen darf} `
      that he not sing may\\
 \glt `that he is not allowed to sing' or `that he is allowed not to sing'
 \z
-\addlines
+\addlines[2]
 The reading in which \emph{nicht} `not' scopes over the whole verbal complex would result in the
 non-projective structure that is given in Figure~\vref{dg-nicht-singen-darf}.
 \begin{figure}
@@ -1846,7 +1849,7 @@ für Deutsche Sprache, Mannheim: \url{http://www.ids-mannheim.de/kl/projekte/kor
 }
 \glt `Blood oranges give a strong color to the juice.'
 \z
-\addlines[2]
+%\addlines[2]
 The dependency graph of this sentence is given in Figure~\vref{fig-dem-saft-eine-kraeftige-farbe-dg}.
 \begin{figure}[htb]
 \centerline{
@@ -1866,6 +1869,8 @@ dg edges
 \caption{\label{fig-dem-saft-eine-kraeftige-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
 \end{figure}%
 
+%\addlines[2]
+\largerpage
 Such apparent multiple frontings\is{fronting!apparent multiple} are not restricted to NPs. Various types of dependents can be
 placed in the \vf. An extensive discussion of the data is provided in \citew{Mueller2003b}. Additional data
 have been collected in a research project on multiple frontings and information structure
@@ -1905,9 +1910,10 @@ dg edges
     kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.' with an empty
   verbal head for the \vf}
 \end{figure}%
+\largerpage
 It is important to note that the issue is not solved by simply dropping the V2 constraint and
 allowing dependents of the finite verb to be realized to its left, since the fronted constituents do
-not necessarily depend on the finite verb as the examples in (\mex{1}) show:
+not necessarily depend on the finite verb as the examples in (\mex{1}) show:\pagebreak
 \eal
 \ex
 \label{ex-mehrfach-vf-adv-acc}
@@ -1938,6 +1944,7 @@ And although the respective structures are marked, such multiple frontings\is{fr
 If such dependencies are permitted it is really difficult to constrain them. The details cannot be
 discussed here, but the reader is referred to \citew{Mueller2005d,MuellerGS}.
 
+\addlines
 Note also that Engel's statement regarding the linear order in German sentences \citeyearpar[\page
   50]{Engel2014a} referring to one element in front of the finite verb (see footnote~\ref{fn-Engel-linearization}) is very imprecise. One can only guess what is
 intended by the word \emph{element}. One interpretation is that it is a continuous constituent in the classical sense of
@@ -2027,7 +2034,7 @@ dg edges
   [book] ]
 \end{forest}
 \hfill\mbox{}
-\caption{\label{fig-a-book-psg-dg}Analysis of \emph{a book} in a phrase structure and a
+\caption{\label{fig-a-book-psg-dg}\emph{a book} in a phrase structure and a
   Dependency Grammar analysis}
 \end{figure}%
 Of course this procedure cannot be applied to all phrase structure grammars directly since some
@@ -2077,6 +2084,7 @@ information.
 {D}  & {$\to$ a}\\
 \end{tabular}
 \z
+\addlines[2]
 If one replaces the N and V in the right-hand side of the two left-most rules in (\mex{0}) with the
 respective lexical items and then removes the rules that license the words, one arrives at the
 lexicalized variant of the grammar given in (\mex{1}):
