@@ -137,8 +137,27 @@ lastpage,float,comment,my-theorems,soul,tabularx}
 % adds lines to both the odd and even page.
 \usepackage{addlines}
 
+%% \let\addlinesold=\addlines
+%% % there is one optional argument. Second element in brackets is the default 
+%% \renewcommand{\addlines}[1][1]{
+%% \todosatz{addlines}
+%% \addlinesold[#1]
+%% }
 
 
+% for addlines to work
+\strictpagecheck
+
+
+
+% http://tex.stackexchange.com/questions/3223/subscripts-for-primed-variables
+%
+% to get 
+% {}[ af   [~]\sub{V} ]\sub{V$'$}
+%
+% typeset properly. Thanks, Sebastian.
+%
+\usepackage{subdepth}
 
 
 

@@ -51,6 +51,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 
 # removing the bbl file is important since otherwise the -min-crossrefs option may not work
+#	\rm -f $*.bbl
 
 # there are two different index.format files.
 # they contain special characters for delimination. Standard is ", but this is used
@@ -66,7 +67,6 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 # one extra cycle is needed for addlines to stabalize ....
 
 %.pdf: %.tex $(SOURCE)
-	\rm -f $*.bbl
 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
 	bibtex  -min-crossrefs=200 $*
 	xelatex -no-pdf -interaction=nonstopmode $* 
@@ -80,9 +80,9 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
-	xelatex $* -no-pdf -interaction=nonstopmode
 	xelatex $* 
 
+#	xelatex $* -no-pdf -interaction=nonstopmode
 
 
 
