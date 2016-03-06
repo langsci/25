@@ -157,4 +157,14 @@ frbox/.style={
 \makeatother
 
 
+% to get the linebreaks in the bibliography right
+% http://tex.stackexchange.com/questions/51257/how-can-i-force-bibliography-items-not-to-be-split-across-pages
 
+% for some reason this did not take effect and I had to put it into the bibfile directly.
+
+%% \makeatletter
+%% \AtBeginEnvironment{thebibliography}{%
+%%    \clubpenalty10000
+%%    \@clubpenalty \clubpenalty
+%%    \widowpenalty10000}
+%% \makeatother

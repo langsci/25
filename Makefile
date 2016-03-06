@@ -66,12 +66,12 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 # one extra cycle is needed for addlines to stabalize ....
 
+
+# bib is stable now and is included
 %.pdf: %.tex $(SOURCE)
+	\rm -f $*.bbl
 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
-	bibtex  -min-crossrefs=200 $*
 	xelatex -no-pdf -interaction=nonstopmode $* 
-	bibtex  -min-crossrefs=200 $*
-	xelatex $* -no-pdf -interaction=nonstopmode
 	correct-toappear
 	correct-index
 	\rm $*.adx
@@ -80,7 +80,25 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
-	xelatex $* 
+	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+
+
+# %.pdf: %.tex $(SOURCE)
+# 	\rm -f $*.bbl
+# 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
+# 	bibtex  -min-crossrefs=200 $*
+# 	xelatex -no-pdf -interaction=nonstopmode $* 
+# 	bibtex  -min-crossrefs=200 $*
+# 	xelatex -no-pdf -interaction=nonstopmode $*
+# 	correct-toappear
+# 	correct-index
+# 	\rm $*.adx
+# 	authorindex -i -p $*.aux > $*.adx
+# 	sed -e 's/}{/|hyperpage}{/g' $*.adx > $*.adx.hyp
+# 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
+# 	makeindex -gs index.format -o $*.lnd $*.ldx
+# 	makeindex -gs index.format -o $*.snd $*.sdx
+# 	xelatex $* 
 
 #	xelatex $* -no-pdf -interaction=nonstopmode
 
@@ -160,8 +178,11 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 	scp -p $? home.hpsg.fu-berlin.de:/home/stefan/public_html/Pub/
 
 
+# two runs in order to get "also printed as ..." right
 gt.bib: ../../../Bibliographien/biblio.bib
-	xelatex bib-creation; bibtex bib-creation; xelatex bib-creation
+	xelatex -no-pdf -interaction=nonstopmode bib-creation 
+	bibtex bib-creation
+	xelatex -no-pdf -interaction=nonstopmode bib-creation 
 	bibtool -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
 	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
 	\rm -r gt-tmp.bib
