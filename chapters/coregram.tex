@@ -150,7 +150,7 @@ general type for roots: \eg \type{intrans-verb} for intransitive
 verbs and \type{trans-verb} for transitive verbs. Transitive verbs can be further subdivided into strictly transitive verbs (those with nominative and accusative
 arguments) and ditransitive verbs (those with nominative and both accusative and dative arguments). The hierarchy above would of course have to be refined considerably
 as there are even further sub"=classes for both transitive and intransitive verbs. For example, one can divide intransitive verbs into unaccusative\is{verb!unaccusative}
-and unergative\is{verb!unergative} verbs and even strictly transitive verbs would have to be divided into further sub"=classes (see \citealp[Section~2]{Welke2009a}). 
+and unergative\is{verb!unergative} verbs and even strictly transitive verbs would have to be divided into further sub"=classes (see \citealp[Section~2]{Welke2009a}).\pagebreak
 
 In addition to a type for roots, the above figure contains types for stems\is{stem} and words\is{word}. Complex stems are complex objects that are
 derived from simple roots but still have to be inflected (\stem{lesbar} `readable', \stem{besing}
@@ -171,7 +171,7 @@ information about inflection. Complete words can be combined in the syntax with 
 from which purely phrasal approaches suffer are thereby avoided. Nevertheless generalizations about lexeme classes and the utterances that can be formed can be
 captured in the hierarchy.
 
-\addlines[2]
+\addlines
 There are also principles in addition to inheritance hierarchies: the Semantics Principle\is{principle!Semantics} presented in Section~\ref{Abschnitt-HPSG-Semantik} holds
 for all languages. The Case Principle\is{principle!case} that we also saw is a constraint that only applies to a particular
 class of languages, namely nominative"=accusative languages\is{case!nominative}\is{case!accusative}.
@@ -235,8 +235,7 @@ typologically diverse languages in parallel:
 \item French\il{French}
 \end{itemize}
 \noindent
-%\addlines % wow this eats a figure and part of a footnote 03.03.2016
-%\largerpage
+%\addlines[-1]
 These languages belong to diverse language families 
 (Indo-European, % Germanic: German, Danish, Yiddish, English, Romance: Spanish, French,
                 % Indo-Iranian: Hindi, Persian
@@ -245,7 +244,12 @@ These languages belong to diverse language families
  Sino-Tibetan) % Sinitic: Mandarin Chinese, 
 and among the Indo-European languages the languages belong to different groups (Germanic, Romance,
 Indo-Iranian). Figure~\ref{fig-lang-fams} provides an overview.
-\begin{figure}[htb]
+%
+% moved above the figure
+We work out fully formalized, computer"=processable grammar fragments in the framework of
+HPSG\indexhpsg that have a semantics component. The details will not be discussed here, but the
+interested reader is referred to \citew{MuellerCoreGram}. 
+\begin{figure}
 \centerfit{
 \begin{forest}
 [Languages
@@ -261,9 +265,6 @@ Indo-Iranian). Figure~\ref{fig-lang-fams} provides an overview.
 }
 \caption{Language families and groups of the languages covered in the CoreGram project}\label{fig-lang-fams}
 \end{figure}%
-We work out fully formalized, computer"=processable grammar fragments in the framework of
-HPSG\indexhpsg that have a semantics component. The details will not be discussed here, but the
-interested reader is referred to \citew{MuellerCoreGram}. 
 
 As was argued in previous sections, the assumption of innate language"=specific knowledge should be
 kept to a minimum. This is also what Chomsky suggested in his Minimalist Program. There may even be no language"=specific innate knowledge at all, a view taken in Construction
