@@ -25,6 +25,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	grammatical-theory-include.tex   \
 	localcommands.tex \
 	localpackages.tex \
+	backmatter.tex \
 	chapters/1-begriffe.tex\
 	chapters/2-psg.tex\
 	chapters/3-gb.tex \
@@ -68,10 +69,27 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 
 # bib is stable now and is included
+# does not work, since authorindex needs bib in .aux
+# %.pdf: %.tex $(SOURCE)
+# 	\rm -f $*.bbl
+# 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
+# 	xelatex -no-pdf -interaction=nonstopmode $* 
+# 	correct-toappear
+# 	correct-index
+# 	\rm $*.adx
+# 	authorindex -i -p $*.aux > $*.adx
+# 	sed -e 's/}{/|hyperpage}{/g' $*.adx > $*.adx.hyp
+# 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
+# 	makeindex -gs index.format -o $*.lnd $*.ldx
+# 	makeindex -gs index.format -o $*.snd $*.sdx
+# 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+
+#	\rm -f $*.bbl
+#	bibtex  -min-crossrefs=200 $*
 %.pdf: %.tex $(SOURCE)
-	\rm -f $*.bbl
-	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
-	xelatex -no-pdf -interaction=nonstopmode $* 
+	xelatex -no-pdf $* |grep -v math
+	xelatex -no-pdf $* 
+	xelatex -no-pdf $*
 	correct-toappear
 	correct-index
 	\rm $*.adx
@@ -82,9 +100,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format -o $*.snd $*.sdx
 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
 
-
 # %.pdf: %.tex $(SOURCE)
-# 	\rm -f $*.bbl
 # 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
 # 	bibtex  -min-crossrefs=200 $*
 # 	xelatex -no-pdf -interaction=nonstopmode $* 
@@ -99,6 +115,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 # 	makeindex -gs index.format -o $*.lnd $*.ldx
 # 	makeindex -gs index.format -o $*.snd $*.sdx
 # 	xelatex $* 
+
 
 #	xelatex $* -no-pdf -interaction=nonstopmode
 
