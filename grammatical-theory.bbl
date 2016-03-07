@@ -9,12 +9,6 @@
   \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
-  \makeatletter
-    \clubpenalty10000
-    \@clubpenalty \clubpenalty
-    \widowpenalty10000
-\makeatother
-
   
 \bibitem[{Abbott(1976)}]{Abbott76a-u}
 Abbott, Barbara. 1976.
