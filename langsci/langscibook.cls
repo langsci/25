@@ -18,8 +18,14 @@
 \newcommand{\lsISSN}{??}
 \newcommand{\lsISBNdigital}{000-0-000000-00-0}
 \newcommand{\lsISBNhardcover}{000-0-000000-00-0}
+\newcommand{\lsISBNhardcoverOne}{000-0-000000-00-0}
+\newcommand{\lsISBNhardcoverTwo}{000-0-000000-00-0}
 \newcommand{\lsISBNsoftcover}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverOne}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverTwo}{000-0-000000-00-0}
 \newcommand{\lsISBNsoftcoverus}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverusOne}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverusTwo}{000-0-000000-00-0}
 \newcommand{\lsBookDOI}{??}
 \newcommand{\lsChapterDOI}{??}
 \newcommand{\lsURL}{http://langsci-press.org/catalog}
@@ -1228,12 +1234,13 @@ http://creativecommons.org/licenses/by/4.0/
 Published under the Creative Commons Attribution-NoDerivatives 4.0 Licence (CC BY-ND 4.0):
 http://creativecommons.org/licenses/by-nd/4.0/ 
 \fi
- 
-\begin{tabular}{@{}l@{~}l}
-ISBN: & \lsISBNdigital~(Digital) \\
-      &	\lsISBNhardcover~(Hardcover)\\
-      & \lsISBNsoftcover~(Softcover)\\
-      & \lsISBNsoftcoverus~(Softcover US)\\
+
+\noindent 
+\begin{tabular}{@{}llrl@{; }r@{~}l}
+ISBN: & \multicolumn{2}{r}{Digital, complete work:} & \lsISBNdigital \\
+      &	Hardcover: & vol1:        & \lsISBNhardcoverOne & vol. 2 & \lsISBNhardcoverTwo\\
+      &	Softcover: & vol1:        & \lsISBNsoftcoverOne & vol. 2 & \lsISBNsoftcoverTwo\\
+      &	Softcover US: & vol1:        & \lsISBNsoftcoverusOne & vol. 2 & \lsISBNsoftcoverusTwo \\
 \end{tabular}
 
 \IfStrEq{\lsISSN}{??}		% \IfStrEq from xstring
@@ -1250,7 +1257,7 @@ ISBN: & \lsISBNdigital~(Digital) \\
 Cover and concept of design:
 Ulrike Harbort \\
 \if\@translator\empty\else
-Translator:
+Translators:
 \@translator \\
 \fi
 \if\@typesetter\empty\else
