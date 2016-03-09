@@ -46,7 +46,8 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	chapters/empty.tex\
 	chapters/recursion.tex\
 	chapters/conclusions.tex\
-	chapters/loesungen.tex
+	chapters/loesungen.tex\
+	chapters/versions.tex
 
 .SUFFIXES: .tex
 
@@ -87,9 +88,9 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 #	\rm -f $*.bbl
 #	bibtex  -min-crossrefs=200 $*
 %.pdf: %.tex $(SOURCE)
-	xelatex -no-pdf $* |grep -v math
-	xelatex -no-pdf $* 
-	xelatex -no-pdf $*
+	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
+	xelatex -no-pdf -interaction=nonstopmode $* 
+	xelatex -no-pdf -interaction=nonstopmode $*
 	correct-toappear
 	correct-index
 	\rm $*.adx
@@ -119,7 +120,9 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 #	xelatex $* -no-pdf -interaction=nonstopmode
 
-
+bbl:
+	xelatex -no-pdf -interaction=nonstopmode grammatical-theory
+	bibtex  -min-crossrefs=200 grammatical-theory
 
 #	xelatex $* -no-pdf |egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
 
