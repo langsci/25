@@ -983,52 +983,33 @@ is a variant of TAG proposed by Owen \citet{Rambow94a} that also assumes feature
 nodes. In addition, like MC"=TAG, it assumes that elementary trees consist of multiple components. Figure~\vref{Abbildung-Lexical-Set-geben-V-TAG} shows the elementary lexical set
 for the ditransitive verb \emph{geben} `give'.
 \begin{figure}
-%\vspace{2\baselineskip}
-\centerline{%
-\includegraphics{Figures/tag-geben-set-lsp-cropped}
+\vspace{4\baselineskip}
+\menge{ 
+\forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
+    \hspace{1em}
+    \begin{forest}
+    [, phantom, for children={if n'=1{before computing xy={s*=1.25}}{}}
+       %% This adjusts the relative position of the last child by zeroing its distance from the
+       %% phantom root and increasing its distance from its sibling. This is delayed because 
+       %% otherwise Forest will undo any changes when packing the tree.
+      [VP
+            [NP$\downarrow$]
+            [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
+    [VP
+            [NP$\downarrow$]
+            [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
+    [VP
+            [NP$\downarrow$]
+            [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
+    [VP
+            [geben]
+            [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
+    [VP
+            [$\epsilon$]]]
+    \end{forest}
+    \hspace{1em}
 }
-% This does not work with texlive 2015 use texlive 2013
-%% \menge{ 
-%% \forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
-%%     \hspace{1em}
-%%     \begin{forest}
-%%     [VP
-%%             [NP$\downarrow$]
-%%             [\subnode{vp1}{VP}]]
-%%     \end{forest}
-%%     \hspace{1em}
-%%     \begin{forest}
-%%     [VP
-%%             [NP$\downarrow$]
-%%             [\subnode{vp2}{VP}]]
-%%     \end{forest}
-%%     \hspace{1em}
-%%     \begin{forest}
-%%     [VP
-%%             [NP$\downarrow$]
-%%             [\subnode{vp3}{VP}]]
-%%     \end{forest}
-%%     \hspace{1em}
-%%     \begin{forest}
-%%     [VP
-%%             [geben]
-%%             [\subnode{vp4}{VP}]]
-%%     \end{forest}
-%%     \hspace{1em}
-%%     \begin{forest}
-%%     [\subnode{vp}{VP}
-%%             [$\epsilon$]]
-%%     \end{forest}
-%%     \hspace{1em}
-%% }
-%% \begin{tikzpicture}[overlay,remember picture,out=-90,in=90,dashed]
-%% \draw (vp1) to (vp);
-%% \draw (vp2) to (vp);
-%% \draw (vp3) to (vp);
-%% \draw (vp4) to (vp);
-%% \end{tikzpicture}
-%% }
-%\vspace{2\baselineskip}
+\vspace{.4\baselineskip}
 \caption{\label{Abbildung-Lexical-Set-geben-V-TAG}Lexicon set for \emph{geben} `to give' in V"=TAG
   according to \citet[\page 6]{Rambow94a}}
 \end{figure}%
@@ -1042,60 +1023,59 @@ With this lexicon set, it is possible to derive all permutations of the argument
 how such lexical entries can be used to analyze sentences with verbal complexes. Figure~\vref{Abbildung-zu-reparieren-versprochen-V-TAG} shows a verbal complex formed from
 \emph{zu reparieren} `to repair' and \emph{versprochen} `promised' and the relevant dominance constraints.
 \begin{figure}
-\centerline{%
-\includegraphics{Figures/tag-zu-reparieren-versprochen-vtag-cropped}
+\vspace{4\baselineskip}
+\oneline{%
+\menge{%
+  \begin{forest}
+    [, phantom, for children={if n'=1{before computing xy={l=0pt, s*=1.25}}{}}
+       %% This adjusts the relative position of the last child (n'=1) by zeroing its distance from the
+       %% phantom root (l=0) and increasing its distance from its sibling. This is delayed because 
+       %% otherwise Forest will undo any changes when packing the tree.
+      [VP
+        [NP$\downarrow$]
+        [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to
+            ($(!u.north)!3/4!(!un.north)$) %[out=55,in=181]  to ++(4cm,2cm) [out=-1,in=90] 
+            [out=55,in=90] to (!rll.north); }]
+        % the following line is ignored for space computation due to \ignoreme
+        % the first VP node at the baseline is connected to a place between the dominating vp !u.north and the node to the
+        % left of it !un.north (the second VP node on the second line). 3/4 specifies the position
+        % between these nodes. It is more to the second VP. From there we go to rll, which is the
+        % root node's (r) last child's (l) last child (l). Since the root node is our phantom node,
+        % the rll node is the last VP in the second row.
+        %
+        % the yshift raises the beginning of the line so that it is not too far away from the node.
+      ]
+      [VP
+        [NP$\downarrow$]
+        [VP, tikz+={\draw [densely dashed] ([yshift=2.5pt].south) [out=-80, in=180] to ++(20mm,-15mm) [out=0, in=-90] to ($(!unn.north)!.7!(!unnn1.north)$) [out=90, in=180] to ++(3.5mm,5mm) [out=0, in=90] to (!rl1.north); }]
+      ]
+      [VP
+        [NP$\downarrow$]
+        [VP, tikz+={\draw [densely dashed] ([yshift=2.5pt].south) [out=-80, in=180] to ++(10mm,-10mm) [out=0, in=-90] to ($(!un.north)!.6!(!unn1.north)$) [out=90, in=180] to ++(5.5mm,6.5mm) [out=0, in=90] to (!rl1.north); }]
+      ]
+      [VP
+        [NP$\downarrow$]
+        [VP, tikz+={\draw [densely dashed] ([yshift=2.5pt].south) [out=-80, in=-105] to ($(!u.north)!1/3!(!un.north)$) [out=75,in=90] to (!rll.north); }]
+      ]
+      [VP
+        [VP
+          [$\epsilon$]
+          [zu reparieren]
+        ]
+        [VP, baseline
+          [$\epsilon$]
+          [versprochen]
+        ]
+      ]
+    ]
+  \end{forest}
 }
-% texlive 2015 is broken, use 2013
-%\vspace{1cm}
-%% \oneline{%
-%% \menge{%
-%% \forestset{begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}}
-%% \hspace{1em}
-%% \begin{forest}
-%% [VP
-%% 	[NP$\downarrow$]
-%% 	[\subnode{vp1b}{VP}]]
-%% \end{forest}
-%% \hspace{1em}
-%% \begin{forest}
-%% [VP
-%% 	[NP$\downarrow$]
-%% 	[\subnode{vp2b}{VP}]]
-%% \end{forest}
-%% \hspace{1em}
-%% \begin{forest}
-%% [VP
-%% 	[NP$\downarrow$]
-%% 	[\subnode{vp3b}{VP}]]
-%% \end{forest}
-%% \hspace{1em}
-%% \begin{forest}
-%% [VP
-%% 	[NP$\downarrow$]
-%% 	[\subnode{vp4b}{VP}]]
-%% \end{forest}
-%% \hspace{1em}
-%% \begin{forest}
-%% [VP
-%% 	[\subnode{vprep}{VP}
-%% 		[$\epsilon$]
-%% 		[zu reparieren]]
-%% 	[\subnode{vpversprochen}{VP}
-%% 		[$\epsilon$]
-%% 		[versprochen]]]
-%% \end{forest}
-%% \begin{tikzpicture}[overlay,remember picture,out=-90,in=110,dashed]
-%% \draw (vp1b) to (vpversprochen);
-%% \draw (vp2b) to (vpversprochen);
-%% \draw (vp3b) to (vprep);
-%% \draw (vp4b) to (vprep);
-%% \end{tikzpicture}
-%% }}
-%\vspace{\baselineskip}
+}
+\vspace{2.5\baselineskip}
 \caption{\label{Abbildung-zu-reparieren-versprochen-V-TAG}Analysis of the verbal complex \emph{zu reparieren versprochen} in V"=TAG}
 \end{figure}%%
 Both of the first NP trees have to dominate \emph{versprochen} and the third and fourth NP tree have to dominate \emph{zu reparieren}.
-The order of the NP trees is not restricted and thus all permutations of NPs can be derived.
+The order of the NP trees is not restricted and thus all permutations of NPs can be derived.\pagebreak
 
 The interesting thing here is that this approach is similar to the one proposed by \citet[Section~2.1.3]{Berman96a-u} in LFG\indexlfg
 (see Section~\ref{Abschnitt-LFG-Umstellung}): in Berman's analysis, the verb projects directly to form a VP and the arguments are
@@ -1145,6 +1125,7 @@ another had to give way to a car park last year.'
 \z
 For other factors that play a role in processing, see \citew{Gibson98a}.
 
+\addlines
 \citet{JBR2000a} discuss verbal complexes with reordered arguments. The general pattern that they
 discuss has the form shown in (\mex{1}):
 \ea
@@ -1237,11 +1218,15 @@ that cannot be resolved by case, selectional restrictions, contextual knowledge 
 \glt Preferred reading: `Hanna has always known that she wants to leave the child.'
 }
 \ex[]{
+  \raggedright
 \gll Hanna hat immer schon gewußt, daß sie der Mann verlassen will.\\
      Hanna has always already known that she the.\nom{} man leave wants.to\\
 \glt `Hanna has always known that the man wants to leave her.'
 }
 \zl
+\pagebreak
+
+\noindent
 It is not possible to reorder (\mex{0}a)  to (\mex{0}b) without creating a strong preference for another reading.
 This is due to the fact that neither \emph{sie} `she' nor \emph{das Kind} `the child' are unambiguously marked as
 nominative or accusative. (\mex{0}b) therefore has to be interpreted as Hanna being the one that wants something, namely
@@ -1253,6 +1238,7 @@ For mass nouns, it is even worse. If they are used without an article, all cases
 and also for masculines and neuters with exception of the genitive. In the following example from
 \citet[\page 45]{Wegener85b} it is hardly possible to switch the dative and accusative object,
 whereas this is possible if the nouns are used with articles as in (\mex{1}c,d): 
+
 \eal
 \ex 
 \gll Sie mischt Wein Wasser bei.\\
@@ -1261,7 +1247,7 @@ whereas this is possible if the nouns are used with articles as in (\mex{1}c,d):
 \ex 
 \gll Sie mischt Wasser Wein bei.\\
      she mixes water wine into\\
-\glt `She mixes wine into the water.'\\
+\glt `She mixes wine into the water.'
 \ex 
 \gll Sie mischt dem Wein das Wasser bei.\\
      she mixes the.\dat{} wine the.\acc{} water into\\
@@ -1306,7 +1292,6 @@ This sentence should not be ruled out by the grammar. Its markedness is more due
 of arguments of simplex verbs. Tree"=local MC-LTAG can not correctly analyze sentences such as (\mex{0}), which shows that this TAG variant is not
 sufficient for analyzing natural language.
 
-\addlines
 There are varying opinions among TAG researchers as to what should be counted as competence and what
 should be counted as performance. For instance, \citet[\page 15]{Rambow94a} argues that one should
 not exclude reorderings that cannot be processed by means of competence grammar or the grammatical
