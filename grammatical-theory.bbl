@@ -1,6 +1,6 @@
 \providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{}
   \providecommand*{\printsecond}[2]{#2}
-\begin{thebibliography}{1420}
+\begin{thebibliography}{1421}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \providecommand{\urlprefix}{}
@@ -9,7 +9,6 @@
   \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
   \urlstyle{rm}\Url}\fi
 
-  
 \bibitem[{Abbott(1976)}]{Abbott76a-u}
 Abbott, Barbara. 1976.
 \newblock Right node raising as a test for constituenthood.
@@ -249,6 +248,13 @@ Arad~Greshler, Tali, Livnat Herzig~Sheinfux, Nurit Melnik \& Shuly Wintner.
   Publications.
 \newblock
   \urlprefix\url{http://csli-publications.stanford.edu/HPSG/2015/ahmw.pdf}.
+
+\bibitem[{Arends(2008)}]{Arends2008a}
+Arends, Jacques. 2008.
+\newblock A demographic perspective on {Creole} formation.
+\newblock In Silvia Kouwenberg \& John~Victor Singler (eds.), \emph{The
+  handbook of pidgin and creole studies}, 309--331. Oxford/Cambridge: Blackwell
+  Publishing Ltd.
 
 \bibitem[{Arka et~al.(2009)Arka, Andrews, Dalrymple, Mistica \&
   Simpson}]{AADMS2009a-u}
