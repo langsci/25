@@ -156,3 +156,51 @@ frbox/.style={
 \@addtoreset{schema}{chapter}
 \makeatother
 
+
+% http://tex.stackexchange.com/questions/298031/is-it-possible-to-add-a-command-at-the-beginning-of-a-chapter?noredirect=1#
+\pretocmd{\chapter}{% <--- IMPORTANT
+    \exewidth{(34)}% <--- IMPORTANT
+}{}{}
+
+
+% The oridingal definition from cgloss4e.
+% This is incompatible with \jambox, but does raggedright
+
+%% \def\gllr%                 % Introduces 2-line text-and-gloss.
+%%    {\begin{flushleft}
+%%      \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
+%%         \vskip\baselineskip\def\baselinestretch{1}%
+%%         \@selfnt\vskip-\baselineskip\fi%
+%%     \bgroup
+%%     \twosentr
+%%    }
+
+
+%%    \gdef\twosentr#1\\ #2\\{% #1 = first line, #2 = second line
+%%     \getwords(\lineone,\eachwordone)#1 \\%
+%%     \getwords(\linetwo,\eachwordtwo)#2 \\%
+%%     \loop\lastword{\eachwordone}{\lineone}{\wordone}%
+%%          \lastword{\eachwordtwo}{\linetwo}{\wordtwo}%
+%%          \global\setbox\gline=\hbox{\unhbox\gline
+%%                                     \hskip\glossglue
+%%                                     \vtop{\box\wordone   % vtop was vbox
+%%                                           \nointerlineskip
+%%                                           \box\wordtwo
+%%                                          }%
+%%                                    }%
+%%          \testdone
+%%          \ifnotdone
+%%     \repeat
+%%     \egroup % matches \bgroup in \gloss
+%%    \gl@stop}
+
+
+% http://tex.stackexchange.com/questions/297068/adding-coordinates-for-connection-between-nodes-in-several-forest-environments
+%
+% is required because the construction of the curves otherwise results in an enormous bounding box,
+% which probably isn't what you want. To see what it does, just delete it from the tree and observe
+% the results.
+
+\makeatletter
+\newcommand*\ignoreme{\pgf@relevantforpicturesizefalse}
+\makeatother
