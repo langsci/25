@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Language Science Press Master File       %%%
+%%%         follow the instructions below        %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
+
+\documentclass[output=coverbod% short|inprep              
+%  	        ,draftmode  
+		  ]{langsci/langscibook}    
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%          additional packages                 %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the 
+% following files. If you do not know what this might 
+% mean, you can safely ignore this section
+\usepackage[hidelinks]{hyperref}
+\input{localmetadata.tex}
+% \input{localpackages.tex}
+% \input{localhyphenation.tex}
+% \input{localcommands.tex} 
+\bibliography{localbibliography} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Frontmatter                      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{document}     
+ 
+
+\maketitle                
+\frontmatter 
+~
+   
+\end{document} 
+
+% you can create your book by running
+% xelatex main.tex
+%
+% you can also try a simple 
+% make
+% on the commandline
