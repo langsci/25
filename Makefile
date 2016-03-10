@@ -23,6 +23,7 @@ testtime:
 SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	grammatical-theory.tex           \
 	grammatical-theory-include.tex   \
+	localmetadata.tex \
 	localcommands.tex \
 	localpackages.tex \
 	backmatter.tex \
