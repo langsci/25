@@ -133,21 +133,20 @@ As we saw in Section~\ref{sec-HPSG-constituent-structure}, dominance relations i
 pairs. In general, CxG uses feature"=value pairs to describe linguistic objects, but dominance relations are represented by boxes \citep{KF99a,Goldberg2003a}: 
 
 \ea
-\setlength{\extrarowheight}{1pt}
-%\renewcommand{\arraystretch}{1.2}
-%\setlength{\tabcolsep}{10pt}
-\begin{tabular}{|ll|}\hline
-&\\[-8pt]
-\multicolumn{2}{|l|}{phon \phonliste{ the man }}\\
+\setlength{\fboxsep}{2mm}
+\fbox{\begin{tabular}{@{}ll@{}}
+\multicolumn{2}{@{}l@{}}{phon \phonliste{ the man }}\\[2mm]
 %
 % DTRS
-\begin{tabular}[t]{|l|}\hline
-phon \phonliste{ the } \\\hline
-\end{tabular}&%
-\begin{tabular}[t]{|l|}\hline
-phon \phonliste{ man } \\\hline
-\end{tabular}\\[18pt]\hline
-\end{tabular}
+% the
+\fbox{\begin{tabular}[t]{@{}l@{}}
+phon \phonliste{ the }
+\end{tabular}}&%
+% man
+\fbox{\begin{tabular}[t]{@{}l@{}}
+phon \phonliste{ man }
+\end{tabular}}
+\end{tabular}}
 \z
 The structure can be written using feature"=value pairs as follows:
 
@@ -165,26 +164,21 @@ dtrs & \sliste{ [ phon \phonliste{ the } ], [ phon \phonliste{ man } ] }
 
 \ea
 Head plus Complements Construction (HC)\\
-\medskip
-\begin{tabular}{|ll@{~}l|}\hline
-\begin{tabular}[t]{|l|}\hline
-\begin{tabular}{@{}l@{~}l@{}}
+\setlength{\fboxsep}{2mm}
+\fbox{\begin{tabular}[t]{@{}ll@{~}l@{}}
+\fbox{\begin{tabular}[t]{@{}l@{~}l@{}}
 role  & head\\
-lex   & \upshape $+$   \\
-\end{tabular}\\
-\hline
-\end{tabular}&%
-\begin{tabular}[t]{|l|}\hline
-\begin{tabular}{@{}l@{~}l@{}}
+lex   & \upshape $+$
+\end{tabular}} &%
+%
+\fbox{\begin{tabular}[t]{@{}l@{~}l@{}}
 role  & filler\\
-loc   & \upshape $+$     \\
-\end{tabular}\\
-\hline
-\end{tabular} & \begin{tabular}[t]{@{}l@{}}\\
+loc   & \upshape $+$   
+\end{tabular}} &
+\begin{tabular}[t]{@{}l@{}}\\[-2mm]
 $+$\\
-\end{tabular}\\[-2mm]
-& &\\\hline
 \end{tabular}
+\end{tabular}}
 \z
 A head is combined with at least one complement (the `+' following the box stands for at least one sign that fits the description in that box).
  \textsc{loc}+ means that this element must be realized locally. The value of \textsc{role} tells us something about the role that a particular element
@@ -195,26 +189,25 @@ The verb phrase construction\is{construction!verb phrase} is a sub-construction 
  
 \ea
 Verb phrase Construction:\\
-\begin{tabular}{|ll@{~}l|}\hline
-{cat v} & & \\
+\setlength{\fboxsep}{2mm}
+\fbox{\begin{tabular}{@{}ll@{~}l@{}}
+{cat v} & & \\[\fboxsep]
 % DTRs
-\begin{tabular}[t]{|l@{~}l|}\hline
+\fbox{\begin{tabular}[t]{@{}l@{~}l@{}}
 role & head\\
-lex  & \upshape $+$   \\\hline
-\end{tabular}
+lex  & \upshape $+$
+\end{tabular}}
 &%
-\begin{tabular}[t]{|l@{~}l|}\hline
+\fbox{\begin{tabular}[t]{@{}l@{~}l@{}}
 role         & filler   \\
 loc          & \upshape $+$\\
 {gf} & {$\neg$subj}\\
-\hline
-\end{tabular} & \begin{tabular}[t]{@{}l@{}}
-\\[8pt]
+\end{tabular}} & \begin{tabular}[t]{@{}l@{}}
+\\
 $+$\\
 \\
-\end{tabular}\\[-2mm]
-& & \\\hline
 \end{tabular}
+\end{tabular}}
 \z
 
 \noindent
@@ -227,24 +220,19 @@ head"=complement construction is represented as follows:
 
 \ea
 Verb phrase Construction with inheritance statement\is{inheritance}:\\
-\begin{tabular}{|ll|}\hline
-\multicolumn{2}{|l|}{INHERIT HC}\\
-cat v &  \\
+\setlength{\fboxsep}{2mm}
+\fbox{\begin{tabular}{@{}ll@{~}l@{}}
+\multicolumn{2}{@{}l@{}}{INHERIT HC}\\[\fboxsep]
+cat v &  \\[\fboxsep]
 % Box 1
-\begin{tabular}[t]{|l|}\hline
-\hspace{5em}\\\hline
-\end{tabular}&%
+\fbox{\begin{tabular}[t]{@{}l@{}}
+\hspace{3em}~\\
+\end{tabular}}&%
 % Box 2
-\begin{tabular}[t]{|l|l}\cline{1-1}
-% Inhalt 2
-\begin{tabular}{@{}l@{~}l@{}}
+\fbox{\begin{tabular}{@{}l@{~}l@{}}
 gf   & $\neg$subj\\
-\end{tabular} & \upshape $+$\\
-% End Inhalt 2
-\cline{1-1}
-\end{tabular}\\[-2mm]
-& \\\hline
-\end{tabular}
+\end{tabular}} & $+$\\
+\end{tabular}}
 \z
 This representation differs from the one in HPSG, aside from the box notation, only in the fact that feature descriptions are not typed and as such
 it must be explicitly stated in the representation from which superordinate construction inheritance takes place.
@@ -324,6 +312,7 @@ Parallel proposals have been made in TAG\indextag (\citealp{Candito96a}; \citeal
   188]{CK2003a-u}; \citealp[\page 171--172]{KO2012a}) and HPSG\indexhpsg
 (\citealp{Koenig99a,DK2000b-u,Kordoni2001b-u}). 
 
+\addlines[2]
 \citet[\page55--57]{MR2001a} provide the following linking constructions:\is{linking}\footnote{
 	In the original version of the transitive construction in (\ref{transitiv-Konstruktion}),
         there is a feature $\theta$ that has the value \textsc{da}$-$, however, \textsc{da} is a
