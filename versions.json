@@ -1,0 +1,18 @@
+{
+  "versions": [{
+    "versiontype": "openreview",
+    "title": "Open review version of Grammatical Theory",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2015-06-20T11:00:00.000Z"
+  }, {
+    "versiontype": "proofreading",
+    "title": "Proofreading version of Grammatical Theory",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2016-01-18T00:22:00.000Z"
+  }, {
+    "versiontype": "main",
+    "title": "Published version of Grammatical Theory",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2016-03-15T00:00:33.000Z"
+  }]
+}
