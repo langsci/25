@@ -92,7 +92,6 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
 	xelatex -no-pdf -interaction=nonstopmode $* 
 	xelatex -no-pdf -interaction=nonstopmode $*
-	correct-toappear
 	correct-index
 	\rm $*.adx
 	authorindex -i -p $*.aux > $*.adx
@@ -124,6 +123,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 bbl:
 	xelatex -no-pdf -interaction=nonstopmode grammatical-theory
 	bibtex  -min-crossrefs=200 grammatical-theory
+	correct-toappear
 
 #	xelatex $* -no-pdf |egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
 

@@ -30,7 +30,7 @@
 \tikzset{deparrow/.style={-Latex}}%,blue}}
 
 
-\usepackage{forest}
+\usepackage{forest-v105}
 % does not work
 %\usepackage[external]{forest}\tikzexternalize\usepackage{morewrites}
 
@@ -177,10 +177,17 @@ empty nodes/.style={
 
 
 
-
 % Manual page 52
 \forestset{
 nice empty nodes/.style={
 for tree={calign=fixed edge angles},
 delay={where content={}{shape=coordinate,for parent={for children={anchor=north}}}{}}
 }}
+
+
+% forest 2.0
+%% \forestset{
+%%     empty nodes/.style={
+%%     delay={where content={}{shape=coordinate,for siblings={anchor=north}}{}}
+%%     }
+%% }

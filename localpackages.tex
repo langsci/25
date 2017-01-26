@@ -42,6 +42,8 @@
 
 \usepackage{multicol}
 
+% for reasons I do not understand this cannot be moved further down and 
+% the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 \usepackage{langsci/styles/langsci-forest-setup}
 
 \usepackage{bookmark}
@@ -80,7 +82,7 @@ styles/eng-date,styles/my-theorems}
 
 % loaded in macros.2e \usepackage[english]{varioref}
 % do not stop and warn! This will be tested in the final version
-%\vrefwarning
+\vrefwarning
 
 
 \usepackage{ogonek}        % For Ewa Dabrowska
@@ -99,10 +101,17 @@ styles/eng-date,styles/my-theorems}
 
 %\renewcommand{\xbar}{X̅\xspace}
 
+% why is this necessary here????? 26.01.2017 St. Mü.
+\usepackage{forest-v105}
+
+% for forest version2
+%\useforestlibrary{linguistics}
+%\forestapplylibrarydefaults{linguistics}
+
+
+
 
 % should be removed once that the \Tree figures are removed
-\usepackage{forest}
-
 \usepackage{pstricks,pst-node}
 
 %\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
