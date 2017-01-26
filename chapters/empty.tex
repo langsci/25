@@ -62,7 +62,7 @@ for NPs or a correspondingly high number of complex lexical items for relative p
 \citet{Koenig99a-u} uses\todostefan{andere Quellen?}
 traces. In GPSG\indexgpsg, there is the trace"=less analysis of extraction\is{extraction} by \citet[\page 76--77]{Uszkoreit87a} that we discussed in 
 Section~\ref{Abschnitt-GPSG-Fernabhaengigkeiten}, but there is also the analysis of \citet*[\page 143]{GKPS85a} that uses traces. In LFG\indexlfg, there are both analyses with
-traces \citep[\page 67]{Bresnan2001a} and those without (see Section~\ref{Abschnitt-Verbstellung-LFG} and Section~\ref{Abschnitt-NLA-LFG}). 
+traces \citep[\page 67]{Bresnan2001a} and those without (see \citew{KZ89a,DKK2001a-u} and Section~\ref{Abschnitt-Verbstellung-LFG} and Section~\ref{Abschnitt-NLA-LFG}). 
 Many of the phrasal analyses in HPSG\indexhpsg are born out of the wish to avoid empty elements (see Section~\ref{Abschnitt-Phrasale-Konstruktionen}). 
 An example for this is the relative clause analysis by \citet{Sag97a} that replaces the empty
 relativizer in \citew{ps2} with a corresponding phrasal rule. On the other hand we have
@@ -180,7 +180,7 @@ trace"=less analysis is shown in Figure~\vref{Abbildung-Kopf-ohne-Spur}.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [ V\feattab{\subcat \sliste{ NP[\type{nom}] },\\
              \textsc{inher$|$slash} \sliste{ \ibox{1} }}\\
   [{\ibox{4} \feattab{
@@ -202,7 +202,7 @@ Figure~\ref{Abbildung-Kopf-ohne-Spur} shows the parallel trace"=less structure.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [{V\feattab{
                                     \subcat \sliste{ NP[\type{nom}] },\\
                                     \textsc{inher$|$slash} \sliste{ \ibox{1} } }}\\
@@ -239,12 +239,12 @@ Figure~\vref{Abbildung-Kopf+Verbspur} shows the combination of a verb trace with
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V\feattab{
                                     \textsc{head$|$dsl} \ibox{1},\\
                                     \subcat \ibox{2} }
    [{\ibox{3} NP[\type{acc}]}
-     [ die Berichte;the reports, triangle] ]
+     [ die Berichte;the reports, roof] ]
    [V\ibox{1}\feattab{
                     \textsc{head$|$dsl} \ibox{1},\\
                     \subcat \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }} 
@@ -258,12 +258,12 @@ the mother node. Figure~\vref{Abbildung-Kopf-ohne-Verbspur} shows the structures
 \begin{figure}
 \centering
 \begin{forest}
-sn edges, for tree={l sep= 5ex}
+sm edges, for tree={l sep= 5ex}
 [ V\feattab{
      \textsc{head$|$dsl} V[\subcat \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }],\\
      \subcat \ibox{2}} 
    [{\ibox{3} NP[\type{acc}]}
-      [die Berichte;the reports, triangle]]]
+      [die Berichte;the reports, roof]]]
 \end{forest}
 \caption{\label{Abbildung-Kopf-ohne-Verbspur}Analysis of verb position using a unary projection}
 \end{figure}%
@@ -409,7 +409,7 @@ no word baseline
 		[TP
 			[AgrOP
 				[DP
-					[alle Fenster$_ j$;all windows,triangle,tier=word]]
+					[alle Fenster$_ j$;all windows,roof,tier=word]]
 				[AgrO$'$
 					[VoiceP
 						[DP
@@ -567,7 +567,7 @@ contains a simple structure with a verb and an object.
 %\begin{sideways}
 \oneline{%
 \begin{forest}
-sn edges, for tree={l sep= 4ex}
+sm edges, for tree={l sep= 4ex}
 [V$'$\feattab{
     \subcat \sliste{ NP\ind{y} },\\
     \rels \relliste{ h1:every(x, h2, h3), h4:window(x), h6:CAUSE(y,h7), h5:open(x) },\\
@@ -793,13 +793,13 @@ Figure~\vref{Abbildung-Resultativ-LR} shows the corresponding tree.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[NP{[\type{nom}]}
 		[Peter;Peter]]
 	[V{[\subcat \sliste{ NP[\type{nom}] }]}
 		[NP{[\type{acc}]}
-			[den Teich;the pond, triangle]]
+			[den Teich;the pond, roof]]
 		[V{[\subcat \sliste{ NP[\type{nom}], NP[\type{acc}] } ]}
 			[Adj
 				[leer;empty]]
@@ -821,13 +821,13 @@ Figure~\vref{Abbildung-Resultativ-leer} shows how a lexical rule can be replaced
 \begin{sideways}
 %\scalebox{0.9}{%
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[{NP[\type{nom}]}
 		[Peter;Peter]]
 	[{V[\subcat \sliste{ NP[\type{nom}] }]}
 		[{NP[\type{acc}]}
-			[den Teich;the pond,triangle]]
+			[den Teich;the pond,roof]]
 		[{V[\subcat \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]} }]}
 			[Adj
 				[leer;empty]]

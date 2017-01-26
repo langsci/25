@@ -6,7 +6,7 @@ echo $x
 #sed -e 's/\[ppp/\[{\\it ppp\\\/}/g'   $x >$x.neu
 #sed -e 's/_S/_{\\mbox{\\footnotesize S}}/g'   $x >$x.neu
 #sed -e 's/Lesetips/Literatur/g'   $x >$x.neu
-sed -e 's/\\end{figure}/\\end{figure}%/g'   $x >$x.neu
+sed -e 's/sn edges/sm edges/g'   $x >$x.neu
 #sed -e 's/ vform-/ \{\\sc vform}-/g'   $x >$x.neu
 end
 

@@ -70,11 +70,11 @@ KP2007a,KP2008a-u,Kaufmann2009a-u,Fokkens2011a},
 \item Greek\il{Greek} \citep{KN2005a-u},
 {\sloppy
 % needed for Herzig Shinfux 
-\item Hausa\il{Hausa} \citep{Crysmann2005b-u,Crysmann2009a-u,Crysmann2011a-u,Crysmann2012a-u},
+\item Hausa\il{Hausa} \citep{Crysmann2005b-u,Crysmann2009a-u,Crysmann2011a-u,Crysmann2012a-u,Crysmann2016a},
 \item Hebrew\il{Hebrew} \citep*{MelnikHandWritten,HMW2013a-u,AHMW2015a-u}, 
+\item Indonesian\il{Indonesian} \citep*{MBS2016a-u}
 \item Japanese\il{Japanese} \citep{Siegel2000a,SB2002a,BS2005a}, 
 }
-\item Yiddish\il{Yiddish} \citep{MOe2011a},
 \item Korean\il{Korean} \citep*{KY2003a-u,KY2004a-u,KY2006a,KY2009a-u,KSY2007a-u,SKBY2010a-u,KYSB2011a-u},
 \item Maltese\il{Maltese} \citep{MuellerMalteseSketch},
 \item Mandarin Chinese\il{Mandarin Chinese} 
@@ -95,6 +95,7 @@ ML2009a,ML2013a,FSB2015a-u},
 \item South African Sign Language\il{sign language!South African} \citep{Bungeroth2002a-u},
 \item Turkish\il{Turkish} \citep*{FPB09a-u},
 \item Wambaya\il{Wambaya} \citep{Bender2008b-u,Bender2008a,Bender2010a-u}.
+\item Yiddish\il{Yiddish} \citep{MOe2011a},
 \end{itemize}
 The first implemented HPSG grammar was a grammar of English developed in the Hewlett"=Packard labs in Palo Alto
 \citep*{FPW85a,Flickinger87}. Grammars for German were developed in Heidelberg, Stuttgart and
@@ -258,7 +259,7 @@ Figure~\vref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analy
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
 		[Peter;Peter]]
@@ -284,7 +285,7 @@ Furthermore, it must agree with the verb. This is not shown here.
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
 		[Peter;Peter]]
@@ -311,7 +312,7 @@ is implicitly contained in \phon. (\mex{1}) shows the representation of \phonvs 
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [NP
 	[Det
 		[dem;the]]
@@ -368,7 +369,7 @@ In the outer layer, there are the features \phon and \synsem. As previously ment
 object. The value of \synsem is a feature structure which contains syntactic and semantic information that can be selected by other heads.
 The daughters of phrasal signs are represented outside of \synsem. This ensures that there is a
 certain degree of locality\is{locality} involved in selection: a head cannot access the internal
-structure of the elements which it selects (Pollard und Sag \citeyear[\page 143--145]{ps};
+structure of the elements which it selects (Pollard \& Sag \citeyear[\page 143--145]{ps};
 \citeyear[\page 23]{ps2}). See also Sections~\ref{sec-mother} and~\ref{sec-locality} for a
 discussion of locality. Inside \synsem, there is information relevant in local contexts (\local,
 abbreviated to \loc) as well as information important for long"=distance dependencies
@@ -383,7 +384,7 @@ Semantics}\indexmrs \citep*{CFPS2005a}. An MRS structure is comprised of an inde
 relations which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
 and interrogative clauses\is{interrogative clause} (\citealp{ps2}; \citealp{Sag97a};
 \citealp{GSag2000a-u}; \citealp{Holler2005a-u}), which will not be discussed here.
-\pagebreak
+%\pagebreak
 
 As can be seen, the description of the word \emph{Grammatik} `grammar' becomes relatively complicated. In theory, it would be possible to list all properties
 of a given object directly in a single list of feature"=value pairs. This would, however, have the disadvantage that the identity of groups of feature"=value pairs could not be
@@ -469,7 +470,7 @@ non-head-dtrs \sliste{ \onems{ phon \phonliste{ Peter }\\
 }
 \z
 % for the example on the next page
-\addlines
+%\addlines
 NP[\type{nom}] is an abbreviation for a complex feature description. Schema~\ref{schema-bin-prel} divides the \subcatl of the head daughter into
 a single"=element list and what is left. Since \emph{schläft} `sleeps' only has one element in its \subcatl, what remains is the empty list.
 This remainder is also the \subcatv of the mother.
@@ -579,16 +580,16 @@ this on the basis of the finite verb \emph{gibt} `gives'.
 \settowidth{\offsetup}{V[\type{fin}}
 \centerline{
 \begin{forest}
-sn edges, for tree={l+=\baselineskip}
+sm edges, for tree={l+=\baselineskip}
 [V{[\type{fin}, \subcat \eliste]}, name=fin1
 	[\ibox{1} NP{[\type{nom}]}
 		[er;he]]
 	[V{[\type{fin}, \subcat \sliste{ \ibox{1} }]}, name=fin2
 		[\ibox{2} NP{[\textit{dat}]}
-			[dem Mann;the man,triangle]]
+			[dem Mann;the man,roof]]
 		[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2} }]}, name=fin3
 			[\ibox{3} NP{[\textit{acc}]}
-				[das Buch;the book,triangle]]
+				[das Buch;the book,roof]]
 			[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
 				[gibt;gives]]]]]	
 tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\offset,0)$);
@@ -612,7 +613,7 @@ for \emph{gibt} `gives':
                            }
 }
 \zs
-\addlines
+%\addlines
 The \emph{Head Feature Principle} takes the following form:
 \begin{principle-break}[\emph{Head~Feature~Principle}]\is{principle!Head Feature}
 \label{prinzip-hfp}
@@ -625,7 +626,7 @@ explicit.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [\ms{head & \ibox{1}\\
      subcat & \sliste{ }
      }
@@ -636,13 +637,13 @@ sn edges
              subcat & \sliste{ \ibox{2} }
              }
 		[\ibox{3} NP{[\textit{dat}]}
-			[dem Mann;the man, triangle]]
+			[dem Mann;the man, roof]]
 		[\ms{
                                                                                    head & \ibox{1}\\
                                                                                    subcat & \sliste{ \ibox{2}, \ibox{3} }
                                                                                     }
 			[\ibox{4} NP{[\textit{acc}]}
-				[das Buch;the book, triangle]]
+				[das Buch;the book, roof]]
 			[\ms{
                                                                                    head & \ibox{1} \ms[verb]{
                                                                                                   vform & fin
@@ -991,7 +992,7 @@ Figure~\vref{fig-ha-selektion} demonstrates selection in head"=adjunct structure
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [\nbar
 	[AP{[\textsc{head$|$mod} \ibox{1}]}
 		[interessantes;interesting]]
@@ -1101,7 +1102,7 @@ Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
 }
 \z
 
-\addlines
+%\addlines
 \noindent
 This lexical rule takes a verb stem\footnote{
 	The term \emph{stem} includes roots (\stem{helf} `help-'), products of derivation
@@ -1122,7 +1123,7 @@ list) and licenses a lexical entry that requires a nominative argument and possi
   \citep{Bausewein90,Pittner95b,Mueller99b},
 %% \item Passive\is{passive} \citep{KC77a}
   depictive secondary predicates\is{depictive predicate} \citep{Mueller2001c,Mueller2002b,Mueller2008a},
-  Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard und Sag: \citeyear{PS92};
+  Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard \& Sag: \citeyear{PS92};
   \citeyear[Chapter~6]{ps2}). This order also corresponds to the Obliqueness
   Hierarchy\is{obliqueness} suggested by \citet{KC77a} and \citet{Pullum77a}. In order to capture
   this hierarchy, a special list with nominative, accusative, dative order would have to be assumed.
@@ -1299,7 +1300,7 @@ d. & \emph{schenkt} `gives':        & \subcat \sliste{ NP[\type{str}]$_j$, NP[\t
 %%       \citep{Bausewein90,Pittner95b,Mueller99b}
 %% \item Passive\is{passive} \citep{KC77a}
 %% \item Depictive predicates\is{depictive predicate} \citep{Mueller2001c,Mueller2002b,Mueller2008a}
-%% \item Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard und Sag:
+%% \item Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard \& Sag:
 %%   \citeyear{PS92}; \citeyear[Chapter~6]{ps2})
 %% \end{itemize}
 %% \noindent
@@ -1333,10 +1334,10 @@ embedded verb are taken over by the auxiliary.  After combining the participle w
 we arrive at the following \subcat lists:
 \ea
 \begin{tabular}[t]{@{}l@{~}l@{~}l}
-a. & \emph{geschlafen wird} `slept is':      & \subcat \sliste{ }\\
+a. & \emph{geschlafen wird}  `slept is':     & \subcat \sliste{ }\\
 b. & \emph{unterstützt wird} `supported is': & \subcat \sliste{ NP[\type{str}]$_k$ }\\
-c. & \emph{geholfen wird}:  `helped is'      & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\
-d. & \emph{geschenkt wird}: `given is'       & \subcat \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
+c. & \emph{geholfen wird}    `helped is':    & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\
+d. & \emph{geschenkt wird}   `given is':     & \subcat \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
 (\mex{0}) differs from (\ref{ex-verben-active}) in that a different NP is in first position. If this NP has structural case, it will receive nominative case.
@@ -1358,7 +1359,7 @@ used for (\mex{1}).
 \zl
 It is the auxiliary that determines which arguments are realized (\citealp{Haider86}; \citealp[Chapter~17]{MuellerLehrbuch1}).
 The lexical rule in (\ref{pass-lr-mlr-str}) licenses a form that can be used both in passive and perfect. Therefore, the
-\vformv is of \type{ppp}, which stands for \emph{participle perfect passive}.
+\vformv is of \type{ppp}, which stands for \emph{perfect passive participle}.
 \is{principle!Case|)}
 
 One should note that this analysis of the passive works without movement of constituents. The problems with the GB analysis\indexgb do not arise here.
@@ -1369,7 +1370,7 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
 
-\addlines[2]
+%\addlines[2]
 The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
 to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
 The analysis of (\mex{1}) can be summarized as follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special form of the 
@@ -1386,14 +1387,14 @@ Figure~\vref{Abbildung-Verbstellung-HPSG} gives an overview of this.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [VP
 	[V \sliste{ VP//V }, name=vini
 	   [V,name=vlast [kennt$_k$;knows]]]
 	[VP//V, name=vp
 	   [NP [jeder;everyone]]
 	   [V$'$//V, name=vbar
-	     [NP [diesen Mann;this man, triangle]]
+	     [NP [diesen Mann;this man, roof]]
 		[V//V,name=vtrace [ \trace$_k$]]]]]
 %\draw[<->] (vone) to (vtwo);
 %%\draw (-2,-5) to[grid with coordinates] (4,0.5);
@@ -1446,7 +1447,7 @@ The syntactic aspects of an analysis with this trace are represented in Figure~\
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[V
 		[kennt;knows]]
@@ -1455,7 +1456,7 @@ sn edges
 			[jeder;everyone]]
 		[V{[\subcat \sliste{ \ibox{3} }]}
 			[\ibox{4} NP{[\textit{acc}]}
-				[diesen Mann;this man, triangle]]
+				[diesen Mann;this man, roof]]
 			[{[V[\subcat \sliste{ \ibox{3}, \ibox{4} }]}
 				[\trace]]]]]]
 \end{forest}
@@ -1486,7 +1487,7 @@ It is normally not the case that \emph{kennen} `know' selects a complete sentenc
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
 \emph{kennt}. If it could contain a trace belonging to \emph{gibt} `gives', for example, we would be able to analyze sentences such as (\mex{1}b):
 %\addlines bug here?
-\largerpage
+%\largerpage
 \eal
 \ex[]{
 \gll Gibt [der Mann der Frau das Buch \_$_{gibt}$]?\\
@@ -1611,7 +1612,7 @@ The corresponding extended analysis is given in Figure~\vref{verb-movement-syn}.
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \eliste]}
 	[V{[\subcat \sliste{ \ibox{1} }]}
 		[V{[\subcat \ibox{2}]}, tier=np,edge label={node[midway,right]{V1-LR}}
@@ -1625,7 +1626,7 @@ sn edges
                       \textsc{dsl$|$cat$|$subcat} \ibox{2},\\
                       \textsc{subcat} \sliste{ \ibox{3} } }}
 			[\ibox{4} NP{[\textit{acc}]}
-				[diesen Mann;this man,triangle]]
+				[diesen Mann;this man,roof]]
 			[V{\feattab{
                               \textsc{dsl$|$cat$|$subcat} \ibox{2},\\
                               \textsc{subcat} \ibox{2} \sliste{ \ibox{3}, \ibox{4} } }}
@@ -1703,13 +1704,13 @@ Figure~\vref{Abbildung-Konstituentenstellung-HPSG-normal} shows the analysis of 
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \sliste{}]}
 	[\ibox{1} NP{[\type{nom}]}
 		[jeder;everybody]]
 	[V{[\subcat \sliste{ \ibox{1} }]}
 		[\ibox{2} NP{[\type{acc}]}
-			[diesen Mann;this man, triangle]]
+			[diesen Mann;this man, roof]]
 		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
@@ -1721,10 +1722,10 @@ The analysis of the marked order is shown in Figure~\vref{Abbildung-Konstituente
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \sliste{}]}
 	[\ibox{2} NP{[\type{acc}]}
-		[diesen Mann;this man, triangle]]
+		[diesen Mann;this man, roof]]
 	[V{[\subcat \sliste{ \ibox{2} }]}
         	[\ibox{1} NP{[\type{nom}]}
 	        	[jeder;everybody]]
@@ -1813,10 +1814,10 @@ the analysis of (\mex{1}).
 \settowidth{\offset}{N}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [VP
 	[NP,name=np
-		[diesen Mann$_i$;this man,triangle]]
+		[diesen Mann$_i$;this man,roof]]
 	[VP/NP,name=vpnp2
 		[V
 			[V
@@ -2018,12 +2019,12 @@ variant of the analysis of fronting to the prefield.
 \begin{figure}
 \centerfit{
 \begin{forest}
-sn edges
+sm edges
 [V\feattab{\textsc{subcat} \eliste,\\ 
            \textsc{inher$|$slash} \eliste},s sep+=1em % increase the distance because otherwise we
                                 % are in the triangle
 	[NP{[\loc \ibox{1} \textit{acc}]}
-		[diesen Mann;this man,triangle]]
+		[diesen Mann;this man,roof]]
 	[V\feattab{\textsc{subcat} \sliste{},\\
                    \textsc{inher$|$slash} \sliste{ \ibox{1} },\\
                    \textsc{to-bind$|$slash} \sliste{ \ibox{1} } }
@@ -2135,7 +2136,7 @@ Figure~\vref{Abbildung-die-Zerstorung}.
 \begin{figure}
 \centerfit{
 \begin{forest}
-sn edges
+sm edges
 [N\feattab{\spr \sliste{  },\\
            \subcat \sliste{  } }
 	[\ibox{1} Det
@@ -2148,9 +2149,9 @@ sn edges
                                    \subcat \sliste{ \ibox{2}, \ibox{3} } }
 				[Zerstörung;destruction]]
 			[\ibox{3} NP{[\type{gen}]}
-				[der Stadt; of the city,triangle]]]
+				[der Stadt; of the city,roof]]]
 		[\ibox{2} PP{[\type{durch}]}
-			[durch die Soldaten; by the soldiers,triangle]]]]
+			[durch die Soldaten; by the soldiers,roof]]]]
 \end{forest}}
 \caption{NP analysis with valence features \spr}\label{Abbildung-die-Zerstorung} 
 \end{figure}%

@@ -26,7 +26,7 @@ present the GPSG analyses of these phenomena in some more detail.
 \section{General remarks on the representational format}
 \label{sec-Representationsformat}
 
-This section has three parts. The general assumptions regarding features and the representation of
+This section has five parts. The general assumptions regarding features and the representation of
 complex categories is explained in Section~\ref{sec-complex-categories-gpsg}, the assumptions
 regarding the linearization of daughters in a phrase structure rule is explained in
 Section~\ref{GPSG-lokale-Umstellung}. Section~\ref{sec-metarules-gpsg} introduces metarules, Section~\ref{Sec-GPSG-Sem} deals with
@@ -96,9 +96,9 @@ If we analyze the sentence in (\mex{1}) with the second rule in (\mex{-1}) and t
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [{V2[\vform \type{inf}]}
-  [N2 [den Kuchen;the cake,triangle] ]
+  [N2 [den Kuchen;the cake,roof] ]
   [{V[6, \vform \type{inf}]} [aufzuessen;to.eat.up] ] ]
 \end{forest}
 }
@@ -262,7 +262,7 @@ rules.
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [S
   [V]
   [{NP[nom]}]
@@ -324,12 +324,12 @@ cannot be captured by the rule in (\mex{0}), however.
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [S
-  [{N2[nom]} [der Mann;the man,triangle] ]
+  [{N2[nom]} [der Mann;the man,roof] ]
   [V2
-    [{N2[dat]} [der Frau;the woman,triangle] ]
-    [{N2[acc]} [das Buch;the book,triangle] ] 
+    [{N2[dat]} [der Frau;the woman,roof] ]
+    [{N2[acc]} [das Buch;the book,roof] ] 
     [V [gibt;gives] ] ] ]
 \end{forest}}
 \caption{\label{fig-gpsg-VP}VP analysis  for German (not appropriate in the GPSG framework)}
@@ -815,19 +815,19 @@ Figure~\vref{fig-nld-gpsg} shows the interaction of the rules for the analysis o
 %\addlines[2]
 \ea
 \gll Dem Mann gibt er das Buch.\\
-     the.\dat{} man gives he,\nom{} the.\acc{} book\\
+     the.\dat{} man gives he.\nom{} the.\acc{} book\\
 \glt `He gives the man the book.'
 \z
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [{V3[+\textsc{fin}, $+$\textsc{mc}]}
-  [{N2[dat,+\textsc{top}]} [dem Mann;the man,triangle] ]
+  [{N2[dat,+\textsc{top}]} [dem Mann;the man,roof] ]
   [{V3[+\textsc{mc}]/N2[dat]}
     [{V[8,+\textsc{mc}]} [gibt;gives] ]
     [{N2[nom]} [er;he] ] 
-    [{N2[acc]} [das Buch;the book, triangle] ] ] ]
+    [{N2[acc]} [das Buch;the book, roof] ] ] ]
 \end{forest}
 }
 \caption{\label{fig-nld-gpsg}Analysis of fronting in GPSG}
@@ -897,7 +897,7 @@ This is shown in Figure~\vref{fig-gpsg-udc}.
 \centerline{%
 %http://tex.stackexchange.com/questions/187407/add-a-node-without-content-to-a-tree-in-forest/187433#187433
 \begin{forest}
-sn edges,empty nodes
+sm edges,empty nodes
 [{V3[+\textsc{fin},+\textsc{mc}]}
   [{N2[acc,+\textsc{top}]} [wen;who] ]
   [{V3[+\textsc{mc}]/N2[acc]}
@@ -907,7 +907,7 @@ sn edges,empty nodes
       [{}[dass;that] ]
       [{V3[$-$dass,$-$\textsc{mc}]/N2[acc]} 
          [{N2[nom]} [ich;I] ]
-         [{V[6,$-$\textsc{mc}]} [gesehen habe;seen have,triangle] ] ] ] ] ]
+         [{V[6,$-$\textsc{mc}]} [gesehen habe;seen have,roof] ] ] ] ] ]
 \end{forest}
 }
 \caption{\label{fig-gpsg-udc}Analysis of long"=distance dependencies in GPSG}

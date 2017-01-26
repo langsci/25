@@ -294,15 +294,15 @@ and is therefore independent of the sentence syntax:
 }
 \ex[\#]{
 \gll weil sie in fünf Jahren fischten\\
-	 because they in five years fished\\
+     because they in five years fished\\
 }
 \ex[]{
 \gll das Leerfischen der Nordsee in fünf Jahren\\
-	 the empty.fishing of.the North.Sea in five years\\
+     the empty.fishing of.the North.Sea in five years\\
 }
 \ex[\#]{
 \gll das Fischen in fünf Jahren\\
-	 the fishing in five years\\
+     the fishing in five years\\
 }
 \zl
 %
@@ -726,7 +726,7 @@ as mysterious and at worst leads to irreconcilable contradictions for the phrase
 constructions and/or caused"=motion constructions\is{construction!Caused"=Motion} as phrasal constructions.\footnote{%
 \citet[Section~2.3]{AT2014a} argue that their account is not constructional. If a construction is a
 form-meaning pair, their account is constructional, since a certain c"=structure is paired with a
-semantic contribution. Asudeh and Toivonen compare their approach with approaches in Constructional
+semantic contribution. \citet[Section~2.2]{AT2014a} compare their approach with approaches in Constructional
 HPSG \citep{Sag97a} and Sign"=Based Construction Grammar (see Section~\ref{sec-SBCG}), which they term constructional. The only difference
 between these approaches and the approach by Asudeh, Dalrymple \& Toivonen is that the constructions in the HPSG"=based theories are modeled using types and
 hence have a name.%
@@ -842,12 +842,12 @@ it is possible to realize it in a PP with the preposition \emph{durch} `by':
 \begin{figure}
 %\hfill
 \begin{forest}
-sn edges
+sm edges
 [S
 	[NP{[\textit{nom}]}
 		[jemand;somebody]]
 	[NP{[\textit{acc}]}
-		[die Nordsee;the North.Sea, triangle]]
+		[die Nordsee;the North.Sea, roof]]
 	[Adj
 		[leer;empty]]
 	[V
@@ -855,7 +855,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
 	[Det
 		[die;the]]
@@ -863,7 +863,7 @@ sn edges
 		[N
 			[Leerfischung;empty.fishing]]
 		[NP{[\textit{gen}]}
-			[der Nordsee;of.the North.Sea, triangle]]]]
+			[der Nordsee;of.the North.Sea, roof]]]]
 \end{forest}
 %\hfill\mbox{}
 \caption{\label{Abbildung-Resultativkonstruktion-Nominalisierung}Resultative construction and nominalization}
@@ -913,7 +913,7 @@ Figure~\vref{Abbildung-Resultativkonstruktion-Nominalisierung-Construction}.\foo
 \centering
 \scalebox{.98}{%
 \begin{forest}
-%sn edges
+%sm edges
 for tree={fit=rectangle}
 [NP
 	[Det]
@@ -2674,7 +2674,7 @@ The analysis of (\ref{Beispiel-he-knows-and-loves}) can be seen in Figure~\vref{
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [\phantom{S}
   [S, no edge
 	[NP,name=np11
@@ -2685,7 +2685,7 @@ sn edges
         [V, name=vcoord, no edge [and, name=and, no edge]]
         [VP
            [V,name=v2 [loves]]
-           [NP, name=np22 [this record, triangle]]]]]
+           [NP, name=np22 [this record, roof]]]]]
 \draw (s2.south)--(np11.north)
       (vp1.south)--(np22.north);
 \draw[thick] (vcoord.south)--(v1.north)
@@ -2710,7 +2710,7 @@ Figure~\ref{Abb-CG-Koordination-V}.\footnote{
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [S
 	[NP
 		[he]]
@@ -2722,7 +2722,7 @@ sn edges
 			[V
 				[loves]]]
 		[NP
-			[this record,triangle]]]]
+			[this record,roof]]]]
 \end{forest}
 \caption{\label{Abbildung-He-knows-and-loves-this-record-HPSG}Selection"=based analysis of \emph{He knows and
     loves this record.} in tree notation}
@@ -2740,7 +2740,7 @@ both Goldberg and Croft would have to draw from the TAG analysis in Figure~\vref
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [\phantom{S}
   [S, no edge
 	[NP, name=np11
@@ -2748,12 +2748,12 @@ sn edges
 	[VP, name=vp1
 		[V, name=v1 [gave]]
 		[NP [George]]
-	        [NP [a book,triangle]]]]
+	        [NP [a book,roof]]]]
   [VP,name=vpcoord, no edge [and, name=and, no edge]]
   [S, name=s2, no edge
     [VP, name=vp2
       [NP [Martha]]
-      [NP [a record,triangle]]]]]
+      [NP [a record,roof]]]]]
 \draw (s2.south)--(np11.north)
       (vp2.south)--(v1.north);
 \draw[thick] (vpcoord.south)--(vp1.north)
@@ -3287,7 +3287,7 @@ the same effect as the lexical rule.
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[er]]
@@ -3302,7 +3302,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[er]]
@@ -3318,7 +3318,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[er]]
@@ -3359,7 +3359,7 @@ from a GB"=type verb movement analysis (see Section~\ref{Abschnitt-Verbstellung-
 \begin{figure}
 \hfill%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[X
@@ -3371,7 +3371,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[kennt]]
@@ -3634,11 +3634,11 @@ gives the analysis of (\mex{0}b).
 		[C]]
 	[vP
 		[PP$_2$
-			[in den Müll,tier=word,triangle]]
+			[in den Müll,tier=word,roof]]
 		[v$'$
 			[VP
 				[DP$_1$
-					[(mit) diesen Klamotten,triangle]]
+					[(mit) diesen Klamotten,roof]]
 				[V$'$
 					[t$_2$]
 					[t$_V$, tier=word]]]
@@ -3826,7 +3826,7 @@ This analysis is shown in Figure~\vref{verb-movement-muell}.
 \begin{figure}
 \oneline{%
 \begin{forest}
-sn edges
+sm edges
 [V{[\subcat \sliste{}]}
 	[V{[\subcat \sliste{ \ibox{1} [\textsc{head$|$dsl} \ibox{2}] }]}
 		[V{[\textsc{loc} \ibox{2} ]}, tier=pp, edge label={node[midway,right]{V1-LR}}
@@ -3835,12 +3835,12 @@ sn edges
                         \textsc{head$|$dsl} \ibox{2},\\
                         \subcat \sliste{} }
 		[\ibox{3} PP, tier=pp
-			[in den Müll;in the garbage,triangle]]
+			[in den Müll;in the garbage,roof]]
 		[V\feattab{
                          \textsc{head$|$dsl} \ibox{2},\\
                          \subcat \sliste{ \ibox{3} }}
 			[\ibox{4} PP{[\type{mit}]}
-				[mit diesen Klamotten;with these clothes,triangle]]
+				[mit diesen Klamotten;with these clothes,roof]]
 			[V\ibox{2}\feattab{ \textsc{head$|$dsl} \ibox{2},\\
                                             \subcat \sliste{ \ibox{3}, \ibox{4} }}
 				[\trace]]]]]
@@ -3928,15 +3928,15 @@ to the specifier position.%
 \begin{figure}
 \centering
 \begin{forest}
-sn edges, for tree={fit=rectangle}
+sm edges, for tree={fit=rectangle}
 [CP{[\type{rel}]}
 	[NP
-		[whose remarks,triangle]]
+		[whose remarks,roof]]
 	[\cbar{[\type{rel}]}
 		[\cnull{[\type{rel}]}
 			[\trace]]
 		[IP,l sep+=\baselineskip
-			[they seemed to want to object to,triangle]]]]
+			[they seemed to want to object to,roof]]]]
 \end{forest}
 \caption{\label{Abbildung-GB-Relativsatz}Analysis of relative clauses in \gbt}
 \end{figure}%
@@ -3946,12 +3946,12 @@ The alternative analysis shown in Figure~\vref{Abbildung-HPSG-Relativsatz} invol
 in order to form a relative clause.
 \begin{figure}
 \begin{forest}
-sn edges, for tree={fit=rectangle}
+sm edges, for tree={fit=rectangle}
 [S{[\type{rel}]}
 	[NP
-		[whose remarks,triangle]]
+		[whose remarks,roof]]
 	[S,l sep+=\baselineskip
-		[they seemed to want to object to,triangle]]]
+		[they seemed to want to object to,roof]]]
 \end{forest}
 \caption{\label{Abbildung-HPSG-Relativsatz}Analysis of relative clauses in HPSG following \citew{Sag97a}}
 \end{figure}%
@@ -3995,7 +3995,7 @@ schema.%
 under the term \emph{wh}"=movement in \gbt and the Minimalist Program\indexmp. He shows that this is by no means a
 uniform phenomenon.  He investigates \emph{wh}"=questions (\mex{1}),
 \emph{wh}"=exclamatives\is{wh-exclamative@\emph{wh}"=exclamative} (\mex{2}),
-topicalization\is{topicalization} (\mex{3}), \emph{wh}"=relative clauses\is{relative clause}
+topicalization\is{topicalization} (\mex{3}), \emph{wh}"=relative clauses
 (\mex{4}) and \emph{the}"=clauses\is{the-clause@\emph{the}-clause} (\mex{5}):
 \eal
 \ex How foolish is he?

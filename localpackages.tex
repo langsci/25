@@ -139,7 +139,7 @@ styles/eng-date,styles/my-theorems}
 
 
 % adds lines to both the odd and even page.
-% bloddy hell! This is really an alpha package! Do not use the draf option! 07.03.2016
+% bloddy hell! This is really an alpha package! Do not use the draft option! 07.03.2016
 \usepackage{addlines}
 
 %% \let\addlinesold=\addlines
@@ -149,6 +149,10 @@ styles/eng-date,styles/my-theorems}
 %% \addlinesold[#1]
 %% }
 
+
+% do nothing now
+\let\addlinesold=\addlines
+\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck

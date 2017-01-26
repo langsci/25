@@ -220,7 +220,7 @@ specifiers. That is, he distinguishes between first-merged (complements) and lat
 \centering
 \begin{forest}
 %where n children=0{}{},
-%sn edges
+%sm edges
 %for tree={parent anchor=south, child anchor=north,align=center,base=bottom}
 [XP
   [specifier]
@@ -450,7 +450,7 @@ baseline
          [\textit{read}] [\textit{v}]]
        [VP
          [\phonliste{ read } {[V, \st{\textit{u}D}]}]
-         [DP [\textit{the book}, triangle]]]]]]]
+         [DP [\textit{the book}, roof]]]]]]]
 \end{forest}
 \caption{\label{fig-Anna-will-read-the-book-minimalism}Analysis of \emph{Anna will read the book.}
   involving a modal and movement of the subject from \textit{v} to T}
@@ -480,7 +480,7 @@ baseline
          [\textit{read}] [\textit{v}]]
        [VP
          [\phonliste{ read } {[V, \st{\textit{u}D}]}]
-         [DP [\textit{the book}, triangle]]]]]]]]
+         [DP [\textit{the book}, roof]]]]]]]]
 \end{forest}
 \caption{\label{fig-Anna-will-read-the-book-minimalism-CP}Analysis of \emph{Anna will read the book.}
   as CP with an empty C with the clause-type feature Decl}
@@ -514,7 +514,7 @@ baseline
 %%          [\textit{v}]
 %%          [VP
 %%            [\textit{read} {[V, \textit{u}D]}]
-%%            [DP [\textit{the newpaper},triangle]]]]]]]]]
+%%            [DP [\textit{the newpaper},roof]]]]]]]]]
 %% \end{forest}
 %% \caption{\label{fig-Will-Anna-read-the-newspaper-minimalism}Analysis of \emph{Will Anna read the
 %%     news paper?}   with an empty C with a strong Q feature for encoding the clause type}
@@ -593,7 +593,7 @@ baseline
          [\textit{read}] [\textit{v} {[\st{acc}]}]]
        [VP
          [\phonliste{ read } {[V, \st{\textit{u}D}]}]
-         [DP{[\st{acc}]} [\textit{the book}, triangle]]]]]]]
+         [DP{[\st{acc}]} [\textit{the book}, roof]]]]]]]
 \end{forest}
 \caption{\label{fig-Anna-reads-the-book-minimalism-TP}Case assignment by T and \textit{v} in the TP
   for of \emph{Anna reads the book.}}
@@ -625,11 +625,12 @@ element. \citet[\page 218]{Adger2003a} formulates this constraint as follows:
 Locality of matching\is{locality!of matching}: Agree holds between a feature F on X and a matching feature F on Y if and only
 if there is no intervening Z[F].
 \z
-Intervention is defined as in (\mex{1}):
+Intervention is defined as in (\mex{1}):\todostefan{Fritz Hamm: Da fehlt die Hälfte: eine zweite
+  c-commando Beziehung}
 \ea
 \label{def-intervention}
 Intervention\is{intervention}: In a structure [X \ldots{} Z \ldots{} Y], Z intervenes between X and Y iff X
-c-commands\is{c"=command} Y.
+c-commands\is{c"=command} Z and Z c-commands Y.
 \z
 
 So, since T may Agree with \emph{Anna} it must not Agree with \emph{the book}. Hence
@@ -676,7 +677,7 @@ Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.
           [\phonliste{ jeder }]
           [\littlevbar
             [VP
-              [DP [\textit{diesen Mann}, triangle] ]
+              [DP [\textit{diesen Mann}, roof] ]
               [\phonliste{ kennt }]]
             [\textit{v}
               [\phonliste{ kennt }]
@@ -1049,6 +1050,8 @@ TopP and ForceP, \citet*{WHBH2007a-u} postulate an OuterTopP\is{category!functio
 %
 \citet[\page 31]{Poletto2000a-u} suggests both a HearerP\is{category!functional!Hearer} and a SpeakerP\is{category!functional!Speaker} for the 
 position of clitics in Italian\il{Italian}.
+%
+\citet[\page 75]{BB2011a-u} assume a BenefactiveP\is{category!functional!Benefactive}
 
 \addlines
 \citet[\page 106]{Cinque99a-u} adopts the 32 functional heads in Table~\vref{Tabelle-Cinque} in his work.
@@ -1276,7 +1279,7 @@ p (read \emph{little p}) with an empty head to which the preposition then adjoin
 \begin{figure}
 \centering
 \begin{forest}
-sn edges without translation
+sm edges without translation
 [pP
    [p
 	[P [with]]
@@ -2189,7 +2192,7 @@ Sleeps Max.
 To solve this problem, Stabler assumes that monovalent verbs are combined with a nonovert object\is{empty element}
 (see \citet[\page 61, 124]{Veenstra98a} who, quoting Stabler's unpublished work, also adopts this solution). With such an empty object, the resulting structure
 contains the empty object as a complement. The empty object is serialized to the right of the verb
-and \emph{Max} is the specifier and hence serialized to the left of the verb as in \pmex{1}).
+and \emph{Max} is the specifier and hence serialized to the left of the verb as in (\mex{1}).
 \ea
 \label{Beispiel-leeres-Element-intransitive-Verben}
 Max sleeps \_.

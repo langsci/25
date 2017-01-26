@@ -18,32 +18,28 @@ Mummy must leave now.
 \z
 \begin{figure}
 \begin{forest}
-sn edges, empty nodes
-[{}
+sm edges, empty nodes
+[{},phantom    
+[{},tier=flat
  [{} [Mummy]]
  [{} [must]]
  [{} [leave]]
  [{} [now]]]
-\end{forest}
-%
-\hfill
-\begin{forest}
-sn edges, empty nodes
-[{} 
- [{} [{} [Mummy]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[{}
+ [{},tier=flat 
+     [{} [Mummy]]
      [{} [must]]
      [{} [leave]]]
  [{} [now]]]
-\end{forest}
-\hfill
-\begin{forest}
-sn edges, empty nodes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 [{} 
  [{} [Mummy]]
- [{} 
+ [{},tier=flat 
      [{} [must]]
      [{} [leave]]
      [{} [now]]]]
+]
 \end{forest}
 \caption{\label{Abbildung-Haegmann-flach}Structures with partial flat-branching}
 \end{figure}%
@@ -71,7 +67,7 @@ is combined with its complements in a flat structure \citep[\page 39]{ps2}. Ther
 deciding for one kind of branching or another, but these are not always applicable to other theories. For example, Binding Theory\is{Binding Theory}
 in \gbt is formulated with reference to dominance relations in trees \citep[\page 188]{Chomsky81a}. If one assumes that syntactic structure plays
 a crucial role for the binding of pronouns (see page~\pageref{Seite-Bindungstheorie}), then it is possible to make assumptions about syntactic
-structure based on the observable binding relations. Binding data have, however, received a very different treatment in various theories.
+structure based on the observable binding relations  (so also Section~\ref{sec-little-v}). Binding data have, however, received a very different treatment in various theories.
 In LFG\indexlfg, constraints on f"=structure\is{f"=structure} are used for Binding Theory \citep{Dalrymple93a}, whereas Binding Theory
 in HPSG\indexhpsg operates on argument structure lists\isfeat{arg-st} (valence information that are ordered in a particular way,
 see Section~\ref{Abschnitt-Arg-St}).
@@ -127,7 +123,7 @@ The binary-branching tree corresponds to a Categorial Grammar derivation. In bot
 Figure~\ref{Abbildung-TAG-flach-binaer}, a meaning is assigned to a head that occurs with a certain
 number of arguments. Ultimately, the exact structure required depends on the kinds of restrictions on structures
 that one wishes to formulate.
-In this book, such restrictions are not discussed, but we have seen some theories model binding relations\is{Binding Theory}
+In this book, such restrictions are not discussed, but as explained above some theories model binding relations\is{Binding Theory}
 with reference to tree structures. Reflexive pronouns\is{pronoun!reflexive} must be bound within a particular local domain inside the
 tree. In theories such as LFG\indexlfg and HPSG\indexhpsg, these binding restrictions are formulated
 without any reference to trees.

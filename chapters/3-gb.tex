@@ -117,7 +117,7 @@ Both trees for (\mex{1}a,b) are shown in Figure~\ref{fig-Passivtransformation}.
 \begin{figure}
 \hfill
 \begin{forest}
-%sn edges
+%sm edges
 [S, for tree={parent anchor=south, child anchor=north}
   [NP [John] ]
   [VP
@@ -129,7 +129,7 @@ Both trees for (\mex{1}a,b) are shown in Figure~\ref{fig-Passivtransformation}.
 \raisebox{6\baselineskip}{$\leadsto$}
 \hspace{1em}
   \begin{forest}
-  %sn edges
+  %sm edges
   [S, for tree={parent anchor=south, child anchor=north}
   	[NP[Mary]]
 	[VP
@@ -690,32 +690,32 @@ analysis of a sentence with an auxiliary, which uses the rule in (\mex{0}b).
 \begin{floatrow}
 \ffigbox{%
 \begin{forest}
-sn edges
+sm edges
 [S
   [NP
-  	[Ann]]
+  	[Ann,roof]]
   [INFL
   	[will]]
   [VP
   	[V$'$
 		[V$^0$[read]]
-		[NP[the newspaper, triangle]]]]]
+		[NP[the newspaper, roof]]]]]
 \end{forest}
 }{\caption{\label{Abb-Old-School-Hilfsverb}Sentence with an auxiliary verb following
     \citet[\page 19]{Chomsky81a}}}
 \ffigbox{%
 \begin{forest}
-sn edges
+sm edges
 [IP
   [NP
-  	[Ann]]
+  	[Ann,roof]]
   [I$'$
   	[I$^0$
   		[will]]
 	[VP
   	[V$'$
 		[V$^0$[read]]
-		[NP[the newspaper, triangle]]]]]]
+		[NP[the newspaper, roof]]]]]]
 \end{forest}}
 {\caption{\label{Abb-GB-Hilfsverb}Sentence with auxiliary verb in the CP/IP system}}
 \end{floatrow}
@@ -737,7 +737,7 @@ of the IP.
 %% \begin{figure}
 %% \centerline{%
 %% \begin{forest}
-%% sn edges
+%% sm edges
 %% [IP
 %%   [NP
 %%   	[Ann]]
@@ -747,7 +747,7 @@ of the IP.
 %% 	[VP
 %%   	[V$'$
 %% 		[V$^0$[read]]
-%% 		[NP[the newspaper, triangle]]]]]]
+%% 		[NP[the newspaper, roof]]]]]]
 %% \end{forest}}
 %% \caption{\label{Abb-GB-Hilfsverb}English sentence with auxiliary verb in the CP/IP system}
 %% \end{figure}%
@@ -771,33 +771,33 @@ of (\mex{0}a).
 \begin{floatrow}
 \ffigbox{
 \begin{forest}
-sn edges
+sm edges
 [CP
 [C$'$
 	[C$^0$[that]]
 	[IP
-		[NP[Ann]]
+		[NP[Ann,roof]]
 		[I$'$
 			[I$^0$[will]]
 			[VP
 				[V$'$
 					[V$^0$[read]]
-					[NP[the newspaper, triangle]]]]]]]]
+					[NP[the newspaper, roof]]]]]]]]
 \end{forest}}{\caption{\label{Abb-GB-Englisch-CP}Complementizer phrase}}
 \ffigbox{%
 \begin{forest}
-sn edges
+sm edges
 [CP
 [C$'$
 	[C$^0$[will$_k$]]
 	[IP
-		[NP[Ann]]
+		[NP[Ann,roof]]
 		[I$'$
 			[I$^0$[\trace$_k$]]
 			[VP
 				[V$'$
 					[V$^0$[read]]
-					[NP[the newspaper, triangle]]]]]]]]
+					[NP[the newspaper, roof]]]]]]]]
 \end{forest}
 }{\caption{Polar question}\label{Abb-GB-Ja-Nein}}
 \end{floatrow}
@@ -816,7 +816,7 @@ empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-G
 %% \centerline{%
 %% \scalebox{.99}{%
 %% \begin{forest}
-%% sn edges
+%% sm edges
 %% [CP
 %% [C$'$
 %% 	[C$^0$[will$_k$]]
@@ -827,7 +827,7 @@ empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-G
 %% 			[VP
 %% 				[V$'$
 %% 					[V$^0$[read]]
-%% 					[NP[the newspaper, triangle]]]]]]]]
+%% 					[NP[the newspaper, roof]]]]]]]]
 %% \end{forest}
 %% }
 %% }
@@ -837,13 +837,13 @@ empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-G
 \begin{floatrow}
 \ffigbox{%
 \begin{forest}
-sn edges
+sm edges
 [CP
 [NP[what$_i$]]
 [C$'$
 	[C$^0$[will$_k$]]
 	[IP
-		[NP[Ann]]
+		[NP[Ann,roof]]
 		[I$'$
 			[I$^0$[\trace$_k$]]
 			[VP
@@ -854,15 +854,15 @@ sn edges
 }{\caption{\emph{wh}"=question}\label{Abb-GB-Wh}}
 \ffigbox{%
 \begin{forest}
-sn edges
+sm edges
 [IP
-	[NP[Ann]]
+	[NP[Ann,roof]]
 	[I$'$
 		[I$^0$[-s]]
 		[VP
 			[V$'$
 				[V$^0$[read-]]
-				[NP[the newspaper, triangle]]]]]]
+				[NP[the newspaper, roof]]]]]]
 \end{forest}}{
 \caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}Sentence without auxiliary}}
 \end{floatrow}
@@ -881,7 +881,7 @@ What will Ann read?
 %% \begin{figure}
 %% \centerline{%
 %% \begin{forest}
-%% sn edges
+%% sm edges
 %% [CP
 %% [NP[what$_i$]]
 %% [C$'$
@@ -908,7 +908,7 @@ inflectional affix is present in the \inull position. An example analysis is giv
 %% \begin{figure}
 %% \centerline{%
 %% \begin{forest}
-%% sn edges
+%% sm edges
 %% [IP
 %% 	[NP[Ann]]
 %% 	[I$'$
@@ -916,7 +916,7 @@ inflectional affix is present in the \inull position. An example analysis is giv
 %% 		[VP
 %% 			[V$'$
 %% 				[V$^0$[read-]]
-%% 				[NP[the newspaper, triangle]]]]]]
+%% 				[NP[the newspaper, roof]]]]]]
 %% \end{forest}}
 %% \caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}English sentence without auxiliary}
 %% \end{figure}%
@@ -1047,12 +1047,12 @@ with an adjunct is shown in Figure~\vref{GB-Adjunkte}.
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [VP
 [V$'$
-	[Adv[morgen;tomorrow]]
+	[Adv[morgen;tomorrow,roof]]
 	[V$'$
-		[NP[den Jungen;the boy, triangle]]
+		[NP[den Jungen;the boy, roof]]
 		[V[triff-;meet]]]]]
 \end{forest}}
 \caption{\label{GB-Adjunkte}Analysis of adjuncts in \gbt}
@@ -1277,16 +1277,16 @@ Figure~\vref{Abb-GB-Komplementierer} gives an analysis of (\mex{0}).
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [CP
 [C$'$
 	[C$^0$[dass;that]]
 	[IP
-		[NP [jeder;everybody]]
+		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
-					[NP[diesen Mann;this man, triangle]]
+					[NP[diesen Mann;this man, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$[kenn-$_j$ -t;know- -s]]]]]]
 \end{forest}
@@ -1294,7 +1294,7 @@ sn edges
 %% \ffigbox{%
 %% \scalebox{.9}{%
 %% \begin{forest}
-%% sn edges
+%% sm edges
 %% [CP
 %% [C$'$
 %% 	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
@@ -1303,7 +1303,7 @@ sn edges
 %% 		[I$'$
 %% 			[VP
 %% 				[V$'$
-%% 					[NP [diesen Mann; this man, triangle]]
+%% 					[NP [diesen Mann; this man, roof]]
 %% 					[V$^0$[\trace$_j$]]]]
 %% 			[I$^0$ [\trace$_k$]]]]]]
 %% \end{forest}}
@@ -1320,16 +1320,16 @@ In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via 
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [CP
 [C$'$
 	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
 	[IP
-		[NP [jeder;everybody]]
+		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
-					[NP [diesen Mann; this man, triangle]]
+					[NP [diesen Mann; this man, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$ [\trace$_k$]]]]]]
 \end{forest}
@@ -1376,13 +1376,13 @@ Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\r
 \begin{figure}
 \centering
 \begin{forest}
-sn edges
+sm edges
 [CP
-[NP [diesen Mann$_i$;this man, triangle]]
+[NP [diesen Mann$_i$;this man, roof]]
 [C$'$
 	[C$^0$[(kenn-$_j$ -t)$_k$; know- -s]]
 	[IP
-		[NP [jeder;everybody]]
+		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
@@ -1569,15 +1569,15 @@ to create a well"=formed S"=structure, the verb would have to move to its affix 
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [IP
-  [NP, name=subject [der Mann;the man, triangle]]
+  [NP, name=subject [der Mann;the man, roof]]
   [I$'$
 	[VP
 		[V$'$
-			[NP, name=dobject [der Frau;the woman, triangle]]
+			[NP, name=dobject [der Frau;the woman, roof]]
 			[V$'$
-				[NP,   name=aobject [den Jungen;the boy, triangle]]
+				[NP,   name=aobject [den Jungen;the boy, roof]]
 				[V$^0$,name=verb    [zeig-;show-]]]]]
 	[I$^0$, name=Infl [-t;-s]]]]
 \draw[->,dotted] (Infl.north) .. controls (3.5,-0.3) and (-1.5,.5) .. ($(subject.north)+(-.1,.1)$);
@@ -1605,16 +1605,16 @@ absorbed case. Therefore, it has to move to a position where case can be assigne
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [IP
-[NP, name=subject [der Junge$_i$;the boy ,triangle]]
+[NP, name=subject [der Junge$_i$;the boy ,roof]]
 [I$'$
 	[VP
 		[V$'$
-			[NP, name=dobject [der Frau;the woman, triangle]]
+			[NP, name=dobject [der Frau;the woman, roof]]
 			[V$'$
 				[NP,   name=aobject [\_$_i$]]
-				[V$^0$,name=verb [gezeigt wir-;shown is, triangle]]]]]
+				[V$^0$,name=verb [gezeigt wir-;shown is, roof]]]]]
 	[I$^0$ ,name=Infl [-\/d]]]]
 \draw[->,dotted] (Infl.north) .. controls (2.5,.35)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
 \draw[->,dashed] (verb.north) .. controls (2.2,-3.4) and (0,-3.1) .. ($(dobject.north)+(0,.1)$);
@@ -1777,15 +1777,15 @@ a single underlying order by means of \movea \citep{Frey93a}. As an example, the
 (\ref{ex-das-buch-der-mann-der-frau-gibt}) is given in Figure~\vref{fig-das-buch-der-mann-der-frau-gibt-movement}.
 \begin{figure}
 \begin{forest}
-sn edges
+sm edges
 [IP
-  [{NP[acc]$_i$} [das Buch;the book, triangle]]
+  [{NP[acc]$_i$} [das Buch;the book, roof]]
   [IP
-    [{NP[nom]} [der Mann;the man, triangle]]
+    [{NP[nom]} [der Mann;the man, roof]]
     [I$'$
  	[VP
 		[V$'$
-			[{NP[dat]} [der Frau;the woman, triangle]]
+			[{NP[dat]} [der Frau;the woman, roof]]
 			[V$'$
 				[NP   [\trace$_i$]]
 				[V$^0$  [gib-;give-]]]]]
@@ -1832,7 +1832,7 @@ take place to construct either the S"=structure\footnote{
 	The authors are working in the Minimalist framework. This means there is no longer S"=structure strictly speaking. I
 	have simply translated the analysis into the terms used here.
 }
-or as a movement to construct the phonological form. In the latter case, this movement will not have any semantic effects.
+or as a movement to construct the Phonological Form. In the latter case, this movement will not have any semantic effects.
 While this analysis can predict the correct available readings, it does require a number of additional movement operations with intermediate steps.
 \is{scope|)}
 
@@ -1844,15 +1844,18 @@ generated directly without any transformations.\footnote{
  Compare this to the grammar in (\ref{psg-binaer}) on page~\pageref{psg-binaer}. This grammar
  combines a V and an NP to form a new V. Since nothing is said about the case of the argument in the
  phrase structure rule, the NPs can be combined with the verb in any order.
-} This kind of analysis has
-been proposed for GB by \citet{Fanselow2001a}.\footnote{%
+} \citet{Fanselow2001a} suggested such an analysis within the framework of GB.\footnote{%
 	The base generation analysis is the natural analysis in the HPSG\indexhpsg framework. It has already been developed by Gunji\nocite{Gunji86a}
 	in 1986 for Japanese\il{Japanese} and will be discussed in more detail in Section~\ref{sec-HPSG-lokale-Umstellung}. \citet[\page 313--314]{SE2002a}
 	claim that they show that syntax has to be derivational, that is, a sequence of syntactic
         trees has to be derived. I am of the opinion that this cannot generally be shown to be the
         case. There is, for example, an analysis by \citet{Kiss2001a} which shows that scope
         phenomena can be explained well by constraint"=based approaches.
-}
+} Note that such a base-generation analysis is incompatible with an IP approach that assumes that
+the subject is realized in the specifier of IP. An IP approach with base-generation of different
+argument orders would allow the complements to appear in any order within the VP but the subject
+would be first since it is part of a different phrase.
+
 For the discussion of different approaches to describing constituent position, see 
 \citew{Fanselow93a}.\is{constituent order|)}
 

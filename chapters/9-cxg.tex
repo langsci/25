@@ -1839,7 +1839,8 @@ constructions \citep{Goldberg95a}. Van Trijp suggests that every lexical item co
 potential argument roles like Agent, Patient, Recipient, and Goal. Phrasal argument structure
 constructions are combined with the respective lexical items and realize a subset of the argument
 roles, that is they assign them to grammatical functions. Figure~\vref{fig-as-trijp} shows an
-example: the verb \emph{sent} has the semantic roles Agent, Patient, Recipient, and Goal. Depending
+example: the verb \emph{sent} has the semantic roles Agent, Patient, Recipient, and Goal  (upper left
+of the figure). Depending
 on the argument structure construction that is chosen, a subset of these roles is selected for
 realization.\footnote{
   It is interesting to note here that \citet[\page 141]{vanTrijp2011a} actually suggests a lexical
@@ -1854,6 +1855,18 @@ any other combination with other listed roles.
 }
 %\todostefan{Are there Agent Goal verbs or Patient Recipient or Patient Goal verbs that allow for
 %  patterns that are impossible for sent?}
+The figures show the relation between sender, sent, and sendee and more the more abstract semantic
+roles and the relation between these roles and grammatical functions for the sentences in (\mex{1}):
+\eal
+\ex He sent her the letter.
+\ex He sent the letter.
+\ex The letter was sent to her.
+\zl
+While in (\mex{0}a) the agent, the patient and the recipient are mapped to grammatical functions,
+only the agent and the patient are mapped to grammatical functions in (\mex{0}b). The recipient is
+left out. (\mex{0}c) shows an argument realization in which the sendee is realized as a \emph{to}
+  phrase. According to van Trijp this semantic role is not a recipient but a goal. 
+
 
 \begin{figure}
 \includegraphics[width=\textwidth]{Figures/2011-van-Trijp.pdf}
@@ -1875,15 +1888,16 @@ nominative and two datives in German, wouldn't we expect that this pattern can b
 passive? While proposals that establish relations between active and passive constructions would
 predict this, alternative proposals that just list the attested possibilities do not.
 
-\addlines
+%\addlines
 The issue of how such generalizations should be captured was discussed in connection with the
 organization of the lexicon in HPSG \citep{Flickinger87,Meurers2001a}. In the lexical world, one could simply categorize all verbs according to their
 valence and say that \emph{loves} is a transitive verb and the passive variant \emph{loved} is an
 intransitive verb. Similarly \emph{gives} would be categorized as a ditransitive verb and
-\emph{given} as a transitive one. Obviously this misses the point that \emph{loved} and \emph{given}
+\emph{given} as a strictly transitive one. Obviously this misses the point that \emph{loved} and \emph{given}
 share something: they both are related to their active form in a systematic way. This kind of
-generalization was called a horizontal generalization as compared to vertical generalizations, which
-describe classes in an inheritance hierarchy.
+generalization is captured by lexical rules that relate two lexical items. The respective
+generalizations that are captured by lexical rules are called a horizontal generalizations as compared to vertical generalizations, which
+describe relations between subtypes and supertypes in an inheritance hierarchy.
 
 The issue is independent of the lexical organization of knowledge, it can be applied to phrasal
 representations as well. Phrasal constructions can be organized in hierarchies (vertical), but the
@@ -1907,7 +1921,8 @@ here: every verb comes with a list of potential roles and argument structure con
 subsets of these roles (see Figure~\ref{fig-as-trijp}). This is called \emph{matching}: introducing new argument roles is not allowed. 
 This would make it possible to account for \emph{dine}: one could
 say that there is something that is eaten, but that no Theme role is made available for linking to
-grammatical functions. To account for the extension of argument roles as it is observed in the
+the grammatical functions. This would be a misuse of thematic roles for syntactic purposes though
+since \emph{dine} is semantically a two-place predicate. To account for the extension of argument roles as it is observed in the
 Caused"=Motion Construction\is{construction!Caused"=Motion} \citep[Chapter~7]{Goldberg95a}, \citet{SvT2011a} suggest a process called \emph{merging}. Merging is seen
 as a repair strategy: if an utterance involves an intransitive verb and some other material, the
 utterance cannot be processed with matching alone. For example, when processing Goldberg's example
@@ -1924,8 +1939,9 @@ at hand this could result in situations in which there is a reading for an utter
 repair strategy would never kick in. Consider (\mex{1}):\footnote{
   I apologize for these examples \ldots
 }
+\todostefan{Haider2016: He cooked the chicken dry.}
 \ea
-\label{ex-er-schlug-den-mann-tot}
+\label{ex-schlag-den-mann-tot}
 \gll Schlag den Mann tot!\\
      beat   the man  dead\\
 \glt `Beat the man to death!' or `Beat the dead man!'
@@ -1945,8 +1961,8 @@ plausible result predicate:
      beat   him dead or alive\\
 \glt `Beat him when he is dead or while he is alive!'
 \z
-So, the problem is that (\ref{ex-er-schlug-den-mann-tot}) has a reading which does not require the invocation of the repair mechanism: \emph{schlug} `beat' is used with the transitive
-construction and \emph{tot} is an adjunct (see \citealp{Winkler97a}). However, the more likely analysis of (\mex{0}) is the one
+So, the problem is that (\ref{ex-schlag-den-mann-tot}) has a reading which does not require the invocation of the repair mechanism: \emph{schlug} `beat' is used with the transitive
+construction and \emph{tot} is an adjunct (see \citealp{Winkler97a}). However, the more likely analysis of (\ref{ex-schlag-den-mann-tot}) is the one
 with the resultative analysis, in which the valence frame is extended by an oblique element. So this
 means that one has to allow the application of merging independent of other analyses that might be possible.
 As \citet[\page 320]{SvT2011a} note, if merging is allowed to apply freely, utterances like
@@ -1973,7 +1989,7 @@ SBCG, and DG.
 \subsubsection{Long-distance dependencies}
 \label{sec-fcg-nld}
 
-\addlines
+%\addlines
 \Citet{vanTrijp2014a} compares the \slasch-based approaches that are used in GPSG, HPSG, and SBCG
 with the approach that he suggests within the framework of FCG. He claims that there are fundamental
 differences between SBCG and FCG and assigns SBCG to the class of generative grammars, while
@@ -2044,7 +2060,7 @@ deKuthy2002a,Paggio2005a-u,
 Bildhauer2008a,BC2010a}. The fact that information structure is not talked about in syntax
 papers like \citew{Sag2012a} does not entail that information structure is ignored or should be
 ignored in theories like HPSG and SBCG. So much for completeness. The same holds of course for
-explanational adequacy. This leaves us with theoretical parsimony, but before I comment on this, I
+explanatory adequacy. This leaves us with theoretical parsimony, but before I comment on this, I
 want to discuss van Trijp's analysis in a little bit more detail in order to show that many of his claims
 are empirically problematic and that his theory therefore cannot be explanatory since empirical
 correctness is a precondition for explanatory adequacy.
@@ -2160,82 +2176,9 @@ Section~\ref{sec-syntactic-universals}), I do think that extraction is a rather 
 of languages and that nonlocal dependencies should be analyzed in parallel for those languages that
 have it.
 
-Van Trijp points out that SBCG does not have a performance model and contrasts this with FCG. On
-page~252 he states:
-\begin{quote}
-So parsing starts by segmenting the utterance
-into discrete forms, which are then categorized into words by morphological
-and lexical constructions, and which can then be grouped together as
-phrases (see Steels, 2011b, for a detailed account of lexico-phrasal
-processing in FCG). So the parser will find similar constituents for all
-four utterances, as shown in examples (21--24). Since auxiliary-\emph{do} in
-example (24) falls outside the immediate domain of the VP, it is not yet
-recognized as a member of the VP.
 
-All of these phrases are disconnected, which means that the grammar
-still has to identify the relations between the phrases. \citep[\page 252]{vanTrijp2014a}
-\end{quote}
-Van Trijp provides several tree fragments that contain NPs for subject and object and states that
-these have to be combined in order to analyze the sentences he discusses. This is empirically
-inadequate: if FCG does not make the competence/performance distinction, then the way utterances are
-analyzed should reflect the way humans process language (and this is what is usually claimed about FCG). However, all we know about human language
-processing points towards an incremental processing, that is, we process information as soon as it
-is available. We start to process the first word taking into account all of the relevant aspects
-(phonology, stress, part of speech, semantics, information structure) and come up with an hypothesis
-about how the utterance could proceed. As soon as we have two
-words processed (in fact even earlier: integration already happens during the processing of words) we integrate the second word
-into what we know already and continue to follow our hypothesis, or revise it, or simply fail. See
-Section~\ref{Abschnitt-Inkrementelle-Verarbeitung} for details on processing and the discussion of
-experiments that show that processing is incremental. So, we have to say that van Trijp's analysis
-fails on empirical grounds: his modeling of performance aspects is not adequate.
-
-The parsing scheme that van Trijp describes is pretty much similar to those of HPSG parsers, but
-these usually come without any claims about performance. Modeling performance is rather complex
-since a lot of factors play a role. It is therefore reasonable to separate competence and
-performance and continue to work the way it is done in HPSG and FCG. This does not mean that
-performance aspects should not be modeled, in fact psycholinguistic models using HPSG have been
-developed in the past \citep{Konieczny96a-u}, but developing both a grammar with large coverage and
-the performance model that combines with it demands a lot of resources.
-
-I now turn to parsimony: van Trijp uses a subject-verb anchor construction that combines the subject
-and the main verb. Because of examples like (\mex{1}) it must be possible to have discontinuous subject-verb constructions:\footnote{
-  Unless modals and tense auxiliaries are treated as main verbs (which they should not in English), constructions with
-  modals seem to be another case where the subject and the main verb are not adjacent:
-  \eal
-  \ex Peter will read the book.
-  \ex Peter has read the book.
-  \zllast
-} 
-\ea
-Peter often reads books.
-\z
-But if such constructions can be discontinuous one has to make sure that (\mex{1}b) cannot be an
-instantiation of the subject-verb construction:
-\eal
-\ex[]{
-The boy I think left.
-}
-\ex[*]{
-I the boy think left.
-}
-\zl
-Here it is required to have some adjacency between the subject and the verb it belongs to, modulo
-some intervening adverbials. This is modelled quite nicely in phrase structure grammars that have a
-VP node. Whatever the internal structure of such a VP node may be, it has to be adjacent to the
-subject in sentences like the ones above. The dislocated element has to be adjacent to the complex
-consisting of subject and VP. This is what the Filler-Head Schema does in HPSG and SBCG. Van Trijp
-criticizes SBCG for having to stipulate such a schema, but I cannot see how his grammar can be
-complete without a statement that ensures the right order of elements in sentences with fronted
-elements.
-
-Van Trijp stated that FCG differs from what he calls generative approaches in that it does not want
-to characterize only the well-formed utterances of a language. According to him, the parsing direction
- is much more liberal in accepting input than other theories. So it could well be that he
-is happy to find a structure for (\mex{0}b). Note though that this is incompatible with other claims
-made by van Trijp: he argued that FCG is superior to other theories in that it comes with a performance
-model (or rather in not separating competence from performance at all). But then (\mex{0}b) should be
-rejected both on competence and performance grounds. It is just unacceptable and speakers reject it
-for whatever reasons. Any sufficiently worked out theory of language has to account for this.
+\subsection{Coordination}
+\label{sec-coordination}
 
 One of the success stories of non-transformational grammar is the \slasch-based analysis of nonlocal dependencies
 by \citet{Gazdar81}. This analysis made it possible for the first time to explain Ross's Across the Board
@@ -2273,13 +2216,100 @@ in which \emph{the cheese} is the object of the preposition \emph{about} and of 
 \emph{like}. This sentence, however, is totally out: the pronoun \emph{it} has to be used to fill
 the object slot.
 
+
+\subsection{Discontinuous constituents and performance models}
+
+Van Trijp points out that SBCG does not have a performance model and contrasts this with FCG. On
+page~252 he states:
+\begin{quote}
+So parsing starts by segmenting the utterance
+into discrete forms, which are then categorized into words by morphological
+and lexical constructions, and which can then be grouped together as
+phrases (see Steels, 2011b, for a detailed account of lexico-phrasal
+processing in FCG). So the parser will find similar constituents for all
+four utterances, as shown in examples (21--24). Since auxiliary-\emph{do} in
+example (24) falls outside the immediate domain of the VP, it is not yet
+recognized as a member of the VP.
+
+All of these phrases are disconnected, which means that the grammar
+still has to identify the relations between the phrases. \citep[\page 252]{vanTrijp2014a}
+\end{quote}
+In his (21)--(24), van Trijp provides several tree fragments that contain NPs for subject and object and states that
+these have to be combined in order to analyze the sentences he discusses. This is empirically
+inadequate: if FCG does not make the competence/performance distinction, then the way utterances are
+analyzed should reflect the way humans process language (and this is what is usually claimed about FCG). However, all we know about human language
+processing points towards an incremental processing, that is, we process information as soon as it
+is available. We start to process the first word taking into account all of the relevant aspects
+(phonology, stress, part of speech, semantics, information structure) and come up with an hypothesis
+about how the utterance could proceed. As soon as we have two
+words processed (in fact even earlier: integration already happens during the processing of words) we integrate the second word
+into what we know already and continue to follow our hypothesis, or revise it, or simply fail. See
+Section~\ref{Abschnitt-Inkrementelle-Verarbeitung} for details on processing and the discussion of
+experiments that show that processing is incremental. So, we have to say that van Trijp's analysis
+fails on empirical grounds: his modeling of performance aspects is not adequate.
+
+The parsing scheme that van Trijp describes is pretty much similar to those of computational HPSG parsers, but
+these usually come without any claims about human performance. Modeling human performance is rather complex
+since a lot of factors play a role. It is therefore reasonable to separate competence and
+performance and continue to work the way it is done in HPSG and FCG. This does not mean that
+performance aspects should not be modeled, in fact psycholinguistic models using HPSG have been
+developed in the past \citep{Konieczny96a-u}, but developing both a grammar with large coverage and
+the performance model that combines with it demands a lot of resources.
+
+\subsection{Discontinuity vs.\ Subject-Head and Head-Filler Schema}
+
+I now turn to parsimony: van Trijp uses a subject-verb anchor construction that combines the subject
+and the main verb. Because of examples like (\mex{1}) it must be possible to have discontinuous subject-verb constructions:\footnote{
+  Unless modals and tense auxiliaries are treated as main verbs (which they should not in English), constructions with
+  modals seem to be another case where the subject and the main verb are not adjacent:
+  \eal
+  \ex Peter will read the book.
+  \ex Peter has read the book.
+  \zllast
+} 
+\ea
+Peter often reads books.
+\z
+But if such constructions can be discontinuous one has to make sure that (\mex{1}b) cannot be an
+instantiation of the subject-verb construction:
+\eal
+\ex[]{
+The boy I think left.
+}
+\ex[*]{
+I the boy think left.
+}
+\zl
+Here it is required to have some adjacency between the subject and the verb it belongs to, modulo
+some intervening adverbials. This is modelled quite nicely in phrase structure grammars that have a
+VP node. Whatever the internal structure of such a VP node may be, it has to be adjacent to the
+subject in sentences like  (\mex{-1}) and (\mex{0}a) above. The dislocated element has to be adjacent to the complex
+consisting of subject and VP. This is what the Filler-Head Schema does in HPSG and SBCG. Van Trijp
+criticizes SBCG for having to stipulate such a schema, but I cannot see how his grammar can be
+complete without a statement that ensures the right order of elements in sentences with fronted
+elements.
+
+Van Trijp stated that FCG differs from what he calls generative approaches in that it does not want
+to characterize only the well-formed utterances of a language. According to him, the parsing direction
+ is much more liberal in accepting input than other theories. So it could well be that he
+is happy to find a structure for (\mex{0}b). Note though that this is incompatible with other claims
+made by van Trijp: he argued that FCG is superior to other theories in that it comes with a performance
+model (or rather in not separating competence from performance at all). But then (\mex{0}b) should be
+rejected both on competence and performance grounds. It is just unacceptable and speakers reject it
+for whatever reasons. Any sufficiently worked out theory of language has to account for this.
+
+
+\subsection{Restricting discontinuity}
+\label{sec-restricting-discont}
+
 There is a further problem related to discontinuity. If one does not restrict continuity, then
 constituent orders like (\mex{1}b) are admitted by the grammar:
 \eal
-\ex
+\ex[]{
 \gll Deshalb klärt, dass Peter kommt, ob Klaus spielt.\\
      therefore resolves that Peter comes whether Klaus plays\\
 \glt `Therefore that Peter comes resolves whether Klaus will play.'
+}
 \ex[*]{
 \gll Deshalb klärt dass ob Peter Klaus kommt spielt.\\
      therefore resolves that whether Peter Klaus comes plays\\
@@ -2316,9 +2346,10 @@ dependencies extend all the way to the left of certain units (fronting) and othe
 (extraposition). Extraposition is clause-bound, while extraction is not. In approaches like GPSG,
 HPSG and SBCG, the facts are covered by assuming that constituents for a complete clause are
 continuous apart from constituents that are fronted or extraposed. The fronted and extraposed
-constituents are represented in \slasch and \extra \citep{Keller95b,Mueller99a}, respectively, rather than in valence features,
+constituents are represented in \slasch and \extra (\citealp{Keller95b};
+\citealp[Section~13.2]{Mueller99a}; \citealp{Crysmann2013a}), respectively, rather than in valence features,
 so that it is possible to require of constituents that have all their valents saturated to be
-continuous.
+continuous \citep[\page 294]{Mueller99g}.
 
 Summing up the discussion of parsimony, it has to be said that van Trijp has to provide the details
 on how continuity is ensured. The formalization of this is not trivial and only after this is done
@@ -2351,7 +2382,7 @@ half as complex as the formalization that is necessary for accounts of nonlocal 
 (extraction and extraposition) in linearization"=based HPSG that \citet{Reape2000a}
 suggested,\footnote{
   See \citew{KP95a} for a linearization"=based account of extraposition. This account is
-  implemented in the Babel System \citep{Babel}. See \citep{Mueller99h-Eng} on restricting
+  implemented in the Babel System \citep{Babel}. See \citep{Mueller99g} on restricting
   discontinuity. Linearization"=based approaches were argued to not be able to account for
   apparent multiple frontings in German \citep{Mueller2005d,MuellerGS} and hence
   linearization"=based approaches were replaced by more traditional variants that allow for
@@ -2413,17 +2444,22 @@ processing model. \citep[\page 90]{vanTrijp2013a}
 It is true that HPSG and SBCG make a competence/performance distinction \citep{SW2011a}. HPSG
 theories are theories about the structure of utterances that are motivated by distributional
 evidence. These theories do not contain any hypothesis regarding brain activation, planning of
-utterance, processing of utterances (garden path effects) and similar things. In fact, none of the
+utterances, processing of utterances (garden path effects) and similar things. In fact, none of the
 theories that are discussed in this book contains an explicit theory that explains all these
 things. I think that it is perfectly legitimate to work in this way: it is legitimate to study the
 structure of words without studying their semantics and pragmatics, it is legitimate to study
 phonology without caring about syntax, it is legitimate to deal with specific semantic problems
 without caring about phonology and so on, provided there are ways to integrate the results of such
-research into a bigger picture. So, it is wrong to develop models like those developed in current
+research into a bigger picture. In comparison, it is wrong to develop models like those developed in current
 versions of Minimalism\indexmp (called Biolinguistics\is{Biolinguistics}), where it is assumed that utterances are derived in
 phases\is{phase} (NPs, CPs, depending on the variant of the theory) and then shipped to the interfaces\is{interface} (spell
 out and semantic interpretation). This is not what humans do (see
-Chapter~\ref{Abschnitt-Diskussion-Performanz}). But if we are neutral with respect towards such
+Chapter~\ref{Abschnitt-Diskussion-Performanz}).\footnote{
+Attempts to integrate current Minimalist theories with psycholinguistic findings \citep{Phillips2003a} are
+incompatible with core principles of Minimalism like the \emph{No Tampering Condition}\is{No
+  Tampering Condition (NTC)} of \citet{Chomsky2008a}.
+}
+But if we are neutral with respect towards such
 issues, we are fine. In fact, there is psycholinguistic work that couples HPSG grammars to
 performance models \citep{Konieczny96a-u} and similar work exists for TAG \citep{SJ93a,DK2008a-u}. 
 
@@ -2446,7 +2482,7 @@ implemented. On issues of complexity of constraint solving systems he quotes \ci
 \begin{quote}
 Actual implementations of HPSG typically handle the problem by guiding the linguistic processor
 using a (rule-based) phrase structure backbone, but the disadvantage of this approach is that the ``organization and formulation of the grammar is different from
-that of the linguistic theory'' \citep[Section~4.2.2]{LM2006a}. \citep[\page ]{vanTrijp2013a}
+that of the linguistic theory'' \citep[Section~4.2.2]{LM2006a}. \citep[\page 108]{vanTrijp2013a}
 \end{quote}
 He concludes:
 \begin{quote}
@@ -2519,7 +2555,7 @@ in (\mex{0}b), that is, the head daughter follows the non-head daughter. The two
 to the two orders that are permitted by LP-rules: the head precedes its argument if it is marked
 \textsc{initial}+ and it follows it if it is marked \textsc{initial}$-$.
 
-The following code shows how (\mex{1}b) is implemented in TRALE:
+The following code shows how (\mex{0}b) is implemented in TRALE:
 \begin{verbatim}
 arg_h rule (head_argument_phrase,
           synsem:loc:cat:head:initial:minus,
@@ -2536,10 +2572,11 @@ after the arrow we find a list of daughters, each introduced by the operator \ve
   Other operators are possible in TRALE. For instance, \texttt{sem\_head} can be used to guide the
   generator. This is control information that has nothing to do with linguistic theory and not
   necessarily with the way humans process natural language. There is also a \texttt{cats} operator,
-  which precedes lists of daughters. This can be used to implement flat phrase structures.%
+  which precedes lists of daughters. This can be used to implement phrase structures with more than
+  one non-head daughter.%
 }
 Structure sharing is indicated by values with capital letters. The above TRALE rule is a
-computer"=readable variant of (\mex{0}b), but includes the explicit specification of the value of {\initial}.  
+computer"=readable variant of (\mex{0}b) additionally including the explicit specification of the value of {\initial}.  
 
 Now, the translation of a parallel schema using a \textsc{mother} feature like (\mex{1}a) into a phrase structure rule is almost as simple:
 \eal
@@ -2587,7 +2624,7 @@ straightforward implementation in TRALE.\footnote{%
 A toy fragment of English using a \textsc{mother} feature and phrase structure rules with specifications
 of the kind given above can be downloaded at \url{http://hpsg.fu-berlin.de/Fragments/SBCG-TRALE/}.%
 }
-The question remains whether \emph{SBCG's performance"=independence hypothesis remains conjecture until proven otherwise} as van Trijp sees
+The question remains whether ``SBCG's performance"=independence hypothesis remains conjecture until proven otherwise'' as van Trijp sees
 it. The answer is: it is not a conjecture since any of the old constraint-solving systems of the
 nineties could be used to process SBCG. The question of whether this is efficient is an engineering
 problem that is entirely irrelevant for theoretical linguistics. Theoretical linguistics is
@@ -2607,8 +2644,8 @@ to implement a set of grammars.
 
 \subsubsubsection{Static constraints vs.\ dynamic mappings and signature $+$ grammar vs.\ open-endedness}
 
-\addlines
-The cool thing about Fluid Construction Grammar is its fluidity, that is there are certain
+%\addlines
+On very interesting feature of Fluid Construction Grammar is its fluidity, that is there are certain
 constraints that can be adapted if there is pressure, the inventory of the theory is open-ended, so
 categories and features can be added if need be.
 
@@ -2616,7 +2653,7 @@ Again, this is not a fundamental difference between HPSG/SBCG and FCG. An HPSG g
 specific language is a declarative representation of linguistic knowledge and as such it of course
 just represents a certain fragment and does not contain any information how this set of constraints
 evolved or how it is acquired by speakers. For this we need specific theories about language
-evolution/"language change/"language acquisition. This is parallel to what we said about the
+evolution/"language change/"language acquisition. This is parallel to what was said about the
 competence/performance distinction, in order to account for language evolution we would have to have
 several HPSG grammars and say something about how one developed from the other. This will involve
 weighted constraints, it will involve recategorization of linguistic items and lots more.\footnote{
@@ -2649,7 +2686,8 @@ a language is found that provides evidence for this. The only example of a const
  is the locality constraint imposed by the \textsc{mother}
 feature. The idea about this feature is that everything that is of relevance in a more nonlocal
 context has to be passed up explicitly. This is done for nonlocal dependencies (via \slasch) and for instance also
-for information concerning the form of a preposition inside of a PP (via \textsc{pform}). Certain verbs require prepositional objects and restrict
+for information concerning the form of a preposition inside of a PP (via \textsc{pform} or more
+recently via \form). Certain verbs require prepositional objects and restrict
 the form of the preposition. For instance, \emph{wait} has to make sure that its prepositional
 object has the preposition \emph{for} in it. Since this information is usually available only at the
 preposition, it has to be passed up to the PP level in order to be directly selectable by the
@@ -2703,7 +2741,7 @@ between HPSG/SBCG and FCG.
 \subsubsubsection{A note on engineering}
 
 %\addlines[2]
-My biggest problem with FCG is that linguistic and engineering aspects are mixed.\footnote{
+A problematic property of work done in FCG is that linguistic and engineering aspects are mixed.\footnote{
 This is not a problem if all FCG papers are read as papers documenting the FCG-system (see
 Footnote~\ref{Steels-FCG-System} on page~\pageref{Steels-FCG-System}) since then it
 would be necessary to include these technical details. If the FCG papers are to be read as

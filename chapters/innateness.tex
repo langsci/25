@@ -62,7 +62,7 @@ The following is a caricature of a certain kind of argumentation in GB/Minimalis
 \item I have developed an analysis for the phenomenon P in the language S.
 \item The analysis is elegant/conceptually simple/mine\footnote{
     Also, see
-    \url{http://www.youtube.com/watch?v=cAYDiPizDIs}. 01.12.2015.\nocite{Zappa86a}\aimention{Frank Zappa}
+    \url{https://www.youtube.com/watch?v=U6zWjUhfj-M}. 01.12.2015.\nocite{Zappa86a}\aimention{Frank Zappa}
 }.
 \item There is no possibility to learn the relevant structures or principles.
 \item Therefore, the assumptions A$_1$ through A$_n$ that are made in this analysis must be part of the innate knowledge
@@ -379,8 +379,9 @@ Chapter~\ref{Kapitel-GB}, the subject is the phrase in the specifier position of
 In later versions of Chomskyan linguistics, there are functional nodes that seem to correspond to grammatical functions (AgrS\is{category!functional!AgrS},
 AgrO\is{category!functional!AgrO}, AgrIO\is{category!functional!AgrIO}, see
 page~\pageref{Seite-AgrO}). However, \citet[Section~4.10.1]{Chomsky95a-u} remarks that these functional categories were only assumed for theory internal reasons
-and should be removed from the inventory of categories that are assumed to be part of UG. See \citew{Haider97a} and \citew[\page 509--510]{Sternefeld2006a-u} for a description of German that does without functional projections
-that cannot be motivated in the language in question.
+and should be removed from the inventory of categories that are assumed to be part of UG. See
+\citew{Haider97a} and \citew[\page 509--510]{Sternefeld2006a-u} for a description of German that
+does without functional projections that cannot be motivated in the language in question.
 
 The position taken by HPSG\indexhpsg is somewhere in the middle: a special valence feature is used for subjects (in grammars of German, there is a head feature that contains a
 representation of the subject for non"=finite verb forms). However, the value of the \subjf is
@@ -603,6 +604,7 @@ In the following section, I will discuss some of the restrictions on extrapositi
 \mbox{}\citet{Baltin81a}\is{Extraposition|(} and \citet[\page 40]{Chomsky86b} claim that the extraposed relative clauses in (\mex{1}) have to be interpreted with
 reference to the embedding NP, that is, the sentences are not equivalent to those where the relative clause would occur in the position marked with t, but rather
 they correspond to examples where it would occur in the position of the t$'$.\il{English}
+% auch Jacobson87a:62 
 \eal
 \label{ex-chomsky-sub}
 \ex {}[\sub{NP} Many books [\sub{PP} with [stories t]] t$'$]  were sold [that I wanted to read].
@@ -923,7 +925,7 @@ For examples of differences in the tense system see \citew{wals-65,wals-66}. Man
 Chinese\il{Mandarin Chinese} is a clear case: it has next to no morphology. The fact that the same morphemes occur in one form or another in almost every language
 can be attributed to the fact that certain things need to be expressed repeatedly and then things which are constantly repeated become grammaticalized.
 
-
+% 08.06.2016 Vortrag : Javanisch hat kein Tempus
 
 \subsection{Parts of speech}
 \label{Abschnitt-UG-Wortarten}
@@ -1129,6 +1131,7 @@ models that explain why certain strings -- for instance very long ones -- are un
 (see Chapter~\ref{Abschnitt-Diskussion-Performanz}).
 
 \subsubsection{Empirical problems}
+\label{sec-recursion-empirical-problems}
 
 \addlines
 It is sometimes claimed that all natural languages are recursive and that sentences of an arbitrary
@@ -1136,7 +1139,7 @@ length are possible in all languages (\citealp*[\page 7]{HNG2005a} for an overvi
 what is often meant are structures with self"=embedding as we saw in the analysis of (\ref{Beispiel-Satzeinbettung}) \citep{Fitch2010a}. 
 However, it is possible that there are languages that do not allow self"=embedding. \citet{Everett2005a-u} claims that
 Pirah{\~a}\il{Pirah{\~a}} is such a language (however, see \citew*{NPR2009a-u} and
-\citew{Everett2009a-u}). 
+\citew{Everett2009a-u,Everett2012a}). 
 A further example of a language without recursion, which is sometimes cited with reference to \citew{Hale76a}, is Warlpiri\il{Warlpiri}.
 Hale's rules for the combination of a sentence with a relative clause are recursive, however (page~85). This recursion is made
 explicit on page~98.\footnote{%
@@ -1172,7 +1175,7 @@ combine a functor with its arguments (\mbox{X/Y $*$ Y = X}). These rules are alm
 is that one of the elements has to be the functor. There are also corresponding constraints in the Minimalist Program\indexmp such
 as selectional features (see Section~\ref{Abschnitt-MG}) and restrictions on the assignment of
 semantic roles. However, whether or not a Categorial Grammar licenses recursive structures does not depend on the very general combinatorial schemata, but rather on the lexical entries.
-Using the lexical entries in (\mex{1}), it is only possible to analyze two sentences and certainly not to build recursive structures.
+Using the lexical entries in (\mex{1}), it is only possible to analyze the two sentences in (\mex{2}) and certainly not to build recursive structures.
 
 \eal
 \ex the: np/n
@@ -1180,16 +1183,63 @@ Using the lexical entries in (\mex{1}), it is only possible to analyze two sente
 \ex cat: n
 \ex sees: (s\bs np)/np
 \zl
-If we expand the lexicon to include modifiers of the category n/n or conjunctions of the category (X\bs X)/X, then we arrive at a recursive
-grammar.
+\eal
+\ex The woman sees the cat.
+\ex The cat sees the woman.
+\ex The woman sees the woman.
+\ex The cat sees the cat.
+\zl
+If we expand the lexicon to include modifiers of the category n/n or conjunctions of the category
+(X\bs X)/X, then we arrive at a recursive grammar. For example, if we add the two lexical items in
+(\mex{1}), the grammar licenses sentences like (\mex{2}):
+\eal
+\ex ugly: n/n
+\ex fat: n/n
+\zl
+\eal
+\ex The woman sees the fat cat.
+\ex The woman sees the ugly fat cat.
+\zl
+The grammar allows for the combination of arbitrarily many instances of \emph{fat} (or any other
+adjectives in the lexicon) with nouns, since the result of combining an n/n with an n is an n. There
+is no upper limit on such combinations.
 
-\citet*[\page 203]{FHC2005a} note that the existence of languages that do not license recursive structures is not a problem for UG"=based theories
-as not all the possibilities in UG have to be utilized by an individual language.
-With this view, we have actually the same situation as with parts of speech (see
-Section~\ref{Abschnitt-UG-Wortarten}) that you can posit any number of properties belonging to UG
-and then decide on a language by language basis whether they play a role or not. An extreme variant of this approach would be that grammars of all languages become part of 
-UG (perhaps with different symbols such as NP\sub{Spanish}, NP\sub{German}). This variant of a UG"=based theory of the human capacity for language
-would be truly unfalsifiable\is{Universal Grammar (UG)!falsifiability} (\citealp[\page 436, 443]{EL2009a}; \citealp[\page 471]{Tomasello2009a}).
+Concerning Pirahã, \citet[\page 560]{Everett2012a} stated: ``The upper limit of a Piraha sentence is
+a lexical frame with modifiers—the verb, its arguments, and one modifier for each of these. And up
+to two (one at each edge of the sentence) additional sentence-level or verb-level prepositional
+adjuncts'' and ``there can at most be one modifier per word. You cannot say in Pirahã `many big
+dirty Brazil-nuts'. You would need to say `There are big Brazil-nuts. There are many. They are
+dirty'.''. The restriction to have just one modifier per noun can be incorporated easily into the
+lexical items for nominal modifiers. One has to assume a feature that distinguishes words from
+non-words. The result of combining two linguistic objects would be \textsc{word}$-$ and words would
+be \textsc{word}$+$. The lexical item for modifiers like \emph{big} would be as in (\mex{1}):
+\ea
+\emph{big} with Pirahã-like restriction on word modification:\\
+n/n[\textsc{word}$+$]
+\z
+The combination of \emph{big} and \emph{Brazil-nuts} is n[\textsc{word}$-$]. Since this is
+incompatible with n[\textsc{word}$+$] and since all noun modifiers require an n[\textsc{word}$+$],
+no further modification is possible. So although the combination rule of Categorial Grammar would
+allow the creation of structures of unbounded complexity, the Pirahã lexicon rules out the
+respective combinations. Under such a view the issue could be regarded as settled: all langugaes are
+assumed to combine linguistics objects. The combinations are licensed by the combinatorial rules of
+Categorial Grammar, by abstract rules like in HPSG or by their respective equivalents in Minimalism
+(Merge). Since these rules can apply to their own output they are recursive. 
+
+Concluding this subsection, it can be said that the existence of languages like Pirahã are not
+problematic for the assumption that all languages use rules to combine functors with
+arguments. However, it is problematic for claims stating that all languages allow for the creation
+of sentences with unbounded length and that recursive structures (NPs containing NPs, Ss containing
+Ss, \ldots)  can be found in all languages.
+%% \citet*[\page 203]{FHC2005a} note that the existence of languages that do not license recursive structures is not a problem for UG"=based theories
+%% as not all the possibilities in UG have to be utilized by an individual language.
+%% With this view, we have actually the same situation as with parts of speech (see
+%% Section~\ref{Abschnitt-UG-Wortarten}) that you can posit any number of properties belonging to UG
+%% and then decide on a language by language basis whether they play a role or not. An extreme variant of this approach would be that grammars of all languages become part of 
+%% UG (perhaps with different symbols such as NP\sub{Spanish}, NP\sub{German}). This variant of a UG"=based theory of the human capacity for language
+%% would be truly unfalsifiable\is{Universal Grammar (UG)!falsifiability} (\citealp[\page 436, 443]{EL2009a}; \citealp[\page 471]{Tomasello2009a}).
+
+
 
 \subsubsection{Recursion in other areas of cognition}
 
@@ -1297,7 +1347,7 @@ time frame.\todostefan{\citew{Hurford91a-u} diskutieren}
 language much better than adults that this is also due to a critical period and that language acquisition must have similar properties to
 the behavior of ducks and hence, the predisposition for language acquisition must be innate \citep[Chapter~4]{Lenneberg67a-u}.
 
-\addlines
+%\addlines
 The assumptions about the length of the critical period for language acquisition vary considerably. It is possible to find suggestions for 5, 6, 12 and even 15 years
 \citep[\page 31]{HBW2003a}. An alternative assumption to a critical period would be to assume that the ability to acquire languages decreases continuously
 over time. 
@@ -1370,7 +1420,7 @@ correspond to the values that creole languages have. These default values would 
 Bickerton claims that creole languages contain elements that language learners could not have
 acquired from the input, that is from the pidgin languages. His argumentation is a variant of the classic Poverty of the Stimulus Argument\is{Poverty of the Stimulus} that will be discussed in more detail in Section~\ref{Abschnitt-PSA}.
 
-\addlines
+%\addlines
 Bickerton's claims have been criticized as it cannot be verified whether children had input in the individual languages
 of the adults (\citealp[\page 207]{Samarin84a}; \citealp[\page 209]{Seuren84a}).\todostefan{M: more recent work: Arends, Mufwene, Parkvall} All that can be said considering this lack of evidence is that there are a number
 of demographic facts that suggest that this was the case for at least some creole languages
@@ -1688,7 +1738,7 @@ from literature in German have been disproved by \citet{Eisenberg92b}.
 
 \subsubsection{Plurals in noun-noun compounding}
 
-\addlines
+%\addlines
 \mbox{}\citet{Gordon86a}\il{English|(} claims that compounds\is{composition} in English only allow
 irregular plurals in compounds, that is, \emph{mice-eater} but ostensibly not
 \noword{rats-eater}. Gordon claims that compounds with irregular plurals as first element are so rare that children could not have learned the fact that such
@@ -1798,7 +1848,7 @@ B: & ``Maybe I will, someday. But he'd have to be somebody very special. Sensiti
 A: & ``I don't know. I've never seen one up close.''\\
 \end{tabular}
 \z
-\addlines
+%\addlines
 Here, it is clear that \emph{one}  cannot refer to \emph{guys} since A has certainly already seen \emph{guys}.
 Instead, it refers to \emph{guys like this}, that is, men who are sensitive and supportive.   
 
@@ -2171,7 +2221,7 @@ to learn more than was previously assumed.
 %\addlines
 \mbox{}\citet{Bod2009a}\is{auxiliary inversion|(}\is{statistics|(}\is{Unsupervised Data-Oriented Parsing (U-DOP)|(} 
 has developed a procedure that does not require any information about word classes or relations between words
-contained in utterances.
+contained in utterances.\todostefan{Integrate \citew{CL2011a-u,CL2013a-u,CL2012a-u,LS2007a-u}}
 The only assumption that one has to make is that there is some kind of structure. The procedure consists of three steps:
 \begin{enumerate}
 \item Compute all possible (binary"=branching) trees\is{branching!binary} (without category symbols) for a set
@@ -2191,7 +2241,7 @@ one can of course do this. Figure~\vref{Abbildung-unlabeled-trees} shows the tre
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[watch]
@@ -2200,7 +2250,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[watch]
 	[X
@@ -2210,7 +2260,7 @@ sn edges
 \hfill\mbox{}
 \\[3ex]
 \hfill\begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[the]
@@ -2219,7 +2269,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X
@@ -2236,7 +2286,7 @@ sn edges
 In the next step, the trees are divided into subtrees. The trees in Figure~\ref{Abbildung-unlabeled-trees} have the subtrees that can be seen in Figure~\vref{Abbildung-Teilbaume}.
 \begin{figure}
 \hfill\begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[watch]
@@ -2245,7 +2295,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X [,phantom ]]
 	[dog]]
@@ -2258,7 +2308,7 @@ sn edges
 \end{forest}\hfill\mbox{}
 \\[3ex]
 \hfill\begin{forest}
-sn edges
+sm edges
 [X
 	[watch]
 	[X
@@ -2267,7 +2317,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[watch]
 	[X [,phantom ]]]
@@ -2280,7 +2330,7 @@ sn edges
 \end{forest}\hfill\mbox{}
 \\[3ex]
 \hfill\begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[the]
@@ -2289,7 +2339,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X [,phantom ]]
 	[barks]]
@@ -2302,7 +2352,7 @@ sn edges
 \end{forest}\hfill\mbox{}
 \\[3ex]
 \hfill\begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X
@@ -2311,7 +2361,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X [,phantom ]]]
@@ -2337,7 +2387,7 @@ Figure~\ref{Abbildung-Analyse} gives an impression of how this construction of s
 \hfill
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X
@@ -2347,7 +2397,7 @@ sn edges
 is created by
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X
@@ -2357,7 +2407,7 @@ sn edges
 and
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[the]
 	[X [,phantom ]]]
@@ -2372,7 +2422,7 @@ $\circ$
 \\[3ex]
 \hfill\adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[the]
@@ -2382,7 +2432,7 @@ sn edges
 is created by
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[the]
@@ -2392,7 +2442,7 @@ sn edges
 and
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X [,phantom ]]
 	[barks]]
@@ -2490,7 +2540,7 @@ Note that these sentences do not contain any instance of the structure in (\mex{
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[X
@@ -2514,7 +2564,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[is]]
@@ -2555,7 +2605,7 @@ $\circ$
 \hfill
 \hspace{5mm}\adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[X
@@ -2613,7 +2663,7 @@ $\circ$
 \hfill
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[eating]]
 \end{forest}}
@@ -2622,7 +2672,7 @@ $\circ$
 \hfill
 \adjustbox{valign=c}{%
 \begin{forest}
-sn edges
+sm edges
 [X
 	[X
 		[is]]
@@ -2659,7 +2709,7 @@ the sentences above also works for a larger corpus of
 naturally occurring language: although there were no examples for movement of an auxiliary across a complex NP in the Eve corpus, it is possible to learn
 by analogy that the auxiliary from a complex NP cannot be fronted.
 
-\addlines
+%\addlines
 It is therefore possible to learn syntactic structures from a corpus without any prior knowledge
 about parts of speech or abstract properties of language.
 The only assumption that Bod makes is that there are (binary"=branching)\is{branching!binary} structures. The assumption of binarity is not really

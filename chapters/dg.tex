@@ -335,7 +335,7 @@ upwards.
 %http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [reads
   [child,edge label={node[midway,left,font=\scriptsize]{SBJ~~}} 
     [the,edge label={node[midway,left,font=\scriptsize]{DET}}] ]
@@ -734,7 +734,7 @@ different, but the dependency relations are the same, as it should be.\footnote{
   in its valence (it is fully saturated, while a noun needs a determiner), but not in its part of
   speech. \citet[\page 259]{EH2003a} use the symbol N\_pro for pronouns. If the pro-part is to be understood as
   a special property of items with the part of speech N, this is compatible with what I have said
-  above: heads could then select for Ns. If N\_pro and N are assumed to be distinct, atomic symbols,
+  above: heads could then select for Ns. If N\_pro and N are assumed to be distinct atomic symbols,
   the problem remains.
 
   Using N rather than Pron as part of speech for pronouns is standard in other versions of
@@ -944,7 +944,7 @@ topological fields as suggested by \citet[\page 50]{Engel2014a}: there is a \vf 
 \emph{glaubst} `believe', and there is a \mf filled by \emph{ich} `I', \emph{du} `you' and the clausal argument. Having
 pronouns like \emph{ich} and \emph{du} in the \mf is perfectly normal. The problem is that these two
 pronouns come from different clauses: \emph{du} belongs to the matrix verb \emph{glaubst} `believe' while
-\emph{ich} `I' depends on (\emph{gesehen} `seen') \emph{habe} `have'. What has to be covered by a theory is the fact that fronting and
+\emph{ich} `I' depends on \emph{gesehen} `seen' \emph{habe} `have'. What has to be covered by a theory is the fact that fronting and
 extraposition target the left-most and right-most positions of a clause, respectively. This can be
 modeled in constituency"=based approaches in a straightforward way, as has been shown in the previous chapters.
 
@@ -993,7 +993,7 @@ realized there.
 
 The analysis of \citet{GO2009a} is not very precise. There is a $g$ and there is a dashed line, but
 sentences may involve multiple nonlocal dependencies. In (\mex{1}) for instance, there is a nonlocal dependency
-in the relative clauses \emph{den wir alle begrüßt haben} `who we all greeted have' and \emph{die noch niemand hier
+in the relative clauses\is{relative clause} \emph{den wir alle begrüßt haben} `who we all greeted have' and \emph{die noch niemand hier
   gesehen hat} `who yet nobody here seen has': the relative pronouns are fronted inside the relative clauses. The phrase \emph{dem Mann, den wir alle
   kennen} `the man who we all know' is the fronted dative object of \emph{gegeben} `given' and \emph{die noch niemand hier gesehen
   hat} `who yet nobody here seen has' is extraposed from the NP headed by \emph{Frau} `woman'.
@@ -1796,7 +1796,7 @@ These two readings correspond to the two phrase structure trees in Figure~\vref{
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
   [V
     [N [er;he] ]
     [V
@@ -1810,7 +1810,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
   [V
     [N [er;he] ]
     [V
@@ -2022,7 +2022,7 @@ same. Figure~\vref{fig-a-book-psg-dg} illustrates.
 \begin{figure}
 \hfill%
 \begin{forest}
-sn edges
+sm edges
 [NP
   [D [a] ]
   [N [book] ] ]
@@ -2047,7 +2047,7 @@ structure rules that license a similar tree, namely the one in Figure~\vref{fig-
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [V
   [N
     [D [the] ]
@@ -2141,7 +2141,7 @@ to disallow for flat structures. For instance, \citet[\page 364]{GSag2000a-u} as
 auxiliary inversion in HPSG. In such a flat rule the specifier/subject and the other complements are
 combined with the verb in one go. This would also work for more than two valence features that correspond
 to grammatical functions like subject, direct object, indirect object. See also
-Footnote~\ref{fn-flat-dg-rules} on flat rules.
+footnote~\ref{fn-flat-dg-rules} on flat rules.
 } However, as we have seen, some researchers allow for crossing edges, that is, for
 discontinuous constituents. In what follows, I show how such Dependency Grammars can be formalized in
 HPSG.
@@ -2219,13 +2219,13 @@ branching structures with discontinuous constituents.
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [{V[\dom \phonliste{ der Frau, ein Mann, das Buch, gibt }]}
-  [{NP[\type{nom}, \dom \phonliste{ ein, Mann }]} [ein Mann;a man,triangle]]
+  [{NP[\type{nom}, \dom \phonliste{ ein, Mann }]} [ein Mann;a man,roof]]
   [{V[\dom \phonliste{ der Frau, das Buch, gibt }]}
-   [{NP[\type{dat}, \dom \phonliste{ der, Frau  }]} [der Frau;the woman,triangle] ]
+   [{NP[\type{dat}, \dom \phonliste{ der, Frau  }]} [der Frau;the woman,roof] ]
    [{V[\dom \phonliste{ das Buch, gibt }]}
-    [{~~~NP[\type{acc}, \dom \phonliste{ das, Buch }]} [das Buch;the book,triangle] ]
+    [{~~~NP[\type{acc}, \dom \phonliste{ das, Buch }]} [das Buch;the book,roof] ]
     [{V[\dom \phonliste{ gibt }]} [gibt;gives] ] ] ] ]
 \end{forest}
 }
@@ -2246,14 +2246,14 @@ corresponds to their order.
 \begin{figure}
 \centerfit{%
 \begin{forest}
-sn edges
+sm edges
 [{V[\dom \phonliste{ der Frau, ein Mann, das Buch, gibt }]}
-  [{NP[\type{dat}, \dom \phonliste{ der, Frau  }]~~~~~~}, no edge, name=np-dat,tier=dat-tier, [der Frau;the woman,triangle] ]
-  [{NP[\type{nom}, \dom \phonliste{ ein, Mann }]} [ein Mann;a man, triangle]]
+  [{NP[\type{dat}, \dom \phonliste{ der, Frau  }]~~~~~~}, no edge, name=np-dat,tier=dat-tier, [der Frau;the woman,roof] ]
+  [{NP[\type{nom}, \dom \phonliste{ ein, Mann }]} [ein Mann;a man, roof]]
   [{V[\dom \phonliste{ der Frau, das Buch, gibt }]}, name=v
    [NP, phantom, tier=dat-tier ]
    [{V[\dom \phonliste{ das Buch, gibt }]}
-    [{NP[\type{acc}, \dom \phonliste{ das, Buch }]} [das Buch;the book,triangle] ]
+    [{NP[\type{acc}, \dom \phonliste{ das, Buch }]} [das Buch;the book,roof] ]
     [{V[\dom \phonliste{ gibt }]} [gibt;gives] ] ] ] ]
 \draw (v.south) -- (np-dat.north);
 \end{forest}
@@ -2320,7 +2320,7 @@ With such a grammar we could analyze the non-projecting structure of Figure~\vre
 \begin{figure}
 \centerline{%
 \begin{forest}
-sn edges
+sm edges
 [{V[\dom \phonliste{ die, Frauen, Türen, öffnen }]}
   [{D[\dom \phonliste{ die }]},no edge,name=die,tier=det-n [die;the] ]
   [{NP[\dom \phonliste{ Frauen }]}
@@ -2707,7 +2707,7 @@ Figure~\ref{fig-wg-small-children-are-playing-outside} by syntactic categories. 
 replacement is shown in Figure~\vref{fig-small-children-are-playing-outside}.
 \begin{figure}
 \begin{forest}
-  sn edges
+  sm edges
   [V{[\emph{fin}]}$''$
     [N$''$
       [N$'$, tier=nbar, name=nbar, edge=dashed
@@ -2777,8 +2777,7 @@ underspecification of part of speech does not seem to solve the problem. Of cour
 non-headed constructions can be solved by assuming empty elements.\footnote{%
  See Section~\ref{sec-psg-np} for the assumption of an empty head in a phrase structure grammar for
  noun phrases.}
-This has been done in \hpsg in
-the analysis of relative clauses \citep[Chapter~5]{ps2}. English and German relative clauses consist of a
+This has been done in \hpsg in the analysis of relative clauses\is{relative clause} \citep[Chapter~5]{ps2}. English\il{English} and German relative clauses consist of a
 phrase that contains a relative word and a sentence in which the relative phrase is missing. Pollard
 \& Sag assume an empty relativizer that selects for the relative phrase and the clause with a
 gap \citep[\page 216--217]{ps2}. Similar analyses can be found in Dependency Grammar (\citealp[\page

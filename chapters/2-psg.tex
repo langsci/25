@@ -91,7 +91,7 @@ The derivation in (\mex{0}) can also be represented as a tree. This is shown by 
 \begin{figure}
 \centerline{
 \begin{forest}
-sn edges
+sm edges
 [S
   [NP [er;he] ]
   [NP
@@ -175,7 +175,7 @@ This grammar licenses binary branching structures as shown in Figure~\vref{er-da
 \begin{figure}
 \centerline{
 \begin{forest}
-sn edges
+sm edges
 [V
   [NP [er;he] ]
   [V
@@ -450,12 +450,12 @@ assign the meaning in (\mex{1}b) to the sentence in (\mex{1}a).
      Max sleeps\\
 \glt `Max is sleeping.'
 \ex\label{Bsp-schlafen-max} 
-\relation{schlafen}(\relation{max})
+\relation{sleep}(\relation{max})
 \zl
 \addlines[2]
-Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
+Here, we are assuming \relation{sleep} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
 that we are dealing with word meanings and not actual words. At first glance, it may not seem that we have really gained anything
-by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
+by using \relation{sleep} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
 It is, however, important to concentrate on a single verb form as inflection is irrelevant when it comes to meaning. We can see this by comparing the 
 examples in (\mex{1}a) and (\mex{1}b):
 \eal
@@ -514,7 +514,7 @@ corresponding variable and then replace all instances of the variable with the m
 argument. If we combine (\mex{0}) and \relation{max} as in (\mex{1}),
 we arrive at the meaning in (\ref{Bsp-schlafen-max}). 
 \ea
-$\lambda x~\relation{sleep}(x)$ \relation{max}
+$\lambda x~\relation{sleep}(x)$ \relation{max}   \todostefan{gdw. \relation{sleep}(\realtion{max})}
 \z
 The process is called $\beta$"=reduction\is{beta"=reduction@$\beta$"=reduction} or 
 $\lambda$"=conversion\is{lambda"=conversion@$\lambda$"=conversion}. To show this further, let us consider an example with a transitive verb. The sentence
@@ -699,7 +699,7 @@ without an adjective and that of a noun phrase with one or two adjectives.
 \begin{figure}
 \hfill%
 \begin{forest}
-sn edges
+sm edges
 [NP
    [Det [eine;a] ]
    [\nbar
@@ -707,7 +707,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
    [Det [eine;a] ]
    [\nbar
@@ -718,7 +718,7 @@ sn edges
 %
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [eine;a] ]
     [\nbar
@@ -828,23 +828,23 @@ by the rule in (\ref{xbar-PP-Adjunkt-an-N}).
 \begin{figure}
 \centerfit{%
 \begin{forest}
-sn edges
+sm edges
 [NP
  [Det [das;the] ]
  [\nbar
    [N [Bild;picture] ]
-   [PP [vom Gleimtunnel;of.the Gleimtunnel,triangle ] ] ] ]
+   [PP [vom Gleimtunnel;of.the Gleimtunnel,roof ] ] ] ]
 \end{forest}%
 \hspace{2em}%
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [das;the] ]
   [\nbar
     [\nbar
       [N [Bild;picture] ]
-      [PP [vom Gleimtunnel;of.the Gleimtunnel,triangle ] ] ] 
-    [PP [im Gropiusbau;in.the Gropiusbau,triangle ] ] ] ]
+      [PP [vom Gleimtunnel;of.the Gleimtunnel,roof ] ] ] 
+    [PP [im Gropiusbau;in.the Gropiusbau,roof ] ] ] ]
 \end{forest}}
 \caption{\label{Abbildung-NP-mit-PP-Argument}Combination of a noun with PP complement
   \emph{vom Gleimtunnel} to the right with an adjunct PP}
@@ -912,7 +912,7 @@ The corresponding trees are shown in Figure~\vref{Abbildung-NP-ohne-Nomen}.
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [eine;a] ]
   [\nbar
@@ -922,12 +922,12 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [das;the] ]
   [\nbar
     [N [\trace] ]
-    [PP [vom Gleimtunnel;of.the Gleimtunnel, triangle] ] ] ]
+    [PP [vom Gleimtunnel;of.the Gleimtunnel, roof] ] ] ]
 \end{forest}
 \hfill%
 \mbox{}
@@ -989,7 +989,7 @@ Figure~\vref{Abbildung-NP-ohne-Det} shows the corresponding trees.
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [\trace] ]
   [\nbar
@@ -997,7 +997,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [Det [\trace] ]
   [\nbar
@@ -1166,20 +1166,20 @@ of an example with an adjective in the first position following the rules in (\m
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [PP
   [\pbar
     [P [vor;before] ]
-    [NP [dem Abgrund;the abyss, triangle] ] ] ]
+    [NP [dem Abgrund;the abyss, roof] ] ] ]
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [PP
-  [AP [kurz;shortly,triangle] ]
+  [AP [kurz;shortly,roof] ]
   [\pbar
     [P [vor;before] ]
-    [NP [dem Abgrund;the abyss,triangle] ] ] ]
+    [NP [dem Abgrund;the abyss,roof] ] ] ]
 \end{forest}
 %% \begin{tikzpicture}
 %% \tikzset{level 1+/.style={level distance=2\baselineskip}}
@@ -1264,7 +1264,7 @@ The rules which we need for this analysis are given in (\mex{1}), with the corre
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [AP
   [\abar
     [A [proud] ] ] ]
@@ -1278,7 +1278,7 @@ sn edges
 %% \end{tikzpicture}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [AP
   [AdvP [very] ]
   [\abar
@@ -1294,11 +1294,11 @@ sn edges
 %% \end{tikzpicture}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [AP
   [\abar
     [A [proud] ]
-    [PP [of his son,triangle] ] ] ]
+    [PP [of his son,roof] ] ] ]
 \end{forest}
 %% \begin{tikzpicture}
 %% \tikzset{level 1+/.style={level distance=2\baselineskip}}
@@ -1310,12 +1310,12 @@ sn edges
 %% \end{tikzpicture}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [AP
   [AdvP [very] ]
   [\abar
     [A [proud] ]
-    [PP [of his son,triangle] ] ] ]
+    [PP [of his son,roof] ] ] ]
 \end{forest}
 %% \begin{tikzpicture}
 %% \tikzset{level 1+/.style={level distance=2\baselineskip}}
@@ -1390,14 +1390,14 @@ Figure~\vref{Abb-GB-Min-Max} gives an overview of the minimal and maximal struct
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [XP
   [\xbar [X] ] ]
 \end{forest}
 \hfill
 \begin{forest}
 %where n children=0{}{},
-%sn edges
+%sm edges
 %for tree={parent anchor=south, child anchor=north,align=center,base=bottom}
 [XP
   [specifier]
@@ -1429,7 +1429,7 @@ specifier, adjunct, and complement are present.
 \begin{figure}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [DetP
     [\detbar
@@ -1439,7 +1439,7 @@ sn edges
 \end{forest}
 \hfill
 \begin{forest}
-sn edges
+sm edges
 [NP
   [DetP
     [\detbar
