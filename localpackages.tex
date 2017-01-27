@@ -42,22 +42,9 @@
 
 \usepackage{multicol}
 
-% for reasons I do not understand this cannot be moved further down and 
-% the loading of forest further down cannot be removed. St. Mü. 26.01.2017
-\usepackage{langsci/styles/langsci-forest-setup}
-
 \usepackage{bookmark}
 
-\forestset{
-      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
-      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
-      no path/.style={edge path={}},
-      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
-}
-
- 
 \usepackage{styles/my-ccg-ohne-colortbl}
-
 
 \usepackage{langsci/styles/jambox}
 
@@ -65,19 +52,20 @@
 
 
 
-\usepackage{german}\selectlanguage{USenglish}
 
 
-\usepackage[final]{epsfig}
+
+
+
 \usepackage{graphicx}
+
 
 
 \usepackage{styles/makros.2e,styles/article-ex,styles/additional-langsci-index-shortcuts,
 styles/eng-date,styles/my-theorems}
 
 
-
-\usepackage{lastpage,float,comment,soul,tabularx}
+\usepackage{lastpage,float,soul,tabularx}
 
 
 % loaded in macros.2e \usepackage[english]{varioref}
@@ -88,10 +76,13 @@ styles/eng-date,styles/my-theorems}
 \usepackage{ogonek}        % For Ewa Dabrowska
 
 
-\usepackage{mycommands}% \dash
+\usepackage{mycommands}% \spacebr
 
 
 % still needed
+% for direction of government examples
+% for CoreGram classes
+% and one \Tree in mts.tex
 \usepackage{tikz-qtree}
 
 \usepackage{langsci/styles/langsci-gb4e}
@@ -101,22 +92,43 @@ styles/eng-date,styles/my-theorems}
 
 %\renewcommand{\xbar}{X̅\xspace}
 
-% why is this necessary here????? 26.01.2017 St. Mü.
-\usepackage{forest-v105}
+
+% for reasons I do not understand this cannot be moved further down and 
+% the loading of forest further down cannot be removed. St. Mü. 26.01.2017
+% It breaks the dependency grammar trees in forest.
+\usepackage{langsci/styles/langsci-forest-setup}
+
+
+\forestset{
+      terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
+      sn edges original/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top}},
+      no path/.style={edge path={}},
+      set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
+}
+
+
+% Add this style when using forest v 1.05
+% taken from the definition of triangle, triangle does no longer exist in forest 2.0, so we call
+% everything roof now.
+%% \forestset{
+%%   roof/.style={edge path={%
+%%       \noexpand\path[\forestoption{edge}]%
+%%       (\forestove{name}.north
+%%       east)--(\forestOve{\forestove{@parent}}{name}.south)--(\forestove{name}.north
+%%       west)--(\forestove{name}.north east)\forestoption{edge label};}},
+%% }
+
+
 
 % for forest version2
-%\useforestlibrary{linguistics}
-%\forestapplylibrarydefaults{linguistics}
+\useforestlibrary{linguistics}
+\forestapplylibrarydefaults{linguistics}
+
+% has to be loaded after forest-setup because of incompatibilities with the dg-style.
+\usepackage{german}\selectlanguage{USenglish}
 
 
 
-
-% should be removed once that the \Tree figures are removed
-\usepackage{pstricks,pst-node}
-
-%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
-\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
-\psset{linewidth=0.5pt}
 \setcounter{secnumdepth}{4}
 
 
