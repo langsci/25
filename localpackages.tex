@@ -52,11 +52,6 @@
 
 
 
-
-
-
-
-
 \usepackage{graphicx}
 
 
@@ -110,19 +105,16 @@ styles/eng-date,styles/my-theorems}
 % Add this style when using forest v 1.05
 % taken from the definition of triangle, triangle does no longer exist in forest 2.0, so we call
 % everything roof now.
-%% \forestset{
-%%   roof/.style={edge path={%
-%%       \noexpand\path[\forestoption{edge}]%
-%%       (\forestove{name}.north
-%%       east)--(\forestOve{\forestove{@parent}}{name}.south)--(\forestove{name}.north
-%%       west)--(\forestove{name}.north east)\forestoption{edge label};}},
-%% }
+\forestset{
+  roof/.style={edge path={%
+      \noexpand\path[\forestoption{edge}]%
+      (\forestove{name}.north
+      east)--(\forestOve{\forestove{@parent}}{name}.south)--(\forestove{name}.north
+      west)--(\forestove{name}.north east)\forestoption{edge label};}},
+}
 
 
 
-% for forest version2
-\useforestlibrary{linguistics}
-\forestapplylibrarydefaults{linguistics}
 
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
 \usepackage{german}\selectlanguage{USenglish}
