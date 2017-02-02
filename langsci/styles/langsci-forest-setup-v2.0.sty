@@ -43,7 +43,7 @@
 
 
 % specification for all trees
-\forestset{default preamble={for tree={parent anchor=south, child anchor=north,align=center,base=top}}}
+\forestset{default preamble={for tree={parent anchor=south, child anchor=north,base=bottom}}}
 
 
 % http://www.texample.net/tikz/examples/borrowers-and-lenders/
@@ -70,7 +70,7 @@
     append translation/.expanded/.wrap pgfmath arg={\gettranslation{##1}}{content},
     content/.expanded/.wrap pgfmath arg={\gettext{##1}}{content},
   },  
-  append translation/.style={append={[#1,no edge,l=0,inner xsep=0,inner ysep=0,outer ysep=0,before computing xy={l-=2pt}]}}
+  append translation/.style={append={[\strut#1,no edge,l=0,inner xsep=0,inner ysep=0,outer ysep=0,before computing xy={l-=2pt}]}}
 }
 
 \def\gettext#1{\gettextA#1;;\endget}
@@ -84,10 +84,10 @@
 % to do: make this style default and change all other figures explicitely as is described here:
 % http://tex.stackexchange.com/questions/167983/getting-rid-of-a-default-where-specification
 \forestset{
-sm edges/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top},
+sm edges/.style={for tree={parent anchor=south, child anchor=north,base=bottom},
                  where n children=0{tier=word,delay=with translation}{} %,delay=with translation
                  },
-sm edges without translation/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top},
+sm edges without translation/.style={for tree={parent anchor=south, child anchor=north,base=bottom},
                  where n children=0{tier=word}{}
                  },
 word tier/.style={where n children=0{tier=word}{}

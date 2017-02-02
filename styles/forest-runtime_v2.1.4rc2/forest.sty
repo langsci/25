@@ -44,7 +44,7 @@
 %% - LICENCE
 %% To use the package, only the files marked with + need to be installed.
 %%
-\ProvidesPackage{forest}[2017/01/27 v2.1.4rc1 Drawing (linguistic) trees]
+\ProvidesPackage{forest}[2017/02/01 v2.1.4rc2 Drawing (linguistic) trees]
 
 \RequirePackage{tikz}[2013/12/13]
 \usetikzlibrary{shapes}
@@ -2342,8 +2342,8 @@
   \expandafter\endgroup
   \expandafter\edef\expandafter#2\expandafter{\forest@temp@message}%
 }
-\NewDocumentCommand\forestdebugtypeouttree{o m}{%
-  \forestdebug@typeouttree{#1}\forest@temp
+\NewDocumentCommand\forestdebugtypeouttree{d() O{\forest@cn}}{%
+  \forestdebug@typeouttree{#2}\forest@temp
   \typeout{\IfValueTF{#1}{#1: }{}\forest@temp}%
 }
 \def\forestdebug@typeouttree@build{%
@@ -4361,10 +4361,10 @@
   {#2}%
 }
 \def\forest@aggregate@count#1{\forest@aggregate
-  {\def\forestmathresult{1}}%
-  {\def\forestmathresult{1}}%
-  {\edef\forestmathresult{\the\numexpr\forestregister{aggregate result}+1}}%
-  {\forestrget{aggregate result}\forestmathresult}%
+  {\def\forestmathresult{0}\let\forestmathresulttype\forestmathtype@count}%
+  {\def\forestmathresult{1}\let\forestmathresulttype\forestmathtype@count}%
+  {\edef\forestmathresult{\the\numexpr\forestregister{aggregate result}+1}\let\forestmathresulttype\forestmathtype@count}%
+  {\forestrget{aggregate result}\forestmathresult\let\forestmathresulttype\forestmathtype@count}%
   {#1}%
 }
 \def\forest@aggregate@average#1#2{\forest@aggregate
@@ -8158,6 +8158,7 @@
 \newtoks\forest@PIi@toks
 \newtoks\forest@PIii@toks
 \def\forest@distance@between@edge@paths#1#2#3{%
+  \begingroup
   % #1, #2 = (edge) paths
   %
   % project paths
@@ -8197,7 +8198,9 @@
     \fi
     \advance\c@pgf@countc 1
   \forest@repeat
-  \let#3\forest@distance
+  \global\let\forest@global@temp\forest@distance
+  \endgroup
+  \let#3\forest@global@temp
 }
   % merge projections: we need two projection arrays, both containing
   % projection points from both paths, but each with the original
