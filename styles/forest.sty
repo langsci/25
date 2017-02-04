@@ -44,7 +44,7 @@
 %% - LICENCE
 %% To use the package, only the files marked with + need to be installed.
 %%
-\ProvidesPackage{forest}[2017/02/01 v2.1.4rc2 Drawing (linguistic) trees]
+\ProvidesPackage{forest}[2017/02/32 v2.1.4rc3 Drawing (linguistic) trees]
 
 \RequirePackage{tikz}[2013/12/13]
 \usetikzlibrary{shapes}
@@ -6320,10 +6320,17 @@
   \forest@patch@enormouscoordinateboxbounds@minus\pgfpositionnodelatermaxx
   \forest@patch@enormouscoordinateboxbounds@minus\pgfpositionnodelatermaxy
   % end of patch
-  \xappto\forest@smuggle{\noexpand\forestoset{min x}{\pgfpositionnodelaterminx}}%
-  \xappto\forest@smuggle{\noexpand\forestoset{min y}{\pgfpositionnodelaterminy}}%
-  \xappto\forest@smuggle{\noexpand\forestoset{max x}{\pgfpositionnodelatermaxx}}%
-  \xappto\forest@smuggle{\noexpand\forestoset{max y}{\pgfpositionnodelatermaxy}}%
+  % when shape=coordinate, pgf returns \pgfpositionnodelater... with wrong catcode of pt
+  \forest@pnn@addtosmuggle{min x}\pgfpositionnodelaterminx
+  \forest@pnn@addtosmuggle{max x}\pgfpositionnodelatermaxx
+  \forest@pnn@addtosmuggle{min y}\pgfpositionnodelaterminy
+  \forest@pnn@addtosmuggle{max y}\pgfpositionnodelatermaxy
+}
+\def\forest@pnn@addtosmuggle#1#2{%
+  {%
+    \pgfutil@tempdima=#2\relax
+    \xappto\forest@smuggle{\noexpand\forestoset{#1}{\the\pgfutil@tempdima}}%
+  }%
 }
 \def\forest@node@forest@positionnodelater@restore{%
   \ifforest@drawtree@preservenodeboxes@

@@ -42,9 +42,15 @@
 
 
 
-% specification for all trees
-\forestset{default preamble={for tree={parent anchor=south, child anchor=north,base=bottom}}}
-
+% specification for all trees, "default preamble" appends to existing specification.
+% The version with apostrophe replaces it.
+\forestset{default preamble'={
+    for tree={parent anchor=south, child anchor=north,base=bottom},
+    before drawing tree={
+      sort by=y,
+      for min={tree}{baseline}
+    }
+  }} 
 
 % http://www.texample.net/tikz/examples/borrowers-and-lenders/
 \usetikzlibrary{arrows} %,positioning} 
@@ -70,7 +76,13 @@
     append translation/.expanded/.wrap pgfmath arg={\gettranslation{##1}}{content},
     content/.expanded/.wrap pgfmath arg={\gettext{##1}}{content},
   },  
-  append translation/.style={append={[\strut#1,no edge,l=0,inner xsep=0,inner ysep=0,outer ysep=0,before computing xy={l-=2pt}]}}
+  append translation/.style={
+    if={strequal("#1","")}{}{
+      append={[#1,no edge,inner xsep=0,inner ysep=0,outer ysep=0,
+               l=\baselineskip + 0.2ex,
+        ]}
+    }
+  } 
 }
 
 \def\gettext#1{\gettextA#1;;\endget}
