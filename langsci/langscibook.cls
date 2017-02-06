@@ -586,7 +586,7 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 \newcommand{\lsSubjectIndexTitle}{Subject index}
 \newcommand{\lsNameIndexTitle}{Name index}
 
-\AtBeginDocument{ % why this?
+\AtEndPreamble{ % why this?
 \makeindex
 \newindex{lan}{ldx}{lnd}{\lsLanguageIndexTitle}
 % \newindex{aut}{adx}{and}{Name index}
@@ -594,6 +594,7 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi tradu
 \renewindex{default}{adx}{and}{\lsNameIndexTitle} %biblatex can only deal with the default index
 \newindex{wrd}{wdx}{wnd}{Expression index}
 \newindex{rwrd}{rdx}{rnd}{Reverse expression index}
+%\tikzexternalize[prefix=external-figures/]
 }
 
 \indexproofstyle{\setlength{\overfullrule}{0pt}\raggedright\footnotesize}
