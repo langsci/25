@@ -679,7 +679,7 @@ In earlier work, the rules in (\mex{1}a) and (\mex{1}b) were proposed for Englis
 \ex S $\to$ NP VP
 \ex S $\to$ NP Infl VP
 \zl
-
+%
 Infl stands for \emph{Inflection} as inflectional affixes are inserted at this position in the
 structure. The symbol AUX was also used instead
 of Infl in earlier work, since auxiliary verbs are treated in the same way as inflectional
@@ -732,7 +732,13 @@ two layers above the verb phrase (VP), namely the CP/""IP system\is{category!fun
 The head of a CP can be a complementizer. Before we look at CPs in more detail, I will discuss an example of an IP in this new system. 
 Figure~\vref{Abb-GB-Hilfsverb} shows an IP with an auxiliary in the \inull position. As we can see, this corresponds to the structure of
 the \xbar template: \inull is a head, which takes the VP as its complement and thereby forms I$'$. The subject\is{subject} is the specifier\is{specifier} 
-of the IP.
+of the IP. Another way to phrase this is to say that the subject is in the specifier position of the
+IP. This position is usually referred to as SpecIP.\footnote{
+  Sometimes SpecIP and similar labels are used in trees (for instance by \citet{Lohnstein2014a}). I
+  avoid this in this book since SpecIP, SpecAdvP are not categorie like NP or AP or AdvP but
+  positions that items of a certain category can take. See Chapter~\ref{Kapitel-PSG} on the phrase
+  structure rules that license trees.
+}
 %
 %% \begin{figure}
 %% \centerline{%
@@ -1063,7 +1069,7 @@ sm edges
 \section{Verb position}
 \label{Abschnitt-Verbstellung-GB}\label{sec-verb-position-gb}
 
-\addlines[-1]
+%\addlines[-1]
 In German, the position of the heads of VP and IP (\vnull and \inull) are to the right of their
 complements and \vnull and \inull form part of the right sentence bracket.
 The subject and all other constituents (complements and adjuncts) all occur to the left of \vnull
@@ -1134,7 +1140,9 @@ The assumption of verb"=final order\label{page-verbletzt} as the base order is m
 	 he starts tomorrow \textsc{prt}\\
 \glt `He is starting tomorrow.'
 \zl
-This unit can only be seen in verb"=final structures, which speaks for the fact that this structure reflects the base order.\pagebreak
+This unit can only be seen in verb"=final structures, which speaks for the fact that this structure
+reflects the base order.
+%\pagebreak
 
 Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
 `to perform something for the first time'), can often not be divided into their component parts and
@@ -1169,7 +1177,7 @@ always in final position (I am ignoring the possibility of extraposing constitue
 \glt `that the clown gives Kurt-Martin the goods'
 \zl
 
-\addlines[-1]
+%\addlines[-1]
 \item If one compares the position of the verb in German with Danish\il{Danish} (Danish is an SVO language
 like English), then one can clearly see that the verbs in German form a cluster at the end of the sentence,
 whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
@@ -1182,7 +1190,7 @@ whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
      that he must have seen him\\
 \glt `that he must have seen him'
 \zl
-\pagebreak
+%\pagebreak
 \item\label{SOV-Skopus}\is{scope|(} The scope relations of the adverbs in (\ref{bsp-absichtlich-nicht-anal}) depend on their order:
 the left"=most adverb has scope over the two following elements.\footnote{%
 At this point, it should be mentioned that there seem to be exceptions from the rule that modifiers to the left take scope over those to
@@ -1596,7 +1604,7 @@ sm edges
 \caption{\label{Abb-GB-Aktiv}Case and theta-role assignment in active clauses}
 \end{figure}%
 %
-\addlines
+%\addlines
 The passive morphology blocks the subject and absorbs the structural accusative. The object that would get accusative in the active
 receives only a semantic role in its base position in the passive, but it does not get case the
 absorbed case. Therefore, it has to move to a position where case can be assigned to it 
@@ -1854,7 +1862,28 @@ generated directly without any transformations.\footnote{
 } Note that such a base-generation analysis is incompatible with an IP approach that assumes that
 the subject is realized in the specifier of IP. An IP approach with base-generation of different
 argument orders would allow the complements to appear in any order within the VP but the subject
-would be first since it is part of a different phrase.
+would be first since it is part of a different phrase. So the orders in (\mex{1}a,b) could be
+analyzed, but the ones in (\mex{1}c--f) could not:
+\eal
+\ex 
+\gll dass der       Mann der       Frau  ein Buch gibt\\
+     that the.\nom{} man  the.\dat{} woman a.\acc{} book gives\\
+\ex
+\gll dass der       Mann ein Buch der       Frau gibt\\
+     that the.\nom{} man  a.\acc{} book   the.\dat{} woman gives\\
+\ex
+\gll dass der       Frau  der Mann ein Buch gibt\\
+     that the.\dat{} woman the.\nom{} man a.\acc{} book gives\\
+\ex 
+\gll dass der Frau ein Buch der Mann gibt\\
+     that the.\dat{} woman a.\acc{} book the.\nom{} man gives\\
+\ex
+\gll dass ein Buch der Frau der Mann gibt\\
+     that a.\acc{}   book the.\dat{} woman the.\nom{} man gives\\
+\ex
+\gll dass ein Buch der Mann der Frau gibt\\
+     that a.\acc{}   book the.\nom{} man the.\dat{} woman gives\\
+\zl
 
 For the discussion of different approaches to describing constituent position, see 
 \citew{Fanselow93a}.\is{constituent order|)}
@@ -2117,7 +2146,7 @@ This rule would have no problems with coordination data like (\mex{-1}) as coord
 category v(aux+) (for more on coordination see Section~\ref{Abschnitt-Koordination}). If inversion
 makes it necessary to stipulate a special rule like (\ref{Regel-Aux-inv-Stabler}), then it is not clear why one could not simply use the transformation"=less rule in (\mex{0}).
 
-\addlines
+%\addlines
 In the MITRE system \citep{ZFHW65a}, there was a special grammar for the surface structure, from which the deep structure was derived via
 reverse application of transformations, that is, instead of using one grammar to create deep structures which are then transformed into
 other structures, one required two grammars. The deep structures that were determined by the parser

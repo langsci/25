@@ -312,6 +312,7 @@ arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links a
 \begin{figure}
 %http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
 \centerline{%
+\tikzexternaldisable
 \begin{dependency}[theme = simple]
    \begin{deptext}[column sep=1em]
       The \& child \& reads \& a \& book. \\
@@ -322,6 +323,7 @@ arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links a
    \depedge{3}{5}{OBJ}
    \depedge{5}{4}{DET}
 \end{dependency}
+\tikzexternalenable
 }
 \caption{\label{fig-the-child-reads-the-book-dg-sentence}Alternative presentation of the analysis of \emph{The child reads a book.}}
 \end{figure}%

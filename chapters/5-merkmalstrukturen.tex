@@ -257,6 +257,7 @@ that the entries for monkey and mouse will each contain a pointer to mammal. The
 under mammal does therefore not have to be repeated for the subordinate concepts. In the same way,
 if one wishes to describe various electric appliances, one can use the hierarchy in Figure~\vref{fig-electric-appliance}.
 \begin{figure}
+\tikzexternaldisable
 \centering
 %% \begin{forest}
 %% typehierarchy
@@ -292,6 +293,7 @@ if one wishes to describe various electric appliances, one can use the hierarchy
      (scanner.south)--(negscan.north)
      (scanner.south)--(other-sc.north);
 \end{tikzpicture}
+\tikzexternalenable
 \caption{\label{fig-electric-appliance}Non"=linguistic example of multiple inheritance}
 \end{figure}%
 The most general type \type{electrical device} is the highest in Figure~\ref{fig-electric-appliance}. Electrical devices have certain properties, \eg 

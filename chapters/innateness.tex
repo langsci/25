@@ -1134,12 +1134,20 @@ models that explain why certain strings -- for instance very long ones -- are un
 \label{sec-recursion-empirical-problems}
 
 \addlines
+%% Hauser, Chomsky, Fitch, 2002, 1571: 
+%% There are 6-word sentences and 7-word sentences, but no 6.5-word sentences. There is no longest
+%% sentence (any candidate sentence can be trumped by, for example, embedding it in “Mary thinks that . . .”), and there is no nonarbitrary
+%% upper bound to sentence length. In these respects, language is directly analogous
+%% to the natural numbers (see below)
+%%
+%% They speak of language not of all languages.
+%%
 It is sometimes claimed that all natural languages are recursive and that sentences of an arbitrary
 length are possible in all languages (\citealp*[\page 7]{HNG2005a} for an overview, and see \citew[Section~2]{PS2010a} for further references). When one speaks of recursion,
 what is often meant are structures with self"=embedding as we saw in the analysis of (\ref{Beispiel-Satzeinbettung}) \citep{Fitch2010a}. 
 However, it is possible that there are languages that do not allow self"=embedding. \citet{Everett2005a-u} claims that
 Pirah{\~a}\il{Pirah{\~a}} is such a language (however, see \citew*{NPR2009a-u} and
-\citew{Everett2009a-u,Everett2012a}). 
+\citew{Everett2009a-u,Everett2012a}. A more recent corpus study of Pirahã can be found in \citew*{FSEPG2016a}.). 
 A further example of a language without recursion, which is sometimes cited with reference to \citew{Hale76a}, is Warlpiri\il{Warlpiri}.
 Hale's rules for the combination of a sentence with a relative clause are recursive, however (page~85). This recursion is made
 explicit on page~98.\footnote{%
@@ -1175,7 +1183,9 @@ combine a functor with its arguments (\mbox{X/Y $*$ Y = X}). These rules are alm
 is that one of the elements has to be the functor. There are also corresponding constraints in the Minimalist Program\indexmp such
 as selectional features (see Section~\ref{Abschnitt-MG}) and restrictions on the assignment of
 semantic roles. However, whether or not a Categorial Grammar licenses recursive structures does not depend on the very general combinatorial schemata, but rather on the lexical entries.
-Using the lexical entries in (\mex{1}), it is only possible to analyze the two sentences in (\mex{2}) and certainly not to build recursive structures.
+Using the lexical entries in (\mex{1}), it is only possible to analyze the four sentences in
+(\mex{2}) and certainly not to build recursive structures. (See \citew{Chomsky2014a} for a similar
+discussion of a hypothetical ``trincated English''.)
 
 \eal
 \ex the: np/n
@@ -1231,8 +1241,59 @@ problematic for the assumption that all languages use rules to combine functors 
 arguments. However, it is problematic for claims stating that all languages allow for the creation
 of sentences with unbounded length and that recursive structures (NPs containing NPs, Ss containing
 Ss, \ldots)  can be found in all languages.
-%% \citet*[\page 203]{FHC2005a} note that the existence of languages that do not license recursive structures is not a problem for UG"=based theories
-%% as not all the possibilities in UG have to be utilized by an individual language.
+
+\citet*[\page 203]{FHC2005a} note that the existence of languages that do not license recursive
+structures is not a problem for UG"=based theories as not all the possibilities in UG have to be
+utilized by an individual language. Similar claims were made with respect to part of speech and
+other morpho-syntactic properties. It was argued that UG is a toolbox and languages can choose which
+building blocks they use. As \citet[\page 436, 443]{EL2009a} and \citet[\page 471]{Tomasello2009a}
+noticed, the toolbox approach is problematic as one can posit any number of properties belonging to
+UG and then decide on a language by language basis whether they play a role or not. An extreme
+variant of this approach would be that grammars of all languages become part of UG (perhaps with
+different symbols such as NP\sub{Spanish}, NP\sub{German}). This variant of a UG"=based theory of
+the human capacity for language would be truly unfalsifiable\is{Universal Grammar (UG)!falsifiability}
+
+In the first edition of this book \citep{MuellerGT-Eng1}, I followed the view of Evans \& Klein and
+Tomasello, but I want to revise my view here. The criticism applies to things like part of speech
+(Section~\ref{Abschnitt-UG-Wortarten}) since it is true that the claim that 400 and more parts of
+speech are part of our genetic endowment \citet[\page 55, 57]{CR2010a} cannot really be falsified,
+but the situation is different here. All grammar formalisms that were covered in this book are
+capable of analyzing recursive structures (see Section~\ref{sec-recursion}). If Pirahã lacks recursive
+structures one could use a grammar formalism with lower generative capacity (see
+Chapter~\ref{sec-generative-capacity} on generative capacity) to model the grammar of Pirahã. Parts
+of the development of theoretical linguistics were driven by the desire to find formalisms of the
+right computational complexity to describe human languages. GPSG (with certain assumptions) was
+equivalent to context sensitive grammars. When \citet{Shieber85a} and \citet{Culy85a} discovered
+data from Swiss German\il{Swiss German} and Bambara\il{Bambara} it was clear that context free
+grammars are not sufficiently powerful to describe all known languages. Hence, GPSG was not powerful
+enough and researchers moved on to more powerful formalisms like HPSG. Other frameworks like CCG,
+TAG, and Minimalist Grammars were shown to be powerful enough to handle so-called mildly context
+sensitive grammars, which are needed for Swiss German\il{Swiss German} and Bambara\il{Bambara}. Now, we are working on languages
+like English using grammar formalisms that can deal with mildly context sensitive grammars even though English may be
+context free \citep{PR2007a}. This is similar to the situation with Pirahã: even though English
+does not have cross-serial dependencies like Swiss German, linguists use tools that could license
+them. Even though Pirahã does not have recursive structures, linguists use tools that could license
+them. In general there are two possibilities: one can have very general combinatory rules and rich
+specifications in the lexicon or one can have very specific combinatory rules and less information
+in the lexicon.\footnote{
+  Personally, I argue for a middle way: Structures like Jackendoff's N-P-N constructions \citeyearpar{Jackendoff2008a} are
+  analyzed by concrete phrasal constructions. Verb-argument combinations of the kind discussed in
+  the first part of this book are analyzed with abstract combinatory schemata. See
+  \citew{MuellerUnifying} and Chapter~\ref{chap-phrasal}.
+}
+If one assumes that the basic combinatory rules are abstract (Minimalism, HPSG, TAG, CG), the
+difference between Pirahã and English is represented in the lexicon only. Pirahã uses the
+combinatory potential differently. In this sense, \citet{Chomsky2014a} is right in saying that the
+existence of Pirahã is irrelevant to the discussion of what languages can do. Chomsky also notes
+that Pirahã people are able to learn other languages that have recursive structures. So in
+principle, they can understand and produce more complex structures in much the same way as children
+of English parents are able to learn Swiss German.
+
+So the claim that all languages are infinite and make use of self-embedding recursive structures is
+probably falsified by languages like Pirahã, but using recursive rules for the description of all
+languages is probably a good decision. But even if we assume that recursive rules play a role in the
+analysis of all natural languages, would this mean that the respective rules and capacities are part
+of our genetic, language-specific endowment? This question is dealt with in the next subsection.
 %% With this view, we have actually the same situation as with parts of speech (see
 %% Section~\ref{Abschnitt-UG-Wortarten}) that you can posit any number of properties belonging to UG
 %% and then decide on a language by language basis whether they play a role or not. An extreme variant of this approach would be that grammars of all languages become part of 
