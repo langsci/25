@@ -698,7 +698,7 @@ sm edges
   	[will]]
   [VP
   	[V$'$
-		[V$^0$[read]]
+		[V [read]]
 		[NP[the newspaper, roof]]]]]
 \end{forest}
 }{\caption{\label{Abb-Old-School-Hilfsverb}Sentence with an auxiliary verb following
@@ -710,11 +710,11 @@ sm edges
   [NP
   	[Ann,roof]]
   [I$'$
-  	[I$^0$
+  	[I
   		[will]]
 	[VP
   	[V$'$
-		[V$^0$[read]]
+		[V [read]]
 		[NP[the newspaper, roof]]]]]]
 \end{forest}}
 {\caption{\label{Abb-GB-Hilfsverb}Sentence with auxiliary verb in the CP/IP system}}
@@ -734,8 +734,8 @@ Figure~\vref{Abb-GB-Hilfsverb} shows an IP with an auxiliary in the \inull posit
 the \xbar template: \inull is a head, which takes the VP as its complement and thereby forms I$'$. The subject\is{subject} is the specifier\is{specifier} 
 of the IP. Another way to phrase this is to say that the subject is in the specifier position of the
 IP. This position is usually referred to as SpecIP.\footnote{
-  Sometimes SpecIP and similar labels are used in trees (for instance by \citet{Lohnstein2014a}). I
-  avoid this in this book since SpecIP, SpecAdvP are not categorie like NP or AP or AdvP but
+  Sometimes SpecIP and similar labels are used in trees (for instance by \citet{Meinunger2000a} and \citet{Lohnstein2014a}). I
+  avoid this in this book since SpecIP, SpecAdvP are not categories like NP or AP or AdvP but
   positions that items of a certain category can take. See Chapter~\ref{Kapitel-PSG} on the phrase
   structure rules that license trees.
 }
@@ -780,14 +780,14 @@ of (\mex{0}a).
 sm edges
 [CP
 [C$'$
-	[C$^0$[that]]
+	[C [that]]
 	[IP
 		[NP[Ann,roof]]
 		[I$'$
-			[I$^0$[will]]
+			[I [will]]
 			[VP
 				[V$'$
-					[V$^0$[read]]
+					[V [read]]
 					[NP[the newspaper, roof]]]]]]]]
 \end{forest}}{\caption{\label{Abb-GB-Englisch-CP}Complementizer phrase}}
 \ffigbox{%
@@ -795,14 +795,14 @@ sm edges
 sm edges
 [CP
 [C$'$
-	[C$^0$[will$_k$]]
+	[C [will$_k$]]
 	[IP
 		[NP[Ann,roof]]
 		[I$'$
-			[I$^0$[\trace$_k$]]
+			[I [\trace$_k$]]
 			[VP
 				[V$'$
-					[V$^0$[read]]
+					[V [read]]
 					[NP[the newspaper, roof]]]]]]]]
 \end{forest}
 }{\caption{Polar question}\label{Abb-GB-Ja-Nein}}
@@ -839,43 +839,7 @@ empty and the auxiliary verb is later moved to this position. Figure~\vref{Abb-G
 %% }
 %% \caption{\label{Abb-GB-Ja-Nein}English polar question}
 %% \end{figure}%
-\begin{figure}
-\begin{floatrow}
-\ffigbox{%
-\begin{forest}
-sm edges
-[CP
-[NP[what$_i$]]
-[C$'$
-	[C$^0$[will$_k$]]
-	[IP
-		[NP[Ann,roof]]
-		[I$'$
-			[I$^0$[\trace$_k$]]
-			[VP
-				[V$'$
-					[V$^0$[read]]
-					[NP[\trace$_i$]]]]]]]]
-\end{forest}
-}{\caption{\emph{wh}"=question}\label{Abb-GB-Wh}}
-\ffigbox{%
-\begin{forest}
-sm edges
-[IP
-	[NP[Ann,roof]]
-	[I$'$
-		[I$^0$[-s]]
-		[VP
-			[V$'$
-				[V$^0$[read-]]
-				[NP[the newspaper, roof]]]]]]
-\end{forest}}{
-\caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}Sentence without auxiliary}}
-\end{floatrow}
-\end{figure}%
 The original position of the auxiliary is marked by the trace \_$_k$, which is coindexed with the moved auxiliary.\is{auxiliary inversion}
-
-
 
 \emph{wh}-questions are formed by the additional movement of a constituent in front of the
 auxiliary; that is into the specifier position of the CP. 
@@ -884,48 +848,114 @@ Figure~\vref{Abb-GB-Wh} shows the analysis of (\mex{1}):
 What will Ann read?
 \z
 %
-%% \begin{figure}
-%% \centerline{%
+\begin{figure}
+%\begin{floatrow}
+%\ffigbox{%
+\centerline{
+\begin{forest}
+sm edges
+[CP
+[NP$_i$ [what,roof]]
+[C$'$
+	[C [will$_k$]]
+	[IP
+		[NP[Ann,roof]]
+		[I$'$
+			[I [\trace$_k$]]
+			[VP
+				[V$'$
+					[V [read]]
+					[NP[\trace$_i$]]]]]]]]
+\end{forest}}
+%}{
+\caption{\emph{wh}"=question}\label{Abb-GB-Wh}
+%}
+%\ffigbox{%
 %% \begin{forest}
 %% sm edges
-%% [CP
-%% [NP[what$_i$]]
-%% [C$'$
-%% 	[C$^0$[will$_k$]]
-%% 	[IP
-%% 		[NP[Ann]]
-%% 		[I$'$
-%% 			[I$^0$[\trace$_k$]]
-%% 			[VP
-%% 				[V$'$
-%% 					[V$^0$[read]]
-%% 					[NP[\trace$_i$]]]]]]]]
-%% \end{forest}
-%% }
-%% \caption{\label{Abb-GB-Wh}English \emph{wh}"=question}
-%% \end{figure}%
+%% [IP
+%% 	[NP[Ann,roof]]
+%% 	[I$'$
+%% 		[I [-s]]
+%% 		[VP
+%% 			[V$'$
+%% 				[V [read-]]
+%% 				[NP[the newspaper, roof]]]]]]
+%% \end{forest}}{
+%% \caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}Sentence without auxiliary}}
+%% \end{floatrow}
+\end{figure}%
 As before, the movement of the object of \emph{read} is indicated by a trace. This is important when constructing the meaning of
 the sentence. The verb assigns some semantic role to the element in its object position. Therefore,
 one has to be able to ``reconstruct'' the fact that \emph{what} actually originates in this position. This is ensured by coindexation of the trace with \emph{what}.\il{English|)}
 
+Several ways to depict traces are used in the literature. Some authors assume a trace instead of
+the object NP as in Figure~\ref{fig-traces-trace} (\citealp[\page 249, 322]{Grewendorf88a}; \citealp[\page 420]{Haegeman94a-u}). Others have the object NP in the tree and indicate the movement by a trace that is
+dominated by the NP as in Figure~\ref{fig-traces-xp} (\citealp[\page 376]{SS88a};
+\citealp[\page 185]{Grewendorf88a}; %\citealp[\page 258]{Stabler92b-u}; probably for technical reasons
+\citealp[\page 355]{Haegeman94a-u}; \citealp[\page
+  333]{Sternefeld2006a-u}).
+\begin{figure}
+\hfill\subfloat[Trace]{%
+\hspace{1cm} % adding some space here for the subcaptions
+\begin{forest}
+  [V$'$
+    [V [read]]
+    [\trace$_i$]]
+\end{forest}
+\hspace{1cm}\label{fig-traces-trace}}
+\hfill
+\subfloat[XP with empty daughter]{
+\hspace{1cm}
+\begin{forest}
+  [V$'$
+    [V [read]]
+    [NP[\trace$_i$]]]
+\end{forest}
+\hspace{1cm}\label{fig-traces-xp}}
+\hfill
+\subfloat[Mix of a and b]{
+\hspace{1cm}\begin{forest}
+  [V$'$
+    [V [read]]
+    [NP$_i$ [\trace]]]
+\end{forest}\hspace{1cm}\label{fig-traces-mix}}
+\hfill\mbox{}
+\caption{Alternative ways of depicting movement: the moved constituent can be represented by a trace
+or by an XP dominating a trace}\label{fig-traces}
+\end{figure}
+The first proposal directly reflects the assumption that a complete phrase is moved and leaves a trace that
+represents the thing that is moved. If one thinks about the properties of the trace it is clear that
+it has the same category as the element that was at this position before movement. Hence the second
+way to represent the moved category is appropriate as well. Figure~\ref{fig-traces-xp} basically says that the object that is moved is an NP but that there is
+nothing to pronounce. Given what was just said the most appropriate way to represent
+movement would be the one in Figure~\ref{fig-traces-mix}. This picture is a mix of the two other pictures. The index is associated with
+the category and not with the empty phonology. In my opinion this best depicts the fact that trace and
+filler are related. However, I never saw this way of depicting movement in the GB literature and
+hence I will stick to the more common notation in Figure~\ref{fig-traces-xp}. This way to depict
+movement is also more similar to the representation that is used by all authors for the movement of
+words (so-called head-movement). For example the trace \_$_k$, which stands for a moved \inull in
+Figure~\ref{Abb-GB-Ja-Nein} is never depicted as daughter of I$'$ but always as a daughter of \inull.
+
+
 %\addlines[2]
 Until now, I have not yet discussed sentences without auxiliaries such as (\ref{ex-that-ann-reads-the-newspaper}). In order to analyze this kind of sentences, one has to assume that the
 inflectional affix is present in the \inull position. An example analysis is given in Figure~\vref{Abb-GB-englischer-Satz-ohne-Hilfsverb}.
-%% \begin{figure}
-%% \centerline{%
-%% \begin{forest}
-%% sm edges
-%% [IP
-%% 	[NP[Ann]]
-%% 	[I$'$
-%% 		[I$^0$[-s]]
-%% 		[VP
-%% 			[V$'$
-%% 				[V$^0$[read-]]
-%% 				[NP[the newspaper, roof]]]]]]
-%% \end{forest}}
-%% \caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}English sentence without auxiliary}
-%% \end{figure}%
+\begin{figure}
+\centerline{
+\begin{forest}
+sm edges
+[IP
+	[NP[Ann,roof]]
+	[I$'$
+		[I [-s]]
+		[VP
+			[V$'$
+				[V [read-]]
+				[NP[the newspaper, roof]]]]]]
+\end{forest}}
+\caption{\label{Abb-GB-englischer-Satz-ohne-Hilfsverb}Sentence without auxiliary}
+\end{figure}%
 Since the inflectional affix precedes the verb, some kind of movement operation still needs to take place.
 For theory"=internal reasons, one does not wish to assume movement operations to positions lower in the
 tree, hence the verb has to move to the affix and not the other way around.
@@ -971,15 +1001,15 @@ topological\is{topology} fields as shown in Figure~\vref{Abb-GB-Topo}.
               ]
               [C$'$
                     [{}
-                      [C$^0$, terminus
-                        [C$^0$\\left SB, name=c0
+                      [C, terminus
+                        [C \\left SB, name=c0
                         ]
                       ]
                     ]
                     [IP
                       [{}
                         [XP, terminus
-                          [{IP (without I$^0$, V$^0$)\\middle field}
+                          [{IP (without I , V )\\middle field}
                             [SpecIP\\subject position, set me left, name=specip
                             ]
                             [phrases inside\\the VP, name=p3
@@ -989,13 +1019,13 @@ topological\is{topology} fields as shown in Figure~\vref{Abb-GB-Topo}.
                       ]
                       [I$'$
                               [VP, name=vp
-                                [V$^0$, name=v0, terminus, no path, anchor=east
-                                  [{V$^0$, I$^0$\\right SB}, name=p2, set me left
+                                [V , name=v0, terminus, no path, anchor=east
+                                  [{V , I \\right SB}, name=p2, set me left
                                   ]
                                 ]
                               ]
                               [{}
-                                    [I$^0$, terminus, name=io
+                                    [I , terminus, name=io
                                     ]
                               ]
                       ]
@@ -1056,7 +1086,7 @@ with an adjunct is shown in Figure~\vref{GB-Adjunkte}.
 sm edges
 [VP
 [V$'$
-	[Adv[morgen;tomorrow,roof]]
+	[AdvP[morgen;tomorrow,roof]]
 	[V$'$
 		[NP[den Jungen;the boy, roof]]
 		[V[triff-;meet]]]]]
@@ -1288,15 +1318,15 @@ Figure~\vref{Abb-GB-Komplementierer} gives an analysis of (\mex{0}).
 sm edges
 [CP
 [C$'$
-	[C$^0$[dass;that]]
+	[C [dass;that]]
 	[IP
 		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
 					[NP[diesen Mann;this man, roof]]
-					[V$^0$[\trace$_j$]]]]
-			[I$^0$[kenn-$_j$ -t;know- -s]]]]]]
+					[V [\trace$_j$]]]]
+			[I [kenn-$_j$ -t;know- -s]]]]]]
 \end{forest}
 \caption{\label{Abb-GB-Komplementierer}Sentence with a complemen\-ti\-zer in \cnull}
 %% \ffigbox{%
@@ -1305,15 +1335,15 @@ sm edges
 %% sm edges
 %% [CP
 %% [C$'$
-%% 	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
+%% 	[C [(kenn-$_j$ -t)$_k$;knows]]
 %% 	[IP
 %% 		[NP [jeder;everybody]]
 %% 		[I$'$
 %% 			[VP
 %% 				[V$'$
 %% 					[NP [diesen Mann; this man, roof]]
-%% 					[V$^0$[\trace$_j$]]]]
-%% 			[I$^0$ [\trace$_k$]]]]]]
+%% 					[V [\trace$_j$]]]]
+%% 			[I  [\trace$_k$]]]]]]
 %% \end{forest}}
 %% }{\caption{\label{Abb-GB-Verberststellung}Verb position in GB}}
 %% \end{floatrow}
@@ -1331,15 +1361,15 @@ In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via 
 sm edges
 [CP
 [C$'$
-	[C$^0$[(kenn-$_j$ -t)$_k$;knows]]
+	[C [(kenn-$_j$ -t)$_k$;knows]]
 	[IP
 		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
 					[NP [diesen Mann; this man, roof]]
-					[V$^0$[\trace$_j$]]]]
-			[I$^0$ [\trace$_k$]]]]]]
+					[V [\trace$_j$]]]]
+			[I  [\trace$_k$]]]]]]
 \end{forest}
 }
 \caption{\label{Abb-GB-Verberststellung}Verb position in GB}
@@ -1386,17 +1416,17 @@ Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\r
 \begin{forest}
 sm edges
 [CP
-[NP [diesen Mann$_i$;this man, roof]]
+[NP$_i$ [diesen Mann;this man, roof]]
 [C$'$
-	[C$^0$[(kenn-$_j$ -t)$_k$; know- -s]]
+	[C [(kenn-$_j$ -t)$_k$; know- -s]]
 	[IP
 		[NP [jeder;everybody,roof]]
 		[I$'$
 			[VP
 				[V$'$
 					[NP[\trace$_i$]]
-					[V$^0$[\trace$_j$]]]]
-			[I$^0$ [\trace$_k$]]]]]]
+					[V [\trace$_j$]]]]
+			[I  [\trace$_k$]]]]]]
 \end{forest}
 \caption{\label{Abb-GB-Vorfeldbesetzung}Fronting in \gbt}
 \end{figure}%
@@ -1586,14 +1616,14 @@ sm edges
 			[NP, name=dobject [der Frau;the woman, roof]]
 			[V$'$
 				[NP,   name=aobject [den Jungen;the boy, roof]]
-				[V$^0$,name=verb    [zeig-;show-]]]]]
-	[I$^0$, name=Infl [-t;-s]]]]
+				[V ,name=verb    [zeig-;show-]]]]]
+	[I , name=Infl [-t;-s]]]]
 \draw[->,dotted] (Infl.north) .. controls (3.5,-0.3) and (-1.5,.5) .. ($(subject.north)+(-.1,.1)$);
 \draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5) .. ($(subject.north)+(0,.1)$);
 \draw[->,dashed] (verb.north) .. controls (2.8,-3.0) and (0,-3.3) .. ($(dobject.north)+(0,.1)$);
 \draw[->,dashed] (verb.north) .. controls (2.3,-4.3) and (1.8,-4.5) .. ($(aobject.north)+(0,.1)$);
 %\draw (-4,-7) to[grid with coordinates] (4,0.5);
-\end{forest} \hspace{1cm}
+\end{forest}\hfill
 \begin{tabular}[b]{ll@{}}
 \tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
 \tikz[baseline]\draw(0,1ex)--(1,1ex);&just theta"=role\\
@@ -1622,8 +1652,8 @@ sm edges
 			[NP, name=dobject [der Frau;the woman, roof]]
 			[V$'$
 				[NP,   name=aobject [\_$_i$]]
-				[V$^0$,name=verb [gezeigt wir-;shown is, roof]]]]]
-	[I$^0$ ,name=Infl [-\/d]]]]
+				[V ,name=verb [gezeigt wir-;shown is, roof]]]]]
+	[I  ,name=Infl [-\/d]]]]
 \draw[->,dotted] (Infl.north) .. controls (2.5,.35)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
 \draw[->,dashed] (verb.north) .. controls (2.2,-3.4) and (0,-3.1) .. ($(dobject.north)+(0,.1)$);
 \draw[->]        (verb.north) .. controls (2.0,-4.55) and (1.2,-4.35) .. ($(aobject.north)+(0,.1)$);
@@ -1796,8 +1826,8 @@ sm edges
 			[{NP[dat]} [der Frau;the woman, roof]]
 			[V$'$
 				[NP   [\trace$_i$]]
-				[V$^0$  [gib-;give-]]]]]
-	[I$^0$, name=Infl [-t;-s]]]] ]
+				[V   [gib-;give-]]]]]
+	[I , name=Infl [-t;-s]]]] ]
 \end{forest}
 \caption{Analysis of local reordering as adjunction to IP}\label{fig-das-buch-der-mann-der-frau-gibt-movement}
 \end{figure}%
@@ -2300,3 +2330,4 @@ book), extractions where fillers and gaps do not match and extraction without ga
 % 2:31:56
 
 
+Barriers: VP-internal subject

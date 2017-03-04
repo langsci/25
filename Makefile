@@ -242,7 +242,7 @@ check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
 
 externalization-clean:
-	external-figures/* *.for *.tmp *.aux.copy *-blx.bib *.auxlock
+	rm -f external-figures/* *.for *.tmp *.aux.copy *-blx.bib *.auxlock
 
 realclean: clean
 	rm -f *.dvi *.ps *.pdf
