@@ -2154,13 +2154,13 @@ For sentences with negation, Croft assumes the hierarchy with multiple inheritan
 \centering
 \begin{forest}
 % we have to mention the style here, since we are overriding the global defaults for anchoring
-.style={for tree={parent anchor=north, child anchor=south,grow=north,
+for tree={parent anchor=north, child anchor=south,grow=north,
           draw,          % to get the boxes
           fit=rectangle, % tree layout with more space
-          l+=2mm}}
+          l+=2mm}
 [I didn't sleep
-  [Sbj IntrVerb]
-  [Sbj Aux-n't Verb]]
+  [Sbj Aux-n't Verb]
+  [Sbj IntrVerb]]
 \end{forest}
 \caption{\label{Abbildung-Vererbungshierarchie-mehrfach-Croft}Interaction of phrasal patterns following \citew[\page 26]{Croft2001a}}
 \end{figure}%
@@ -2174,7 +2174,103 @@ observable properties of linguistic objects. For a more detailed discussion of a
 \citew[Section~18.3.2.2]{MuellerLehrbuch1} and for the use of auxiliary features in inheritance"=based analyses of the lexicon, see
  \citew[Section~7.5.2.2]{MuellerLehrbuch1}.\is{inheritance|)}
 
+The first discussion of Croft's classifications of clauses can be found in
+\citet[Section~11.11.4]{MuellerGTBuch1}. Nevertheless hierarchies similar to the one in
+Figure~\ref{Abbildung-Vererbungshierarchie-Croft} are suggested in introductory texts and
+scientific work. Figure~\vref{fig-inheritance-ZL} shows a hierarchy that was suggested by \citet[\page 97]{ZL2013a-u} for
+German for sentences with the verbs \emph{lachen} `laugh', \emph{weinen} `cry', \emph{drücken}
+`push', \emph{mögen} `like'.
+\begin{figure}
+\oneline{%
+\begin{forest}
+for tree={draw,          % to get the boxes
+%          fit=rectangle, % tree layout with more space
+          l+=5mm,
+          s sep=+5mm}
+[Satz
+  [{[[NP\sub{nom}] [IntrVerb]]}
+    [{[[NP\sub{nom}] [weinen]]}]
+    [{[NP\sub{nom} [lachen]]}]]
+  [{[[NP\sub{nom}] TrVerb [NP\sub{acc}]]}
+    [{[[NP\sub{nom}] drücken [NP\sub{acc}]]}
+      [{[[NP\sub{nom}] drücken [den Preis]]}]
+      [{[[NP\sub{nom}] drücken [die Schulbank]]}]]
+    [{[[NP\sub{nom}] mag [NP\sub{acc}]]}]]]
+\end{forest}}
+\caption{Inheritance hierarchy for clauses by \citet[\page 97]{ZL2013a-u}}\label{fig-inheritance-ZL}
+\end{figure}
+Things that I mentioned with respect to Croft's hierarchy also apply to this hierarchy for German
+and in fact they demonstrate the problems even more clearly. The idiomatic usages of \emph{den Preis
+  drücken} `to beat down the price' and \emph{die Schulbank drücken} `to go to school' are not as
+fixed as the hierarchy seems to suggest. For example, \emph{den Preis drücken} may appear with an
+indefinite article and there may be NP-internal modification:
+\eal
+\ex\label{ex-einen-solch-guten-Pries-kann} 
+\gll Einen solch guten Preis kann man nur schwer weiter drücken.\\
+     a     such  good  price can  one only difficult further press\\
+\glt `It is hardly possible to beat down such a good price even further.'
+\ex 
+\gll So kann man den schon recht guten Preis weiter drücken.\\
+     this.way can one the yet right good price further press\\
+\glt `This way the rather good price can be reduced even further.'
+\zl
+Note also that it would be wrong to claim that all instances of the \emph{den Preis drücken} involve
+the realization of an NP with nominative case.
+\ea
+\gll Einen solchen Preis zu drücken ist nicht leicht.\\
+     a     such    price to press   is  not   easy\\
+\glt `It is not easy to beat down such a good price.'
+\z
+Since Construction Grammar does not use empty elements, (\mex{0}) cannot be explained without the
+assumption of a separate phrasal construction, one without an NP[\type{nom}].
 
+So what has to be said about the special usage of \emph{drücken} `to press' is that \emph{drücken} has to
+cooccur with an NP (definite or indefinite) containing \emph{Preis} `price'. If one insists on a phrasal
+representation like the one in Figure~\ref{fig-inheritance-ZL}, one has to explain how the clauses
+represented in this figure are related to other clauses in which the NP contains an adjective. One
+would be forced to assume relations between complex linguistic objects (basically something
+equivalent to transformations with the power that was assumed in the 50ies, see p.\,\pageref{page-TG-Typ0}) or one would have to
+assume that \emph{den Preis} `the price' is not a more specific description of the NP[\type{acc}] but rather
+corresponds to some underspecified representation that allows the integration of adjectives between
+determiner and noun (see the discussion of the phrasal lexical item in
+(\ref{ex-avm-mich-tritt-ein-Pferd}) on p.\,\pageref{ex-avm-mich-tritt-ein-Pferd}. A third way to
+capture the relation between \emph{den Preis drücken} `reduce the price' and \emph{den guten Preis
+  drücken} `reduce the good price' would be to assume a TAG-style grammar that can take a tree, break it up and insert an adjective in the
+middle. I never saw a discussion of these issues anywhere in the literature. Hierarchies like the
+ones in Figure~\ref{Abbildung-Vererbungshierarchie-Croft} and Figure~\ref{fig-inheritance-ZL} seem
+to classify some attested examples but they do not say anything about general grammar. Note for
+instance, that (\ref{ex-einen-solch-guten-Pries-kann}) differs from the representation in
+Figure~\ref{fig-inheritance-ZL} by having an additional modal verb and by having the NP containing
+\emph{Preis} fronted. Such frontings can be nonlocal. How is this accounted for? If the assumption
+is that the elements in Figure~\ref{fig-inheritance-ZL} are not ordered, what would be left of the
+original constructional motivation? If the assumptions that elements of the phrasal constructions
+may be discontinuous, what are the restrictions on this (see
+Section~\ref{sec-discontinuous-constituents-fcg} and Section~\ref{sec-linearization-problems-dg})?
+The alternative to classifying (some of the) possible phrases is the hierarchy of lexical types given
+in Figure~\vref{fig-inheritance-ZL-lexical-variant}.
+\begin{figure}
+\oneline{%
+\begin{forest}
+for tree={%draw,          % to get the boxes
+%          fit=rectangle, % tree layout with more space
+          l+=5mm,
+          s sep+=5mm,
+          where n children=0{edge=dashed}{}}
+[verb lexem
+  [\argst \sliste{ NP[\type{nom}] }
+    [wein-]
+    [lach-]]
+  [\argst \sliste{ NP[\type{nom}], NP[\type{acc}] } %, for children={l+=5mm}
+    [drück-]
+    [drück-\\ \argst \sliste{ NP[\type{nom}], NP[\type{acc}, Preis] },base=top]
+%    [drück-\\ \argst \sliste{ NP[\type{nom}], NP[\type{acc}], \textsc{def}$+$, Schulbank] }]
+    [mög-]]]
+\end{forest}}
+\caption{Lexical alternative to inheritance hierarchy in Figure~\ref{fig-inheritance-ZL}}\label{fig-inheritance-ZL-lexical-variant}
+\end{figure}
+The respective lexical items have valence
+specifications that allow them to be used in certain configurations: arguments can be scrambled, can
+be extracted, passivization lexical rules may apply and so on.
 
 \subsection{Mappings between different levels of representations}
 \label{sec-mapping-between-levels}\label{sec-inheritance-passive-SimSyn}
