@@ -88,7 +88,7 @@ to be able to read the original articles and subsequent publications. Although t
 little work on the basic formal\is{formalization} assumptions or analyses that have been formalized precisely.
 Examples of more formal works are \citew{KF99a}, \citet{Kay2002a}, \citew{MR2001a}, and
 \citew{Goldberg2003a}. Another formal proposal was developed by Jean-Pierre Koenig
-\citeyearpar{Koenig99a} (formerly Berkeley). This work is coached in the framework of \hpsg, but it has been heavily influenced by CxG. Fillmore and Kay's revisions of their earlier work
+\citeyearpar{Koenig99a} (formerly Berkeley). This work is couched in the framework of \hpsg, but it has been heavily influenced by CxG. Fillmore and Kay's revisions of their earlier work
 took place in close collaboration with Ivan Sag. The result was a variant of HPSG known as Sign"=Based Construction Grammar (SBCG) \citep{Sag2010b,Sag2012a}.
 See Section~\ref{sec-SbCxG} for further discussion.
 
@@ -103,7 +103,7 @@ Luc Steels is working on the simulation of language evolution\is{language evolut
 \citep{Steels2003a}. Steels works experimentally modeling virtual communities of interacting
 agents. Apart from this he uses robots that interact in language games \citep{Steels2015a-u}.
 In personal communication (p.\,c.\ 2007) %200 Jahre
-Steels stated that is is a long way to go until robots finally will be able to learn to speak but the
+Steels stated that it is a long way to go until robots finally will be able to learn to speak but the
 current state of the art is already impressive. Steels can use robots that have a visual system
 (camera and image processing) and use visual information paired with audio information in
 simulations of language acquisition. The implementation of Fluid Construction Grammar is documented in
@@ -1762,7 +1762,10 @@ Before turning to FCG in the next subsection, we can conclude that ECG and HPSG 
 \label{sec-fcg}
 
 \Citet{vanTrijp2013a,vanTrijp2014a} claims that SBCG and HPSG are fundamentally
-different from Fluid Construction Grammar (FCG). He claims that the former approaches are generative ones while the latter is a
+different from Fluid Construction Grammar (FCG).\footnote{
+  A reply to van Trijp based on the discussion in this section is published as \citew{MuellerFCG}.%
+}
+He claims that the former approaches are generative ones while the latter is a
 cognitive-functional one. I think that it is not legitimate to draw these distinctions on the basis
 of what is done in FCG.\footnote{\label{Steels-FCG-System}%
   \citet[\page 153]{Steels2013a} emphasizes the point that FCG is a technical tool for implementing constructionist ideas rather than
@@ -1894,7 +1897,7 @@ The issue of how such generalizations should be captured was discussed in connec
 organization of the lexicon in HPSG \citep{Flickinger87,Meurers2001a}. In the lexical world, one could simply categorize all verbs according to their
 valence and say that \emph{loves} is a transitive verb and the passive variant \emph{loved} is an
 intransitive verb. Similarly \emph{gives} would be categorized as a ditransitive verb and
-\emph{given} as a strictly transitive one. Obviously this misses the point that \emph{loved} and \emph{given}
+\emph{given} as a two-place verb. Obviously this misses the point that \emph{loved} and \emph{given}
 share something: they both are related to their active form in a systematic way. This kind of
 generalization is captured by lexical rules that relate two lexical items. The respective
 generalizations that are captured by lexical rules are called a horizontal generalizations as compared to vertical generalizations, which
@@ -1904,7 +1907,7 @@ The issue is independent of the lexical organization of knowledge, it can be app
 representations as well. Phrasal constructions can be organized in hierarchies (vertical), but the
 relation between certain variants is not covered by this. The analog to the lexical rules in a
 lexical approach are GPSG-like metarules in a phrasal approach. So what seems to be missing in FCG
-is something that relates phrasal patterns, \eg allo"=constructions (\citealp{Cappelle2006a}; \citealp[\page
+is something that relates phrasal patterns, \eg allostructions (\citealp{Cappelle2006a}; \citealp[\page
   116]{Goldberg2014a}, see also footnote~\ref{fn-allostructions}).
 
 
@@ -2007,7 +2010,7 @@ serialization of the object in sentences like (\mex{1}) as an alternative linear
 \ex What did the boy hit?
 \zl
 Van Trijp's analysis involves several units that do not normally exist in phrase structure grammars,
-but can be modeled via adjacency constraints or represent relations between items which are part
+but can be modeled via adjacency constraints or which represent relations between items which are part
 of lexical representations in HPSG/SBCG anyway. An example is the subject-verb anchor that connects
 the subject and the verb to represent the fact that these two items play an important functional
 role. Figure~\vref{fig-what-did-the-boy-hit} shows the analysis of (\mex{1}).
@@ -2169,7 +2172,7 @@ form if it does not. \slasch-based proposals can account for this in a straight-
 fact that a constituent is missing in a phrase is represented in the \slashv of the trace and this
 information is percolated up the tree. So even complex structures contain the information that there
 is a constituent missing inside them. Complementizers that are combined with sentences therefore can
-select sentences with \slashvs that correspond to their inflection.
+select sentences with \slashvs that correspond to the form of the complementizer.
 Van Trijp's answer to this challenge is that all languages are different
 \citep[\page 263]{vanTrijp2014a} and that the evidence from one language does not necessarily mean that the analysis for that language is
 also appropriate for another language. While I agree with this view in principle (see
@@ -2529,7 +2532,7 @@ non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
 \zs
 %\addlines
-This can be translated into a phrase structure grammar in a straight-forward way:
+This can be translated into phrase structure grammar rules in a straight-forward way:
 \eal
 \ex \onems[head-argument-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
@@ -2586,10 +2589,10 @@ Now, the translation of a parallel schema using a \textsc{mother} feature like (
 mother$|$synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
                                   subcat & \ibox{2}
                         }\\
-head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
+head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
                                    subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
-non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
+non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
 
 \ex 
@@ -2624,7 +2627,7 @@ grammar. In fact, (\mex{0}) is one way to put the meta constraint in (\ref{meta-
 So, this shows that the version of SBCG that has been developed by \citet{Sag2012a} has a
 straightforward implementation in TRALE.\footnote{%
 A toy fragment of English using a \textsc{mother} feature and phrase structure rules with specifications
-of the kind given above can be downloaded at \url{http://hpsg.fu-berlin.de/Fragments/SBCG-TRALE/}.%
+of the kind given above can be downloaded at \url{https://hpsg.hu-berlin.de/Fragments/SBCG-TRALE/}.%
 }
 The question remains whether ``SBCG's performance"=independence hypothesis remains conjecture until proven otherwise'' as van Trijp sees
 it. The answer is: it is not a conjecture since any of the old constraint-solving systems of the
