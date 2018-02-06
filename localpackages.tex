@@ -56,16 +56,9 @@
 
 
 
-\usepackage{styles/makros.2e,styles/article-ex,styles/additional-langsci-index-shortcuts,
-styles/eng-date,styles/my-theorems}
-
-
 \usepackage{lastpage,float,soul,tabularx}
 
 
-% loaded in macros.2e \usepackage[english]{varioref}
-% do not stop and warn! This will be tested in the final version
-\vrefwarning
 
 
 \usepackage{ogonek}        % For Ewa Dabrowska
@@ -108,6 +101,12 @@ styles/eng-date,styles/my-theorems}
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
 \usepackage{german}\selectlanguage{USenglish}
 
+\usepackage{styles/makros.2e,styles/article-ex,styles/additional-langsci-index-shortcuts,
+styles/eng-date,styles/my-theorems}
+
+% loaded in macros.2e \usepackage[english]{varioref}
+% do not stop and warn! This will be tested in the final version
+\vrefwarning
 
 
 \setcounter{secnumdepth}{4}
