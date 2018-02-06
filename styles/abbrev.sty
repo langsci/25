@@ -64,6 +64,9 @@
 \newcommand{\Vf}{Vorfeld\xspace}}{%
 \newcommand{\Vf}{\emph{Vorfeld}\xspace}}
 
+\newcommand{\Vfs}{\emph{Vorfelds}\xspace}
+
+
 \iflanguage{german}{%
 \newcommand{\Mf}{Mittelfeld\xspace}}{%
 \newcommand{\Mf}{\emph{Mittelfeld}\xspace}}
@@ -76,6 +79,9 @@
 \iflanguage{german}{%
 \newcommand{\vf}{Vorfeld\xspace}}{%
 \newcommand{\vf}{\emph{Vorfeld}\xspace}}
+
+\newcommand{\vfs}{\emph{Vorfelds}\xspace}
+
 
 \iflanguage{german}{%
 \newcommand{\mf}{Mittelfeld\xspace}}{%
@@ -114,6 +120,7 @@
 }{\newcommand{\argstl}{\textsc{arg-st} list\xspace}}
 \newcommand{\argstls}{\textsc{arg-st} lists\xspace}
 
+\newcommand{\casev}{\textsc{case} value\xspace}
 \newcommand{\casew}{\textsc{case}"=Wert\xspace}
 \newcommand{\casef}{\textsc{case} feature\xspace}
 \newcommand{\cat}{\textsc{cat}\xspace}
@@ -157,8 +164,10 @@
 \newcommand{\dav}{\textsc{da} value\xspace}
 \newcommand{\davs}{\textsc{da} values\xspace}
 \newcommand{\defv}{\textsc{def} value\xspace}
+\newcommand{\deps}{\textsc{deps}\xspace}
 \newcommand{\depsl}{\textsc{deps} list\xspace}
 \newcommand{\domvs}{\textsc{dom} values\xspace}
+\newcommand{\domain}{\textsc{domain}\xspace}
 \newcommand{\dsl}{\textsc{dsl}\xspace}
 \newcommand{\dslf}{\textsc{dsl} feature\xspace}
 \newcommand{\dslfs}{\textsc{dsl} features\xspace}
@@ -167,6 +176,10 @@
 \newcommand{\dslw}{\textsc{dsl}"=Wert\xspace}
 \newcommand{\dslwe}{\textsc{dsl}"=Werte\xspace}
 \newcommand{\dslwes}{\textsc{dsl}"=Wertes\xspace}
+\newcommand{\dtrs}{\textsc{dtrs}\xspace}
+\iflanguage{german}{%
+\newcommand{\dtrsl}{\textsc{dtrs}"=Liste\xspace}}{%
+\newcommand{\dtrsl}{\textsc{dtrs} list\xspace}}
 
 % used by kluwer.cls
 %\newcommand{\dom}{\textsc{dom}\xspace}
@@ -176,6 +189,7 @@
 \newcommand{\doml}{\textsc{dom}"=Liste\xspace}}{%
 \newcommand{\doml}{\textsc{dom} list\xspace}%
 }
+\newcommand{\HPSGerg}{\textsc{erg}\xspace}
 \newcommand{\ergm}{\textsc{erg}"=Merkmal\xspace}
 \newcommand{\ergv}{\textsc{erg} value\xspace}
 \newcommand{\ergw}{\textsc{erg}"=Wert\xspace}
@@ -199,6 +213,7 @@
 \newcommand{\hconsvs}{\textsc{hcons} values\xspace}
 \newcommand{\head}{\textsc{head}\xspace}
 \newcommand{\headf}{\textsc{head} feature\xspace}
+\newcommand{\headfs}{\textsc{head} features\xspace}
 \newcommand{\headv}{\textsc{head} value\xspace}
 \newcommand{\headvs}{\textsc{head} values\xspace}
 \newcommand{\headw}{\textsc{head}"=Wert\xspace}
@@ -213,10 +228,10 @@
 \newcommand{\initialw}{\textsc{initial}"=Wert\xspace}
 \newcommand{\initialwes}{\textsc{initial}"=Wertes\xspace}
 \newcommand{\initialm}{\textsc{initial}"=Merkmal\xspace}
-\newcommand{\ldat}{\emph{ldat}}
-\newcommand{\lnom}{\emph{lnom}}
-\newcommand{\snom}{\emph{snom}}
-\newcommand{\sacc}{\emph{sacc}}
+\newcommand{\ldat}{\normalfont\textit{ldat}}
+\newcommand{\lnom}{\normalfont\textit{lnom}}
+\newcommand{\snom}{\normalfont\textit{snom}}
+\newcommand{\sacc}{\normalfont\textit{sacc}}
 \newcommand{\lex}{\textsc{lex}\xspace}
 \newcommand{\lexf}{\textsc{lex} feature\xspace}
 \newcommand{\lexm}{\textsc{lex}"=Merkmal\xspace}
@@ -225,6 +240,7 @@
 \newcommand{\lexwe}{\textsc{lex}"=Werte\xspace}
 \newcommand{\lexwen}{\textsc{lex}"=Werten\xspace}
 \newcommand{\lexwes}{\textsc{lex}"=Wertes\xspace}
+\newcommand{\HPSGloc}{\textsc{loc}\xspace}
 \newcommand{\local}{\textsc{local}\xspace}
 \newcommand{\localf}{\textsc{local} feature\xspace}
 \newcommand{\localv}{\textsc{local} value\xspace}
@@ -263,7 +279,9 @@
 \newcommand{\pformf}{\textsc{pform} feature\xspace}
 \newcommand{\pformv}{\textsc{pform} value\xspace}
 \newcommand{\phon}{\textsc{phon}\xspace}
-\newcommand{\phonl}{\textsc{phon}"=Liste\xspace}
+\iflanguage{german}{%
+  \newcommand{\phonl}{\textsc{phon}"=Liste\xspace}}{%
+\newcommand{\phonl}{\textsc{phon} list\xspace}}
 \newcommand{\phonv}{\textsc{phon} value\xspace}
 \newcommand{\phonvs}{\textsc{phon} values\xspace}
 \newcommand{\phonw}{\textsc{phon}"=Wert\xspace}
@@ -276,6 +294,7 @@
 \newcommand{\predm}{\textsc{pred}"=Merkmal\xspace}
 \newcommand{\predw}{\textsc{pred}"=Wert\xspace}
 \newcommand{\predv}{\textsc{pred} value\xspace}
+\newcommand{\predvs}{\textsc{pred} values\xspace}
 \newcommand{\que}{\textsc{que}\xspace}
 \newcommand{\quef}{\textsc{que} feature\xspace}%
 \iflanguage{german}{%
@@ -290,6 +309,7 @@
 \newcommand{\relsl}{\textsc{rels}"=Liste\xspace}}{%
 \newcommand{\relsl}{\textsc{rels} list\xspace}}
 \newcommand{\relslen}{\textsc{rels}"=Listen\xspace}%
+\newcommand{\relsls}{\textsc{rels} lists\xspace}%
 %
 \newcommand{\relsv}{\textsc{rels} value\xspace}
 \newcommand{\relsvs}{\textsc{rels} values\xspace}
@@ -315,6 +335,8 @@
 \newcommand{\slashv}{\textsc{slash} value\xspace}
 \newcommand{\slashvs}{\textsc{slash} values\xspace}
 \newcommand{\specv}{\textsc{spec} value\xspace}
+\newcommand{\specw}{\textsc{spec}"=Wert\xspace}
+\newcommand{\specwes}{\textsc{spec}"=Wertes\xspace}
 \newcommand{\spr}{\textsc{spr}\xspace}
 \newcommand{\sprf}{\textsc{spr} feature\xspace}
 \iflanguage{german}{%
@@ -361,6 +383,7 @@
 \newcommand{\synsemf}{\textsc{synsem} feature\xspace}
 \newcommand{\synsemm}{\textsc{synsem}"=Merkmal\xspace}
 \newcommand{\synsemv}{\textsc{synsem} value\xspace}
+\newcommand{\synsemvs}{\textsc{synsem} values\xspace}
 \newcommand{\synsemw}{\textsc{synsem}"=Wert\xspace}
 \newcommand{\synsemwe}{\textsc{synsem}"=Werte\xspace}
 \newcommand{\synsemwes}{\textsc{synsem}"=Wertes\xspace}
@@ -576,7 +599,8 @@ Derivation}{derivation}\xspace}
 \newcommand{\zuinf}{\emph{zu}"=infinitive\xspace}
 \newcommand{\zuinfs}{\emph{zu}"=infinitives\xspace}
 
-\newcommand{\andund}{and\xspace}
+\newcommand{\andund}{\iflanguage{german}{und}{and}\xspace}
+
 
 
 %\renewcommand{\argstl}{\textsc{arg-st} list\xspace}
@@ -604,7 +628,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\littlevbar}{$\overline{\mbox{\textit{v}}}$\xspace}
 \newcommand{\xbar}{\texorpdfstring{\mbox{$\overline{\mbox{X}}$}}{X̄}\xspace}
 \newcommand{\xbarbar}{\mbox{$\overline{\overline{\mbox{X}}}$}\xspace}
-\newcommand{\baro}[1]{\mbox{$\overline{\mbox{\textrm{#1}}}$}\xspace}
+\newcommand{\baro}[1]{\upshape\mbox{$\overline{\mbox{\textrm{#1}}}$}\xspace}
 \newcommand{\nbar}{\upshape\mbox{$\overline{\mbox{N}}$}\xspace}
 \newcommand{\nbars}{\mbox{$\overline{\mbox{N}}$s}\xspace}
 \newcommand{\abar}{\mbox{$\overline{\mbox{A}}$}\xspace}
@@ -626,7 +650,9 @@ Derivation}{derivation}\xspace}
 \let\azero=\anull
 \newcommand{\dnull}{D$^0$\xspace}%
 \newcommand{\inull}{I$^0$\xspace}%
+\newcommand{\tnull}{T$^0$\xspace}%
 \newcommand{\xnull}{X$^0$\xspace}%
+\newcommand{\xnulls}{\xnull{}s\xspace}%
 \let\xzero=\xnull
 \newcommand{\cnull}{C$^0$\xspace}%
 \newcommand{\vnull}{V$^0$\xspace}%
