@@ -28,7 +28,7 @@ phrase structure grammars\is{context"=free grammar} (Type-2 languages) and it ha
 	} Grammatical theories such as HPSG\indexhpsg and CxG\indexcxg can generate/describe so"=called Type-0 languages and are thereby far above the level
 	of complexity presently assumed for natural languages. 
 The assumption is that this complexity lies somewhere between context"=free\is{complexity class}\is{context"=free grammar}
-and context"=sensitive\is{context"=sensitive grammar} (Type-1) languages. This class is thus referred to as \emph{mildly context sensitive}\is{mildly context"=sensitive grammar}.
+and context"=sensitive\is{context"=sensitive grammar} (Type-1) languages. This class is thus referred to as \emph{mildly context"=sensitive}\is{mildly context"=sensitive grammar!context"=sensitive grammar}.
 Certain TAG"=variants are inside of this language class and it is assumed that they can produce exactly those structures that occur in
 natural languages. For more on complexity, see Section~\ref{Abschnitt-Kompetenz-Performanz-TAG} and Chapter~\ref{sec-generative-capacity}.
 
@@ -245,11 +245,10 @@ tag
 The nodes in trees are numbered from top to bottom and from left to right. The result of this numbering of nodes for \emph{likes} 
 is shown in Figure~\vref{Abbildung-Knotenpositionen}. The topmost node in the tree for  \emph{likes} is S and has the position 0.
 Beneath S, there is an NP and a VP node. These nodes are again numbered starting at
-0.\todostefan{Timm: Noch üblicher ist es vielleicht, mit 1 anzufangen. D.h. nur der Wurzelknoten hat die Adresse 0.} NP has the position 0 and VP the position 1.
-The VP node has in turn two daughters: V and the object NP. V receives number 0 and the object NP
-1. This makes it possible to combine these numbers and then it is possible to unambiguously access individual elements in the tree. The position for the subject NP
-is 00 since this is a daughter of S and occurs in first position. The object NP has the numeric sequence 011 since it is below S (0),
-in the VP (the second daughter of S = 1) and occurs in second position (the second daughter of VP = 1).
+1. NP has the position 1 and VP the position 2.
+The VP node has in turn two daughters: V and the object NP. V receives number 1 and the object NP 2. This makes it possible to combine these numbers and then it is possible to unambiguously access individual elements in the tree. The position for the subject NP
+is 1 since this is a daughter of S and occurs in first position. The object NP has the numeric
+sequence 2.2 since it is below the VP (the second daughter of S = 2) and occurs in second position (the second daughter of VP = 2).
 
 \begin{figure}
 \centerline{%
@@ -278,7 +277,7 @@ With these tree positions, the derivation tree for (\mex{0}) can be represented 
 \caption{\label{Abbildung-Ableitungsbaum}Derivation tree for \emph{Max likes Anouk.}}
 \end{figure}%
 The derivation tree expresses the fact that the elementary tree for \emph{likes} was combined with two arguments that were inserted
-into the substitution positions 00 and 011. The derivation tree also contains information about what exactly was placed into these
+into the substitution positions 1 and 2.2. The derivation tree also contains information about what exactly was placed into these
 nodes.
 
 \citet{KJ2003a} use a variant of \emph{Minimal Recursion
@@ -549,7 +548,7 @@ Figure~\vref{Abbildung-MC-TAG-versprach} shows an elementary tree for \emph{vers
 \end{figure}%
 This tree contains a trace of NP$_1^1$ that was moved to the left. The bottom"=left S node and the top"=right S node are connected by a dashed line
 that indicates the dominance relation. However, immediate dominance is not required. Therefore, it is possible to insert the two subtrees into another tree
-separately from each other and thereby analyze the order in Figure~\vref{Abbildung-TAG-Permutation3}, for example.
+separately from each other and thereby analyze the order in Figure~\vref{Abbildung-TAG-Permutation3}, for example.\is{Multi-Component TAG}\is{Tree Adjoining Grammar (TAG)!Multi"=Component (MC-TAG)|)} 
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -582,8 +581,6 @@ tag
 \caption{\label{Abbildung-TAG-Permutation3}Analysis of the order NP$_1^1$ NP$_2^2$ NP$_1^2$ NP$_2^1$ V$_{2}$V$_{1}$: adjunction to the S node between NP$_2^2$ and NP$_2^1$}
 \end{figure}%
 
-
-\is{Multi-Component TAG}\is{Tree Adjoining Grammar (TAG)!Multi"=Component (MC-TAG)|)} 
 %Andere Varianten, die andere Konstituentenanordnungen zulassen sind V-TAG\is{Tree Adjoining Grammar@\emph{Tree Adjoining Grammar} (TAG)!\emph{Vektor} (V-TAG)} \citep{Rambow94a} und TT-MC-TAG\is{Tree Adjoining Grammar@\emph{Tree Adjoining Grammar} (TAG)!\emph{Tree Tuple MC-TAG} (TT-MC-TAG)} \citep{Lichte2007a}.\is{Konstituentenstellung|)}
 Other variants of TAG that allow for other constituent orders are V-TAG\is{Tree Adjoining Grammar (TAG)!Vector (V-TAG)} \citep{Rambow94a} 
 and TT-MC-TAG\is{Tree Adjoining Grammar (TAG)!Tree Tuple MC-TAG (TT-MC-TAG)} \citep{Lichte2007a}.\is{constituent order|)}
@@ -602,7 +599,7 @@ the analyses in GB, Minimalism, and HPSG.
 \section{Passive}
 
 There is\is{passive|(} a possible analysis for the passive that is analogous to the transformations in Transformational Grammar: one assumes lexical rules that
-create a lexical item with a passive tree for every lexical item with an active tree \citep[\page 50--51]{KJ85a}. 
+license a lexical item with a passive tree for every lexical item with an active tree \citep[\page 50--51]{KJ85a}. 
 
 \citet[\page 55]{KJ85a} propose an alternative to this transformation"=like approach that more adequately handles so"=called raising constructions\is{raising}.
 Their analysis assumes that arguments of verbs are represented in subcategorization lists. Verbs are entered into trees that match their subcategorization
@@ -1337,7 +1334,7 @@ the derived tree (extended domains of locality\is{locality}).
 \citet*{KKNV95a} show that it is possible to transfer HPSG grammars that fulfill certain requirements into TAG grammars. This is interesting
 as in this way one arrives at a grammar whose complexity behavior is known\is{capacity!generative}. Whereas HPSG grammars are generally
 in the Type-0 area, TAG grammars can, depending on the variant, fall into the realm of Type-2 languages (context"=free) or even in the
-larger set of the mildly context"=sensitive grammars\is{mildly context sensitive grammar|context sensitive grammar} \citep{Joshi85a-u}. \citet*{YMTT2001a} have developed a procedure for translating FB"=LTAG grammars into
+larger set of the mildly context"=sensitive grammars\is{mildly context"=sensitive grammar!context"=sensitive grammar} \citep{Joshi85a-u}. \citet*{YMTT2001a} have developed a procedure for translating FB"=LTAG grammars into
 HPSG grammars.
 
 
