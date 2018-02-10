@@ -1,5 +1,5 @@
 LSP-STYLES=~/Documents/Dienstlich/Projekte/OALI/Git-HUB/latex/langsci/
-BIBTOL=bibtool-Mac
+BIBTOOL=bibtool-Mac
 
 
 all: grammatical-theory.pdf
