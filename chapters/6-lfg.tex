@@ -876,13 +876,20 @@ There are two possibilities for the analysis of verb placement in German.\is{ver
 
 \noindent
 In the analysis of extended head domains, the verb is simply omitted from the verb phrase. The following preliminary variant of the VP rule is used:\footnote{
-See \citew[\page 110]{Bresnan2001a} and \citew[Section~2.2]{Dalrymple2006a} for a corresponding rule with optional constituents on the right"=hand side of the rule.
+See \citew[\page 110]{Bresnan2001a}, \citet[\page 413]{ZK2002a} and \citew[\page 84]{Dalrymple2006a} for corresponding rules
+with optional constituents on the right"=hand side of the rule. \citet[\page 413]{ZK2002a} suggest a rule that
+is similar to (\mex{1}) for German.%
+% Bresnan S -> C*
+% Dalrymple V -> (V) (NP) PP*
+% ZK        S|VP -> NP* (V') (S|VP)
 }
 \ea
 \label{Regel-LFG-VP-alles-optional}
-VP $\to$ (NP) (NP) (NP) (V)
+VP $\to$ NP* (V)
 \z
-All components of the VP are optional as indicated by the brackets. As in GB analyses, the verb in
+All components of the VP are optional as indicated by the brackets and by the Kleene star\is{Kleene
+  star}\is{*}. The Kleene star stands for arbitrarily many occurrences of a symbol. This also
+includes zero occurrences. As in GB analyses, the verb in
 verb"=first clauses is in C. No I projection is assumed -- as in a number of GB works 
 (\citealp{Haider93a,Haider95b-u,Haider97a}; \citealp[Section~IV.3]{Sternefeld2006a-u}), since it is difficult to motivate its existence for German
 \citep[Section~3.2.2]{Berman2003a}. The verb contributes its f"=structure information from the C position. Figure~\vref{Abb-Verbstellung-LFG} contains a simplified version of the
@@ -972,7 +979,19 @@ All of these accusatives can occur in long"=distance dependencies (see Section~\
 \noindent
 \emph{wen} is not the object of \emph{glauben} `believe' and as such cannot be included in the
 f"=structure of \emph{glauben} `believe'. One would have to reformulate the implication in
-(i) as a disjunction of all possible grammatical functions of the accusative and in addition account for the fact that accusatives can come from a more deeply embedded f"=structure.
+(i) as a disjunction of all possible grammatical functions of the accusative and in addition account
+for the fact that accusatives can come from a more deeply embedded f"=structure.
+
+%\citet[\page 202]{Bresnan2001a} assumes that nonlocal dependencies crossing a clause involve a gap
+%in German. With such a gap one can assume that case is only assigned locally within the verbal
+%projection. Stellt sich aber immer noch die Frage, ob man weiß, was der Trace für kategoriale
+%Eigenschaften hat. Man findet den inside out und sagt dann OK, Deine Eigenschaften kenne ich jetzt
+%und desahlb muss dann Deine grammatisceh Funktion hier Objekt sein. Oder?
+%
+% Traces seem to help here, but then there should be a connection between the fronted XP and the
+% trace. Is there any connection other than the f-structure? The implication should not apply to the
+% prefield. Lots of additional stipulations seem to be needed.
+% Bresnan 2001:188 says that Russian does not have traces since it morphologically marks its dependends.
 }
 \ea
 \label{le-verschlingen}
