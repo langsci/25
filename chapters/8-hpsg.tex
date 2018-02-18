@@ -1335,8 +1335,8 @@ we arrive at the following \subcat lists:
 \ea
 \begin{tabular}[t]{@{}l@{~}l@{~}l}
 a. & \emph{geschlafen wird}  `slept is':     & \subcat \sliste{ }\\
-b. & \emph{unterstützt wird} `supported is': & \subcat \sliste{ NP[\type{str}]$_k$ }\\
-c. & \emph{geholfen wird}    `helped is':    & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\
+b. & \emph{unterstützt wird} `supported is': & \subcat \sliste{ NP[\type{str}]$_k$ }\\[1mm]
+c. & \emph{geholfen wird}    `helped is':    & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\[1mm]
 d. & \emph{geschenkt wird}   `given is':     & \subcat \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
@@ -1366,6 +1366,16 @@ One should note that this analysis of the passive works without movement of cons
 Reordering of arguments (see Section~\ref{Abschnitt-HPSG-lokale-Umstellung}) is independent of passivization. The accusative object is not mentioned
 at all unlike in \gpsg, \cg or Bresnan's LFG analysis\indexlfg from before the introduction of
 Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-LMT}). The passive can be analyzed directly as the suppression of the subject. Everything else follows from interaction with other principles of grammar.\is{passive|(}
+%
+%
+%% Note also that this analysis differs from the GB analysis explained in Section~\ref{sec-case-assignment} in that there is
+%% no Inflection\is{category!functional!I} or Tense\is{category!functional!T} head that assigns nominative to its specifier position. Therefore the
+%% analysis developed here for German also extends to languages like Icelandic\il{Icelandic}, which
+%% have quirky case subjects\is{subject}, that is, their subjects may be in the genitive, the dative, or the
+%% accusative case. Objects may have nominative and agree with the verb. This has a straightforward
+%% account in HPSG if one assigns nominative to the first argument with structural case. For the
+%% details of the analysis of Icelandic (and other Germanic languages) see \citew{MuellerGermanic}.
+% should go to general discussion
 
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
