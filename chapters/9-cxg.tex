@@ -1263,133 +1263,138 @@ Constructional HPSG\is{Head-Driven Phrase Structure Grammar (HPSG)!Constructiona
 daughters.'' An example of such a constraint given in prose is the Locality Principle of \citet[\page 143--144]{ps}.
 \is{locality|)}
 
-\subsubsection{Lexical extraction and the \textsc{local} feature}
-\label{sec-sbcg-local-feature}
+%% \subsubsection{Lexical extraction and the \textsc{local} feature}
+%% \label{sec-sbcg-local-feature}
 
-A main theme in Ivan Sag's work was to eliminate empty elements\is{empty element} from grammar. He co-developed a
-lexical analysis of extraction that did not use empty elements \citep*{NB94,BMS2001a}. Rather than
-assuming a trace as in earlier versions of HPSG (see Section~\ref{sec-nld-HPSG}) a lexical rule
-(lexical construction) or a special mapping between list-valued features (for instance \argst and
-\textsc{valence}) is assumed so that a lexical item is licensed that has an element in the 
-\textsc{gap} list (\slasch in earlier versions of HPSG). The \localf in Standard HPSG is used to
-bundle all those information that is shared between a filler and the gap. The lexical entry for the
-trace was given as (\ref{le-extraktionsspur}) on page~\pageref{le-extraktionsspur} and is repeated
-as (\mex{1}) for convenience.
-\begin{figure}
-\eas
-\label{le-extraction-trace-two}
-Extraction trace: \\
-\ms[word]{
- phon & \phonliste{} \\[1mm]
- synsem & \ms{ loc   & \ibox{1}\\
-               nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
-                                                %extra & \liste{} \\
-                             to-bind$|$slash & \eliste
-                           } 
-             }
-}
-\zs
-\vspace{-2\baselineskip}
-\end{figure}%
-For the trace-based analysis of extraction it is crucial that only information under
-\textsc{category} and \cont is shared between filler and gap. This information is bundled under
-\local. Information about daughters and phonology of the filler is not shared. Since traces are not
-pronounced, their \textsc{phonology} value would be incompatible with any \textsc{phonology} value of
-a filler.%\pagebreak
+%% A main theme in Ivan Sag's work was to eliminate empty elements\is{empty element} from grammar. He co-developed a
+%% lexical analysis of extraction that did not use empty elements \citep*{NB94,BMS2001a}. Rather than
+%% assuming a trace as in earlier versions of HPSG (see Section~\ref{sec-nld-HPSG}) a lexical rule
+%% (lexical construction) or a special mapping between list-valued features (for instance \argst and
+%% \textsc{valence}) is assumed so that a lexical item is licensed that has an element in the 
+%% \textsc{gap} list (\slasch in earlier versions of HPSG). The \localf in Standard HPSG is used to
+%% bundle all those information that is shared between a filler and the gap. The lexical entry for the
+%% trace was given as (\ref{le-extraktionsspur}) on page~\pageref{le-extraktionsspur} and is repeated
+%% as (\mex{1}) for convenience.
+%% \begin{figure}
+%% \eas
+%% \label{le-extraction-trace-two}
+%% Extraction trace: \\
+%% \ms[word]{
+%%  phon & \phonliste{} \\[1mm]
+%%  synsem & \ms{ loc   & \ibox{1}\\
+%%                nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
+%%                                                 %extra & \liste{} \\
+%%                              to-bind$|$slash & \eliste
+%%                            } 
+%%              }
+%% }
+%% \zs
+%% \vspace{-2\baselineskip}
+%% \end{figure}%
+%% For the trace-based analysis of extraction it is crucial that only information under
+%% \textsc{category} and \cont is shared between filler and gap. This information is bundled under
+%% \local. Information about daughters and phonology of the filler is not shared. Since traces are not
+%% pronounced, their \textsc{phonology} value would be incompatible with any \textsc{phonology} value of
+%% a filler.%\pagebreak
 
-%\addlines
-In a lexical approach, one would assume an additional lexical item with an element in \slasch or
-\textsc{gap}.
-\ea
-Lexical introduction of nonlocal dependencies %in SBCG
-according to \citet[\page 163]{Sag2012a}:\\*
-\ms{
-form & \phonliste{ like }\\
-arg-st & \liste{ \ibox{1} \ms{ NP\\
-                               gap & \eliste },  \ibox{2} \ms{ NP\\
-                                                               gap & \eliste } 
-               }\\
-syn    & \ms{ val & \sliste{ \ibox{1} }\\
-              gap & \sliste{ \ibox{2} }
-}
-}
-\z
-The analysis of (\mex{1}) then results in a linguistic object in which the second element of the
-\argstl of \emph{like} has the \textsc{form} value \phonliste{ bagels }.
-\ea
-Bagels, I like.
-\z
-In a trace-based account, the \textsc{form} value of the extracted element would be the empty list.
+%% %\addlines
+%% In a lexical approach, one would assume an additional lexical item with an element in \slasch or
+%% \textsc{gap}.
+%% \ea
+%% Lexical introduction of nonlocal dependencies %in SBCG
+%% according to \citet[\page 163]{Sag2012a}:\\*
+%% \ms{
+%% form & \phonliste{ like }\\
+%% arg-st & \liste{ \ibox{1} \ms{ NP\\
+%%                                gap & \eliste },  \ibox{2} \ms{ NP\\
+%%                                                                gap & \eliste } 
+%%                }\\[4mm]
+%% syn    & \ms{ val & \sliste{ \ibox{1} }\\
+%%               gap & \sliste{ \ibox{2} }
+%% }
+%% }
+%% \z
+%% If the complete gap information would be shared with the filler, the \phonv of the filler would be
+%% identified with the \phonv of the element in the \argstl. For example, the analysis of (\mex{1})
+%% would result in a linguistic object in which the second element of the \argstl of \emph{like} has
+%% the \textsc{form} value \phonliste{ bagels }. 
+%% \ea
+%% Bagels, I like.
+%% \z
+%% In comparison, in a trace-based account, the \textsc{form} value of the extracted element would be
+%% the empty list. However, \cite[\page ]{Sag2012a} does not assume that the complete filler is shared
+%% with the object in \textsc{gap}. Instead the \textsc{syn} value is shared and the \textsc{sem} value
+%% is used in the computation of the semantic contribution of the mother.
 
-%\addlines
-Now, the problem is that not everybody agrees with the traceless analysis of unbounded
-dependencies. For instance, \citet{LH2006a} wrote a monograph discussing various versions of
-traceless accounts of extraction and argue against them. \citet{Chaves2009a} suggested solutions to
-some of the puzzles, but does not solve them entirely. While feature geometries that include a
-\localf allow researchers to assume trace-based analyses, the SBCG geometry makes this
-impossible. So those who use traces in their theories will never adopt the SBCG geometry. See Section~\ref{chap-empty} for
-more on empty elements.
+%% %\addlines
+%% Now, the problem is that not everybody agrees with the traceless analysis of unbounded
+%% dependencies. For instance, \citet{LH2006a} wrote a monograph discussing various versions of
+%% traceless accounts of extraction and argue against them. \citet{Chaves2009a} suggested solutions to
+%% some of the puzzles, but does not solve them entirely. While feature geometries that include a
+%% \localf allow researchers to assume trace-based analyses, the SBCG geometry makes this
+%% impossible. So those who use traces in their theories will never adopt the SBCG geometry. See Section~\ref{chap-empty} for
+%% more on empty elements.
 
-%\addlines[2]
-A further advantage of having a package of information that is shared in nonlocal dependencies is
-that some information can be excluded from sharing by specifying it outside of such a package. This
-was used by \citet{Hoehle94a}, \citet{Mueller96a,Mueller2002b}, and \citet{Meurers99a} to account for partial
-verb phrase fronting\is{partial verb phrase fronting} in German. The generalization about partial verb phrase fronting in German is
-that verbs can be fronted together with some or all of their objects even though the verb does not
-form a VP in other contexts. For instance, \emph{erzählen} `tell' and \emph{wird} `will' in
-(\mex{1}a) usually form a complex that may not be separated by scrambling a projection of
-\emph{erzählen} to the left.
-\eal
-\ex[]{
-\gll  dass er seiner Tochter ein Märchen erzählen wird\\
-      that he his daughter a fairy.tale tell will\\
-\glt `that he will tell his daughter a fairy tale'  
-}
-\ex[*]{
-\gll dass er seiner Tochter ein Märchen erzählen nie wird\\
-     that he his    daughter a fairy.tale tell never will\\
-}
-\zl
-\citet{HN94a} account for this by assuming a special schema for verbal complexes and by assuming
-that such verbal complexes are marked in a certain way (later this was encoded with the \lexf with
-the value `+') and that heads that form a verbal complex select for appropriately marked
-elements. So in the analysis of (\mex{0}a) \emph{wird} `will' selects a \lex+ element and the word
-\emph{erzählen} `tell' satisfies this requirement.
+%% %\addlines[2]
+%% A further advantage of having a package of information that is shared in nonlocal dependencies is
+%% that some information can be excluded from sharing by specifying it outside of such a package. This
+%% was used by \citet{Hoehle94a}, \citet{Mueller96a,Mueller2002b}, and \citet{Meurers99a} to account for partial
+%% verb phrase fronting\is{partial verb phrase fronting} in German. The generalization about partial verb phrase fronting in German is
+%% that verbs can be fronted together with some or all of their objects even though the verb does not
+%% form a VP in other contexts. For instance, \emph{erzählen} `tell' and \emph{wird} `will' in
+%% (\mex{1}a) usually form a complex that may not be separated by scrambling a projection of
+%% \emph{erzählen} to the left.
+%% \eal
+%% \ex[]{
+%% \gll  dass er seiner Tochter ein Märchen erzählen wird\\
+%%       that he his daughter a fairy.tale tell will\\
+%% \glt `that he will tell his daughter a fairy tale'  
+%% }
+%% \ex[*]{
+%% \gll dass er seiner Tochter ein Märchen erzählen nie wird\\
+%%      that he his    daughter a fairy.tale tell never will\\
+%% }
+%% \zl
+%% \citet{HN94a} account for this by assuming a special schema for verbal complexes and by assuming
+%% that such verbal complexes are marked in a certain way (later this was encoded with the \lexf with
+%% the value `+') and that heads that form a verbal complex select for appropriately marked
+%% elements. So in the analysis of (\mex{0}a) \emph{wird} `will' selects a \lex+ element and the word
+%% \emph{erzählen} `tell' satisfies this requirement.
 
-The problem for many accounts of nonlocal dependencies is that the fronted material is not necessarily a
-single verb:
-\eal
-\label{bsp-erzaehlen-wird}
-\ex
-\gll Erzählen wird er       seiner Tochter ein Märchen.\\
-     tell      will he.\nom{} his.\dat{} daughter   a.\acc{}   fairytale\\
-\glt `He will tell his daughter a fairytale.'
-\ex
-\gll Ein Märchen        erzählen wird er       seiner Tochter.\\
-     a   fairytale.\acc{} tell      will he.\nom{} his.\dat{}    daughter\\
-\ex  
-\gll Seiner Tochter        erzählen wird er       das Märchen.\\
-     his.\dat{}    daughter tell     will he.\nom{} the.\acc{} fairytale\\
-\ex  
-\gll Seiner Tochter        ein Märchen        erzählen wird er.\\
-     his.\dat{}    daughter a.\acc{}   fairytale tell      will he.\nom\\
-\zl
-If the local requirement of \emph{wird} would be shared between filler and gap, the sentences in
-(\mex{0}b)--(\mex{0}d) would be ruled out, since the projections in the \vf are not lexical elements
-but complex phrasal projections that are \lex$-$. Now, as pointed out by the authors mentioned
-above, this turns into a non-issue if not all information is shared between filler and gap. If \lex
-is outside \local, the filler maybe \lex$-$, while the local constraints on the extracted element
-require the \lexv $+$. If all information is shared as in SBCG, no such solution is possible. Of
-course one could stick to the SBCG feature geometry and say that not the entire \argst element is
-shared with the \textsc{gap} element, but then one would end up with single structure
-sharings\is{structure sharing} of all the features at the outermost level of a sign, that is, \textsc{phon}, \textsc{form}, \textsc{syn},
-\textsc{sem}, and \textsc{cntxt} (see \citealp[\page 98]{Sag2012a} for these features)\footnote{
-  Note that these structure sharings are necessary. It is not an option to leave the values of these
-  features unspecified in the argument structure list. Since we have a model-theoretic view on
-  things, an unspecified value would make the respective structures infinitely ambiguous, since
-  infinitely many instantiation of these features are possible.%  
-} and the whole point of grouping features is to avoid such multiple
-individual structure sharings in situations in which there is a systematic relation between feature values.
+%% The problem for many accounts of nonlocal dependencies is that the fronted material is not necessarily a
+%% single verb:
+%% \eal
+%% \label{bsp-erzaehlen-wird}
+%% \ex
+%% \gll Erzählen wird er       seiner Tochter ein Märchen.\\
+%%      tell      will he.\nom{} his.\dat{} daughter   a.\acc{}   fairytale\\
+%% \glt `He will tell his daughter a fairytale.'
+%% \ex
+%% \gll Ein Märchen        erzählen wird er       seiner Tochter.\\
+%%      a   fairytale.\acc{} tell      will he.\nom{} his.\dat{}    daughter\\
+%% \ex  
+%% \gll Seiner Tochter        erzählen wird er       das Märchen.\\
+%%      his.\dat{}    daughter tell     will he.\nom{} the.\acc{} fairytale\\
+%% \ex  
+%% \gll Seiner Tochter        ein Märchen        erzählen wird er.\\
+%%      his.\dat{}    daughter a.\acc{}   fairytale tell      will he.\nom\\
+%% \zl
+%% If the local requirement of \emph{wird} would be shared between filler and gap, the sentences in
+%% (\mex{0}b)--(\mex{0}d) would be ruled out, since the projections in the \vf are not lexical elements
+%% but complex phrasal projections that are \lex$-$. Now, as pointed out by the authors mentioned
+%% above, this turns into a non-issue if not all information is shared between filler and gap. If \lex
+%% is outside \local, the filler maybe \lex$-$, while the local constraints on the extracted element
+%% require the \lexv $+$. If all information is shared as in SBCG, no such solution is possible. Of
+%% course one could stick to the SBCG feature geometry and say that not the entire \argst element is
+%% shared with the \textsc{gap} element, but then one would end up with single structure
+%% sharings\is{structure sharing} of all the features at the outermost level of a sign, that is, \textsc{phon}, \textsc{form}, \textsc{syn},
+%% \textsc{sem}, and \textsc{cntxt} (see \citealp[\page 98]{Sag2012a} for these features)\footnote{
+%%   Note that these structure sharings are necessary. It is not an option to leave the values of these
+%%   features unspecified in the argument structure list. Since we have a model-theoretic view on
+%%   things, an unspecified value would make the respective structures infinitely ambiguous, since
+%%   infinitely many instantiation of these features are possible.%  
+%% } and the whole point of grouping features is to avoid such multiple
+%% individual structure sharings in situations in which there is a systematic relation between feature values.
 
 
 %% \subsubsection{Raising and the \localf}
