@@ -9,6 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
 % Heiko Oberdiek
 % http://tex.stackexchange.com/questions/136644/vertical-space-in-interaction-with-figure-center-environment
 \newcommand{\oneline}[1]{%
@@ -151,11 +152,184 @@
 \fi%
 #3)}\nopagebreak[4]\ignorespaces}
 
+ 
+\newcommand{\fittable}[1]{\resizebox{\textwidth}{!}{#1}}
 
-\newcommand{\tobi}[3][0]{\parbox{0cm}{\raisebox{1em}[0cm]{\hspace{#1mm}#3}}#2}
 
-% \renewcommand{\H}[2][0]{\tobi[#1]{#2}{\textsc{h}}}  %put H above letter
-% \renewcommand{\L}[2][0]{\tobi[#1]{#2}{\textsc{l}}}  %put L above letter
-% \newcommand{\E}[2][0]{\tobi[#1]{#2}{\textsc{!}}}    %put ! above letter (_E_xclamation)
-% \renewcommand{\P}[2][0]{\tobi[#1]{#2}{\textsc{\%}}} %put % above letter (_P_ercentage)
-% \renewcommand{\S}[2][0]{\tobi[#1]{#2}{\textsc{*}}}  %put * above letter (_S_tar)
+% integrate see also in multiple indexes
+\def\igobble#1 {} 
+\newcommand{\langsciseealso}{\par\addvspace{.1\baselineskip}\hspace*{1.4cm}\hangindent=1.4cm\seealso}
+\newcommand{\ilsa}[2]{\il{#1@\igobble | langsciseealso{#2}}}
+\newcommand{\issa}[2]{\is{#1@\igobble | langsciseealso{#2}}}
+\newcommand{\iasa}[2]{\ia{#1@\igobble | langsciseealso{#2}}}
+
+\usepackage{tabularx}
+\usepackage{array}
+\newenvironment{widetabular}[1][1]
+  {\tabularx{#1\textwidth}}
+  {\endtabularx}
+
+
+\newcommand{\citetv}[1]{\citeauthor{#1} (\citeyear*{#1} [this volume])}
+\newcommand{\citepv}[1]{(\citealt{#1} [this volume])}
+
+
+% Vowel chart tikz commands
+\newcommand{\aeiou}{%
+	\node at (1.5,0) (a) {a};
+	\node at (0,3) (i) {i};
+	\node at (3,3) (u) {u};
+	\node at (0.5,1.5) (e) {e};
+	\node at (2.5,1.5) (o) {o};
+}
+\newcommand{\aeiouEO}{%
+	\node at (1.5,0) (a) {a};
+	\node at (0,3) (i) {i};
+	\node at (3,3) (u) {u};
+	\node at (0.25,2) (e) {e};
+	\node at (2.75,2) (o) {o};
+	\node at (0.75,1) (E) {ε};
+	\node at (2.25,1) (O) {ɔ};	
+}
+
+%no hyphenation left alingned
+\newcolumntype{Q}{>{\raggedright\arraybackslash}X}
+%no hyphenation right aligned
+\newcolumntype{S}{>{\raggedleft\arraybackslash}X}
+%no hyphenation centered
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%no hyphenation fixed width
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%no hyphenation centered fixed width
+\newcolumntype{Z}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+%no hyphenation right aligned fixed width
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}} 
+\newcommand{\xxref}[2]{(\ref{#1}--\ref{#2})}
+
+
+% Underlining in gb4e-example Environments. Usual underlining commands that span multiple words do not work, because gb4e would parse it as one word. 
+% Example: \underline{My example phrase} should become \ulp{My}{~~~~~} \ulp{example}{~~~~~} \ule{phrase}
+% Note: The 2nd Argument of the \ulp command is filled in by experience - if you are not familiar with the command, you should experiment a bit. Usually, five tildes are enough, but be sure to check the outcome. 
+% \ule is meant to be the last word in a phrase that is underlined. Therefore, \ule does not have an extra length.
+\usepackage[normalem]{ulem} 
+\usepackage{calc}
+\newlength{\fulllength}
+\newcommand{\ulp}[2]{%#1: stuff to underline, #2: extra length to skip the whitespace between to components
+  \settowidth{\LSPTmp}{#1}%
+  % several boxes are need to assure that words with ascending and descending letters are underlined at the same 
+  % level, leading to the impression of a continuous stroke
+  \parbox[t]{\LSPTmp}{ %restrict first box to the length of first argument
+      \settowidth{\fulllength}{\parbox{\LSPTmp}{~}\parbox{#2mm}{~}} %inner box is larger than outerbox, so underlining will extend beyond length of outer box
+      %             align parbox to bottom
+      %              |           mbox to prevent hyphenation
+      \uline{\parbox[b]{\fulllength}{\mbox{#1}}}
+    }
+}
+
+\newcommand{\ule}[1]{%#1: stuff to underline, no extra length
+  \ulp{#1}{0}
+  }
+  
+  
+
+%% \usepackage{newfile}  
+%% \newoutputstream{colorfigures}
+%% \openoutputfile{\jobname.clr}{colorfigures}
+%% \addtostream{colorfigures}{Note the offset incurred by the frontmatter!}
+%% \newenvironment{colorfigure}{\begin{figure}\addtostream{colorfigures}{\thepage}}{\end{figure}} 
+
+%\AtEndDocument{
+% \closeoutputstream{colorfigures}
+%}
+
+\newcommand{\longrule}{\rule{1em}{.3pt}}
+\usepackage{colortbl} 
+\newcommand{\shadecell}{\cellcolor{black!20!white}}
+
+% vertical alignment of  numbered  example
+\newcommand{\eabox}[2][-.7\baselineskip]{
+  \ea
+    \parbox[t]{.8\textwidth}{
+      \vspace{#1}
+      #2
+     } 
+  \z
+}
+\newcommand{\exbox}[2][-.7\baselineskip]{
+  \ex
+    \parbox[t]{.8\textwidth}{
+      \vspace{#1}
+      #2
+     }  
+}
+
+%fix \verb error in biblatex
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+
+\newcommand{\twodigitexamples}{\exewidth{(23)}}
+\newcommand{\threedigitexamples}{\exewidth{(234)}}
+\newcommand{\fourdigitexamples}{\exewidth{(2345)}}
+
+\newcommand{\noabstract}{\vspace*{-2\baselineskip}} %for chapters without abstract
+
+\newcommand{\barplot}[4]{%
+  \begin{tikzpicture}
+    \begin{axis}[
+	xlabel={#1},  
+	ylabel={#2}, 
+	axis lines*=left, 
+        width  = \textwidth,
+	height = .3\textheight,
+    	nodes near coords, 
+	xtick=data,
+	x tick label style={},  
+	ymin=0,
+	symbolic x coords={#3},
+	]
+	\addplot+[ybar,lsRichGreen!80!black,fill=lsRichGreen] plot coordinates {
+	    #4
+	}; 
+    \end{axis} 
+  \end{tikzpicture} 
+}
+
+\newcommand{\rephrase}[2]{{\color{yellow!30!black}#2}\todo{replaced `#1'}}
+
+\newcommand{\missref}[2][]{\todo[#1]{missing reference #2}}
+
+\newenvironment{indentquote}[1]%
+  {\list{}{\leftmargin=#1\rightmargin=0pt}\item[]}%
+  {\endlist}
+  
+  
+\newcommand{\phonrule}[3]{#1 $\to$ #2 / #3}
+\newcommand{\featurebox}[1]{$\left[\begin{tabular}{>{\scshape}c}#1\end{tabular}\right]$}
+
+
+\definecolor{RED}{cmyk}{0.05,1,0.8,0}
+
+%connect two elements with lines
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture] \node (#1) {#2};}
+\newcommand{\connect}[2]{%
+  \tikz[overlay,remember picture]{%
+    \draw[-,thick] (#1) -- (#2) node   {};  %
+  }
+} 
+
+\newcommand{\examplesroman}{
+  \let\eachwordone=\upshape
+  \exfont{\upshape}
+}
+\newcommand{\examplesitalics}{
+  \let\eachwordone=\itshape
+  \exfont{\itshape}
+}
+
+\newenvironment{modquote}[1][6mm]% slightly less indented quote for hyphenation issues
+  {\list{}{\leftmargin=#1\rightmargin=0mm}\item[]}%
+  {\endlist}

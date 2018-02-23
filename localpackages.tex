@@ -30,12 +30,16 @@
 
 \hypersetup{bookmarksopenlevel=0}
 
-\iftoggle{draft}{
-\usepackage{todonotes}
-}{
-\usepackage[disable]{todonotes}
-}
+%% now loaded by the langsci class
+%% \iftoggle{draft}{
+%% \usepackage{todonotes}
+%% }{
+%% \usepackage[disable]{todonotes}
+%% }
 
+\iftoggle{draft}{}{
+\presetkeys{todonotes}{disable}{}
+}
 
 
 \usepackage{metalogo} % xelatex
@@ -50,7 +54,7 @@
 
 \usepackage{langsci/styles/langsci-optional}
 
-
+\usepackage{langsci/styles/langsci-lgr}
 
 \usepackage{graphicx}
 

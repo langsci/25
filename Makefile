@@ -92,7 +92,9 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 #	bibtex  -min-crossrefs=200 $*
 %.pdf: %.tex $(SOURCE)
 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
+	biber $*
 	xelatex -no-pdf -interaction=nonstopmode $* 
+	biber $*
 	xelatex -no-pdf -interaction=nonstopmode $*
 	correct-index
 	\rm $*.adx
@@ -204,12 +206,8 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 # two runs in order to get "also printed as ..." right
 gt.bib: ../../../Bibliographien/biblio.bib
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	bibtex bib-creation
-	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	$(BIBTOOL) -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
-	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
-	\rm -r gt-tmp.bib
-
+	biber --output_format=bibtex --output_resolve bib-creation.bcf -O gt_tmp.bib
+	biber --tool --configfile=biber-tool-test.conf gt_tmp.bib -O gt.bib
 
 PUB_FILE=stmue.bib
 
@@ -238,7 +236,9 @@ source:
 
 
 clean:
-	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tmp *.tpm *.adx *.idx *.ilg *.ind *.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.ldx *.lnd *.rdx *.sdx *.snd *.wdx *.wdv *.xdv chapters/*.aux *.for *.aux.copy *-blx.bib *.auxlock
+	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tmp *.tpm *.adx *.idx *.ilg *.ind \
+	*.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.ldx *.lnd *.rdx *.sdx *.snd *.wdx \
+	*.wdv *.xdv chapters/*.aux *.for *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml
 
 check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
