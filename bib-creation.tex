@@ -13,14 +13,7 @@
 %%% The aux file is then used to generate gt.bib
 
 
-\documentclass[output=short    % long|short|inprep              
-	        %,blackandwhite
-	        ,smallfont
-	        %,draftmode
-                ,bibtex
-                ,newtxmath
-                %,showindex
-		  ]{langsci/langscibook}                          
+\documentclass{scrbook}                          
 
 
 
@@ -41,11 +34,21 @@
 
 \newcommand{\LATER}[1]{}
 
+\usepackage{hyperref,todonotes,natbib,authorindex,abbrev,my-index-shortcuts}
 
+\let\citew\citealt
 
-\input{localmetadata.tex}
+%\input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
+
+
+%\AtEveryBibitem{\clearfield{abstract}}
+%\AtEveryBibitem{\clearfield{location}}
+%\AtEveryBibitem{\clearfield{ANNOTATION}}
+
+
+
 \begin{document}
 
 \frontmatter
@@ -90,6 +93,7 @@
 \include{chapters/empty}
 \include{chapters/movement}
 \include{chapters/phrasal}
+\include{chapters/potential-structure}
 \include{chapters/coregram}
 \include{chapters/conclusions}
 \include{chapters/loesungen}
@@ -97,31 +101,9 @@
 \backmatter
 \bookmarksetup{startatroot}
 
+\bibliographystyle{unified} 
 \bibliography{bib-abbr,biblio}
-%\bibliography{gt}
-\clearpage
 
-\small
-   
-
-\phantomsection%this allows hyperlink in ToC to work
-\addcontentsline{toc}{chapter}{Index} 
-\addcontentsline{toc}{section}{Name index}
-\ohead{Name index}
-%with biblatex
-%\printindex
-%without it 
-\printindex 
-  
-\phantomsection%this allows hyperlink in ToC to work
-\addcontentsline{toc}{section}{Language index}
-\ohead{Language index} 
-\printindex[lan] 
-  
-\phantomsection%this allows hyperlink in ToC to work
-\addcontentsline{toc}{section}{Subject index}
-\ohead{Subject index}
-\printindex[sbj]
 
 
 \end{document}

@@ -204,10 +204,23 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 
 
 # two runs in order to get "also printed as ..." right
-gt.bib: ../../../Bibliographien/biblio.bib
+# biber changes everything
+unusedgt.bib: ../../../Bibliographien/biblio.bib
+	xelatex -no-pdf -interaction=nonstopmode bib-creation 
+	biber bib-creation
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
 	biber --output_format=bibtex --output_resolve bib-creation.bcf -O gt_tmp.bib
 	biber --tool --configfile=biber-tool-test.conf gt_tmp.bib -O gt.bib
+
+# two runs in order to get "also printed as ..." right
+gt.bib: ../../../Bibliographien/biblio.bib
+	xelatex -no-pdf -interaction=nonstopmode bib-creation 
+	bibtex bib-creation
+	xelatex -no-pdf -interaction=nonstopmode bib-creation 
+	$(bibtool) -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
+	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
+	\rm -r gt-tmp.bib
+
 
 PUB_FILE=stmue.bib
 
