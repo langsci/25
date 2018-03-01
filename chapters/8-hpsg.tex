@@ -32,7 +32,9 @@ Dahlloef2003a-u,% PETFSG-II.2
 MPR2002a-u,Penn2004a-u,% TRALE
 Mueller2007b,% Grammix
 Sato2008a-u,%
-Kaufmann2009a-u% Java
+Kaufmann2009a-u,% Java
+Slayden2012a-u,% agree http://moin.delph-in.net/AgreeTop
+Packard2015a-u% ACE http://moin.delph-in.net/AceTop
 }.\footnote{
 \citet{UBCCDDEEMMO-96a} and \citet{Bolc:Czuba:ea:96a-u} compare systems that were available or were
 developed at the beginnings of the 1990s. \citet{MelnikHandWritten}
@@ -62,7 +64,7 @@ Babel,Mueller99a,% Babel
 MK2000a,Crysmann2003b,Crysmann2005a-u,Crysmann2005c,%
 MuellerLehrbuch1,%
 KP2007a,KP2008a-u,Kaufmann2009a-u,Fokkens2011a}, 
-\item English\il{English} \citep*{CF2000a-u,FCS2000a,Flickinger2000a,Dahlloef2002a-u,Dahlloef2003a-u,dKM2003b,MdKM2003a,DKMM2004a-u}, 
+\item English\il{English} \citep*{CF2000a-u,FCS2000a,Flickinger2000a,Dahlloef2002a-u,Dahlloef2003a-u,dKM2003b,MdKM2003a,DKMM2004a-u,MuellerCurrentApproaches,MuellerLFGphrasal}, 
 \item Esperanto\il{Esperanto} \citep{Li96a-u},
 \item French\il{French} \citep*{Tseng2003b-u},
 \item Ga\il{Ga} \citep*{KDHB2007a,Hellan2007a-u},
@@ -73,7 +75,7 @@ KP2007a,KP2008a-u,Kaufmann2009a-u,Fokkens2011a},
 \item Hausa\il{Hausa} \citep{Crysmann2005b-u,Crysmann2009a-u,Crysmann2011a-u,Crysmann2012a-u,Crysmann2016a},
 \item Hebrew\il{Hebrew} \citep*{MelnikHandWritten,HMW2013a-u,AHMW2015a-u}, 
 \item Indonesian\il{Indonesian} \citep*{MBS2015a-u}
-\item Japanese\il{Japanese} \citep{Siegel2000a,SB2002a,BS2005a}, 
+\item Japanese\il{Japanese} \citep{Siegel2000a,SB2002a,BS2005a,SBB2016a}, 
 }
 \item Korean\il{Korean} \citep*{KY2003a-u,KY2004a-u,KY2006a,KY2009a-u,KSY2007a-u,SKBY2010a-u,KYSB2011a-u},
 \item Maltese\il{Maltese} \citep{MuellerMalteseSketch},
@@ -105,19 +107,21 @@ largest ever AI project in Germany. It was a machine translation project for spo
 domains of trip planning and appointment scheduling \citep{Wahlster2000a-ed-not-crossreferenced}.
 
 Currently there are two larger groups that are working on the development of grammars: the DELPH-IN consortium (Deep Linguistic Processing with HPSG)\footnote{
-  \url{http://www.delph-in.net/}. 13.11.2015.
-} and the network CoGETI\is{CoGETI} (Constraintbasierte Grammatik: Empirie, Theorie und Implementierung)\footnote{
-\url{http://wwwuser.gwdg.de/~cogeti/}. 13.11.2015. Supported by the DFG under the grant number HO3279/3-1.%
-}. 
+  \url{http://www.delph-in.net/}. 20.02.2018.
+} and the group that developed out of the network CoGETI\is{CoGETI} (Constraintbasierte Grammatik: Empirie, Theorie und
+Implementierung).
+%\footnote{
+%Supported by the DFG under the grant number HO3279/3-1.%
+%}. 
 Many of the grammar fragments that are listed above were developed by members of DELPH-IN and some
 were derived from the Grammar Matrix\is{Grammar Matrix} which was developed for the LKB to provide
 grammar writers with a typologically motivated initial grammar that corresponds to the properties of
 the language under development \citep*{BFO2002a-u}. The CoreGram project\is{CoreGram}\footnote{
-\url{http://hpsg.fu-berlin.de/Projects/CoreGram.html}. \mytoday.
-} is a similar project that is being run at the Freie Universität
-Berlin. It is developing grammars for German\il{German}, Danish\il{Danish},
+\url{https://hpsg.hu-berlin.de/Projects/CoreGram.html}. \mytoday.
+} is a similar project that was started at the Freie Universität Berlin and which is now being run
+at the Humboldt"=Universität zu Berlin. It is developing grammars for German\il{German}, Danish\il{Danish},
 Persian\il{Persian}, Maltese\il{Maltese}, Mandarin Chinese\il{Mandarin Chinese},
-Spanish\il{Spanish}, French\il{French} and Yiddish\il{Yiddish} that share a common core. Constraints
+Spanish\il{Spanish}, French\il{French}, Welsh\il{Welsh}, and Yiddish\il{Yiddish} that share a common core. Constraints
 that hold for all languages are represented in one place and used by all grammars. Furthermore there are constraints that
 hold for certain language classes and again they are represented together and used by the respective
 grammars. So while the Grammar Matrix is used to derive grammars that individual grammar writers can use, adapt and modify to suit
@@ -155,11 +159,12 @@ a word such as \emph{Grammatik} `grammar'.
 %\begin{figure}
 \ea
 Lexical item for the word \emph{Grammatik} `grammar':\\
-\ms[word]{
-phonology   & \phonliste{ Grammatik } \\[1mm]
-syntax-semantics & \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
+\onems[word]{
+phonology    \phonliste{ Grammatik } \\[1mm]
+syntax-semantics  \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
                                                                                                }\\[3mm]
-                                                                               subcat & \sliste{ Det[\textsc{case}~\ibox{1}] }\\[1mm]
+                                                                               spr & \sliste{ Det[\textsc{case}~\ibox{1}] }\\
+                                                                               \ldots\\
                                                                              } \\[10mm]
                                           content & \ldots \ms[grammatik]{ inst & X 
                                                                                     }
@@ -169,7 +174,7 @@ syntax-semantics & \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun
 %\vspace{-\baselineskip}
 %\end{figure}%
 One can see that this feature description contains information about the phonology, syntactic category and semantic content of the word
-\emph{Grammatik}. To keep things simple, the value of \textsc{phonology} (\phon) is mostly given as
+\emph{Grammatik} `grammar'. To keep things simple, the value of \textsc{phonology} (\phon) is mostly given as
 an orthographic representation. In fully fleshed-out
 theories, the \phonv is a complex structure that contains information about metrical grids\is{metrical grid} and weak or strong accents\is{accent}.
 See \citew{BK94b}, \citew{Orgun96a}, \citew{Hoehle99a-u}, \citew{Walther99a-u},
@@ -180,13 +185,17 @@ HPSG has adopted various insights from other theories and newer analyses have be
 Functor"=argument structures, the treatment of valence information and function
 composition\is{function composition} have been adopted from
 Categorial Grammar\indexcg. Function composition plays an important role in the analysis of verbal
-complexes in languages like German and Korean. The Immediate Dominance\is{dominance!immediate}/Linear Precedence\is{linear precedence}\is{ID/LP grammar} format
+complexes in languages like German and Korean\il{Korean}. The Immediate Dominance\is{dominance!immediate}/Linear Precedence\is{linear precedence}\is{ID/LP grammar} format
 (ID/LP format, see Section~\ref{sec-IDLP-intro}) as well as the Slash mechanism for long"=distance
 dependencies (see Section~\ref{sec-nld-gpsg}) both come from GPSG\indexgpsg. The analysis assumed
 here for verb position in German is inspired by the one that was developed in the framework of Government \& Binding\indexgb
-(see Section~\ref{sec-verb-position-gb}).
+(see Section~\ref{sec-verb-position-gb}). Starting in 1995, HPSG also incorporated insights from
+Construction Grammar\indexcxg (\citealt{Sag97a}, see also Section~\ref{sec-SBCG} on Sign"=Based Construction Grammar, which is a
+HPSG variant).
 
 \subsection{Representation of valence information}
+\label{sec-valence-hpsg}\label{Abschnitt-Spr}
+\label{Abschnitt-Arg-St}
 
 The\is{valence|(} phrase structure grammars\is{phrase structure grammar} discussed in Chapter~\ref{Kapitel-PSG} have the disadvantage that
 one requires a great number of different rules for the various valence types. (\mex{1}) shows some examples of this kind of rules and the corresponding
@@ -226,21 +235,29 @@ S $\to$ NP[\type{nom}], NP[\type{acc}], V[\type{nom\_acc}]
 Here, valence has been encoded twice. First, we have said something in the rules about what kind of elements can or must occur, and then we have stated
  in the lexicon which valence class the verb belongs to. In Section~\ref{Abschnitt-Einordnung-GPSG}, it was pointed out that morphological processes
  need to refer to valence information. Hence, it is desirable to remove redundant valence information from grammatical rules. For this reason, HPSG
- -- like Categorial Grammar --  includes descriptions of the arguments of a head in the lexical entry of that head. There is a feature with a list-value,
- the \subcatf, which contains descriptions of the objects that must combine with a head in order to yield a complete phrase. (\mex{1})
-  gives some examples for the verbs in (\ref{psg-valenz}):
+ -- like Categorial Grammar --  includes descriptions of the arguments of a head in the lexical
+ entry of that head. There are the features \textsc{specifier} (\spr\isfeat{spr}) and
+ \textsc{complements} (\comps\isfeat{comps}), whose values are lists containing descriptions of the
+ elements that must combine with a head in order to yield a complete phrase. (\mex{1}) gives some examples for the verbs in (\ref{psg-valenz}):
 \ea
 \begin{tabular}[t]{@{}lll}
-      Verb             & \subcat\\
-      \emph{schlafen} `to sleep' & \sliste{ NP[\type{nom}] }\\
+      verb             & \comps\\
+      \emph{schlafen} `to sleep'  & \sliste{ NP[\type{nom}] }\\
       \emph{erwarten} `to expect' & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
-      \emph{sprechen} `to speak' & \sliste{ NP[\type{nom}], PP[\type{über}] }\\
-      \emph{geben} `to give'    & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }\\
-      \emph{dienen} `to serve'   & \sliste{ NP[\type{nom}], NP[\type{dat}], PP[\type{mit}] }\\  
+      \emph{sprechen} `to speak'  & \sliste{ NP[\type{nom}], PP[\type{über}] }\\
+      \emph{geben}    `to give'   & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }\\
+      \emph{dienen}   `to serve'  & \sliste{ NP[\type{nom}], NP[\type{dat}], PP[\type{mit}] }\\  
       \end{tabular}
 \z
-\subcat\isfeat{subcat} is an abbreviation for subcategorization. It is often said that a head subcategorizes\is{subcategorization} for
+The table and the following figures use \comps as a valence feature. Former versions of HPSG \citep{ps} used the
+feature \subcat instead, which stands for subcategorization. It is often said that a head subcategorizes\is{subcategorization} for
 certain arguments. See page~\pageref{Seite-Subkategoriesierung} for more on the term \emph{subcategorization}.\is{valence|)}
+Depending on the language, subjects are treated differently from other arguments (see\todostefan{add references and phenomena} for example \citew[\page26--28]{Chomsky81a}, \citew[\page33]{Hoekstra87a}). The
+subject in SVO languages like English has properties that differ from those of objects. For example,
+the subject is said to be an extraction island. This is not
+the case for SOV languages like German and hence it is usually assumed that all arguments of finite
+verbs are treated alike (\citealp{Pollard90a-Eng}; \citealp[\page 376]{Eisenberg94b}). Therefore the subject is included in the lists above. I will return to
+English shortly.
 
 Figure~\vref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analysis for (\mex{1}b) is in Figure~\vref{abb-Peter-Maria-erwartet}:
 
@@ -260,25 +277,26 @@ Figure~\vref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analy
 \centering
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
+[V{[\comps \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
 		[Peter;Peter]]
-	[V{[\subcat \sliste{ \ibox{1} }]}
+	[V{[\comps \sliste{ \ibox{1} }]}
 		[schläft;sleeps]]]
 \end{forest}
 \caption{\label{abb-peter-schlaeft}Analysis of \emph{Peter schläft} `Peter sleeps' in \emph{dass
     Peter schläft} `that Peter sleeps'}
 \end{figure}%
-\addlines
-In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \subcatl is combined with its head in each
-local tree. The elements that are combined with the selecting head are then no longer present in the \subcatl of the mother node.
-V[\subcat \sliste{ }] corresponds to a complete phrase (VP or S). The boxes with numbers show the structure sharing (see Section~\ref{sec-strukturteilung}).
+%\addlines
+In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \compsl is combined with its head in each
+local tree. The elements that are combined with the selecting head are then no longer present in the \compsl of the mother node.
+V[\comps \sliste{ }] corresponds to a complete phrase (VP or S). The boxes with numbers show the structure sharing (see Section~\ref{sec-strukturteilung}).
 Structure sharing\is{structure sharing} is the most important means of expression in HPSG. It plays a central role for phenomena such as valence, agreement
 and long"=distance dependencies. In the examples above, \iboxt{1} indicates that the description in
-the \subcatl is identical to another daughter in the tree.
+the \compsl is identical to another daughter in the tree.
 The descriptions contained in valence lists are usually partial descriptions, that is, not all properties of the argument are exhaustively described. Therefore, it is
 possible that a verb such as \emph{schläft} `sleeps' can be combined with various kinds of linguistic objects: the subject can be a pronoun, a proper name
-or a complex noun phrase, it only matters that the linguistic object in question has an empty \subcatl and bears the correct case.\footnote{
+or a complex noun phrase, it only matters that the linguistic object in question is complete (has an
+empty \sprl and an empty \compsl) and bears the correct case.\footnote{
 Furthermore, it must agree with the verb. This is not shown here.
 }
 %
@@ -286,17 +304,86 @@ Furthermore, it must agree with the verb. This is not shown here.
 \centerline{%
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
+[V{[\comps \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
 		[Peter;Peter]]
-	[V{[\subcat \sliste{ \ibox{1} }]}
+	[V{[\comps \sliste{ \ibox{1} }]}
 		[{\ibox{2} NP[\type{acc}]}
 			[Maria;Maria]]
-		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
 			[erwartet;expects]]]]
 \end{forest}}
 \caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter expects Maria.'}
 \end{figure}%
+
+As mentioned above researchers working on German usually assume that subjects and objects should be
+treated similarly since they do not differ in fundamental ways as they do in SVO languages like
+English. Hence, for German, all arguments are represented in the same list. However, for
+SVO languages it proved useful to assume a special valence feature for preverbal dependents
+(\citealt{Borsley87}; \citealt[Chapter~9]{ps2}). The
+arguments can be split in subjects, that are represented in the \sprl, and other arguments
+(complements), which are represented in the \compsl. The equivalent of our table for German is given
+as (\mex{1}):
+\ea
+\label{ex-spr-comps-arg-st}
+\begin{tabular}[t]{@{}llll}
+      verb          & \spr                      & \comps                                     & \argst\\
+      \emph{sleep}  & \sliste{ NP[\type{nom}] } & \sliste{}                                  & \sliste{ NP[\type{nom}] }\\
+      \emph{expect} & \sliste{ NP[\type{nom}] } & \sliste{ NP[\type{acc}] }                  & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+      \emph{speak}  & \sliste{ NP[\type{nom}] } & \sliste{ PP[\type{about}] }                & \sliste{ NP[\type{nom}], PP[\type{about}] }\\
+      \emph{give}   & \sliste{ NP[\type{nom}] } & \sliste{ NP[\type{acc}], NP[\type{acc}] }  & \sliste{ NP[\type{nom}], NP[\type{acc}], NP[\type{acc}] }\\
+      \emph{serve}  & \sliste{ NP[\type{nom}] } & \sliste{ NP[\type{acc}], PP[\type{with}] } & \sliste{ NP[\type{nom}], NP[\type{acc}], PP[\type{with}] }\\  
+      \end{tabular}
+\z
+The analysis of (\mex{1}) is shown in Figure~\ref{abb-kim-talks-about-the-summer}.
+\ea
+Kim talks about the summer.
+\z
+\begin{figure}
+\centerline{%
+\begin{forest}
+sm edges
+[V{\feattab{\spr \eliste,\\
+            \comps \eliste}}
+  [\ibox{1} NP [Kim]]
+  [V{\feattab{\spr \sliste{ \ibox{1} },\\
+              \comps \eliste}}
+    [V{\feattab{\spr \sliste{ \ibox{1} },\\
+                \comps \sliste{ \ibox{2} }}}
+      [talks]]
+    [\ibox{2} P{\feattab{\spr \sliste{ },\\
+                \comps \sliste{ }}}
+      [P{\feattab{\spr \sliste{ },\\
+                \comps \sliste{ \ibox{3} }}} [about]]
+      [\ibox{3} N{\feattab{\spr \sliste{ },\\
+                     \comps \sliste{ }}}
+        [\ibox{4} Det [the]]
+        [N{\feattab{\spr \sliste{ \ibox{4} },\\
+                     \comps \sliste{ }}} [summer] ]]]]]
+\end{forest}}
+\caption{\label{abb-kim-talks-about-the-summer}Analysis of \emph{Kim talks about the summer.}}
+\end{figure}%
+A head is combined with all its complements first and then with its specifier.\footnote{%
+  I present the analyses in a bottom-up way here but it is very important that HPSG does not make
+  any statements about the order in which linguistic objects are combined. This is crucial when it
+  comes to psycholinguistic plausibility of linguistic theories. See Chapter~\ref{chap-competence-performance} for discussion.%
+} So, \emph{talks} is combined with \emph{about the summer} and the resulting VP is combined with
+its subject \emph{Kim}. The \sprl works like the \compsl: if an element is combined with its head,
+it is not contained in the \sprl of the mother. Figure~\ref{abb-kim-talks-about-the-summer} also
+shows the analysis of an NP: nouns select a determiner via \spr. The combination of \emph{the} and
+\emph{summer} is complete as far as specifiers are concerned and hence the \sprl at the node for
+\emph{the summer} is the empty list. Nominal elements with empty \sprl and \compsl will be
+abbreviated as NP. Similarly fully saturated linguistic objects with Ps as heads are PPs.
+
+(\ref{ex-spr-comps-arg-st}) provides the \spr and \compsvs of some example verbs. In addition it
+also provides the \argstv. \argst\isfeat{arg-st} stands for \emph{argument structure} and is a list of all
+arguments of a head. This argument structure list plays a crucial role in establishing the
+connection between syntax (valence) and semantics. The term for this is
+\emph{linking}\is{linking}. We will deal with linking in more detail in Section~\ref{Abschnitt-HPSG-Semantik}.
+
+After this brief discussion of English constituent structure, I will turn to German again and ignore
+the \spr feature. The value of \spr in all the verbal structures that are discussed in the following is the
+empty list.
 
 \subsection{Representation of constituent structure}
 \label{sec-HPSG-constituent-structure}
@@ -338,7 +425,7 @@ we would have three non"=head daughters.\isfeat{non-head-dtrs} It also makes sen
 branching structures without heads (see \citealp[Chapter~11]{MuellerLehrbuch1} for an analysis of
 relative clauses). In such structures we would also have more than one non"=head daughter, namely exactly two.
 
-Before it is shown how it is ensured that only those head"=argument structures are licensed in which the argument matches the requirements of the head, I will
+Before it is shown how it is ensured that only those head"=complement structures are licensed in which the argument matches the requirements of the head, I will
 present the general structure of feature descriptions in HPSG. The structure presented at the start of this chapter is repeated in (\mex{1}) with all the details
 relevant to the present discussion:
 \ea
@@ -347,7 +434,8 @@ relevant to the present discussion:
 phon   & \phonliste{ Grammatik } \\[1mm]
 synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \ibox{1}
                                                                       }\\[3mm]
-                                                     subcat & \sliste{ Det[\textsc{case}~\ibox{1}] }\\[1pt] 
+                                                     spr & \sliste{ Det[\textsc{case}~\ibox{1}] }\\
+                                                     comps & \eliste\\[1pt]
                                                     } \\[6mm]
                                 cont & \ms[mrs]{
                                        ind & \ibox{2} \ms{ per & third\\
@@ -378,7 +466,7 @@ abbreviated to \loc) as well as information important for long"=distance depende
 information encompasses information that determines the central characteristics of a phrase, that
 is, the head information. This is represented under \head. Further details of this will be discussed in
  Section~\ref{Abschnitt-Kopfeigenschaften}. Among other things, the part of speech of a 
- linguistic object belongs to the head properties of a phrase. As well as \head, \subcat belongs to the information contained inside \cat. The semantic content
+ linguistic object belongs to the head properties of a phrase. As well as \head, \spr and \comps belongs to the information contained inside \cat. The semantic content
  of a sign is present under \cont. The type of the \contv is \type{mrs}, which stands for \emph{Minimal Recursion
 Semantics}\indexmrs \citep*{CFPS2005a}. An MRS structure is comprised of an index and a list of
 relations which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
@@ -426,18 +514,18 @@ If valence and the part of speech information were not represented in one common
 have to state separately that utterances such as (\mex{-1}) require that both
 conjuncts have the same valence and part of speech.\is{coordination|)}
 
-After this general introduction of the feature geometry that is assumed here, we can now turn to the head"=argument schema\is{schema!head"=argument}:
-\begin{schema}[Head-Argument Schema (binary branching, preliminary version)]
+After this general introduction of the feature geometry that is assumed here, we can now turn to the Head"=Complement Schema\is{schema!Head"=Complement}:
+\begin{schema}[Head-Complement Schema (binary branching, preliminary version)]
 \label{schema-bin-prel}
-~\\
-\type{head-argument-phrase}\istype{head"=argument"=phrase} \impl\\
+~\\[-8pt]
+\type{head-complement-phrase}\istype{head"=complement"=phrase} \impl\\
 \onems{
-      synsem$|$loc$|$cat$|$subcat \ibox{1} \\
-      head-dtr$|$synsem$|$loc$|$cat$|$subcat \ibox{1} $\oplus$ \sliste{ \ibox{2} } \\
+      synsem$|$loc$|$cat$|$comps \ibox{1} \\
+      head-dtr$|$synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } \\
       non-head-dtrs \sliste{ [ \synsem \ibox{2} ] }
       }
 \end{schema}
-Schema~\ref{schema-bin-prel} states the properties a linguistic object of the type \type{head"=argument"=phrase} must have.
+Schema~\ref{schema-bin-prel} states the properties a linguistic object of the type \type{head"=complement"=phrase} must have.
 The arrow\is{\impl} in Schema~\ref{schema-bin-prel} stands for a logical implication\is{implication} and not for the arrow of rewrite rules
 as we know it from phrase structure grammars. `$\oplus$'\is{$\oplus$}
 (\emph{append}\is{relation!\emph{append}}) is a relation which combines two lists. (\mex{1}) shows 
@@ -452,17 +540,17 @@ possible splits of a list that contains two elements:
 The list \phonliste{ x, y } can be subdivided into two lists each containing one element, or alternatively into the empty list
 and \phonliste{ x, y }.
 
-Schema~\ref{schema-bin-prel} can be read as follows: if an object is of the type \type{head"=argument"=phrase} then it must have the properties
+Schema~\ref{schema-bin-prel} can be read as follows: if an object is of the type \type{head"=complement"=phrase} then it must have the properties
 on the right"=hand side of the implication. In concrete terms, this means that these objects always have a valence list which corresponds to 
 \iboxt{1}, that they have a head daughter with a valence list that can be divided into two sublists  \ibox{1} and \sliste{ \ibox{2} } and
 also that they have a non"=head daughter whose syntactic and semantic properties (\synsemv) are compatible with the last element of the
-\subcatl of the head daughter \iboxb{2}. (\mex{1}) provides the corresponding feature description for the example in (\ref{Bsp-Peter-schlaeft}). 
+\compsl of the head daughter \iboxb{2}. (\mex{1}) provides the corresponding feature description for the example in (\ref{Bsp-Peter-schlaeft}). 
 \ea
-\onems[head-argument-phrase]{
+\onems[head-complement-phrase]{
 phon \phonliste{ Peter schläft }\\
-synsem$|$loc$|$cat$|$subcat \eliste\\
+synsem$|$loc$|$cat$|$comps \eliste\\
 head-dtr \onems{ phon \phonliste{ schläft }\\
-                 synsem$|$loc$|$cat$|$subcat \sliste{ \ibox{1} NP[\type{nom}] }
+                 synsem$|$loc$|$cat$|$comps \sliste{ \ibox{1} NP[\type{nom}] }
                }\\
 non-head-dtrs \sliste{ \onems{ phon \phonliste{ Peter }\\
                                \synsem \ibox{1}
@@ -471,15 +559,15 @@ non-head-dtrs \sliste{ \onems{ phon \phonliste{ Peter }\\
 \z
 % for the example on the next page
 %\addlines
-NP[\type{nom}] is an abbreviation for a complex feature description. Schema~\ref{schema-bin-prel} divides the \subcatl of the head daughter into
-a single"=element list and what is left. Since \emph{schläft} `sleeps' only has one element in its \subcatl, what remains is the empty list.
-This remainder is also the \subcatv of the mother.
+NP[\type{nom}] is an abbreviation for a complex feature description. Schema~\ref{schema-bin-prel} divides the \compsl of the head daughter into
+a single"=element list and what is left. Since \emph{schläft} `sleeps' only has one element in its \compsl, what remains is the empty list.
+This remainder is also the \compsv of the mother.
 
 \subsection{Linearization rules}
 \label{Abschnitt-LP-Regeln-HPSG}
 
 Dominance schemata do not say anything\indexgpsg about the order of the daughters. As in GPSG, linearization rules are specified separately.
-Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, argument\is{argument},
+Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, complement\is{complement},
 adjunct\is{adjunct}, \ldots) or both.
 %% Does not fit the introductionary level here.
 %% \footnote{
@@ -488,10 +576,10 @@ adjunct\is{adjunct}, \ldots) or both.
 %%   constituency was primary and whether one could dispense with one of these concepts. See
 %%   Section~\ref{sec-dependency-vs-constituency} for further discussion.
 %% } 
-If we assume a feature \initial\isfeat{initial} for all heads, then heads which precede their arguments would have the \initialv `$+$' and heads following their
-  arguments would have the value `--'. The linearization rules in (\mex{1}) ensure that ungrammatical orders such as (\mex{2}b,d) are
+If we assume a feature \initial\isfeat{initial} for all heads, then heads which precede their complements would have the \initialv `$+$' and heads following their
+  complements would have the value `--'. The linearization rules in (\mex{1}) ensure that ungrammatical orders such as (\mex{2}b,d) are
   ruled out.\footnote{
-  Noun phrases pose a problem for (\mex{1}): determiners have been treated as argument until now and were included in the \subcatl of the
+  Noun phrases pose a problem for (\mex{1}): determiners have been treated as argument until now and were included in the \compsl of the
   head noun. Determiners occur to the left of noun, whereas all other arguments of the noun are to the right. This problem can be solved either
   by refining linearization rules \citep[\page
   164--165]{Mueller99a} or by introducing a special valence feature for determiners
@@ -501,9 +589,9 @@ If we assume a feature \initial\isfeat{initial} for all heads, then heads which 
 
 \eal
 \ex\label{lp-ini-arg} 
-Head[\initial$+$] $<$ Argument
+Head[\initial$+$] $<$ Complement
 \ex 
-Argument $<$ Head[\initial --]
+Complement $<$ Head[\initial --]
 \zl
 Prepositions have an \initialv `$+$' and therefore have to precede arguments. Verbs in final position bear the value `$-$' and have to follow
 their arguments.
@@ -581,16 +669,16 @@ this on the basis of the finite verb \emph{gibt} `gives'.
 \centerline{
 \begin{forest}
 sm edges, for tree={l+=\baselineskip}
-[V{[\type{fin}, \subcat \eliste]}, name=fin1
+[V{[\type{fin}, \comps \eliste]}, name=fin1
 	[\ibox{1} NP{[\type{nom}]}
 		[er;he]]
-	[V{[\type{fin}, \subcat \sliste{ \ibox{1} }]}, name=fin2
+	[V{[\type{fin}, \comps \sliste{ \ibox{1} }]}, name=fin2
 		[\ibox{2} NP{[\textit{dat}]}
 			[dem Mann;the man,roof]]
-		[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2} }]}, name=fin3
+		[V{[\type{fin}, \comps \sliste{ \iboxsp{1}, \ibox{2} }]}, name=fin3
 			[\ibox{3} NP{[\textit{acc}]}
 				[das Buch;the book,roof]]
-			[V{[\type{fin}, \subcat \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
+			[V{[\type{fin}, \comps \sliste{ \iboxsp{1}, \iboxsp{2}, \ibox{3} }]}, name=fin4
 				[gibt;gives]]]]]	
 tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\offset,0)$);
       \draw[<->] ($(fin2.south west)+(\offsetup,0)$) to ($(fin3.north west)+(\offset,0)$);
@@ -609,7 +697,7 @@ for \emph{gibt} `gives':
 \onems[word]{ 
      phon    \phonliste{ gibt }\\
      synsem$|$loc$|$cat \ms{ head   & \ms[verb]{ vform & fin} \\
-                             subcat & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
+                             comps & \sliste{ NP[\type{nom}], NP[\type{dat}], NP[\type{acc}] }
                            }
 }
 \zs
@@ -628,19 +716,19 @@ explicit.
 \begin{forest}
 sm edges
 [\ms{head & \ibox{1}\\
-     subcat & \sliste{ }
+     comps & \sliste{ }
      }
 	[{\ibox{2} NP{[\type{nom}]}}
 		[er;he]]
 	[\ms{
              head & \ibox{1}\\
-             subcat & \sliste{ \ibox{2} }
+             comps & \sliste{ \ibox{2} }
              }
 		[\ibox{3} NP{[\textit{dat}]}
 			[dem Mann;the man, roof]]
 		[\ms{
                                                                                    head & \ibox{1}\\
-                                                                                   subcat & \sliste{ \ibox{2}, \ibox{3} }
+                                                                                   comps & \sliste{ \iboxsp{2}, \ibox{3} }
                                                                                     }
 			[\ibox{4} NP{[\textit{acc}]}
 				[das Buch;the book, roof]]
@@ -648,7 +736,7 @@ sm edges
                                                                                    head & \ibox{1} \ms[verb]{
                                                                                                   vform & fin
                                                                                                   }\\
-                                                                                   subcat & \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }
+                                                                                   comps & \sliste{ \iboxsp{2}, \iboxsp{3}, \ibox{4} }
                                                                                     }
 				[gibt;gives]]]]]	
 \end{forest}
@@ -665,7 +753,7 @@ Up to now, we have seen one example of a dominance schema and more will follow i
 as for the binding off of long"=distance dependencies. The Head Feature Principle is a general
 principle which must be met by all structures licensed by these schemata. As mentioned above, it must be met by all structures with a head. Formally, this can be captured by categorizing syntactic structures into those with and those without
 heads and assigning the type \type{headed"=phrase} to those with a head.
-The type \type{head"=argument"=phrase} -- the type which the description in
+The type \type{head"=complement"=phrase} -- the type which the description in
 Schema~\ref{schema-bin-prel} on page~\pageref{schema-bin-prel} has -- is a subtype
 of \type{headed"=phrase}. Objects of a certain type x always have all properties that objects
 have that are supertypes of x. Recall the example from Section~\ref{sec-formalismus-typen}:
@@ -694,7 +782,7 @@ typehierarchy
   [\type{word}]
   [\type{phrase} 
     [\type{non-headed-phrase}]
-    [\type{headed-phrase} [\type{head-argument-phrase}]]]]
+    [\type{headed-phrase} [\type{head-complement-phrase}]]]]
 \end{forest}
 \caption{\label{fig-type-sign}Type hierarchy for \type{sign}: all subtypes of \type{headed"=phrase} inherit constraints}
 \end{figure}%
@@ -702,22 +790,22 @@ typehierarchy
 \noindent
 \type{word} and \type{phrase} are subclasses of linguistic signs. Phrases can be divided into phrases with heads (\type{headed"=phrase})
 and those without (\type{non"=headed"=phrase}). There are also subtypes for phrases of type \type{non"=headed"=phrase} and \type{headed"=phrase}.
-We have already discussed \type{head"=argument"=phrase}, and other subtypes of \type{headed"=phrase} will be discussed in the later sections.
+We have already discussed \type{head"=complement"=phrase}, and other subtypes of \type{headed"=phrase} will be discussed in the later sections.
 As well as \type{word} and \type{phrase}, there are the types \type{root} and \type{stem}, which play an important role for the structure of the
 lexicon and the morphological\is{morphology} component. Due to space considerations, it is not possible to further discuss these types here,
 but see Chapter~\ref{Abschnitt-UG-mit-Hierarchie}.
 
-The description in (\mex{1}) shows the Head"=Argument Schema from page~\pageref{schema-bin-prel} together with the restrictions that the type
-\type{head"=argument"=phrase} inherits from \type{headed"=phrase}.
+The description in (\mex{1}) shows the Head"=Complement Schema from page~\pageref{schema-bin-prel} together with the restrictions that the type
+\type{head"=complement"=phrase} inherits from \type{headed"=phrase}.
 \eas
 \label{head-arg-schema-hfp}
-Head-Argument Schema + Head Feature Principle:\\
-\onems[head-argument-phrase~]{
+Head-Complement Schema + Head Feature Principle:\\
+\onems[head-complement-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2}
+                          comps & \ibox{2}
                         }\\
 head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                   comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
@@ -727,22 +815,22 @@ As well as valence information, the head information is specified in (\mex{1}) a
 ensures the projection of features: the head value of the entire structure \iboxb{1} corresponds to
 the head value of the verb \emph{gibt} `gives'.
 \ea
-\onems[head-argument-phrase~]{
+\onems[head-complement-phrase~]{
       phon  \phonliste{ das Buch gibt }\\[1mm]
       synsem$|$loc$|$cat \ms{ head & \ibox{1}\\
-                              subcat & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }\\[1pt]
+                              comps & \ibox{2} \sliste{ NP[\type{nom}], NP[\type{dat}] }\\[1pt]
                             }\\
       head-dtr \onems[word]{ phon \phonliste{ gibt }\\
                              synsem$|$loc$|$cat \ms{ head & \ibox{1} \ms[verb]{vform & fin
                                                                             }\\
-                                                     subcat & \ibox{2}  $\oplus$ \sliste{ \ibox{3} }
+                                                     comps & \ibox{2}  $\oplus$ \sliste{ \ibox{3} }
                                                    }
                        } \\
       non-head-dtrs \sliste{ \onems{ 
                                         phon \phonliste{ das Buch }\\
                                         synsem \ibox{3} \onems{ loc$|$cat \ms{ head  & \ms[noun]{ cas & acc
                                                                                                 } \\
-                                                                               subcat &  \eliste
+                                                                               comps &  \eliste
                                                                              }
                                                               }\\
                                         head-dtr \ldots\\
@@ -761,7 +849,8 @@ described by (\mex{1}):
 \ms{
 synsem$|$loc$|$cat \ms{ head & \ms[verb]{vform & fin
                                        }\\
-                        subcat & \eliste\\
+                        spr   & \eliste\\
+                        comps & \eliste\\
                       }
 }
 \z
@@ -860,7 +949,7 @@ head.\is{argument}
 \ms
 { cat & \ms{ head & \ms[verb]
                      { vform & fin } \\
-             subcat & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
+             arg-st & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
            } \\
   cont &  \ms[mrs]
            { ind & \ibox{4} event \\
@@ -871,6 +960,18 @@ head.\is{argument}
            }
 }
 \zs
+The list that contains all the arguments of a head is called \emph{argument structure list} and it
+is represented as value of the \argstf. This list plays a very important role in HPSG grammars: case
+is assigned there, the Binding Theory operates on \argst and the linking between syntax and
+semantics takes place on \argst as well. 
+
+For finite verbs, the value of \argst is identical to the
+value of \comps in German.\todostefan{Oneida} As was explained in Section~\ref{sec-valence-hpsg}, the first element of the \argstl is the
+subject in languages like English and it is represented in the \sprl (\citealt*[Section 4.3, 7.3.1]{SWB2003a}; \citealt{MuellerGermanic}). All other elements from \argst
+are contained in the \compsl. So there are language specific ways to represent the valence but there is one
+common representation that is the same for all argument structure representations. This makes it
+possible to capture cross-linguistic generalizations.
+
 Since we use general terms such as \textsc{agent} and \textsc{patient} for argument roles, it is possible to state generalizations about valence classes and
 the realization of argument roles. For example, one can divide verbs into verbs taking an agent, verbs with an agent and theme, verbs with agent and patient etc.
 These various valence/linking patterns can be represented in type hierarchies\is{type hierarchy} and
@@ -880,7 +981,7 @@ and goal takes the form of (\mex{1}):
 \ea
 \label{ex-agens-theme-goal-linking}
 \onems
-{ cat$|$subcat \sliste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
+{ cat$|$arg-st \sliste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
   cont  \ms[mrs]
            { ind & \ibox{4} event \\
              rels & \sliste{ \ms[agent-goal-theme-rel~~]{ event & \ibox{4} \\
@@ -919,7 +1020,7 @@ requirements are fulfilled by MRS. Due to space considerations, we cannot go int
 \subsection{Adjuncts}
 \label{Abschnitt-HPSG-Adjunkte}\label{sec-adjuncts-hpsg}
 
-Analogous\is{adjunct|(} to the selection of arguments by heads via \subcat, adjuncts can also select their heads using a feature (\textsc{modified})\isfeat{mod}.
+Analogous\is{adjunct|(} to the selection of arguments by heads via \comps, adjuncts can also select their heads using a feature (\textsc{modified})\isfeat{mod}.
 Adjectives, prepositional phrases that modify nouns, and relative clauses select an almost complete nominal projection, that is, a noun that only still needs to
 be combined with a determiner to yield a complete NP. (\mex{1}) shows a description of the respective \type{synsem}
 object. The symbol \nbar, which is familiar from \xbart (see Section~\ref{sec-xbar}), is used as abbreviation
@@ -929,22 +1030,26 @@ for this feature description.
 AVM that is abbreviated as \nbar:\\*
 \ms{
   cat \ms{ head   & noun\\
-           subcat & \sliste{ Det }\\
+           spr & \sliste{ Det }\\
+           comps & \sliste{}\\
   }
 }
 \z
-(\mex{1}) shows part of the lexical item for \emph{interessantes} `interesting':
+(\mex{1}) shows part of the lexical item for \emph{interessantes} `interesting':\footnote{
+  In what follows, I am also omitting the \sprf, whose value would be the empty list.%
+}
 \eas\is{adjective}
 \label{le-interessantes}
 \catv for \emph{interessantes} `interesting':\\
 \ms{ head & \ms[adj]{ %prd & $-$ \\
                         mod &  \nbar~~
                       } \\
-              subcat & \sliste{}
+              comps & \sliste{}
 }
 \zs
-\emph{interessantes} is an adjective that does not take any arguments and therefore has an empty \subcatl. Adjectives such as \emph{treu} `loyal' would
-have a dative NP in their \subcatl.
+\emph{interessantes} is an adjective that does not take any arguments and therefore has an empty
+\compsl.
+Adjectives such as \emph{treu} `loyal' have a dative NP in their \compsl.
 \ea
 \gll ein dem König treues Mädchen\\
 	a the.\dat{} king loyal girl\\
@@ -957,23 +1062,23 @@ The \catv is given in (\mex{1}):
 \ms{ head & \ms[adj]{ %prd & $-$ \\
                         mod &  \nbar~~
                       } \\
-              subcat & \sliste{ NP[\type{dat}] }
+              comps & \sliste{ NP[\type{dat}] }
 }
 \z
 \emph{dem König treues} `loyal to the king' forms an adjective phrase, which modifies \emph{Mädchen}.
 
-Unlike the selectional feature \subcat that belongs to the features under \textsc{cat}, \textsc{mod} is a head feature.
+Unlike the selectional feature \comps that belongs to the features under \textsc{cat}, \textsc{mod} is a head feature.
 The reason for this is that the feature that selects the modifying head has to be present on the maximal projection of the adjunct. The  \nbar{}-modifying property of the adjective
 phrase \emph{dem König treues} `loyal to the king' has to be included in the representation of the entire AP just as it is present in the lexical entry for adjectives in (\ref{le-interessantes})
 at the lexical level. The adjectival phrase \emph{dem König treues} has the same syntactic
 properties as the basic adjective \emph{interessantes} `interesting':
 \ea
 \label{avm-dem-koenig-treues}
-\catv für \emph{dem König treues}:\\
+\catv für \emph{dem König treues} `loyal to the king':\\
 \ms{ head & \ms[adj]{ %prd & $-$ \\
                         mod &  \nbar~~
                       } \\
-              subcat & \eliste{ }
+              comps & \eliste{ }
 }
 \z
 Since \textsc{mod} is a head feature, the Head Feature Principle (see page~\pageref{prinzip-hfp}) ensures that the \modv of the entire projection is identical
@@ -1007,12 +1112,13 @@ Head"=adjunct structures are licensed by the Schema~\ref{ha-schema-prel}\is{sche
 %\begin{samepage}
 \begin{schema}[Head-Adjunct Schema (preliminary version)]
 \label{ha-schema-prel}
-~\\
+~\\[-8pt]
 \type{head"=adjunct"=phrase} \impl\\
 \onems{ 
 head"=dtr$|$synsem \ibox{1} \\[2mm]
 non-head"=dtrs \sliste{ \onems{ synsem$|$loc$|$cat \ms{ head$|$mod & \ibox{1} \\
-                                                       subcat     & \sliste{}
+                                                        spr      & \sliste{}\\
+                                                       comps     & \sliste{}
                                                      }
                            } }
 }
@@ -1020,7 +1126,7 @@ non-head"=dtrs \sliste{ \onems{ synsem$|$loc$|$cat \ms{ head$|$mod & \ibox{1} \\
 %\end{samepage}
 %\vspace{-\baselineskip}\end{figure}%
 The value of the selectional feature on the adjunct \iboxb{1} is identified with the \synsemv of the head daughter, thereby ensuring that the head
-daughter has the properties specified by the adjunct. The  \subcatv of the non"=head daughter is the
+daughter has the properties specified by the adjunct. The  \compsv of the non"=head daughter is the
 empty list, which is why only completely saturated adjuncts are allowed in head"=adjunct structures. Phrases such as (\mex{1}b) are therefore correctly ruled out:
 \eal
 \ex[]{
@@ -1040,7 +1146,7 @@ Example (\mex{0}a) requires some further explanation. The preposition \emph{in} 
 \ms{ head & \ms[prep]{
                    mod & \nbar~~
                    } \\
-           subcat & \sliste{ NP[\type{dat}] }
+           comps & \sliste{ NP[\type{dat}] }
 }
 \z
 After combining \emph{in} with the nominal phrase \emph{der Speisekammer} `the pantry' one gets:
@@ -1051,7 +1157,7 @@ After combining \emph{in} with the nominal phrase \emph{der Speisekammer} `the p
 head & \ms[prep]{
        mod & \nbar~~
        } \\
-subcat & \sliste{ }
+comps & \sliste{ }
 }
 \zs
 
@@ -1091,13 +1197,13 @@ Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           subcat & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                           arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                          } 
 } $\mapsto$ \\
 \flushright\onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part } \\
-                          subcat & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                          arg-st & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                         }
 }
 \z
@@ -1165,7 +1271,7 @@ Input \stem{schlag} `beat' :\\
 \onems{
 phon \phonliste{ schlag }\\[2mm]
 synsem$|$loc \ms{ cat & \ms{ head   & verb\\
-                             subcat & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
+                             arg-st & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
                            }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
@@ -1188,7 +1294,7 @@ Output \emph{geschlagen} `beaten':\\
 phon \phonliste{ geschlagen }\\[2mm]
 synsem$|$loc \ms{ cat  & \ms{ head   & \ms[verb]{ vform & passive-part
                                                 } \\
-                              subcat & \sliste{ NP[\type{nom}]\ind{2} } \\
+                              arg-st & \sliste{ NP[\type{nom}]\ind{2} } \\
                             }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
@@ -1209,25 +1315,25 @@ correctly assigned to the patient role.
 
 As \citet{Meurers2001a} has shown, lexical rules can also be captured with feature
 descriptions.\label{pageref-lr-mit-dtr} (\mex{1}) shows the feature description representation of (\ref{pass-lr-mlr}).
-\begin{figure}
+%\begin{figure}
 \ea
 \label{passiv-lr-mit-dtr}
 \onems[acc-passive-lexical-rule]{
      phon $f\iboxb{1}$\\
      synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part
                                        } \\
-                             subcat & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
+                             arg-st & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
                            } \\
 lex-dtr \onems[stem]{
         phon \ibox{1}\\
         synsem$|$loc$|$cat~ \ms{ head & verb \\ 
-                  subcat & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
+                  arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
                 }
      }
 }
 \z
-\vspace{-\baselineskip}
-\end{figure}%
+%\vspace{-\baselineskip}
+%\end{figure}%
 What is on the left"=hand side of the rule in (\ref{pass-lr-mlr}), is contained in the value of \textsc{lex-dtr}\isfeat{lex-dtr} in (\mex{0}).
 Since this kind of lexical rule is fully integrated into the formalism, feature structures corresponding to these lexical rules also have their own
 type. If the result of the application of a given rule is an inflected word, then the type of the lexical rule (\type{acc-passive-lexical-rule} in our example)
@@ -1256,11 +1362,10 @@ environment. This is handled by the Case Principle:\footnote{%
 	and can therefore also explain the case systems of the languages discussed in their work, notably the complicated
 	case system of Icelandic.\is{Icelandic}
 }
-\begin{principle-break}[\hypertarget{case-p}{Case Principle}]
+\begin{principle-break}[\hypertarget{case-p}{Case Principle (simplified)}]
 \label{case-p}
 \begin{itemize}
-\item In a list containing the subject as well as complements of a verbal head, the first element with
-structural case receives nominative.
+\item The first element with structural case in the argument structure list receives nominative.
 \item All other elements in the list with structural case receive accusative.
 \item In nominal environments, elements with structural case are assigned genitive\is{case!genitive}.
 \end{itemize}
@@ -1271,10 +1376,10 @@ structural case receives nominative.
 \ea
 \label{ex-verben-active}
 \begin{tabular}[t]{@{}l@{~}l@{~}l}
-a. & \emph{schläft} `sleeps':       & \subcat \sliste{ NP[\type{str}]$_j$ }\\
-b. & \emph{unterstützt} `supports': & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{str}]$_k$ }\\
-c. & \emph{hilft} `helps':          & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$ }\\
-d. & \emph{schenkt} `gives':        & \subcat \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
+a. & \emph{schläft} `sleeps':       & \argst \sliste{ NP[\type{str}]$_j$ }\\[2pt]
+b. & \emph{unterstützt} `supports': & \argst \sliste{ NP[\type{str}]$_j$, NP[\type{str}]$_k$ }\\[2pt]
+c. & \emph{hilft} `helps':          & \argst \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$ }\\[2pt]
+d. & \emph{schenkt} `gives':        & \argst \sliste{ NP[\type{str}]$_j$, NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
 \emph{str} stands for \emph{structural} and \emph{ldat} for lexical dative. 
@@ -1316,33 +1421,34 @@ Lexical rule for personal and impersonal passive (simplified):\\
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           subcat & \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
+                           arg-st & \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
                          } 
 } $\mapsto$ \\
 \flushright\onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat \ms{ head & \ms{ vform & ppp } \\
-                          subcat & \ibox{2} \\
+                          arg-st & \ibox{2} \\
                         }
 }
 \zs
 This lexical rule does exactly what we expect it to do from a pretheoretical perspective on the passive: it suppresses the most prominent argument with structural case, that is, the argument
-that corresponds to the subject in the active clause. The standard analysis of verb auxiliary
-constructions assumes that the main verb and the auxiliary forms a verbal complex
-\citep{HN94a,Pollard94a,Mueller99a,Mueller2002b,Meurers2000b,Kathol2000a}. The arguments of the
-embedded verb are taken over by the auxiliary.  After combining the participle with the passive auxiliary,
-we arrive at the following \subcat lists:
+that corresponds to the subject in the active clause. 
 \ea
 \begin{tabular}[t]{@{}l@{~}l@{~}l}
-a. & \emph{geschlafen wird}  `slept is':     & \subcat \sliste{ }\\
-b. & \emph{unterstützt wird} `supported is': & \subcat \sliste{ NP[\type{str}]$_k$ }\\[1mm]
-c. & \emph{geholfen wird}    `helped is':    & \subcat \sliste{ NP[\type{ldat}]$_k$ }\\[1mm]
-d. & \emph{geschenkt wird}   `given is':     & \subcat \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
+a. & \emph{geschlafen}  `slept':     & \argst \sliste{ }\\[1mm]
+b. & \emph{unterstützt} `supported': & \argst \sliste{ NP[\type{str}]$_k$ }\\[1mm]
+c. & \emph{geholfen}    `helped':    & \argst \sliste{ NP[\type{ldat}]$_k$ }\\[1mm]
+d. & \emph{geschenkt}   `given':     & \argst \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
-(\mex{0}) differs from (\ref{ex-verben-active}) in that a different NP is in first position. If this NP has structural case, it will receive nominative case.
-If there is no NP with structural case, as in (\mex{0}c), the case remains as it was, that is,
-lexically specified.
+The standard analysis of verb auxiliary
+constructions in German assumes that the main verb and the auxiliary forms a verbal complex
+\citep{HN94a,Pollard94a,Mueller99a,Mueller2002b,Meurers2000b,Kathol2000a}. The arguments of the
+embedded verb are taken over by the auxiliary. For the analysis of the passive this means that the
+auxiliary has an \argst that starts with the elements shown in (\mex{0}). (\mex{0}) differs from
+(\ref{ex-verben-active}) in that a different NP is in first position. If this NP has structural
+case, it will receive nominative case. If there is no NP with structural case, as in (\mex{0}c), the
+case remains as it was, that is, lexically specified.
 
 We cannot go into the analysis of the perfect here. It should be noted, however, that the same lexical
 item for the participle is
@@ -1420,7 +1526,7 @@ sm edges
 \end{figure}%
 The verb trace in final position behaves just like the verb both syntactically and semantically. The information about the missing word is represented
 as the value of the feature \textsc{double slash} (abbreviated: \textsc{dsl}\isfeat{dsl}). This is a head feature and is therefore passed up to the maximal projection
-(VP). The verb in initial position has a VP in its \subcatl which is missing a verb (VP//V). This is the same verb that was the input
+(VP). The verb in initial position has a VP in its \compsl which is missing a verb (VP//V). This is the same verb that was the input
 for the lexical rule and that would normally occur in final position. In
 Figure~\ref{Abbildung-Verbstellung-HPSG}, there are two maximal verb projections:
 \emph{jeder diesen Mann \_$_k$} with the trace as the head and \emph{kennt jeder diesen Mann \_$_k$} with \emph{kennt} as the head.
@@ -1434,7 +1540,7 @@ Verb trace for \emph{kennt} `knows':\\
 phon \phonliste{}\\
 synsem$|$loc \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin
                                               }\\
-                              subcat & \sliste{ \npnom\ind{1}, \npacc\ind{2} }
+                              comps & \sliste{ \npnom\ind{1}, \npacc\ind{2} }
                             }\\
                   cont & \ms{
                          ind & \ibox{3}\\
@@ -1458,16 +1564,16 @@ The syntactic aspects of an analysis with this trace are represented in Figure~\
 \centerline{%
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
+[V{[\comps \eliste]}
 	[V
 		[kennt;knows]]
-	[V{[\subcat \eliste]}
+	[V{[\comps \eliste]}
 		[\ibox{3} NP{[\textit{nom}]}
 			[jeder;everyone]]
-		[V{[\subcat \sliste{ \ibox{3} }]}
+		[V{[\comps \sliste{ \ibox{3} }]}
 			[\ibox{4} NP{[\textit{acc}]}
 				[diesen Mann;this man, roof]]
-			[{[V[\subcat \sliste{ \ibox{3}, \ibox{4} }]}
+			[{[V[\comps \sliste{ \iboxsp{3}, \ibox{4} }]}
 				[\trace]]]]]]
 \end{forest}
 }
@@ -1519,7 +1625,7 @@ position. The information that must be shared is therefore all locally relevant 
 semantic information, that is, all information under \local. Since \phon is not part of the \local features, it is not shared and this is why the \phon values of the trace and verb can
 differ. Up to now, one crucial detail has been missing in the analysis: the \local value of the
 trace cannot be directly structure"=shared with a requirement of the initial verb since the verb
-\emph{kennt} can only select the properties of the projection of the trace and the \subcatl of the
+\emph{kennt} can only select the properties of the projection of the trace and the \compsl of the
 selected projection is the empty list. This leads us to the problem that was pointed out in the
 discussion of (\ref{bsp-kennt-gibt}). It must therefore be ensured that all information about the verb trace is available
 on the highest node of its projection. This can be achieved by introducing a head feature whose
@@ -1544,7 +1650,7 @@ phon \phonliste{}\\
 synsem$|$loc \ibox{1} \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
                                                 dsl   & \ibox{1}
                                               }\\
-                              subcat & \sliste{ \npnom\ind{2}, \npacc\ind{3} }
+                              comps & \sliste{ \npnom\ind{2}, \npacc\ind{3} }
                             }\\
                   cont & \ms{
                          ind & \ibox{4}\\
@@ -1601,10 +1707,10 @@ synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
                                           initial & $+$\\
                                           dsl     & none
                                  }\\
-                           subcat & \sliste{ \onems{ loc$|$cat \onems{ head  \ms[verb]{
+                           comps & \sliste{ \onems{ loc$|$cat \onems{ head  \ms[verb]{
                                                                dsl & \ibox{1}
                                                                }\\
-                                                         subcat \eliste
+                                                         comps \eliste
                                                        }
                                               } }
                          }
@@ -1623,23 +1729,23 @@ The corresponding extended analysis is given in Figure~\vref{verb-movement-syn}.
 \centering
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
-	[V{[\subcat \sliste{ \ibox{1} }]}
-		[V{[\subcat \ibox{2}]}, tier=np,edge label={node[midway,right]{V1-LR}}
+[V{[\comps \eliste]}
+	[V{[\comps \sliste{ \ibox{1} }]}
+		[V{[\comps \ibox{2}]}, tier=np,edge label={node[midway,right]{V1-LR}}
 			[kennt;knows]]]
 	[\ibox{1} V{\feattab{
-             \textsc{dsl$|$cat$|$subcat} \ibox{2},\\
-             \textsc{subcat} \eliste }}
+             \textsc{dsl$|$cat$|$comps} \ibox{2},\\
+             \textsc{comps} \eliste }}
 		[\ibox{3} NP{[\textit{nom}]}, tier=np
 			[jeder;everyone]]
 		[V{\feattab{
-                      \textsc{dsl$|$cat$|$subcat} \ibox{2},\\
-                      \textsc{subcat} \sliste{ \ibox{3} } }}
+                      \textsc{dsl$|$cat$|$comps} \ibox{2},\\
+                      \textsc{comps} \sliste{ \ibox{3} } }}
 			[\ibox{4} NP{[\textit{acc}]}
 				[diesen Mann;this man,roof]]
 			[V{\feattab{
-                              \textsc{dsl$|$cat$|$subcat} \ibox{2},\\
-                              \textsc{subcat} \ibox{2} \sliste{ \ibox{3}, \ibox{4} } }}
+                              \textsc{dsl$|$cat$|$comps} \ibox{2},\\
+                              \textsc{comps} \ibox{2} \sliste{ \iboxsp{3}, \ibox{4} } }}
 				[\trace]]]]]
 \end{forest}
 \caption{\label{verb-movement-syn}Visualization of the analysis of \emph{Kennt jeder diesen Mann?} `Does everyone know this man?'}
@@ -1651,7 +1757,7 @@ The lexical rule in (\mex{0}) licenses a verb that selects a VP (\iboxt{1} in
 Figure~\ref{verb-movement-syn}). The \dslv of this VP corresponds to the \locv of the verb that is the input of the lexical rule.
 Part of the \dslv is also the valence information represented in Figure \ref{verb-movement-syn} \iboxb{2}.
 Since \dsl is a head feature, the \dslv of the VP is identical to that of the verb trace and since the \locv of the verb trace is identified
-with the \dslv, the \subcat information of the verb \emph{kennen} is also available at the trace. The combination of the trace with its
+with the \dslv, the \comps information of the verb \emph{kennen} is also available at the trace. The combination of the trace with its
 arguments proceeds exactly as with an ordinary verb.
 
 It would be unsatisfactory if we had to assume a special trace for every verb. Fortunately, this is not necessary as a general trace as
@@ -1715,57 +1821,57 @@ Figure~\vref{Abbildung-Konstituentenstellung-HPSG-normal} shows the analysis of 
 \centering
 \begin{forest}
 sm edges
-[V{[\subcat \sliste{}]}
+[V{[\comps \sliste{}]}
 	[\ibox{1} NP{[\type{nom}]}
 		[jeder;everybody]]
-	[V{[\subcat \sliste{ \ibox{1} }]}
+	[V{[\comps \sliste{ \ibox{1} }]}
 		[\ibox{2} NP{[\type{acc}]}
 			[diesen Mann;this man, roof]]
-		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: unmarked order}
 \end{figure}%
-The arguments of the verb are combined with the verb starting with the last element of the \subcatl,
+The arguments of the verb are combined with the verb starting with the last element of the \compsl,
 as explained in Section~\ref{sec-HPSG-constituent-structure}. 
 The analysis of the marked order is shown in Figure~\vref{Abbildung-Konstituentenstellung-HPSG-markiert}. 
 \begin{figure}
 \centering
 \begin{forest}
 sm edges
-[V{[\subcat \sliste{}]}
+[V{[\comps \sliste{}]}
 	[\ibox{2} NP{[\type{acc}]}
 		[diesen Mann;this man, roof]]
-	[V{[\subcat \sliste{ \ibox{2} }]}
+	[V{[\comps \sliste{ \ibox{2} }]}
         	[\ibox{1} NP{[\type{nom}]}
 	        	[jeder;everybody]]
-		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-markiert}Analysis of constituent order in
   HPSG: marked order}
 \end{figure}%
-Both trees differ only in the order in which the elements are taken off from the \subcatl:
-in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-normal}, the last element of the \subcatl is discharged first and in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-markiert}
+Both trees differ only in the order in which the elements are taken off from the \compsl:
+in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-normal}, the last element of the \compsl is discharged first and in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-markiert}
 the first one is.
 
 The following schema is a revised version of the Head"=Argument Schema:
 \begin{samepage}
 \begin{schema}[Head-Argument Schema (binary branching)]
 \label{schema-bin-prel2}
-~\\
+~\\[-8pt]
 \type{head"=argument"=phrase}\istype{head"=argument"=phrase} \impl\\
 \onems{
-      synsem$|$loc$|$cat$|$subcat \ibox{1} $\oplus$ \ibox{3}\\
-      head-dtr$|$synsem$|$loc$|$cat$|$subcat \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3}\\
+      synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \ibox{3}\\
+      head-dtr$|$synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3}\\
       non-head-dtrs \sliste{ [ \textsc{synsem} \ibox{2} ] }\\
 }
 \end{schema}
 \end{samepage}
-Whereas in the first version of the Head"=Argument Schema it was always the last element from the \subcatl that was combined with the head,
-the \subcatl is divided into three parts using \emph{append}\is{relation!\emph{append}}: a list of arbitrary length \iboxb{1},
+Whereas in the first version of the Head"=Argument Schema it was always the last element from the \compsl that was combined with the head,
+the \compsl is divided into three parts using \emph{append}\is{relation!\emph{append}}: a list of arbitrary length \iboxb{1},
 a list consisting of exactly one element (\sliste{ \ibox{2} }) and a further list of arbitrary length \iboxb{3}. The lists \ibox{1} and \ibox{3}
-are combined and the result is the \subcatv of the mother node.
+are combined and the result is the \compsv of the mother node.
 
 Languages with fixed constituent order\is{constituent order!fixed}\is{constituent order!free} (such as English\il{English})
 differ from languages such as German in that they discharge the arguments starting from one side (for more on the subject in
@@ -1790,7 +1896,7 @@ processability by humans is concerned. See \citew{Gibson98a,Hawkins99a} and
 those of XV languages in analyses of the kind that is proposed here. This affects the c"=command
 relations\is{c"=command} and therefore has implications for Binding Theory in GB/MP. However, the direction of branching is irrelevant for HPSG analyses as
 Binding Principles are defined using o"=command\is{o"=command} \citep[Chapter~6]{ps2} and o"=command makes reference to the Obliqueness 
-Hierarchy\is{Obliqueness}, that is, the order of elements in the \subcatl rather than the order in which these elements are combined with the head.
+Hierarchy\is{Obliqueness}, that is, the order of elements in the \compsl rather than the order in which these elements are combined with the head.
 }
 
 The analysis presented here utilizing the combination of arguments in any order is similar to that of \citet{Fanselow2001a} in the framework
@@ -1965,7 +2071,8 @@ Trace of the accusative object of \emph{kennen} (preliminary):\\
  synsem & \ms{ loc   & \ibox{1} \ms{ cat \ms{ head & \ms[noun]{
                                                      cas & acc
                                                      } \\
-                                              subcat & \sliste{}
+                                              spr   & \sliste{}\\
+                                              comps & \sliste{}
                                             } 
                                    }\\
 nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
@@ -2000,14 +2107,15 @@ The Head"=Filler Schema (Schema~\ref{hf-schemaa}) licenses the highest node in F
 \begin{figure}
 \begin{schema}[Head"=Filler Schema]
 \label{hf-schemaa}\is{schema!Filler"=Head}
-~\\\samepage
+~\\[-8pt]\samepage
 \type{head-filler-phrase}\istype{head"=filler"=phrase} \impl\\
 \onems{ 
 %synsem$|$nonloc$|$slash  \eliste\\
 head-dtr$|$synsem       \onems{ loc$|$cat \onems{ head \ms[verb]{vform & fin\\
                                                                  initial & \upshape $+$
                                                                 }\\
-                                                  subcat \sliste{}
+                                                  spr   \sliste{}\\
+                                                  comps \sliste{}
                                                }\\
                              nonloc \ms{ inher$|$slash &  \sliste{ \ibox{1} }\\
                                          to-bind$|$slash &  \sliste{ \ibox{1} }
@@ -2030,27 +2138,27 @@ variant of the analysis of fronting to the prefield.
 \centerfit{
 \begin{forest}
 sm edges
-[V\feattab{\textsc{subcat} \eliste,\\ 
+[V\feattab{\textsc{comps} \eliste,\\ 
            \textsc{inher$|$slash} \eliste},s sep+=1em % increase the distance because otherwise we
                                 % are in the triangle
 	[NP{[\loc \ibox{1} \textit{acc}]}
 		[diesen Mann;this man,roof]]
-	[V\feattab{\textsc{subcat} \sliste{},\\
+	[V\feattab{\textsc{comps} \sliste{},\\
                    \textsc{inher$|$slash} \sliste{ \ibox{1} },\\
                    \textsc{to-bind$|$slash} \sliste{ \ibox{1} } }
-		[V{[\subcat \sliste{ \ibox{2} }]},  l sep=2\baselineskip
-			[V{[\subcat \sliste{ \ibox{3}, \ibox{4} }]},edge
+		[V{[\comps \sliste{ \ibox{2} }]},  l sep=2\baselineskip
+			[V{[\comps \sliste{ \iboxsp{3}, \ibox{4} }]},edge
                           label={node[midway,right]{V1-LR}}, tier=trace
 				[kennt;knows]]]
-		[\ibox{2} V\feattab{\textsc{subcat} \sliste{}, %\\
+		[\ibox{2} V\feattab{\textsc{comps} \sliste{}, %\\
                                     \textsc{inher$|$slash} \sliste{ \ibox{1} } }
 			[\ibox{4} \feattab{\textsc{loc} \ibox{1},\\
                                            \textsc{inher$|$slash} \sliste{ \ibox{1} } }, tier=trace
 				[\trace]]
-			[V{[\subcat \sliste{ \ibox{4} }]},tier=trace
+			[V{[\comps \sliste{ \ibox{4} }]},tier=trace
 				[\ibox{3} NP{[\textit{nom}]}
 					[jeder;everyone]]
-				[V{[\subcat \sliste{ \ibox{3}, \ibox{4} }]}
+				[V{[\comps \sliste{ \iboxsp{3}, \ibox{4} }]}
 					[\trace]]]]]]
 \end{forest}
 }
@@ -2059,8 +2167,8 @@ sm edges
 %
 The verb movement trace for \emph{kennt} `knows' is combined with a nominative NP and an extraction trace.
 The extraction trace stands for the accusative object in our example. The accusative object is
-described in the \subcatl of the verb \iboxb{4}. Following the mechanism for verb movement, the valence information that was originally contained
-in the entry for \emph{kennt} (\sliste{ \ibox{3}, \ibox{4} }) is present on the verb trace. The combination of the projection of the verb trace with
+described in the \compsl of the verb \iboxb{4}. Following the mechanism for verb movement, the valence information that was originally contained
+in the entry for \emph{kennt} (\sliste{ \iboxsp{3}, \ibox{4} }) is present on the verb trace. The combination of the projection of the verb trace with
 the extraction trace works in exactly the same way as for non-fronted arguments. The \slashv of the extraction trace is passed up the tree
 and bound off by the Head"=Filler Schema.
 
@@ -2082,9 +2190,9 @@ Extraction trace: \\
 }
 \zs
 This has to do with the fact that the head can satisfactorily determine the \textsc{local} properties of its arguments and therefore also the
-local properties of the traces that it combines with. The identification of the object in the \subcatl of the head with the \synsemv of the trace 
+local properties of the traces that it combines with. The identification of the object in the \compsl of the head with the \synsemv of the trace 
 coupled with the identification of the information in \textsc{slash} with information about the fronted element serves to ensure that the only elements
-that can be realized in the prefield are those that fit the description in the \subcatl of the head. The same holds for fronted adjuncts: since the \localv of the constituent 
+that can be realized in the prefield are those that fit the description in the \compsl of the head. The same holds for fronted adjuncts: since the \localv of the constituent 
 in the prefield is identified with the \localv of the trace via the \textsc{slash} feature, there is then sufficient information available about the properties
 of the trace.\is{trace!extraction trace|)}
 
@@ -2102,161 +2210,161 @@ in that dependency.%
 \section{New developments and theoretical variants}
 
 
-This section discusses refinements of the representation of valence information in
-Subsection~\ref{Abschnitt-Arg-St} and briefly mentions an important variant of HPSG, namely
-Linearization"=based HPSG in Subsection~\ref{sec-linearization-HPSG}.
+%% This section discusses refinements of the representation of valence information in
+%% Subsection~\ref{Abschnitt-Arg-St} and briefly mentions an important variant of HPSG, namely
+%% Linearization"=based HPSG in Subsection~\ref{sec-linearization-HPSG}.
 
-\subsection{Specifier, complements and argument structure}
-\label{Abschnitt-Arg-St}
-\label{Abschnitt-Spr}
+%% \subsection{Specifier, complements and argument structure}
+%% \label{Abschnitt-Arg-St}
+%% \label{Abschnitt-Spr}
 
-In this chapter, \subcat was assumed as the only valence feature. This corresponds to the state of theory in
-\citew[Chapter~1--8]{ps2}. It has turned out to be desirable to assume at least one additional valence feature and a
-corresponding schema for the combination of constituents. This additional feature is called \textsc{specifier}
-(\textsc{spr})\isfeat{spr} and is used in grammars of English \citep[Chapter~9]{ps2} and German
-\citep[Section~9.3]{MuellerLehrbuch1} for the combination of a determiner with a noun. It is assumed that the noun selects
-its determiner. For the noun \emph{Zerstörung} `destruction', we have the following \catv:
-\ea
-\ms{ head & \ms[noun]{ initial & \upshape $+$
-                     }\\
-     spr & \sliste{ Det }\\
-           subcat & \sliste{ NP[\gen], PP[\type{durch}] }~\\[1mm]
-         }
-\z
-Schema~\ref{schema-spr-h} can be used just like the Head"=Argument Schema for the combination
-of noun and determiner.
-\begin{schema}[Specifier-Head Schema]\is{Schema!Specifier"=Head"=}
-\label{schema-spr-h}
-~\\
-\type{head-specifier"=phrase}\istype{head"=specifier"=phrase} \impl\\*
-\onems{
-      synsem$|$loc$|$cat$|$spr \ibox{1} \\
-      head-dtr$|$synsem$|$loc$|$cat  \ms{ spr    & \ibox{1} $\oplus$ \sliste{ \ibox{2} } \\
-                                          subcat & \eliste \\
-                                        }\\
-      non-head-dtrs \sliste{ [\synsem \ibox{2} ]}\\
-      }
-\end{schema}
-The analysis of the NP in (\mex{1}) with the Specifier Schema is shown in 
-Figure~\vref{Abbildung-die-Zerstorung}.
-\ea
-\gll die Zerstörung der Stadt durch die Soldaten\\
-	 the destruction of.the city by the soldiers\\
-\z
-\begin{figure}
-\centerfit{
-\begin{forest}
-sm edges
-[N\feattab{\spr \sliste{  },\\
-           \subcat \sliste{  } }
-	[\ibox{1} Det
-		[die;the]]
-	[N\feattab{\spr \sliste{ \ibox{1} },\\
-                   \subcat \sliste{  } }
-		[N\feattab{\spr \sliste{ \ibox{1} },\\
-                   \subcat \sliste{ \ibox{2} } }
-			[N\feattab{\spr \sliste{ \ibox{1} },\\
-                                   \subcat \sliste{ \ibox{2}, \ibox{3} } }
-				[Zerstörung;destruction]]
-			[\ibox{3} NP{[\type{gen}]}
-				[der Stadt; of the city,roof]]]
-		[\ibox{2} PP{[\type{durch}]}
-			[durch die Soldaten; by the soldiers,roof]]]]
-\end{forest}}
-\caption{NP analysis with valence features \spr}\label{Abbildung-die-Zerstorung} 
-\end{figure}%
-Following the linearization rules discussed in Section~\ref{Abschnitt-LP-Regeln-HPSG}, it is ensured that the noun occurs before the complements as the
-\initialv of the noun is `$+$'. The LP"=rule in (\mex{1}) leads to the determiner being ordered to the left of the noun.
-\ea
-specifier $<$ head
-\z
+%% In this chapter, \comps was assumed as the only valence feature. This corresponds to the state of theory in
+%% \citew[Chapter~1--8]{ps2}. It has turned out to be desirable to assume at least one additional valence feature and a
+%% corresponding schema for the combination of constituents. This additional feature is called \textsc{specifier}
+%% (\textsc{spr})\isfeat{spr} and is used in grammars of English \citep[Chapter~9]{ps2} and German
+%% \citep[Section~9.3]{MuellerLehrbuch1} for the combination of a determiner with a noun. It is assumed that the noun selects
+%% its determiner. For the noun \emph{Zerstörung} `destruction', we have the following \catv:
+%% \ea
+%% \ms{ head & \ms[noun]{ initial & \upshape $+$
+%%                      }\\
+%%      spr & \sliste{ Det }\\
+%%            comps & \sliste{ NP[\gen], PP[\type{durch}] }~\\[1mm]
+%%          }
+%% \z
+%% Schema~\ref{schema-spr-h} can be used just like the Head"=Argument Schema for the combination
+%% of noun and determiner.
+%% \begin{schema}[Specifier-Head Schema]\is{Schema!Specifier"=Head"=}
+%% \label{schema-spr-h}
+%% ~\\
+%% \type{head-specifier"=phrase}\istype{head"=specifier"=phrase} \impl\\*
+%% \onems{
+%%       synsem$|$loc$|$cat$|$spr \ibox{1} \\
+%%       head-dtr$|$synsem$|$loc$|$cat  \ms{ spr    & \ibox{1} $\oplus$ \sliste{ \ibox{2} } \\
+%%                                           comps & \eliste \\
+%%                                         }\\
+%%       non-head-dtrs \sliste{ [\synsem \ibox{2} ]}\\
+%%       }
+%% \end{schema}
+%% The analysis of the NP in (\mex{1}) with the Specifier Schema is shown in 
+%% Figure~\vref{Abbildung-die-Zerstorung}.
+%% \ea
+%% \gll die Zerstörung der Stadt durch die Soldaten\\
+%% 	 the destruction of.the city by the soldiers\\
+%% \z
+%% \begin{figure}
+%% \centerfit{
+%% \begin{forest}
+%% sm edges
+%% [N\feattab{\spr \sliste{  },\\
+%%            \comps \sliste{  } }
+%% 	[\ibox{1} Det
+%% 		[die;the]]
+%% 	[N\feattab{\spr \sliste{ \ibox{1} },\\
+%%                    \comps \sliste{  } }
+%% 		[N\feattab{\spr \sliste{ \ibox{1} },\\
+%%                    \comps \sliste{ \ibox{2} } }
+%% 			[N\feattab{\spr \sliste{ \ibox{1} },\\
+%%                                    \comps \sliste{ \iboxsp{2}, \ibox{3} } }
+%% 				[Zerstörung;destruction]]
+%% 			[\ibox{3} NP{[\type{gen}]}
+%% 				[der Stadt; of the city,roof]]]
+%% 		[\ibox{2} PP{[\type{durch}]}
+%% 			[durch die Soldaten; by the soldiers,roof]]]]
+%% \end{forest}}
+%% \caption{NP analysis with valence features \spr}\label{Abbildung-die-Zerstorung} 
+%% \end{figure}%
+%% Following the linearization rules discussed in Section~\ref{Abschnitt-LP-Regeln-HPSG}, it is ensured that the noun occurs before the complements as the
+%% \initialv of the noun is `$+$'. The LP"=rule in (\mex{1}) leads to the determiner being ordered to the left of the noun.
+%% \ea
+%% specifier $<$ head
+%% \z
+%% %
+%% %
+%% In grammars of English, the \sprf is also used for the selection of the subject of verbs \citep*[Section~4.3]{SWB2003a}.
+%% In a sentence such as (\mex{1}), the verb is first combined with all its complements (the elements in the \comps or
+%% \comps in newer works) and is then combined with the subject in a second step by applying Schema~\ref{schema-spr-h}.
+%% \ea
+%% Max likes ice cream.
+%% \z
+%% As we have seen in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}, it makes sense to represent subjects and arguments in the same valence list
+%% for the analysis of finite sentences. In this way, the fact can be captured that the order in which a verb is combined with its arguments is not
+%% fixed. While the different orders could also be captured by assuming that the subject is selected
+%% via \spr, the fact that scrambling is a phenomenon that affects all arguments in the same way would
+%% not be covered in a \spr"=based analysis. Furthermore, the extraction out of subjects is impossible
+%% in languages like English, but it is possible in German (for references and attested examples see p.\,\pageref{page-extraction-out-of-subjects}). This difference can be captured by assuming
+%% that subjects are selected via \spr in English and that extraction out of elements in the \sprl is
+%% prohibited. Since subjects in German are represented on the \compsl, the fact that they pattern with
+%% the objects in terms of possible extractions is captured.
+
+%% A further expansion from \citew[Chapter~9]{ps2} is the introduction of an additional list that is
+%% called \argst\isfeat{arg-st} in newer works. \argst stands for Argument Structure. The \argstl
+%% corresponds to what we encountered as \compsl in this chapter.  It contains the arguments of a head
+%% in an order corresponding to the Obliqueness Hierarchy. The elements of the list are linked to
+%% argument roles in the semantic content of the head (see Section~\ref{Abschnitt-HPSG-Semantik}). Binding Theory operates on the \argstl. This level of
+%% representation is probably the same for most languages: in every language there are semantic predicates and
+%% semantic arguments. Most languages make use of syntactic categories that play a role in
+%% selection, so there is both syntactic and semantic selection.\footnote{%
+%%   \citet{KM2012a} argue for an analysis of Oneida\il{Oneida} (a Northern Iroquoian\il{Iroquoian} language) that does not
+%%   include a representation of syntactic valence. If this analysis is correct, syntactic argument
+%%   structure would not be universal, but would be characteristic for a large number of languages.
+%% }
+%% Languages differ with regard to how these arguments are realized.  In English, the first
+%% element in the valence list is mapped to the \sprl and the remaining arguments to the \comps (or
+%% \compsl in more recent work). In German, the \sprl of verbs remains empty. (\mex{1}) shows some relevant examples for
+%% German and English.
+
+%% %\begin{figure}[htb]
+%% \eal
+%% \label{ex-schlagen-beat}
+%% \ex
+%% \onems{
+%% phon \phonliste{ schlag }\\[2mm]
+%% synsem$|$loc \ms{ cat & \ms{ head   & verb\\
+%%                              spr    & \eliste \\
+%%                              comps & \ibox{1} \\
+%%                              arg-st & \ibox{1} \sliste{ NP[\type{str}]\ind{2}, NP[\type{str}]\ind{3} }
+%%                            }\\
+%%                   cont & \ms{
+%%                          ind & \ibox{4} event\\
+%%                          rels & \sliste{ \ms[schlagen]{
+%%                                          event   & \ibox{4}\\
+%%                                          agent   & \ibox{2}\\
+%%                                          patient & \ibox{3}
+%%                                         }
+%%                                       }
+%%                          }
+%%                 }
+%% }
+%% \ex 
+%% \onems{
+%% phon \phonliste{ beat }\\[2mm]
+%% synsem$|$loc \ms{ cat & \ms{ head   & verb\\
+%%                              spr    & \sliste{ \ibox{1} } \\
+%%                              comps & \ibox{2} \\
+%%                              arg-st & \sliste{ \ibox{1} NP[\type{str}]\ind{3}} $\oplus$ \ibox{2} \sliste{ NP[\type{str}]\ind{4} }
+%%                            }\\
+%%                   cont & \ms{
+%%                          ind & \ibox{5} event\\
+%%                          rels & \sliste{ \ms[beat]{
+%%                                          event   & \ibox{5}\\
+%%                                          agent   & \ibox{3}\\
+%%                                          patient & \ibox{4}
+%%                                         }
+%%                                       }
+%%                          }
+%%                 }
+%% }
+%% \zl
+%% %\vspace{-\baselineskip}
+%% %\end{figure}%
 %
-%
-In grammars of English, the \sprf is also used for the selection of the subject of verbs \citep*[Section~4.3]{SWB2003a}.
-In a sentence such as (\mex{1}), the verb is first combined with all its complements (the elements in the \subcat or
-\comps in newer works) and is then combined with the subject in a second step by applying Schema~\ref{schema-spr-h}.
-\ea
-Max likes ice cream.
-\z
-As we have seen in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}, it makes sense to represent subjects and arguments in the same valence list
-for the analysis of finite sentences. In this way, the fact can be captured that the order in which a verb is combined with its arguments is not
-fixed. While the different orders could also be captured by assuming that the subject is selected
-via \spr, the fact that scrambling is a phenomenon that affects all arguments in the same way would
-not be covered in a \spr"=based analysis. Furthermore, the extraction out of subjects is impossible
-in languages like English, but it is possible in German (for references and attested examples see p.\,\pageref{page-extraction-out-of-subjects}). This difference can be captured by assuming
-that subjects are selected via \spr in English and that extraction out of elements in the \sprl is
-prohibited. Since subjects in German are represented on the \compsl, the fact that they pattern with
-the objects in terms of possible extractions is captured.
+%% \noindent
+%% One can view the \argstl as the equivalent to Deep Structure\is{Deep Structure} in \gbt:
+%% semantic roles are assigned with reference to this list. The difference is that there is no ordered tree
+%% that undergoes transformations\is{transformation}. The question of whether all languages can be derived from either VO or OV order
+%% therefore becomes irrelevant. 
 
-A further expansion from \citew[Chapter~9]{ps2} is the introduction of an additional list that is
-called \argst\isfeat{arg-st} in newer works. \argst stands for Argument Structure. The \argstl
-corresponds to what we encountered as \subcatl in this chapter.  It contains the arguments of a head
-in an order corresponding to the Obliqueness Hierarchy. The elements of the list are linked to
-argument roles in the semantic content of the head (see Section~\ref{Abschnitt-HPSG-Semantik}). Binding Theory operates on the \argstl. This level of
-representation is probably the same for most languages: in every language there are semantic predicates and
-semantic arguments. Most languages make use of syntactic categories that play a role in
-selection, so there is both syntactic and semantic selection.\footnote{%
-  \citet{KM2012a} argue for an analysis of Oneida\il{Oneida} (a Northern Iroquoian\il{Iroquoian} language) that does not
-  include a representation of syntactic valence. If this analysis is correct, syntactic argument
-  structure would not be universal, but would be characteristic for a large number of languages.
-}
-Languages differ with regard to how these arguments are realized.  In English, the first
-element in the valence list is mapped to the \sprl and the remaining arguments to the \subcat (or
-\compsl in more recent work). In German, the \sprl of verbs remains empty. (\mex{1}) shows some relevant examples for
-German and English.
-
-%\begin{figure}[htb]
-\eal
-\label{ex-schlagen-beat}
-\ex
-\onems{
-phon \phonliste{ schlag }\\[2mm]
-synsem$|$loc \ms{ cat & \ms{ head   & verb\\
-                             spr    & \eliste \\
-                             subcat & \ibox{1} \\
-                             arg-st & \ibox{1} \sliste{ NP[\type{str}]\ind{2}, NP[\type{str}]\ind{3} }
-                           }\\
-                  cont & \ms{
-                         ind & \ibox{4} event\\
-                         rels & \sliste{ \ms[schlagen]{
-                                         event   & \ibox{4}\\
-                                         agent   & \ibox{2}\\
-                                         patient & \ibox{3}
-                                        }
-                                      }
-                         }
-                }
-}
-\ex 
-\onems{
-phon \phonliste{ beat }\\[2mm]
-synsem$|$loc \ms{ cat & \ms{ head   & verb\\
-                             spr    & \sliste{ \ibox{1} } \\
-                             subcat & \ibox{2} \\
-                             arg-st & \sliste{ \ibox{1} NP[\type{str}]\ind{3}} $\oplus$ \ibox{2} \sliste{ NP[\type{str}]\ind{4} }
-                           }\\
-                  cont & \ms{
-                         ind & \ibox{5} event\\
-                         rels & \sliste{ \ms[beat]{
-                                         event   & \ibox{5}\\
-                                         agent   & \ibox{3}\\
-                                         patient & \ibox{4}
-                                        }
-                                      }
-                         }
-                }
-}
-\zl
-%\vspace{-\baselineskip}
-%\end{figure}%
-
-\noindent
-One can view the \argstl as the equivalent to Deep Structure\is{Deep Structure} in \gbt:
-semantic roles are assigned with reference to this list. The difference is that there is no ordered tree
-that undergoes transformations\is{transformation}. The question of whether all languages can be derived from either VO or OV order
-therefore becomes irrelevant. 
-
-\subsection{Linearization"=based HPSG}
+%\subsection{Linearization"=based HPSG}
 \label{sec-linearization-HPSG}
 
 The schemata that were presented in this chapter combine adjacent constituents. The assumption of
@@ -2471,5 +2579,25 @@ modal infinitives as well as diverse passive variants and the long passive\is{pa
 
 Overviews of HPSG can be found in \citew{LM2006a}, \citew{PK2006a-u}, \citew{Bildhauer2014a-u} and \citew{MuellerHPSGHandbook}.
 
+\citew{MuellerArten} and \citew{MuellerCurrentApproaches} are two papers in collections
+comparing frameworks. The first one is in German and contains an analysis of a newspaper
+text.\footnote{
+  See \url{https://hpsg.hu-berlin.de/~stefan/Pub/artenvielfalt.html} for the example sentences and
+  some interactive analyses of the examples.
+} The
+second one is in English and contains a general description of the framework and a detailed analysis
+of the sentence in (\mex{1}):\footnote{
+  See \url{https://hpsg.hu-berlin.de/~stefan/Pub/current-approaches-hpsg.html} for an interactive
+  analysis of the example.
+}
+\ea
+\label{ex-after-mary-complete}
+After Mary introduced herself to the audience, she turned to a man that she had met before.
+\z
+The books are similar to this one in that the respective authors describe a shared set of phenomena
+within their favorite theories but the difference is that the descriptions come straight from the
+horse's mouth. Especially the newspaper text is interesting since for some theories it was the first
+time for them to be applied to real live data. As a result of this one sees phenomena covered that
+are rarely treated in the rest of the literature.
 
 %      <!-- Local IspellDict: en_US-w_accents -->
