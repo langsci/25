@@ -2,30 +2,92 @@
 
 \section*{Forword of the second edition}
 
+The first edition of this book was published almost exactly two years ago. The book has app.\,15,000
+downloads and is used for teaching and in research all over the world. This is what every author and
+every teacher dreams of: distribution of knowledge and accessibility for everybody. The foreword of
+the first edition ends with a description of Language Science Press in 2016. This is the situation
+now:\footnote{
+  See \url{http://userblogs.fu-berlin.de/langsci-press/2018/01/18/achievements-2017/} for the
+  details and graphics.
+} We have 324 expressions of interest and 58 published books. Books are published in 20 book series with 263 members of editorial boards from 44
+different countries from six continents. We have a total of 175,000 downloads. 138 linguists from
+all over the world have participated in proofreading. There are currently 296 proofreaders
+registered with Language Science Press. Language Science Press is a community"=based publisher, but
+there is one person who manages everything: Sebastian Nordhoff\aimention{Sebastian Nordhoff}. His
+position has to be payed. We were successful in acquiring financial support by almost 100 academic institutions including 
+Harvard, the MIT, and Berkeley.\footnote{
+  A full list of supporting institutions is available here:
+  \url{http://langsci-press.org/knowledgeunlatched}.
+}
+If you want to support us by just signing the list of supporters, by publishing with us, by helping as proofreader or by
+convincing your librarian/institution to support Language Science Press financially, please refer to \url{http://langsci-press.org/supportUs}.
+
+
+
+After these more general remarks concerning Language Science Press I describe the changes I made for the second edition and I
+thank those who pointed out mistakes and provided feedback.
+
 I want to thank Wang Lulu for pointing out some typos that she found while translating the book to
 Chinese. Thanks for both the typos and the translation.
 
-Fritz Hamm noticed that the definition of Intervention was incomplete and pointed out some
-inconsistencies in translations of predicates in Section~\ref{sec-PSG-Semantik}.
-
-% Added 3, sg in the description of liest in Fug 1.4.
-
+Fritz Hamm noticed that the definition of Intervention (see p.\,\pageref{def-intervention}) was
+incomplete and pointed out some inconsistencies in translations of predicates in
+Section~\ref{sec-PSG-Semantik}. 
+%
+% Added 3, sg in the description of liest in Fig 1.4.
+%
 % In GB-Kapitel what = roof
 %
 I turned some straight lines in Chapter~\ref{chap-GB} into triangles and added a discussion of
-different ways to represent movement.
-
-%Hamm: add Heim/Kratzer, Quantifier-Movement erklären
-
+different ways to represent movement (see Figure~\ref{fig-traces} on p.\,\pageref{fig-traces}).
+%
+% SpecIP Begriff erklärt. Fußnote zu Spec als Label in Bäumen.
+I now explain what SpecIP stands for and I added footnote~\ref{fn-specxp-in-trees} on SpecIP as label in trees.
+%
+%Hamm: add Heim/Kratzer, Quantifier-Movement erklären (todo)
+%
 I extended the discussion of Pirahã in Section~\ref{sec-recursion-empirical-problems} and added
 lexical items that show that Pirahã-like modification without recursion can be captured in a
 straightforward way in Categorial Grammar. 
 
-Sašo Živanović helped adapting version 2.0 of the \texttt{forest} package so that it could be used
-with this large book. I am very graceful for this nice tree typesetting package and all the work
-that went into it.
+I reorganized the HPSG chapter to be in line with more recent approaches assuming the valence
+featuers \spr and \comps \citep{Sag97a,MuellerGermanic} rather than a single valence feature.
+% Removed section on LOCAL in SBCG since not the complete sign is shared anyway. It is only SYN that
+% is shared.
+I removed the section on the \localf in Sign-based Construction Grammar (Section~10.6.2.2 in the
+first edition) since it was build on the wrong assumption that the filler would be identical to the
+representation in the valence specification. In \citet[\page 536]{Sag2012a} only the information in
+\textsc{syn} and \textsc{sem} is shared. 
 
-% SpecIP Begriff erklärt. Fußnote zu Spec als Label in Bäumen.
+I added the example (\ref{ex-ergert-aan-aergert-ueber}) on
+page~\pageref{ex-ergert-aan-aergert-ueber} that shows a difference in choice of preposition in a
+prepositionsl object in Dutch vs.\ German. Since the publication of the first English edition of the
+Grammatical Theory textbook I worked extensively on the phrasal approach to benefactive
+constructions in LFG \citep*{AGT2014a}. Section~\ref{sec-phrasal-LFG} was
+revised and adapted to what will be published as \citew{MuellerLFGphrasal}.
+There is now a brief chapter on complex predicates in TAG
+and Categorial Grammar/HPSG (Chapter~\ref{chap-potenital-structure}), that shows that valence"=based
+approaches allow for an underspecification of structure. Valence is potential structure, while
+theories like TAG operate with actual structure.  
+
+Apart from this I fixed several minor typos, added and updated some references and URLs. Thanks to
+Philippa Cook and Timm Lichte for pointing out typos. Thanks to 
+Leonel Figueiredo de Alencar\aimention{de Alencar, Leonel},
+John Carroll\aimention{John Carroll},
+Alexander Koller\aimention{Alexander Koller},
+Emily M.\ Bender\aimention{Emily M. Bender},
+and
+Glenn C.\ Slayden\aimention{Slayden, Glenn C}
+for pointers to literature.
+%
+Sašo Živanović\aimention{Sašo Živanović} helped adapting version 2.0 of
+the \texttt{forest} package so that it could be used with this large book. I am very graceful for
+this nice tree typesetting package and all the work that went into it.
+
+The source code of the book and the version history is available on GitHub. Issues can be reported
+there: \url{https://github.com/langsci/25}. The book is also available on paperhive, a platform for
+collective reading and annotation: \url{https://paperhive.org/documents/tEbso9TaFoeS}. It would be
+great if you would leave comments there. 
 
 % Added Riemsdijk78:148 as first reference against the toolbox approach to UG.
 
@@ -45,6 +107,8 @@ that went into it.
 
 % Changed reference to Dalrymple2006a to cite page number rather than sections since Elsevier does
 % not provide section numbers.
+
+% Added reference to Sag2018a paper on Auxiliaries in English
 
 ~\medskip
 

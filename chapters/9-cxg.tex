@@ -95,6 +95,7 @@ See Section~\ref{sec-SbCxG} for further discussion.
 John Bryant\aimention{John Bryant}, Nancy Chang\aimention{Nancy Chang}, Eva Mok\aimention{Eva Mok}
 have developed a system for the implementation of Embodied Construction Grammar\footnote{
   See \url{http://www.icsi.berkeley.edu/~jbryant/old-analyzer.html} and \citew{Bryant2003a-u}.
+% checked 20.02.2018
 }.
 %% , that 
 %% entwickelt,
@@ -306,7 +307,7 @@ There is a linking construction for both active and passive as well as lexical e
  There is then a cross"=classification resulting in an active and a passive variant of each verb.
 
 The idea behind this analysis goes back to work by Fillmore and Kay between 1995 and 1997\footnote{
-\url{http://www.icsi.berkeley.edu/~kay/bcg/ConGram.html}. 03.05.2010.
+\url{http://www.icsi.berkeley.edu/~kay/bcg/ConGram.html}. 20.02.2018.
 }, but variants of this analysis were first published in \citew[Chapter~3]{Koenig99a} and \citew[Chapter~4]{MR2001a}.
 Parallel proposals have been made in TAG\indextag (\citealp{Candito96a}; \citealp[\page
   188]{CK2003a-u}; \citealp[\page 171--172]{KO2012a}) and HPSG\indexhpsg
@@ -870,9 +871,7 @@ A new feature geometry was introduced to rule out constructions that describe da
 daughters and therefore have a much larger locality domain\is{locality|(} in contrast to rules in
 phrase structure grammars, LFG, and GPSG. I do not view this new feature geometry as particularly
 sensible as it can be easily circumvented and serves to complicate the theory. This will be
-discussed in Section~\ref{sec-mother}. Other changes regard the omission of the \localf and the
-omission of valence features. These changes are discussed in Section~\ref{sec-sbcg-local-feature}
-and~\ref{sec-valence-feature-sbcg}, respectively.
+discussed in Section~\ref{sec-mother}. Another change was the omission of valence features, which is discussed in Section~\ref{sec-valence-feature-sbcg}.
 
 \subsubsection{Locality and \textsc{mother}}
 \label{sec-mother}
@@ -957,8 +956,7 @@ $\Phi$ is a Well"=Formed Structure according to a grammar $G$ if and only if:
 \z
 
 \noindent
-For comparison, a description is given in (\mex{1}) with the feature geometry that was assumed in
-Section~\ref{Abschnitt-Spr}.
+For comparison, a description is given in (\mex{1}) with the feature geometry that was assumed in Section~\ref{Abschnitt-Spr}.
 %\begin{figure}
 \ea
 \onems[head-complement-phrase]{
@@ -1159,7 +1157,7 @@ variants of the idiom that do not have the accusative pronoun in the \vf:
      I believe \expl{} kicks me a horse when I a such nonsense read\\
 \footnotetext{
   \url{http://www.welt.de/wirtschaft/article116297208/Die-verlogene-Kritik-an-den-Steuerparadiesen.html},
-  commentary section, 10.12.2015.
+  commentary section, 20.02.2018.
 }
 \glt `I am utterly surprised when I read such nonsense.'
 \pagebreak
@@ -1176,7 +1174,7 @@ variants of the idiom that do not have the accusative pronoun in the \vf:
     I believe now   kicks me a horse\\
 \footnotetext{
   \url{http://www.castingshow-news.de/menowin-frhlich-soll-er-zum-islam-konvertieren-7228/},
-  10.12.2015.
+  20.02.2018.
 }
 \glt `I am utterly surprised now.'
 \zl
@@ -1476,14 +1474,16 @@ since one agrees that theories that do not make wrong predictions are sufficient
 one does not have to explicitly state what cannot occur in languages or one would have to react to
 the problem with nonlocally selected phonology values and therefore assume a \synsem or \localf that
 bundles information that is relevant in raising and nonlocal dependencies and does not include the
-phonology.\footnote{
-  If \synsem is reintroduced, the elements in the valence lists could be of type
-  \type{synsem}. Information about phonology would not be part of the description of the selected elements. This would not solve the problem
-  of partial verb phrase fronting though, since the \lexf is selected for (hence part of the
-  information under \synsem) but not shared with the filler. One would need a \localf in addition to \synsem. See Section~\ref{sec-sbcg-local-feature}.
-}
-This supports the arguments I made on \mother and
-\local in the previous subsections.
+phonology.
+%% \footnote{
+%%   If \synsem is reintroduced, the elements in the valence lists could be of type
+%%   \type{synsem}. Information about phonology would not be part of the description of the selected elements. This would not solve the problem
+%%   of partial verb phrase fronting though, since the \lexf is selected for (hence part of the
+%%   information under \synsem) but not shared with the filler. One would need a \localf in addition to \synsem. See Section~\ref{sec-sbcg-local-feature}.
+%% }
+%This supports the arguments I made on \mother and \local in the previous subsections.
+This supports the argument I made on \mother in the previous subsection.
+
 
 \subsubsection{The \textsc{valence} list}
 \label{sec-valence-feature-sbcg}
@@ -1522,7 +1522,8 @@ reject this change.\footnote{
   to other variants of HPSG because of the assumption of the \textsc{mother} feature. As \citet{VanEynde2015a} points out this is not true for more recent variants of HPSG since
  they have the \textsc{synsem} feature, which is not needed if \textsc{mother} is assumed. (Van Eynde refers to the \textsc{local}
  feature, but the \textsc{local} feature was eliminated because it was considered superfluous
- because of the lexical analysis of extraction, see Section~\ref{sec-sbcg-local-feature}).
+ because of the lexical analysis of extraction.
+%, see Section~\ref{sec-sbcg-local-feature}).
  If one simply omits the \textsc{mother} feature from SBCG one is back to
  the 1987 version of HPSG \citep{ps}, which also used a \textsc{syn} and a \textsc{sem} feature. What would be
  missing would be the locality of selection \citep[\page 149]{Sag2012a} that was enforced to some extent by the \textsc{synsem}
