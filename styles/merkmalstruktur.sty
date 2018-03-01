@@ -30,6 +30,12 @@
 
 
 \newcommand{\ibox}[1]{%
+%  \iboxt{#1}\,%       why this extra space???? 20.02.2018
+\iboxt{#1}%
+}
+
+% used in lists \sliste{ \iboxsp{1}, \ibox{2} }
+\newcommand{\iboxsp}[1]{%
   \iboxt{#1}\,%
 }
 
