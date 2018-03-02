@@ -87,6 +87,7 @@ Selecting different rules from the grammar for rewriting symbols, we could use t
 from S to the string \emph{er dem Mann das Buch gibt} `he the man the book gives'.
 We can say that this grammar licenses (or generates)\label{Seite-generiert} a set of sentences.\is{Generative Grammar}
 
+\addlines
 The derivation in (\mex{0}) can also be represented as a tree. This is shown by Figure~\vref{er-das-buch-dem-mann-gibt-flat}.
 \begin{figure}
 \centerline{
@@ -333,7 +334,7 @@ For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.
 \gll ein Beamter, der Beamte\\
 	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
 \zl
-\addlines         
+%\addlines         
 Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{
   To keep things simple, these rules do not incorporate information regarding the inflection class.
 }
@@ -450,12 +451,12 @@ assign the meaning in (\mex{1}b) to the sentence in (\mex{1}a).
      Max sleeps\\
 \glt `Max is sleeping.'
 \ex\label{Bsp-schlafen-max} 
-\relation{sleep}(\relation{max})
+\relation{schlafen}(\relation{max})
 \zl
-\addlines[2]
-Here, we are assuming \relation{sleep} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
+%%\addlines[2]
+Here, we are assuming \relation{schlafen} to be the meaning of  \emph{schläft} `sleeps'. We use prime symbols to indicate
 that we are dealing with word meanings and not actual words. At first glance, it may not seem that we have really gained anything
-by using \relation{sleep} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
+by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
 It is, however, important to concentrate on a single verb form as inflection is irrelevant when it comes to meaning. We can see this by comparing the 
 examples in (\mex{1}a) and (\mex{1}b):
 \eal
@@ -500,7 +501,7 @@ with various subjects:
      Xaver sleeps\\
 \glt `Xaver is sleeping.'
 \zl
-We can therefore abstract away from any specific use of \relation{sleep} and instead of, for example, \relation{max} in (\mex{-2}b), we
+We can therefore abstract away from any specific use of \relation{sleep} and instead of, for example, \relation{max} in (\ref{sleep-max}), we
 use a variable (\eg $x$). This $x$ can then be replaced by \relation{paul}, \relation{mio} or \relation{xaver} in a given sentence. To allow us
 to access these variables in a given meaning, we can write them with a $\lambda$ in front. Accordingly, \emph{schläft} `sleeps' will have
 the following meaning:
@@ -512,9 +513,9 @@ The step from (\ref{sleep-max}) to (\mex{0}) is referred to as \emph{lambda abst
 The combination of the expression (\mex{0}) with the meaning of its arguments happens in the following way: we remove the $\lambda$ and the 
 corresponding variable and then replace all instances of the variable with the meaning of the
 argument. If we combine (\mex{0}) and \relation{max} as in (\mex{1}),
-we arrive at the meaning in (\ref{Bsp-schlafen-max}). 
+we arrive at the meaning in (\ref{sleep-max}), namely \relation{sleep}(\relation{max}). 
 \ea
-$\lambda x~\relation{sleep}(x)$ \relation{max}   \todostefan{gdw. \relation{sleep}(\realtion{max})}
+$\lambda x~\relation{sleep}(x)$ \relation{max}
 \z
 The process is called $\beta$"=reduction\is{beta"=reduction@$\beta$"=reduction} or 
 $\lambda$"=conversion\is{lambda"=conversion@$\lambda$"=conversion}. To show this further, let us consider an example with a transitive verb. The sentence
@@ -531,7 +532,7 @@ The $\lambda$"=abstraction of \emph{mag} `likes' is shown in (\mex{1}):
 $\lambda y \lambda x~\relation{like}(x, y)$
 \z
 Note that it is always the first $\lambda$ that has to be used first. The variable $y$ corresponds
-to the object of \emph{mögen}. For languages like English it is assumed that the object forms a verb
+to the object of \emph{mögen} `to like'. For languages like English it is assumed that the object forms a verb
 phrase (VP) together with the verb and this VP is combined with the subject. German differs from
 English in allowing more freedom in constituent order. The problems that result for form meaning
 mappings are solved in different ways by different theories. The respective solutions will be
@@ -668,7 +669,7 @@ The asterisk\is{*} in (\mex{0}) stands for any number of iterations. Therefore, 
 as well as those with one, two or more.
 
 % because of moving footnotes
-\addlines[2]
+%\addlines[2]
 The problem is that according to the rule in (\mex{0}) adjectives and nouns do not form a constituent and we can therefore not explain why coordination 
 is still possible in (\mex{1}):
 \ea
@@ -795,7 +796,7 @@ Other adjuncts such as prepositional phrases or relative clauses can be combined
 With these rules and those in (\ref{NP-Regeln}), it is possible -- assuming the corresponding rules for PPs and
 relative clauses -- to analyze all the examples in (\ref{Beispiele-NP-Adjunkte}).
 
-\addlines
+%\addlines
 (\ref{NP-Regeln}c) states that it is possible for \nbar to consist of a single noun. A further important rule has not yet been
 discussed: we need another rule to combine nouns such as \emph{Vater} `father', \emph{Sohn} `son' or \emph{Bild} `picture', 
 so"=called \emph{relational nouns}\is{noun!relational}, with their arguments. Examples of these can be found in (\mex{1}a--b).
@@ -939,7 +940,7 @@ considering the question of where we can incorporate them. In this way, the noun
 can occur in the same sentences. The empty noun box also behaves like one with a genuine noun. If we
 do not open the empty box, we will not be able to ascertain the difference to a filled box. 
 
-\addlines[2]
+%\addlines[2]
 It is not only possible to omit the noun from noun phrases, but the determiner can also remain unrealized in certain contexts.
 (\mex{1}) shows noun phrases in plural\is{plural}:
 \eal
@@ -1043,6 +1044,7 @@ An adjective phrase (AP) can consist of an NP and an adjective, a PP and an adje
 \ex AP $\to$ PP A
 \ex AP $\to$ A
 \zl
+\addlines
 There are two imperfections resulting from the rules we have developed thus far. These are the rules for adjectives
 or nouns without complements in (\mex{0}c) as well as (\ref{NP-Regeln-Nbar-N}) -- repeated here as (\mex{1}):
 \ea
@@ -1225,7 +1227,8 @@ prepositional phrase consists of \pbar, that is, a combination of P and NP.\is{p
 \section{\xbart}
 \label{sec-xbar}
 
-%\addlines
+%%\addlines
+\largerpage[2]
 If\is{X theory@\xbar theory|(}  we look again at the rules that we have formulated in the previous section, we see that heads are always 
 combined with their complements to form a new constituent (\mex{1}a,b), which can then be combined with further constituents (\mex{1}c,d):
 
@@ -1338,7 +1341,7 @@ rule match, the rules in (\mex{0}) require that the word class of an element on 
 of the rule (X or \xbar) matches that of the element on the left"=hand side of the rule (\xbar or
 $\overline{\overline{\mbox{X}}}$).
 
-\largerpage
+%\largerpage
 A lexical element can be combined with all its complements\is{complement}. The `*'\is{*} in the last rule stands for
 an unlimited amount of repetitions of the symbol it follows. A special case is zero"fold occurrence of complements. There is no
 PP complement of \emph{Bild} `picture' present in \emph{das Bild} `the picture' and thus N becomes \nbar. The result of the
@@ -1447,7 +1450,7 @@ plausible when one considers more complex noun phrases:
 	 the Maria from Hamburg\\
 \glt `Maria from Hamburg'
 \zl
-%\addlines[2]
+\addlines[2]
 Unary projections are somewhat inelegant but this should not concern us too much here, as we have
 already seen in the discussion of the lexical entries in (\ref{Lexikon-Projektion})
 that unary branching nodes can be avoided for the most part and that it is indeed desirable to avoid
@@ -1455,7 +1458,7 @@ such structures. Otherwise, one gets spurious ambiguities\is{ambiguity!spurious}
 chapters, we will discuss approaches such as Categorial Grammar and HPSG, which do not assume
 unary rules for determiners, adjectives and nouns. 
 
-%\addlines[-1]
+%%\addlines[-1]
 Furthermore, other \xbar~theoretical assumptions will not be shared by several theories discussed in this book. In particular, the assumption that non"=heads always have
 to be maximal projections\is{projection!maximal} will be disregarded. \citet{Pullum85a} and
 \citet{KP90a} have shown that the respective theories are not necessarily less restrictive
@@ -1505,7 +1508,7 @@ Why is the interaction of the rules in (\mex{1}) problematic?
 \ex Det $\to$ $\epsilon$
 \ex N $\to$ $\epsilon$
 \zl
-
+\addlines
 \item Why is it not a good idea to mark \emph{books} as NP in the lexicon?
 
 \item Can you think of some reasons why it is not desirable to assume the following rule for nouns such as \emph{books}:

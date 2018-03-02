@@ -1524,17 +1524,19 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
 
 \usepackage{setspace}
-\usepackage{caption}
-% \captionsetup{labelfont=bf}
-\captionsetup{%
-font={%
-stretch=.8%
-,small%
-},%
-width=.8\textwidth
-}
 
-\setcapindent{0pt}
+% uncomment this since otherwise captions need two instead of one line. St. Mü.02.03.3018
+%% \usepackage{caption}
+%% % \captionsetup{labelfont=bf}
+%% \captionsetup{%
+%% font={%
+%% stretch=.8%
+%% ,small%
+%% },%
+%% width=.8\textwidth
+%% }
+
+%% \setcapindent{0pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
