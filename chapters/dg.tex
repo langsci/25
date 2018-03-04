@@ -1016,6 +1016,7 @@ its subject, object and so on, he assumes further dependencies for extracted ele
      who believe you that I seen have\\
 \glt `Who do you believe that I saw?'
 \z
+\addlines
 Hudson states that the use of multiple dependencies in Word Grammar\indexwg corresponds to structure
 sharing\is{structure sharing} in HPSG\indexhpsg \citep[\page 15]{Hudson97a}. Nonlocal dependencies are modeled as a series
 of local dependencies as it is done in \gpsg and \hpsg. This is important since it allows one to
@@ -1085,7 +1086,7 @@ In every non-compound sentence there is just one word whose parent
 is not a word but a contextual element.
 \end{principle}
 
-\largerpage
+%\largerpage
 \noindent
 The No-tangling Principle ensures that there are no crossing dependency lines, that is, it ensures
 that structures are projective \citep[\page 23]{Hudson2000a}. Since non-local dependency relations are established via the
@@ -1398,6 +1399,7 @@ dg edges
 \caption{\label{fig-dg-adjunct-attachment-right}Analysis of verb coordination involving the connection relation}
 \end{figure}%
 
+\addlines
 \citet[\page 217]{Levine2003a} discusses these sentences in connection to the \hpsg analysis of
 extraction\is{extraction} by \citet*{BMS2001a}. Bouma, Malouf \& Sag suggest an analysis in which adjuncts are
 introduced lexically as dependents of a certain head. Since adjuncts are introduced lexically, the
@@ -1717,7 +1719,7 @@ scopes over \emph{singen} `sing' and in the second one over \emph{singen darf} `
      that he not sing may\\
 \glt `that he is not allowed to sing' or `that he is allowed not to sing'
 \z
-\addlines[2]
+\addlines
 The reading in which \emph{nicht} `not' scopes over the whole verbal complex would result in the
 non-projective structure that is given in Figure~\vref{dg-nicht-singen-darf}.
 \begin{figure}
@@ -1871,8 +1873,8 @@ dg edges
 \caption{\label{fig-dem-saft-eine-kraeftige-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
 \end{figure}%
 
-%\addlines[2]
-\largerpage
+\addlines[2]
+%\largerpage
 Such apparent multiple frontings\is{fronting!apparent multiple} are not restricted to NPs. Various types of dependents can be
 placed in the \vf. An extensive discussion of the data is provided in \citew{Mueller2003b}. Additional data
 have been collected in a research project on multiple frontings and information structure
@@ -1912,7 +1914,7 @@ dg edges
     kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.' with an empty
   verbal head for the \vf}
 \end{figure}%
-\largerpage
+%\largerpage
 It is important to note that the issue is not solved by simply dropping the V2 constraint and
 allowing dependents of the finite verb to be realized to its left, since the fronted constituents do
 not necessarily depend on the finite verb as the examples in (\mex{1}) show:\pagebreak
@@ -1946,7 +1948,7 @@ And although the respective structures are marked, such multiple frontings\is{fr
 If such dependencies are permitted it is really difficult to constrain them. The details cannot be
 discussed here, but the reader is referred to \citew{Mueller2005d,MuellerGS}.
 
-\addlines
+%\addlines
 Note also that Engel's statement regarding the linear order in German sentences \citeyearpar[\page
   50]{Engel2014a} referring to one element in front of the finite verb (see footnote~\ref{fn-Engel-linearization}) is very imprecise. One can only guess what is
 intended by the word \emph{element}. One interpretation is that it is a continuous constituent in the classical sense of
@@ -2014,6 +2016,7 @@ Grammar accounts.
 \subsubsection{Translating projective Dependency Grammars into phrase structure grammars}
 \label{sec-dg-psg-translation}
 
+\largerpage[2]
 As noted by \citet{Gaifman65a}, \citet[\page 234]{Covington90a}, \citet{Oliva2003a} and \citet[\page
   1093]{Hellwig2006a},\todostefan{S: \citew{Robinson70a-u}} certain projective headed phrase structure grammars can be turned into
 Dependency Grammars by moving the head one level up to replace the dominating node. So in an NP
@@ -2086,7 +2089,7 @@ information.
 {D}  & {$\to$ a}\\
 \end{tabular}
 \z
-\addlines[2]
+%\addlines[2]
 If one replaces the N and V in the right-hand side of the two left-most rules in (\mex{0}) with the
 respective lexical items and then removes the rules that license the words, one arrives at the
 lexicalized variant of the grammar given in (\mex{1}):
@@ -2151,6 +2154,7 @@ HPSG.
 \subsubsection{Non-projective Dependency Grammars and phrase structure grammars with discontinuous constituents}
 \label{sec-discontinuous-constituents-HPSG}
 
+\largerpage[2]
 The equivalent to non-projective\is{projectivity|(} dependency graphs are discontinuous constituents in phrase
 structure grammars. In what follows I want to provide one
 example of a phrase structure"=based theory that permits discontinuous structures. Since, as I
@@ -2175,6 +2179,7 @@ The symbol `$\bigcirc$'\is{$\bigcirc$}\is{relation!$\bigcirc$}\isrel{shuffle}\la
 stands for the \emph{shuffle} relation. \emph{shuffle} relates three lists A, B and C iff C
 contains all elements from A and B and the order of the elements in A and the order of the elements
 of B is preserved in C. (\mex{1}) shows the combination of two sets with two elements each:
+
 \ea
 $\phonliste{ a, b } \bigcirc \phonliste{ c, d } =
 \begin{tabular}[t]{@{}l}
@@ -2216,6 +2221,7 @@ It states that the \phonv of a sign is the concatenation of the \phonvs of its \
 elements. Since the order of the \textsc{domain} elements corresponds to their surface order, this is
 the obvious way to determine the \phonv of the whole linguistic object. 
 
+\largerpage
 Figure~\vref{fig-the-child-reads-the-book-reape-binary} shows how this machinery can be used to license binary
 branching structures with discontinuous constituents.
 \begin{figure}
@@ -2516,7 +2522,7 @@ be represented somewhere. I will discuss this in the following subsection.
 \label{sec-dg-daughters-mothers}
 \label{sec-dg-is-simpler}
 
-%\addlines
+%%\addlines
 As \citet{Oliva2003a} points out, the equivalence of Dependency Grammar and HPSG only holds up as far
 as \headvs are concerned.
 %\todostefan{S: many DG have several level of representations. You cannot compare HSG wioth only one
@@ -2824,6 +2830,7 @@ So assuming an empty head or a phrasal schema seems to be the
 only option.
 %\todostefan{S: There is a third very interesting option considered by Tesnière 1959 (see our intro) and before by Sicard 1801 and maybe before and exploited in all my formalizations of extraction including the HPSG's one in Kahane 2009: the wh-word has a double position, it is both a complementizer and a pronoun.}
 
+\largerpage
 Chapter~\ref{Abschnitt-Phrasal-Lexikalisch} is devoted to the discussion of whether
 certain phenomena should be analyzed as involving phrase structural configurations or whether
 lexical analyses are better suited in general or for modeling some phenomena. I argue there that all
@@ -2836,7 +2843,7 @@ phenomena.
 There always has to be some element on which others depend. It has been argued by
 \citet{Jackendoff2008a}\is{construction!N-P-N|(} that it does not make sense to assume that one of the
 elements in N-P-N constructions like those in (\mex{1}) is the head.
-\addlines
+%\addlines
 \eal
 \ex day by day, paragraph by paragraph, country by country
 \ex dollar for dollar, student for student, point for point
@@ -2896,6 +2903,7 @@ for purely selection"=based grammars.
 
 \section*{Exercises}
 
+\largerpage
 Provide the dependency graphs for the following three sentences:
 \eal
 \ex 
