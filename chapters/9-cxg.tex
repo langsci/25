@@ -1,5 +1,4 @@
 %% -*- coding:utf-8 -*-
-
 \chapter{Construction Grammar}
 \label{Kapitel-CxG}
 
@@ -69,13 +68,13 @@ Willy watered the plants flat.
 \z
 The number of arguments is determined by the construction instead, that is, by a rule or schema saying that the subject, verb, object and a predicative
 element must occur together and that the entire complex has a particular meaning. This view is fundamentally different from analyses in GB\indexgb,
-Categorial Grammar\indexcg, LFG\footnote{
+Categorial Grammar\indexcg, LFG\footnote{%
 	See \citew{Alsina96a} and \citew*{ADT2008a,ADT2013a}, however. For more discussion of this point, see
         Sections~\ref{sec-aspect-at-clause-level} and~\ref{sec-phrasal-LI}.%
 }\indexlfg and HPSG\indexhpsg.
 In the aforementioned theories, it is commonly assumed that arguments are always selected by lexical heads and not independently licensed by phrasal
 rules. See \citew{Simpson83a}, \citew{Neeleman94a}, \citew{Wunderlich97c}, \citew{Wechsler97a}, and
-\citew{Mueller2002b} for corresponding work in LFG, GB, Wunderlich's\aimention{Dieter Wunderlich}
+\citew{Mueller2002b} for corresponding work in LFG, GB, Wunderlich's\ia{Dieter Wunderlich}
 Lexical Decomposition Grammar\is{Lexical Decomposition Grammar} and HPSG. 
 
 \addlines
@@ -92,8 +91,8 @@ Examples of more formal works are \citew{KF99a}, \citet{Kay2002a}, \citew{MR2001
 took place in close collaboration with Ivan Sag. The result was a variant of HPSG known as Sign"=Based Construction Grammar (SBCG) \citep{Sag2010b,Sag2012a}.
 See Section~\ref{sec-SbCxG} for further discussion.
 
-John Bryant\aimention{John Bryant}, Nancy Chang\aimention{Nancy Chang}, Eva Mok\aimention{Eva Mok}
-have developed a system for the implementation of Embodied Construction Grammar\footnote{
+John Bryant\ia{John Bryant}, Nancy Chang\ia{Nancy Chang}, Eva Mok\ia{Eva Mok}
+have developed a system for the implementation of Embodied Construction Grammar\footnote{%
   See \url{http://www.icsi.berkeley.edu/~jbryant/old-analyzer.html} and \citew{Bryant2003a-u}.
 % checked 20.02.2018
 }.
@@ -120,10 +119,13 @@ constructions and valence properties of words.
 \citet*{BLT2009a} use a probabilistic context"=free grammar\is{context"=free grammar!probabilistic
   (PCFG)} to model grammatical knowledge of two and three year old children.
 
+\citet{LK2017a} show that their version of Tree"=Adjoining Grammar\indextag can be seen as a
+formalization of several tenets of Construction Grammar. See for example the analysis of idioms
+explained in Figure~\ref{Abbildung-take-into-account-TAG} on page~\pageref{Abbildung-take-into-account-TAG}.
 
 \section{General remarks on the representational format}
 
-\largerpage
+%\largerpage
 In this section, I will discuss the mechanisms of Berkeley Construction Grammar (BCG). As I pointed out in
 \citew{Mueller2006d}, there are fundamental problems with the formalization of BCG. The details will
 be given in Section~\ref{sec-formal-bcg}. While the framework was developed further into Sign-Based Construction Grammar (see Section~\ref{sec-sbcg}) by its creators Kay
@@ -215,7 +217,8 @@ $+$\\
 The syntactic category of the entire construction is V.
 Its complements cannot have the grammatical function\is{grammatical function} subject\is{subject}.
 
-\largerpage[2]
+\largerpage% aus irgendwelchen Gründen will addlines hier nciht, deshalb zwei mal largerpage
+%\addlines
 The VP construction is a particular type of head"=complement construction. The fact that it has much in common with the more general
 head"=complement construction is represented as follows:
 
@@ -271,7 +274,7 @@ them here. For more on MRS, see Section~\ref{Abschnitt-leere-Elemente-Semantik}.
 
 \subsection{Adjuncts}
 
-\largerpage[2]
+\largerpage
 For\is{adjunct|(} the combination of heads and modifiers, Kay and Fillmore assume further phrasal constructions that
 are similar to the verb phrase constructions discussed above and create a relation between a head and a modifier.
 Kay and Fillmore assume that adjuncts also contribute something to the \textsc{val} value of the mother node.
@@ -283,7 +286,7 @@ In principle, \textsc{val} is nothing more than the set of all non"=head daughte
 
 The passive\is{passive} has been described in CxG by means of so"=called linking constructions\is{construction!linking}, which are combined with lexical
 entries in inheritance hierarchies\is{inheritance}. In the base lexicon, it is only listed which semantic roles\is{semantic role} a verb fulfils and
-the way in which these are realized is determined by the respective linking constructions\is{linking|(} with which the basic lexical entry is combined. Figure~\vref{Abb-Passiv-Vererbung}
+the way in which these are realized is determined by the respective linking constructions\is{linking|(} with which the basic lexical entry is combined. Figure~\ref{Abb-Passiv-Vererbung}
 gives an example of a relevant inheritance hierarchy.
 \begin{figure}
 \centering
@@ -306,15 +309,15 @@ There is a linking construction for both active and passive as well as lexical e
 \emph{read} and \emph{eat}.
  There is then a cross"=classification resulting in an active and a passive variant of each verb.
 
-The idea behind this analysis goes back to work by Fillmore and Kay between 1995 and 1997\footnote{
+The idea behind this analysis goes back to work by Fillmore and Kay between 1995 and 1997\footnote{%
 \url{http://www.icsi.berkeley.edu/~kay/bcg/ConGram.html}. 20.02.2018.
 }, but variants of this analysis were first published in \citew[Chapter~3]{Koenig99a} and \citew[Chapter~4]{MR2001a}.
 Parallel proposals have been made in TAG\indextag (\citealp{Candito96a}; \citealp[\page
   188]{CK2003a-u}; \citealp[\page 171--172]{KO2012a}) and HPSG\indexhpsg
 (\citealp{Koenig99a,DK2000b-u,Kordoni2001b-u}). 
 
-\addlines[2]
-\citet[\page55--57]{MR2001a} provide the following linking constructions:\is{linking}\footnote{
+%\addlines[2]
+\citet[\page55--57]{MR2001a} provide the following linking constructions:\is{linking}\footnote{%
 	In the original version of the transitive construction in (\ref{transitiv-Konstruktion}),
         there is a feature $\theta$ that has the value \textsc{da}$-$, however, \textsc{da} is a
         feature itself and $-$ is the value. I have corrected this in (\mex{1}a) accordingly.
@@ -383,7 +386,7 @@ val & \menge{ \onems{ role \ms{ $\theta$ & agent\\
 \zs
 If we combine this lexical entry with the transitive and subject constructions, we arrive at
 (\mex{1}a) following Fillmore, Kay, Michaelis, and Ruppenhofer,
-whereas combining it with the subject and passive construction yields (\mex{1}b):\footnote{
+whereas combining it with the subject and passive construction yields (\mex{1}b):\footnote{%
 	This assumes a particular understanding of set unification. For criticism of this, see Section~\ref{sec-formal-bcg}.
 }
 \eal
@@ -469,7 +472,7 @@ not be clear that the subject referred to in (\mex{0}) would be one of the argum
 referred to in the description of the lexical item for \emph{schlagen} in (\ref{ex-schlagen-transitive}). 
 }
 For the analysis of Middle Constructions\is{Middle Construction|(} such as (\mex{1}), inheritance-based approaches do not work as there is no
-satisfactory way to add the reflexive pronoun to the valence set:\footnote{
+satisfactory way to add the reflexive pronoun to the valence set:\footnote{%
 	One technically possible solution would be the following: one could assume that verbs that occur in middle constructions always have a description
 	of a reflexive pronoun in their valence set. The Transitive Construction would then have to
         specify the \textsc{syn} value of the reflexive pronoun
@@ -514,8 +517,9 @@ illustration \citeyearpar[\page 77]{Ozkaragoez86a}:\todostefan{PK: How do these 
      war-\textsc{loc} shoot-\textsc{pass}-\textsc{pass}-\textsc{aor}\\
 \glt `One is shot (by one) in war.'
 \zl
-\suffix{In}, \suffix{n}, and \suffix{Il} are allomorphs of the passive/impersonal morpheme.\footnote{According to
-Özkara\-göz, the data is best captured by an analysis that assumes that the passive applies to a
+\suffix{In}, \suffix{n}, and \suffix{Il} are allomorphs of the passive/impersonal
+morpheme.\footnote{%
+According to Özkara\-göz, the data is best captured by an analysis that assumes that the passive applies to a
 passivized transitive verb and hence results in an impersonal passive. The cited authors discussed their data as instances of double passivization, but it was
 argued by \citet{Blevins2003a} that these and similar examples from other languages are impersonal
 constructions that can be combined with personal passives.}
@@ -566,12 +570,12 @@ for the discussion of an inheritance"=based approach in Simpler Syntax.
 
 \section{Verb position}
 
-\addlines
+%\addlines
 At present\is{verb position|(}, I only know of one article in the framework of CxG that has dealt with the sentence structure
 in German. This is the article by Vanessa Micelli
 \citeyearpar{Micelli2012a}, where she describes a computer implementation of a German grammar in Fluid Construction Grammar\indexfcg.
 This fragment is restricted to declarative V2"=clauses and \emph{wh}"=questions. In her analysis, the middle field forms a constituent
-comprising exactly two constituents (the direct and indirect object).\footnote{
+comprising exactly two constituents (the direct and indirect object).\footnote{%
   Note that none of the constituent tests that were discussed in Section~\ref{sec-constituents}
   justifies such an analysis and that no other theory in this book assumes the \mf to be a constituent.%
 } The right sentence bracket and the postfield are empty.
@@ -579,10 +583,12 @@ Long"=distance dependencies are not discussed. It is only possible for arguments
 in the prefield. Micelli's work is an interesting starting point but one has to wait and see how the analysis will be  modified when
 the grammar fragment is expanded.
 
+\largerpage
 In the following, I will not discuss Micelli's analysis further, but instead explore some of the possibilities for analyzing German sentence
 structure that are at least possible in principle in a CxG framework. Since there are neither empty elements nor transformations, the GB and HPSG analyses
 as well as their variants in Categorial Grammar are ruled out.
 The following options remain:
+
 \begin{itemize}
 \item an analysis similar to LFG with an optional verb\todostefan{discontinuous constituents}
 \item  an entirely flat analysis as proposed in GPSG
@@ -605,6 +611,7 @@ that \emph{der Mann der Frau das
   Buch} forms a VP although only three NPs have been combined. CxG has nothing like the theory of extended head domains that was presented in 
   Section~\ref{Abschnitt-Verbstellung-LFG}.
 
+\largerpage
 Thus, both variants with binary"=branching structures are ruled out and only the analysis with flat branching structures remains.
 Sign"=based CxG, which is a variant of HPSG \citep[\page 486]{Sag2010b}, as well as Embodied Construction Grammar \citep[\page 156]{BC2005a} allow for
 a separation of immediate dominance\is{dominance!immediate} and linear order\is{linear precedence} so that it would be possible to
@@ -628,6 +635,8 @@ then there are three options remaining:
 \item Constructions always have slots available for an arbitrary number of adjuncts, or
 \item Constructions can be discontinuous\is{constituent!discontinuous|(}
 \end{itemize}
+
+\noindent
 \citet{Kasper94a} has proposed an analysis of the first type in HPSG: adjuncts and arguments are combined with the head in a flat structure.
 This corresponds to the dominance rule in (\mex{1}), where the position of adjuncts is not stated by the dominance rule.
 \ea
@@ -653,8 +662,8 @@ CxG approaches to date. For further discussions of approaches that allow for dis
 
 \section{Local reordering}
 
-\addlines
-%\largerpage
+%\addlines
+\largerpage
 If\is{constituent order|(} we assume flat branching structures, then it is possible to use the GPSG analysis\indexgpsg for the order of arguments.
 However, \citet{Kay2002a} assumes a phrasal construction for so"=called Heavy"=NP"=Shift\is{Heavy"=NP"=Shift} in English, which means that there is a new rule for
 the reordering of heavy NPs in English rather than one rule and two different ways to linearize the daughters.
@@ -677,7 +686,7 @@ for the analysis of long"=distance dependencies.
  and the position where it is missing is achieved by the operator VAL.
  VAL provides all elements of the valence set of a linguistic object as well as all elements in the valence set of these elements and so on.
  It is thereby possible to have unrestricted access to an argument or adjunct daughter of any depth of embedding, and then identify the fronted
- constituent with an open valence slot.\footnote{
+ constituent with an open valence slot.\footnote{%
    Note again, that there are problems with the formalization of this proposal in Kay \& Fillmore's
    paper. The formalization of VAL, which was provided by Andreas Kathol, seems to presuppose a
    formalization of sets as the one that is used in HPSG, but the rest of Fillmore \& Kay's paper
@@ -704,10 +713,10 @@ Lakoff. Section~\ref{sec-fcg} deals with Fluid Construction Grammar.
 \subsection{Berkeley Construction Grammar}
 \label{sec-formal-bcg}
 
-%\largerpage
+\largerpage
 Section~\ref{sec-passive-bcg} discussed the valence representation in BCG and linking constructions for active and
 passive. \citew{KF99a} represent valence information in sets\is{set|(}
-%% \footnote{
+%% \footnote{%
 %%   But see \citew[Abschnitt~4.1]{Kay2005a} and \citew{Michaelis2006a} for list-based approaches and
 %%   linking constructions.
 %% } 
@@ -723,7 +732,7 @@ are only interested in a specific case: the unification of an arbitrary set with
 \{ NP[\type{nom}], NP[\type{acc}] \} $\wedge$ \{ NP[\type{nom}] \} = \{ NP[\type{nom}], NP[\type{acc}] \}
 \z
 According to Fillmore \& Kay the unification of a set with another set that contains a compatible
-element does not result in an increase of the number of list elements.\pagebreak
+element does not result in an increase of the number of list elements.
 
 \noindent
 (\mex{1}) illustrates another possible case:
@@ -855,7 +864,7 @@ active and passive sentences.
 \subsection{Sign"=Based Construction Grammar}
 \label{sec-SbCxG}\label{sec-sbcg}\label{sec-SBCG}
 
-\addlines
+%\addlines
 In more recent work by Fillmore, Kay, Michaelis \biband Sag, the Kay \& Fillmore formalization of the
 description of valence using the Kay \& Fillmore version of sets was abandoned in favor of the HPSG formalization
 (\citealp{Kay2005a,Michaelis2006a,Sag2012a}; \citealp*[\page 10--11]{SBK2012a}).
@@ -894,7 +903,7 @@ dtrs  \sliste{ \ibox{0} } $\oplus$ \ibox{A} \type{nelist} \\
 \noindent
 The value of \comps\isfeat{comps} is then a list of the complements of a head (see Section~\ref{Abschnitt-Arg-St}).
 Unlike in standard HPSG\indexhpsg, it is not \type{synsem} objects that are selected with valence lists, but rather signs.
-The analysis of the phrase \emph{ate a pizza} takes the form in (\mex{1}).\footnote{
+The analysis of the phrase \emph{ate a pizza} takes the form in (\mex{1}).\footnote{%
   SBCG uses a \formf in addition to the \phonf, which is used for phonological information as in
   earlier versions of HPSG \citep[Section~3.1, Section~3.6]{Sag2012a}. The \formf is usually provided in example analyses.
 }
@@ -928,7 +937,7 @@ dtrs & \sliste{ \ibox{1}, \ibox{2} }
 \z
 %\vspace{-\baselineskip}
 %\end{figure}%
-\largerpage
+%\largerpage
 The difference to HPSG in the version of \citet{ps2} is that for Sag, Wasow \& Bender, signs do not have
 daughters and this makes the selection of daughters impossible.
 As a result, the \synsemf\isfeat{synsem} becomes superfluous (selection of the \phonv and of the
@@ -939,7 +948,7 @@ information about the daughters.
 %All the sound and meaning of the VP \emph{ate a pizza} is present in the mother sign; which parts are contributed by which daughter is not recorded there.
 The object described in (\mex{0}) is of course also of another type than the phrasal or lexical signs that can occur as its daughters.
 We therefore need the following extension so that the grammar will work \citep*[\page
-  478]{SWB2003a}:\footnote{
+  478]{SWB2003a}:\footnote{%
 A less formal version of this constraint is given as the Sign Principle\is{principle!Sign} by
 \citet[\page 105]{Sag2012a}: ``Every sign must be listemically or constructionally licensed, where: a
 sign is listemically licensed only if it satisfies some listeme, and a sign is constructionally
@@ -999,6 +1008,7 @@ third one computational complexity.
 
 \subsubsubsection{Idioms that cross constituent boundaries}
 
+\addlines
 In \citew[Chapter~12]{MuellerLehrbuch1} I conjectured that the locality restrictions
 may be too strong since there may be idioms that require one to make reference to daughters of daughters for their description.  \citew{RS2009a} discuss the following idioms as examples:
 \eal
@@ -1130,7 +1140,7 @@ dtrs \onems{ filler-dtr  \ms[word]{ synsem$|$loc & \ibox{1}
 \z
 \vspace{-\baselineskip}
 \end{figure}%
-\addlines[-1]
+%\addlines[-1]
 The feature geometry in (\mex{0}) differs somewhat from what was presented in Chapter~\ref{Kapitel-HPSG} but that is not of interest here.
 It is only of importance that the semantic contribution of the entire phrase is \relation{surprised}(x\ind{2}).
 The following is said about the internal structure of the phrase: it consists of a filler"=daughter (an extracted element) and also
@@ -1160,7 +1170,7 @@ variants of the idiom that do not have the accusative pronoun in the \vf:
   commentary section, 20.02.2018.
 }
 \glt `I am utterly surprised when I read such nonsense.'
-\pagebreak
+%\pagebreak
 \ex 
 \gll omg dieser xBluuR der nn ist wieder da ey nein ich glaub es tritt mich ein Pferd!!\footnotemark\\
     omg this   XBluuR he  {} is  again there {} no I believe \expl{} kicks me a horse\\
@@ -1207,7 +1217,7 @@ Minimalism, CG, LFG and DG can not.
 In addition to these empirical problems, there is a conceptual problem with (\ref{meta-construction-statemnet}):
 (\ref{meta-construction-statemnet}) is not part of the formalism of typed feature structures but
 rather a meta"=statement.
-%% \footnote{
+%% \footnote{%
 %%   It seems to me that it could be formalized as a type constraint:
 %% \ea
 %% \type{structured-object} \impl\\
@@ -1220,7 +1230,7 @@ rather a meta"=statement.
 %% }
 Therefore,\label{page-sbcg-formalization} grammars which use (\ref{meta-construction-statemnet}) cannot be described with the normal formalism. The formalization given in
 \citet{Richter2004a-u} cannot be directly applied to SBCG, which means that the formal foundations
-of SBCG still have to be worked out.\footnote{
+of SBCG still have to be worked out.\footnote{%
   A note of caution is necessary since there were misunderstandings in the past regarding the degree
   of formalizations of SBCG: in comparison to most other theories discussed in this book,
   SBCG is well-formalized. For instance it is easy to come up with a computer implementation of SBCG
@@ -1386,7 +1396,7 @@ daughters.'' An example of such a constraint given in prose is the Locality Prin
 %% course one could stick to the SBCG feature geometry and say that not the entire \argst element is
 %% shared with the \textsc{gap} element, but then one would end up with single structure
 %% sharings\is{structure sharing} of all the features at the outermost level of a sign, that is, \textsc{phon}, \textsc{form}, \textsc{syn},
-%% \textsc{sem}, and \textsc{cntxt} (see \citealp[\page 98]{Sag2012a} for these features)\footnote{
+%% \textsc{sem}, and \textsc{cntxt} (see \citealp[\page 98]{Sag2012a} for these features)\footnote{%
 %%   Note that these structure sharings are necessary. It is not an option to leave the values of these
 %%   features unspecified in the argument structure list. Since we have a model-theoretic view on
 %%   things, an unspecified value would make the respective structures infinitely ambiguous, since
@@ -1430,7 +1440,7 @@ vowel or not (Flickinger, Mail to the HPSG mailing list, 01.03.2016):
 \ex a  house
 \zl
 %\addlines
-The distinction can be modeled by assuming a selection feature for determiners.\footnote{
+The distinction can be modeled by assuming a selection feature for determiners.\footnote{%
   In Standard HPSG there is mutual selection between the determiner and the noun. The noun selects
   the determiner via \spr and the determiner selects the noun via a feature called
   \textsc{specified}\isfeat{specified}. This feature is similar to the \modf, which was explained in Section~\ref{sec-adjuncts-hpsg}.
@@ -1463,7 +1473,7 @@ presence of an initial consonant in phonology of the subject. English allows for
 raising verbs and one could imagine languages in which all the verbs on the way are sensitive to the
 phonology of the subject. Such languages probably do not exist.
 
-\addlines
+%\addlines
 Now, is this a problem? Not for me, but if one develops a general setup in a
 way to exclude everything that is not attested in the languages of the world (as for instance the
 selection of arguments of arguments of arguments), then it is a problem that heads can see the
@@ -1475,7 +1485,7 @@ one does not have to explicitly state what cannot occur in languages or one woul
 the problem with nonlocally selected phonology values and therefore assume a \synsem or \localf that
 bundles information that is relevant in raising and nonlocal dependencies and does not include the
 phonology.
-%% \footnote{
+%% \footnote{%
 %%   If \synsem is reintroduced, the elements in the valence lists could be of type
 %%   \type{synsem}. Information about phonology would not be part of the description of the selected elements. This would not solve the problem
 %%   of partial verb phrase fronting though, since the \lexf is selected for (hence part of the
@@ -1517,7 +1527,7 @@ are needed is due to the assumption of flat structures.
 
 Due to the conceptual problems with meta"=statements and the relatively simple ways of getting
 around locality restrictions, the reorganization of features (\textsc{mother} vs.\ \synsem) does not bring with it any advantages. Since the grammar becomes more complex due to the meta"=constraint, we should
-reject this change.\footnote{
+reject this change.\footnote{%
   In \citew[\page 253]{MuellerGTBuch2} I claimed that SBCG uses a higher number of features in comparison
   to other variants of HPSG because of the assumption of the \textsc{mother} feature. As \citet{VanEynde2015a} points out this is not true for more recent variants of HPSG since
  they have the \textsc{synsem} feature, which is not needed if \textsc{mother} is assumed. (Van Eynde refers to the \textsc{local}
@@ -1542,7 +1552,7 @@ to the feature geometry that was used before, then \sbcg and Constructional HPSG
 
 Embodied Construction Grammar was developed by \citet{BC2005a}  and there are some implementations of fragments of German that use this
 format \citep{PMAZ2006a-u}. In the following, I will briefly present the formalism using an example construction.
-(\mex{1}) gives the DetNoun construction:\footnote{
+(\mex{1}) gives the DetNoun construction:\footnote{%
   For a similar construction, see \citew[\page 162]{BC2005a}.
 }
 
@@ -1580,7 +1590,7 @@ that the form contribution of the determiner must occur before that of the noun.
 Part of the information represented under f is the orthographic form (f.orth). The inheritance relation is given explicitly
 in the construction as in  \citet{KF99a}.
 
-\addlines
+%\addlines
 The construction in (\mex{0}) can be represented in a similar way to the format used in
 Chapter~\ref{chap-feature-descriptions}:\is{construction!Determiner Noun} (\mex{1}) shows how this
 is done.
@@ -1635,7 +1645,7 @@ This discussion has shown that (\mex{-1}) is more restrictive than (\mex{-2}). T
 discontinuous constituents\is{constituent!discontinuous} such as the deviant one in (\mex{0}b). For example, discontinuous constituents have been
 proposed for verbal complexes, particle verbs and certain coordination data \citep{Wells47a}. 
 Examples for analyses with discontinuous constituents in the framework of HPSG\indexhpsg are
-\citew{Reape94a}, \citew{Kathol95a}, \citew{Kathol2000a}, \citew{Crysmann2003c}, and \citew{BS2004a}.\footnote{
+\citew{Reape94a}, \citew{Kathol95a}, \citew{Kathol2000a}, \citew{Crysmann2003c}, and \citew{BS2004a}.\footnote{%
 	Crysmann, Beaver \biband Sag deal with coordination phenomena\is{coordination}. For an analysis of coordination in TAG\indextag that also makes use of
 	discontinuous constituents, see   \citew{SJ96a} and Section~\ref{Abschnitt-Koordination}.%
 } These analyses, which are discussed in Section~\ref{sec-discontinuous-constituents-HPSG} in more
@@ -1660,7 +1670,7 @@ longer ones and that animate nouns tend to occur before inanimate ones.
 \ex S $\to$ NP[nom], NP[dat], NP[acc], V
 \ex S $\to$ NP[nom], NP[acc], PP, V
 \zl
-\addlines[2]
+%\addlines[2]
 It is possible to capture these generalizations in ECG if one specifies linearization constraints for more general constructions and more specific constructions
 inherit them from these. As an example, consider the Active"=Ditransitive Construction\is{construction!Active Ditransitive} discussed by
 \citet[\page 170]{BC2005a}:
@@ -1703,6 +1713,8 @@ Mary happily tossed me a drink.
 Mary tossed happily me a drink.
 }
 \zl
+%\largerpage
+\addlines
 The restriction agent.f \textbf{before} action.f forces an order where the subject occurs before the verb but also allows for adverbs to occur between
 the subject and the verb.
 The other constraints on form determine the order of the verb and its object: the recipient must be adjacent to the verb and the theme must be
@@ -1723,14 +1735,14 @@ This restriction could therefore be factored out as follows:
 & \multicolumn{2}{@{}l|}{agent.f \textbf{before} action.f}\\\hline
 % \multicolumn{3}{|l|}{\textbf{meaning}}\\
 % & \multicolumn{2}{l|}{\ldots}\\\hline
-\end{tabular}\\
+\end{tabular}
 \z
 The Active-Ditransitive Construction in (\ref{CxG-Active-Ditransitive}) would then inherit the relevant information from (\mex{0}).
 
 In addition to the descriptive means used in (\ref{CxG-DetNoun}), there is the evokes operator\is{evokes operator|(} \citep[\page 151--152]{BC2005a}.
 An interesting example is the representation of the term hypotenuse: this concept can only be explained by making reference to a right"=angled
 triangle \citep[Chapter~5]{Langacker87a-u}. 
-%Jerome Feldman\aimention{Jerome Feldman} (slides) 
+%Jerome Feldman\ia{Jerome Feldman} (slides) 
 \citet[\page 67]{Chang2008a-u} gives the following formalization:\is{hypotenuse}
 \ea
 ~\\*[-1.5\baselineskip]
@@ -1773,7 +1785,7 @@ Before turning to FCG in the next subsection, we can conclude that ECG and HPSG 
 \label{sec-fcg}
 
 \Citet{vanTrijp2013a,vanTrijp2014a} claims that SBCG and HPSG are fundamentally
-different from Fluid Construction Grammar (FCG).\footnote{
+different from Fluid Construction Grammar (FCG).\footnote{%
   A reply to van Trijp based on the discussion in this section is published as \citew{MuellerFCG}.%
 }
 He claims that the former approaches are generative ones while the latter is a
@@ -1807,7 +1819,7 @@ comes with a name and can be depicted as follows:
 \end{tabular}
 }
 \z
-\addlines[2]
+%\addlines[2]
 Linguistic objects have a form and a meaning pole. The two poles could be organized into a single feature
 description by using a \textsc{syn} and a \textsc{sem} feature, but in FCG papers the two poles are
 presented separately and connected via a double arrow. (\mex{1}) is an example:
@@ -1833,6 +1845,7 @@ The name \emph{Kim} according to \citet[\page 99]{vanTrijp2013a}:\\
 \path[<->] (sem) edge (syn);
 \end{tikzpicture}
 \z
+\addlines
 Depending on the mode in which the lexical items are used, the syntactic pole or the semantic pole
 is used first. The first processing step is a matching phase in which it is checked whether the
 semantic pole (for generation) or the syntactic pole (for parsing) matches the structure that was
@@ -1857,7 +1870,7 @@ roles, that is they assign them to grammatical functions. Figure~\vref{fig-as-tr
 example: the verb \emph{sent} has the semantic roles Agent, Patient, Recipient, and Goal  (upper left
 of the figure). Depending
 on the argument structure construction that is chosen, a subset of these roles is selected for
-realization.\footnote{
+realization.\footnote{%
   It is interesting to note here that \citet[\page 141]{vanTrijp2011a} actually suggests a lexical
   account since every lexical item is connected to various phrasal constructions via coapplication
   links. So every such pair of a lexical item and a phrasal construction corresponds to a lexical
@@ -1903,7 +1916,7 @@ nominative and two datives in German, wouldn't we expect that this pattern can b
 passive? While proposals that establish relations between active and passive constructions would
 predict this, alternative proposals that just list the attested possibilities do not.
 
-%\addlines
+\addlines[2]
 The issue of how such generalizations should be captured was discussed in connection with the
 organization of the lexicon in HPSG \citep{Flickinger87,Meurers2001a}. In the lexical world, one could simply categorize all verbs according to their
 valence and say that \emph{loves} is a transitive verb and the passive variant \emph{loved} is an
@@ -1944,14 +1957,14 @@ utterance cannot be processed with matching alone. For example, when processing 
 in (\mex{1}), \emph{he sneezed} could be parsed, but \emph{the foam} and \emph{off the cappuccino}
 would be unintegrated (see Chapter~\ref{chap-phrasal} for an extended discussion of such constructions).
 \ea
-He sneezed the foam off the cappuccino.\footnote{
+He sneezed the foam off the cappuccino.\footnote{%
 \citew[\page 42]{Goldberg2006a}.
 }
 \z
 So, \citet[\page 319--320]{SvT2011a} suggest that only if regular constructions cannot apply, merging is
 allowed. The problem with this is that human language is highly ambiguous and in the case
 at hand this could result in situations in which there is a reading for an utterance, so that the
-repair strategy would never kick in. Consider (\mex{1}):\footnote{
+repair strategy would never kick in. Consider (\mex{1}):\footnote{%
   I apologize for these examples \ldots. An English example that shows that there may be ambiguity
   between the depictive and the resultative construction is the following one that is due to
   \citet{Haider2016b}:
@@ -2087,7 +2100,7 @@ are empirically problematic and that his theory therefore cannot be explanatory 
 correctness is a precondition for explanatory adequacy.
 
 Van Trijp claims that sentences with nonlocal dependency constructions in English start with a
-topic.\footnote{
+topic.\footnote{%
 \Citet[\page 256]{vanTrijp2014a} uses the following definitions for topic and focus: ``Topicality is defined in terms of aboutness: the topic of an utterance
 is what the utterance is `about'. Focality is defined in terms of salience:
 focus is used for highlighting the most important information given the
@@ -2116,6 +2129,7 @@ is an object marker (p.\,10, 22) or a non-subject marker (p.\,23). It is true th
 \ex Who saw the man?
 \ex Who did John see?
 \zl
+\addlines
 First, \emph{do} can be used to emphasize the verb:
 \ea
 Who \emph{did} see the man?
@@ -2281,7 +2295,7 @@ the performance model that combines with it demands a lot of resources.
 \label{sec-discontinuous-constituents-fcg}
 
 I now turn to parsimony: van Trijp uses a subject-verb anchor construction that combines the subject
-and the main verb. Because of examples like (\mex{1}) it must be possible to have discontinuous subject-verb constructions:\footnote{
+and the main verb. Because of examples like (\mex{1}) it must be possible to have discontinuous subject-verb constructions:\footnote{%
   Unless modals and tense auxiliaries are treated as main verbs (which they should not in English), constructions with
   modals seem to be another case where the subject and the main verb are not adjacent:
   \eal
@@ -2292,6 +2306,7 @@ and the main verb. Because of examples like (\mex{1}) it must be possible to hav
 \ea
 Peter often reads books.
 \z
+\largerpage
 But if such constructions can be discontinuous one has to make sure that (\mex{1}b) cannot be an
 instantiation of the subject-verb construction:
 \eal
@@ -2402,7 +2417,7 @@ parsimony of the analyses is not really comparable since the restrictions on con
 really worked out (or at least not published). If the formalization of restrictions on continuity in FCG turns out to be even
 half as complex as the formalization that is necessary for accounts of nonlocal dependencies
 (extraction and extraposition) in linearization"=based HPSG that \citet{Reape2000a}
-suggested,\footnote{
+suggested,\footnote{%
   See \citew{KP95a} for a linearization"=based account of extraposition. This account is
   implemented in the Babel System \citep{Babel}. See \citep{Mueller99g} on restricting
   discontinuity. Linearization"=based approaches were argued to not be able to account for
@@ -2463,6 +2478,7 @@ how speakers express their conceptualizations of the world through language
 Cognitive-functional grammars therefore implement both a competence and a
 processing model. \citep[\page 90]{vanTrijp2013a}
 \end{quote}
+\largerpage
 It is true that HPSG and SBCG make a competence/performance distinction \citep{SW2011a}. HPSG
 theories are theories about the structure of utterances that are motivated by distributional
 evidence. These theories do not contain any hypothesis regarding brain activation, planning of
@@ -2476,7 +2492,7 @@ research into a bigger picture. In comparison, it is wrong to develop models lik
 versions of Minimalism\indexmp (called Biolinguistics\is{Biolinguistics}), where it is assumed that utterances are derived in
 phases\is{phase} (NPs, CPs, depending on the variant of the theory) and then shipped to the interfaces\is{interface} (spell
 out and semantic interpretation). This is not what humans do (see
-Chapter~\ref{Abschnitt-Diskussion-Performanz}).\footnote{
+Chapter~\ref{Abschnitt-Diskussion-Performanz}).\footnote{%
 Attempts to integrate current Minimalist theories with psycholinguistic findings \citep{Phillips2003a} are
 incompatible with core principles of Minimalism like the \emph{No Tampering Condition}\is{No
   Tampering Condition (NTC)} of \citet{Chomsky2008a}.
@@ -2506,6 +2522,7 @@ Actual implementations of HPSG typically handle the problem by guiding the lingu
 using a (rule-based) phrase structure backbone, but the disadvantage of this approach is that the ``organization and formulation of the grammar is different from
 that of the linguistic theory'' \citep[Section~4.2.2]{LM2006a}. \citep[\page 108]{vanTrijp2013a}
 \end{quote}
+\largerpage
 He concludes:
 \begin{quote}
 Applying all these observations to the operationalization of SBCG, we can
@@ -2535,15 +2552,16 @@ case, let us look at the Head-Argument Schema. The Head-Argument Schema is basic
 \type{head-argument-phrase} with certain type constraints that are partly inherited from its
 supertypes. The type with all the constraints was given on page~\pageref{head-arg-schema-hfp} and is
 repeated here as (\mex{1}):
+\largerpage[2]
 \eas
 \label{head-arg-schema-hfp-zwei}
-(syntactic) constraints on \type{head-argument-phrase}:\\
-\onems[head-argument-phrase~]{
+(syntactic) constraints on \type{head-complement-phrase}:\\
+\onems[head-complement-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2}
+                          comps & \ibox{2}
                         }\\
 head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                   comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
@@ -2551,21 +2569,21 @@ non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 %\addlines
 This can be translated into phrase structure grammar rules in a straight-forward way:
 \eal
-\ex \onems[head-argument-phrase~]{
+\ex \onems[head-complement-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2}
+                          comps & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                   comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 } $\to$ \ibox{4}, \ibox{5}
-\ex \onems[head-argument-phrase~]{
+\ex \onems[head-complement-phrase~]{
 synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2}
+                          comps & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                   comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 } $\to$ \ibox{5}, \ibox{4}
@@ -2579,7 +2597,7 @@ to the two orders that are permitted by LP-rules: the head precedes its argument
 
 The following code shows how (\mex{0}b) is implemented in TRALE:
 \begin{verbatim}
-arg_h rule (head_argument_phrase,
+arg_h rule (head_complement_phrase,
           synsem:loc:cat:head:initial:minus,
           head_dtr:HeadDtr,
           non_head_dtrs:[NonHeadDtr]
@@ -2590,7 +2608,7 @@ cat> HeadDtr.
 \end{verbatim}
 A rule starts with an identifier that is needed for technical reasons like displaying intermediate
 structures in the parsing process in debugging tools. A description of the mother node follows and
-after the arrow we find a list of daughters, each introduced by the operator \verb+cat>+.\footnote{
+after the arrow we find a list of daughters, each introduced by the operator \verb+cat>+.\footnote{%
   Other operators are possible in TRALE. For instance, \texttt{sem\_head} can be used to guide the
   generator. This is control information that has nothing to do with linguistic theory and not
   necessarily with the way humans process natural language. There is also a \texttt{cats} operator,
@@ -2602,23 +2620,23 @@ computer"=readable variant of (\mex{0}b) additionally including the explicit spe
 
 Now, the translation of a parallel schema using a \textsc{mother} feature like (\mex{1}a) into a phrase structure rule is almost as simple:
 \eal
-\ex \onems[head-argument-cx~]{
+\ex \onems[head-complement-cx~]{
 mother$|$synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                                  subcat & \ibox{2}
+                                  comps & \ibox{2}
                         }\\
 head-dtr$|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                   subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                   comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ [ synsem \ibox{3} ] }
 }
 
 \ex 
-\ibox{6} $\to$ \ibox{4}, \ibox{5} where \onems[head-argument-cx~]{
+\ibox{6} $\to$ \ibox{4}, \ibox{5} where \onems[head-complement-cx~]{
 mother \ibox{6} $|$synsem$|$loc$|$cat  \ms{ head   & \ibox{1} \\
-                          subcat & \ibox{2}
+                          comps & \ibox{2}
                         }\\
 head-dtr \ibox{4} $|$synsem$|$loc$|$cat \ms{ head   & \ibox{1} \\
-                                             subcat & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
+                                             comps & \ibox{2} $\oplus$ \sliste{ \ibox{3} }
                                  } \\
 non-head-dtrs   \sliste{ \ibox{5} [ synsem \ibox{3} ] }
 }
@@ -2655,6 +2673,8 @@ that does not make any claims about human language processing is efficient or no
 irrelevant. Phrase structure-based backbones are therefore irrelevant as well, provided they refer
 to the grammar as described in theoretical work.  
 
+\largerpage
+\enlargethispage{6pt}
 Now, this begs the question whether there is a contradiction in my claims. On
 page~\pageref{page-sbcg-formalization} I pointed out that SBCG is lacking a formalization in
 Richter's framework \citep{Richter2004a-u}. Richter and also \citet{LM2006a} pointed out that there are problems with
@@ -2678,7 +2698,7 @@ evolved or how it is acquired by speakers. For this we need specific theories ab
 evolution/"language change/"language acquisition. This is parallel to what was said about the
 competence/performance distinction, in order to account for language evolution we would have to have
 several HPSG grammars and say something about how one developed from the other. This will involve
-weighted constraints, it will involve recategorization of linguistic items and lots more.\footnote{
+weighted constraints, it will involve recategorization of linguistic items and lots more.\footnote{%
   There are systems that use weighted constraints. We had a simple version of this in the
   German HPSG grammar that was developed in \verbmobil project \citep{MK2000a} already. Further
   theoretical approaches to integrate weighted constraints are \citew{Brew95a} and more recently
@@ -2691,6 +2711,7 @@ language evolution in the very same way as FCG is.
 
 \subsubsubsection{Theoretical physics vs.\ Darwinian evolutionary theory}
 
+\largerpage[2]
 Van Trijp compares SBCG and FCG and claims that SBCG follows the model of theoretical physics --
 like Chomsky does --, while FCG adopts a Darwinian model of science -- like Croft does --, the difference
 being that SBCG makes certain assumptions that are true of all languages, while FCG does not make
@@ -2720,7 +2741,7 @@ I am waiting for my man.
 %\addlines[2]
 So, assuming strict locality of selection requires that all phenomena that cannot be treated locally
 have to be analyzed by passing information up.
-%% \footnote{
+%% \footnote{%
 %%   It should also be noted that \citet[\page 111]{vanTrijp2013a} draws hasty conclusions when he
 %%   writes: \emph{the locality of SBCG constructions, which entails that all languages can best be
 %% described as constraints on local trees.} Depending on the definition of tree 
@@ -2746,6 +2767,7 @@ between SBCG and FCG does not exist.
 
 \subsubsubsection{Permissiveness of the theories}
 
+\largerpage[2]
 Van Trijp claims that HPSG/SBCG is a ``generative grammar'' since its aim is to account for and admit only
 grammatical sentences. FCG on the other hand is more permissive and tries to get the most out of the
 input even if it is fragmentary or ungrammatical (see also \citealp[\page 166]{Steels2013a}). While it is an engineering decision to be able to parse ungrammatical input --  and 
@@ -2763,7 +2785,7 @@ between HPSG/SBCG and FCG.
 \subsubsubsection{A note on engineering}
 
 %\addlines[2]
-A problematic property of work done in FCG is that linguistic and engineering aspects are mixed.\footnote{
+A problematic property of work done in FCG is that linguistic and engineering aspects are mixed.\footnote{%
 This is not a problem if all FCG papers are read as papers documenting the FCG-system (see
 Footnote~\ref{Steels-FCG-System} on page~\pageref{Steels-FCG-System}) since then it
 would be necessary to include these technical details. If the FCG papers are to be read as
@@ -2789,6 +2811,7 @@ project without much appeal to the general linguist.%
 
 \section{Summary and classification}
 
+\largerpage
 \begin{sloppypar}
 There are currently three formalized variants of Construction Grammar: Sign"=Based Construction
 Grammar, Embodied Construction Grammar, and Fluid Construction Grammar. The first two variants can
@@ -2801,10 +2824,10 @@ rather similar and I would say that these theories are sister theories as well.
 
 Due to the origins of all three theories, respective analyses can differ quite considerably: HPSG is a strongly lexicalized theory, where
 phrasal dominance schemata have only been increasingly more used in the last ten years under the
-influence of Ivan Sag\aimention{Ivan A. Sag}. The phrasal dominance schemata that Ivan Sag uses in
+influence of Ivan Sag\ia{Ivan A. Sag}. The phrasal dominance schemata that Ivan Sag uses in
 his work are basically refinements of schemata that were present in earlier versions of
 HPSG. Crucially, all phenomena that interact with valence receive a lexical analysis \citep*[Section~2.3]{SBK2012a}.
-In CxG, on the other hand, predominantly phrasal analyses are adopted due to the influence of Adele Goldberg\aimention{Adele E.\ Goldberg}.%
+In CxG, on the other hand, predominantly phrasal analyses are adopted due to the influence of Adele Goldberg\ia{Adele E.\ Goldberg}.%
 
 As already emphasized in Chapter~\ref{Kapitel-HPSG}, these are only tendencies that do not apply to all researchers working in the
 theories in question.

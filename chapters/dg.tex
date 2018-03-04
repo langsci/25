@@ -49,12 +49,12 @@ Edeltraud \citet{Werner93a-u}, Halle-Wittenberg.\pagebreak
 
 
 Although work has been done in many countries and continuously over the decades since 1959, a
-periodical international conference was established as late as 2011.\footnote{
+periodical international conference was established as late as 2011.\footnote{%
 % \url is replaced here, since it does cruel things to (our) fonts, which means that the first footnote number
 % comes out too high. 04.03.2016 bug 
   \href{http://depling.org/}{http://depling.org/}. 20.02.2018.
 %  \url{http://depling.org/}. 10.04.2015.
-}$^,$\footnote{
+}$^,$\footnote{%
   A conference on \mtt has taken place biannually since 2003.
 }
 
@@ -78,7 +78,7 @@ Fred Karlsson's Constraint Grammars \citeyearpar{Karlsson90a-u} are developed fo
 for Danish\il{Danish}, Portuguese\il{Portuguese}, Spanish\il{Spanish}, English\il{English}, Swedish\il{Swedish}, Norwegian\il{Norwegian}, French\il{French}, German\il{German}, Esperanto\il{Esperanto}, Italian\il{Italian}, and
 Dutch\il{Dutch}) and are used for school teaching,
 corpus annotation\is{corpus annotation} and machine translation\is{machine translation}. An online
-demo is available at the project website.\footnote{
+demo is available at the project website.\footnote{%
   \url{http://beta.visl.sdu.dk/constraint_grammar}. 20.02.2018.
 }
 %\todostefan{SK: \citew{KP91a-u,IKKLP92a-u,Coch96a}} 
@@ -111,7 +111,7 @@ demo is available at the project website.\footnote{
 
 In recent years, Dependency Grammar became more and more popular among computational linguists. The
 reason for this is that there are many annotated corpora (tree banks) that contain dependency
-information.\footnote{
+information.\footnote{%
   According to \citet{Kay2000a-u}, the first treebank ever was developed by Hays and did
   annotate dependencies.
 } Statistical parsers are trained on such tree banks \citep{YM2003a-u,Attardi2006a-u,Nivre2003a-u,KMcDN2009a-u,Bohnet2010a-u}. Many of
@@ -164,7 +164,7 @@ fragments exist:
 \item Spanish\il{Spanish}                   \citep{Coch96a,Bick2006a-u}
 \item Swahili\il{Swahili}                   \citep{Hurskainen2006a-u}
 \end{itemize}
-The Constraint Grammar webpage\footnote{
+The Constraint Grammar webpage\footnote{%
   \url{http://beta.visl.sdu.dk/constraint_grammar_languages.html}, 20.02.2018.
 } additionally lists grammars for
 Basque\il{Basque},
@@ -511,7 +511,7 @@ declarative main clauses and that the finite verb is in second position.\footnot
 ``Die korrekte Stellung ergibt sich dann zum Teil aus oberflächensyntaktischen Regeln (zum Beispiel:
 im Vorfeld des Konstativsatzes steht immer genau ein Element; das finite Verb steht an zweiter
 Stelle) [\ldots]''
-}$^,$\footnote{
+}$^,$\footnote{%
   \citet[\page 81]{Engel70a} provides counterexamples to the claim that there is exactly one element
   in the \vf. Related examples will be discussed in Section~\ref{sec-dg-multiple-frontings}.
 } Furthermore, there are linearization rules that concern pragmatic properties, as for instance
@@ -577,7 +577,7 @@ Issues regarding the scope of adjuncts and quantifiers
 have to be solved and it is clear that dependency graphs representing dependencies without taking
 into account linear order are not sufficient. An unordered dependency graph assigns grammatical
 functions to a dependent of a head and hence it is similar in many respects to an \lfg
-f"=structure.\footnote{
+f"=structure.\footnote{%
 Tim Osborne (p.\,c.\ 2015) reminds me that this is not true in all cases: for instance non"=predicative prepositions are not reflected in f"=structures, but of course they are present in
 dependency graphs.
 } For a sentence
@@ -727,7 +727,7 @@ In many Dependency Grammar publications on German, linearization issues are not 
 authors just focus on the dependency relations. The dependency relations between a verb
 and its arguments are basically the same in verb-initial and verb-final sentences. If we compare the
 dependency graphs of the sentences in (\mex{1}) given in\pagebreak[4] the Figures~\ref{fig-vl-dg} and~\ref{fig-vi-dg}, we see that only the position of the verb is
-different, but the dependency relations are the same, as it should be.\footnote{
+different, but the dependency relations are the same, as it should be.\footnote{%
   \citet{Eroms2000a} uses the part of speech Pron for pronouns like \emph{jeder}
   `everybody'. If information about part of speech plays a role in selection, this makes necessary a
   disjunctive specification of all valence frames of heads that govern nominal expressions, since
@@ -874,7 +874,7 @@ Now, this is the simplest case, so let us look at the example in (\mex{1}), whic
 \glt `Who do you think I saw?'
 \z
 The dependency relations are depicted in Figure~\vref{fig-wen-glaubst-du-dass-dg}.
-%% \footnote{
+%% \footnote{%
 %% \citet{GO2009a} assume that subjects depend on the auxiliary rather than on the main verb. I am
 %% sticking to Engel's analysis here \citeyearpar[\page 49]{Engel2014a}, but this does not affect any of the points made here.
 %% }
@@ -905,7 +905,7 @@ the lines connecting \emph{glaubst} `believe' and \emph{du} `you' with their cat
 the version of Dependency Grammar assumed, this is seen as a problem or it is not. Let us
 explore the two options: if discontinuity of the type shown in
 Figure~\ref{fig-wen-glaubst-du-dass-dg} is allowed for as in Heringer's and Eroms' grammars
-(\citealp[\page 261]{Heringer96a-u}; \citealp[Section~9.6.2]{Eroms2000a}),\footnote{
+(\citealp[\page 261]{Heringer96a-u}; \citealp[Section~9.6.2]{Eroms2000a}),\footnote{%
   However, the authors mention the possibility of raising an extracted element to a higher node. See
   for instance \citew[\page 260]{EH2003a}.
 } there has to be something in the grammar
@@ -961,9 +961,9 @@ and \citet{GO2009a}.
 %% I wrote dozen of papers on the formalization of extraction showing the link between such an idea,
 %% functional uncertainty in LFG, HPSG and CG slash feature, etc.}
 In what follows, I use the analysis by \citet{GO2009a} as an example for such analyses. Groß \& Osborne depict the reorganized dependencies with a dashed line as in
-Figure~\vref{fig-wen-glaubst-du-dass-dg-rising}.\footnote{
+Figure~\vref{fig-wen-glaubst-du-dass-dg-rising}.\footnote{%
   \citet[\page 260]{EH2003a} make a similar suggestion but do not provide any formal details.%
-}$^,$\footnote{
+}$^,$\footnote{%
 Note that \citet{GO2009a} do not assume a uniform analysis of simple and complex V2 sentences. That
 is, for cases that can be explained as local reordering they assume an analysis without
 rising. Their analysis of (\ref{ex-Diesen-Mann-kent-jeder-dg}) is the one depicted in
@@ -1138,7 +1138,7 @@ of Dependency Grammar today and most of them use the part of speech labels that 
 theories as well (N, P, A, V, Adv, Conj, \ldots). \tes had a system of four major categories: noun,
 verb, adjective, and adverb. The labels for these categories were derived from the endings that are
 used in Esperanto\il{Esperanto}, that is, they are O, I, A, and E, respectively. These categories
-were defined semantically as specified in Table~\ref{table-pos-tesniere}.\footnote{
+were defined semantically as specified in Table~\ref{table-pos-tesniere}.\footnote{%
   As 
 %\citet[\page ]{Klein71a-u} and 
 % Klein hat Beispiele wie Schlag. Die würde Tesnière aber vielleicht als
@@ -1185,7 +1185,7 @@ dependencies between Es.
 It is of course easy to find examples in which adjectives depend on verbs and sentences (verbs)
 depend on nouns. Such cases are handled via so-called \emph{transfers} in \tes's
 system.
-%% \footnote{
+%% \footnote{%
 %% \citet[\page 32]{Weber97a} assumes that the adjective \emph{schön} in (i) is an E, that is, an adverb.
 %% \ea
 %% \gll Das Buch ist schön.\\
@@ -1301,7 +1301,7 @@ dependent.
 
 
 Note that both approaches have to come up with an explanation of subject--verb agreement\is{agreement}. \tes's
-original analysis assumes two dependencies between the verb and the individual conjuncts.\footnote{
+original analysis assumes two dependencies between the verb and the individual conjuncts.\footnote{%
   \citet[\page 467]{Eroms2000a} notes the agreement problem and describes the facts. In his
   analysis, he connects the first conjunct to the governing head, although it seems to be more
   appropriate to assume an internally structured coordination structure and then connect the highest conjunction.
@@ -1659,7 +1659,7 @@ If a dependent is linearized in the \vf it can both scope over and under all oth
 head it is a dependent of.
 \z
 \citet[\page 320]{Eroms85a} proposes an analysis of negation in which the negation is treated as the head;
-that is, the sentence in (\mex{1}) has the structure in Figure~\vref{dg-adv-head}.\footnote{
+that is, the sentence in (\mex{1}) has the structure in Figure~\vref{dg-adv-head}.\footnote{%
 But see \citew[Section~11.2.3]{Eroms2000a}.
 }
 \ea
@@ -1684,7 +1684,7 @@ dg edges
 %
 This analysis is equivalent to analyses in the Minimalist Program\indexmp assuming a NegP\is{category!functional!Neg} and it
 has the same problem: the category of the whole object is Adv, but it should be V. This is a problem
-since higher predicates may select for a V rather than an Adv.\footnote{
+since higher predicates may select for a V rather than an Adv.\footnote{%
 See for instance the analysis of
 embedded sentences like (\ref{ex-dass-er-nicht-singen-darf}) below.
 }
@@ -1886,7 +1886,7 @@ right sentence bracket. See \citew{Mueller2005d,MuellerGS} for further data, dis
 detailed analysis. The equivalent of the analysis in Gross \& Osborne's framework \citeyearpar{GO2009a} would be something like the graph that is shown
 in Figure~\vref{fig-dem-saft-eine-kraeftige-farbe-empty-dg}, but note that \citet[\page 73]{GO2009a}
 explicitly reject empty elements, and in any case an empty element which is stipulated just to get the
-multiple fronting cases right would be entirely ad hoc.\footnote{
+multiple fronting cases right would be entirely ad hoc.\footnote{%
   I stipulated such an empty element in a linearization-based variant of HPSG allowing for
   discontinuous constituents \citep{Mueller2002c},
   but later modified this analysis so that only continuous constituents are allowed, verb
@@ -2125,7 +2125,7 @@ rules.
 This leaves us with the integration of adjuncts. Since adjuncts depend on the head as well (see
 Figure~\vref{fig-the-child-often-reads-the-book-slowly}), a rule could be assumed that allows
 arbitrarily many adjuncts in addition to the arguments. So the V rule in (\mex{0}) would be changed
-to the one in (\mex{1}):\footnote{
+to the one in (\mex{1}):\footnote{%
   See page~\pageref{adv-metarule} for a similar rule in \gpsg and see \citet{Kasper94a} for an HPSG
 analysis of German that assumes entirely flat structures and integrates an arbitrary number of adjuncts.
 }
@@ -2285,7 +2285,7 @@ elements in a flat structure.%
       }
 \end{schema}
 To keep the presentation simple, I assume that the \subcatl contains descriptions of complete
-signs. Therefore the whole list can be identified with the list of non-head daughters.\footnote{
+signs. Therefore the whole list can be identified with the list of non-head daughters.\footnote{%
   Without this assumption one would need a relational constraint that maps a list with descriptions of type
   \type{synsem} onto a list with descriptions of type \type{sign}. See \citew[\page 198]{Meurers99b} for details.
 }
@@ -2500,7 +2500,7 @@ continuous with the exception of extractions to the left. A similar statement ca
 provided all of its dependents are fronted with it (p.\,184). This ``item with all its dependents'' is the
 constituent in constituent"=based grammars. The difference is that this object is not given an
 explicit name and is not assumed to be a separate entity containing the head and its dependents in
-most Dependency Grammars.\footnote{
+most Dependency Grammars.\footnote{%
 See however \citet{Hellwig2003a} for an explicit proposal that assumes that there is a linguistic
 object that represents the whole constituent rather than just the lexical head.
 }
@@ -2525,7 +2525,7 @@ That is, the node labels in dependency graphs correspond to the \headvs in
 an HPSG. There are, however, additional features like \cont for the semantics and \slasch for
 nonlocal dependencies. These values usually differ between a lexical head and its phrasal
 projections. For illustration, let us have a look at the phrase \emph{a book}. The semantics of the
-lexical material and the complete phrase is given in (\mex{1}):\footnote{
+lexical material and the complete phrase is given in (\mex{1}):\footnote{%
   For lambda expressions see Section~\ref{sec-PSG-Semantik}.
 }
 \eal
@@ -2535,7 +2535,7 @@ lexical material and the complete phrase is given in (\mex{1}):\footnote{
 \zl
 Now, the problem for the Dependency Grammar notation is that there is no NP node that could be
 associated with the semantics of \emph{a book} (see Figure~\ref{fig-a-book-psg-dg} on page~\pageref{fig-a-book-psg-dg}), the only thing present in the tree is a node for the
-lexical N: the node for \emph{book}.\footnote{
+lexical N: the node for \emph{book}.\footnote{%
   \citet[\page 391--392]{Hudson2003a}\indexwg is explicit about this: ``In dependency analysis, the dependents modify the head
     word's meaning, so the latter carries the meaning of the whole phrase. For example, in
     \emph{long books about linguistics}, the word \emph{books} means `long books about linguistics'
@@ -2783,7 +2783,7 @@ This has been done in \hpsg in the analysis of relative clauses\is{relative clau
 phrase that contains a relative word and a sentence in which the relative phrase is missing. Pollard
 \& Sag assume an empty relativizer that selects for the relative phrase and the clause with a
 gap \citep[\page 216--217]{ps2}. Similar analyses can be found in Dependency Grammar (\citealp[\page
-  291]{Eroms2000a}).\footnote{
+  291]{Eroms2000a}).\footnote{%
   The Dependency Grammar representations usually have a \stem{d} element as the head of the relative
   clause. However, since the relative pronoun is also present in the clause and since the \stem{d}
   is not pronounced twice, assuming an additional \stem{d} head is basically assuming an empty
@@ -2802,7 +2802,7 @@ gap \citep[\page 216--217]{ps2}. Similar analyses can be found in Dependency Gra
 \glt `the woman of whose sister I saw a picture'
 \zlast
 }
-Now, the alternative to empty elements are phrasal constructions.\footnote{
+Now, the alternative to empty elements are phrasal constructions.\footnote{%
 See Chapter~\ref{Abschnitt-Diskussion-leere-Elemente} on empty elements in general and
 Subsection~\ref{Abschnitt-Relativ-Interrogativsaetze} on relative clauses in particular.
 } \cite{Sag97a} working on relative clauses in
@@ -2816,7 +2816,7 @@ of (finite) verbs usually do not do.
 %% Vielleicht ist das mit MRS kein Problem mehr. 27.11.2015
 %% Furthermore, the semantics of verbal projections is verbal and
 %% not the semantics that would be required for linguistic objects that modify nouns \citep[\page
-%%   474]{Sag97a}.\footnote{
+%%   474]{Sag97a}.\footnote{%
 %%   \citet[\page 474]{Sag97a} solves this problem by assuming a special Head-Adjunct Schema for
 %%   relative clauses that modify nouns.%
 %% }

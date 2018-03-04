@@ -35,7 +35,7 @@ Sato2008a-u,%
 Kaufmann2009a-u,% Java
 Slayden2012a-u,% agree http://moin.delph-in.net/AgreeTop
 Packard2015a-u% ACE http://moin.delph-in.net/AceTop
-}.\footnote{
+}.\footnote{%
 \citet{UBCCDDEEMMO-96a} and \citet{Bolc:Czuba:ea:96a-u} compare systems that were available or were
 developed at the beginnings of the 1990s. \citet{MelnikHandWritten}
 compares LKB and TRALE. See also \citew[Section~5.1]{MuellerCoreGram}.
@@ -106,17 +106,17 @@ developed in Heidelberg, Saarbrücken and Stanford in the \verbmobil project. \v
 largest ever AI project in Germany. It was a machine translation project for spoken language in the
 domains of trip planning and appointment scheduling \citep{Wahlster2000a-ed-not-crossreferenced}.
 
-Currently there are two larger groups that are working on the development of grammars: the DELPH-IN consortium (Deep Linguistic Processing with HPSG)\footnote{
+Currently there are two larger groups that are working on the development of grammars: the DELPH-IN consortium (Deep Linguistic Processing with HPSG)\footnote{%
   \url{http://www.delph-in.net/}. 20.02.2018.
 } and the group that developed out of the network CoGETI\is{CoGETI} (Constraintbasierte Grammatik: Empirie, Theorie und
 Implementierung).
-%\footnote{
+%\footnote{%
 %Supported by the DFG under the grant number HO3279/3-1.%
 %}. 
 Many of the grammar fragments that are listed above were developed by members of DELPH-IN and some
 were derived from the Grammar Matrix\is{Grammar Matrix} which was developed for the LKB to provide
 grammar writers with a typologically motivated initial grammar that corresponds to the properties of
-the language under development \citep*{BFO2002a-u}. The CoreGram project\is{CoreGram}\footnote{
+the language under development \citep*{BFO2002a-u}. The CoreGram project\is{CoreGram}\footnote{%
 \url{https://hpsg.hu-berlin.de/Projects/CoreGram.html}. \mytoday.
 } is a similar project that was started at the Freie Universität Berlin and which is now being run
 at the Humboldt"=Universität zu Berlin. It is developing grammars for German\il{German}, Danish\il{Danish},
@@ -145,7 +145,7 @@ The following URLs point to pages on which grammars can be tested:
 HPSG has the following characteristics: it is a lexicon"=based theory, that is, the majority of
 linguistic constraints are situated in the descriptions of words or roots. HPSG is sign-based in the
 sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and meaning of linguistic signs are always
-represented together. Typed feature structures are used to model all relevant information.\footnote{
+represented together. Typed feature structures are used to model all relevant information.\footnote{%
 Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
 and typed feature structures should consult Chapter~\ref{chap-feature-descriptions} first.
 } These
@@ -296,7 +296,7 @@ the \compsl is identical to another daughter in the tree.
 The descriptions contained in valence lists are usually partial descriptions, that is, not all properties of the argument are exhaustively described. Therefore, it is
 possible that a verb such as \emph{schläft} `sleeps' can be combined with various kinds of linguistic objects: the subject can be a pronoun, a proper name
 or a complex noun phrase, it only matters that the linguistic object in question is complete (has an
-empty \sprl and an empty \compsl) and bears the correct case.\footnote{
+empty \sprl and an empty \compsl) and bears the correct case.\footnote{%
 Furthermore, it must agree with the verb. This is not shown here.
 }
 %
@@ -390,7 +390,7 @@ empty list.
 
 As already noted, feature descriptions in HPSG serve as the sole descriptive inventory of morphological rules, lexical entries and syntactic rules.
 The trees we have seen thus far are only visualizations of the constituent structure and do not have any theoretical status. There are also no
-rewrite rules in HPSG.\is{phrase structure grammar}\footnote{
+rewrite rules in HPSG.\is{phrase structure grammar}\footnote{%
 	However, phrase structure rules are used in some computer implementations of HPSG in order to improve
         the efficiency of processing.}
 The job of phrase structure rules is handled by feature descriptions.
@@ -452,7 +452,7 @@ synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \
             }
 }
 \z
-%\addlines
+\addlines
 In the outer layer, there are the features \phon and \synsem. As previously mentioned, \phon contains the phonological representation of a linguistic
 object. The value of \synsem is a feature structure which contains syntactic and semantic information that can be selected by other heads.
 The daughters of phrasal signs are represented outside of \synsem. This ensures that there is a
@@ -570,7 +570,7 @@ Dominance schemata do not say anything\indexgpsg about the order of the daughter
 Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, complement\is{complement},
 adjunct\is{adjunct}, \ldots) or both.
 %% Does not fit the introductionary level here.
-%% \footnote{
+%% \footnote{%
 %%   Note that rules like (\ref{lp-ini-arg}) refer to aspects of dependency, a point that was made
 %%   explicit by \citet[\page 183]{Hudson80a}, who discussed the question of whether dependency or
 %%   constituency was primary and whether one could dispense with one of these concepts. See
@@ -578,7 +578,7 @@ adjunct\is{adjunct}, \ldots) or both.
 %% } 
 If we assume a feature \initial\isfeat{initial} for all heads, then heads which precede their complements would have the \initialv `$+$' and heads following their
   complements would have the value `--'. The linearization rules in (\mex{1}) ensure that ungrammatical orders such as (\mex{2}b,d) are
-  ruled out.\footnote{
+  ruled out.\footnote{%
   Noun phrases pose a problem for (\mex{1}): determiners have been treated as argument until now and were included in the \compsl of the
   head noun. Determiners occur to the left of noun, whereas all other arguments of the noun are to the right. This problem can be solved either
   by refining linearization rules \citep[\page
@@ -701,7 +701,7 @@ for \emph{gibt} `gives':
                            }
 }
 \zs
-%\addlines
+\addlines
 The \emph{Head Feature Principle} takes the following form:
 \begin{principle-break}[\emph{Head~Feature~Principle}]\is{principle!Head Feature}
 \label{prinzip-hfp}
@@ -874,7 +874,7 @@ how the meaning of a phrase can be determined compositionally.
 An important difference between theories such as GB, LFG and TAG, on the one hand, and HPSG and CxG on the other is that the semantic content of a linguistic
 object is modeled in a feature structure just like all its other properties. As previously mentioned, semantic information is found under the path
 \textsc{synsem|""loc|""cont}. (\mex{1}) gives an example of the \contv for \emph{Buch} `book'. The
-representation is based on Minimal Recursion Semantics\indexmrs (MRS):\footnote{
+representation is based on Minimal Recursion Semantics\indexmrs (MRS):\footnote{%
    \citet{ps2} and \citet{GSag2000a-u} make use of Situation Semantics\is{Situation Semantics}  \citep*{BP83a,CMP90,Devlin92}\nocite{BP87a}.
    An alternative approach which has already been used in HPSG is Lexical Resource Semantics\is{Lexical Resource Semantics (LRS)} \citep{RS2004a-u}.
    For an early underspecification analysis in HPSG, see \citew{Nerbonne93a}.
@@ -899,6 +899,7 @@ For example, \emph{sie} `she' in (\mex{1}) can refer to \emph{Frau} `woman' but 
 	 the woman buys a book she reads it\\
 \glt `The woman buys a book. She reads it.'
 \z
+\addlines
 In general, pronouns have to agree in person, number and gender with the element they refer to. Indices are then identified accordingly.
 In HPSG, this is done by means of structure sharing. It is also common to speak of \textit{coindexation}\is{coindexation}.
 (\mex{1}) provides some examples of coindexation of reflexive pronouns\is{pronoun!reflexive}:
@@ -1007,6 +1008,7 @@ the fact that there are some cases where the entire meaning of a phrase is more 
 Pertinent examples are often discussed as part of Construction Grammar\indexcxg. Semantic
 composition in HPSG is organized such that meaning components that are due to certain patterns can be integrated into the complete meaning of an utterance. For examples, see Section~\ref{Abschnitt-Phrasale-Konstruktionen}.
 
+\addlines[-1]
 The connection between the semantic contribution of the verb and its arguments is established in the lexical entry.
 As such, we ensure that the argument roles of the verb are assigned to the correct argument in the sentence. This is, however, not the only
 thing that the semantics is responsible for. It has to be able to generate the various readings associated with quantifier scope ambiguities 
@@ -1035,7 +1037,7 @@ AVM that is abbreviated as \nbar:\\*
   }
 }
 \z
-(\mex{1}) shows part of the lexical item for \emph{interessantes} `interesting':\footnote{
+(\mex{1}) shows part of the lexical item for \emph{interessantes} `interesting':\footnote{%
   In what follows, I am also omitting the \sprf, whose value would be the empty list.%
 }
 \eas\is{adjective}
@@ -1087,7 +1089,7 @@ to the \modv of the lexical entry for \emph{treues} `loyal'.
 %\addlines
 As an alternative to the selection of the head by the modifier, one could assume a description of all possible adjuncts on the head itself. This was suggested by
 \citet[\page 161]{ps}. \citet[Section~1.9]{ps2} revised the earlier analysis since the semantics of
-modification could not be captured.\footnote{
+modification could not be captured.\footnote{%
 		See \citew*{BMS2001a}, however. \citet*{BMS2001a} pursue a hybrid analysis where there are adjuncts which select heads and also adjuncts that are selected
 		by a head. Minimal Recursion Semantics\indexmrs is the semantic theory underlying this analysis. Using this semantics, the problems
 		arising for \citet*{ps} with regard to the semantics of modifiers are avoided.
@@ -1173,12 +1175,12 @@ with the \synsemv of the head daughter.
 \section{Passive}
 \label{Abschnitt-HPSG-Passiv}\label{sec-hpsg-passive}
 
-HPSG\is{passive|(} follows Bresnan's argumentation (see Section~\ref{Abschnitt-LFG-Passiv}) and takes care of the passive in the lexicon.\footnote{
+HPSG\is{passive|(} follows Bresnan's argumentation (see Section~\ref{Abschnitt-LFG-Passiv}) and takes care of the passive in the lexicon.\footnote{%
 	Some exceptions to this are analyses influenced by \cxg such as \citet{Tseng2007a} and \citet{Haugereid2007a}.
 	These approaches are problematic, however, as they cannot account for Bresnan's adjectival passives. For other problems with
 	Haugereid's analysis, see \citew{Mueller2007d} and Section~\ref{Abschnitt-Diskussion-Haugereid}.%
 } A lexical rule\is{lexical rule|(} takes the verb stem as its input and licenses the participle form and the most prominent argument (the so-called
-designated argument\is{argument!designated}) is suppressed.\footnote{
+designated argument\is{argument!designated}) is suppressed.\footnote{%
 	For more on the designated argument, see \citew{Haider86}. HPSG analyses of the passive in German have been considerably influenced by Haider.
 	Haider uses the designated argument to model the difference between so-called unaccusative
         and unergative verbs \citep{Perlmutter78}: unaccusative verbs\is{verb!unaccusative} differ from unergatives\is{verb!unergative} and transitives\is{verb!transitive} in that they do not have
@@ -1210,13 +1212,13 @@ Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
 
 %\addlines
 \noindent
-This lexical rule takes a verb stem\footnote{
+This lexical rule takes a verb stem\footnote{%
 	The term \emph{stem} includes roots (\stem{helf} `help-'), products of derivation
         (\stem{besing} `to sing about') and compounds. The lexical rule can therefore also be applied to
         stems like \stem{helf} and derived forms such as \stem{besing}.%
 } as its input, which requires a nominative argument, an accusative argument and possibly further arguments (if \iboxt{3} is not the empty
 list) and licenses a lexical entry that requires a nominative argument and possibly the arguments in
-\ibox{3}.\footnote{
+\ibox{3}.\footnote{%
   This rule assumes that arguments of ditransitive verbs are in the order nominative, accusative,
   dative. Throughout this chapter, I assume a nominative, dative, accusative order, which
   corresponds to the unmarked order of arguments in the German clause. \citet{Kiss2001a} argued that
@@ -1348,6 +1350,7 @@ participle form.
 
 \subsection{Valence information and the Case Principle}
 
+\addlines[2]
 In\is{principle!Case|(} Section~\ref{Abschnitt-struktureller-Kasus}, the difference between structural
 and lexical case was motivated. In the HPSG literature, it is assumed following \citet{Haider86}
 that the dative is a lexical case. For arguments marked with a lexical case, their case value is
@@ -1598,6 +1601,7 @@ of overt verbs:
 \glt `Does everybody know this man?'
 \zl
 
+\addlines[-1]
 \noindent
 It is normally not the case that \emph{kennen} `know' selects a complete sentence and nothing else as would be necessary for the analysis of 
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
@@ -1631,7 +1635,7 @@ discussion of (\ref{bsp-kennt-gibt}). It must therefore be ensured that all info
 on the highest node of its projection. This can be achieved by introducing a head feature whose
 value is identical to the \localv of the trace. This feature is referred to as
 \textsc{dsl}\isfeat{dsl}. As was already mentioned above, \textsc{dsl} stands for \emph{double
-  slash}. It is called so because it has a similar function to the \slashf, which we will encounter in the following section.\footnote{
+  slash}. It is called so because it has a similar function to the \slashf, which we will encounter in the following section.\footnote{%
 	The feature \dsl was proposed by \citet*{Jacobson87} in the framework of Categorial Grammar\indexcg to describe head movement in English\il{English}
 	inversions\is{auxiliary inversion}. \citet{Borsley89} adopted this idea and translated it into HPSG terms, thereby showing how head movement
 	in a HPSG variant of the CP/IP system can be modeled using \textsc{dsl}.
@@ -1664,10 +1668,10 @@ synsem$|$loc \ibox{1} \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
                 }
 }
 \zs
-\largerpage
+%\largerpage
 Through sharing of the \localv and the \dsl value in (\mex{0}), the syntactic and semantic information of the verb trace
 is present at its maximal projection, and the verb in initial position can check whether the
-projection of the trace is compatible.\footnote{
+projection of the trace is compatible.\footnote{%
   Note that the description in (\mex{0}) is cyclic since the tag \ibox{1} is used inside itself. See
   Section~\ref{sec-cyclic-fd} on cyclic feature descriptions. This cyclic description is the most
   direct way to express that a linguistic object with certain local properties is missing and to pass this
@@ -1675,8 +1679,9 @@ projection of the trace is compatible.\footnote{
   at the final version of the verb trace in (\ref{le-verbspur}) on page~\pageref{le-verbspur}.%
 }%
 \is{trace!verb|)}
+\pagebreak
 
-The special lexical item for verb-initial position is licensed by the following lexical rule\is{lexical rule!verb"=initial position|(}:\footnote{
+The special lexical item for verb-initial position is licensed by the following lexical rule\is{lexical rule!verb"=initial position|(}:\footnote{%
 % SvNMP90a
 	The lexical rule analysis cannot explain sentences such as (i):
 \ea
@@ -1718,6 +1723,7 @@ synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
 \end{tabular}
 \zs
 
+\addlines
 \noindent
 The verb licensed by this lexical rule selects a maximal projection of the verb trace which has the same local properties as the input verb.
 This is achieved by the coindexation of the \local values of the input verb and the \dsl values of the selected verb projection.
@@ -1832,6 +1838,8 @@ sm edges
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: unmarked order}
 \end{figure}%
+\addlines
+\largerpage
 The arguments of the verb are combined with the verb starting with the last element of the \compsl,
 as explained in Section~\ref{sec-HPSG-constituent-structure}. 
 The analysis of the marked order is shown in Figure~\vref{Abbildung-Konstituentenstellung-HPSG-markiert}. 
@@ -1855,20 +1863,18 @@ Both trees differ only in the order in which the elements are taken off from the
 in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-normal}, the last element of the \compsl is discharged first and in Figure~\ref{Abbildung-Konstituentenstellung-HPSG-markiert}
 the first one is.
 
-The following schema is a revised version of the Head"=Argument Schema:
-\begin{samepage}
-\begin{schema}[Head-Argument Schema (binary branching)]
+The following schema is a revised version of the Head"=Complement Schema:
+\begin{schema}[Head-Complement Schema (binary branching)]
 \label{schema-bin-prel2}
-~\\[-8pt]
-\type{head"=argument"=phrase}\istype{head"=argument"=phrase} \impl\\
+~\\*[-8pt]
+\type{head"=complement"=phrase}\istype{head"complement"=phrase} \impl\\*
 \onems{
       synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \ibox{3}\\
       head-dtr$|$synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3}\\
       non-head-dtrs \sliste{ [ \textsc{synsem} \ibox{2} ] }\\
 }
 \end{schema}
-\end{samepage}
-Whereas in the first version of the Head"=Argument Schema it was always the last element from the \compsl that was combined with the head,
+Whereas in the first version of the Head"=Complement Schema it was always the last element from the \compsl that was combined with the head,
 the \compsl is divided into three parts using \emph{append}\is{relation!\emph{append}}: a list of arbitrary length \iboxb{1},
 a list consisting of exactly one element (\sliste{ \ibox{2} }) and a further list of arbitrary length \iboxb{3}. The lists \ibox{1} and \ibox{3}
 are combined and the result is the \compsv of the mother node.
@@ -1880,14 +1886,14 @@ in any order. In languages with fixed constituent order, either \ibox{1} or \ibo
 not restricted with regard to \ibox{1}
 or \ibox{3}, that is \ibox{1} and \ibox{3} can either be the empty list or contain elements, the
 intuition is captured that there are less restrictions in languages with free constituent order than in languages with fixed order.
-We can compare this to the Kayneian\aimention{Richard S. Kayne} analysis from Section~\ref{Abschnitt-Kaynesche-Modelle}, where it was assumed
+We can compare this to the Kayneian\ia{Richard S. Kayne} analysis from Section~\ref{Abschnitt-Kaynesche-Modelle}, where it was assumed
 that all languages are derived from the base order [specifier [head complement]] (see
 Figure~\vref{Abbildung-Remnant-Movement-Satzstruktur} for Laenzlinger's analysis of German as an
 SVO"=language \citep{Laenzlinger2004a}). In these kinds of analyses, languages such as English constitute the most basic case and languages with
 free ordering require some considerable theoretical effort to get the order right. In comparison to that, the analysis proposed here
 requires more theoretical restrictions if the language has more restrictions on permutations of its constituents. The complexity of
 the licensed structures does not differ considerably from language to language under an HPSG approach. Languages differ only in the type
-of branching they have.\footnote{ 
+of branching they have.\footnote{%
 This does not exclude that the structures in question have different properties as far as their
 processability by humans is concerned. See \citew{Gibson98a,Hawkins99a} and
   Chapter~\ref{Abschnitt-Diskussion-Performanz}.
@@ -1907,7 +1913,7 @@ Gunji\nocite{Gunji86a} proposed similar HPSG analyses for Japanese\il{Japanese} 
 \label{Abschnitt-Fernabhängigkeiten-HPSG}\label{sec-nld-HPSG}
 
 The\is{long"=distance dependency|(} analysis of long"=distance dependencies utilizes techniques that were originally developed in GPSG:
-information about missing constituents is passed up the tree (or feature structure).\footnote{
+information about missing constituents is passed up the tree (or feature structure).\footnote{%
 	In HPSG, nothing is actually `passed up' in a literal sense in feature structures or
         trees. This could be seen as one of the most important differences between deterministic
         (\eg HPSG) and derivational theories like transformational grammars (see
@@ -1953,6 +1959,7 @@ sm edges
 \caption{\label{Abbildung-Fernabhaengigkeiten-HPSG}Analysis of long"=distance dependencies in HPSG}
 \end{figure}%
 
+%\addlines[2]
 In principle, one could also assume that the object is extracted from its unmarked position (see
 Section~\ref{sec-GB-lokale-Umstellung} on the unmarked position). The extraction trace would then
 follow the subject:
@@ -2039,7 +2046,7 @@ nonlocal, which is why the two movement types are modeled with different feature
 \textsc{dsl} is a head feature and, like all other head features, projects to the highest node of a projection (for more on the Head Feature Principle,
 see page~\pageref{prinzip-hfp}). \slasch, on the other hand, is a feature that belongs to the \textsc{nonloc} features represented under \textsc{synsem|nonloc}. The value of the \nonloc feature is a structure with the features \textsc{inherited} (or \textsc{inher} for short) and 
 \textsc{to-bind}. The value of \textsc{inher} is a structure containing information about elements involved in a long"=distance dependency.
-(\mex{1}) gives the structure assumed by \citet[\page 163]{ps2}:\footnote{
+(\mex{1}) gives the structure assumed by \citet[\page 163]{ps2}:\footnote{%
   Pollard \& Sag assume that the values of \textsc{que}, \textsc{rel}, and \slasch are sets rather
   than lists. The math behind sets is rather complicated, which is why I assume lists here.
 }
@@ -2441,7 +2448,7 @@ with the partial clause in order to form the relative clause. For the various ob
 His analysis constitutes a departure from strong lexicalism: in \citew{ps2}, there are six dominance schemata, whereas there are 23 in \citew{GSag2000a-u}. 
 
 The tendency to a differentiation of phrasal schemata can also be observed in the proceedings of
-recent conferences. The proposals range from the elimination of empty elements to radically phrasal analyses \citep{Haugereid2007a,Haugereid2009a}.\footnote{
+recent conferences. The proposals range from the elimination of empty elements to radically phrasal analyses \citep{Haugereid2007a,Haugereid2009a}.\footnote{%
 	For discussion, see  \citew{Mueller2007d} and Section~\ref{Abschnitt-Diskussion-Haugereid}.
 }
 
@@ -2470,7 +2477,7 @@ devices. Nevertheless it is possible to make the distinction since subjects and 
 realized in different positions in the trees (the subject in specifier position of IP and the object as the complement of the verb). In HPSG, subject and object
 are also not primitives of the theory. Since valence lists (or \argst lists) are ordered, however,
 this means that it is possible to associate the \argst elements to grammatical functions:
-if there is a subject, this occurs in the first position of the valence list and objects follow.\footnote{
+if there is a subject, this occurs in the first position of the valence list and objects follow.\footnote{%
 	When forming complex predicates, an object can occur in first position. See \citew[\page
           157]{Mueller2002b} for the long passive\is{passive!long} with verbs such as \emph{erlauben}
           `allow'. In general, the following holds: the subject is the first argument with structural case.%
@@ -2500,7 +2507,7 @@ Bender adopts a variant of HPSG where valence information is not removed from th
 this information remains in the valence list and is passed up towards the maximal projection of the head (\citealp{Meurers99b}; \citealp{Prze99};
 \citealp[Section~17.4]{MuellerLehrbuch1}). Similar proposals were made in GB by \citet[\page 560]{Higginbotham85a} and \citet{Winkler97a}. 
 By projecting the complete valence information, it remains accessible in the entire sentence and discontinuous constituents can refer to it (\eg via \textsc{mod})
-and the respective constraints can be formulated.\footnote{
+and the respective constraints can be formulated.\footnote{%
 	See also \citew{Mueller2008a} for an analysis of depictive predicates\is{depictive predicate} in German and English\il{English} that makes reference to the list of
 	realized or unrealized arguments of a head, respectively. This analysis is also explained in Section~\ref{sec-locality}.
 }  
@@ -2524,7 +2531,7 @@ to rules without a lexical head. This is explicitly ruled out by \citet{Flicking
 \citet*[\page 265]{FPW85a} pointed out that this kind of constraint is unnecessary if one uses lexical rules rather than metarules since the former can only
 be applied to lexical heads.
 
-For a comparison of HPSG and Stabler's\aimention{Edward P. Stabler} Minimalist Grammars\indexmg, see
+For a comparison of HPSG and Stabler's\ia{Edward P. Stabler} Minimalist Grammars\indexmg, see
 Section~\ref{Abschnitt-MG}.%
 \is{Head-Driven Phrase Structure Grammar (HPSG)|)}
 
@@ -2581,12 +2588,12 @@ Overviews of HPSG can be found in \citew{LM2006a}, \citew{PK2006a-u}, \citew{Bil
 
 \citew{MuellerArten} and \citew{MuellerCurrentApproaches} are two papers in collections
 comparing frameworks. The first one is in German and contains an analysis of a newspaper
-text.\footnote{
+text.\footnote{%
   See \url{https://hpsg.hu-berlin.de/~stefan/Pub/artenvielfalt.html} for the example sentences and
   some interactive analyses of the examples.
 } The
 second one is in English and contains a general description of the framework and a detailed analysis
-of the sentence in (\mex{1}):\footnote{
+of the sentence in (\mex{1}):\footnote{%
   See \url{https://hpsg.hu-berlin.de/~stefan/Pub/current-approaches-hpsg.html} for an interactive
   analysis of the example.
 }

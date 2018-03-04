@@ -43,7 +43,6 @@ components so that the processing is robust \citep*{OB97a,CHS2002a-u}. Some syst
 information in their UG"=based\is{Universal Grammar (UG)} language acquisition models.\is{language acquisition}
 
 
-%      <!-- Local IspellDict: en_US-w_accents -->
 
 
 \section{General remarks on the representational format}
@@ -76,6 +75,7 @@ In Categorial Grammar, there are only a few very abstract rules. One of these is
 forward application\is{forward application}:\\
 X/Y $*$ Y = X
 \z
+\addlines
 This rule combines an X looking for a Y with a Y and requires that Y occurs to the right of X/Y.
 The result of this combination is an X that no longer requires a Y. X/Y is called the \emph{functor}\is{functor}
 and Y is the \emph{argument}\is{argument} of the functor.
@@ -151,13 +151,14 @@ object:  s$\backslash$np. Equally, proper nouns are complete noun phrases, which
 
 \subsection{Semantics}
 
+\largerpage
 As already mentioned, Categorial Grammar is particularly popular among semanticists as syntactic
 combinations always result in parallel semantic combinations and even for complex combinations such
 as those we will discuss in more detail in the following sections, there is a precise definition of
 meaning composition.
 In the following, we will take a closer look at the representational format discussed in \citet[Section~2.1.2]{Steedman97a}.
 
-Steedman proposes the following lexical entry for the verb \emph{eats}:\footnote{
+Steedman proposes the following lexical entry for the verb \emph{eats}:\footnote{%
  I have adapted his notation to correspond to the one used in this book.
 }
 \ea
@@ -165,7 +166,7 @@ eats := (s: \relation{eat}(x, y)\bs np\sub{3S}:x)/np:y
 \z
 In (\mex{0}), the meaning of each category is given after the colon. Since nothing is known about
 the meaning of the arguments in the lexical entry of \emph{eat},
-the meaning is represented by the variables $x$ and $y$. When the verb combines with an NP, the denotation of the NP is inserted. An example is given in (\mex{1}):\footnote{
+the meaning is represented by the variables $x$ and $y$. When the verb combines with an NP, the denotation of the NP is inserted. An example is given in (\mex{1}):\footnote{%
 The assumption that \emph{apples} means \relation{apples} and not \relation{apples}(z) minus the quantifier contribution is a simplification here.
 }
 \ea
@@ -244,7 +245,7 @@ One can analyze an arbitrary amount of PPs following a VP or noun using these ru
 In Categorial Grammar, adjuncts have the following general form: X\bs X or X/X.
 Adjectives are modifiers, which must occur before the noun. They have the category n/n.
 Modifiers occurring after nouns (prepositional phrases and relative clauses) have the category
-n\bs n instead.\footnote{
+n\bs n instead.\footnote{%
 	In Categorial Grammar, there is no category symbol like \xbar for intermediate projections of
 	\xbart. So rather than assuming \nbar/\nbar, CG uses n/n. See Exercise~\ref{ue-Xbar-CG}.
 } For VP-modifiers, X is replaced by the symbol for the VP (s\bs np) and this yields the relatively complex expression (s\bs np)\bs (s\bs np).
@@ -324,8 +325,8 @@ np   & (s\bs np)/\mathit{PstP} & \mathit{PstP}/np_{by} & np_{by}/np & np\\
 
 \noindent
 \addlines
-The question as to how to analyze the pair of sentences in (\mex{1}) still remains unanswered.\footnote{
-	Thanks to Roland Sch\"{a}fer\aimention{Roland Sch{\"a}fer} (p.\,m., 2009) for pointing out these data to me.
+The question as to how to analyze the pair of sentences in (\mex{1}) still remains unanswered.\footnote{%
+	Thanks to Roland Sch\"{a}fer\ia{Roland Sch{\"a}fer} (p.\,m., 2009) for pointing out these data to me.
 }
 \eal
 \ex He gave the book to Mary.
@@ -334,8 +335,8 @@ The question as to how to analyze the pair of sentences in (\mex{1}) still remai
 \emph{gave} has the category ((s\bs np)/pp)/np, that is, the verb must first combine with an NP (\emph{the
   book}) and a PP (\emph{to Mary}) before it can be combined with the subject. The problem is that the rule in (\ref{Lexikonregel-Passiv-CG}) cannot be applied to \emph{gave}
   with a \emph{to}-PP since the pp argument is sandwiched between both np arguments in ((s\bs np)/pp)/np. One would have to generalize the rule in (\ref{Lexikonregel-Passiv-CG}) somehow
-  by introducing new technical means\footnote{
-  Baldridge\aimention{Jason Baldridge} (p.\,M.\ 2010) suggests using regular expressions in a general lexical rule for passive.%
+  by introducing new technical means\footnote{%
+  Baldridge\ia{Jason Baldridge} (p.\,M.\ 2010) suggests using regular expressions in a general lexical rule for passive.%
  }
   or assume additional rules for cases such as (\mex{0}b).\is{passive|)}\todostefan{NW:
     \citew{Dowty97a-u} head wrapping does this.}
@@ -425,7 +426,8 @@ isst & er  & ihn & \_\\
 \caption{\label{Abbildung-CG-isst-der-junge-den-kuchen-jacobs}Analysis of verb-initial sentences following \citet{Jacobs91a}}
 \end{figure}%
 The trace is the head in the entire analysis: it is first combined with the accusative object and then with the subject. In a final step,
-it is combined with the transitive verb in initial-position.\footnote{ See \citew{Netter92} for a similar analysis in HPSG\indexhpsg.
+it is combined with the transitive verb in initial-position.\footnote{%
+ See \citew{Netter92} for a similar analysis in HPSG\indexhpsg.
 } 
 A problem with this kind of analysis is that the verb \emph{isst} `eats', as well as \emph{er} `he' and
 \emph{ihn} `him'/`it', are arguments of the verb trace in (\mex{1}).
@@ -521,7 +523,7 @@ and backward composition\is{composition!backward}. Both of these operations will
 
 \subsection{Type Raising}
 
-\addlines[-1]
+\addlines
 The category np can be transformed into the category (s/(s\bs np)) by \emph{type raising}\is{type raising}. If we combine this category with (s\bs np), then we
 get the same result as if we had combined np and (s\bs np) with the forward application rule in (\ref{vorwaertsapplikation}). (\mex{1}a) shows the combination of an NP
 with a VP (a sentence missing an NP to its left). The combination of the type"=raised NP with the VP is given in (\mex{1}b).
@@ -648,6 +650,7 @@ st/(s/np)\;\;     & s/(s\bs np)  & (s\bs np)/s'    & s'/s & s/(s\bs np) & (s\bs 
 \caption{\label{abb-CG-UDC-lang}Analysis of long"=distance dependencies across sentence boundaries}
 \end{figure}%
 %
+%\addlines
 Using the previously described tools, it is, however, only possible to describe extractions where the fronted element
 in the sentence would have occurred at the right edge of the phrase without fronting. This means it is not possible to analyze sentences where the
 middle argument of a ditransitive verb has been extracted \citep[\page 532]{Steedman85a-u}. \citet[\page 406]{Pollard88a} provides the derivation
@@ -764,11 +767,11 @@ constructions such as those in (\mex{1}).
 
 \eal
 \ex\label{Beispiel-Minister}
-Here's the minister [[in [the middle [of [whose sermon]]]] the dog barked].\footnote{
+Here's the minister [[in [the middle [of [whose sermon]]]] the dog barked].\footnote{%
 \citew[\page 212]{ps2}.
 }
 \ex Reports [the height of the lettering on the covers of which] the government prescribes should be
-abolished.\label{Ross-reports}\footnote{
+abolished.\label{Ross-reports}\footnote{%
 \citew[\page 109]{Ross67}.\nocite{Ross86a-u}
 }
 \zl
@@ -812,7 +815,6 @@ Fido is the dog which we put downstairs.
 \z
 The problem here is similar to what we saw with topicalization: \emph{we put} does not have the cateory
 s/np but rather (s/pp)/np and as such, cannot be directly combined with the relative pronoun in (\ref{le-Relativpronomen-CG}).
-\pagebreak
 
 \citet[\page 204]{Morrill95a} discusses the lexical entry in (\ref{le-relpron-Steedman}b) for the relative pronoun in (\mex{1}):
 \ea
@@ -855,7 +857,7 @@ For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see S
 \item Which combination operations do you know?
 \item What is composition used for?
 \end{enumerate}
-\pagebreak
+%\pagebreak
 
 \section*{Exercises}
 

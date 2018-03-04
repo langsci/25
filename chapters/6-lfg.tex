@@ -109,7 +109,7 @@ The following is a list of languages with implemented LFG fragments, probably in
 and
 \item Wolof\il{Wolof} \citep{Dione2012b-u,Dione2013a-u}.
 \end{itemize}
-Many of theses grammars were developed in the ParGram consortium\footnote{
+Many of theses grammars were developed in the ParGram consortium\footnote{%
   \url{http://pargram.b.uib.no/research-groups/}. 20.02.2018.
 } \citep*{BKNS99a-ed,BDKMR02a-u}. Apart from these grammars there is a small fragment of Northern
 Sotho\il{Northern Sotho}, which is currently being expanded \citep{Faasz2010a-u}. 
@@ -139,7 +139,7 @@ Some of the systems can be tested online:
 \section{General remarks on the representational format}
 \label{Abschnitt-Format-LFG}
 
-LFG assumes multiple levels of representation.\footnote{
+LFG assumes multiple levels of representation.\footnote{%
 	The English examples and their analyses discussed in this section are taken from
         \citet{Dalrymple2001a-u} and \citet{Dalrymple2006a}.
 } The most important are c"=structure\is{c"=structure} and f"=structure\is{f"=structure}. c"=structure is the constituent
@@ -169,7 +169,7 @@ of the theory. A sentence such as (\mex{1}a) will be assigned a functional struc
 \noindent
 All lexical items that have a meaning (\eg nouns, verbs, adjectives) contribute a \textsc{pred}\isfeat{pred} feature with a corresponding value.
 The grammatical functions governed by a head (government = subcategorization)
-are determined in the specification of \textsc{pred}.\footnote{
+are determined in the specification of \textsc{pred}.\footnote{%
 In the structure in (\mex{0}b), the \lfgsubj{} and \lfgobj{} in the list following \emph{devour} are identical to the values of \lfgsubj{} and \lfgobj{} in the structure. For reasons of presentation, this will not be explicitly indicated in this structure and following structures.
 }
 Corresponding functions are called \emph{governable grammatical functions}\is{grammatical function!governable}. Examples of this are shown in Table~\vref{Tabelle-GOV} \citep{Dalrymple2006a}.
@@ -418,11 +418,12 @@ David devoured a sandwich that Peter sleeps.%\\
 The constraints on completeness and coherence together ensure that all and only those arguments required in
 the \pred specification are actually realized.
 Both of those constraints taken together correspond to the Theta"=Criterion\is{theta-criterion@Theta"=Criterion} in \gbt (see
-page~\pageref{theta-Kriterium}).\footnote{
+page~\pageref{theta-Kriterium}).\footnote{%
 For the differences between predicate"=argument structures in LFG and the Deep Structure oriented Theta Criterion, see \citew[\page xxvi--xxviii]{BK82a}.} 
 
 \subsection{Restrictions on the c-structure/f-structure relation}
 
+\largerpage
 Symbols in c"=structures\is{c"=structure|(} are assigned restrictions for f"=structures. The following symbols are used: `\up'\is{$\uparrow$} refers to the f"=structure of the
 immediately dominating node and `$\downarrow$'\is{$\downarrow$} refers to the f"=structure of the c"=structure node bearing the annotation. A common annotation is
 `\up~=~\down'. This constraint states that the f"=structure of the mother node is identical to that of the annotated category:
@@ -492,7 +493,7 @@ Following \citet[\page 90--92]{Dalrymple2006a}, \emph{glue semantics}\is{glue se
 (\citealp*{DLS93a-u}; \citealp[Chapter~8]{Dalrymple2001a-u}). There are, however, other variants
 where Kamp's discourse representation structures \citep{KR93a} are used \citep{FR83b,FR83a}.
 
-In the following, glue semantics will be presented in more detail.\footnote{
+In the following, glue semantics will be presented in more detail.\footnote{%
 %The following section is a translation of the corresponding section in  \citew{Dalrymple2006a}.
 The following discussion heavily draws from the corresponding section of \citew{Dalrymple2006a}. (It
 is a translation of my translation of the original material into German.)
@@ -682,7 +683,7 @@ restrictions\is{linearization rule} in LFG, see \citew{ZK95b}.\is{adjunct|)}
 % en.wikipedia.org/wiki/Banksy 20.01.2013
 
 \mbox{}\citet{BM95a} argue\is{passive|(}\is{morphology|(} that one should view words as ``atoms'' of
-which syntactic structure is comprised (\emph{lexical integrity}\is{lexical integrity}\footnote{
+which syntactic structure is comprised (\emph{lexical integrity}\is{lexical integrity}\footnote{%
  See \citew[\page 84]{Anderson92a-u} for more on lexical integrity.%
 }).
 
@@ -874,7 +875,7 @@ There are two possibilities for the analysis of verb placement in German.\is{ver
 \end{sloppypar}
 
 \noindent
-In the analysis of extended head domains, the verb is simply omitted from the verb phrase. The following preliminary variant of the VP rule is used:\footnote{
+In the analysis of extended head domains, the verb is simply omitted from the verb phrase. The following preliminary variant of the VP rule is used:\footnote{%
 See \citew[\page 110]{Bresnan2001a}, \citet[\page 413]{ZK2002a} and \citew[\page 84]{Dalrymple2006a} for corresponding rules
 with optional constituents on the right"=hand side of the rule. \citet[\page 413]{ZK2002a} suggest a rule that
 is similar to (\mex{1}) for German.%
@@ -1073,7 +1074,7 @@ We\is{long"=distance dependency|(} have seen that LFG can explain phenomena such
 In Chapter~\ref{Kapitel-GPSG} on GPSG, we already saw that the development of a transformation"=less analysis for long"=distance dependencies constitutes a real achievement.
 In LFG, \citet{KZ89a} proposed another transformation"=less analysis of long"=distance dependencies, which we will consider in further detail in what follows.
 
-\addlines[-1]
+%\addlines[-1]
 In example (\mex{1}), the displaced constituent \emph{Chris} is characterized by two functions:
 \ea
 \label{ex-Chris-we-think}
@@ -1185,6 +1186,7 @@ CP & $\rightarrow$ & \multicolumn{2}{l}{\hspaceThis{(\upsp \textsc{topic})}XP} &
  & &  (\upsp \textsc{topic}) & (\upsp \textsc{comp obj})\\
 \end{tabular}
 \z
+\addlines
 (\mex{0}) states that the first constituent contributes to the \textsc{topic} value in the f"=structure of the mother and furthermore that this topic value has to be
 identical to that of the object in the complement clause. We have also seen examples of other embeddings of various depths. We therefore need restrictions
 of the following kind as in (\mex{1}): 
@@ -1219,7 +1221,7 @@ One can introduce a special symbol for \textsc{topic$|$focus}, which stands for 
 
 \noindent
 The final version of the c"=structure rule for fronting in English will therefore have the form of
-(\mex{1}):\footnote{
+(\mex{1}):\footnote{%
   Note that the two disjunctions that are abbreviated by the respective occurrences of \textsc{df}
   are independent in principle. This is unwanted. We want to talk about either a topic or a focus
   not about a topic and a focus in the mother f-structure. So additional machinery is needed to

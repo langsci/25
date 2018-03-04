@@ -26,7 +26,7 @@ NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as fu
 therefore also be assigned to the category NP.
 
 Phrase structure grammars come with rules specifying which symbols are assigned to certain kinds of words and how these are combined to create more
-complex units. A simple phrase structure grammar which can be used to analyze (\mex{0}) is given in (\mex{1}):\footnote{
+complex units. A simple phrase structure grammar which can be used to analyze (\mex{0}) is given in (\mex{1}):\footnote{%
 	I ignore the conjunction \emph{weil} `because' for now. Since the exact analysis of
         German verb"=first and verb"=second clauses requires a number of additional assumptions, we will restrict ourselves to verb"=final clauses in this chapter.
 }$^,$\footnote{\label{fn-np-pron-ps-rule}%
@@ -196,7 +196,7 @@ sm edges
 
 Both the grammar in (\mex{0}) and (\ref{bsp-grammatik-psg}) are too imprecise.
 If we adopt additional lexical entries for \emph{ich} `I' and \emph{den} `the' (accusative) in our grammar, then we would incorrectly
-license the ungrammatical sentences in (\mex{1}b--d):\footnote{
+license the ungrammatical sentences in (\mex{1}b--d):\footnote{%
 	With the grammar in (\ref{psg-binaer}), we also have the additional problem that we cannot determine when an utterance is complete
 	since the symbol V is used for all combinations of V and NP. Therefore, we can also analyze the sentence in (i) with this grammar:
   
@@ -315,7 +315,7 @@ we have to increase the number of symbols we assume for verbs.\is{valence}
 In the rules above, the information about the number of arguments required by a verb is included in the marking `nom\_dat\_acc'.
 
 In order to capture the determiner"=noun agreement in (\mex{1}), we have to incorporate information about gender\is{gender} (fem, mas, neu),
-number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak)\footnote{
+number\is{number} (sg, pl), case\is{case} (nom, gen, dat, acc) and the inflectional classes (strong, weak)\footnote{%
 These are inflectional classes for adjectives which are also relevant for some nouns such as \emph{Beamter} `civil servant', 
 \emph{Verwandter} `relative', \emph{Gesandter} `envoy'.
 For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.%
@@ -335,7 +335,7 @@ For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.
 	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
 \zl
 %\addlines         
-Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{
+Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{%
   To keep things simple, these rules do not incorporate information regarding the inflection class.
 }
 \ea
@@ -376,7 +376,7 @@ left"=hand side of the rule and two on the right.
 We can solve this problem by introducing features which are assigned to category symbols and therefore allow for the values of
 such features to be included in our rules. For example, we can assume the features person, number and case for the category
 symbol NP. For determiners and nouns, we would adopt an additional feature for gender and one for
-inflectional class. (\mex{1}) shows two rules augmented by the respective values in brackets:\footnote{
+inflectional class. (\mex{1}) shows two rules augmented by the respective values in brackets:\footnote{%
   Chapter~\ref{chap-feature-descriptions} introduces attribute value structures. In these structure we always
 have pairs of a feature name and a feature value. In such a setting, the order of values is not
 important, since every value is uniquely identified by the corresponding feature name. Since we do not have a feature name
@@ -472,7 +472,7 @@ examples in (\mex{1}a) and (\mex{1}b):
 
 \noindent
 To enhance readability I use English translations of the predicates in semantic representations
-from now on.\footnote{
+from now on.\footnote{%
   Note that I do not claim that English is suited as representation language for semantic relations
   and concepts that can be expressed in other languages.
 }
@@ -636,9 +636,9 @@ also have the property of being known to us.
 Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
 analyze (\mex{0}a). The question we are facing now is how we can modify this rule or which additional rules we would
 have to assume in order to analyze the other noun phrases in (\mex{0}). In addition to rule (\mex{1}a), one could propose 
-a rule such as the one in (\mex{1}b).\footnote{
+a rule such as the one in (\mex{1}b).\footnote{%
 	See \citew[\page 238]{Eisenberg2004a} for the assumption of flat structures in noun phrases.
-}$^,$\footnote{
+}$^,$\footnote{%
 	There are, of course, other features such as gender and number, which should be part of all the rules
 	discussed in this section. I have omitted these in the following for ease of exposition.
 }
@@ -893,7 +893,7 @@ but not the noun itself. The underscore marks the position where the noun would 
 \glt `No, it isn't the visit of the carpenter, but rather the visit of the plumber that is important.'
 \zl
 In English, the pronoun
-\emph{one} must often be used in the corresponding position,\footnote{
+\emph{one} must often be used in the corresponding position,\footnote{%
   See \citet[Section~4.12]{FLGR2012a} for English\il{English} examples without the
   pronoun \emph{one}.
 } but in German the noun\is{noun} is
@@ -1435,7 +1435,7 @@ sm edges
 
 The analysis given in Figure~\ref{Abb-das-schoene-Bild-von-Paris} assumes that all non"=heads in a rule are
 phrases. One therefore has to assume that there is a determiner phrase even if the determiner is not combined with other elements.
-The unary branching of determiners is not elegant but it is consistent.\footnote{
+The unary branching of determiners is not elegant but it is consistent.\footnote{%
 	For an alternative version of \xbar theory which does not assume elaborate structure for determiners see \citew{Muysken82a}.
 }
 The unary branchings for the NP \emph{Paris} in Figure~\ref{Abb-das-schoene-Bild-von-Paris} may also seem somewhat odd, but they actually become more
@@ -1611,15 +1611,15 @@ rules out the sentences in (\mex{2}).
      he.\nom{} waits next.to the.\dat{} bus.shelter on a miracle\\
 \glt `He is waiting for a miracle next to the bus shelter.'
 \zl
-\item Install a Prolog system (\eg SWI"=Prolog\footnote{
+\item Install a Prolog system (\eg SWI"=Prolog\footnote{%
 \url{http://www.swi-prolog.org}, 20.02.2018.
 })
 and try out your grammar. SWI-Prolog also comes with an online version where you can input your grammar
-directly without any installation.\footnote{
+directly without any installation.\footnote{%
   \url{https://swish.swi-prolog.org/}, 20.02.2018.
 }
 Details regarding the notation can be found in the English Wikipedia entry for Definite Clause Grammar
-(DCG)\is{Definite Clause Grammar (DCG)}.\footnote{
+(DCG)\is{Definite Clause Grammar (DCG)}.\footnote{%
 \url{https://en.wikipedia.org/wiki/Definite_clause_grammar}, 20.02.2018.
 }
 \end{enumerate}

@@ -90,6 +90,22 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 
 #	\rm -f $*.bbl
 #	bibtex  -min-crossrefs=200 $*
+# %.pdf: %.tex $(SOURCE)
+# 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
+# 	biber $*
+# 	xelatex -no-pdf -interaction=nonstopmode $* 
+# 	biber $*
+# 	xelatex -no-pdf -interaction=nonstopmode $*
+# 	correct-index
+# 	\rm $*.adx
+# 	authorindex -i -p $*.aux > $*.adx
+# 	sed -e 's/}{/|hyperpage}{/g' $*.adx > $*.adx.hyp
+# 	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
+# 	makeindex -gs index.format -o $*.lnd $*.ldx
+# 	makeindex -gs index.format -o $*.snd $*.sdx
+# 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+
+
 %.pdf: %.tex $(SOURCE)
 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
 	biber $*
@@ -97,13 +113,14 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	biber $*
 	xelatex -no-pdf -interaction=nonstopmode $*
 	correct-index
-	\rm $*.adx
-	authorindex -i -p $*.aux > $*.adx
-	sed -e 's/}{/|hyperpage}{/g' $*.adx > $*.adx.hyp
-	makeindex -gs index.format-plus -o $*.and $*.adx.hyp
+	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.sdx # ordering of references to footnotes
+	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
+	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
+	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+
 
 # %.pdf: %.tex $(SOURCE)
 # 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math

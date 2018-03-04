@@ -222,7 +222,7 @@
 
 
 
-%% St. M�. 02.05.2004
+%% St. Mü. 02.05.2004
 \def\subexsep#1{\def\@subexsep{#1}}
 \subexsep{1.5ex}
 
@@ -254,7 +254,9 @@
                         \begin{list}{(\roman{xnumi})}%
                         % 1em is the indentation of footnotes in koma-script
                         % if this does not work for everybody, use parameters ...
-                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{1.5em}%
+                        % changed distance from footnote margin to (i) to 0em, was 1.5em 02.03.2018
+                        % St. Mü.
+                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{0em}%
                         \setcounter{xnumi}{\value{fnx}}}%
                  \fi}
 

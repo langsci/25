@@ -48,7 +48,7 @@ number or person.
 
 Lexical entries have a feature \subcat.\is{valence}\is{subcategorization} The value is a number
 which says something about the kind of grammatical rules in which the word can be used. 
-(\mex{1}) shows examples for grammatical rules and lists some verbs which can occur in these rules.\footnote{
+(\mex{1}) shows examples for grammatical rules and lists some verbs which can occur in these rules.\footnote{%
 The analyses discussed in the following are taken from \citew{Uszkoreit87a}.
 }
 \ea
@@ -501,7 +501,7 @@ then it is possible to formulate the adjunct metarule in such as way that it doe
 146]{Uszkoreit87a}:
 %% Kein Problem, wenn Mengen erzeugt werden, da in einer Menge jedes Element nur einmal enthalten
 %% ist. Ist aber trotzdem unschön.
-%% \footnote{
+%% \footnote{%
 %% Note that the Kleene star\is{Kleene star} stands for arbitrarily many repetitions of a symbol. This includes zero
 %% repetitions. Depending on the implementation of metarules this would license infinitely many rules
 %% since the output of the metarule can be its input. Even if this feeding is excluded, the
@@ -514,7 +514,7 @@ then it is possible to formulate the adjunct metarule in such as way that it doe
 V2  $\to$ W $\mapsto$\\
 V2  $\to$ W, AdvP*
 \z 
-If one adopts the rule in (\mex{0}), then it is not immediately clear how the semantic contribution of the adjuncts can be determined.\footnote{
+If one adopts the rule in (\mex{0}), then it is not immediately clear how the semantic contribution of the adjuncts can be determined.\footnote{%
 	In LFG\indexlfg, an adjunct is entered into a set in the functional structure (see Section~\ref{Abschnitt-LFG-Adjunkte}). This also works with the use
 	of the Kleene Star notation. From the f"=structure\is{f"=structure}, it is possible to compute the semantic denotation with corresponding scope by making reference
 	to the c"=structure\is{c"=structure}. In HPSG\indexhpsg, \citet{Kasper94a} has made a proposal which corresponds to the
@@ -543,7 +543,7 @@ only be applied a finite number of times.
 \label{sec-passive-gpsg}
 
 The German passive\is{passive|(} can be described in an entirely theory"=neutral way as
-follows:\footnote{
+follows:\footnote{%
   This characterization does not hold for other languages. For instance, Icelandic allows for dative
   subjects. See \citet*{ZMT85a}.
 }
@@ -623,7 +623,7 @@ unrelated structures, that is, the structure of (\mex{1}b) is not derived from t
 The generalization with regard to active/passive is captured nevertheless.
 
 In what follows, I will discuss the analysis of the passive given in \citew*{GKPS85a} in some more detail. The authors suggest the following metarule\is{metarule|(}
-for English\il{English} (p.\,59):\footnote{
+for English\il{English} (p.\,59):\footnote{%
   See \citew[\page 1114]{WP92b} for a parallel rule for German which refers to accusative case on the left"=hand side of the metarule.
 }
 
@@ -678,13 +678,13 @@ V2 $\to$ H[13], PP[\emph{an}]\\
 There is no NP on the right"=hand side of these rules which could be turned into a \emph{von}-PP. If the passive
 is to be analyzed as suppressing an NP argument in a rule, then it should follow from the existence of the impersonal passive 
 that the passive metarule has to be applied to rules which license finite clauses, since information about whether there is a subject
- or not is only present in rules for finite clauses.\footnote{
+ or not is only present in rules for finite clauses.\footnote{%
 	GPSG differs from GB\indexgb in that infinitive verbal projections do not contain nodes for empty subjects. This is also true for all other
 	theories discussed in this book with the exception of Tree-Adjoining Grammar\indextag.
 } In this kind of system, the rules for finite sentences (V3) are the basic rules and the rules for V2 would be derived from these.
  
 It would only make sense to have a metarule which applies to V3 for German since English does not have V3 rules which contain both the subject
-and its object on the right"=hand side of the rule.\footnote{
+and its object on the right"=hand side of the rule.\footnote{%
  \citet[\page 62]{GKPS85a} suggest a metarule similar to our subject introduction metarule on page~\pageref{subjekt-meta}.
  The rule that is licensed by their metarule is used to analyze the position of auxiliaries in English and only licenses sequences of the form AUX NP VP. In such structures,
  subjects and objects are not in the same local tree either.
@@ -694,7 +694,7 @@ This means that we arrive at two very different analyses for the passive in Engl
 the descriptive insight that the passive is the suppression of the subject and the subsequent
 promotion of the object in the same way.
 The central difference
-between German and English seems to be that English obligatorily requires a subject,\footnote{
+between German and English seems to be that English obligatorily requires a subject,\footnote{%
   Under certain conditions, the subject can also be omitted in English. For more on imperatives and other subject"=less examples, see
   page~\pageref{Beispiel-Imperativ-Englisch}.
 } which is why English does not have an impersonal passive. 
@@ -878,7 +878,7 @@ page~\pageref{bsp-Fernabhaengigkeit} -- repeated here as (\mex{1}) for convenien
 \zl
 The sentences in (\mex{0}) cannot be explained by local reordering as the elements in the prefield are not dependent on the highest verb, but instead originate in the lower clause.
 Since only elements from the same local tree can be reordered, the sentences in (\mex{0}) cannot be analyzed without postulating some kind of additional mechanism for long"=distance
-dependencies.\footnote{
+dependencies.\footnote{%
   One could imagine analyses that assume the special mechanism for nonlocal dependencies only for
   sentences that really involve dependencies that are nonlocal. This was done in HPSG\indexhpsg by
   \citet{Kathol95a} and \citet{Wetta2011a} and by \citet{GO2009a} in \dg. I discuss the Dependency
@@ -912,7 +912,7 @@ sm edges,empty nodes
 }
 \caption{\label{fig-gpsg-udc}Analysis of long"=distance dependencies in GPSG}
 \end{figure}%
-Simplifying somewhat, I assume that \emph{gesehen habe} `have seen' behaves like a normal transitive verb.\footnote{
+Simplifying somewhat, I assume that \emph{gesehen habe} `have seen' behaves like a normal transitive verb.\footnote{%
    See \citew{Nerbonne86a} and \citew{Johnson86a}, for analyses of verbal complexes in GPSG.
 }
 A phrase structure rule licensed by the metarule in (\ref{meta-slash-intro}) licenses the combination of \emph{ich} `I' and \emph{gesehen habe} `has seen'
