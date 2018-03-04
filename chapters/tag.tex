@@ -19,6 +19,7 @@ Other research centers with a focus on TAG are Paris~7 (Anne Abeill\'{e}), Colum
 }
 %Viola: \todostefan{leaves a little oder much - something wie als nettes Understatement im Deutschen passt hier leider nicht :-)}
 
+%\largerpage[4]
 TAG and its variants with relevant extensions are of interest because it is assumed that this grammatical formalism can -- with regard to its
 expressive power -- relatively accurately represent what humans do when they produce or comprehend natural language.
 The expressive power of Generalized Phrase Structure Grammar\indexgpsg was deliberately constrained so that it corresponds to context"=free
@@ -91,10 +92,11 @@ tag
 Nodes for the insertion of arguments are specially marked (NP$\downarrow$\is{$\downarrow$} in the tree for \emph{laughs}).
 Nodes for the insertion of adjuncts\is{adjunct} into a tree are also marked (VP$^*$\is{*} in the tree for \emph{always}).
 Grammars where elementary trees always contain at least one word are referred to as
-\emph{Lexicalized Tree Adjoining Grammar} (LTAG, \citew{SAJ88a-u}).\is{valence|)} 
+\emph{Lexicalized Tree Adjoining Grammar} (LTAG, \citew*{SAJ88a-u}).\is{valence|)} 
 
 \subsection{Substitution}
 
+%\largerpage[2]
 Figure~\vref{abb-Substitution}\is{substitution|(} shows the substitution of nodes.
 \begin{figure}
 \centerline{%
@@ -109,7 +111,7 @@ tag
 			[laughs]]]]
 \end{forest}
 \hspace{1em}
-$\leadsto$
+\raisebox{2cm}{$\leadsto$}
 \hspace{1em}
 \begin{forest}
 tag
@@ -151,7 +153,7 @@ tag
 	[VP*]]
 \end{forest}
 \hspace{1em}
-$\leadsto$
+\raisebox{2cm}{$\leadsto$}
 \hspace{1em}
 \begin{forest}
 tag
@@ -172,6 +174,7 @@ Adjunction trees can be inserted into other trees. Upon insertion, the target no
 same category as the node marked with `*') is replaced by the adjunction tree.
 \is{adjunction|)}\is{adjunct|)}
 
+\largerpage[-1]
 TAG differs considerably from the simple phrase structure grammars we encountered in
 Chapter~\ref{Kapitel-PSG} in that the trees extend over a larger domain: for example, there is an NP
 node in the tree for \emph{laughs} that is not a sister of the verb. In a phrase structure grammar (and of course in GB\indexgb and GPSG\indexgpsg since
@@ -325,7 +328,7 @@ cases with embedded verbs. Interested readers are referred to the original artic
 \section{Local reordering}
 \label{Abschnitt-MC-TAG}\label{sec-ld-lp-tag}
 
-\addlines
+%\addlines
 In\is{constituent order|(} TAG, there is a family of trees for each word. In order to account for ordering variants, one can assume that there
 are six trees corresponding to a ditransitive verb and that each of these corresponds to a different ordering of the arguments.
 Trees are connected to one another via lexical rules\is{lexical rule}. This lexical rule"=based
@@ -402,6 +405,7 @@ Since certain restrictions cannot be expressed in FO"=TAG \citep[\page 48--50]{R
 \gll \ldots{} daß  des        Verbrechens$_k$ der        Detektiv  den Verdächtigen$_j$~~~~~~~~~ dem         Klienten [\_$_j$ \_$_k$ zu überführen] versprach\\
       {}      that the.\gen{} crime           the.\nom{} detective the.\acc{} suspect   the.\dat{}  client   {}      {}     to indict      promised\\
 \zl
+\largerpage
 In LTAG, the elementary trees for the relevant verbs look as shown in Figure~\vref{Abbildung-Kontrollverben-TAG}.
 \begin{figure}
 \oneline{%
@@ -510,7 +514,7 @@ tag
 In Figure~\ref{Abbildung-TAG-Permutation-one}, the tree for \emph{versprach} is inserted directly above the PRO NP and in Figure~\ref{Abbildung-TAG-Permutation-two} above
 NP$_2^1$.
 
-\addlines
+\largerpage
 It is clear that it is not possible to derive a tree in this way where an argument of \emph{überführen} `to indict' occurs between the arguments of \emph{versprach}
 `promised'. \citet*{JBR2000a} therefore suggest an extension of the LTAG formalism. In MC-TAG, the grammar does not consist of elementary trees but rather
 finite sets of elementary trees. In every derivational step, a set is selected and the elements of that set are simultaneously added to the tree.
@@ -587,7 +591,7 @@ and TT-MC-TAG\is{Tree Adjoining Grammar (TAG)!Tree Tuple MC-TAG (TT-MC-TAG)} \ci
 
 \section{Verb position}
 
-%\largerpage
+\largerpage
 The position of the verb\is{verb position|(} can be analyzed in a parallel way to the GPSG analysis:
 the verb can be realized in initial or in final position in a given linearization domain. Since the
 verb position has an effect on the clause type and hence on semantics, a lexical rule"=based
@@ -608,7 +612,7 @@ an accusative object is explicitly mentioned in the input of the lexical rule. K
 uses a semantic null role for a non-realized object of intransitive verbs (p.\,56). Such an analysis
 with abstract auxiliary entities can be avoided easily: one can instead use the HPSG\indexhpsg
 analysis going back to \citet{Haider86}, which was presented in Section~\ref{Abschnitt-HPSG-Passiv}.
-\largerpage
+%\largerpage
 
 There\is{inheritance!multiple|(} are also proposals in TAG that use inheritance to deal with valence changing processes 
 in general and the passive in particular (\citealp{Candito96a} and \citealp*{KSYJ2006a} following Candito). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
@@ -835,6 +839,7 @@ For adjunction, the top structure of the tree that is being inserted must be uni
 and the bottom structure of the node marked `*' in the inserted tree (the so"=called foot node\is{foot node}) must be unifiable with
 the adjunction site.
 
+\largerpage
 The elementary trees discussed so far only consisted of nodes where the top part matched the bottom part. FTAG allows for an interesting variant of specifying 
 nodes that makes adjunction obligatory\is{adjunction!obligatory|(}\label{page-feature-based-tag-oa} in order for the entire derivation to be well"=formed.
 Figure~\vref{Obl-Adjunktion-FTAG} shows a tree for \emph{laughing} that contains two VP nodes with incompatible \textsc{mode} values.
@@ -966,6 +971,7 @@ If a tree is used as a final derivation, the top structures are identified with 
 of the highest VP node is identified with that of the lower one in the tree in Figure~\ref{Obl-Adjunktion-FTAG-Ergebnis}.
 As such, only NPs that have the same \textsc{agr} value as the auxiliary can be inserted into the NP slot.
 
+\largerpage
 This example shows that, instead of the marking for obligatory adjunction\is{adjunction!obligatory|)} that we saw in the section on long"=distance
 dependencies, the same effect can be achieved by using incompatible feature specifications on the top and bottom structures.
 If there are incompatible top and bottom structures in a tree, then it cannot be a final derivation
@@ -1010,7 +1016,7 @@ for the ditransitive verb \emph{geben} `give'.
 \caption{\label{Abbildung-Lexical-Set-geben-V-TAG}Lexicon set for \emph{geben} `to give' in V"=TAG
   according to \citet[\page 6]{Rambow94a}}
 \end{figure}%
-\addlines
+%\addlines
 The lexicon set consists of a tree for the verb, an empty element of the category VP and three trees where a VP has been combined with
 an NP. As in MC"=TAG, dominance relations are also indicated. The dominance constraints in Figure~\ref{Abbildung-Lexical-Set-geben-V-TAG}
 ensure that all lower VP nodes dominate the highest VP node of the tree further to the right. The order of the arguments of the verb as
@@ -1072,7 +1078,7 @@ how such lexical entries can be used to analyze sentences with verbal complexes.
 \caption{\label{Abbildung-zu-reparieren-versprochen-V-TAG}Analysis of the verbal complex \emph{zu reparieren versprochen} in V"=TAG}
 \end{figure}%%
 Both of the first NP trees have to dominate \emph{versprochen} and the third and fourth NP tree have to dominate \emph{zu reparieren}.
-The order of the NP trees is not restricted and thus all permutations of NPs can be derived.\pagebreak
+The order of the NP trees is not restricted and thus all permutations of NPs can be derived.
 
 The interesting thing here is that this approach is similar to the one proposed by \citet[Section~2.1.3]{Berman96a-u} in LFG\indexlfg
 (see Section~\ref{Abschnitt-LFG-Umstellung}): in Berman's analysis, the verb projects directly to form a VP and the arguments are
@@ -1122,7 +1128,7 @@ another had to give way to a car park last year.'
 \z
 For other factors that play a role in processing, see \citew{Gibson98a}.
 
-\addlines
+%\addlines
 \citet{JBR2000a} discuss verbal complexes with reordered arguments. The general pattern that they
 discuss has the form shown in (\mex{1}):
 \ea
@@ -1223,7 +1229,7 @@ following:\footnote{%
 \glt `Hanna has always known that the man wants to leave her.'
 }
 \zl
-\pagebreak
+%\pagebreak
 
 \noindent
 It is not possible to reorder (\mex{0}a)  to (\mex{0}b) without creating a strong preference for another reading.
@@ -1278,6 +1284,7 @@ I have constructed such an example where the most deeply embedded predicate is n
 If one reads the sentences with the relevant pauses, it is comprehensible. Case is unambiguously marked on the animate
 noun phrases and our word knowledge helps us to interpret \emph{diesen Teich} `this pond' as the argument of \emph{leer} `empty'.  
 
+\largerpage[-1]
 The sentence in (\mex{0}) would correctly be analyzed by an appropriately written tree"=local MC-LTAG and also by argument composition
 analyses for verbal complexes and resultative constructions. The sentence in (\mex{1}) is a variant of (\mex{0}) that corresponds exactly
 to the pattern of (\ref{ex-mc-ltag-fails}):
@@ -1306,6 +1313,8 @@ Chapter~\ref{sec-generative-capacity}.
 
 \section{Summary and classification}
 
+\largerpage[-1]
+%\enlargethispage{4pt}
 In sum, we have seen the following: LTAG is lexicalized, that is, there is at least one lexical element in every tree.
 There are not any trees that correspond to the rule S $\to$ NP VP since no words are mentioned in this rule.
 Instead, there are always complex trees that contain the subject NP and the VP. Inside the VP, there can be as much structure
