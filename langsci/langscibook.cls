@@ -1383,6 +1383,7 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 	doi=false,
 	url=false,
 	eprint=false,
+        useprefix=true,
 	backend=\lsBiblatexBackend,
 	indexing=cite,
 	\iflsCollection\else
@@ -1438,7 +1439,6 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 
 
 
-
 % fix \citep* et.al.
 % unclear why it was overwritten, these are the definitions from blx-natbib.def
 \renewrobustcmd*{\citet}{%
@@ -1472,6 +1472,9 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 
 \let\orgcite=\cite
 \let\cite=\citet 	% in order to prevent inconsistencies between \cite and \citet
+
+
+
 
 %% penalties against widows and orphans in bibliography
 %% http://tex.stackexchange.com/questions/297705/atbeginenvironment-does-not-work-with-natbib/297721#297721
