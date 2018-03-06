@@ -238,6 +238,9 @@ gt.bib: ../../../Bibliographien/biblio.bib
 	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
 	\rm -r gt-tmp.bib
 
+check-gt.bib: ../../../Bibliographien/biblio.bib
+	biber --output_format=bibtex --output_resolve grammatical-theory.bcf -O check-gt.bib
+
 
 PUB_FILE=stmue.bib
 

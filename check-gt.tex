@@ -35,8 +35,11 @@
 
 \newcommand{\LATER}[1]{}
 
+\bibliography{check-gt}
+\providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{} \providecommand*{\printsecond}[2]{#2}
+
 %\includeonly{chapters/preface}
-%\includeonly{chapters/1-begriffe}
+\includeonly{chapters/1-begriffe}
 %,2-psg,3-gb}
 %\includeonly{chapters/2-psg}
 %\includeonly{chapters/3-gb}
@@ -51,7 +54,7 @@
 %\includeonly{chapters/9-cxg}  % fertig
 %\includeonly{chapters/dg}
 %\includeonly{chapters/tag}    % fast fertig, aber der eine V-TAG-Baum und danach ...
-\includeonly{chapters/innateness}
+%\includeonly{chapters/innateness}
 %\includeonly{chapters/mts}
 %\includeonly{chapters/competence}
 %\includeonly{chapters/acquisition}
@@ -72,5 +75,7 @@
 
 \input grammatical-theory-include
 
+% Hack to get all items cited in the files not included in this run.
+\nocite{*}
 
-
+\end{document}
