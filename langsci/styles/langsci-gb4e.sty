@@ -226,6 +226,11 @@
 \def\subexsep#1{\def\@subexsep{#1}}
 \subexsep{1.5ex}
 
+\def\fnlabelindent#1{\def\@fnlabelindent{#1}}
+\fnlabelindent{0ex}
+
+
+
 % set initial sizes of example number and judgement sizes
 \exewidth{\exnrfont (35)}
 
@@ -256,7 +261,7 @@
                         % if this does not work for everybody, use parameters ...
                         % changed distance from footnote margin to (i) to 0em, was 1.5em 02.03.2018
                         % St. Mü.
-                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{0em}%
+                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{\@fnlabelindent}%
                         \setcounter{xnumi}{\value{fnx}}}%
                  \fi}
 
