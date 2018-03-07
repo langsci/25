@@ -3728,21 +3728,24 @@ constitutes ``a testable realization of CxG'' in the Goldbergian sense, but the 
 construct do not help us to decide between phrasal or lexical analyses or analyses with empty
 heads\is{empty element}. These alternative analyses are represented in
 Figure~\vref{Abbildung-DOP-Resultatives}.\footnote{ 
-The discussion is perhaps easier to follow if one assumes flat structures rather than binary"=branching ones.\\
+The discussion is perhaps easier to follow if one assumes flat structures rather than
+binary"=branching ones.
 
-\raisebox{2\baselineskip}{\begin{forest}
-[X
-       [X [er] ]
-       [X [ihn] ]
-       [X [leer] ]
-       [X [fischt] ]
-]
-\end{forest}}\hfill
+\medskip
+\noindent
 \begin{forest}
 [X
        [X [er] ]
        [X [ihn] ]
-       [X [leer] ]
+       [X [leer,baseline] ]
+       [X [fischt] ]
+]
+\end{forest}\hfill
+\begin{forest}
+[X
+       [X [er] ]
+       [X [ihn] ]
+       [X [leer,baseline] ]
        [X [X [fischt] ] ]
 ]
 \end{forest}
@@ -3751,12 +3754,13 @@ The discussion is perhaps easier to follow if one assumes flat structures rather
 [X
        [X [er] ]
        [X [ihn] ]
-       [X [leer] ]
+       [X [leer,baseline] ]
        [X [X [fischt] ] 
            [X [\trace{}] ]]
 ]
 \end{forest}
 
+\medskip
 \noindent
 The first figure corresponds to the Goldbergian view of phrasal constructions where the verb is inserted into the construction
 and the meaning is present at the topmost node. In the second figure, there is a lexical rule that provides the resultative semantics
