@@ -81,9 +81,11 @@
 \newcommand{\lsSeriesNumber}{??}
 \newcommand{\lsISSN}{??}
 \newcommand{\lsISBNdigital}{000-0-000000-00-0}
-\newcommand{\lsISBNhardcover}{000-0-000000-00-0}
-\newcommand{\lsISBNsoftcover}{000-0-000000-00-0}
+\newcommand{\lsISBNhardcoverOne}{000-0-000000-00-0}
+\newcommand{\lsISBNhardcoverTwo}{000-0-000000-00-0}
 \newcommand{\lsISBNsoftcoverus}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverOne}{000-0-000000-00-0}
+\newcommand{\lsISBNsoftcoverTwo}{000-0-000000-00-0}
 \newcommand{\lsBookDOI}{??}
 \newcommand{\lsChapterDOI}{??}
 \newcommand{\lsID}{000}
@@ -1097,27 +1099,12 @@ Published under the Creative Commons Attribution-NoDerivatives 4.0 Licence (CC B
 http://creativecommons.org/licenses/by-nd/4.0/
 \fi
 
-\begin{tabular}{@{}l@{~}l}
-ISBN: &
-\IfStrEq{\lsISBNdigital}{000-0-000000-00-0}{%no digital ISBN, issue warning
-  \color{red}no digital ISBN
-}{%digital ISBN present, write ISBN
-  \lsISBNdigital~(Digital)
-}
-\\
-\IfStrEq{\lsISBNhardcover}{000-0-000000-00-0}{ %hardcover ISBN not present
-}{%hardcover ISBN present, write ISBN
-  &\lsISBNhardcover~(Hardcover)\\
-}
-
-\IfStrEq{\lsISBNsoftcover}{000-0-000000-00-0}{ %softcover ISBN not present
-  \IfStrEq{\lsISBNhardcover}{000-0-000000-00-0}{ %neither hardcover nor softcover, issue warning
-    \color{red} no print ISBNs!
-  }{%hardcover present, no warning
-  }
-}{%only softcover present, write ISBN
-  &\lsISBNsoftcover~(Softcover)\\
-}
+\noindent 
+\begin{tabular}{@{}llrl@{; }r@{~}l}
+ISBN: & \multicolumn{2}{r}{Digital, complete work:} & \lsISBNdigital \\
+      &	Hardcover: & vol1:        & \lsISBNhardcoverOne & vol. 2 & \lsISBNhardcoverTwo\\
+      &	Softcover: & vol1:        & \lsISBNsoftcoverOne & vol. 2 & \lsISBNsoftcoverTwo\\
+%      &	Softcover US: & vol1:        & \lsISBNsoftcoverusOne & vol. 2 & \lsISBNsoftcoverusTwo \\
 \end{tabular}
 
 \IfStrEq{\lsISSN}{??}   % \IfStrEq from xstring
@@ -1127,7 +1114,7 @@ ISBN: &
 \IfStrEq{\lsBookDOI}{??}    % \IfStrEq from xstring
   {{\color{red} no DOI}}
   {\doi{\lsBookDOI}}\\
-Source code available from \url{www.github.com/langsci/\lsID}  \\
+Source code available from \href{https://www.github.com/langsci/\lsID}{www.github.com/langsci/\lsID}  \\
 Collaborative~reading:~\href{https://paperhive.org/documents/remote?type=langsci&id=\lsID}{paperhive.org/documents/remote?type=langsci\&id=\lsID}
 
 \bigskip
