@@ -39,11 +39,11 @@ def process(s):
   
 
 if __name__ == '__main__':
-  fn = 'main.adx'
+  fn = 'grammatical-theory.adx'
   lines = open(fn).readlines()
   print(len(lines))
   lines2 = list(map(process, lines))
-  out = open('mainmod.adx','w')
+  out = open('grammatical-theorymod.adx','w')
   out.write(''.join(lines2))
   out.close()
   
