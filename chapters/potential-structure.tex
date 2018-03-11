@@ -7,25 +7,26 @@ lexical analysis of valence alternations. This rather brief chapter deals with a
 discuss the analysis of complex predicates consisting of a preverb and a light
 verb. Preverbs often have an argument structure of their own. They describe an event and the light
 verb can be used to realize either the full number of arguments or a reduced set of
-arguments. (\mex{1}) provides the example from Hindi\il{Hindi}\il{Urdu} that \citet*{ARP2018a} discuss.
+arguments. (\mex{1}) provides the example from Hindi\il{Hindi}\il{Urdu} discussed by \citet*{ARP2018a}.
 
 
 \eal
 \ex
 \gll logon=ne      pustak=kii tareef k-ii\\
-      people.M=Erg book.F=Gen praise.F do-Perf.F\\
+      people.\textsc{m}=\textsc{erg} book.\textsc{f}=\textsc{gen} praise.\textsc{f} do-\textsc{perf}.\textsc{f}\\
 \glt `People praised the book.' Lit: `People did praise of the book.'
 \ex
 \gll pustak=kii tareef hu-ii\\
-     book.F.Sg=Gen praise.F be.Part-Perf.F.Sg/be.Pres\\
+     book.\textsc{f}.\textsc{sg}=\textsc{gen} praise.\textsc{f} be.Part-\textsc{perf}.\textsc{f}.\textsc{sg}/be.\textsc{pres}\\
 \glt `The book got praised.' Lit: `The praise of the book happened.'
 \zl
-\emph{tareef} `praise' is a noun that can be combined with the lightverb \emph{kar} `do' to form an
-active sentence as in (\mex{0}a) or with the lightverb \emph{ho} `be' to form a passive sentence as in (\mex{0}b).
-Similar examples can of course be found in other languages that make heavy use of complex predicates
+\emph{tareef} `praise' is a noun that can be combined with the light verb \emph{kar} `do' to form an
+active sentence as in (\mex{0}a) or with the light verb \emph{ho} `be' to form a passive sentence as in (\mex{0}b).
+Similar examples can of course be found in other languages making heavy use of complex predicates
 \citep{MuellerPersian}.
 
-In what follows I compare the analysis of \citet{ARP2018a} in the framework of Lexicalized TAG. LTAG
+In what follows I compare the analysis of \citet{ARP2018a} in the framework of Lexicalized TAG with
+a an HPSG analysis. As the name specifies, LTAG
 is a lexicalized framework, something that was argued for in the previous chapter. However, TAG is
 similar to phrasal Construction Grammar in that it makes use of phrasal configurations to represent
 argument slots. This differs from Categorial Grammar\indexcg and HPSG\indexhpsg since the latter frameworks assume
@@ -74,7 +75,7 @@ tag
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{logon=ne      pustak=kii tareef k-ii} `People praised the book.' The tree
-of the lightverb is adjoined into the tree of the preverb, into the XP$_2$ position}\label{fig-hindi-lv-active}
+of the light verb is adjoined into the tree of the preverb, into the XP$_2$ position}\label{fig-hindi-lv-active}
 \end{figure}
 \begin{figure}
 \hfill
@@ -108,15 +109,15 @@ tag
 The TAG analysis is only sketched here. The authors use feature-based TAG\indexftag, which makes it possible
 to enforce obligatory adjunction: the elementary tree for \emph{tareef} is specified in a way that
 makes it necessary to take the tree apart and insert nodes of another tree (see page~\pageref{page-feature-based-tag-oa}). This way it can be
-ensured that the preverb has to be augmented by a lightverb. This results in XP$_f$ being inserted
+ensured that the preverb has to be augmented by a light verb. This results in XP$_f$ being inserted
 at XP$_1$\todostefan{check} in the figures above.
 
 What the analysis clearly shows is that TAG assumes two lexical items for the preverb: one with two
 arguments for the active case and one with just one argument\pagebreak{}
 for the passive. In general one would
-say that \emph{tareef} is a noun that describes the praising event that is, one 
-person praises another one. Now this noun can be combined with a lightverb and depending on which
-lightverb is used we get an active sentence with both arguments realized or a passive sentence with
+say that \emph{tareef} is a noun describing the praising event, that is, one 
+person praises another one. Now this noun can be combined with a light verb and depending on which
+light verb is used we get an active sentence with both arguments realized or a passive sentence with
 the agent of the eventive noun suppressed. There is no morphological reflex of this active/passive
 alternation at the noun. It is just the same noun \emph{tareef}: in an active sentence in (\mex{0}a)
 and in a passive one in (\mex{0}b).
@@ -128,7 +129,7 @@ building blocks that are combined to yield the trees we want to have in the end.
 Categorial Grammar %\citep{Ajdukiewicz35a-u} 
 and HPSG %\citep{ps2,Sag97a} 
 where lexical items do not
-encode real structure to be used in an analysis but potential structure: lexical items come with a
+encode real structure to be used in an analysis, but potential structure: lexical items come with a
 list of their arguments, that is, items that are required for the lexical element under
 consideration to project to a full phrase. However, lexical heads may enter
 relations with their valents and form NPs, APs, VPs, PPs or other phrases, but they do not have
@@ -137,7 +138,7 @@ composition\is{argument composition}\is{argument attraction} within the framewor
 \citet{HN89a,HN94a}. Since the 90ies this technique is used for the analysis of complex predicates
 in HPSG for German \citep{HN89a,HN94a,Kiss95a,Meurers99a,Mueller99a,Kathol2000a},
 Romance\il{Romance} (\citealp[\page 600]{MS97a-u}; \citealp{Monachesi98a}) and Persian\il{Persian} \citep{MuellerPersian}. For instance \citet[\page
-  642]{MuellerPersian} analyzes the lightverbs \emph{kardan} `do' and \emph{šodan} `become' this
+  642]{MuellerPersian} analyzes the light verbs \emph{kardan} `do' and \emph{šodan} `become' this
 way: both raise the subject of the embedded predicate and make it their own argument but
 \emph{kardan} introduces an additional argument while \emph{šodan} does not do so.
 
@@ -154,10 +155,10 @@ arg-st & \sliste{ \ibox{1} NP, \ibox{2} NP }\\
 }
 \z
 The \argstl contains all arguments of a head. The arguments are linked to the semantic representation
-and are mapped to valence features like \textsc{specifier} and \textsc{complements}. Dependning on
-the langauge and the realizationability of subjects within projections that subject may be mapped to
-a separate feature which is a \headf. \headfs are projected along the head path but may not be
-combined with the head.
+and are mapped to valence features like \textsc{specifier} and \textsc{complements}. Depending on
+the langauge and the realizationability of subjects within projections, that subject may be mapped to
+a separate feature, which is a \headf. \headfs are projected along the head path but the features
+contained under \head do not license combinations with the head.
 
 The lexical items for \emph{kar} `do' and  \emph{ho} `be' are:
 \eal
@@ -172,77 +173,76 @@ head & verb\\
 arg-st & \ibox{1} $\oplus$ \sliste{ N[\comps \ibox{1} ] } 
 }
 \zl
-The verb \emph{kar} `do' selects for a noun and takes whatever the subject of this noun is and 
-concatenates the list of complements the noun takes with this. The result is \ibox{1} $\oplus$
-\ibox{2} and it is a prefix of the \argstl of the lightverb. 
+The verb \emph{kar} `do' selects for a noun and takes whatever the subject of this noun is \iboxb{1} and 
+concatenates the list of complements the noun takes \iboxb{2} with the value of \subj. The result is \ibox{1} $\oplus$
+\ibox{2} and it is a prefix of the \argstl of the light verb. 
 The lexical item for \emph{ho} `be' is similar, the difference being that the subject of the
 embedded verb is not attracted to the higher \argstl, only the complements \iboxb{1} are.
 
 For finite verbs it is assumed that all arguments are mapped to the \compsl of the verb, so the
 \compsl is identical to the \argstl.
-
-\addlines[2]
+\largerpage[-1]
 The analysis of our example sentences is shown in Figures~\ref{fig-hindi-lv-active-hpsg} and~\ref{fig-hindi-lv-passive-hpsg}.
-\begin{figure}
+\begin{figure}[t]
 \hfill%
 \begin{forest}
 sm edges
 [V
    [\ibox{1} NP [{logon=ne};{people.M=Erg}]]
    [V
-     [\ibox{2} NP [{pustak=kii};{book.F=Gen}]]
+     [\ibox{2} NP [{pustak=kii};{book.{f}={gen}}]]
      [V
         [\ibox{3} N\feattab{
             \subj  \sliste{ \ibox{1} }\\
             \comps  \sliste{ \ibox{2} }\\
-            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;praise.F]]
+            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.{f}}]]
         [V\feattab{
             \subj  \sliste{ }\\
             \comps  \ibox{4}\\
-            \argst  \ibox{4} \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }} [k-ii;do-Perf.F]]]]]
+            \argst  \ibox{4} \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }} [k-ii;{do-{perf}.{f}}]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{logon=ne      pustak=kii tareef k-ii} `People praised the book.' The
-  arguments of the preverb are taken over by the lightverb}\label{fig-hindi-lv-active-hpsg}
+  arguments of the preverb are taken over by the light verb}\label{fig-hindi-lv-active-hpsg}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[t]
 \hfill%
 \begin{forest}
 sm edges
    [V
-     [\ibox{2} NP [{pustak=kii};{book.F=Gen}]]
+     [\ibox{2} NP [{pustak=kii};{book.{f}={gen}}]]
      [V
         [\ibox{3} N\feattab{
             \subj  \sliste{ \ibox{1} NP }\\
             \comps  \sliste{ \ibox{2} }\\
-            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;praise.F]]
+            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.{f}}]]
         [V\feattab{
             \subj  \sliste{ }\\
             \comps  \ibox{4}\\
-            \argst  \ibox{4} \sliste{ \ibox{2}, \ibox{3} }} [hu-ii;be.Part-Perf.F.Sg/be.Pres]]]]]
+            \argst  \ibox{4} \sliste{ \ibox{2}, \ibox{3} }} [hu-ii;{be.Part-{perf}.{f}.{sg}/be.{pres}}]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{pustak=kii tareef hu-ii} `The book got praised.'}\label{fig-hindi-lv-passive-hpsg}
 \end{figure}
 
-The conclusion is that HPSG has a representation of potential structure. When lightverbs are present
+The conclusion is that HPSG has a representation of potential structure. When light verbs are present,
 they can take over valents and ``execute'' them according to their own preferences. This is not
-possible in TAG since once structure is assembled it may not be changed. We may insert items into
-the middle of an already assembled structure but we may not take out arguments or reorder them. This
+possible in TAG since once structure is assembled it cannot be changed. We may insert items into
+the middle of an already assembled structure but we cannot take out arguments or reorder them. This
 is possible in Categorial Grammar and in HPSG: the governing head may choose which arguments to take
 order and in which order they should be represented in the valence repsresentations of the governing head.
 
 LFG is somewhere in the middle between TAG and HPSG: the phrase structural configurations are not
 fully determined as in TAG since LFG does not store and manipulate phrase markers. But lexical items are
 associated with f-structures and these f-structures are responsible for which elements are realized
-in syntax. Since complex predicates are assumed to be monoclausal it is not sufficient to embed the
-f-structure of the preverb within the f-structure of the lightverb \citep{BHKM2003a-u}. Since the grammatical functions
-that are ultimately realized in the clause do not depend on the preverb alone the lightverb may have
+in syntax. As complex predicates are assumed to be monoclausal it is not sufficient to embed the
+f-structure of the preverb within the f-structure of the light verb \citep{BHKM2003a-u}. Since the grammatical functions
+that are ultimately realized in the clause do not depend on the preverb alone the light verb may have
 to determine the grammatical functions contributed by the preverb. In order to be able to do this \citet{BHKM2003a-u}
 use the restriction operator \citep{KW93a-u}, which restricts out certain features or path equations provided by the
-preverb's and the lightverb's f-structures. The specification of grammatical functions in
+preverb's and the light verb's f-structures. The statement of grammatical functions in
 f-structures is another instance of too strict specifications: once specified, it is difficult to get rid of it and special means like partial copying via
 restriction are needed. 
 An alternative not relying on restriction was suggested by \citet{Butt97a}:
@@ -261,19 +261,27 @@ benefactive\is{benefactive} arguments.
 
 %\largerpage
 Summing up, I showed that there are indeed differences between the frameworks that are due to the
-basic representational formalisms that are assumed. While TAG assumes that the lexicon contains
+basic representational formalisms they assume. While TAG assumes that the lexicon contains
 trees with a certain structure, HPSG assumes that lexical items come with valence specifications,
-that is, they have descriptions that together with dominance schemata (grammar rules) that are
-separate from the lexical items determine how possible structures look like. Since valence
+that is, they have descriptions of items that have to be combined with the lexical item. But the way
+in which the items have to be combined with the head is determined by dominance schemata (grammar
+rules) that are separate from the lexical items. So the valence specifications specify possible
+structures. Since valence
 representations can be composed by superordinate predicates there is enough flexibility to deal with
-various lightverb phenomena. LFG is a bit more restricted due to the use of f-structures, but using
-a restriction operator unwanted information about grammatical functions can be keept out from
+various light verb phenomena. LFG is a bit more constrained due to the use of f-structures, but using
+a restriction operator unwanted information about grammatical functions can be keept out of
 f-structures of matrix predicates.
 
-\section*{Further reading}
+\furtherreading{
 
 This chapter is based on \citet{MuellerPotentialStructure}.
-
+}
 
 
 %      <!-- Local IspellDict: en_US-w_accents -->
+
+
+
+
+
+

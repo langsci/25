@@ -939,7 +939,7 @@ dg edges
 \caption{\label{fig-wen-glaubst-ich-du-dass-dg}Unwanted dependency graph of *\,\emph{Wen glaubst ich
     du, dass gesehen habe?} `Who do you think I saw?'}
 \end{figure}%
-\addlines[2]
+\largerpage[2]
 Note that the order of elements in (\mex{0}) is compatible with statements that refer to
 topological fields as suggested by \citet[\page 50]{Engel2014a}: there is a \vf filled by \emph{wen}
 `who', there is a left sentence bracket filled by
@@ -961,7 +961,7 @@ and \citet{GO2009a}.
 %% I wrote dozen of papers on the formalization of extraction showing the link between such an idea,
 %% functional uncertainty in LFG, HPSG and CG slash feature, etc.}
 In what follows, I use the analysis by \citet{GO2009a} as an example for such analyses. Groß \& Osborne depict the reorganized dependencies with a dashed line as in
-Figure~\vref{fig-wen-glaubst-du-dass-dg-rising}.\footnote{%
+Figure~\ref{fig-wen-glaubst-du-dass-dg-rising}.\footnote{%
   \citet[\page 260]{EH2003a} make a similar suggestion but do not provide any formal details.%
 }$^,$\footnote{%
 Note that \citet{GO2009a} do not assume a uniform analysis of simple and complex V2 sentences. That
@@ -969,7 +969,8 @@ is, for cases that can be explained as local reordering they assume an analysis 
 rising. Their analysis of (\ref{ex-Diesen-Mann-kent-jeder-dg}) is the one depicted in
 Figure~\ref{fig-diesen-mann-kennt-jeder-dg}. This leads to problems which will be discussed in Section~\ref{sec-linearization-problems-dg}.
 }
-\begin{figure}
+\largerpage[2]%\enlargethispage{2pt}
+\begin{figure}[t]
 \centering
 \begin{forest}
 dg edges
@@ -1016,7 +1017,7 @@ its subject, object and so on, he assumes further dependencies for extracted ele
      who believe you that I seen have\\
 \glt `Who do you believe that I saw?'
 \z
-\addlines
+%\addlines
 Hudson states that the use of multiple dependencies in Word Grammar\indexwg corresponds to structure
 sharing\is{structure sharing} in HPSG\indexhpsg \citep[\page 15]{Hudson97a}. Nonlocal dependencies are modeled as a series
 of local dependencies as it is done in \gpsg and \hpsg. This is important since it allows one to
@@ -1262,11 +1263,11 @@ Section~\ref{sec-coordination-cg}): the category of the conjunction in Categoria
 X)/X. We have a functor that takes two arguments of the same category and the result of the
 combination is an object that has the same category as the two arguments. Translating this approach
 to Dependency Grammar, one would get an analysis as the one depicted in
-Figure~\vref{fig-dg-coordination-with-conjunction-as-head} rather than the ones in
+Figure~\ref{fig-dg-coordination-with-conjunction-as-head} rather than the ones in
 Figure~\ref{fig-dg-junction} and Figure~\ref{fig-dg-junction-all-girls-and-boys}.
 %\todostefan{Ist das
 %  auch der Ansatz von \citet[\page 625]{Hellwig2003a}?}
-\begin{figure}
+\begin{figure}[b]
 \hfill
 \begin{forest}
 dg edges
@@ -1669,7 +1670,7 @@ But see \citew[Section~11.2.3]{Eroms2000a}.
      he comes not\\
 \glt `He does not come.'
 \z
-\begin{figure}
+\begin{figure}[t]
 \begin{forest}
 dg edges
 [Adv 
@@ -1873,8 +1874,8 @@ dg edges
 \caption{\label{fig-dem-saft-eine-kraeftige-farbe-dg}Dependency graph for \emph{Dem Saft eine kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.'}
 \end{figure}%
 
-\addlines[2]
-%\largerpage
+%%\addlines[2]
+%%\largerpage
 Such apparent multiple frontings\is{fronting!apparent multiple} are not restricted to NPs. Various types of dependents can be
 placed in the \vf. An extensive discussion of the data is provided in \citew{Mueller2003b}. Additional data
 have been collected in a research project on multiple frontings and information structure
@@ -1895,7 +1896,7 @@ multiple fronting cases right would be entirely ad hoc.\footnote{%
   position is treated as head-movement and multiple frontings involve the same empty verbal head as
   is used in the verb movement analysis \citep{Mueller2005d,MuellerGS}.
 }
-\begin{figure}
+\begin{figure}[t]
 \centerline{
 \begin{forest}
 dg edges
@@ -1914,10 +1915,10 @@ dg edges
     kräftige Farbe geben Blutorangen.} `Blood oranges give the juice a strong color.' with an empty
   verbal head for the \vf}
 \end{figure}%
-%\largerpage
+\largerpage
 It is important to note that the issue is not solved by simply dropping the V2 constraint and
 allowing dependents of the finite verb to be realized to its left, since the fronted constituents do
-not necessarily depend on the finite verb as the examples in (\mex{1}) show:\pagebreak
+not necessarily depend on the finite verb as the examples in (\mex{1}) show:
 \eal
 \ex
 \label{ex-mehrfach-vf-adv-acc}
@@ -2016,7 +2017,7 @@ Grammar accounts.
 \subsubsection{Translating projective Dependency Grammars into phrase structure grammars}
 \label{sec-dg-psg-translation}
 
-\largerpage[2]
+\largerpage
 As noted by \citet{Gaifman65a}, \citet[\page 234]{Covington90a}, \citet{Oliva2003a} and \citet[\page
   1093]{Hellwig2006a},\todostefan{S: \citew{Robinson70a-u}} certain projective headed phrase structure grammars can be turned into
 Dependency Grammars by moving the head one level up to replace the dominating node. So in an NP
@@ -2049,7 +2050,7 @@ dependency rule, since NP and VP are both complex categories.
 In what follows, I want to show how the dependency graph in Figure~\vref{fig-the-child-reads-the-book-dg} can be recast as headed phrase
 structure rules that license a similar tree, namely the one in Figure~\vref{fig-the-child-reads-a-book-psg}.
 % Hellwig2006a: 1084, 1093
-\begin{figure}
+\begin{figure}[t]
 \centerline{%
 \begin{forest}
 sm edges
@@ -2066,6 +2067,7 @@ sm edges
 \caption{\label{fig-the-child-reads-a-book-psg}Analysis of \emph{The child reads a book.} in a
   phrase structure with flat rules}
 \end{figure}%
+\largerpage
 I did not use the labels NP and VP to keep the two figures maximally similar. The P part of NP and
 VP refers to the saturation of a projection and is often ignored in figures. See Chapter~\ref{chap-HPSG} on HPSG, for example.
 The grammar that licenses the tree is given in (\mex{1}), again ignoring valence
@@ -2089,7 +2091,7 @@ information.
 {D}  & {$\to$ a}\\
 \end{tabular}
 \z
-%\addlines[2]
+%%\addlines[2]
 If one replaces the N and V in the right-hand side of the two left-most rules in (\mex{0}) with the
 respective lexical items and then removes the rules that license the words, one arrives at the
 lexicalized variant of the grammar given in (\mex{1}):
@@ -2154,7 +2156,7 @@ HPSG.
 \subsubsection{Non-projective Dependency Grammars and phrase structure grammars with discontinuous constituents}
 \label{sec-discontinuous-constituents-HPSG}
 
-\largerpage[2]
+%\largerpage[2]
 The equivalent to non-projective\is{projectivity|(} dependency graphs are discontinuous constituents in phrase
 structure grammars. In what follows I want to provide one
 example of a phrase structure"=based theory that permits discontinuous structures. Since, as I
@@ -2217,11 +2219,12 @@ The constraint in (\mex{1}) is responsible for the determination of the \phonvs 
                   } \\
    }
 \z
+\addlines[-1]
 It states that the \phonv of a sign is the concatenation of the \phonvs of its \textsc{domain}
 elements. Since the order of the \textsc{domain} elements corresponds to their surface order, this is
 the obvious way to determine the \phonv of the whole linguistic object. 
 
-\largerpage
+%\largerpage
 Figure~\vref{fig-the-child-reads-the-book-reape-binary} shows how this machinery can be used to license binary
 branching structures with discontinuous constituents.
 \begin{figure}
@@ -2324,7 +2327,8 @@ permutation. What we are left with is a pure Dependency Grammar without any cons
 projectivity.
 %\todostefan{S: ok but nobody in DG does that.
 %There are plenty of works about how to relax the projectivity without suppressing it.}
-With such a grammar we could analyze the non-projecting structure of Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-dg} and much more. The analysis in terms of domain union is shown in Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-domains}. 
+With such a grammar we could analyze the non-projecting structure of
+Figure~\ref{fig-dass-die-Frauen-Tueren-oeffnen-dg} on page~\pageref{fig-dass-die-Frauen-Tueren-oeffnen-dg} and much more. The analysis in terms of domain union is shown in Figure~\vref{fig-dass-die-Frauen-Tueren-oeffnen-domains}. 
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -2463,6 +2467,7 @@ word salad in (\mex{1}b):
 %% \ex
 %% \gll Sie hat keinem etwas gesagt, der was ihr ihm begegnete nützte
 \zl
+%\largerpage
 (\mex{0}b) is a variant of (\mex{0}a) in which the elements of the two clausal arguments are in
 correct order with respect to each other, but both clauses are discontinuous in such a way that the
 elements of each clause alternate. The dependency graph is shown in Figure~\vref{fig-dass-ob-peter-klaus-kommt-spielt}.
@@ -2522,7 +2527,7 @@ be represented somewhere. I will discuss this in the following subsection.
 \label{sec-dg-daughters-mothers}
 \label{sec-dg-is-simpler}
 
-%%\addlines
+%%%\addlines
 As \citet{Oliva2003a} points out, the equivalence of Dependency Grammar and HPSG only holds up as far
 as \headvs are concerned.
 %\todostefan{S: many DG have several level of representations. You cannot compare HSG wioth only one
@@ -2830,7 +2835,7 @@ So assuming an empty head or a phrasal schema seems to be the
 only option.
 %\todostefan{S: There is a third very interesting option considered by Tesnière 1959 (see our intro) and before by Sicard 1801 and maybe before and exploited in all my formalizations of extraction including the HPSG's one in Kahane 2009: the wh-word has a double position, it is both a complementizer and a pronoun.}
 
-\largerpage
+%\largerpage
 Chapter~\ref{Abschnitt-Phrasal-Lexikalisch} is devoted to the discussion of whether
 certain phenomena should be analyzed as involving phrase structural configurations or whether
 lexical analyses are better suited in general or for modeling some phenomena. I argue there that all
@@ -2843,7 +2848,7 @@ phenomena.
 There always has to be some element on which others depend. It has been argued by
 \citet{Jackendoff2008a}\is{construction!N-P-N|(} that it does not make sense to assume that one of the
 elements in N-P-N constructions like those in (\mex{1}) is the head.
-%\addlines
+%%\addlines
 \eal
 \ex day by day, paragraph by paragraph, country by country
 \ex dollar for dollar, student for student, point for point
@@ -2851,6 +2856,7 @@ elements in N-P-N constructions like those in (\mex{1}) is the head.
 \ex term paper after term paper, picture after picture
 \ex book upon book, argument upon argument
 \zl
+%\addlines[2]
 Of course there is a way to model all the phenomena that would be modeled by a phrasal construction
 in frameworks like GPSG, CxG, HPSG, or Simpler Syntax: an empty head. Figure~\vref{fig-n-p-n} shows
 the analysis of \emph{student after student}.
@@ -2901,9 +2907,7 @@ towards a mixed model.\is{construction!N-P-N|)}
 See Section~\ref{sec-why-phrasal} for the discussion of further cases which are probably problematic
 for purely selection"=based grammars.
 
-\section*{Exercises}
-
-\largerpage
+\vspace{\baselineskip}\exercises{%
 Provide the dependency graphs for the following three sentences:
 \eal
 \ex 
@@ -2921,10 +2925,9 @@ Provide the dependency graphs for the following three sentences:
 \zl
 You may use non-projective dependencies. For the analysis of relative clauses authors usually propose
 an abstract entity that functions as a dependent of the modified noun and as a head of the verb in
-the relative clause.
+the relative clause.}
 
-\section*{Further reading}
-
+\furtherreading{
 In the section on further reading in Chapter~\ref{chap-GB}, I referred to the book called
 \emph{Syntaktische Analyseperspektiven} `Syntactic perspectives on analyses'. The chapters in this book have been written by proponents of various theories
 and all analyze the same newspaper article. The book also contains a chapter by \citet{Engel2014a},
@@ -2943,7 +2946,7 @@ consideration given to parsing by computer programs.
 that certain variants of Minimalism are in fact reinventions of dependency"=based analyses.
 
 The original work on Dependency Grammar by \citet{Tesniere59a-u} is also available in parts in German
-\citep{Tesniere80a-u} and in full in English \citep{Tesniere2015a-not-crossreferenced}.
+\citep{Tesniere80a-u} and in full in English \citep{Tesniere2015a-not-crossreferenced}.}
 
 \if0
 
