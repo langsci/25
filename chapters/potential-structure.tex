@@ -17,7 +17,7 @@ arguments. (\mex{1}) provides the example from Hindi\il{Hindi}\il{Urdu} discusse
 \glt `People praised the book.' Lit: `People did praise of the book.'
 \ex
 \gll pustak=kii tareef hu-ii\\
-     book.\textsc{f}.\textsc{sg}=\textsc{gen} praise.\textsc{f} be.Part-\textsc{perf}.\textsc{f}.\textsc{sg}/be.\textsc{pres}\\
+     book.\textsc{f}.\textsc{sg}=\textsc{gen} praise.\textsc{f} be.\textsc{part}-\textsc{perf}.\textsc{f}.\textsc{sg}/be.\textsc{pres}\\
 \glt `The book got praised.' Lit: `The praise of the book happened.'
 \zl
 \emph{tareef} `praise' is a noun that can be combined with the light verb \emph{kar} `do' to form an
@@ -53,7 +53,7 @@ tag
   [\fbox{XP$_1$} 
     [NP$_2$ $\downarrow$]
     [XP$_2$
-      [X      [tareef]]]]]
+      [X      [tareef;praise]]]]]
 \end{forest}
 \hfill%
 \begin{forest}
@@ -61,17 +61,17 @@ tag
 [XP$_r$
     [XP$_f$] 
     [VP
-      [V      [k-ii]]]]
+      [V      [k-ii;do]]]]
 \end{forest}
 \hfill%
 \begin{forest}
 tag
 [XP$_0$
-  [NP$_1$ [logon=ne]]
+  [NP$_1$ [logon{=}ne;people]]
   [XP$_1$ [XP$_f$
-            [NP$_2$ [pustak=kii]]
-            [XP$_2$ [X      [tareef]]]]
-    [VP [V [k-ii]]]]]
+            [NP$_2$ [pustak{=}kii;book]]
+            [XP$_2$ [X      [tareef;praise]]]]
+    [VP [V [k-ii;do]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{logon=ne      pustak=kii tareef k-ii} `People praised the book.' The tree
@@ -84,7 +84,7 @@ tag
 [\fbox{XP$_1$}
   [NP$_1$  $\downarrow$]
   [XP$_2$
-    [X      [tareef]]]]
+    [X      [tareef;praise]]]]
 \end{forest}
 \hfill%
 \begin{forest}
@@ -92,20 +92,21 @@ tag
 [XP$_r$
     [XP$_f$] 
     [VP
-      [V      [hu-ii]]]]
+      [V      [hu-ii;be]]]]
 \end{forest}
 \hfill%
 \begin{forest}
 tag
 [XP$_1$ [XP$_f$
-            [NP$_1$ [pustak=kii]]
-            [XP$_2$ [X      [tareef]]]]
-    [VP [V [hu-ii]]]]
+            [NP$_1$ [pustak{=}kii;book]]
+            [XP$_2$ [X      [tareef;praise]]]]
+    [VP [V [hu-ii;be]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{pustak=kii tareef hu-ii} `The book got praised.'}\label{fig-hindi-lv-passive}
 \end{figure}
-\addlines
+%\addlines
+\largerpage
 The TAG analysis is only sketched here. The authors use feature-based TAG\indexftag, which makes it possible
 to enforce obligatory adjunction: the elementary tree for \emph{tareef} is specified in a way that
 makes it necessary to take the tree apart and insert nodes of another tree (see page~\pageref{page-feature-based-tag-oa}). This way it can be
@@ -113,7 +114,7 @@ ensured that the preverb has to be augmented by a light verb. This results in XP
 at XP$_1$\todostefan{check} in the figures above.
 
 What the analysis clearly shows is that TAG assumes two lexical items for the preverb: one with two
-arguments for the active case and one with just one argument\pagebreak{}
+arguments for the active case and one with just one argument
 for the passive. In general one would
 say that \emph{tareef} is a noun describing the praising event, that is, one 
 person praises another one. Now this noun can be combined with a light verb and depending on which
@@ -122,7 +123,7 @@ the agent of the eventive noun suppressed. There is no morphological reflex of t
 alternation at the noun. It is just the same noun \emph{tareef}: in an active sentence in (\mex{0}a)
 and in a passive one in (\mex{0}b).
 
-\largerpage
+%\largerpage
 And here we see a real difference between the frameworks: TAG is a framework in which structure is
 assembled: the basic operations are substitution and adjunction. The lexicon consists of ready-made
 building blocks that are combined to yield the trees we want to have in the end. This differs from
@@ -188,18 +189,18 @@ The analysis of our example sentences is shown in Figures~\ref{fig-hindi-lv-acti
 \begin{forest}
 sm edges
 [V
-   [\ibox{1} NP [{logon=ne};{people.M=Erg}]]
+   [\ibox{1} NP [{logon=ne};{people.\textsc{m}{=}\textsc{erg}}]]
    [V
-     [\ibox{2} NP [{pustak=kii};{book.{f}={gen}}]]
+     [\ibox{2} NP [{pustak=kii};{book.\textsc{f}{=}\textsc{gen}}]]
      [V
         [\ibox{3} N\feattab{
             \subj  \sliste{ \ibox{1} }\\
             \comps  \sliste{ \ibox{2} }\\
-            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.{f}}]]
+            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.\textsc{f}}]]
         [V\feattab{
             \subj  \sliste{ }\\
             \comps  \ibox{4}\\
-            \argst  \ibox{4} \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }} [k-ii;{do-{perf}.{f}}]]]]]
+            \argst  \ibox{4} \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }} [k-ii;{do-\textsc{perf}.\textsc{f}}]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{logon=ne      pustak=kii tareef k-ii} `People praised the book.' The
@@ -212,16 +213,16 @@ sm edges
 \begin{forest}
 sm edges
    [V
-     [\ibox{2} NP [{pustak=kii};{book.{f}={gen}}]]
+     [\ibox{2} NP [{pustak=kii};{book.\textsc{f}{=}\textsc{gen}}]]
      [V
         [\ibox{3} N\feattab{
             \subj  \sliste{ \ibox{1} NP }\\
             \comps  \sliste{ \ibox{2} }\\
-            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.{f}}]]
+            \argst  \sliste{ \ibox{1}, \ibox{2} }} [tareef;{praise.\textsc{f}}]]
         [V\feattab{
             \subj  \sliste{ }\\
             \comps  \ibox{4}\\
-            \argst  \ibox{4} \sliste{ \ibox{2}, \ibox{3} }} [hu-ii;{be.Part-{perf}.{f}.{sg}/be.{pres}}]]]]]
+            \argst  \ibox{4} \sliste{ \ibox{2}, \ibox{3} }} [hu-ii;{be.\textsc{part}-\textsc{perf}.\textsc{f}.\textsc{sg}/be.\textsc{pres}}]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{Analysis of \emph{pustak=kii tareef hu-ii} `The book got praised.'}\label{fig-hindi-lv-passive-hpsg}
