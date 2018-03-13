@@ -68,10 +68,10 @@
 
 
 
-\usepackage{ogonek}        % For Ewa Dabrowska
+\usepackage{styles/ogonek}        % For Ewa Dabrowska
 
 
-\usepackage{mycommands}% \spacebr
+\usepackage{styles/mycommands}% \spacebr
 
 
 % still needed
@@ -86,6 +86,9 @@
 \usepackage{subfig}
 
 %\renewcommand{\xbar}{X̅\xspace}
+
+
+%\usepackage[external,linguistics]{styles/forest/forest}
 
 
 % for reasons I do not understand this cannot be moved further down and 
@@ -108,7 +111,7 @@
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
 \usepackage{german}\selectlanguage{USenglish}
 
-\usepackage{styles/makros.2e,styles/article-ex,styles/additional-langsci-index-shortcuts,
+\usepackage{styles/merkmalstruktur,styles/abbrev,styles/makros.2e,styles/my-xspace,styles/article-ex,styles/additional-langsci-index-shortcuts,
 styles/eng-date,styles/my-theorems}
 
 % loaded in macros.2e \usepackage[english]{varioref}
@@ -119,7 +122,7 @@ styles/eng-date,styles/my-theorems}
 \setcounter{secnumdepth}{4}
 
 
-\usepackage{styles/dgmacros,pst-tree,trees,styles/dalrymple} % Mary Dalrymples macros
+\usepackage{styles/dgmacros,pst-tree,styles/trees,styles/dalrymple} % Mary Dalrymples macros
 
 
 %%% trick for using adjustbox
@@ -131,7 +134,7 @@ styles/eng-date,styles/my-theorems}
 \usepackage[export]{adjustbox}
 
 % draw a grid for getting the coordinates
-\usepackage{tikz-grid}
+\usepackage{styles/tikz-grid}
 
 % for offsets in trees
 \newlength{\offset}
