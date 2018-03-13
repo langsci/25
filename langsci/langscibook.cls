@@ -1102,18 +1102,18 @@ Unter den Linden 6\\
 Storage and cataloguing done by FU Berlin \\[3ex]   
 
 
-\IfFileExists{\logopath storagelogo.pdf}{\includegraphics[width=5cm]{\logopath storagelogo.pdf}}{\logotext} \\[3ex]
+\IfFileExists{\logopath storagelogo.pdf}{\includegraphics[width=5cm]{\logopath storagelogo.pdf}}{\logotext} %% \\[3ex]
 
 
-\vfill
+%% \vfill
 
 
 
-\noindent
-\lsp has no responsibility for the persistence or accuracy of URLs for
-external or third-party Internet websites referred to in this
-publication, and does not guarantee that any content on such websites
-is, or will remain, accurate or appropriate. 
+%% \noindent
+%% \lsp has no responsibility for the persistence or accuracy of URLs for
+%% external or third-party Internet websites referred to in this
+%% publication, and does not guarantee that any content on such websites
+%% is, or will remain, accurate or appropriate. 
 }
 
 
