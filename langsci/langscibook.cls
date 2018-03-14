@@ -414,17 +414,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%      Output types
+%      Output types  
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \newcommand{\lsOutputLong}{long}
-\newcommand{\lsOutputBook}{book}             % standard book
+\newcommand{\lsOutputBook}{book}             % standard book 
 \newcommand{\lsOutputInprep}{inprep}          % marks manuscript as in preparation
 \newcommand{\lsOutputPaper}{paper}            % paper in edited volume
-\newcommand{\lsOutputGuidelines}{guidelines}  % guidelines
-\newcommand{\lsOutputCoverBODsc}{coverbodsc}      % cover with BoD measurements
-\newcommand{\lsOutputCoverBODhc}{coverbodhc}      % cover with BoD measurements
+\newcommand{\lsOutputGuidelines}{guidelines}  % guidelines 
+\newcommand{\lsOutputCoverBODsc}{coverbodsc}      % cover with BoD measurements 
+\newcommand{\lsOutputCoverBODhc}{coverbodhc}      % cover with BoD measurements 
 \newcommand{\lsOutputCoverCS}{covercreatespace} % cover with CreateSpace measurements
 
 
@@ -439,17 +439,20 @@
 \else                 % only if output!=paper
 \renewcommand{\maketitle}{
 \begin{titlepage}
- \thispagestyle{empty}
+\thispagestyle{empty}
+ 
+
 \ifx\lsOutput\lsOutputBook   % only if output=book
   \setcounter{page}{-1}
   %% First titlepage:
   {\lsFrontPage}
   %%%%%%%%%%%%%%%%%%%
-  \pagenumbering{roman}\clearpage\thispagestyle{empty} % We use roman pagenumbering here instead of \frontmatter because scrbook's frontmatter command issues a \clear(double)page, which is unnec. in digital publications.
+  \newpage\thispagestyle{empty}
+  \null\newpage\thispagestyle{empty}
   %% Series information:
   {\lsSeriesHistory}
   %%%%%%%%%%%%%%%%%%%%%
-  \clearpage%\thispagestyle{empty}
+  \newpage\thispagestyle{empty}
   %% Schmutztitel:
   {\renewcommand{\lsCoverBlockColor}{white}
    \renewcommand{\lsCoverFontColor}{\lsSeriesColor}
@@ -465,14 +468,14 @@
     {\lsBackPage}
     \null\newpage\thispagestyle{empty}
   }
-\fi
+\fi 
 
 \ifx\lsOutput\lsOutputInprep          % only if output=inprep
   {\renewcommand{\lsCoverBlockColor}{white}
    \renewcommand{\lsCoverFontColor}{black}
    \lsCoverBlock
    \lsCoverTitleAuthor}
-\fi
+\fi               
 
 \ifx\lsOutput\lsOutputGuidelines        % only if output=guidelines
   {\setcounter{page}{-1}
@@ -483,57 +486,68 @@
 
 \fi
 
-\ifx\lsOutput\lsOutputCoverBODhc         % only if output=cover
-  \podsetup
-  \begin{tikzpicture}[remember picture, overlay,bg/.style={outer sep=0}]
+\ifx\lsOutput\lsOutputCoverBODhc         % only if output=cover 
+  \podsetup  
+  \begin{tikzpicture}[remember picture, overlay,bg/.style={outer sep=0}] 
     \podgeometry{24.2mm}{23.1cm}{15.5cm}
-    \podspine
-    \podfrontcovertoptext{140mm}{51pt} % Due to different cover sizes, the text size was adjusted so that the difference in line breaks would be minimal between hard and softcover books.
+    \podspine 
+    \podfrontcovertoptext{140mm}{51pt} % Due to different cover sizes, the text size was adjusted so that the difference in line breaks would be minimal between hard and softcover books. 
     \podcoverbottomtext
     \newcommand{\lsISBNcover}{\lsISBNhardcover}
-    \podbackcover{137mm}
-  \end{tikzpicture}
+    \podbackcover{137mm}  
+  \end{tikzpicture}  
   %exit the document right here
   \end{titlepage}
-  \end{document}
-  \fi
+  \end{document}    
+  \fi 
+  
 
-
-\ifx\lsOutput\lsOutputCoverBODsc         % only if output=cover
-  \podsetup
-  \begin{tikzpicture}[remember picture, overlay,bg/.style={outer sep=0}]
+\ifx\lsOutput\lsOutputCoverBODsc         % only if output=cover 
+  \podsetup  
+  \begin{tikzpicture}[remember picture, overlay,bg/.style={outer sep=0}] 
     \podgeometry{13.75mm}{23.1cm}{15.5cm}
-    \podspine
-    \podfrontcovertoptext{140mm}{51pt} % Due to different cover sizes, the text size was adjusted so that the difference in line breaks would be minimal between hard and softcover books.
+    \podspine 
+    \podfrontcovertoptext{140mm}{51pt} % Due to different cover sizes, the text size was adjusted so that the difference in line breaks would be minimal between hard and softcover books. 
     \podcoverbottomtext
     \newcommand{\lsISBNcover}{\lsISBNsoftcover}
-    \podbackcover{137mm}
-  \end{tikzpicture}
+    \podbackcover{137mm}  
+  \end{tikzpicture}  
   %exit the document right here
   \end{titlepage}
-  \end{document}
-  \fi
-
-
+  \end{document}    
+  \fi 
+  
+  
 %   ============================
-\ifx\lsOutput\lsOutputCoverCS        % only if output=covercs
+\ifx\lsOutput\lsOutputCoverCS        % only if output=covercs   
   \podsetup
   \begin{tikzpicture}[remember picture, overlay,bg/.style={outer sep=0}]
     \podgeometry{10.675mm}{22.5cm}{15.5cm}
     \podspine
     \podfrontcovertoptext{140mm}{52pt} % Due to different cover sizes, the text size was adjusted so that the difference in line breaks would be minimal between hard and softcover books.
     \podcoverbottomtext
+%     %unclear why this was different between BOD and CS
+%     %-----------------------------
+%     \node [above right = 18.5mm and -.1mm of CoverColouredRectangleFront.south west, rectangle, fill=white, minimum size=17pt] (lspcls_square) {}; % 2
+%     \node [above left = 10mm and 7.5mm of CoverColouredRectangleFront.south east] {\color{\lsCoverFontColour}\includegraphics{\logopath langsci_logo_nocolor.pdf}};
+% %     \node [below right = 197.5mm and 117.1mm of CoverColouredRectangleFront.north west] {\color{\lsCoverFontColour}\includegraphics{\logopath langsci_logo_nocolor.pdf}};
+%     \path let \p1 = (lspcls_square.north east), \p2 = (lspcls_covertitle.west) in node at (\x2,\y1) (lspcls_seriesinfo) [font=\fontsize{17pt}{7.5mm}\selectfont, right, text width=95mm, anchor=north west] {\color{\lsCoverFontColour}\lsCoverSeriesFont{\lsSeriesTitle\par}};
+%     %-----------------------------
 	\iflsUscover\newcommand{\lsISBNcover}{\lsISBNsoftcoverus}\else\newcommand{\lsISBNcover}{\lsISBNsoftcover}\fi
     \podbackcover{140mm}
-  \end{tikzpicture}
-  %exit the document right here
+  \end{tikzpicture} 
+  %exit the document right here  
   \end{titlepage}
-  \end{document}
-\fi
+  \end{document}      
+\fi   
+    
 \end{titlepage}
 
-% \null\newpage\thispagestyle{empty}
-\hypersetup{colorlinks=false, citecolor=brown, pdfborder={0 0 0}}  % for hyperref
+\frontmatter
+\renewcommand{\frontmatter}{}
+
+\null\newpage\thispagestyle{empty}
+\hypersetup{colorlinks=false, pdfborder={0 0 0}}  % for hyperref
 \color{black}
 \lsInsideFont
 
@@ -546,12 +560,12 @@
 \fi
 %%%%%%%%%%%%%
 
-% \null\newpage\thispagestyle{plain}
+\null\newpage\thispagestyle{plain}
 %\pagenumbering{roman}    % or \frontmatter
 
 %% Dedication:
 \ifx\@dedication\empty{}
-\else{\newpage\lsDedication}
+\else{\lsDedication}
 \fi
 %%%%%%%%%%%%%%%%
 
@@ -563,18 +577,18 @@
 \ifx\lsSeries\sidl
   %\def\exfont{\normalsize\itshape}
   \renewcommand{\eachwordone}{\itshape} % only \gll
-
+  
   \let\oldtable\table   % footnotes in tables without horizontal line
   \let\endoldtable\endtable
-  \renewenvironment{table}{\setfootnoterule{0pt}\oldtable}{\endoldtable}
+  \renewenvironment{table}{\setfootnoterule{0pt}\oldtable}{\endoldtable} 
 \fi
 
 \ifx\lsSeries\pmwe
- \renewcommand{\eachwordone}{\itshape}
+ \renewcommand{\eachwordone}{\itshape} 
 \fi
 
 \ifx\lsSeries\nc
- \renewcommand{\eachwordone}{\itshape}
+ \renewcommand{\eachwordone}{\itshape} 
 \fi
 
 
@@ -582,11 +596,13 @@
 } %% \AtBeginDocument
 
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %   Geometry
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 % For output type cover
 % \usepackage{catchfilebetweentags}
