@@ -11,10 +11,39 @@
 % 
 % \usepackage{etoolbox}
 % \newtoggle{draft}\togglefalse{draft}
+\bibliography{bib-abbr,biblio}
 \input{localmetadata.tex}
 \input{localpackages.tex}
-\begin{document}
 \input{localcommands.tex}
+\includeonly{ 
+% chapters/1-begriffe,
+% chapters/2-psg,
+% chapters/3-gb,
+% chapters/3-minimalism,
+% chapters/4-gpsg,
+% chapters/5-merkmalstrukturen,
+chapters/6-lfg,
+% chapters/7-cg,
+% chapters/8-hpsg,
+% chapters/9-cxg,
+% chapters/dg,
+% chapters/tag,
+% chapters/ot, 
+% chapters/innateness,
+% chapters/mts,
+% chapters/competence,
+% chapters/acquisition,
+% chapters/complexity,
+% chapters/branching-locality-recursion,
+% chapters/empty,
+% chapters/movement,
+% chapters/phrasal,
+% chapters/potential-structure,
+% chapters/coregram,
+% chapters/conclusions,
+% chapters/loesungen,
+}
+\begin{document}
 \newcommand{\NOTE}[1]{\marginpar{#1}}
 
 \newcommand{\LATER}[1]{}
@@ -30,35 +59,35 @@
 
 \part{Background and specific theories}
  
-% \include{chapters/1-begriffe}
-% \include{chapters/2-psg}
-% \include{chapters/3-gb}
-% \include{chapters/3-minimalism}
-% \include{chapters/4-gpsg}
-% \include{chapters/5-merkmalstrukturen}
-% \include{chapters/6-lfg}
-% \include{chapters/7-cg}
-% \include{chapters/8-hpsg}
-% \include{chapters/9-cxg}
-% \include{chapters/dg}
-% \include{chapters/tag}
-% \include{chapters/ot}
+\include{chapters/1-begriffe}
+\include{chapters/2-psg}
+\include{chapters/3-gb}
+\include{chapters/3-minimalism}
+\include{chapters/4-gpsg}
+\include{chapters/5-merkmalstrukturen}
+\include{chapters/6-lfg}
+\include{chapters/7-cg}
+\include{chapters/8-hpsg}
+\include{chapters/9-cxg}
+\include{chapters/dg}
+\include{chapters/tag}
+\include{chapters/ot}
 
 \part{General discussion}\label{part-discussion}
 
-% \include{chapters/innateness}
-% \include{chapters/mts}
-% \include{chapters/competence}
-% \include{chapters/acquisition}
-% \include{chapters/complexity}
-% \include{chapters/branching-locality-recursion}
-% \include{chapters/empty}
-% \include{chapters/movement}
-% \include{chapters/phrasal}
-% \include{chapters/potential-structure}
-% \include{chapters/coregram}
-% \include{chapters/conclusions}
-% \include{chapters/loesungen}
+\include{chapters/innateness}
+\include{chapters/mts}
+\include{chapters/competence}
+\include{chapters/acquisition}
+\include{chapters/complexity}
+\include{chapters/branching-locality-recursion}
+\include{chapters/empty}
+\include{chapters/movement}
+\include{chapters/phrasal}
+\include{chapters/potential-structure}
+\include{chapters/coregram}
+\include{chapters/conclusions}
+\include{chapters/loesungen}
 
 \input{backmatter}
 \end{document}
