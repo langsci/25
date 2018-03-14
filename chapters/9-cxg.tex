@@ -317,6 +317,7 @@ Parallel proposals have been made in TAG\indextag (\citealp{Candito96a}; \citeal
 (\citealp{Koenig99a,DK2000b-u,Kordoni2001b-u}). 
 
 %\addlines[2]
+%\addlines
 \citet[\page55--57]{MR2001a} provide the following linking constructions:\is{linking}\footnote{%
 	In the original version of the transitive construction in (\ref{transitiv-Konstruktion}),
         there is a feature $\theta$ that has the value \textsc{da}$-$, however, \textsc{da} is a
@@ -1851,7 +1852,7 @@ is used first. The first processing step is a matching phase in which it is chec
 semantic pole (for generation) or the syntactic pole (for parsing) matches the structure that was
 build so far. After this test for unification, the actual unification, which is called merging, is
 carried out. After this step, the respective other pole (syntax for generation and semantics for
-parsing) is merged. This is illustrated in Figure~\vref{fig-matching-merging-trijp}.
+parsing) is merged. This is illustrated in Figure~\ref{fig-matching-merging-trijp}.
 
 \begin{figure}
 \includegraphics[width=.98\textwidth]{Figures/production-parsing-fcg.pdf}
@@ -1866,7 +1867,7 @@ approach is one version of implementing Goldberg's plugging approach to argument
 constructions \citep{Goldberg95a}. Van Trijp suggests that every lexical item comes with a representation of
 potential argument roles like Agent, Patient, Recipient, and Goal. Phrasal argument structure
 constructions are combined with the respective lexical items and realize a subset of the argument
-roles, that is they assign them to grammatical functions. Figure~\vref{fig-as-trijp} shows an
+roles, that is they assign them to grammatical functions. Figure~\ref{fig-as-trijp} shows an
 example: the verb \emph{sent} has the semantic roles Agent, Patient, Recipient, and Goal  (upper left
 of the figure). Depending
 on the argument structure construction that is chosen, a subset of these roles is selected for
@@ -2043,7 +2044,7 @@ Van Trijp's analysis involves several units that do not normally exist in phrase
 but can be modeled via adjacency constraints or which represent relations between items which are part
 of lexical representations in HPSG/SBCG anyway. An example is the subject-verb anchor that connects
 the subject and the verb to represent the fact that these two items play an important functional
-role. Figure~\vref{fig-what-did-the-boy-hit} shows the analysis of (\mex{1}).
+role. Figure~\ref{fig-what-did-the-boy-hit} shows the analysis of (\mex{1}).
 \ea
 What did the boy hit?
 \z
@@ -2129,7 +2130,7 @@ is an object marker (p.\,10, 22) or a non-subject marker (p.\,23). It is true th
 \ex Who saw the man?
 \ex Who did John see?
 \zl
-\addlines
+\addlines[2]
 First, \emph{do} can be used to emphasize the verb:
 \ea
 Who \emph{did} see the man?
@@ -2363,6 +2364,7 @@ clauses are mixed.
 %% \z
 %% Therefore 
 
+%\addlines
 In a model that permits discontinuous constituents, one cannot require that all parts of an argument have
 to be arranged after all parts that belong to another argument since discontinuity is used to
 account for nonlocal dependencies. So, it must be possible to have \emph{Klaus} before other
@@ -2373,7 +2375,6 @@ parts of phrases is given in (\mex{1}):
      this   book has the man  me  promised     his    wife to give   who yesterday here performed is\\
 \glt `The man who performed here yesterday promised me to give this book to his wife.'
 \z 
-%\addlines[2]
 We see that material that refers to \emph{der Mann} `the man', namely the relative clause \emph{der gestern
   hier aufgetreten ist} `who performed here yesterday', appears to the right. And the object of
 \emph{geben} `to give', which would normally
@@ -2436,7 +2437,7 @@ general comparison of SBCG and FCG.
 \subsubsection{Comparison to Sign-Based Construction Grammar/HPSG}
 
 
-According\indexhpsgstart\indexsbcgstart to \citet{vanTrijp2013a}, there are the differences shown in Table~\vref{table-differences-SBCG-FCG}.
+According\indexhpsgstart\indexsbcgstart to \citet{vanTrijp2013a}, there are the differences shown in Table~\ref{table-differences-SBCG-FCG}.
 %% \begin{itemize}
 %% \item
 %% \label{fcg-sbcg-generative} SBCG embraces a generative conception of linguistic theory, whereas FCG adopts a
