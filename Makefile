@@ -55,9 +55,6 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 .SUFFIXES: .tex
 
 
-# removing the bbl file is important since otherwise the -min-crossrefs option may not work
-#	\rm -f $*.bbl
-
 # there are two different index.format files.
 # they contain special characters for delimination. Standard is ", but this is used
 # for German. "+" is used as operator in the book and appears in the index of symbols.
