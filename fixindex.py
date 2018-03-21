@@ -15,8 +15,7 @@ for k in INITD:
 transtable = str.maketrans(orig, trans)
 
   
-p = re.compile(r"\\indexentry \{(.*)\|hyperpage")
-
+p = re.compile(r"\\indexentry \{(.*)@") 
     
 def process(s): 
   if s.strip()=='':
@@ -34,7 +33,7 @@ def process(s):
   if t == o:
     return s
   else:
-    return s.replace(o,"%s@%s"%(t,o))
+    return s.replace("%s@"%o,"%s@"%t)
   
   
 
