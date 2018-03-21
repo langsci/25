@@ -1591,10 +1591,10 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 % Author index
 \newcommand{\ia}[1]{%
   \if@noftnote%
-    \index{#1}%
+    \index{#1@#1}%
     \else%
     \edef\tempnumber{\thefootnote}%
-    \expandafter\footnoteindex\expandafter{\tempnumber}{#1}%
+    \expandafter\footnoteindex\expandafter{\tempnumber}{#1@#1}%
     % \index{#1|fn{\thefootnote}}%
   \fi%
 }

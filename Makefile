@@ -113,6 +113,8 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.sdx # ordering of references to footnotes
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
+	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
+	sed -i.backup 's/{\\O }/Oe/' *.adx
 	python3 fixindex.py
 	mv $*mod.adx $*.adx
 	makeindex -gs index.format-plus -o $*.and $*.adx
@@ -120,6 +122,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format -o $*.snd $*.sdx
 	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
 
+# use texfot instead?
 
 # %.pdf: %.tex $(SOURCE)
 # 	xelatex -no-pdf -interaction=nonstopmode $* |grep -v math
@@ -254,9 +257,15 @@ o-public-bib: $(PUB_FILE)
 #-f '(author){%n(author)}{%n(editor)}:{%2d(year)#%s(year)#no-year}'
 
 #$(IN_FILE).dvi
-$(PUB_FILE): ../../hpsg/make_bib_header ../../hpsg/make_bib_html_number  ../../hpsg/.bibtool77-no-comments grammatical-theory.aux ../../hpsg/la.aux ../../HPSG-Lehrbuch/hpsg-lehrbuch-3.aux ../../complex/complex-csli.aux ../../../Bibliographien/biblio.bib
-	sort -u grammatical-theory.aux ../../hpsg/la.aux ../../HPSG-Lehrbuch/hpsg-lehrbuch-3.aux ../../complex/complex-csli.aux  >tmp.aux
-	bibtool -r ../../hpsg/.bibtool77-no-comments  -x tmp.aux -o $(PUB_FILE).tmp
+
+# la.tex does not compile any longer
+# ../../hpsg/la.aux
+
+$(PUB_FILE): ../../hpsg/make_bib_header ../../hpsg/make_bib_html_number ../../hpsg/.bibtool77-no-comments grammatical-theory.aux ../../hpsg/la.aux ../../HPSG-Lehrbuch/hpsg-lehrbuch-4.aux ../../complex/complex-csli.aux ../../../Bibliographien/biblio.bib
+	cat bib-creation.aux  ../../HPSG-Lehrbuch/hpsg-lehrbuch-4.aux ../../complex/complex-csli.aux >tmp.aux
+	sed -i.backup 's/bibcite{\([A-Za-z0-9-]*\)}\(.*\)/bibcite{\1}/' tmp.aux
+	sort -u tmp.aux  >tmp2.aux
+	$(BIBTOOL) -r ../../hpsg/.bibtool77-no-comments  -x tmp2.aux -o $(PUB_FILE).tmp
 	sed -e 's/-u//g'  $(PUB_FILE).tmp  >$(PUB_FILE).tmp.neu
 	../../hpsg/make_bib_header
 	cat bib_header.txt $(PUB_FILE).tmp.neu > $(PUB_FILE)

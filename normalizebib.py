@@ -2,7 +2,7 @@ import sys
 import re
 import pprint
 import glob
-from initd import INITD, REPLACEMENTS
+from helpers import INITD, REPLACEMENTS, LANGUAGENAMES, OCEANNAMES, COUNTRIES, CONTINENTNAMES, CITIES, OCCURREDREPLACEMENTS
 import string
  
 keys = {} #store for all bibtex keys
@@ -17,11 +17,15 @@ for k in INITD:
     orig+=c
     trans+=k
 transtable = str.maketrans(orig, trans)
-    
+
+PRESERVATIONPATTERN = re.compile(r"\b(%s)\b"%('|'.join(LANGUAGENAMES+COUNTRIES+OCEANNAMES+CONTINENTNAMES+CITIES+OCCURREDREPLACEMENTS)))    
+CONFERENCEPATTERN = re.compile("([A-Z][^ ]*[A-Z][A-Z-a-z]*)") #Binnenmajuskeln should be kept
+PROCEEDINGSPATTERN = re.compile("((?:Proceedings|Workshop|Conference|Symposium).*)\}$") #Binnenmajuskeln should be kept
+
 
 class Record(): 
   """
-  A bitex record
+  A bibtex record
   """
 
   TYPKEYFIELDS = r"^([^\{]+)\{([^,]+),[\s\n\t]*((?:.|\n)*)\}"
@@ -37,13 +41,16 @@ class Record():
     """
     
     #analyze first line
-    m = re.match(self.TYPKEYFIELDS,s)
-    self.typ = m.group(1).lower()
+    m = re.match(self.TYPKEYFIELDS,s) 
+    try:
+      self.typ = m.group(1).lower()
+    except AttributeError:
+      return
     self.key = m.group(2)
     
     #analyze remainder
     try: 
-      self.fields = dict((tp[0].strip()\
+      self.fields = dict((tp[0].strip().lower()\
           .replace('\n',' ')\
           .replace('\t',' '),
           tp[1].strip()\
@@ -90,6 +97,7 @@ class Record():
     self.checkarticle()
     self.checkbook()
     self.checkincollection()
+    self.checklanguagenames()
   
   def report(self):
     """
@@ -107,6 +115,50 @@ class Record():
     """
     
     return match.group(1) + ' {' +match.group(2).upper()+'}'
+
+  def checklanguagenames(self):
+    ts = ['title','booktitle']
+    for t in ts:
+      try: 
+        oldt = self.fields.get(t,'') 
+        preservationt = oldt
+        m = PRESERVATIONPATTERN.search(preservationt)
+        if m:
+          for g in m.groups():
+            preservationt = preservationt.replace(g,"{%s}"%g)
+            if oldt != preservationt: 
+              #print(oldt,' ==> ',preservationt)
+              self.fields[t] = preservationt
+      except AttributeError:
+        pass            
+      try:   
+        oldt = self.fields.get(t,'') 
+        conft = oldt
+        m = CONFERENCEPATTERN.search(conft)
+        if m:
+          for g in m.groups():
+            conft = conft.replace(g,"{%s}"%g)
+            if oldt != conft: 
+              #print(oldt,' ==> ',conft)
+              self.fields[t] = conft
+      except AttributeError:
+        pass
+            
+            
+      try:   
+        oldt = self.fields.get(t,'') 
+        proct = oldt
+        m = PROCEEDINGSPATTERN.search(proct)
+        if m:
+          for g in m.groups():
+            proct = proct.replace(g,"{%s}"%g)
+            if oldt != proct: 
+              #print(oldt,' ==> ',proct)
+              self.fields[t] = proct
+      except AttributeError:
+        pass
+          
+                
 
  
       
@@ -238,6 +290,10 @@ class Record():
     mandatory = ('author', 'year', 'title', 'journal', 'volume', 'pages') 
     for m in mandatory:
       self.handleerror(m)
+    if self.fields.get('pages') == None: #only check for pages if no electronic journal
+      if self.fields.get('url') == None:
+        self.fields['pages'] = r"{\biberror{no pages}}"
+        self.errors.append("missing pages")  
     auth = self.fields.get('author')
     if auth:
       self.addsortname(auth)
@@ -248,18 +304,28 @@ class Record():
     """
     if self.typ != 'incollection':
       return 
-    mandatory = ('author', 'year', 'title', 'pages')
+    mandatory = ('author', 'year', 'title')
     for m in mandatory:
-      self.handleerror(m)
-    if self.fields.get('crossref'):
-      #the content is available in the crossref'd record
-      return
-    mandatory2 = ('booktitle', 'editor', 'publisher', 'address')
-    for m2 in mandatory2:
-      self.handleerror(m2)
+      self.handleerror(m)      
+    if self.fields.get('pages') == None: #only check for pages if no electronic journal
+      if self.fields.get('url') == None:
+        self.fields['pages'] = r"{\biberror{no pages}}"
+        self.errors.append("missing pages")  
     auth = self.fields.get('author')
     if auth:
       self.addsortname(auth)
+    if self.fields.get('crossref'):
+      #the content is available in the crossref'd record
+      return
+    mandatory2 = ['booktitle']
+    for m2 in mandatory2:
+      self.handleerror(m2)
+    if "proceedings" in self.fields.get('booktitle').lower():
+      #proceedings often do note have editor, publisher, or address
+      return
+    mandatory3 = ('editor', 'publisher', 'address')
+    for m3 in mandatory3:
+      self.handleerror(m3)
       
   def checkquestionmarks(self):
     """
@@ -333,7 +399,7 @@ if __name__ == "__main__":
   #sort and reverse in order to get the order of edited volumes and incollection right 
   r.sort() 
   r = r[::-1] 
-  restrict = False #should only cited works be written to sorted.bib?
+  restrict = True #should only cited works be written to sorted.bib?
   #create the new bibtex records
   bibtexs = [Record(q,
                     inkeysd=citationsd, 
