@@ -14,5 +14,10 @@
     "title": "Published version of Grammatical Theory",
     "authors": [{"name": "Stefan Müller"}],
     "publishedAt": "2016-03-15T00:00:33.000Z"
+  }, {
+    "versiontype": "second_edition",
+    "title": "Grammatical Theory, 2nd edition",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2018-03-26T00:00:33.000Z"
   }]
 }
