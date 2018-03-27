@@ -13,11 +13,15 @@
     "versiontype": "main",
     "title": "Published version of Grammatical Theory",
     "authors": [{"name": "Stefan Müller"}],
-    "publishedAt": "2016-03-15T00:00:33.000Z"
+    "publishedAt": "2016-03-15T00:00:33.000Z", 
+    "license": "CC-BY-4.0",
+    "doi":"10.17169/langsci.b25.62 "	
   }, {
     "versiontype": "second_edition",
     "title": "Grammatical Theory, 2nd edition",
     "authors": [{"name": "Stefan Müller"}],
-    "publishedAt": "2018-03-26T00:00:33.000Z"
+    "publishedAt": "2018-03-27T00:00:33.000Z", 
+    "license": "CC-BY-4.0",  
+    "doi": "10.5281/zenodo.1193241"
   }]
 }
