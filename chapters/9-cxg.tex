@@ -2599,10 +2599,9 @@ to the two orders that are permitted by LP-rules: the head precedes its argument
 The following code shows how (\mex{0}b) is implemented in TRALE:
 \begin{verbatim}
 arg_h rule (head_complement_phrase,
-          synsem:loc:cat:head:initial:minus,
-          head_dtr:HeadDtr,
-          non_head_dtrs:[NonHeadDtr]
-         )
+            synsem:loc:cat:head:initial:minus,
+            head_dtr:HeadDtr,
+            non_head_dtrs:[NonHeadDtr])
   ===>
 cat> NonHeadDtr,
 cat> HeadDtr.
