@@ -654,7 +654,7 @@ Section~\ref{sec-adjuncts-hpsg} on the HPSG schema for head adjunct combinations
 The analysis of verb first sentences in German is straightforward, given the machinery that was
 introduced in the previous section. The basic idea is the same as in GB: the finite verb moves from V to
 \textit{v} to T and then to C. The movement to T is forced by a strong tense feature on T and the movement of
-the T complex to C is enforced by a clause-type feature on T that is valued as a strong Decl by C. The analysis of (\mex{1}) is shown in
+the T complex to C is enforced by a clause-type feature on T that is valued as a strong Int by C. The analysis of (\mex{1}) is shown in
 Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.
 \ea
 \gll Kennt jeder diesen Mann?\\
@@ -665,10 +665,10 @@ Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.
 \begin{forest}
 [CP
     [C
-      [T{[\st{Decl*}]}
+      [T{[\st{Int*}]}
         [\textit{kennt} {[\st{Pres*}]}]
         [T{[Pres]}]]
-      [C{[Decl]}]]
+      [C{[Int]}]]
     [TP
       [\textit{jeder}]
       [\tbar{[\st{\textit{u}D*}]}
@@ -693,7 +693,8 @@ Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.
 Having explained the placement of the verb in initial position, the analysis of V2 sentences does
 not come with a surprise: \citet[\page 331]{Adger2003a} assumes a feature that triggers the movement
 of a constituent to a specifier position of C. Adger calls this feature top, but this is a misnomer
-since the initial position in German declarative sentences is not restricted to topics. Figure~\vref{fig-diesen-mann-kennt-jeder}
+since the initial position in German declarative sentences is not restricted to topics (maybe he
+would assume an alternative C head with a foc feature). Figure~\vref{fig-diesen-mann-kennt-jeder}
 shows the analysis of (\mex{1}):
 \ea
 \gll Diesen Mann kennt jeder.\\
@@ -726,8 +727,10 @@ shows the analysis of (\mex{1}):
 \end{forest}
 \caption{\label{fig-diesen-mann-kennt-jeder}Analysis of \emph{Diesen Mann kennt jeder.} `This man, everybody knows.' following the
   analysis of \citet[\page 331]{Adger2003a}}
-
 \end{figure}%
+As in the verb-initial clause in Figure~\ref{fig-kennt-jeder-diesen-mann-minimalism} a feature on C
+triggers verb movement. This time it is a Decl feature since we are dealing with a declarative
+clause. The top feature triggers movement of \emph{diesen Mann} `this man' to the specifier position of C.
 
 
 \section{Passive}
@@ -1254,7 +1257,11 @@ categories is necessary since syntax, semantics, and information structure are t
 and since it is assumed that the semantics interprets the syntax, that is, it is assumed that semantics comes
 after syntax (see Figure~\ref{Abb-T-Modell} and Figure~\ref{fig-architecture-minimalism}). By using
 semantically and pragmatically relevant categories in syntax, there is no longer a clean distinction between
-the levels of morphology, syntax, semantics and pragmatics: everything has been `syntactified'.
+the levels of morphology, syntax, semantics and pragmatics: everything has been
+`syntactified'. \citet{Rizzi2014a} himself talks about syntactification. He points out that there
+are fundamental problems with the T-model and its current
+variants in Minimalism and concludes that a syntactification in terms of Rizzi-style functional heads
+or a proliferation of T heads with respective features (see also \citealp{Borsley2006a,BM2018Minimalism}) is the only way to save this architecture. 
 Felix Bildhauer\ia{Bildhauer, Felix} (p.\,c.\,2012) has pointed out to me that
 approaches which assume a cascade of functional projections where the individual aspects of meaning are represented by nodes are actually very
 close to phrasal approaches in Construction Grammar (see \citealp[\page 470]{Adger2013a} also for a
@@ -1472,8 +1479,7 @@ the assumption that the existence of a UG with less language"=specific knowledge
 which contains a high degree of language"=specific knowledge \citep[\page 135]{Chomsky2008a}.
 
 For this reason, he removes the projection levels of \xbar theory, traces\is{empty element},
-indices\is{index} and ``similar descriptive technology''
-\citep[\page 138]{Chomsky2008a}. All that remains is Merge and Move, that is, Internal and External Merge. Internal and External Merge combine two syntactic objects $\alpha$ and $\beta$ into a larger
+indices\is{index} and ``similar descriptive technology'' \citep[\page 138]{Chomsky2008a}. All that remains is Merge and Move, that is, Internal and External Merge. Internal and External Merge combine two syntactic objects $\alpha$ and $\beta$ into a larger
 syntactic object which is represented as a set \{ $\alpha$, $\beta$ \}.  $\alpha$ and $\beta$ can be
 either lexical items or internally complex syntactic objects. Internal Merge moves a part of an object to its periphery.\footnote{%
 To be more specific, part of a syntactic object is copied and the copy is placed at the edge of the entire object. The original of this copy is
@@ -1678,7 +1684,8 @@ that corresponds to a DP in GB terminology.
 \addlines[1]
 Chomsky's approach to free relative clauses is interesting but is unable to describe the phenomenon in
 full breadth. The problem is that the phrase that contains the relative pronoun may be
-complex (contrary to Donati's claims, see also \citew[\page 930--932]{Citko2008a}).\footnote{%
+complex (contrary to Donati's claims, see also \citew[\page 930--932]{Citko2008a} for a rejection of
+Donati's claim).\footnote{%
 \citet[\page 47]{Chomsky2013a} admits that there are many open questions as far as the labeling in free relative
 clauses is concerned and hence admits that there remain many open questions with labeling as such.
 } \pmex{1} provides an English example from \citet[\page 333]{BG78}. German

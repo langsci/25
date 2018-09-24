@@ -236,7 +236,7 @@ gt.bib: ../../../Bibliographien/biblio.bib
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
 	bibtex bib-creation
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	$(bibtool) -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
+	$(BIBTOOL) -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
 	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
 	\rm -r gt-tmp.bib
 

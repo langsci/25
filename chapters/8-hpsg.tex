@@ -843,7 +843,7 @@ the head value of the verb \emph{gibt} `gives'.
 
 
 \noindent
-For the entire sentence \emph{er das Buch dem Mann gibt} `he the book to the man gives', we arrive at a structure (already shown in Figure~\ref{fig-projektion-head-feat-ausf}) 
+For the entire clause \emph{er das Buch dem Mann gibt} `he the book to the man gives', we arrive at a structure (already shown in Figure~\ref{fig-projektion-head-feat-ausf}) 
 described by (\mex{1}):
 \ea
 \label{HPSG-Rootnode}
@@ -947,19 +947,16 @@ noun phrases are structure"=shared with one of the semantic roles of the relatio
 head.\is{argument}
 \eas
 \label{le-geben}
-\emph{gibt} `gives':\\
-\ms
-{ cat & \ms{ head & \ms[verb]
-                     { vform & fin } \\
-             arg-st & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   } \\
-           } \\
+Lexical entry for the lexeme \emph{geben} `give':\\
+\ms{ 
   cont &  \ms[mrs]
            { ind & \ibox{4} event \\
              rels & \sliste{ \ms[geben]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
                                         goal  & \ibox{2} \\
                                         theme & \ibox{3}  } }
-           }
+           }\\[2mm]
+  arg-st & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{dat}]\ind{2}, NP[\type{acc}]\ind{3}   }
 }
 \zs
 The list that contains all the arguments of a head is called \emph{argument structure list} and it
@@ -982,15 +979,15 @@ constraints from the respective types\is{inheritance}. A type constraint for ver
 and goal takes the form of (\mex{1}):
 \ea
 \label{ex-agens-theme-goal-linking}
-\onems
-{ cat$|$arg-st \sliste{ []\ind{1}, []\ind{2}, []\ind{3}  } \\[1mm]
+\onems{ 
   cont  \ms[mrs]
            { ind & \ibox{4} event \\
              rels & \sliste{ \ms[agent-goal-theme-rel~~]{ event & \ibox{4} \\
                                         agent & \ibox{1} \\
                                         goal  & \ibox{2} \\
                                         theme & \ibox{3} } }
-           }
+           } \\[2mm]
+  arg-st \sliste{ []\ind{1}, []\ind{2}, []\ind{3}  }
 }
 \z
 []\ind{1} stands for an object of unspecified syntactic category with the index
@@ -1199,15 +1196,13 @@ what the respective lexical rule would look like:
 Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
 \onems[stem]{
   phon \ibox{1}\\
-  synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
-                         } 
+  synsem$|$loc$|$cat$|$head \type{verb}  \\ 
+  arg-st \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
 } $\mapsto$ \\
 \flushright\onems[word]{
   phon $f\iboxb{1}$\\
-  synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part } \\
-                          arg-st & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
-                        }
+  synsem$|$loc$|$cat$|$head$|$vform \type{passive-part} \\
+  arg-st \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
 }
 \z
 
@@ -1275,7 +1270,6 @@ Input \stem{schlag} `beat' :\\
 \onems{
 phon \phonliste{ schlag }\\[2mm]
 synsem$|$loc \ms{ cat & \ms{ head   & verb\\
-                             arg-st & \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
                            }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
@@ -1287,6 +1281,7 @@ synsem$|$loc \ms{ cat & \ms{ head   & verb\\
                                       }\\[-1ex]
                          }\\
                 }\\
+arg-st  \sliste{ NP[\type{nom}]\ind{1}, NP[\type{acc}]\ind{2} } \\
 }
 \end{tabular}
 %\flushright sieht doof aus
@@ -1298,7 +1293,6 @@ Output \emph{geschlagen} `beaten':\\
 phon \phonliste{ geschlagen }\\[2mm]
 synsem$|$loc \ms{ cat  & \ms{ head   & \ms[verb]{ vform & passive-part
                                                 } \\
-                              arg-st & \sliste{ NP[\type{nom}]\ind{2} } \\
                             }\\
                   cont & \ms{
                          ind & \ibox{3} event\\
@@ -1309,7 +1303,8 @@ synsem$|$loc \ms{ cat  & \ms{ head   & \ms[verb]{ vform & passive-part
                                         } 
                                       }
                          }
-                }
+                }\\
+arg-st  \sliste{ NP[\type{nom}]\ind{2} } \\
 }
 \end{tabular}
 \zl
@@ -1325,15 +1320,12 @@ descriptions.\label{pageref-lr-mit-dtr} (\mex{1}) shows the feature description 
 \label{passiv-lr-mit-dtr}
 \onems[acc-passive-lexical-rule]{
      phon $f\iboxb{1}$\\
-     synsem$|$loc$|$cat \ms{ head & \ms{ vform & passive-part
-                                       } \\
-                             arg-st & \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} 
-                           } \\
+     synsem$|$loc$|$cat$|$head$|$vform \type{passive-part} \\
+     arg-st \sliste{ NP[\type{nom}]$_{\ibox{2}}$ } $\oplus$ \ibox{3} \\[2mm]
 lex-dtr \onems[stem]{
         phon \ibox{1}\\
-        synsem$|$loc$|$cat~ \ms{ head & verb \\ 
-                  arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
-                }
+        synsem$|$loc$|$cat$|$head \type{verb} \\ 
+        arg-st \sliste{ NP[\type{nom}], NP[\type{acc}]$_{\ibox{2}}$ } $\oplus$ \ibox{3}
      }
 }
 \z
@@ -1426,15 +1418,13 @@ impersonal passive\is{passive!impersonal}:
 Lexical rule for personal and impersonal passive (simplified):\\
 \onems[stem]{
   phon \ibox{1}\\
-  synsem$|$loc$|$cat~ \ms{ head & verb  \\ 
-                           arg-st & \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
-                         } 
+  synsem$|$loc$|$cat$|$head \type{verb}  \\ 
+  arg-st \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
 } $\mapsto$ \\
 \flushright\onems[word]{
   phon $f\iboxb{1}$\\
-  synsem$|$loc$|$cat \ms{ head & \ms{ vform & ppp } \\
-                          arg-st & \ibox{2} \\
-                        }
+  synsem$|$loc$|$cat$|$head$|$vform  \type{ppp} \\
+  arg-st \ibox{2} \\
 }
 \zs
 This lexical rule does exactly what we expect it to do from a pretheoretical perspective on the passive: it suppresses the most prominent argument with structural case, that is, the argument
