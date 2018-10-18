@@ -124,6 +124,11 @@ styles/eng-date,styles/my-theorems}
 
 \usepackage{styles/dgmacros,pst-tree,styles/trees,styles/dalrymple} % Mary Dalrymples macros
 
+%\nodemargin5pt%\treelinewidth2pt\arrowwidth6pt\arrowlength10pt
+\psset{nodesep=5pt} %,linewidth=0.8pt,arrowscale=2}
+\psset{linewidth=0.5pt}
+
+
 
 %%% trick for using adjustbox
 \let\pstricksclipbox\clipbox
@@ -163,7 +168,7 @@ styles/eng-date,styles/my-theorems}
 
 % do nothing now
 %\let\addlinesold=\addlines
-%\renewcommand{\addlines}[1][1]{}
+\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck
