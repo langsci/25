@@ -29,28 +29,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	localcommands.tex \
 	localpackages.tex \
 	backmatter.tex \
-	chapters/1-begriffe.tex\
-	chapters/2-psg.tex\
-	chapters/3-gb.tex \
-	chapters/3-minimalism.tex \
-	chapters/4-gpsg.tex \
-	chapters/5-merkmalstrukturen.tex \
-	chapters/6-lfg.tex \
-	chapters/7-cg.tex\
-	chapters/8-hpsg.tex \
-	chapters/9-cxg.tex \
-	chapters/dg.tex\
-	chapters/tag.tex\
-	chapters/innateness.tex\
-	chapters/acquisition.tex\
-	chapters/complexity.tex\
-	chapters/locality.tex\
-	chapters/phrasal.tex\
-	chapters/empty.tex\
-	chapters/recursion.tex\
-	chapters/conclusions.tex\
-	chapters/loesungen.tex\
-	chapters/versions.tex
+        $(wildcard chapters/*.tex)	
 
 .SUFFIXES: .tex
 
@@ -231,14 +210,20 @@ unusedgt.bib: ../../../Bibliographien/biblio.bib
 	biber --output_format=bibtex --output_resolve bib-creation.bcf -O gt_tmp.bib
 	biber --tool --configfile=biber-tool-test.conf gt_tmp.bib -O gt.bib
 
+
+bib: gt.bib
+
 # two runs in order to get "also printed as ..." right
-gt.bib: ../../../Bibliographien/biblio.bib
+gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	bibtex bib-creation
+	biber -m=1 bib-creation.bcf       # `--mincrossref | -m 1` produces a .bbl with all the references 
+	bbl2nocite bib-creation tmpfile
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	$(BIBTOOL) -r ../../../Bibliographien/.bibtool77-no-comments  -x bib-creation.aux -o gt-tmp.bib
-	cat ../../../Bibliographien/bib-abbr.bib gt-tmp.bib > gt.bib
-	\rm -r gt-tmp.bib
+	biber --output_format=bibtex bib-creation.bcf -O gt.bib
+
+# --output_resolve removes all crossrefs if one wants crossref, one needs this:
+# https://tex.stackexchange.com/a/164365/18561
+
 
 check-gt.bib: ../../../Bibliographien/biblio.bib
 	biber --output_format=bibtex --output_resolve grammatical-theory.bcf -O check-gt.bib

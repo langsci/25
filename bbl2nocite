@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Find and convert all lines in a .bbl file from
+# \entry{<key>}{<entrytype>}{}
+# to
+# \nocite{<key>}
+#
+# usage: bbl2nocite inputfile outputfile
+INFILE=$1
+OUTFILE=$2
+
+grep '\\entry' $INFILE.bbl | sed 's/\\entry/\\nocite/g' | sed 's/}{.*/}/' > $OUTFILE.tex
