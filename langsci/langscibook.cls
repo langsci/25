@@ -1565,14 +1565,14 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 \renewcommand{\lsLanguageIndexTitle}{Índice remissivo de línguas}
 \fi
 
-\AtBeginDocument{
+% \AtBeginDocument{% FK 17-Jan-19: It is unclear why this was set. It conflicts with TikZ externalisation.
 	\makeindex
 	\newindex{lan}{ldx}{lnd}{\lsLanguageIndexTitle}
 	\newindex{sbj}{sdx}{snd}{\lsSubjectIndexTitle}
 	\renewindex{default}{adx}{and}{\lsNameIndexTitle} %biblatex can only deal with the default index
 % 	\newindex{wrd}{wdx}{wnd}{Expression index}
 % 	\newindex{rwrd}{rdx}{rnd}{Reverse expression index}
-}
+% }
 
 \indexproofstyle{\setlength{\overfullrule}{0pt}\raggedright\footnotesize}
 
