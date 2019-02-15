@@ -69,11 +69,16 @@ constituents. It applies to one linguistic object and takes some part of this li
 adjoins it to the left of the respective object. The application of External Merge and Internal
 Merge can apply in any order. For instance, two objects can be combined with External Merge and then
 one of the combined items is moved to the left by applying Internal Merge. The resulting object can
-be externally merged with another object and so on. As an example consider the NP in (\mex{1}):
+be externally merged with another object and so on. As an example consider the Determiner Phrase (DP) in
+(\mex{1}):\footnote{
+  Most researchers working in Minimalism follow \citet{Abney87a} in assuming that the determiner
+  rather than the noun is the head of nominal structures. Hence sequence like (\mex{1}) are
+  determiner phrases rather than noun phrases.
+}
 \ea
 the man who we know
 \z
-To derive this NP the verb \emph{know} is externally merged with its object \emph{who}. After
+To derive this DP the verb \emph{know} is externally merged with its object \emph{who}. After
 several intermediate merges that will be discussed below, \emph{know who} will be merged with
 \emph{we} and finally the \emph{who} is moved to the left by Internal Merge, resulting in \emph{who
   we know}. This relative clause can be externally merged with \emph{man} and so on.
@@ -130,7 +135,7 @@ particular and the Minimalist architecture in general.
 The basic mechanism in Minimalist theories is feature checking.\is{feature!checking} For instance, the noun
 \emph{letters} may have a P feature, which means that it has to combine with a PP in order to form a complete phrase.
 \ea
-letters to Peter
+letters to him
 \z
 It is assumed that there are interpretable and uninterpretable features. An example of an
 interpretable feature is the number feature of nouns. The singular/plural distinction is
@@ -138,7 +143,7 @@ semantically relevant. The category features for part of speech information are 
 hence cannot be interpreted semantically. Minimalism assumes that all uninterpretable features have
 to be used up during the derivation of a complex linguistic object. This process of eating up the
 features is called \emph{checking}. As an example, let us consider the noun \emph{letters} again. The
-analysis of (\mex{0}) is depicted in Figure~\vref{fig-letters-to-peter-minimalism}.
+analysis of (\mex{0}) is depicted in Figure~\vref{fig-letters-to-him-minimalism}.
 \begin{figure}
 \centering
 \begin{forest}
@@ -146,16 +151,18 @@ baseline
 [N 
   [\emph{letters} {[N, pl, \st{\textit{u}P}]}]
   [P
-    [\emph{to} {[P, \st{\textit{u}N}]}]
-    [\emph{Peter} {[N]}]]]
+    [\emph{to} {[P, \st{\textit{u}D}]}]
+    [\emph{him} {[D]}]]]
 \end{forest}
-\caption{\label{fig-letters-to-peter-minimalism}Valence representation via uninterpretable features}
+% S. 256 = him = D
+\caption{\label{fig-letters-to-him-minimalism}Valence representation via uninterpretable features}
 \end{figure}%
 The fact that the P feature of \emph{letters} is uninterpretable is represented by the little
 \emph{u} in front of the P. The uninterpretable P feature of \emph{letters} can be checked against
-the P feature of \emph{to Peter}. All checked features are said to delete\is{feature!deletion} automatically. The
+the P feature of \emph{to him}. \emph{him} is assumed to be of category D since it can appear in the
+same places as full nominal phrases, which are assumed to be DPs here. All checked features are said to delete\is{feature!deletion} automatically. The
 deletion is marked by striking the features out in the figures. Strings like (\mex{1}) are ruled out as complete derivations since
-the N feature of P is not checked. This situation is shown in Figure~\vref{fig-letters-to-minimalism}.
+the D feature of P is not checked. This situation is shown in Figure~\vref{fig-letters-to-minimalism}.
 \ea[*]{
 letters to
 }
@@ -166,17 +173,17 @@ letters to
 baseline
 [N 
   [\emph{letters} {[N, pl, \st{\textit{u}P}]}]
-  [\emph{to} {[P, \textit{u}N]}]]
+  [\emph{to} {[P, \textit{u}D]}]]
 \end{forest}
 \caption{\label{fig-letters-to-minimalism}Illegitimate syntactic object due to an uninterpretable feature}
 \end{figure}%
 If this structure would be used in a larger structure that is spelled out, the derivation would
-\emph{crash} since the conceptual system could not make sense of the N feature that is still present
+\emph{crash} since the conceptual system could not make sense of the D feature that is still present
 at the P node.
 
 %\addlines
-Selectional features are atomic, that is, the preposition cannot select an NP[\type{acc}] as in GB
-and the other theories in this book unless NP[\type{acc}] is assumed to be atomic. Therefore, an
+Selectional features are atomic, that is, the preposition cannot select an DP[\type{acc}] as in GB
+and the other theories in this book unless DP[\type{acc}] is assumed to be atomic. Therefore, an
 additional mechanism is assumed that can check other features in addition to selectional
 features. This mechanism is called \emph{Agree}\is{Agree|(}.
 \eal
@@ -195,8 +202,8 @@ baseline
 [N 
   [\emph{letters} {[N, pl, \st{\textit{u}P}]}]
   [P
-    [\emph{to} {[P, \st{\textit{u}N}, \st{acc}]}]
-    [\emph{him} {[N, \st{acc}]}]]]
+    [\emph{to} {[P, \st{\textit{u}D}, \st{acc}]}]
+    [\emph{him} {[D, \st{acc}]}]]]
 \end{forest}
 \caption{\label{fig-letters-to-him-minimalism}Feature checking via Agree}
 \end{figure}%
@@ -242,7 +249,7 @@ daughters in Merge operations have the category \xbar. This solves the problem t
 theoretic approaches had with pronouns and proper names: a lot of unary branching structure had to
 be assumed (See left picture in Figure~\ref{Abb-GB-Min-Max}). This is not necessary any longer in
 current Minimalist theories.\footnote{%
-  For problems with this approach see \citew[Chapter~2.1]{Brosziewski2003a-u}. 
+  For problems with this approach see \citew[Section~2.1]{Brosziewski2003a-u}. 
 %% Das ist zu viel hier.
 %% It is interesting to
 %%   note that these problems do not apply to Categorial Grammar and HPSG, which use techniques for avoiding unary branchings
@@ -285,7 +292,7 @@ b. & contains B
 \z
 
 In the trees to the left and in the middle of Figure~\vref{fig-ditransitives-options} the c-command
-relations are not as desired: in the left-most tree both NPs c-command each other and in the middle
+relations are not as desired: in the left-most tree both DPs c-command each other and in the middle
 one \emph{Benjamin} c-commands \emph{himself} rather than the other way round.
 \begin{figure}
 \begin{forest}
@@ -553,7 +560,7 @@ baseline
            [\textit{read}] [\textit{v}]]
          [VP
            [\phonliste{ read } {[V, \st{\textit{u}D}]}]
-           [\phonliste{what}]]]]]]]]
+           [\phonliste{ what }]]]]]]]]
 \end{forest}
 \caption{\label{fig-What-will-Anna-read-minimalism}Analysis of \emph{What will Anna read?}
   with an empty C with a strong \emph{wh} feature}
@@ -598,7 +605,7 @@ baseline
 \caption{\label{fig-Anna-reads-the-book-minimalism-TP}Case assignment by T and \textit{v} in the TP
   for of \emph{Anna reads the book.}}
 \end{figure}%
-The two NPs \emph{Anna} and \emph{the book} start out with unvalued uninterpretable case features:
+The two DPs \emph{Anna} and \emph{the book} start out with unvalued uninterpretable case features:
 [\textit{u}case:].\todostefan{Does read move? Where is the tense feature checked?} The features get
 valued by T and \textit{v}. It is assumed that only one feature is checked by Merge, so this would
 be the D feature on T, leaving the case feature for the other available checking mechanism:
@@ -1100,10 +1107,10 @@ The constituent orders that are visible in the end are derived by leftward"=move
 	This also counts for extraposition\is{extraposition}, that is, the movement of constituents into the postfield
 	in German. Whereas this would normally be analyzed as rightward"=movement, \citet[Chapter~9]{Kayne94a-u} analyzes
 	it as movement of everything else to the left. Kayne assumes that (i.b) is derived from (i.a) by moving part of the 
-	NP:
+	DP:
 \eal
-\ex just walked into the room [\sub{NP} someone who we don't know].
-\ex Someone$_i$ just walked into the room [\sub{NP} \_$_i$ who we don't know].
+\ex just walked into the room [\sub{DP} someone who we don't know].
+\ex Someone$_i$ just walked into the room [\sub{DP} \_$_i$ who we don't know].
 \zl
 (i.a) must have to be some kind of derived intermediate representation, otherwise English would not be SV(O) underlyingly but rather V(O)S.
 (i.a) is therefore derived from (ii) by fronting the VP \emph{just walked into the room}.
@@ -1346,7 +1353,7 @@ remarks on (covert) movement see \citew[Section~2.3]{Haider2016a}.
 Another problem arises from the use of functional heads to encode linear order. In the classic
 CP/IP"=system and all other theories discussed here, a category stands for a class of objects with
 the same distribution, that is, NP (or DP) stands for pronouns and complex noun phrases. Heads
-select phrases with a certain category. In the CP/IP"=system, I selects a VP and an NP, whereas C
+select phrases with a certain category. In the CP/IP"=system, I selects a VP and an DP/NP, whereas C
 selects an IP. In newer analyses, this kind of selectional mechanism does not work as easily. Since
 movement has taken place in (\mex{1}b), we are dealing with a TopP or FocP in \emph{das Buch dem
   Mann zu geben} `the book the man to give'.  Therefore, \emph{um} cannot simply select an
@@ -1511,7 +1518,7 @@ are lexical items (LI), then both H and $\alpha$ can be the label of the resulti
 structure. Chomsky notices that this could result in deviant structures, but
 claims that this concern is unproblematic and ignores it. 
 % However, if the label is responsible for
-% the distribution of a phrase, it is unclear what blocks the occurrence of \emph{about him} in NP positions: 
+% the distribution of a phrase, it is unclear what blocks the occurrence of \emph{about him} in DP positions: 
 % \ea[*]{
 % I help about him.
 % }
@@ -1618,7 +1625,7 @@ Since Z in $\beta$ is only a copy, it does not count for labeling and $\beta$ ca
 of W. It is stipulated for the combination of Z and $\alpha$ that Conj cannot be the label and hence
 the label of the complete structure is Z.\footnote{%
     As Bob Borsley (p.c.\,2013) pointed out to me, this makes wrong predictions for coordinations of
-    two singular noun phrases with \emph{and}, since the result of the coordination is a plural NP
+    two singular noun phrases with \emph{and}, since the result of the coordination is a plural DP
     and not a singular one like the first conjunct. Theories like HPSG can capture this by grouping
     features in bundles that can be shared in coordinated structures (syntactic features and
     nonlocal features, see \citew[\page 202]{ps2}).
@@ -1771,7 +1778,7 @@ labeling the whole phrase.\footnote{%
 } However, once empty heads are countenanced in the analysis, the application of
 \pref{Label1} to \pref{ex-what-you-wrote} is undesirable since the application would result in
 two analyses for \pref{ex-i-read-what-you-wrote}: one with the empty nominal head and one in which
-\pref{ex-what-you-wrote} is labeled as NP directly. One might argue that in the case of several possible derivations, the most
+\pref{ex-what-you-wrote} is labeled as DP directly. One might argue that in the case of several possible derivations, the most
 economical one wins, but the assumption of transderivational constraints\is{transderivational constraint} leads to undesired
 consequences \citep[Section~5]{Pullum2013a}.\is{relative clause!free|)}
 
@@ -1964,7 +1971,7 @@ which lexical elements are coordinated directly. This means that one needs analy
 analysis discussed above, which would result in the problems with the specifier/complement
 status just discussed. 
 
-Furthermore, Abeillé has pointed out that NP coordinations in head-final languages like Korean and
+Furthermore, Abeillé has pointed out that NP/DP coordinations in head-final languages like Korean and
 Japanese present difficulties for Merge-based analyses. \pmex{1} shows a Japanese example.
 \ea
 \label{coordination-head-final}
@@ -2152,8 +2159,8 @@ is deleted and the result of the application of Internal Merge is \emph{who Mari
 
 This\label{Seite-leeres-Objekt} analysis has a problem that was pointed out by Stabler himself in unpublished work cited by
 \citet[\page 124]{Veenstra98a}: it makes incorrect predictions in the case of monovalent verbs\is{verb!monovalent|(}. If
-a verb is combined with an NP, the definition of External Merge in \pref{Definition-EM}
-treats this NP as a complement\footnote{%
+a verb is combined with an DP, the definition of External Merge in \pref{Definition-EM}
+treats this DP as a complement\footnote{%
 Compare also Chomsky's definition of specifier and complement in Section~\ref{Abschnitt-Spezfikatoren-MP}.
 } and serializes it to the right of the head. Instead of analyses of sentences like \pref{ex-max-sleeps-a} one
 gets analyses of strings like \pmexb{1}.
@@ -2163,7 +2170,7 @@ gets analyses of strings like \pmexb{1}.
 %%      fail to derive \pref{ex-max-sleeps-a} since \emph{Max} would be treated as a complement rather
 %%      than a subject that can be moved to the specifier of TP.
 %% }
-%% Aber kann das NP-Objekt nicht dann bewegt werden?
+%% Aber kann das DP-Objekt nicht dann bewegt werden?
 
 %% Andreas: 05.10.2015
 %% die Derivation müsste deswegen nicht gehen, weil 'Max' zweimal Kasus
@@ -2239,7 +2246,7 @@ TP projection, his analysis is provided in Figure~\vref{fig-little-v-intransitiv
 \begin{forest}
 [\emph{v}P
 %  [Max {[N]}]
-  [Max]
+  [\emph{Max}]
 %  [{$\overline{v}$} {[\st{\textit{u}N}]}
   [{$\overline{v}$}
     [\textit{v}]
