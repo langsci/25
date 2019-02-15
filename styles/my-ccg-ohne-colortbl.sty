@@ -56,15 +56,27 @@
 %frig \mathbf for combinators to sans:
 \DeclareMathAlphabet{\mathbf}{OT1}{cmss}{bx}{n}
 
-% amazingly does #1 many c's
-% CCG derivations
-% arguments: #1 = no. of words, #2 = body
+%% % amazingly does #1 many c's
+%% % CCG derivations
+%% % arguments: #1 = no. of words, #2 = body
+%% \newcommand{\deriv}[2]
+%% { %\arraycolsep=.25em
+%%    \renewcommand{\arraystretch}{.5}
+%%   \ensuremath{\begin{array}[t]{@{}*{#1}{c}@{}}
+%%      #2
+%%    \end{array}} }
+
+% new version from here: https://tex.stackexchange.com/a/470505/18561
 \newcommand{\deriv}[2]
-{ %\arraycolsep=.25em
-   \renewcommand{\arraystretch}{.5}
+{%% %\arraycolsep=.25em
+   \renewcommand{\arraystretch}{.5}%%
   \ensuremath{\begin{array}[t]{@{}*{#1}{c}@{}}
      #2
-   \end{array}} }
+   \end{array}}%%
+ }
+% newly defined from here: https://tex.stackexchange.com/a/470505/18561
+\def\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern0pt }
+
 
 
 % centered multicolumn, 
@@ -72,64 +84,64 @@
 %\newcommand{\less}{\\ \vspace{-.5ex}}
 % Rules, argument #1 gives the number of columns to cover.
 %% \newcommand{\uline}[1]%
-%% {\multicolumn{#1}{@{}c@{}}{\hrulefill} }
+%% {\multicolumn{#1}{@{}c@{}}{\hrulefilll} }
 \newcommand{\uline}[1]%
-{\cgmc{#1}{\hrulefill}}
+{\cgmc{#1}{\hrulefilll}}
 
 \newcommand{\fapply}[1]%
-{\cgmc{#1}{\hrulefill_{>}}}
+{\cgmc{#1}{\hrulefilll_{>}}}
 
-%\renewcommand<>{\fapply}[1]{\multicolumn{#1}{@{}c@{}}{\visible#2{\ensuremath{\hrulefill_{>}}}}}
+%\renewcommand<>{\fapply}[1]{\multicolumn{#1}{@{}c@{}}{\visible#2{\ensuremath{\hrulefilll_{>}}}}}
 
 \newcommand{\bapply}[1]
-{ \cgmc{#1}{\hrulefill_{<}} }
+{ \cgmc{#1}{\hrulefilll_{<}} }
 
 \newcommand{\fcomp}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{B}}}}
 \newcommand{\fxcomp}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}_{\times}}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{B}_{\times}}}}
 \newcommand{\fcomptwo}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}^2}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{B}^2}}}
 \newcommand{\fxcomptwo}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}_{\times}^2}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{B}_{\times}^2}}}
 \newcommand{\fcompthree}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{B}^3}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{B}^3}}}
 \newcommand{\bcomp}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}}}}
 \newcommand{\bxcomp}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}_{\times}}}}
 \newcommand{\bcomptwo}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}^2}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}^2}}}
 \newcommand{\bxcomptwo}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^2}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}_{\times}^2}}}
 \newcommand{\bcompthree}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}^3}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}^3}}}
 \newcommand{\bxcompthree}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{B}_{\times}^3}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{B}_{\times}^3}}}
 \newcommand{\fsubst}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{S}}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{S}}}}
 \newcommand{\bsubst}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{S}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{S}}}}
 \newcommand{\fxsubst}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{S}_{\times}}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{S}_{\times}}}}
 \newcommand{\bxsubst}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{S}_{\times}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{S}_{\times}}}}
 \newcommand{\ftype}[1]
-{ \cgmc{#1}{\hrulefill_{{>}\mathbf{T}}}}
+{ \cgmc{#1}{\hrulefilll_{{>}\mathbf{T}}}}
 \newcommand{\btype}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{T}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{T}}}}
 \newcommand{\ccgconj}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\Phi{>}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\Phi{>}}}}
 \newcommand{\boundary}[1]
-{ \cgmc{#1}{\hrulefill_{{<}\mathbf{\%}}}}
+{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{\%}}}}
 \newcommand{\asterisk}[1]
-{ \cgmc{#1}{\hrulefill_{\mathbf{*}}}}
+{ \cgmc{#1}{\hrulefilll_{\mathbf{*}}}}
 \newcommand{\comb}[2] % an arbitrary combinator
-{ \cgmc{#1}{\hrulefill_{#2}}}
+{ \cgmc{#1}{\hrulefilll_{#2}}}
 \newcommand{\dcomp}[2] % an arbitrary dcomposition
 { \cgmc{#1}{\dotfill_{#2}}}
 \newcommand{\unfreeze}[1]
-{\cgmc{#1}{\hrulefill_{\mathbf{@}}}  }
+{\cgmc{#1}{\hrulefilll_{\mathbf{@}}}  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %For example:
@@ -171,9 +183,9 @@
 
 
 
-\newcommand{\hr}{\ensuremath{\hrulefill}}
-\newcommand{\forwardapp}{\ensuremath{\hrulefill_{>}}}
-\newcommand{\backwardapp}{\ensuremath{\hrulefill_{<}}}
+\newcommand{\hr}{\ensuremath{\hrulefilll}}
+\newcommand{\forwardapp}{\ensuremath{\hrulefilll_{>}}}
+\newcommand{\backwardapp}{\ensuremath{\hrulefilll_{<}}}
 
 % This is more robust for different fonts. Thanks to Will Robertson
 %\newcommand{\forwardapp}{$\rightarrowfill$}
@@ -181,13 +193,13 @@
 
 
 
-\newcommand{\forwardt}{\ensuremath{\hrulefill_{{>}\mathbf{T}}}}
-\newcommand{\backwardt}{\ensuremath{\hrulefill_{{<}\mathbf{T}}}}
-\newcommand{\forwardtop}{\ensuremath{\hrulefill_{{>}\mathbf{\uparrow}}}}
-\newcommand{\forwardtoptop}{\ensuremath{\hrulefill_{{>}\mathbf{\uparrow\uparrow}}}}
+\newcommand{\forwardt}{\ensuremath{\hrulefilll_{{>}\mathbf{T}}}}
+\newcommand{\backwardt}{\ensuremath{\hrulefilll_{{<}\mathbf{T}}}}
+\newcommand{\forwardtop}{\ensuremath{\hrulefilll_{{>}\mathbf{\uparrow}}}}
+\newcommand{\forwardtoptop}{\ensuremath{\hrulefilll_{{>}\mathbf{\uparrow\uparrow}}}}
 
-\newcommand{\forwardc}{\ensuremath{\hrulefill_{{>}\mathbf{B}}}}
-\newcommand{\backwardc}{\ensuremath{\hrulefill_{{<}\mathbf{B}}}}
-\newcommand{\forwardczwei}{\ensuremath{\hrulefill_{{>}\mathbf{BB}}}}
+\newcommand{\forwardc}{\ensuremath{\hrulefilll_{{>}\mathbf{B}}}}
+\newcommand{\backwardc}{\ensuremath{\hrulefilll_{{<}\mathbf{B}}}}
+\newcommand{\forwardczwei}{\ensuremath{\hrulefilll_{{>}\mathbf{BB}}}}
 
-\newcommand{\conjapp}{\ensuremath{\hrulefill_{\mbox{\&}}}}
+\newcommand{\conjapp}{\ensuremath{\hrulefilll_{\mbox{\&}}}}

@@ -12,13 +12,58 @@
 
 % added reference to Chesi2015a because of infinite sentences
 
-% changed the discussion of passive in German a bit to make things clearer, 10.10.2018
+% changed the discussion of passive in German in GB a bit to make things clearer, 10.10.2018
+
+% added references to GSag2000a and NK2019a in the discussion of start symbol and utterance
+% fragments 18.01.2019
+
+% fixed Baumgärtner's dicussion of rule schema rather than rule 09.02.2019
+
+% fixed missing italics in Figure for Max sleeps.
+
+Since more and more researchers and students are using the book now, I get feedback that helps
+improving it. For the third edition I added references, expanded the discussion of the passive in GB
+a bit and fixed typos.
+
+Chapter~\ref{chap-mp} contained figures from different chapters of \citew{Adger2003a}. Adger
+introduces the DP rather late in the book and I had a mix of NPs and DPs in figures. I fixed this in
+the new edition. I am so used to talk about NPs that there were references to NP in the general
+discussion that should have been references to DP. I fixed this as well.
 
 I thank Frank Van Eynde for pointing out eight typos in his review of the first edition. They have
-been fixed. He also pointed out a mistake with the placement of \argst in the feature geometry of
-signs in HPSG, which was due to a citation of a draft of \citew{GSag200a} from 1998. The respective
-section was integrated into the main part of the chapter on HPSG in the second edition, but the
-mistake carried over. It is now fixed in the third edition.
+been fixed. He also pointed out that the placement of \argst in the feature geometry of signs in
+HPSG did not correspond to \citew{GSag200a}, where \argst is on the top-level rather than under
+\cat. Note that earlier versions of this book had \argst under \cat and it was never properly argued
+to not have it there which is why many practitioners of HPSG kept it at this place
+\citep{MuellerLFGphrasal}. One reason to keep \argst on the top level is that \argst is appropriate
+for lexemes only. If \argst is on the sign level this can be represented in the type hierarchy:
+lexemes and word have an \argst feature, phrases do not. If \argst is on the \cat level one would
+have to distinguish between \catvs that belong to lexemes and words on the one hand and phrasal
+\catvs on the other hand, which would require two additional subtypes of the type \type{cat}. 
+The most recent version of the computer implementation done in Stanford by Dan Flickinger has \argst
+under \local (2019-01-24). So, I was tempted to leave everything as it was in the second edition of
+the book. However, there is a real argument for not having \argst under \cat. \cat is assumed to be
+shared in coordinations. \cat contains valence features for subjects and complements. The values of
+these valence features are determined by a mapping from \argst. In some analyses extracted elements
+are not mapped to the valence features and the same is sometimes assumed for omitted elements. To
+take an example consider (\mex{1}):
+\ea
+He saw and helped the hikers.
+\z
+\emph{saw} and \emph{helped} are coordinated and the members in the valence lists have to be
+compatible. Now if one coordinates a ditransitive verb with one omitted argument with a strictly
+transitive verb, this would work under the assumption that the omitted argument is not part of the
+valence representation. But if \argst is part of \cat, coordination would be made impossible since a
+three-place argument structure list would be incompatible with a two-place list. Hence I decided to
+change this in the third edition and represent \argst outside of \cat from now on.
+
+
+I thank Mikhail Knyazev for pointing out to me that the treatment of V to I to C movement in the
+German literature differs from the lowering that is assumed for English and that some further
+references are needed in the chapter on Government \& Binding. 
+
+I thank Hubert Haider, Gisbert
+Fanselow and Pavel Logacev for discussion and Ina Baier for a mistake in a CG proof and Jonas Benn for pointing out some typos to me.
 
 ~\medskip
 
