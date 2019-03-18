@@ -2276,24 +2276,25 @@ sm edges
 
 Such binary branching structures were assumed for the analysis of German by \citet{Kathol95a,Kathol2000a} and
 \citet{Mueller95c,Babel,Mueller99a,Mueller2002b}, but as we have seen throughout this chapter, Dependency
-Grammar assumes flat representations (but see Footnote~\ref{fn-dg-binary-branching} on page~\pageref{fn-dg-binary-branching}). Schema~\ref{schema-flat-prel} licenses structures in which all arguments of a
-head are realized in one go.\footnote{%
-I assume here that all arguments are contained in the \subcatl of a
+Grammar assumes flat representations (but see Footnote~\ref{fn-dg-binary-branching} on
+page~\pageref{fn-dg-binary-branching}). Schema~\ref{schema-flat-prel} licenses structures in which
+all arguments of a head are realized in one go.\footnote{%
+I assume here that all arguments are contained in the \compsl of a
 lexical head, but nothing hinges on that. One could also assume several valence features and
 nevertheless get a flat structure. For instance, \citet[\page 339]{Borsley89} suggests a schema for auxiliary inversion in
 English\il{English} and verb-initial sentences in Welsh\il{Welsh} that refers to both the valence feature for subjects and for complements and realizes all
 elements in a flat structure.%
 }
-\begin{schema}[Head-Argument Schema (flat structure)]
+\begin{schema}[Head-Complement Schema (flat structure)]
 \label{schema-flat-prel}
-\type{head-argument-phrase}\istype{head"=argument"=phrase} \impl\\
+\type{head-complement-phrase}\istype{head"=argument"=phrase} \impl\\
 \onems{
-      synsem$|$loc$|$cat$|$subcat \eliste \\
-      head-dtr$|$synsem$|$loc$|$cat$|$subcat \ibox{1} \\
+      synsem$|$loc$|$cat$|$comps \eliste \\
+      head-dtr$|$synsem$|$loc$|$cat$|$comps \ibox{1} \\
       non-head-dtrs \ibox{1} \\
       }
 \end{schema}
-To keep the presentation simple, I assume that the \subcatl contains descriptions of complete
+To keep the presentation simple, I assume that the \compsl contains descriptions of complete
 signs. Therefore the whole list can be identified with the list of non-head daughters.\footnote{%
   Without this assumption one would need a relational constraint that maps a list with descriptions of type
   \type{synsem} onto a list with descriptions of type \type{sign}. See \citew[\page 198]{Meurers99b} for details.

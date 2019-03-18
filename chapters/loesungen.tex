@@ -666,7 +666,8 @@ np/n  & n/pp    & pp/np      & np\\
 \onems[head-argument-phrase~]{
       phon  \phonliste{ Max lacht }\\
       synsem$|$loc \ms{ cat \ms{ head & \ibox{1}\\
-                                 subcat & \ibox{2} \eliste \\
+                                 spr   & \eliste\\
+                                 comps & \ibox{2} \eliste \\
                                }\\
                         cont \ms{ ind & \ibox{3}  \\
                                        rels & \relliste{ \ibox{4}, \ibox{5} } \\
@@ -676,7 +677,8 @@ np/n  & n/pp    & pp/np      & np\\
                              synsem$|$loc  \ms{ cat & \ms{ head   & \ibox{1} \ms[verb]{ initial & $-$\\
                                                                                         vform   & fin \\
                                                                                    }\\
-                                                            subcat & \ibox{2}  $\oplus$ \sliste{ \ibox{6} }  \\
+                                                            spr   & \eliste\\
+                                                            comps & \ibox{2}  $\oplus$ \sliste{ \ibox{6} }  \\
                                                         }\\
                                                  cont & \ms{ ind & \ibox{3} event \\
                                                                   rels & \liste{ \ibox{4} \ms[lachen]{ event & \ibox{3} \\
@@ -687,8 +689,10 @@ np/n  & n/pp    & pp/np      & np\\
       non-head-dtrs \liste{ \onems[word]{ 
                                         phon \phonliste{ Max }\\
                                         synsem \ibox{6} \onems{ loc \ms{ cat & \ms{ head   & \ms[noun]{ cas & nom\\
-                                                                                                      } \\
-                                                                                    subcat &  \eliste \\
+                                                                                                      }
+                                              \\
+                                                                                    spr & \eliste\\
+                                                                                    comps &  \eliste \\
                                                                                 }\\
                                                                          cont & \ms{ ind & \ibox{7} \ms{ per & 3 \\
                                                                                                               num & sg \\
@@ -726,7 +730,8 @@ the genitive form of \emph{interessant} `interesting' is used, whereas (\mex{1}b
                       mod  & {\upshape \nbar[\textsc{case} \ibox{1}]}\\
                       case & \ibox{1} gen\\
                     } \\
-              subcat & \liste{} \\
+              spr   & \liste{}\\
+              comps & \liste{} \\
 }
 \zs
 The structure sharing of the case value of the adjective with the case value of the \nbar under \textsc{mod}

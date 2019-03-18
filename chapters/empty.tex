@@ -193,22 +193,22 @@ trace"=less analysis is shown in Figure~\vref{Abbildung-Kopf-ohne-Spur}.
 \centering
 \begin{forest}
 sm edges
-[ V\feattab{\subcat \sliste{ NP[\type{nom}] },\\
+[ V\feattab{\comps \sliste{ NP[\type{nom}] },\\
              \textsc{inher$|$slash} \sliste{ \ibox{1} }}\\
   [{\ibox{4} \feattab{
                 \textsc{loc} \ibox{1},\\
                 \textsc{inher$|$slash} \sliste{ \ibox{1} }}} [\trace]]
   [V\feattab{
-                \subcat \sliste{ NP[\type{nom}], \ibox{4} NP[\type{acc}] }} [liest;reads]]]
+                \comps \sliste{ NP[\type{nom}], \ibox{4} NP[\type{acc}] }} [liest;reads]]]
 \end{forest}
 \caption{\label{Abbildung-Kopf+Spur}Introduction of information about long"=distance dependencies with a trace}
 \end{figure}%
-In Figure~\ref{Abbildung-Kopf+Spur}, the element in the \subcatl of \emph{kennen} is identified with the \synsemv of the trace \ibox{4}.
+In Figure~\ref{Abbildung-Kopf+Spur}, the element in the \compsl of \emph{kennen} is identified with the \synsemv of the trace \ibox{4}.
 The lexical entry of the trace prescribes that the \locv of the trace should be identical to  the element in the \textsc{inher$|$slash} list.
 
 The Non"=Local Feature Principle (page~\pageref{Prinzip-der-Nichtlokalen-Merkmale}) ensures that the \slasch information is present on the
 mother node. Since an argument position gets saturated in Head"=Argument structures, the accusative object is no longer contained in the
-\subcatl of the mother node.
+\compsl of the mother node.
 
 Figure~\ref{Abbildung-Kopf-ohne-Spur} shows the parallel trace"=less structure.
 \begin{figure}
@@ -216,10 +216,10 @@ Figure~\ref{Abbildung-Kopf-ohne-Spur} shows the parallel trace"=less structure.
 \begin{forest}
 sm edges
 [{V\feattab{
-                                    \subcat \sliste{ NP[\type{nom}] },\\
+                                    \comps \sliste{ NP[\type{nom}] },\\
                                     \textsc{inher$|$slash} \sliste{ \ibox{1} } }}\\
     [V\feattab{
-                                             \subcat \sliste{ NP[\type{nom}], NP\ibox{1}[\type{acc}] }}\\
+                                             \comps \sliste{ NP[\type{nom}], NP\ibox{1}[\type{acc}] }}\\
           [liest;reads]]]
 \end{forest}
 \caption{\label{Abbildung-Kopf-ohne-Spur}Introduction of information about long"=distance dependencies using a unary projection}
@@ -254,12 +254,12 @@ Figure~\vref{Abbildung-Kopf+Verbspur} shows the combination of a verb trace with
 sm edges
 [V\feattab{
                                     \textsc{head$|$dsl} \ibox{1},\\
-                                    \subcat \ibox{2} }
+                                    \comps \ibox{2} }
    [{\ibox{3} NP[\type{acc}]}
      [ die Berichte;the reports, roof] ]
    [V\ibox{1}\feattab{
                     \textsc{head$|$dsl} \ibox{1},\\
-                    \subcat \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }} 
+                    \comps \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }} 
      [\trace]]]
 \end{forest}
 \caption{\label{Abbildung-Kopf+Verbspur}Analysis of verb position with verb trace}
@@ -272,8 +272,8 @@ the mother node. Figure~\vref{Abbildung-Kopf-ohne-Verbspur} shows the structures
 \begin{forest}
 sm edges, for tree={l sep= 5ex}
 [ V\feattab{
-     \textsc{head$|$dsl} V[\subcat \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }],\\
-     \subcat \ibox{2}} 
+     \textsc{head$|$dsl} V[\comps \ibox{2} $\oplus$ \sliste{ \ibox{3} NP[\type{acc}] }],\\
+     \comps \ibox{2}} 
    [{\ibox{3} NP[\type{acc}]}
       [die Berichte;the reports, roof]]]
 \end{forest}
@@ -582,7 +582,7 @@ contains a simple structure with a verb and an object.
 \begin{forest}
 sm edges, for tree={l sep= 4ex}
 [V$'$\feattab{
-    \subcat \sliste{ NP\ind{y} },\\
+    \comps \sliste{ NP\ind{y} },\\
     \rels \relliste{ h1:every(x, h2, h3), h4:window(x), h6:CAUSE(y,h7), h5:open(x) },\\
     \hcons \relliste{ h0 \qeq h1, h2 \qeq h4, h0 \qeq h6, h7 \qeq h5 }    }
   [\ibox{2} NP\ind{x}\feattab{
@@ -595,7 +595,7 @@ sm edges, for tree={l sep= 4ex}
     \rels \relliste{ h4:window(x) },\\
     \hcons \relliste{ } } [Fenster;windows] ] ]
   [V\feattab{
-                                           \subcat \sliste{ NP\ind{y}, \ibox{2} },\\
+                                           \comps \sliste{ NP\ind{y}, \ibox{2} },\\
                                            \rels \relliste{ h6:CAUSE(y,h7), h5:open(x) },\\
                                            \hcons \relliste{ h0 \qeq h6, h7 \qeq h5 } } [öffnete;opened] ]
 ]
@@ -747,10 +747,10 @@ that, rather than connecting lexical items with differing valence lists, establi
 list in the same lexical item. The results of the two alternative analyses are shown in (\mex{1})
 and (\mex{2}), respectively:
 \eal
-\ex \ms{ subcat & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+\ex \ms{ comps & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
          slash  & \eliste\\
        }
-\ex \ms{ subcat & \sliste{ NP[\type{nom}] }\\
+\ex \ms{ comps & \sliste{ NP[\type{nom}] }\\
          slash  & \sliste{ NP[\type{acc}] }\\
        }
 \zl
@@ -760,20 +760,20 @@ rule. The alternative analysis would only involve specifying the appropriate val
 of the \textsc{arg-st} feature\footnote{%
 \argst stands for \emph{Argument Structure}. The value of \argst is a list containing all the arguments
 of a head. For more on \argst, see Section~\ref{Abschnitt-Arg-St}.
-}\isfeat{arg-st} and the \subcat and \slashv is then derived from the \argstv using the relevant constraints.
+}\isfeat{arg-st} and the \comps and \slashv is then derived from the \argstv using the relevant constraints.
 (\mex{1}) shows two of the licensed lexical items.
 \eal
 \ex \ms{ arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
-         subcat & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
+         comps & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
          slash  & \eliste\\
        }
 \ex \ms{ arg-st & \sliste{ NP[\type{nom}], NP[\type{acc}] }\\
-         subcat & \sliste{ NP[\type{nom}] }\\
+         comps & \sliste{ NP[\type{nom}] }\\
          slash  & \sliste{ NP[\type{acc}] }\\
        }
 \zl
 If we want to eliminate lexical rules entirely in this way, then we would require an additional feature for each change.\footnote{%
-Alternatively, one could assume a very complex relation that connects \argst and \subcat. But this would then have to deliver
+Alternatively, one could assume a very complex relation that connects \argst and \comps. But this would then have to deliver
 the result of an interaction of a number of phenomena and the interaction of these phenomena would not be captured in a transparent way.%
 } Since there are many interacting valence"=changing processes, things only work out with the stipulation of a large number of auxiliary
 features. The consequences of assuming such analyses have been discussed in detail in
@@ -807,17 +807,17 @@ Figure~\vref{Abbildung-Resultativ-LR} shows the corresponding tree.
 \centering
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
+[V{[\comps \eliste]}
 	[NP{[\type{nom}]}
 		[Peter;Peter]]
-	[V{[\subcat \sliste{ NP[\type{nom}] }]}
+	[V{[\comps \sliste{ NP[\type{nom}] }]}
 		[NP{[\type{acc}]}
 			[den Teich;the pond, roof]]
-		[V{[\subcat \sliste{ NP[\type{nom}], NP[\type{acc}] } ]}
+		[V{[\comps \sliste{ NP[\type{nom}], NP[\type{acc}] } ]}
 			[Adj
 				[leer;empty]]
-			[V{[\subcat \sliste{ NP[\type{nom}], NP[\type{acc}], Adj } ]}
-				[V{[\subcat \sliste{ NP[\type{nom}]} ]}
+			[V{[\comps \sliste{ NP[\type{nom}], NP[\type{acc}], Adj } ]}
+				[V{[\comps \sliste{ NP[\type{nom}]} ]}
 					[fischt;fishes]]]]]]
 \end{forest}
 \caption{\label{Abbildung-Resultativ-LR}Analysis of the resultative construction with a lexical rule}
@@ -835,19 +835,19 @@ Figure~\vref{Abbildung-Resultativ-leer} shows how a lexical rule can be replaced
 %\scalebox{0.9}{%
 \begin{forest}
 sm edges
-[V{[\subcat \eliste]}
+[V{[\comps \eliste]}
 	[{NP[\type{nom}]}
 		[Peter;Peter]]
-	[{V[\subcat \sliste{ NP[\type{nom}] }]}
+	[{V[\comps \sliste{ NP[\type{nom}] }]}
 		[{NP[\type{acc}]}
 			[den Teich;the pond,roof]]
-		[{V[\subcat \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]} }]}
+		[{V[\comps \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]} }]}
 			[Adj
 				[leer;empty]]
-			[{[\subcat \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]}, Adj }]}
-				[{V[\subcat \sliste{ NP{[\type{nom}]} }]}
+			[{[\comps \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]}, Adj }]}
+				[{V[\comps \sliste{ NP{[\type{nom}]} }]}
 					[fischt;fishes]]
-				[{V[\subcat \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]}, Adj, V{[\subcat \sliste{ NP{[\type{nom}]} }]} }]}
+				[{V[\comps \sliste{ NP{[\type{nom}]}, NP{[\type{acc}]}, Adj, V{[\comps \sliste{ NP{[\type{nom}]} }]} }]}
 					[\trace]]]]]]
 \end{forest}
 %}

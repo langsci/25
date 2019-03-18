@@ -2163,9 +2163,9 @@ the arguments (case, the form of prepositions, verb forms in verbal complements)
 lexical entry. For the lexical entry for \emph{warten auf} `wait for', there must be information about the fact that the subject has to be an
 NP and that the prepositional object is an \emph{auf}-PP with accusative. The use of a type hierarchy then allows one to elegantly encode
 the fact that the prepositional object is optional. The difference to a disjunctively specified
-\subcatl with the form of (\mex{1}) is just a matter of formalization.
+\compsl with the form of (\mex{1}) is just a matter of formalization.
 \ea
-\subcat \sliste{ NP[\str] } $\vee$ \sliste{ NP[\str], PP[\type{auf}, \type{acc}] }
+\comps \sliste{ NP[\str] } $\vee$ \sliste{ NP[\str], PP[\type{auf}, \type{acc}] }
 \z
 %
 Since Haugereid's structures are binary"=branching, it is possible to derive all permutations of arguments (\mex{1}a--b), and adjuncts can be
@@ -3257,7 +3257,7 @@ The result of these considerations is that the argument that particular elements
 other and that this occurrence is associated with a particular meaning is considerably
 weakened. What competent speakers do acquire is the knowledge that heads must occur with their
 arguments somewhere in the utterance and that all the requirements of the heads involved have to
-somehow be satisfied ($\theta$"=Criterion, coherence/completeness, empty \subcatl).  The heads
+somehow be satisfied ($\theta$"=Criterion, coherence/completeness, empty \spr and \compsl).  The heads
 themselves need not necessarily occur directly adjacent to their arguments. See the discussion in
 Section~\ref{Abschnitt-musterbasiert} about pattern"=based models of language acquisition.
 
@@ -4205,14 +4205,15 @@ G.\ Müller's analysis can be translated into HPSG. The result is given in (\mex
 \ea
 \oneline{%
 \onems[verb-initial-lr]{
-%synsem$|$loc$|$cat$|$subcat \sliste{ [ nonloc$|$inher$|$slash \eliste ] }\\
+%synsem$|$loc$|$cat$|$comps \sliste{ [ nonloc$|$inher$|$slash \eliste ] }\\
 rels \relliste{ \ms[imperative-or-interrogative]{
                   event & \ibox{2}\\
                   } } $\oplus$ \etag\\[2mm]
 lex-dtr  \onems{
           phon \eliste\\
           ss$|$loc \onems{ cat   \onems{ head$|$mod \type{none}\\
-                                           subcat     \sliste{ XP[\textsc{mod} \ldots{}  ind \ibox{1}], (PP[\type{mit}]\ind{1}) }\\
+                                         spr \eliste{}\\
+                                           comps     \sliste{ XP[\textsc{mod} \ldots{}  ind \ibox{1}], (PP[\type{mit}]\ind{1}) }\\
                                          }\\
                             cont  \ms{
                                    ind & \ibox{2}\\
@@ -4258,10 +4259,11 @@ synsem$|$loc \ms{ head & \ms[verb]{vform & fin\\
                                           initial & $+$\\
                                           dsl     & none\\
                                  }\\
-                           subcat & \sliste{ \onems{ loc$|$cat \onems{ head  \ms[verb]{
+                           spr   & \eliste\\
+                           comps & \sliste{ \onems{ loc$|$cat \onems{ head  \ms[verb]{
                                                                dsl & \ibox{3}\\
                                                                }\\
-                                                         subcat \eliste\\
+                                                         comps \eliste\\
                                                        }
                                               }}\\
                          }\\
@@ -4271,7 +4273,8 @@ rels \relliste{ \ms[imperative-or-interrogative]{
 lex-dtr  \onems{
           phon \eliste\\
           ss$|$loc \ibox{3} \onems{ cat   \onems{ head$|$mod \type{none}\\
-                                           subcat     \sliste{ XP[\textsc{mod} \ldots{}  ind \ibox{1}], (PP[\type{mit}]\ind{1}) }\\
+                                           spr \eliste\\
+                                           comps     \sliste{ XP[\textsc{mod} \ldots{}  ind \ibox{1}], (PP[\type{mit}]\ind{1}) }\\
                                          }\\
                             cont  \ms{
                                    ind & \ibox{2}\\
@@ -4306,7 +4309,7 @@ The valence of the lexical daughters in (\mex{0}) as well as the connection to t
 Every approach has to stipulate that an argument of the verb has to be expressed as a \emph{mit}-PP. Since there is no antipassive\is{antipassive|)} in German,
 the effect that could be otherwise achieved by an antipassive lexical rule in (\mex{0}) is simply written into the \textsc{lex-dtr} of the verb movement rule.
 
-The \subcatl of \textsc{lex-dtr} contains a modifier (adverb, directional PP) and the 
+The \compsl of \textsc{lex-dtr} contains a modifier (adverb, directional PP) and the 
 \emph{mit}-PP. This \emph{mit}-PP is co"=indexed with the patient of \relation{directive} and the modifier refers to the referent of the \emph{mit}-PP. The agent
 of \relation{directive} is unspecified since it depends on the context (speaker, hearer, third person).
 
@@ -4315,22 +4318,22 @@ This analysis is shown in Figure~\vref{verb-movement-muell}.
 \oneline{%
 \begin{forest}
 sm edges
-[V{[\subcat \sliste{}]}
-	[V{[\subcat \sliste{ \ibox{1} [\textsc{head$|$dsl} \ibox{2}] }]}
+[V{[\comps \sliste{}]}
+	[V{[\comps \sliste{ \ibox{1} [\textsc{head$|$dsl} \ibox{2}] }]}
 		[V{[\textsc{loc} \ibox{2} ]}, tier=pp, edge label={node[midway,right]{V1-LR}}
 			[\trace]]]
 	[\ibox{1} V\feattab{
                         \textsc{head$|$dsl} \ibox{2},\\
-                        \subcat \sliste{} }
+                        \comps \sliste{} }
 		[\ibox{3} PP, tier=pp
 			[in den Müll;in the trash,roof]]
 		[V\feattab{
                          \textsc{head$|$dsl} \ibox{2},\\
-                         \subcat \sliste{ \ibox{3} }}
+                         \comps \sliste{ \ibox{3} }}
 			[\ibox{4} PP{[\type{mit}]}
 				[mit diesen Klamotten;with these clothes,roof]]
 			[V\ibox{2}\feattab{ \textsc{head$|$dsl} \ibox{2},\\
-                                            \subcat \sliste{ \ibox{3}, \ibox{4} }}
+                                            \comps \sliste{ \ibox{3}, \ibox{4} }}
 				[\trace]]]]]
 \end{forest}
 }

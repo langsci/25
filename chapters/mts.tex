@@ -53,7 +53,7 @@ phon \phonliste{ kennst }\\
 synsem \onems{ loc  \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
                                                      dsl   & none\\
                                               }\\
-                                   subcat & \sliste{ \npnom\ind{1}\sub{[\type{second},\type{sg}]}, \npacc\ind{2} }\\
+                                   comps & \sliste{ \npnom\ind{1}\sub{[\type{second},\type{sg}]}, \npacc\ind{2} }\\
                      }\\
                   cont & \ms{
                          ind & \ibox{3}\\
@@ -74,7 +74,7 @@ synsem \onems{ loc  \ms{ cat  & \ms{ head & \ms[verb]{ vform & fin\\
 In the description of (\mex{0}), it is ensured that the \phonv of the relevant linguistic sign is
 \phonliste{ kennst }, that is, this value of \phon is constrained. There are parallel restrictions for the features given in (\mex{0}): the \synsemv
 is given. In \synsem, there are restrictions on the \textsc{loc} and \nonlocv. In \textsc{cat}, there are
-individual restrictions for \head and \subcat. The value of \subcat is a list with descriptions of dependent
+individual restrictions for \head and \comps. The value of \comps is a list with descriptions of dependent
 elements. The descriptions are given as abbreviations here, which actually stand for complex feature descriptions that also
 consist of feature"=value pairs. For the first argument of \emph{kennst}, a \headv of type 
 \type{noun} is required, the \textsc{per} value in the semantic index has to be \type{second} and the
@@ -84,7 +84,7 @@ consist of feature"=value pairs. For the first argument of \emph{kennst}, a \hea
  either be an empty or non"=empty list.
 
 The constraints in lexical items such as (\mex{0}) interact with further constraints that hold for the signs of type
-\type{phrase}. For instance, in head"=argument structures, the non"=head daughter must correspond to an element from the \subcatl of
+\type{phrase}. For instance, in head"=argument structures, the non"=head daughter must correspond to an element from the \compsl of
 the head daughter.
 
 \addlines[-1]

@@ -9,15 +9,17 @@
 	        %,draftmode  
                 ,bibtex
                 ,copyright=CC-BY-ND
-		  ]{../LSP/langsci}                          
+		  ]{langsci/langscibook}                          
 
+
+% compile with texlive 2017 and lualatex (ignore xelatex warning)
 
 %deceive the driver
-\def\pdftexversion{140}
+%\def\pdftexversion{140}
 %use the old driver for dvipdfm
-\def\pgfsysdriver{pgfsys-dvipdfm.def} 
+%\def\pgfsysdriver{pgfsys-dvipdfm.def} 
 
-\usepackage{forest,../LSP/lsp-styles/lsp-forest-setup,makros.2e}
+\usepackage{langsci/styles/langsci-forest-setup,abbrev,merkmalstruktur,makros.2e,oneline}
 
 \usetikzlibrary{tikzmark}
 
@@ -27,32 +29,32 @@
 \thispagestyle{empty}
 \oneline{%
 \begin{forest}
-sn edges, for tree={l sep= 6ex}
-[V{[\subcat \sliste{ \spirit{1}, \spirit{2} }]}
+sm edges, for tree={l sep= 6ex}
+[V{[\comps \sliste{ \spirit{1}, \spirit{2} }]}
 	[\ibox{1} NP{[\textit{nom}]}
 		[er;he]]
-	[V{[\subcat \sliste{ \ibox{1}, \spirit{2} } ]}
+	[V{[\comps \sliste{ \ibox{1}, \spirit{2} } ]}
 		[\ibox{2} NP{[\textit{acc}]}
-			[die Äpfel;the apples,triangle]]
-		[V{[\subcat \sliste{ \ibox{1}, \ibox{2} } ]}
+			[die Äpfel;the apples,roof]]
+		[V{[\comps \sliste{ \ibox{1}, \ibox{2} } ]}
 			[\subnode{ap1}{AP}
 				[ungewaschen;unwashed]]
-			[V{[\subcat \sliste{ \subnode{arg11}{\ibox{1}}, \subnode{arg12}{\ibox{2}} }]}
+			[V{[\comps \sliste{ \subnode{arg11}{\ibox{1}}, \subnode{arg12}{\ibox{2}} }]}
 				[isst;eats]]]]]
 \end{forest}
 \hspace{1em}
 \begin{forest}
-sn edges, for tree={l sep= 6ex}
-[V{[\subcat \sliste{ \spirit{1}, \spirit{2} } ]}
+sm edges, for tree={l sep= 6ex}
+[V{[\comps \sliste{ \spirit{1}, \spirit{2} } ]}
 	[\ibox{1} NP{[\textit{nom}]}
 		[er;he]]
-	[V{[\subcat \sliste{ \ibox{1}, \spirit{2} } ]}
+	[V{[\comps \sliste{ \ibox{1}, \spirit{2} } ]}
 		[\subnode{ap2}{AP}
 			[ungewaschen;unwashed]]
-		[V{[\subcat \sliste{ \subnode{arg21}{\ibox{1}}, \spirit{2} } ]}
+		[V{[\comps \sliste{ \subnode{arg21}{\ibox{1}}, \spirit{2} } ]}
 			[\ibox{2} NP{[\textit{acc}]}
-				[die Äpfel;the apples,triangle]]
-			[V{[\subcat \sliste{ \ibox{1}, \ibox{2} } ]}
+				[die Äpfel;the apples,roof]]
+			[V{[\comps \sliste{ \ibox{1}, \ibox{2} } ]}
 				[isst;eats]]]]]
 \end{forest}
 % This has to be inside of the scaling
