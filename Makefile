@@ -264,7 +264,7 @@ source:
 clean:
 	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tmp *.tpm *.adx *.idx *.ilg *.ind \
 	*.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.ldx *.lnd *.rdx *.sdx *.snd *.wdx \
-	*.wdv *.xdv chapters/*.aux *.for *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml
+	*.wdv *.xdv chapters/*.aux *.for *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml *.backup
 
 check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
