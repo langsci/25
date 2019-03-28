@@ -890,7 +890,7 @@ daughter features. The Head"=Complement Construction would then have the form in
 
 \eas
 Head"=Complement Construction following \citet*[481]{SWB2003a}:\\
-\type{head"=comp"=cx}\istype{head"=comp"=cx} $\to$\\
+\type{head"=comp"=cx}\istype{head"=comp"=cx} \impl\\
 \onems{
 mother$|$syn$|$val$|$comps  \eliste\\
 head-dtr \ibox{0} \ms[word]{
@@ -1447,22 +1447,8 @@ The distinction can be modeled by assuming a selection feature for determiners.\
 } An alternative would be of course to capture all phonological phenomena by formulating constraints on phonology on the
 phrasal level (see \citealp{BK94b} and \citealp{Walther99a-u} for phonology in HPSG).
 
-Note also that the treatment of raising and nonlocal dependencies in SBCG admits nonlocal selection of phonology
-values, since the \formv of the filler is present at the \argstl of the head from which the argument
-is extracted. In earlier HPSG versions only \local information is shared and elements in valence lists
-do not have a \phonf. In principle, SBCG could be used to model languages in which the phonology of
-a filler is relevant for a head from which it is extracted. So for instance \emph{likes} can see the
-phonology of \emph{bagels} in (\mex{1}):
-\ea
-Bagels, I think that Peter likes.
-\z
-It would be possible to state constraints saying that the filler has to contain a vowel or two
-vowels or that it ends with a consonant. In addition all elements on the extraction path
-(\emph{that} and \emph{think}) can see the phonology of the filler as well. While there are
-languages that mark the extraction path, I doubt that there are languages that have phonological
-effects across long distances. 
-
-Similarly, the analysis of raising in SBCG assumes that the element on the valence list of the
+Note also that the treatment of raising in SBCG admits nonlocal selection of phonology
+values, since the analysis of raising in SBCG assumes that the element on the valence list of the
 embedded verb is identical to an element in the \argstl of the matrix verb \citep[\page
   159]{Sag2012a}. Hence, both verbs in (\mex{1}) can see the phonology of the subject:
 \ea
@@ -1473,17 +1459,17 @@ presence of an initial consonant in phonology of the subject. English allows for
 raising verbs and one could imagine languages in which all the verbs on the way are sensitive to the
 phonology of the subject. Such languages probably do not exist.
 
-%\addlines
 Now, is this a problem? Not for me, but if one develops a general setup in a
 way to exclude everything that is not attested in the languages of the world (as for instance the
 selection of arguments of arguments of arguments), then it is a problem that heads can see the
 phonology of elements that are far away.
 
+%\addlines
 There are two possible conclusions for practitioners of SBCG: either the \motherf could be given up
-since one agrees that theories that do not make wrong predictions are sufficiently constraint and
+since one agrees that theories that do not make wrong predictions are sufficiently constrained and
 one does not have to explicitly state what cannot occur in languages or one would have to react to
 the problem with nonlocally selected phonology values and therefore assume a \synsem or \localf that
-bundles information that is relevant in raising and nonlocal dependencies and does not include the
+bundles information that is relevant in raising and does not include the
 phonology.
 %% \footnote{%
 %%   If \synsem is reintroduced, the elements in the valence lists could be of type
@@ -1494,6 +1480,37 @@ phonology.
 %This supports the arguments I made on \mother and \local in the previous subsections.
 This supports the argument I made on \mother in the previous subsection.
 
+\subsubsection{The \local feature and information shared in nonlocal dependencies}
+\label{sec-local-feature-sbcg}
+
+Similarly, elements of the \argstl contain information about \form. In nonlocal dependencies, this information is shared in the \textsc{gap} list (\slashl in other versions of
+HPSG) and is available all the way to the filler. In other versions of HPSG only \local information is shared and elements in valence lists
+do not have a \phonf. If the sign that is contained in the \textsc{gap} list were identified with
+the filler, the information about phonological properties of the filler would be available at the
+extraction side and SBCG could be used to model languages in which the phonology of
+a filler is relevant for a head from which it is extracted. So for instance \emph{likes} could see the
+phonology of \emph{bagels} in (\mex{1}):
+\ea
+Bagels, I think that Peter likes.
+\z
+It would be possible to state constraints saying that the filler has to contain a vowel or two
+vowels or that it ends with a consonant. In addition all elements on the extraction path
+(\emph{that} and \emph{think}) can see the phonology of the filler as well. While there are
+languages that mark the extraction path, I doubt that there are languages that have phonological
+effects across long distances. This problem can be solved and has been solved by assuming that the
+filler is not shared with the information in the \textsc{gap} list but parts of the filler are
+shared with parts in the \textsc{gap} list: \citet[\page 166]{Sag2012a} assumes that \textsc{syn},
+\textsc{sem} and \textsc{store} information are identified individually. Originally, the feature
+geometry of HPSG was motivated by the wish to structure share information. Everything within \local
+was shared between filler and extraction side. This kind of motivation is given up in SBCG.
+
+Note also, that not sharing the complete filler with the gap means that the \form
+value of the element in the \argstl at the extraction side is not constrained. Without any
+constraint the theory would be compatible with infinitely many models since the \form value could be
+anything. For example, the \form value of an extracted adjective could be \phonliste{ Donald Duck }
+or \phonliste{ Dunald Dock } or any arbitrary chaotic sequence of letters/""phonemes. To exclude this one can stipulate the \form values of extracted
+elements to be the empty list, but this leaves one with the unintuitive situation that the element
+in \textsc{gap} has an empty \form list while the corresponding filler has a different, a filled one.
 
 \subsubsection{The \textsc{valence} list}
 \label{sec-valence-feature-sbcg}
