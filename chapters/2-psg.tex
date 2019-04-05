@@ -125,7 +125,7 @@ sm edges
 %% \end{tikzpicture}
 }
 \caption{\label{er-das-buch-dem-mann-gibt-flat}Analysis of \emph{er das Buch dem Mann gibt} `he the
-book the woman gives'}
+book the man gives'}
 \end{figure}%
 The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP nodes and the V node\is{dominance}.
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
@@ -703,53 +703,54 @@ without an adjective and that of a noun phrase with one or two adjectives.
 \begin{forest}
 sm edges
 [NP
-   [Det [eine;a] ]
+   [Det [ein;a] ]
    [\nbar
-      [N [Frau;woman] ] ] ]
+      [N [Eichhörnchen;squirrel] ] ] ]
 \end{forest}
 \hfill
 \begin{forest}
 sm edges
 [NP
-   [Det [eine;a] ]
+   [Det [ein;a] ]
    [\nbar
-      [A [kluge;smart] ]
+      [A [graues;grey] ]
       [\nbar
-        [N [Frau;woman] ] ] ] ]
+        [N [Eichhörnchen;squirrel] ] ] ] ]
 \end{forest}
 %
 \hfill
 \begin{forest}
 sm edges
 [NP
-  [Det [eine;a] ]
+  [Det [ein;a] ]
     [\nbar
-    [A [glückliche;happy] ]
+    [A [großes;big] ]
        [\nbar
-       [A [kluge;smart] ]
+       [A [graues;grey] ]
          [\nbar
-         [N [Frau;woman] ] ] ] ] ]
+         [N [Eichhörnchen;squirrel] ] ] ] ] ]
 \end{forest}
 \hfill\mbox{}
 %
 \caption{\label{Abbildung-Adjektive-in-NP}Noun phrases with differing numbers of adjectives}
 \end{figure}%
-The adjective \emph{klug} `smart' restricts the set of referents for the noun phrase. If we assume an
-additional adjective such as \emph{glücklich} `happy', then it only refers to those women who are happy
-as well as smart. These kinds of noun phrases can be used in contexts such as the following:
+The adjective \emph{grau} `grey' restricts the set of referents for the noun phrase. If we assume an
+additional adjective such as \emph{groß} `big', then it only refers to those squirrels who are grey
+as well as big. These kinds of noun phrases can be used in contexts such as the following:
 
 \ea
 \label{Beispiel-Iteration-Adjektive}
-\gll A: Alle klugen Frauen sind unglücklich.\\
-\spacebr{} all smart women are unhappy\\
+\gll A: Alle grauen Eichhörnchen sind groß.\\
+\spacebr{} all grey squirrels are big\\
 
-\gll B: Nein, ich kenne eine glückliche kluge Frau.\\
-	\spacebr{} no I know a happy smart woman\\
+\gll B: Nein, ich habe ein kleines graues Eichhörnchen gesehen.\\
+	\spacebr{} no I have a small grey squirrel seen\\
 \z
-We observe that this discourse can be continued with \emph{Aber alle glücklichen
-  klugen Frauen sind schön} `but all happy smart women are beautiful' and a corresponding answer. The possibility
-  to have even more adjectives in noun phrases such as \emph{eine glückliche kluge Frau} `a happy smart woman' is accounted
-  for in our rule system in (\mex{-1}). In the rule (\ref{NP-Regeln-Adj}), \nbar occurs on the left as well as the right"=hand
+We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
+  sind krank} `but all small grey squirrels are ill' and a corresponding answer. The possibility
+  to have even more adjectives in noun phrases such as \emph{ein kleines graues Eichhörnchen} `a
+  small grey squirrel' is accounted for in our rule system in (\mex{-1}). In the rule
+  (\ref{NP-Regeln-Adj}), \nbar occurs on the left as well as the right"=hand 
   side of the rule. This kind of rule is referred to as \emph{recursive}\is{recursion}.
 \is{adjunct|)}
 
@@ -1559,9 +1560,9 @@ rules out the sentences in (\mex{2}).
 
       \eal
       \ex[]{
-      \gll Der Mann hilft der Frau.\\
-           the.\nom{} man helps the.\dat{} woman\\
-      \glt `The man helps the woman.'
+      \gll Der Mann hilft dem Kind.\\
+           the.\nom{} man helps the.\dat{} child\\
+      \glt `The man helps the child.'
       }
       \ex[]{
       \gll Er gibt ihr das Buch.\\
@@ -1592,13 +1593,13 @@ rules out the sentences in (\mex{2}).
 
 \eal
 \ex 
-\gll Der Mann hilft der Frau jetzt.\\
-     the.\nom{} man helps the.\dat{} woman now\\
-\glt `The man helps the woman now.'
+\gll Der Mann hilft dem Kind jetzt.\\
+     the.\nom{} man helps the.\dat{} child now\\
+\glt `The man helps the child now.'
 \ex 
-\gll Der Mann hilft der Frau neben dem Bushäuschen.\\
-     the.\nom{} man helps the.\dat{} woman next.to the bus.shelter\\
-\glt `The man helps the woman next to the bus shelter.'
+\gll Der Mann hilft dem Kind neben dem Bushäuschen.\\
+     the.\nom{} man helps the.\dat{} child next.to the bus.shelter\\
+\glt `The man helps the child next to the bus shelter.'
 \ex 
 \gll Er gibt ihr das Buch jetzt.\\
      he.\nom{} gives her.\dat{} the.\acc{} book now\\
