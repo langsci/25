@@ -1315,6 +1315,8 @@ Storage and cataloguing done by FU Berlin \\[3ex]
 	useprefix = true, %sort von, van, de where they should appear
 	%refsection=chapter,
 	maxbibnames=99,
+	uniquename=false,
+	mincrossrefs=99,
 	maxcitenames=2,
 	isbn=false,
 	doi=false,
