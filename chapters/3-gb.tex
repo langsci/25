@@ -1,6 +1,6 @@
 %% -*- coding:utf-8 -*-
 
-
+%\if0
 \chapter{Transformational Grammar -- Government \& Binding}
 \label{Kapitel-GB}\label{chap-GB}\label{chap-gb}
 
@@ -1625,6 +1625,7 @@ to create a well"=formed S"=structure, the verb would have to move to its affix 
       \spacebr{}that the boy.\nom{} the.\dat{} woman shown is\\
 \glt `that the boy is shown to the woman'
 \zl
+%\fi
 \begin{figure}
 \hfill
 \begin{forest}
@@ -1639,10 +1640,10 @@ sm edges
 				[NP,   name=aobject [den Jungen;the boy, roof]]
 				[V ,name=verb    [zeig-;show-]]]]]
 	[I , name=Infl [-t;-s]]]]
-\draw[->,dotted] (Infl.north) .. controls (3.5,-0.3) and (-1.5,.5) .. ($(subject.north)+(-.1,.1)$);
-\draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5) .. ($(subject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.8,-3.0) and (0,-3.3) .. ($(dobject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.3,-4.3) and (1.8,-4.5) .. ($(aobject.north)+(0,.1)$);
+\draw[->,dotted] (Infl.north) .. controls (3.5,-0.6) and (-1.5,0)  .. ($(subject.north)+(-.1,.1)$);
+\draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5)   .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.8,-3.2) and (0,-3.7)   .. ($(dobject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.3,-4.5) and (1.8,-4.9) .. ($(aobject.north)+(0,.1)$);
 %\draw (-4,-7) to[grid with coordinates] (4,0.5);
 \end{forest}\hfill
 \begin{tabular}[b]{ll@{}}
@@ -1675,9 +1676,9 @@ sm edges
 				[NP,   name=aobject [\_$_i$]]
 				[V ,name=verb [gezeigt wir-;shown is, roof]]]]]
 	[I  ,name=Infl [-\/d]]]]
-\draw[->,dotted] (Infl.north) .. controls (2.5,.35)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.2,-3.4) and (0,-3.1) .. ($(dobject.north)+(0,.1)$);
-\draw[->]        (verb.north) .. controls (2.0,-4.55) and (1.2,-4.35) .. ($(aobject.north)+(0,.1)$);
+\draw[->,dotted] (Infl.north) .. controls (2.5,-.05)   and (-1.5,-.45) .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.2,-3.7)  and (0,-3.4)    .. ($(dobject.north)+(0,.1)$);
+\draw[->]        (verb.north) .. controls (2.0,-4.75) and (1.2,-4.75) .. ($(aobject.north)+(0,.1)$);
 %\draw (-4,-7) to[grid with coordinates] (4,0.5);
 \end{forest}\hspace{1cm}
 \begin{tabular}[b]{ll@{}}
@@ -1689,7 +1690,7 @@ sm edges
 \end{tabular}
 \caption{\label{Abb-GB-Passiv}Case and theta-role assignment in passive clauses}
 \end{figure}%
-
+%\if 0
 This movement"=based analysis works well for English\il{English} since the underlying object always has to move:
 
 \eal
@@ -2345,7 +2346,7 @@ book), extractions where fillers and gaps do not match and extraction without ga
 }
 
 
-
+%\fi
 
 %%% Local Variables: 
 %%% mode: latex
