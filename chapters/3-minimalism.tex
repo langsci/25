@@ -91,11 +91,14 @@ apply in any order to derive a certain structure that is then said to be spelled
 that the structure is sent to the interfaces: the articulatory-perceptual system (AP) on the one hand and
 the conceptual-intentional system (CI) on the other side. AP corresponds to the level of
 Phonological Form (PF) and CI to the level of Logical Form (LF) in GB. The new architecture is
-depicted in Figure~\vref{fig-architecture-minimalism}.
+depicted in Figure~\vref{fig-architecture-minimalism} (left figure).
 \begin{figure}
-\begin{tikzpicture}[scale=.8]
-%\draw (-2.9,-5.8) to[grid with coordinates] (2.7,-0.6);
-\draw[->] (0,-1) node[anchor=south] {lexicon} --(0,-5) node[anchor=north, align=center] {LF/CI\\(meaning)};
+\hfill
+\scalebox{.9}{
+\begin{tikzpicture}[scale=.8,baseline=(current bounding box.center)]
+%\draw (-3.9,-5.8) to[grid with coordinates] (2.7,-0.6);
+\draw[->] (-2.2,-.7) node[anchor=east] {lexicon} -- (-1.3,-.7); 
+\draw[->] (0,-1) node[anchor=south] {numeration} --(0,-5) node[anchor=north, align=center] {LF/CI\\(meaning)};
 \draw[->] (0,-3)--(2,-5) node[anchor=north,align=center] {PF/AP\\(sound)};
 \draw[<-] (.4,-3)--(1.2,-3) node[anchor=west] {Spell-Out};
 %\draw (0,-0.5) node {lexicon};
@@ -104,16 +107,52 @@ depicted in Figure~\vref{fig-architecture-minimalism}.
 %\draw (0,-6.5) node[align=center] {LF/CI\\(meaning)};
 %\draw (2,-5.5) node[align=center] {PF/AP\\(sound)};
 \end{tikzpicture}
+}
+\hfill
+\scalebox{.9}{%
+\begin{forest} 
+for tree={nice empty nodes,% every conditional anchor=north adapts the specific node to this setting.
+                            if n children={3}{for children={
+                                anchor=north,
+                                if n=1{inner sep=0pt,child anchor=north east,edge=-{Triangle[]}}{
+                                if n=3{inner sep=0pt,child anchor=north west,edge=-{Triangle[]}}{}}}
+                            }{
+                                if n children={2}{for children={
+                                anchor=north,
+                                if n=1{child anchor=north east,edge=-{Triangle[]}}{
+                                if n=2{child anchor=north west,edge=-{Triangle[]}}{}}}
+                                }{}
+                            },
+                            },
+                    delay={where content={...}{for parent={for children={anchor=north}}}{}},
+                    transfer/.style={yshift=5mm,tikz={\node[gray,right=3cm of .east] (stefanstransfer) {Transfer};\path[{Latex[]}-,gray] (.east) edge[] (stefanstransfer);}},
+                    lexicon/.style={tikz={\node[left=1.5cm of .base west,anchor=base] (stefanslexicon) {\strut lexicon};\path[-{Latex[]}] (stefanslexicon) edge (.west);}}
+[numeration,lexicon[,transfer
+    [PHON][,transfer
+        [PHON][,transfer
+            [PHON,baseline][,transfer
+                [PHON][...[,transfer
+                        [PHON][SEM]
+                        ]
+                    ][SEM]]
+            [SEM]]
+        [SEM]]
+    [SEM]]
+]
+\end{forest}
+}
+\hfill\mbox{}
 \caption{\label{fig-architecture-minimalism}Architecture assumed in Minimalist theories before the
-  Phase model}
+  Phase model (left) and in the Phase model (right) according to \citet[\page 812, 830]{Richards2015a}}
 \end{figure}%
-Overt syntax stands for syntactic operations that usually have a visible effect. After overt syntax
+Syntax is assumed to operate on so-called numerations\is{numeration}, selections of lexical items
+that are relevant for a derivation. \emph{Overt syntax} stands for syntactic operations that usually have a visible effect. After overt syntax
 the syntactic object is sent off to the interfaces and some transformations may take place after
 this Spell-Out point. Since such transformations do not affect pronunciation, this part of syntax is
 called \emph{covert syntax}. Like in GB's LF, the covert syntax can be used to derive certain scope
 readings. 
 
-This architecture was later modified to allow Spell-Out at several points in the derivation. It is now
+This architecture was later modified to allow Spell-Out at several points in the derivation (right figure). It is now
 assumed that there are \emph{phases}\is{phase} in a derivation and that a completed phase is spelled out once it is
 used in a combination with a head \citep{Chomsky2008a}. For instance, a subordinated sentence like \emph{that Peter comes} in (\mex{1}) is one
 phase and is sent to the interfaces before the whole sentence is completed.\footnote{%
@@ -1380,8 +1419,8 @@ category AdverbP\is{category!functional!Adverb} for the combination of an adverb
 takes the verbal projection as its complement and the adverb surfaces in the specifier of this projection. In these systems, adverb phrases have to pass on inflectional
 properties of the verb since verbs with particular inflectional properties (finiteness, infinitives with \emph{zu}, infinitives without \emph{zu},
 participles) have to be selected by higher heads (see page~\pageref{Beispiel-GPSG-Kopfeigenschaften} and
-Section~\ref{Abschnitt-Kopfeigenschaften}). There is of course the alternative to use Agree for this,
-but then all selection would be nonlocal and after all selection is not agreement. For further, more serious problems with this analysis like
+Section~\ref{Abschnitt-Kopfeigenschaften}). There is of course the alternative to use \isi{Agree} for this,
+but then all selection would be nonlocal and after all selection is not \isi{agreement}. For further, more serious problems with this analysis like
 modification of adverbs by adverbs in connection with partial fronting and restrictions on
 non"=phrasality of preverbal adverbials in English\il{English}, see \citew[Section~5]{Haider97a}.
 
@@ -1402,6 +1441,7 @@ adverbs may attach to adjectives forming adjectival phrases in the traditional s
 phrases in Chinque's sense. For instance, the adverb \emph{oft} `often' in (\mex{1}) modifies
 \emph{lachender} `laughing' forming the adjectival phrase \emph{oft lachender}, which behaves like the
 unmodified adjectival participle \emph{lachender}: it modifies \emph{Mann} `man' and it precedes it.
+% could be a phrasal derivation "oft lachen"-der 30.04.2019
 \eal
 \ex
 \gll ein lachender Mann\\
@@ -2369,7 +2409,7 @@ right and a subject to the left and this requirement would be transferred to \em
 Note however, that this transfer makes it necessary to select
 complex categories, a fact that I overlooked in \citew{MuellerUnifying}. The selection of simplex
 features vs.\ complex categories will be discussed in Section~\ref{sec-selection-features-vs-categories}.}\is{coordination|)} See \citew[\page 264]{Steedman91a} for the details of the CG
-analysis and \citet[\page 52]{BvN98} for an earlier HPSG\indexhpsg proposal involving directionality features
+analysis and \citet[\page 52]{BvN98a} for an earlier HPSG\indexhpsg proposal involving directionality features
 along the lines suggested by Stabler for his DMGs. 
 \nocite{Pollard88a}
 
