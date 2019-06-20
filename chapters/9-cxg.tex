@@ -1251,7 +1251,12 @@ By assuming (\ref{meta-construction-statemnet}), the theoretical inventory has b
 One motivation behind restrictions on locality was to reduce the computational complexity of the
 formalism (Ivan Sag, p.\,c.\,2011, See Chapter~\ref{sec-generative-capacity} on computational complexity and generative power).
 However, the locality restrictions of SBCG can be circumvented easily by structure sharing \citep[Section~9.6.1]{MuellerGTBuch2}. To see this consider a
-construction with the following form:
+construction with the following form:\footnote{%
+  Bob Borsley (p.c.\,2019) pointed out to me that a feature like \textsc{nasty} in (\mex{1}) is actually used in
+SBCG: the \xargf\isfeat{xarg} makes available one argument (usually the subject) at a complete projection even
+though the respective element may be contained within it \citep[\page 84]{Sag2012a}. \xarg can be used to refer to a daughter
+within a complex structure for example to establish agreement in question tag formation \citep{BF99a}.
+}
 \ea
 \ms{
 mother & \ms[sign]{ phon & phonological-object\\
@@ -1268,7 +1273,8 @@ internal structure of the sign that is licensed by the constructional schema in 
 available. Of course one could rule out such things by stipulation -- if one considered it
 to be empirically adequate, but then one could as well continue to use the feature geometry of
 Constructional HPSG\is{Head-Driven Phrase Structure Grammar (HPSG)!Constructional} \citep{Sag97a} and stipulate constraints like ``Do not look into the
-daughters.'' An example of such a constraint given in prose is the Locality Principle of \citet[\page 143--144]{ps}.
+daughters.'' An example of such a constraint given in prose is the Locality Principle of
+\citet[\page 143--144]{ps}.
 \is{locality|)}
 
 %% \subsubsection{Lexical extraction and the \textsc{local} feature}
@@ -1774,7 +1780,7 @@ Mary tossed happily me a drink.
 }
 \zl
 %\largerpage
-\addlines
+%\addlines
 The restriction agent.f \textbf{before} action.f forces an order where the subject occurs before the verb but also allows for adverbs to occur between
 the subject and the verb.
 The other constraints on form determine the order of the verb and its object: the recipient must be adjacent to the verb and the theme must be
@@ -1905,7 +1911,7 @@ The name \emph{Kim} according to \citet[\page 99]{vanTrijp2013a}:\\
 \path[<->] (sem) edge (syn);
 \end{tikzpicture}
 \z
-\addlines
+%\addlines
 Depending on the mode in which the lexical items are used, the syntactic pole or the semantic pole
 is used first. The first processing step is a matching phase in which it is checked whether the
 semantic pole (for generation) or the syntactic pole (for parsing) matches the structure that was
@@ -1976,7 +1982,7 @@ nominative and two datives in German, wouldn't we expect that this pattern can b
 passive? While proposals that establish relations between active and passive constructions would
 predict this, alternative proposals that just list the attested possibilities do not.
 
-\addlines[2]
+%\addlines[2]
 The issue of how such generalizations should be captured was discussed in connection with the
 organization of the lexicon in HPSG \citep{Flickinger87,Meurers2001a}. In the lexical world, one could simply categorize all verbs according to their
 valence and say that \emph{loves} is a transitive verb and the passive variant \emph{loved} is an
@@ -2189,7 +2195,7 @@ is an object marker (p.\,10, 22) or a non-subject marker (p.\,23). It is true th
 \ex Who saw the man?
 \ex Who did John see?
 \zl
-\addlines[2]
+%\addlines[2]
 First, \emph{do} can be used to emphasize the verb:
 \ea
 Who \emph{did} see the man?
@@ -2366,7 +2372,7 @@ and the main verb. Because of examples like (\mex{1}) it must be possible to hav
 \ea
 Peter often reads books.
 \z
-\largerpage
+%\largerpage
 But if such constructions can be discontinuous one has to make sure that (\mex{1}b) cannot be an
 instantiation of the subject-verb construction:
 \eal
@@ -2538,7 +2544,7 @@ how speakers express their conceptualizations of the world through language
 Cognitive-functional grammars therefore implement both a competence and a
 processing model. \citep[\page 90]{vanTrijp2013a}
 \end{quote}
-\largerpage
+%\largerpage
 It is true that HPSG and SBCG make a competence/performance distinction \citep{SW2011a}. HPSG
 theories are theories about the structure of utterances that are motivated by distributional
 evidence. These theories do not contain any hypothesis regarding brain activation, planning of
@@ -2582,7 +2588,7 @@ Actual implementations of HPSG typically handle the problem by guiding the lingu
 using a (rule-based) phrase structure backbone, but the disadvantage of this approach is that the ``organization and formulation of the grammar is different from
 that of the linguistic theory'' \citep[Section~4.2.2]{LM2006a}. \citep[\page 108]{vanTrijp2013a}
 \end{quote}
-\largerpage
+%\largerpage
 He concludes:
 \begin{quote}
 Applying all these observations to the operationalization of SBCG, we can
@@ -2612,7 +2618,7 @@ case, let us look at the Head-Argument Schema. The Head-Argument Schema is basic
 \type{head-argument-phrase} with certain type constraints that are partly inherited from its
 supertypes. The type with all the constraints was given on page~\pageref{head-arg-schema-hfp} and is
 repeated here as (\mex{1}):
-\largerpage[2]
+%\largerpage[2]
 \eas
 \label{head-arg-schema-hfp-zwei}
 (syntactic) constraints on \type{head-complement-phrase}:\\
@@ -2732,8 +2738,8 @@ that does not make any claims about human language processing is efficient or no
 irrelevant. Phrase structure-based backbones are therefore irrelevant as well, provided they refer
 to the grammar as described in theoretical work.  
 
-\largerpage
-\enlargethispage{6pt}
+%\largerpage
+%\enlargethispage{6pt}
 Now, this begs the question whether there is a contradiction in my claims. On
 page~\pageref{page-sbcg-formalization} I pointed out that SBCG is lacking a formalization in
 Richter's framework \citep{Richter2004a-u}. Richter and also \citet{LM2006a} pointed out that there are problems with
@@ -2770,7 +2776,7 @@ language evolution in the very same way as FCG is.
 
 \subsubsubsection{Theoretical physics vs.\ Darwinian evolutionary theory}
 
-\largerpage[2]
+%\largerpage[2]
 Van Trijp compares SBCG and FCG and claims that SBCG follows the model of theoretical physics --
 like Chomsky does --, while FCG adopts a Darwinian model of science -- like Croft does --, the difference
 being that SBCG makes certain assumptions that are true of all languages, while FCG does not make
@@ -2826,7 +2832,7 @@ between SBCG and FCG does not exist.
 
 \subsubsubsection{Permissiveness of the theories}
 
-\largerpage[2]
+%\largerpage[2]
 Van Trijp claims that HPSG/SBCG is a ``generative grammar'' since its aim is to account for and admit only
 grammatical sentences. FCG on the other hand is more permissive and tries to get the most out of the
 input even if it is fragmentary or ungrammatical (see also \citealp[\page 166]{Steels2013a}). While it is an engineering decision to be able to parse ungrammatical input --  and 
@@ -2870,7 +2876,7 @@ project without much appeal to the general linguist.%
 
 \section{Summary and classification}
 
-\largerpage
+%\largerpage
 \begin{sloppypar}
 There are currently three formalized variants of Construction Grammar: Sign"=Based Construction
 Grammar, Embodied Construction Grammar, and Fluid Construction Grammar. The first two variants can
