@@ -33,6 +33,10 @@
 \newcommand{\neu}{\textsc{n}\xspace}
 \newcommand{\thirdsg}{3\textsc{sg}\xspace}
 
+
+\newcommand{\INF}{\textsc{inf}{}\xspace}	%infinitive
+
+
 \newcommand{\defsc}{\textsc{def}}
 \newcommand{\Neg}{\textsc{neg}\xspace}
 \newcommand{\prespass}{\textsc{pres.pass}\xspace}
@@ -133,6 +137,7 @@
 % used in mathtime
 %\newcommand{\comp}{\textsc{comp}\xspace}
 \newcommand{\comps}{\textsc{comps}\xspace}
+\newcommand{\compsdtrs}{\textsc{comps-dtrs}\xspace}
 \newcommand{\compsf}{\textsc{comps} feature\xspace}%
 \iflanguage{german}{%
 \newcommand{\compsl}{\textsc{comps}"=Liste\xspace}}{%
@@ -145,6 +150,7 @@
 \newcommand{\ccont}{\textsc{c-cont}\xspace}
 \newcommand{\ccontf}{\textsc{c-cont} feature\xspace}
 \newcommand{\cont}{\textsc{cont}\xspace}
+\newcommand{\content}{\textsc{content}\xspace}
 \newcommand{\contv}{\textsc{cont} value\xspace}
 \newcommand{\contvs}{\textsc{cont} values\xspace}
 \newcommand{\contw}{\textsc{cont}"=Wert\xspace}
@@ -181,9 +187,10 @@
 \iflanguage{german}{%
 \newcommand{\dtrsl}{\textsc{dtrs}"=Liste\xspace}}{%
 \newcommand{\dtrsl}{\textsc{dtrs} list\xspace}}
+\newcommand{\dtrsv}{\textsc{dtrs} value\xspace}
 
 % used by kluwer.cls
-%\newcommand{\dom}{\textsc{dom}\xspace}
+\newcommand{\dom}{\textsc{dom}\xspace}
 \newcommand{\domv}{\textsc{dom} value\xspace}
 \newcommand{\domw}{\textsc{dom}"=Wert\xspace}
 \iflanguage{german}{%
@@ -213,6 +220,7 @@
 \newcommand{\hconsv}{\textsc{hcons} value\xspace}
 \newcommand{\hconsvs}{\textsc{hcons} values\xspace}
 \newcommand{\head}{\textsc{head}\xspace}
+\newcommand{\headdtr}{\textsc{head-dtr}\xspace}
 \newcommand{\headf}{\textsc{head} feature\xspace}
 \newcommand{\headfs}{\textsc{head} features\xspace}
 \newcommand{\headv}{\textsc{head} value\xspace}
@@ -323,9 +331,7 @@
 \newcommand{\slasch}{\textsc{slash}\xspace}
 \newcommand{\slashel}{\textsc{slash}"=Element\xspace}
 \newcommand{\slashf}{\textsc{slash} feature\xspace}
-\iflanguage{german}{%
-\newcommand{\slashl}{\textsc{slash}"=Liste\xspace}}{%
-\newcommand{\slashl}{\textsc{slash} list\xspace}}
+\newcommand{\slashl}{\iflanguage{german}{\textsc{slash}"=Liste\xspace}{\textsc{slash} list\xspace}}
 \newcommand{\slashls}{\textsc{slash} lists\xspace}
 \newcommand{\slashm}{\textsc{slash}"=Merkmal\xspace}
 \newcommand{\slashms}{\textsc{slash}"=Merkmals\xspace}
@@ -391,6 +397,7 @@
 \newcommand{\synsemws}{\textsc{synsem}"=Wertes\xspace}
 \newcommand{\thetarolle}{$\theta$"=Rolle\xspace}
 \newcommand{\topic}{\textsc{topic}\xspace}
+\newcommand{\val}{\textsc{val}\xspace}
 \newcommand{\vcomp}{\textsc{vcomp}\xspace}
 \iflanguage{german}{%
 \newcommand{\vcompl}{\textsc{vcomp}"=Liste\xspace}}{%
@@ -399,6 +406,7 @@
 \newcommand{\vcompv}{\textsc{vcomp} value\xspace}
 \newcommand{\vcompw}{\textsc{vcomp}"=Wert\xspace}
 \newcommand{\xarg}{\textsc{xarg}\xspace}
+\newcommand{\xargf}{\textsc{xarg} feature\xspace}
 \newcommand{\xargs}{\textsc{xarg}s\xspace}
 \newcommand{\xcomp}{\textsc{xcomp}\xspace}
 \newcommand{\xcompl}{\textsc{xcomp}"=Liste\xspace}
@@ -467,8 +475,8 @@ Derivation}{derivation}\xspace}
 \newcommand{\bards}{"~\emph{bar}"=derivations\xspace}
 \newcommand{\barden}{"~\emph{bar}"=Derivationen\xspace}
 
-\newcommand{\itsdb}{\mbox{\sf \lbrack incr tsdb()\rbrack}\xspace}
-\newcommand{\tsdb}{\mbox{\sf \lbrack incr tsdb()\rbrack}\xspace}
+\newcommand{\itsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\xspace}
+\newcommand{\tsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\xspace}
 
 \newcommand{\word}[1]{\emph{#1}\iw{#1}}
 \newcommand{\noword}[1]{\emph{*\,#1}\iw{#1@*\,#1}}
@@ -513,6 +521,8 @@ Derivation}{derivation}\xspace}
 \newcommand{\indexsbcgstart}{\is{Construction Grammar (CxG)!Sign-Based|(}\xspace}
 \newcommand{\indexsbcgend}{\is{Construction Grammar (CxG)!Sign-Based|)}\xspace}
 \newcommand{\indexsbxg}{\is{Construction Grammar (CxG)!Sign-Based}\xspace}
+
+\newcommand{\indexutah}{\is{Uniform Theta Assignment Hypothesis (UTAH)}\xspace}
 
 \newcommand{\dg}{Dependency Grammar\indexdg}
 \newcommand{\indexdg}{\is{Dependency Grammar (DG)}\xspace}
@@ -565,6 +575,8 @@ Derivation}{derivation}\xspace}
 }{
 \newcommand{\indexmp}{\is{Minimalist Program (MP)}\xspace}
 }
+\newcommand{\minimalism}{\isi{Minimalism}\xspace}
+\newcommand{\indexmgg}{\is{Mainstream Generative Grammar (MGG)}\xspace}
 \iflanguage{german}{%
 \newcommand{\indexmg}{\is{Minimalistische Grammatik (MG)}\xspace}
 }{
@@ -580,7 +592,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\indexmctag}{\is{Tree Adjoining Grammar (TAG)!\emph{Multi"=Component} (MCTAG)}\xspace}
 \newcommand{\indexftag}{\is{Tree Adjoining Grammar (TAG)!\emph{Feature
     Structure"=Based} (FTAG)}\xspace}
-%\newcommand{\tag}{TAG\indextag}
+\newcommand{\treeag}{TAG\indextag}
 
 \iflanguage{german}{%
 \newcommand{\indexug}{\is{Universalgrammatik (UG)}\xspace}
