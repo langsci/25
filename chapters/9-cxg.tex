@@ -912,7 +912,7 @@ The analysis of the phrase \emph{ate a pizza} takes the form in (\mex{1}).\footn
 \label{feat-geom-swb}
 \ms[head-comp-cx]{
 mother & \ms[phrase]{
-         form  & \phonliste{ ate, a, pizza }\\
+         form  & \phonliste{ ate, a, pizza }\\[1mm]
          syn   & \ms{ head  & verb\\
                       spr   & \sliste{ NP[\type{nom}] }\\
                       comps & \eliste\\
@@ -1539,6 +1539,49 @@ Schema, SBCG has two Head-Complement Constructions: one with a mother with a sin
 one with a mother with an empty \compsl \citep[\page 152]{Sag2012a}. That two seperate constructions
 are needed is due to the assumption of flat structures.
 
+\subsubsection{The \headf and the \headf principle}
+
+While\is{feature!\textsc{head}|(}\is{principle!Head Feature|(} \citet{SWB2003a} still assume a \headf, \citet{Sag2012a} eliminated it. Rather than having one
+place in a feature structure where all information is stated that is always shared between a lexical
+head and its projection, the features that were represented under \head are now simply represented
+under \textsc{cat}. \citet{Sag2012a} got rid of the Head Feature Principle (see
+p.\,\pageref{prinzip-hfp}) and stated identity of information explicitly within constructions. Structure sharing is
+not stated with boxed numbers anymore but with capital letters instead. An exclamation mark\is{.!} can be used to
+specify information that is not shared \citep[\page 125]{Sag2012a}. While the use of letters instead
+of numbers is just a presentational variant, the exclamation mark is a non-trivial
+extension. (\mex{1}) provides an example: the constraints on the type \type{pred-hd"=comp"=cxt}:
+\eas
+Predicational Head"=Complement Construction following \citet[\page 152]{Sag2012a}:\\
+\type{pred-hd"=comp"=cxt}\istype{head"=comp"=cx} \impl\\
+\onems{
+mother$|$syn X ! [val \sliste{ Y }]\\
+head-dtr Z: \onems[word]{
+                  syn X: \ms{ val \sliste{ Y } $\oplus$ L }\\
+                  }\\
+dtrs  \sliste{ Z } $\oplus$ L:\type{nelist} \\
+}
+\zs
+The X stands for all syntactic properties of the head daughter. These are identified with the
+value of \textsc{syn} of the mother with the exception of the \textsc{val} value, which is specified
+to be a list with the element Y. It is interesting to note that the !-notation is not without
+problems: \citet[\page 145]{Sag2012a} states that the version of SBCG that he presents is ``purely
+monotonic (non-default)'', but if the \textsc{syn} value of the mother is not identical because of
+overwriting of \textsc{val}, it is unclear how the type of \textsc{syn} can be constrained. ! can be
+understood as explicitly sharing all features that are not mentioned after the !. Note though, that
+the type has to be shared as well. This is not trivial since structure sharing cannot be applied
+here since structure sharing the type would also identify all features belonging to the respective
+value. So one would need a relation that singles out a type of a structure and identifies this type
+with the value of another structure. Note also that information from features behind the ! can make
+the type of the complete structure more specific. Does this affect the shared structure (\eg
+\textsc{head-dtr|syn} in (\mex{0}))? What if the
+type of the complete structure is incompatible with the features in this structure? What seems to be a harmless notational device in fact involves some
+non-trivial machinery in the background. Keeping the Head Feature Principle makes this additional machinery
+unnecessary. 
+% There is only VAL.
+%On the other hand it has to be stated which valence information has to be passed up and
+%which is not. This is simpler in the !-notation variant since
+%
+\is{feature!\textsc{head}|)}\is{principle!Head Feature|)}
 
 \subsubsection{Conclusion}
 
