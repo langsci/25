@@ -1,18 +1,24 @@
 %% -*- coding:utf-8 -*-
-\documentclass[ number=1
-                ,series=lnls,
-                ,isbn=978-3-944675-21-3,
-                ,url=http://langsci-press.org/catalog/book/14,
-	        ,output=long    % long|short|inprep              
-	        %,blackandwhite
-	        ,smallfont
-	        %,draftmode  
-                ,bibtex
-                ,copyright=CC-BY-ND
-		  ]{../langsci/langscibook}                          
+%% \documentclass[ number=1
+%%                 ,series=lnls,
+%%                 ,isbn=978-3-944675-21-3,
+%%                 ,url=http://langsci-press.org/catalog/book/14,
+%% 	        ,output=long    % long|short|inprep              
+%% 	        %,blackandwhite
+%% 	        ,smallfont
+%% 	        %,draftmode  
+%%                 ,bibtex
+%%                 ,copyright=CC-BY-ND
+%% 		  ]{../langsci/langscibook}                          
+
+% This works with lualatex under texlive 2017
+    \documentclass{article}
+
+    \usepackage{libertine}\usepackage[libertine]{newtxmath}
 
 
-\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e}
+%\usepackage{forest,lsp-forest-setup-texlive-2013,merkmalstruktur}
+\usepackage{langsci-forest-setup,merkmalstruktur}
 
 %% % for fixing texlive 2015
 
@@ -27,6 +33,8 @@
 \usetikzlibrary{tikzmark}
 
 % compile with texlive 2013
+
+
 
 \begin{document}
 \thispagestyle{empty}
@@ -48,7 +56,7 @@
 		[NP$_1^2\downarrow$]
 		[S*]
 		[V$_1$
-			[versprach;promised]]]]
+			[versprach\\promised]]]]
 \end{forest}
 \hspace{2ex}
 \begin{tikzpicture}[overlay,remember picture,out=-70,in=110,dashed]

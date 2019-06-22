@@ -32,17 +32,15 @@
 \tikzset{deparrow/.style={-Latex}}%,blue}}
 
 
-% load this externally since it has to be loaded with full path
-
 % does not work with forest v1.05 did not check later versions
-\usepackage[linguistics,external]{forest}
-%\forestset{external/optimize=false} %wichtig, denn /tikz/external/optimize != /forest/external/optimize
-%\tikzexternalize[optimize=false,prefix=figcache/] % \tikzset{external/up to date check=simple}
-% for texlive: --shell-escape, for miktex --enable-write18
+\usepackage[external,linguistics]{forest}
+\tikzset{external/up to date check=simple}
+% for texlive: -shell-escape, for miktex -enable-write18
 % All externalized graphics go go the \externaldirectory
 %\tikzexternalize[prefix=external-figures/,shell escape=-shell-escape]
-% \tikzset{external/system call={xelatex \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}
+\tikzset{external/system call={xelatex \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}
 %\usepackage{morewrites}
+
 
 
 
@@ -108,7 +106,7 @@
   append translation/.style={
     if={strequal("#1","")}{}{
       append={[#1,no edge,inner xsep=0,inner ysep=0,outer ysep=0,
-               tier=gloss,
+               tier=gloss, % does not work for TAG trees since the words are not aligned at the baseline
                l=\baselineskip + 0.2ex,
         ]}
     }
@@ -120,6 +118,23 @@
 \def\gettranslation#1{\gettranslationA#1;;\endget}
 \def\gettranslationA#1;#2;{\removesep#2;}
 \def\removesep#1;#2\endget{#1}
+
+% copy of the above for TAG
+\forestset{
+  with translation TAG/.style={
+    l sep=0,inner xsep=0,
+    append translation TAG/.expanded/.wrap pgfmath arg={\gettranslation{##1}}{content},
+    content/.expanded/.wrap pgfmath arg={\gettext{##1}}{content},
+  },
+  append translation TAG/.style={
+    if={strequal("#1","")}{}{
+      append={[#1,no edge,inner xsep=0,inner ysep=0,outer ysep=0,
+               %tier=gloss, % does not work for TAG trees since the words are not aligned at the baseline
+               l=\baselineskip + 0.2ex,
+        ]}
+    }
+  }
+}
 
 
 % a specific style that specifies the word tier: all nodes that do not have any children
@@ -202,7 +217,7 @@ dg junction/.style={no edge, tikz+={\draw (!p.east)--(!.west) (.east)--(!n.west)
 % http://tex.stackexchange.com/questions/207459/getting-old-school-trees-with-forest
 % fit -> fit=band causes all nodes to have nothing below them
 tag/.style={for tree={parent anchor=south, child anchor=north,align=center,base=top,fit=rectangle},
-  where n children=0{delay=with translation}{},
+  where n children=0{delay=with translation TAG}{},
 % the following breaks the alignments in sets
   begin draw/.code={\begin{tikzpicture}[baseline=(current bounding box.center)]}
 },
