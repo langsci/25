@@ -148,8 +148,9 @@ sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and
 represented together. Typed feature structures are used to model all relevant information.\footnote{%
 Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
 and typed feature structures should consult Chapter~\ref{chap-feature-descriptions} first.
-} These
-structures can be described with feature descriptions such as in (\mex{1}). Lexical entries, phrases
+} Hence, HPSG belongs to the class of model-theoretic grammars\is{model"=theoretic
+  grammar} (\citealp{King99a-u}; see also Chapter~\ref{chap-mts} of this book). 
+The feature structures can be described with feature descriptions such as in (\mex{1}). Lexical entries, phrases
 and principles are always modeled and described with the same formal means.  Generalizations about
 word classes or rule schemata are captured with inheritance hierarchies (see Section~\ref{sec-formalismus-typen}). Phonology, syntax and
 semantics are represented in a single structure. There are no separate levels of representation such
@@ -691,7 +692,7 @@ tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\of
 
 GPSG\indexgpsg has the Head Feature Convention\is{Head Feature Convention (HFC)} that ensures that head features on the mother node are identical to those on the node of the head daughter.
 In HPSG, there is a similar principle. Unlike GPSG, head features are explicitly contained as a group of features in the feature structures.
-They are listed under the path \textsc{synsem$|$loc$|$cat$|$head}. (\mex{1}) shows the lexical item
+They are listed under the path \textsc{synsem$|$loc$|$cat$|$head}\is{feature!\textsc{head}|(}. (\mex{1}) shows the lexical item
 for \emph{gibt} `gives':
 \eas
 \emph{gibt} `gives':\\
@@ -743,6 +744,7 @@ sm edges
 \end{forest}
 \caption{\label{fig-projektion-head-feat-ausf}Projection of head features of a verb with structure sharing}
 \end{figure}%
+\is{feature!\textsc{head}|)}%
 
 %\noindent
 The following section will deal with how this principle is formalized as well as how it can be integrated into the architecture of HPSG.
