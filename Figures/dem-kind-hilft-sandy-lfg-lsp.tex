@@ -48,27 +48,27 @@ sm edges
   [\centtab{(\up \textsc{df})= (\up \textsc{comp}* \textsc{gf})\\
             (\up \textsc{df})=\down \\
             \subnode{npobj}{NP}}
-        [den Apfel;the apple, roof]]
+        [dem Kind;the child, roof]]
   [\centtab{\up~=~\down\\
     \subnode{cbar}{\cbar}}
     [\centtab{\up~=~\down\\
-     \subnode{c}{C}} [verschlingt;devours]]
+     \subnode{c}{C}} [hilft;helps]]
     [\centtab{\up~=~\down\\
      \subnode{vp}{VP}}
       [\centtab{(\upsp \textsc{subj}) = \down\\
                 \subnode{npsubj}{NP}}
-        [David;David]]]]]
+        [Sandy;Sandy]]]]]
 \end{forest}\hfill
 \raisebox{13em}{%
-\mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\lfgsubj,\lfgobj}'~~\\
-         subj & \mynode{fdavid}{\lfgms{ pred &  `DAVID' \\
+\mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\lfgsubj,\objtheta}'~~\\
+         subj & \mynode{fdavid}{\lfgms{ pred &  `SANDY' \\
                                       case & nom\\
                    }}\\
          tense & PRES\\
-         topic & \mynode{fapple}{\lfgms{ pred & `APFEL'\\
-                                    case & acc\\
+         topic & \mynode{fapple}{\lfgms{ pred & `Kind'\\
+                                    case & dat\\
                    }}\\
-         obj & \mynode{obj}{}
+         \objtheta & \mynode{obj}{}
        }}}
 \begin{tikzpicture}[overlay,remember picture] 
 \draw[->] (cp)     to[out= 0,in=180] (all.west);
