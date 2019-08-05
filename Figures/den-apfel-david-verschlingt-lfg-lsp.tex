@@ -1,14 +1,23 @@
 %% -*- coding:utf-8 -*-
-\documentclass[ number=1
-                ,series=tbls,
-	        %,blackandwhite
-	        ,smallfont
-                ,bibtex
-	        %,draftmode  
-		  ]{../Langsci/langscibook}                          
+%% \documentclass[ number=1
+%%                 ,series=tbls,
+%% 	        %,blackandwhite
+%% 	        ,smallfont
+%%                 ,bibtex
+%% 	        %,draftmode  
+%% 		  ]{../Langsci/langscibook}                          
 
 
-\usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e,dalrymple}
+%% \usepackage{forest,lsp-forest-setup-texlive-2013,makros.2e,dalrymple}
+
+% This works with PDF latex under texlive 2017
+\documentclass{article}
+
+\usepackage{libertine}\usepackage[libertine]{newtxmath}
+
+\usepackage{langsci-forest-setup,german,makros.2e,abbrev,merkmalstruktur,dalrymple,my-xspace}
+
+\usepackage{langsci-lgr}
 
 \usetikzlibrary{tikzmark}
 
@@ -36,11 +45,11 @@
 \thispagestyle{empty}
 
 \begin{forest}
-sn edges
+sm edges
 [\subnode{vp1}{VP}
   [\centtab{(\upsp \textsc{obj}) = \down\\
    \subnode{npobj}{NP}}
-       [den Apfel;the apple, triangle]]
+       [den Apfel;the apple, roof]]
   [\subnode{vp2}{VP}
      [\centtab{(\upsp \textsc{subj}) = \down\\
                 \subnode{npsubj}{NP}}
@@ -50,7 +59,7 @@ sn edges
              [verschlingt;devours]]]]]
 \end{forest}\hfill
 \raisebox{10em}{%
-\mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\subj,\obj}'~~\\
+\mynode{all}{\lfgms{ pred & `VERSCHLINGEN\sliste{\lfgsubj,\lfgobj}'~~\\
                      subj & \mynode{fdavid}{\lfgms{ pred &  `DAVID' \\
                                            }}\\
                      tense & PRES\\
@@ -61,7 +70,7 @@ sn edges
 \draw[->] (vp2)    to[out= 0,in=180] (all.west);
 \draw[->] (vp3)    to[out= 0,in=180] (all.west);
 \draw[->] (v)      to[out= 0,in=180] (all.west);
-\draw[->] (npsubj) to[out= 8,in=210] (fdavid.west);
+\draw[->] (npsubj) to[out= 6,in=210] (fdavid.west);
 \draw[->] (npobj)  to[out= 0,in=210] (fapple.west);
 \end{tikzpicture}
 \end{document}

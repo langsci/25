@@ -258,7 +258,7 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \ex David sneezed.
 \ex
 \begin{tabular}[t]{l}
-($f$ \pred) = {\small `SNEEZE\arglist{\lfgsubj}'}\\
+($f$ \pred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\
 ($f$ \lfgtense) = \lfgpast\\
 ($f$ \lfgsubj) = $g$\\
 ($g$ \pred) = {\small `DAVID'}
@@ -268,7 +268,7 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \noindent
 The description in (\mex{0}b) describes the following structure:
 \ea
-$f$: \lfgms{ pred  & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+$f$: \lfgms{ pred  & {\small `SNEEZE\sliste{\lfgsubj}'}\\
              tense & \lfgpast\\
              subj  & $g$: \onems{ pred {\small `DAVID'} }\\
         }
@@ -307,7 +307,7 @@ interested in minimal structures that contain the information provided in the de
   \tree{I$'$}{\tree{VP}{\tree{V$'$}{\tree{V}{\le{sneezed}}}}}}%
 \hspace*{4em}%
 \raisebox{-2em}{\lfgms{
-pred & {\small `SNEEZE\arglist{\lfgsubj}}'\\
+pred & {\small `SNEEZE\sliste{\lfgsubj}}'\\
 tense & \lfgpast\\
 subj  & \rnode{i}{\lfgms{ pred & {\small `DAVID'} \\
                       }}\\
@@ -326,7 +326,7 @@ A phrase and its head always correspond to the same f"=structure:
 \rnode{sneezed}{sneezed}\\
 \end{tabular}
 \hspace*{4em}
-\rnode{d}{\raisebox{-2em}{\lfgms{ pred & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+\rnode{d}{\raisebox{-2em}{\lfgms{ pred & {\small `SNEEZE\sliste{\lfgsubj}'}\\
                                   tense & \lfgpast}}}
 \ncline{v1}{v}\ncline{v}{sneezed}%
 \ltor{a}{d}
@@ -348,7 +348,7 @@ In LFG grammars of English, the CP/IP system is assumed as in \gbt (see Section~
     \tree[c]{I}{\le{is}}
     \tree[d]{VP}{\tree[e]{V$'$}{\tree[f]{V}{\le{yawning}}}}}}}%
 \hspace*{4em}%
-{\rnode{o}{\raisebox{-2em}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
+{\rnode{o}{\raisebox{-2em}{\lfgms{ pred & {\small `YAWN\sliste{\lfgsubj}'}\\
                                    tense & \lfgpres\\
                                    subj  & \lfgms{ pred & {\small `DAVID'}}}}}}
 \ltor{a}{o}
@@ -472,14 +472,14 @@ In the equation (\up\ \lfgobj) = \down{},  the arrows `\up' and `\down' correspo
 (\mex{1}) is an example with an intransitive verb and (\mex{2}) is the corresponding visualization:
 
 \ea
-\catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\arglist{\lfgsubj}'}\\*
+\catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\*
                      (\up\ \lfgtense) = \lfgpast}
 \z
 
 \ea
 \tree{V}{\le{sneezed}}
 \hspace*{4em}
-\rnode{d}{\mbox{\lfgms{ pred & {\small `SNEEZE\arglist{\lfgsubj}'}\\
+\rnode{d}{\mbox{\lfgms{ pred & {\small `SNEEZE\sliste{\lfgsubj}'}\\
                         tense & \lfgpast}}}
 \ltor{top}{d}
 \z
@@ -528,7 +528,7 @@ given in (\mex{1}b):
   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 \hspace*{3em}%
-{\fd{\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\arglist{\subj}'}
+{\fd{\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\sliste{\lfgsubj}'}
            \feat{\subj}{\rnode{i}{\fdand{\feat{\pred}{\small `DAVID'}}}}}}}}%
 \hspace*{2em}%
 \mt{\relation{yawn}(\relation{david})}{\rnode{x}{~[\ ]}}
@@ -543,7 +543,7 @@ given in (\mex{1}b):
 %%   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
 %%   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 %% \hspace*{3em}%
-%% {\rnode{s}{\lfgms{ pred & {\small `YAWN\arglist{\lfgsubj}'}\\
+%% {\rnode{s}{\lfgms{ pred & {\small `YAWN\sliste{\lfgsubj}'}\\
 %%                    subj & \rnode{i}{[ \textsc{pred} {\small `DAVID'} ]}}}}%
 %% \hspace*{2em}%
 %% \mt{\relation{yawn}(\relation{david})}{\rnode{x}{\;[\ ]}}
@@ -582,7 +582,7 @@ The f"=structure of \emph{David yawned} with the instantiated meaning constructi
 
 \eanoraggedright
  ~\\[-\baselineskip]
-\fd{$y:$\rnode{s}{\fdand{\feat{\textsc{pred}}{\small `YAWN\arglist{\lfgsubj}'}
+\fd{$y:$\rnode{s}{\fdand{\feat{\textsc{pred}}{\small `YAWN\sliste{\lfgsubj}'}
            \feat{\textsc{subj}}{$d:$\fdand{\feat{\textsc{pred}}{\small `DAVID'}}}}}}~\\[1em]
 {$\begin{array}[t]{lr@{\;:\;}l}
 \BF{David}&{\relation{david}}&{d_\sigma}\\*[1ex]
@@ -656,7 +656,7 @@ contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one
                         pred & `SANDWICH'\\
                       }\\
          adj & \menge{ \lfgms{ pred & `YESTERDAY' },
-                        \lfgms{ \pred & `AT\arglist{\lfgobj}'\\
+                        \lfgms{ \pred & `AT\sliste{\lfgobj}'\\
                                 obj   & \lfgms{ pred & `NOON' }\\
                               } }\\
 }
@@ -997,7 +997,7 @@ specification of case/grammatical function interaction would be much more compli
 }
 \ea
 \label{le-verschlingen}
-\catlexentry{verschlingt}{V}{(\up\ \pred) = {\small `VERSCHLINGEN\arglist{\lfgsubj, \lfgobj}'}\\*
+\catlexentry{verschlingt}{V}{(\up\ \pred) = {\small `VERSCHLINGEN\sliste{\lfgsubj, \lfgobj}'}\\*
                              (\up\ \lfgsubj{} {\small AGR CAS}) = NOM\\*
                              (\up\ \lfgobj{} {\small AGR CAS}) = ACC\\*
                              (\up\ \lfgtense) = \small PRES}
@@ -1093,7 +1093,7 @@ and \textsc{focus} are identified with an f"=structure that bears an argument fu
 gives the f"=structure for the sentence in (\ref{ex-Chris-we-think}):
 
 \ea
-\lfgms{ pred & `THINK\sliste{ \lfgsubj, comp }' \\
+\lfgms{ pred & `THINK\sliste{ \lfgsubj, \comp }' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
@@ -1154,12 +1154,12 @@ Example (\mex{1}a) shows a case of even deeper embedding than in (\ref{ex-Chris-
 \eal
 \ex Chris, we think Anna claims that David saw.
 \ex 
-\lfgms{ pred & `THINK\sliste{ \lfgsubj, comp }' \\
+\lfgms{ pred & `THINK\sliste{ \lfgsubj, \comp }' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
                      }\\
-        comp & \lfgms{ pred & `CLAIM\sliste{ \lfgsubj, comp }\\
+        comp & \lfgms{ pred & `CLAIM\sliste{ \lfgsubj, \comp }\\
                        subj & \lfgms{ pred & `ANNA' \\
                                    }\\
                        comp & \lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }\\
@@ -1330,9 +1330,9 @@ For a comparison of GB/Minimalism and LFG/HPSG, see \citew{Kuhn2007a}.
 \item Give the lexical entry for \emph{kannte} `knew'.
 \item How could one analyze the following sentence?
 \ea
-\gll Den Apfel verschlingt David.\\
-	 the apple devours David\\
-\glt `David devours the apple.'
+\gll Dem Kind hilft Sandy.\\
+     the.\dat{} child helps Sandy.\nom\\
+\glt `Sandy helps the child.'
 \z
 Provide the necessary c"=structure rules. What kind of f"=structure is licensed?
 Draw a syntactic tree with corresponding references to the f"=structure. For fronted constituents,
