@@ -7,6 +7,7 @@
 This chapter deals with phase structure grammars (PSGs), which play an important role in several of the theories we will encounter in later chapters.
 
 \section{Symbols and rewrite rules}
+\label{sec-simple-psg}
 
 Words can be assigned to a particular part of speech on the basis of their inflectional properties
 and syntactic distribution. Thus, \emph{weil} `because' in (\mex{1})
@@ -674,9 +675,9 @@ as well as those with one, two or more.
 The problem is that according to the rule in (\mex{0}) adjectives and nouns do not form a constituent and we can therefore not explain why coordination 
 is still possible in (\mex{1}):
 \ea
-\gll alle [[geschickten Kinder] und [klugen Frauen]]\\
-	 all  \spacebr{}\spacebr{}skillful children and  \spacebr{}smart women\\
-\glt `all the skillful children and smart women'	 
+\gll alle [[großen Seeelefanten] und [grauen Eichhörnchen]]\\
+     all  \spacebr{}\spacebr{}big elephant.seals and  \spacebr{}grey squirrels\\
+\glt `all the big elephant seals and grey squirrels'	 
 \z
 If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
 that the adjective and noun form a unit.
@@ -699,7 +700,7 @@ of the rule in (\mex{0}b), we can apply this rule multiple times and therefore a
 (\ref{Beispiel-alle-weitern-schlagkraeftigen-Argumente}). Figure~\vref{Abbildung-Adjektive-in-NP} shows the structure of a noun phrase
 without an adjective and that of a noun phrase with one or two adjectives.
 \begin{figure}
-\hfill%
+%\hfill%
 \begin{forest}
 sm edges
 [NP
@@ -730,7 +731,8 @@ sm edges
          [\nbar
          [N [Eichhörnchen;squirrel] ] ] ] ] ]
 \end{forest}
-\hfill\mbox{}
+%\hfill
+%\mbox{}
 %
 \caption{\label{Abbildung-Adjektive-in-NP}Noun phrases with differing numbers of adjectives}
 \end{figure}%
@@ -742,9 +744,10 @@ as well as big. These kinds of noun phrases can be used in contexts such as the 
 \label{Beispiel-Iteration-Adjektive}
 \gll A: Alle grauen Eichhörnchen sind groß.\\
 \spacebr{} all grey squirrels are big\\
-
+\glt `All grey squirrels are big.'
 \gll B: Nein, ich habe ein kleines graues Eichhörnchen gesehen.\\
 	\spacebr{} no I have a small grey squirrel seen\\
+\glt `No, I saw a small grey squirrel.'
 \z
 We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
   sind krank} `but all small grey squirrels are ill' and a corresponding answer. The possibility
@@ -1508,6 +1511,13 @@ Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
 
 \item\label{uebung-np-empty} A fragment for noun phrase syntax was presented in Section~\ref{sec-psg-np}.
 Why is the interaction of the rules in (\mex{1}) problematic?
+% split here for technical reasons
+\end{enumerate}
+} 
+
+\greyboxrest{
+\begin{enumerate}
+\item test
 \eal
 \ex NP $\to$ Det \nbar
 \ex \nbar $\to$ N
@@ -1530,7 +1540,7 @@ of modifiers. We can use this rule to derive phrases such as those in (\mex{1}):
 Make reference to coordination data in your answer. Assume that symmetric coordination\is{coordination} requires that both
 coordinated phrases or words have the same syntactic category.
 
-\largerpage
+%\largerpage
 \item \citet*{FLGR2012a} suggested treating nounless structures like those in (\mex{1}) as involving
   a phrasal construction combining the determiner \emph{the} with an adjective.
 \eal
@@ -1551,6 +1561,8 @@ not extend to German.
 \ea
 NP $\to$ Det Adj
 \z
+
+
 
 \item Why can \xbart not account for German adjective phrases without additional assumptions? (This
   task is for (native) speakers of German only.)
