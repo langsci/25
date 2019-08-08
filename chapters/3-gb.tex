@@ -2169,7 +2169,7 @@ The lack of precision and working out of the details\footnote{%
 } has led to insights gained by Mainstream Generative Grammar rarely being translated into computer implementations.
 There are some implementations that are based on Transformational Grammar/GB/MP models or borrow ideas from Mainstream
 Generative Grammar
-\citep*{Petrick65a-u,ZFHW65a,Kay67a,Friedman69a,FBDPM71a-u,Morin73a-u,Marcus80a-u,AC86a,Kuhns86a,Correra87a,Stabler87a,Stabler92a-u,Stabler2001a,KT91a,Fong91a-u,CL92a,Lohnstein93a-u,FC94a,Nordgard94a,Veenstra98a,%
+\citep*{Petrick65a-u,ZFHW65a,Kay67a,Friedman69a,FBDPM71a-u,Morin73a-u,Marcus80a-u,AC86a,Kuhns86a,Correra87a,Stabler87a,Stabler92a-u,Stabler2001a,KT91a,Fong91a-u,CL92a,Lohnstein93a-u,Lin93a,FC94a,Nordgard94a,Veenstra98a,%
 FG2012a% 
 },\footnote{%
   See \citew{FC94a} for a combination of a GB approach with statistical methods.
@@ -2258,8 +2258,21 @@ More general restrictions are extracted from the restrictions on S"= and D"=stru
 transformations are not directly carried out by the parser. As noted by Johnson, the language fragment he models is very small. It contains no
 description of \emph{wh}"=movement, for example (p.\,114). 
 
-Probably the most detailed implementation in the tradition of GB and Barriers -- the theoretical
-stage after GB (see \citealp{Chomsky86b}) -- is Stabler's Prolog implementation
+\citet{Lin93a} implemented the parser \isi{PrinciParse}. It is written in C++ and based on GB and Barriers -- the theoretical
+stage after GB (see \citealp{Chomsky86b}). The system contains constraints like
+the Case Filter, the Theta-Criterion, Subjacency, the Empty Category Principle and so on. The
+Theta-Criterion is implemented with binary features +/-theta, there is no implementation of Logical
+Form (p.\,119). The system organizes the grammar in a network that makes use of the object-oriented
+organization of C++ programs, that is, default-inheritance\is{inheritance!default} is used to represent constraints in super
+and subclasses \citep[Section~5]{Lin93a}. This concept of inheritance is alien to GB theory: it does not play any role in the
+main publications. The grammar networks license structures corresponding to \xbart, but they code
+the possible relations directly in the network. The network contains categories like IP, Ibar, I,
+CP, Cbar, C, VP, Vbar, V, PP, PSpec, Pbar, P and so on. This corresponds to simple phrase structure
+grammars that fully specify the categories in the rules (see Section~\ref{sec-PSG-Merkmale}) rather than working with abstract schemata
+like the ones assumed in \xbart (see Section~\ref{sec-xbar}). Furthermore Lin does not assume transformations but uses a
+GPSG-like feature passing approach to nonlocal dependencies (p.\,116, see Section~\ref{sec-nld-gpsg} on the GPSG approach).
+
+Probably the most detailed implementation in the tradition of GB and Barriers is Stabler's Prolog implementation
 \citeyearpar{Stabler92a-u}. Stabler's achievement is certainly impressive, but his book confirms what has been claimed thus far: Stabler has to simply stipulate many
 things which are not explicitly mentioned in \emph{Barriers} (\eg using feature"=value pairs when
 formalizing \xbar theory, a practice that was borrowed from GPSG\indexgpsg) and some assumptions
