@@ -2169,7 +2169,7 @@ The lack of precision and working out of the details\footnote{%
 } has led to insights gained by Mainstream Generative Grammar rarely being translated into computer implementations.
 There are some implementations that are based on Transformational Grammar/GB/MP models or borrow ideas from Mainstream
 Generative Grammar
-\citep*{Petrick65a-u,ZFHW65a,Kay67a,Friedman69a,FBDPM71a-u,Morin73a-u,Marcus80a-u,AC86a,Kuhns86a,Correra87a,Stabler87a,Stabler92a-u,Stabler2001a,KT91a,Fong91a-u,CL92a,Lohnstein93a-u,Lin93a,FC94a,Nordgard94a,Veenstra98a,%
+\citep*{Petrick65a-u,ZFHW65a,Kay67a,Friedman69a,FBDPM71a-u,Plath73a,Morin73a-u,Marcus80a-u,AC86a,Kuhns86a,Correra87a,Stabler87a,Stabler92a-u,Stabler2001a,KT91a,Fong91a-u,CL92a,Lohnstein93a-u,Lin93a,FC94a,Nordgard94a,Veenstra98a,%
 FG2012a% 
 },\footnote{%
   See \citew{FC94a} for a combination of a GB approach with statistical methods.
@@ -2241,11 +2241,14 @@ category v(aux+) (for more on coordination see Section~\ref{Abschnitt-Koordinati
 makes it necessary to stipulate a special rule like (\ref{Regel-Aux-inv-Stabler}), then it is not clear why one could not simply use the transformation"=less rule in (\mex{0}).
 
 %\addlines
-In the MITRE system \citep{ZFHW65a}, there was a special grammar for the surface structure, from which the deep structure was derived via
+In the MITRE system\is{MITRE} \citep{ZFHW65a}, there was a special grammar for the surface structure, from which the deep structure was derived via
 reverse application of transformations, that is, instead of using one grammar to create deep structures which are then transformed into
 other structures, one required two grammars. The deep structures that were determined by the parser
 were used as input to a transformational component since this was the only way to ensure that
 the surface structures can actually be derived from the base structure \citep[\page 10]{Kay2011a}.
+
+The REQUEST system\is{REQUEST} by \citet{Plath73a} also used a surface grammar and inverse transformations to
+arrive at the deep structure, which was used for semantic interpretation.
 
 There are other implementations discussed in this chapter that differ from transformation"=based analyses. For example, \citet[\page 265, Section~4]{KT91a}
 arrive at the conclusion that a declarative, constraint"=based approach\is{constraint"=based grammar} to GB is more appropriate than a derivational one. \citet{Johnson89a}
