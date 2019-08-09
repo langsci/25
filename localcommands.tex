@@ -282,6 +282,11 @@ frbox/.style={
 \newcommand{\furtherreading}[1]{%~\newline\vspace*{-10mm}
 \tblssy{book}{Further reading}{#1}}
 
+\newcommand{\greyboxrest}[1]{
+\begin{mdframed}[style=greyexercise]
+#1
+\end{mdframed}
+}
 
 \mdfdefinestyle{greyexercisenologo}{%
 	everyline=true,ignorelastdescenders=true,
