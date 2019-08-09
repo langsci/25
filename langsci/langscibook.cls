@@ -1052,7 +1052,7 @@ http://creativecommons.org/licenses/by-nd/4.0/
 \noindent 
 \begin{tabular}{@{}llrl@{; }r@{~}l}
 ISBN: & \multicolumn{2}{r}{Digital, complete work:} & \lsISBNdigital \\
-      &	Hardcover: & vol.\ 1:        & \lsISBNhardcoverOne & vol.\ 2 & \lsISBNhardcoverTwo\\
+%      &	Hardcover: & vol.\ 1:        & \lsISBNhardcoverOne & vol.\ 2 & \lsISBNhardcoverTwo\\
       &	Softcover: & vol.\ 1:        & \lsISBNsoftcoverOne & vol.\ 2 & \lsISBNsoftcoverTwo\\
 %      &	Softcover US: & vol1:        & \lsISBNsoftcoverusOne & vol. 2 & \lsISBNsoftcoverusTwo \\
 \end{tabular}
