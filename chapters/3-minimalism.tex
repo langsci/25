@@ -94,8 +94,8 @@ Phonological Form (PF) and CI to the level of Logical Form (LF) in GB. The new a
 depicted in Figure~\vref{fig-architecture-minimalism} (left figure).
 \begin{figure}
 \hfill
-\scalebox{.9}{
-\begin{tikzpicture}[scale=.8,baseline=(current bounding box.center)]
+\scalebox{.85}{
+\begin{tikzpicture}[baseline=(current bounding box.center)]
 %\draw (-3.9,-5.8) to[grid with coordinates] (2.7,-0.6);
 %\draw[->] (-2.2,-.7) node[anchor=east] {lexicon} -- (-1.3,-.7);
 \draw[->] (0,-1) node[anchor=south] (enumeration) {enumeration} --(0,-5)
@@ -112,7 +112,7 @@ node[anchor=north, align=center] {LF/CI\\(meaning)};
 \end{tikzpicture}
 }
 \hfill
-\scalebox{.9}{%
+\scalebox{.85}{%
 \begin{forest} 
 for tree={nice empty nodes,% every conditional anchor=north adapts the specific node to this setting.
                             if n children={3}{for children={
@@ -274,7 +274,7 @@ XP. Minimalist theories assume binary branching and hence there is at most one
 complement, which is the first-merged item. Furthermore, it is not assumed that there is a unique
 specifier position. Chomsky rather assumes that all items that are not complements are
 specifiers.\todostefan{add references} That is, he distinguishes between first-merged (complements) and later-merged items (specifiers). Figure~\vref{fig-head-comp-spec} shows an example with two specifiers.
-\begin{figure}
+\begin{figure}[b]
 \centering
 \begin{forest}
 %where n children=0{}{},
@@ -625,6 +625,7 @@ baseline
 \subsubsection{Case assignment}
 \label{sec-case-mp}
 
+\addlines
 In the GB analysis that was presented in Chapter~\ref{chap-gb}, nominative was assigned by (finite)
 I and the other cases by the verb (see Section~\ref{sec-case-assignment}). The assignment of
 nominative is taken over to Minimalist analyses, so it is assumed
@@ -710,6 +711,7 @@ Section~\ref{sec-adjuncts-hpsg} on the HPSG schema for head adjunct combinations
 \section{Verb position}
 \label{sec-verb-position-MP}
 
+\addlines[-1]
 The analysis of verb first sentences in German is straightforward, given the machinery that was
 introduced in the previous section. The basic idea is the same as in GB: the finite verb moves from V to
 \textit{v} to T and then to C. The movement to T is forced by a strong tense feature on T and the movement of
@@ -1034,9 +1036,11 @@ head \citep[\page 54, 61]{CR2010a}. For an explicitly formalized proposal in whi
 feature is consumed during a combination operation see \citew[\page 335]{Stabler2001a}. Stabler's \emph{Minimalist
     Grammars}\indexmg are discussed in more detail in Section~\ref{Abschnitt-MG}.
 } 
-\citet[\page 297]{Rizzi97a-u} suggests the structure in Figure~\vref{Abbildung-Rizzi} (see also Grewendorf \citeyear[\page 85, 240]{Grewendorf2002a}; \citeyear{Grewendorf2009a}).\pagebreak
+\citet[\page 297]{Rizzi97a-u} suggests the structure in Figure~\vref{Abbildung-Rizzi} (see also
+Grewendorf \citeyear[\page 85, 240]{Grewendorf2002a}; \citeyear{Grewendorf2009a}).
+%\pagebreak
 
-\begin{figure}
+\begin{figure}[htb]
 \centering
 \newlength\mytextheight
 \settototalheight{\mytextheight}{XpX$^0$X$'$}
@@ -1102,6 +1106,7 @@ of scope phenomena without empty elements or movement, see Section~\ref{Abschnit
 \citew[\page 13]{BG2005a} assume the categories $-$PolP\is{category!functional!$-$Pol}, $+$PolP\is{category!functional!+Pol} and
 \%PolP\is{category!functional!\%Pol} for their discussion of polarity.
 
+\addlines[2]
 \citet[\page 76]{Webelhuth95a} gives an overview of the functional projections that had been proposed up to 1995 and offers references for AgrA\is{category!functional!AgrA},
 AgrN\is{category!functional!AgrN}, AgrV\is{category!functional!AgrV},
 Aux\is{category!functional!Aux}, Clitic Voices\is{category!functional!Clitic Voices}, Gender\is{category!functional!Gender},
@@ -1116,7 +1121,7 @@ position of clitics in Italian\il{Italian}.
 %
 \citet[\page 75]{BB2011b-u} assume a BenefactiveP\is{category!functional!Benefactive}
 
-\addlines[2]
+%\addlines[2]
 \citet[\page 106]{Cinque99a-u} adopts the 32 functional heads in Table~\vref{Tabelle-Cinque} in his work.
 \begin{table}
 \begin{tabular}[t]{@{}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{}}
@@ -1232,7 +1237,7 @@ omitted.\footnote{%
 \begin{figure}
 \oneline{%
 \begin{forest}
-where n children=0{delay=with translation}{}
+where n children=0{delay=with unaligned translation}{}
 [CP
 	[C$^0$[weil;because, tier=word]]
 	[TopP
@@ -1342,7 +1347,7 @@ moved to the specifier position of the Agreement Phrase.
 {}[\sub{PP} P DP ] 
 \z
 %\largerpage[2]
-\largerpage[-1]
+%\largerpage[-1]
 The problem here is that the object now precedes the preposition. In order to rectify this, Radford assumes a functional projection
 p (read \emph{little p}) with an empty head to which the preposition then adjoins. This analysis is shown in Figure~\vref{Abbildung-Radfords-PP}. 
 \begin{figure}
@@ -1446,6 +1451,7 @@ and adverbs (\mex{1}d).
 \ex a [not unapproachable] figure
 \ex {}[Not always] has she seasoned the meat.
 \zl
+\addlines
 If all of these projections are simply NegPs without any further properties (about verb form, adjective
 part of speech, adverb part of speech), it would be impossible to account for their different
 syntactic distributions. Negation is clearly just a special case of the more general problem, since
@@ -1743,7 +1749,7 @@ that corresponds to a DP in GB terminology.
 %% But let's put these problematic cases aside and look at free relatives, the original motivation for
 %% the definition of Labeling in \pref{Label-Berechnung}: 
 
-\addlines[1]
+%\addlines[1]
 Chomsky's approach to free relative clauses is interesting but is unable to describe the phenomenon in
 full breadth. The problem is that the phrase that contains the relative pronoun may be
 complex (contrary to Donati's claims, see also \citew[\page 930--932]{Citko2008a} for a rejection of
@@ -1834,6 +1840,8 @@ two analyses for \pref{ex-i-read-what-you-wrote}: one with the empty nominal hea
 economical one wins, but the assumption of transderivational constraints\is{transderivational constraint} leads to undesired
 consequences \citep[Section~5]{Pullum2013a}.\is{relative clause!free|)}
 
+%\addlines
+\addlines[-1]
 \citet{Chomsky2013a} abandons the labeling condition in \pref{Label2} and replaces it with general
 labeling rules that hold for both internal and external Merge of two phrases. He distinguishes two
 cases. In the first case, labeling becomes possible since one of the two phrases of the set \{ XP,
@@ -1873,7 +1881,6 @@ elements of subsets in order to access their features. This adds to the overall 
 proposal and is clearly dispreferred over the HPSG solution, which uses one part of speech value per linguistic object.
 }
 
-\addlines[-1]
 %\addlines[2]
 For further problems concerning labeling and massive overgeneration by recent formulations of Merge
 see \citew{FSP2016a}.
@@ -1912,6 +1919,7 @@ Schema of HPSG.
 \subsection{Specifiers, complements, and the remains of \xbart}
 \label{Abschnitt-Spezfikatoren-MP}
 
+%\addlines[-2]
 \mbox{}\citet[\page 146]{Chomsky2008a} assumes that every head has exactly one complement but an
 arbitrary number of specifiers. In standard \xbart,\is{X theory@\xbar theory|(}\is{specifier|(}\is{complement|(} the restriction that there can be at most one complement
 followed from the general \xbar schema and the assumption that structures are at most binary
@@ -2056,7 +2064,7 @@ conjunction) can be formulated such that the coordination of two $+$\textsc{min}
 item. In Chomsky's system an analogous rule cannot be defined, since the coordination of two lexical
 items is not a lexical item any longer.
 
-\addlines
+%\addlines
 Like Chomsky in his recent Minimalist work, Categorial Grammar \citep{Ajdukiewicz35a-u} and HPSG
 (Pollard \biband Sag \citeyear{ps}; \citeyear[\page 39--40]{ps2}) do not (strictly) adhere to
 \xbart. Both theories assign the symbol NP to pronouns (for CG see \citew[p.\,615]{SB2006a-u}, see
@@ -2484,7 +2492,7 @@ head-dtr & \ibox{1}\\
 dtrs & \liste{ $\alpha$, \ibox{1} $\beta$ }\\
 }%
 \zl
-\addlines[2]
+%\addlines[2]
 $\alpha$ and $\beta$ are shorthands for descriptions of linguistic objects. The important point
 about the two descriptions in \pmex{0} is that the head daughter is identical to one of the two
 daughters, which is indicated by the \ibox{1} in front of $\alpha$ and $\beta$, respectively. In the
@@ -2629,7 +2637,7 @@ Bagels, I like and Ellison hates.\footnote{%
 }
 \ex The man who$_i$ [Mary loves \_$_i$] and [Sally hates \_$_i$] computed my tax.
 \zl
-\addlines[2]
+%\addlines[2]
 This problem was solved for GPSG by \citet{Gazdar81} and the solution carries over to HPSG. The
 Minimalist community tried to address these problems by introducing operations like sideward
 movement\is{sideward movement} \citep{Nunes2004a-u} where constituents can be inserted into sister trees. So in the
@@ -2738,7 +2746,7 @@ baseline
 \hfill\mbox{}
 \caption{\label{fig-letters-to-peter-adger}The analysis of \emph{letters to Peter} according to \citet[\page 95]{Adger2003a}}
 \end{figure}%
-\addlines[2]
+%\addlines[2]
 The string in (\mex{0}b) is ruled out since the uninterpretable N feature of the preposition
 \emph{to} is not checked. So this integrates the constraint that all
 dependent elements have to be maximal into the core mechanism. This makes it impossible to analyze examples like (\mex{1})
@@ -2763,6 +2771,7 @@ with all the structure that is usually assumed and the fusion of preposition and
 during pronunciation. The first suggestion eliminates the option of assuming an NP analysis as it
 was suggested by \citet{Bruening2009a} in the Minimalist framework.
 
+\addlines[-1]
 Apart from this illustrative example with a fused preposition, there are other cases in which one may want to combine unsaturated
 linguistic objects. I already discussed coordination examples above. Another example is the verbal
 complex in languages like German, Dutch\il{Dutch}, 
@@ -2843,17 +2852,19 @@ they are weak, should be acquired from data alone.
 \subsection{Formalization}
 \label{sec-formalization-minimalism}
 
-\addlines[2]
+%\addlines[2]
 Section~\ref{sec-formalization-gb} commented on the lack of formalization in transformational
 grammar up until the 1990s. The general attitude towards formalization did not change in the
 minimalist era and hence there are very few formalizations and implementations of Minimalist theories.
 
+\largerpage[-1]
 \citet{Stabler2001a} shows how it is possible to formalize and implement Kayne's\ia{Kayne, Richard S.} theory of remnant movement. In
 Stabler's implementation\footnote{%
 %	His system can be downloaded from his website:
 	His system is available at:
 \url{http://linguistics.ucla.edu/people/stabler/coding.html}. 2018-02-20.
-}, there are no transderivational constraints\is{transderivational constraint}, no numerations\is{numeration}\footnote{%
+}, there are no transderivational
+constraints\is{transderivational constraint}, no numerations\is{numeration}\footnote{%
 	There is a numeration lexicon in \citet[Chapter~9]{Veenstra98a}. This lexicon consists of a set of numerations, which contain functional
 	heads, which can be used in sentences of a certain kind. For example, Veenstra assumes numerations for sentences with bivalent verbs
 	and subjects in initial position, for embeded sentences with monovalent verbs, for \emph{wh}"=questions with monovalent verbs, and
@@ -2944,7 +2955,9 @@ over the space of years or even decades. This process is disrupted if fundamenta
 
 
 %\clearpage
-\bigskip
+% nothing of this works!
+%~\vspace{2\baselineskip}
+%~\newline\vspace*{-8mm}
 \furtherreading{
 This chapter heavily draws on \citet{Adger2003a}. Other textbooks on Minimalism are \citew{Radford97a-u}, \citew{Grewendorf2002a}, and \citet*{HNG2005a}.
 
