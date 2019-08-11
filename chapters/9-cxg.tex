@@ -570,6 +570,7 @@ for the discussion of an inheritance"=based approach in Simpler Syntax.
 \is{inheritance|)}\is{linking|)}\is{passive|)}
 
 \section{Verb position}
+\label{sec-verb-position-cxg}
 
 %\addlines
 At present\is{verb position|(}, I only know of two publications in the framework of CxG dealing with
@@ -642,7 +643,7 @@ The LFG analysis in Section~\ref{Abschnitt-Verbstellung-LFG} is probably also un
 that \emph{der Mann der Frau das Buch} forms a VP although only three NPs have been combined. CxG
 has nothing like the theory of extended head domains that was presented in Section~\ref{Abschnitt-Verbstellung-LFG}.
 
-\largerpage
+%\largerpage
 Thus, both variants with binary"=branching structures are ruled out and only the analysis with flat branching structures remains.
 Sign"=based CxG, which is a variant of HPSG \citep[\page 486]{Sag2010b}, as well as Embodied Construction Grammar \citep[\page 156]{BC2005a} allow for
 a separation of immediate dominance\is{dominance!immediate} and linear order\is{linear precedence} so that it would be possible to
@@ -694,7 +695,7 @@ CxG approaches to date. For further discussions of approaches that allow for dis
 \section{Local reordering}
 
 %\addlines
-\largerpage
+%\largerpage
 If\is{constituent order|(} we assume flat branching structures, then it is possible to use the GPSG analysis\indexgpsg for the order of arguments.
 However, \citet{Kay2002a} assumes a phrasal construction for so"=called Heavy"=NP"=Shift\is{Heavy"=NP"=Shift} in English, which means that there is a new rule for
 the reordering of heavy NPs in English rather than one rule and two different ways to linearize the daughters.
@@ -744,7 +745,7 @@ Lakoff. Section~\ref{sec-fcg} deals with Fluid Construction Grammar.
 \subsection{Berkeley Construction Grammar}
 \label{sec-formal-bcg}
 
-\largerpage
+%\largerpage
 Section~\ref{sec-passive-bcg} discussed the valence representation in BCG and linking constructions for active and
 passive. \citew{KF99a} represent valence information in sets\is{set|(}
 %% \footnote{%
@@ -868,6 +869,7 @@ subject does not get a semantic role. The referent of \emph{du} is not the one w
      you seem.2\sg{} soon in.to.sleep\\
 \glt `You seem like you will fall asleep soon.'
 \z
+\addlines[-1]
 This means that one is forced to either assume an empty expletive subject for verbs like
 \emph{grauen} or to specify explicitly which verbs may inherit from the subject construction and
 which may not.
@@ -1032,7 +1034,7 @@ Using the feature geometry in (\mex{0}), it is in principle possible to formulat
 in the \textsc{non-head-dtrs} list, which would be completely ruled out under the assumption of the
 feature geometry in (\ref{feat-geom-swb}) and the restriction in (\ref{meta-construction-statemnet}).
 
-\addlines
+%\addlines
 There are several arguments against this feature geometry, which will be discussed in the following
 subsections. The first one is an empirical one: there may be idioms that span clauses. The second
 argument concerns the status of the meta statement in (\ref{meta-construction-statemnet}) and the
@@ -1187,7 +1189,7 @@ daughter means `a horse kicks x\ind{2}' and has an internal head somewhere whose
  geometry of SBCG. For a more general discussion of locality, see
  Section~\ref{Abschnitt-Diskussion-Lokalitaet}. 
 
-%\largerpage
+\largerpage[2]
 The restrictions on \emph{Pferd} clauses in (\mex{0}) are too strict, however, since there are
 variants of the idiom that do not have the accusative pronoun in the \vf:
 \eal
@@ -1245,6 +1247,7 @@ Minimalism, CG, LFG and DG can not.
 
 \subsubsubsection{Complicated licensing of constructions}
   
+\largerpage[2]
 In addition to these empirical problems, there is a conceptual problem with (\ref{meta-construction-statemnet}):
 (\ref{meta-construction-statemnet}) is not part of the formalism of typed feature structures but
 rather a meta"=statement.
@@ -1767,7 +1770,7 @@ longer ones and that animate nouns tend to occur before inanimate ones.
 \ex S $\to$ NP[nom], NP[dat], NP[acc], V
 \ex S $\to$ NP[nom], NP[acc], PP, V
 \zl
-%\addlines[2]
+\largerpage
 It is possible to capture these generalizations in ECG if one specifies linearization constraints for more general constructions and more specific constructions
 inherit them from these. As an example, consider the Active"=Ditransitive Construction\is{construction!Active Ditransitive} discussed by
 \citet[\page 170]{BC2005a}:
@@ -1853,7 +1856,7 @@ triangle \citep[Chapter~5]{Langacker87a-u}.
 & \textbf{self}  & rt.long-side\\\hline
 \end{tabular}\\
 \z
-%\largerpage
+\largerpage
 This states that a hypotenuse is a particular line segment, namely the longest side of a right"=angled triangle. The concept of a right"=angled triangle
 is activated by means of the evokes operator.
 Evokes creates an instance of an object of a certain type (in the example, \emph{rt} of type \type{right-triangle}).
@@ -1916,11 +1919,12 @@ comes with a name and can be depicted as follows:
 \end{tabular}
 }
 \z
+\largerpage[2]
 %\addlines[2]
 Linguistic objects have a form and a meaning pole. The two poles could be organized into a single feature
 description by using a \textsc{syn} and a \textsc{sem} feature, but in FCG papers the two poles are
 presented separately and connected via a double arrow. (\mex{1}) is an example:
-\ea
+\eas
 The name \emph{Kim} according to \citet[\page 99]{vanTrijp2013a}:\\
 \begin{tikzpicture}
 \node (sem) {\fbox{
@@ -1941,7 +1945,7 @@ The name \emph{Kim} according to \citet[\page 99]{vanTrijp2013a}:\\
 }};
 \path[<->] (sem) edge (syn);
 \end{tikzpicture}
-\z
+\zs
 %\addlines
 Depending on the mode in which the lexical items are used, the syntactic pole or the semantic pole
 is used first. The first processing step is a matching phase in which it is checked whether the
@@ -1957,6 +1961,7 @@ parsing) is merged. This is illustrated in Figure~\ref{fig-matching-merging-trij
 
 \subsubsection{Argument Structure Constructions}
 
+\largerpage[2]
 Fluid Construction Grammar assumes a phrasal approach to argument structure, that is, it is assumed that lexical items enter
 into phrasal configurations that contribute independent meaning \citep{vanTrijp2011a}. The FCG
 approach is one version of implementing Goldberg's plugging approach to argument structure
@@ -2532,7 +2537,7 @@ general comparison of SBCG and FCG.
 
 \subsubsection{Comparison to Sign-Based Construction Grammar/HPSG}
 
-
+\largerpage
 According\indexhpsgstart\indexsbcgstart to \citet{vanTrijp2013a}, there are the differences shown in Table~\ref{table-differences-SBCG-FCG}.
 %% \begin{itemize}
 %% \item
@@ -2599,6 +2604,7 @@ issues, we are fine. In fact, there is psycholinguistic work that couples HPSG g
 performance models \citep{Konieczny96a-u} and similar work exists for TAG \citep{SJ93a,DK2008a-u}. 
 
 %\addlines[-1]
+\largerpage
 Finally, there is also work in Construction Grammar that abstracts away from performance
 considerations. For instance, Adele Goldberg's book from \citeyear{Goldberg95a} does
 not contain a worked out theory of performance facts. It contains boxes in which grammatical
@@ -2631,6 +2637,7 @@ implementation of an SBCG grammar as a general constraint system, so SBCG's
 performance-independence hypothesis remains conjecture until proven otherwise.
 \end{quote}
 %\addlines
+\largerpage
 There are two issues that should be kept apart here: efficiency and faithfulness to the
 theory. First, as Levine and Meurers point out, there were many constraint solving systems at the
 beginning of the 90's. So there are computer systems that can and have been used to implement
@@ -2702,6 +2709,7 @@ arg_h rule (head_complement_phrase,
 cat> NonHeadDtr,
 cat> HeadDtr.
 \end{verbatim}
+\largerpage
 A rule starts with an identifier that is needed for technical reasons like displaying intermediate
 structures in the parsing process in debugging tools. A description of the mother node follows and
 after the arrow we find a list of daughters, each introduced by the operator \verb+cat>+.\footnote{%
