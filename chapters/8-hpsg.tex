@@ -763,6 +763,8 @@ have that are supertypes of x. Recall the example from Section~\ref{sec-formalis
 an object of the type \textit{female person} has all the properties of the type
 \textit{person}. Furthermore, objects of type \type{female person} have additional, more specific properties not shared by other subtypes of \type{person}.
 
+%\enlargethispage{1.5\baselineskip}
+%\largerpage[2]
 If one formulates a restriction on a supertype, this automatically affects all of its subtypes. The
 Head Feature Principle hence can be formalized as follows:
 \ea
@@ -772,6 +774,7 @@ synsem$|$loc$|$cat$|$head \ibox{1}\\
 head-dtr$|$synsem$|$loc$|$cat$|$head \ibox{1}\\
 } 
 \z
+\pagebreak
 The arrow\is{\impl} corresponds to a logical implication\is{implication}, as mentioned above. Therefore, (\mex{0}) can be read as follows:
 if a structure is of type \type{headed"=phrase}, then it must hold that the value of
 \textsc{synsem$|$""loc$|$""cat$|$""head} is identical to the value of \textsc{head-dtr$|$""synsem$|$""loc$|$cat$|$head}.
