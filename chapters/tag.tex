@@ -341,14 +341,16 @@ Unlike GPSG, linearization rules do not hold for all dominance rules but rather 
 we saw in Section~\ref{sec-ECG} on Embodied-CxG. Figure~\vref{Abbildung-TAG-S} shows a dominance tree with numbered nodes.
 \begin{figure}
 \centerline{%
-$\alpha$ = \begin{forest}
-baseline, tag
+$\alpha$ = \raisebox{\baselineskip}{\begin{forest}% I do not know why this vspace is necessary. Used
+                                % to work with baseline before. St. Mü. 11.08.2019
+%tag
+baseline
 [S$_0$
 	[NP$_1$]
 	[VP$_2$
 		[V$_{2.1}$]
 		[NP$_{2.2}$]]]
-\end{forest}
+\end{forest}}
 }
 \caption{\label{Abbildung-TAG-S}Dominance structure with numbered nodes}
 \end{figure}%
@@ -1077,6 +1079,7 @@ how such lexical entries can be used to analyze sentences with verbal complexes.
 \vspace{2.5\baselineskip}
 \caption{\label{Abbildung-zu-reparieren-versprochen-V-TAG}Analysis of the verbal complex \emph{zu reparieren versprochen} in V"=TAG}
 \end{figure}%%
+\largerpage
 Both of the first NP trees have to dominate \emph{versprochen} and the third and fourth NP tree have to dominate \emph{zu reparieren}.
 The order of the NP trees is not restricted and thus all permutations of NPs can be derived.
 
@@ -1112,6 +1115,8 @@ described by grammar, but is rather due to processing problems with the hearer i
 \zl
 
 \noindent
+\largerpage
+\enlargethispage{5pt}
 What is interesting in this context is that it is possible to construct examples of center embedding so that they are easier to process
 for the hearer. In this way, it is possible to increase the number of center embeddings possible to
 process by one and therefore to show that all grammars that formulate a restriction that there may
@@ -1164,6 +1169,7 @@ Verbal complexes in German with more than four verbs are hardly ever found since
 right sentence bracket by extraposing\is{extraposition} material and therefore avoiding ambiguity\is{ambiguity} (see \citealp[\page 5]{Netter91} and
 \citealp[\page 262]{MuellerLehrbuch1}).
 
+\largerpage
 The alternative to a performance explanation would involve using a grammatical formalism which is
 just powerful enough to allow embedding of two verbs and reordering of their arguments, but rules
 out embedding of three verbs and reordering of the arguments. \citet{JBR2000a} opt for this solution
