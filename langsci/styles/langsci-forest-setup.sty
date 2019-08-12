@@ -113,6 +113,23 @@
   }
 }
 
+\forestset{
+  with unaligned translation/.style={
+    l sep=0,inner xsep=0,
+    append unaligned translation/.expanded/.wrap pgfmath arg={\gettranslation{##1}}{content},
+    content/.expanded/.wrap pgfmath arg={\gettext{##1}}{content},
+  },
+  append unaligned translation/.style={
+    if={strequal("#1","")}{}{
+      append={[#1,no edge,inner xsep=0,inner ysep=0,outer ysep=0,
+               %tier=gloss, % does not work for TAG trees since the words are not aligned at the baseline
+               l=\baselineskip + 0.2ex,
+        ]}
+    }
+  }
+}
+
+
 \def\gettext#1{\gettextA#1;;\endget}
 \def\gettextA#1;#2;{\removesep#1;}
 \def\gettranslation#1{\gettranslationA#1;;\endget}
