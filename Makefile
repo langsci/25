@@ -144,7 +144,6 @@ bbl:
 #	makeindex -gs index.format -o $*.and $*.adx.hyp
 #	xelatex $* | egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 
-
 index:
 	xelatex grammatical-theory -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	makeindex -gs index.format -o grammatical-theory.snd grammatical-theory.sdx
@@ -166,6 +165,9 @@ index:
 # 	makeindex -o $*.snd $*.sdx
 # 	xelatex $* | egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 
+
+stable.pdf: grammatical-theory.pdf
+	cp grammatical-theory.pdf stable.pdf
 
 
 # http://stackoverflow.com/questions/10934456/imagemagick-pdf-to-jpgs-sometimes-results-in-black-background
