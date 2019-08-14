@@ -94,6 +94,8 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
 	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
 	sed -i.backup 's/{\\O }/Oe/' *.adx
+	sed -i.backup 's/@van Trijp/@\\MakeCapital {van} Trijp/g' *.adx
+	sed -i.backup 's/.*Group.*//' grammatical-theory.adx
 	python3 fixindex.py
 	mv $*mod.adx $*.adx
 	makeindex -gs index.format-plus -o $*.and $*.adx
