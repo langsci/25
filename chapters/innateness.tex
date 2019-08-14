@@ -2424,7 +2424,10 @@ sm edges
 %%
 In the next step, the trees are divided into subtrees. The trees in Figure~\ref{Abbildung-unlabeled-trees} have the subtrees that can be seen in Figure~\vref{Abbildung-Teilbaume}.
 \begin{figure}[htb]
-\hfill\begin{forest}
+%\begin{minipage}{\linewidth}
+\hfill
+\scalebox{0.95}{%
+\begin{forest}
 sm edges
 [X
 	[X
@@ -2432,21 +2435,28 @@ sm edges
 		[the]]
 	[dog]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 sm edges
 [X
 	[X [,phantom ]]
 	[dog]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 [X
 	[watch]
 	[the]]
-\end{forest}\hfill\mbox{}
+\end{forest}
+}\hfill\mbox{}
 \\[3ex]
-\hfill\begin{forest}
+\hfill
+\scalebox{0.95}{%
+\begin{forest}
 sm edges
 [X
 	[watch]
@@ -2454,21 +2464,28 @@ sm edges
 		[the]
 		[dog]]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 sm edges
 [X
 	[watch]
 	[X [,phantom ]]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 [X
 	[the]
 	[dog]]
-\end{forest}\hfill\mbox{}
+\end{forest}
+}\hfill\mbox{}
 \\[3ex]
-\hfill\begin{forest}
+\hfill
+\scalebox{0.95}{%
+\begin{forest}
 sm edges
 [X
 	[X
@@ -2476,21 +2493,27 @@ sm edges
 		[dog]]
 	[barks]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 sm edges
 [X
 	[X [,phantom ]]
 	[barks]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 [X
 	[the]
 	[dog]]
-\end{forest}\hfill\mbox{}
+\end{forest}}\hfill\mbox{}
 \\[3ex]
-\hfill\begin{forest}
+\hfill
+\scalebox{0.95}{%
+\begin{forest}
 sm edges
 [X
 	[the]
@@ -2498,20 +2521,26 @@ sm edges
 		[dog]
 		[barks]]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 sm edges
 [X
 	[the]
 	[X [,phantom ]]]
 \end{forest}
+}
 \hfill
+\scalebox{0.95}{%
 \begin{forest}
 [X
 	[dog]
 	[barks]]
 \end{forest}
+}
 \hfill\mbox{}
+%\end{minipage}
 \caption{\label{Abbildung-Teilbaume}Subtrees for the trees in Figure~\ref{Abbildung-unlabeled-trees}}
 \end{figure}%
 In the third step, we now have to compute the best tree for each utterance. For \emph{The dog
@@ -2605,11 +2634,14 @@ The probability of a tree is the sum of the probabilities of all its analyses.
 There are two analyses for (\mex{0}b), which can be found in Figure~\ref{Abbildung-Analyse}.
 The probability of the first analysis of (\mex{0}b) corresponds to the probability of choosing exactly the complete tree for [the [dog barks]] from
 the set of all subtrees. Since there are twelve subtrees, the probability of choosing that one is 1/12. The probability of the second
-analysis is the product of the probabilities of the subtrees that are combined and is therefore 1/12 $\times$ 1/12 = 1/144.
+analysis is the product of the probabilities of the subtrees that are combined and is therefore 1/12
+$\times$ 1/12 = 1/144.
 The probability of the analysis in (\mex{0}b) is therefore 1/12 $+$ (1/12 $\times$ 1/12) = 13/144.
 One can then calculate the probability of the tree in (\mex{0}a) in the same way. The only difference here is that the tree for
 [the dog] occurs twice in the set of subtrees. Its probability is therefore
  2/12. The probability of the tree [[the dog] barks] is therefore:
+%\largerpage[2]
+\largerpage
  1/12 $+$ (1/12 $\times$ 2/12) = 14/144. We have thus extracted knowledge about plausible structures from the corpus. This knowledge can
 also  be applied whenever one hears a new utterance for which there is no complete tree. It is then possible to use already known
  subtrees to calculate the probabilities of possible analyses of the new utterance.
@@ -2636,7 +2668,7 @@ subtree.
 \end{figure}%
 These kinds of discontinuous subtrees are important if one wants to capture dependencies between elements that occur in different subtrees
 of a given tree. Some examples are the following sentences:
-
+%\largerpage[2]
 \eal
 \ex BA carried \emph{more} people \emph{than} cargo in 2005.
 \ex \emph{What's} this scratch \emph{doing} on the table?
