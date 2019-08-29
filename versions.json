@@ -23,5 +23,12 @@
     "publishedAt": "2018-03-27T00:00:33.000Z", 
     "license": "CC-BY-4.0",  
     "doi": "10.5281/zenodo.1193241"
+  }, {
+    "versiontype": "third_edition",
+    "title": "Grammatical Theory, 2nd edition",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2019-08-29T00:00:33.000Z", 
+    "license": "CC-BY-4.0",  
+    "doi": "10.5281/zenodo.3364215"
   }]
 }
