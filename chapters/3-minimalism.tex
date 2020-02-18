@@ -981,7 +981,7 @@ Languages differ with regard to whether this movement is visible or not.
 Although Chomsky's Minimalist Program should be viewed as a successor to GB, advocates of Minimalism often emphasize the fact that Minimalism is not
 a theory as such, but rather a research program (Chomsky \citeyear[\page 4]{Chomsky2007a};
 \citeyear[\page 6]{Chomsky2013a}). The actual analyses suggested by \citet{Chomsky95a-u} when introducing the research program have been reviewed by theoreticians and have sometimes come in for serious criticism
-\citep*{Kolb97a,JL97a-u-platte,JL99a-u-gekauft,LLJ2000b,LLJ2000a,LLJ2001a,Seuren2004a,PJ2005a},
+\citep*{Kolb97a,JL97a-u-platte,JL99a-u,LLJ2000b,LLJ2000a,LLJ2001a,Seuren2004a,PJ2005a},
 however, one should say that some criticisms overshoot the mark.
 
 There are various strains of Minimalism. In the following sections, I will discuss some of the
@@ -1327,7 +1327,7 @@ the levels of morphology, syntax, semantics and pragmatics: everything has been
 `syntactified'. \citet{Rizzi2014a} himself talks about syntactification. He points out that there
 are fundamental problems with the T-model and its current
 variants in Minimalism and concludes that a syntactification in terms of Rizzi-style functional heads
-or a proliferation of T heads with respective features (see also \citealp{Borsley2006a,BM2018Minimalism}) is the only way to save this architecture. 
+or a proliferation of T heads with respective features (see also \citealp{Borsley2006a,BM2020Minimalism}) is the only way to save this architecture. 
 Felix Bildhauer\ia{Bildhauer, Felix} (p.\,c.\,2012) has pointed out to me that
 approaches which assume a cascade of functional projections where the individual aspects of meaning are represented by nodes are actually very
 close to phrasal approaches in Construction Grammar (see \citealp[\page 470]{Adger2013a} also for a
@@ -2129,7 +2129,8 @@ representations.\is{X theory@\xbar theory|)}
 \subsection{Minimalism, Categorial Grammar, and HPSG}
 \label{Abschnitt-MG}\label{sec-MG}
 
-In\is{Minimalist Grammar (MG)|(}\is{Categorial Grammar (CG)|(} this section, I will relate Minimalism, Categorial Grammar and HPSG to one another. Readers who are not yet familiar with
+In\is{Minimalist Grammar (MG)|(}\is{Categorial Grammar (CG)|(} this section, I will relate
+Minimalism, Categorial Grammar and HPSG to one another. This section is based on \citew{MuellerUnifying}. Readers who are not yet familiar with
 Categorial Grammar and HPSG should skim this section or consult the  
 Chapters~\ref{chap-feature-descriptions}, \ref{Kapitel-CG} and~\ref{Kapitel-HPSG} and return here afterwards.
 
@@ -2397,7 +2398,7 @@ actual structures that are licensed by the grammar that are important (the stron
 
 Apart from reintroducing \xnull categories, the coordination problem can be solved by changing the
 definition of Merge in a way that allows heads to specify the direction of combination with their
-arguments: \citet[p.\,635]{Stabler2010b} suggests marking the position of an argument relative to its head
+arguments: \citet[\page 635]{Stabler2010b} suggests marking the position of an argument relative to its head
 together with the selection feature and gives the following redefinition of External Merge.
 % in (\mex{1}).
 %\begin{figure}
@@ -2434,7 +2435,7 @@ along the lines suggested by Stabler for his DMGs.
 \nocite{Pollard88a}
 
 \subsubsection{Minimalist Grammars and Head-Driven Phrase Structure Grammar}
-\label{sec-minimalism-atb-extraction}
+\label{sec-minimalism-atb-extraction}\label{sec-mg-hpsg}
 
 The notation for marking the head of a structure with `$>$' and `$<$' corresponds directly to the
 HPSG representation of heads. Since HPSG is a sign-based theory, information about all relevant
@@ -2921,6 +2922,8 @@ Program. In the version described in his thesis the system could generate but wa
 sentences (p.\,138, 143). PF phenomena were not modeled (p.\,142--143) and the two example fragments
 are small and come without a semantics (p.\,143).
 
+
+
 The benchmark here has been set by implementations of grammars in constraint"=based theories\is{constraint"=based grammar}; for example, the
 HPSG grammars of German\il{German} \citep{MK2000a}, English\il{English} \citep*{FCS2000a} and
 Japanese\il{Japanese} \citep{Siegel2000a} that were developed
@@ -2952,6 +2955,119 @@ In order to fully develop a grammar fragment, one needs at least three years (co
 and Stabler's implementation (1992)). Particularly large grammars require the knowledge of several researchers working in international cooperation
 over the space of years or even decades. This process is disrupted if fundamental assumptions are repeatedly changed at short intervals.
 
+As far as large-scale coverage is concerned, the more recent work by John Torr is an
+exception to what was said above.\footnote{%
+  It is not an exception as far as theory development is concerned. Torr's system is based on
+  \citew{Chomsky95a-u}, so he did not follow new trends but stayed within a certain setting.
+} \citet*{TSSC2019a} state that their parser is the first one to take up the Sproat 
+\& Lappin Challenge to the Minimalist community \citeyearpar{SL2005a}. The work of the authors is
+impressive and they really implemented a wide-coverage statistically trained parser based on
+Transformational Grammar, but what they did is different from standard Minimalism since they assume
+``around 45'' versions of Move and Merge (p.\,2488) in comparison to the two versions usually
+assumed in Minimalism (Move and Merge or Internal and External Merge).\footnote{%
+ Torr explained in p.c. 2019 that these 45 rules can be folded into two Merge functions and two Move
+ functions. But in the end this is just a clever way of hiding complexity. It is like \citet[\page 12]{Chomsky2005a}
+% This was originally suggested in 2001 Beyond explanatory adequacy. But I do not have the book.
+ revising the theory with Move and Merge into one with just one operation Merge but assuming two
+ subcases of Internal and External Merge.
+} \citet{TS2016a} explain some of the schemata that are assumed: there are versions of Merge that
+combine a head with a complement and versions that combine a head with a specifier (see
+\citet{MuellerUnifying} and Section~\ref{sec-mg-hpsg} above for a comparison of Minimalist Grammars
+with HPSG. The respective variants of Merge correspond to HPSG's Specifier-Head Schema and the Head-Complement Schema,
+respectively). \citet[\page 4]{TS2016a} assume four schemata for adjunction (HPSG has one such schema and use
+underspecification with respect to order, see \citew[Section~2]{MuellerOrder}). They assume a special rule
+for rightward movement (p.\,5) corresponding to \citegen{Keller95b} and \citegen{Mueller99a} Head-Extra
+Schema for extraposition. In addition the authors assume two schemata for \isi{head movement}. HPSG
+assumes a lexical rule or a unary branching schema applying to words or coordinations of words
+\parencites{MuellerGS}[Section~5.1]{MuellerOrder}). Across the Board extraction \citep{Ross67a} is taken care of by
+four special schemata. See \citet{AC2020a} for an overview of treatments of coordination in
+HPSG. The treatment of \isi{Across the Board Extraction} is non-standard Minimalism. For the analysis of examples like (\mex{1})
+in which one filler corresponds to two gaps in two conjuncts, the authors build on \citet{Kobele2008a}
+who uses a \slasch passing mechanism going back to \citet{Sag83a-u} and \citet{Gazdar81a}. While
+Koeble assumes the \slasch passing mechanism of GPSG, \citet{TS2016a} suggest an analyis of
+(\mex{1}) with two instances of \emph{who} in object positions, which are later unified into one when the second conjunct is merged
+into the main structure. 
+\ea
+Who$_i$ did Jack say Mary likes \_$_i$ and Pete hates $_i$?
+\z  
+An interesting property of the analysis is that \emph{who Pete hates} forms a discontinuous
+constituent: \emph{who} is combined with \emph{hates} despite its sentence"=initial
+position. Information about this \emph{wh} element is passed up the tree in an GPSG-style way. The
+difference is that there is no trace but the extracted element is identical in phonological material
+with the filler. Interestingly, there is an HPSG variant of nonlocal dependencies that is very
+similar to what \citet{TS2016a} suggest and together with a modified Filler Head Schema the analyses
+are parallel: \citet{HN94b} suggested that the linguistic objects that are involved in nonlocal
+dependencies are of type \type{sign} rather than \type{local}. This makes it possible to pass up
+information about a daughter including its phonological make up. If one assumes a version of HPSG
+permitting discontinuous constituents (\citealp{Reape94a,Kathol2001a,Mueller95c,Mueller2004b} and
+Section~\ref{sec-discontinuous-constituents-HPSG} of this book) and a Filler
+Head Schema that requires that the phonology of the filler is identical to the phonology in the
+\slasch list and that does not insert the fronted element into the constituent order domain of the
+head (since it is in there already), we get an analysis of the type described in
+\citet{TS2016a}. Figure~\ref{fig-who-jack-likes-DMG} shows the analysis that was suggested by
+\citet{TS2016a} and Figure~\ref{fig-who-jack-likes-HPSG} the HPSG analog.
+\begin{figure}
+\oneline{%
+\begin{forest}
+sn edges
+[{[ \textit{who} [int] \textit{Jack} [pres] \textit{likes} : c]}
+  [{[[int] \textit{Jack} [pres] \textit{likes} : +wh c, \textit{who}: $-$wh]}
+    [{[[int] :: t= +wh c]}]
+    [{[\textit{Jack} [pres] \textit{likes} : t, \textit{who}: $-$wh]}
+      [{[[pres] \textit{likes} : +case t, \textit{who}: $-$wh, \textit{Jack} : $-$case]}
+        [{[[pres] :: v= +case t]}]
+        [{[\textit{likes} : v, \textit{who}: $-$wh, \textit{Jack} : $-$case]}
+          [{[\textit{Jack} :: d $-$case]}]
+          [{[\textit{likes} : =d v, \textit{who}: $-$wh]}
+            [{[\textit{likes} : d= =d v]}]
+            [{[\textit{who}: d $-$wh]}] ]]]]]]
+\end{forest}}
+\caption{Derivation tree of \emph{who Jack likes} in Directional Minimalist Grammar according to \citet{TS2016a}}\label{fig-who-jack-likes-DMG}
+\end{figure}
+Directional Minimalist Grammars use the `=' sign to indicate the direction in which an argument is
+required. =d means that a DP is required to the left of a head and d= encode the requirement of a DP
+to the right. This is like the `/' notation of \isi{Categorial Grammar} (see Chapter~\ref{chap-CG}). \emph{likes} has the category d= =d v, which means that it is a verb requiring a d to
+its right (the object) and a d to its left (the subject). \emph{who} is of category d and has a
+$-$wh feature, something that has to be checked for a derivation to be complete. \emph{Jack} is the
+subject of \emph{likes} and fulfills the =d requirement of \emph{likes}. Items like [pres] and [int]
+are empty elements. [pres] has a +case feature and can make \emph{Jack} move to its specifier. The
+movement consumes the $-$case feature and puts \emph{Jack} to the front of the string. This looks
+like a unary projection in the derivation tree. The empty interrogative head [int] selects for a t
+to its right. The result is a C projection that has a +wh feature. In the final step \emph{who},
+which is $-$wh moves to the left and the wh features are removed. The important thing is that the
+information about the phonology of \emph{who} and its wh feature is percolated up in the tree until
+it is finally bound off in the last derivation step.
+
+Figure~\ref{fig-who-jack-likes-HPSG} shows the HPSG analog. The information about the local
+properties of the \emph{wh} word including its phonology are passed up in the tree until they are
+bound off in a filler head configuration. The Filler-Head Schema binds off the nonlocal dependency
+and makes sure that the phonology of the filler is not realized twice (see \citealp{Reape94a},
+\citealp[Section~6]{MuellerOrder} on linearization domains and \citealp[Section~7]{AC2020a} on
+multi-dominance approaches in HPSG).
+\begin{figure}
+\begin{forest}
+sm edges
+[V{[\slasch \eliste]}
+  [NP [who,name=who]]
+  [V{[\slasch \phonliste{ who }]}
+     [NP [Jack]]
+     [V{[\slasch \phonliste{ who }]}
+       [V [likes]]
+       [NP{[\slasch \phonliste{ who }]},name=npobj [who,phantom]]]]]
+\draw (npobj.south)--(who.north);
+\end{forest}
+\caption{Possible HPSG analysis of \emph{who Jack likes} using discontinuous constituents}\label{fig-who-jack-likes-HPSG}
+\end{figure}
+%As a final remark, we want to state that Torr's implemented system uses feature value pairs
+An alternative to a binary branching Filler-Head Schema would be a unary branching rule that binds
+off the element in \slasch and adds the stored phonology to the phonology of the daughter. This
+would then be completely parallel to the unary branching assumed in Torr's Directional Minimalist
+Grammar.
+
+Concluding the discussion of Torr's work, it can be said that it is truly impressive but that it
+shows a convergence between Minimalism (or rather Minimalist Grammar) and HPSG. Tools from GPSG/HPSG
+were adopted and the outcome differs in crucial aspects from what is taught in Minimalist textbooks
+(just one or two instances of Merge vs. 45, transformations vs. GPSG-style percolation of features).
 
 
 %\clearpage
@@ -2966,7 +3082,11 @@ This chapter heavily draws on \citet{Adger2003a}. Other textbooks on Minimalism 
 \citew{Kuhn2007a} offers a comparison of modern derivational analyses with constraint"=based\is{constraint"=based grammar} LFG\indexlfg and HPSG approaches.
 \citet{Borsley2012a} contrasts analyses of long"=distance dependencies in HPSG with movement"=based analyses as in GB/""Minimalism. Borsley discusses
 four types of data which are problematic for movement"=based approaches: extraction without fillers, extraction with multiple gaps, extractions
-where fillers and gaps do not match and extraction without gaps.
+where fillers and gaps do not match and extraction without gaps. \citet{BM2020Minimalism} is another
+comparison of Minimalism and HPSG. The authors discuss differences of approach and outlook of the
+two frameworks (sociological differences, formalization and exhaustivity), empirical quality of the
+work, differences in assumed syntactic structures, psycholinguistic issues and the assumptions made
+in the frameworks regarding language acquisition.
 
 The discussion of labeling, abandonment of \xbar theory and a comparison between Stabler's Minimalist Grammars and HPSG from
 Sections~\ref{Abschnitt-Labeling}--\ref{Abschnitt-MG} can be found in \citew{MuellerUnifying}.
