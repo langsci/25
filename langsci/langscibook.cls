@@ -1050,11 +1050,27 @@ http://creativecommons.org/licenses/by-nd/4.0/
 \fi
 
 \noindent 
-\begin{tabular}{@{}llrl@{; }r@{~}l}
-ISBN: & \multicolumn{2}{r}{Digital, complete work:} & \lsISBNdigital \\
-%      &	Hardcover: & vol.\ 1:        & \lsISBNhardcoverOne & vol.\ 2 & \lsISBNhardcoverTwo\\
-      &	Softcover: & vol.\ 1:        & \lsISBNsoftcoverOne & vol.\ 2 & \lsISBNsoftcoverTwo\\
-%      &	Softcover US: & vol1:        & \lsISBNsoftcoverusOne & vol. 2 & \lsISBNsoftcoverusTwo \\
+\begin{tabular}{@{}l@{~}l}
+ISBN: &
+\IfStrEq{\lsISBNdigital}{000-0-000000-00-0}{%no digital ISBN, issue warning
+  \color{red}no digital ISBN
+}{%digital ISBN present, write ISBN
+  \lsISBNdigital~(Digital)
+}
+\\
+\IfStrEq{\lsISBNhardcover}{000-0-000000-00-0}{ %hardcover ISBN not present
+}{%hardcover ISBN present, write ISBN
+  &\lsISBNhardcover~(Hardcover)\\
+}
+
+\IfStrEq{\lsISBNsoftcover}{000-0-000000-00-0}{ %softcover ISBN not present
+  \IfStrEq{\lsISBNhardcover}{000-0-000000-00-0}{ %neither hardcover nor softcover, issue warning
+    \color{red} no print ISBNs!
+  }{%hardcover present, no warning
+  }
+}{%only softcover present, write ISBN
+  &\lsISBNsoftcover~(Softcover)\\
+}
 \end{tabular}
 
 \IfStrEq{\lsISSN}{??}   % \IfStrEq from xstring
