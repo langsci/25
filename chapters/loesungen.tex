@@ -545,9 +545,9 @@ difference lists.
 \begin{enumerate}
 \item \emph{kannte} `knew' is a transitive verb:
 \ea
-\catlexentry{kannte}{V}{(\up\ \pred) = {\small `KENNEN\arglist{\subj, \obj}'}\\*
-                        (\up\ \subj{} {\small AGR CAS} = NOM)\\*
-                        (\up\ \obj{} {\small AGR CAS} = ACC)\\*
+\catlexentry{kannte}{V}{(\up\ \lfgpred) = {\small `KENNEN\arglist{\lfgsubj, \lfgobj}'}\\*
+                        (\up\ \lfgsubj{} {\small AGR CAS} = NOM)\\*
+                        (\up\ \lfgobj{} {\small AGR CAS} = ACC)\\*
                         (\up\ \lfgtense) = \small PAST}
 \z
 
@@ -559,13 +559,13 @@ difference lists.
 \z
 The analysis is parallel to the analysis in Figure~\vref{Abbildung-V2-LFG}. The difference is that the
 object is in the dative and not in the accusative. The respective grammatical function is \objtheta
-rather than \obj.
+rather than \lfgobj.
 
 The necessary c"=structure rules are given in (\mex{1}):
 \eal
 \ex 
 \phraserule{VP}{
-\rulenode{NP\\* (\up \subj|\obj|\objtheta) = \down}
+\rulenode{NP\\* (\up \lfgsubj|\lfgobj|\objtheta) = \down}
 \rulenode{VP\\* \up = \down}}
 \ex
 \phraserule{VP}{

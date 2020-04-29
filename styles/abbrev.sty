@@ -6,6 +6,7 @@
 \newcommand{\ua}{u.\,a.\ }
 \newcommand{\eg}{e.g.,\xspace}
 \newcommand{\Eg}{E.g.,\xspace}
+\newcommand{\ie}{i.e.\@\xspace}
 \newcommand{\uae}{u.\,"a.\ }
 \newcommand{\zb}{z.\,B.\ }
 \newcommand{\Zb}{Z.\,B.\ }
@@ -100,7 +101,7 @@
 
 
 
-
+\newcommand{\iwithini}{\emph{i}-within"=\emph{i}"=Condition\xspace}
 
 
 
@@ -124,6 +125,10 @@
 \newcommand{\argstl}{\textsc{arg-st}"=Liste\xspace}
 }{\newcommand{\argstl}{\textsc{arg-st} list\xspace}}
 \newcommand{\argstls}{\textsc{arg-st} lists\xspace}
+
+%\newcommand{\aux}{\textsc{aux}\xspace}
+\newcommand{\auxf}{\textsc{aux} feature\xspace}
+\newcommand{\auxv}{\textsc{aux} value\xspace}
 
 \newcommand{\casev}{\textsc{case} value\xspace}
 \newcommand{\casew}{\textsc{case}"=Wert\xspace}
@@ -231,6 +236,7 @@
 \newcommand{\indexv}{\textsc{index} value\xspace}
 \newcommand{\islw}{\textsc{inher$|$"-slash}"=Wert\xspace}
 \newcommand{\isll}{\textsc{inher$|$"-slash}"=Liste\xspace}
+\newcommand{\inv}{\textsc{inv}\xspace}
 \newcommand{\initial}{\textsc{initial}\xspace}
 \newcommand{\initialv}{\textsc{initial} value\xspace}
 \newcommand{\initialf}{\textsc{initial} feature\xspace}
@@ -246,9 +252,14 @@
 \newcommand{\lexm}{\textsc{lex}"=Merkmal\xspace}
 \newcommand{\lexv}{\textsc{lex} value\xspace}
 \newcommand{\lexw}{\textsc{lex}"=Wert\xspace}
-\newcommand{\lexwe}{\textsc{lex}"=Werte\xspace}
-\newcommand{\lexwen}{\textsc{lex}"=Werten\xspace}
-\newcommand{\lexwes}{\textsc{lex}"=Wertes\xspace}
+\newcommand{\light}{\textsc{light}\xspace}
+\newcommand{\lightf}{\textsc{light} feature\xspace}
+\newcommand{\lightm}{\textsc{light}"=Merkmal\xspace}
+\newcommand{\lightv}{\textsc{light} value\xspace}
+\newcommand{\lightw}{\textsc{light}"=Wert\xspace}
+\newcommand{\lightwe}{\textsc{light}"=Werte\xspace}
+\newcommand{\lightwen}{\textsc{light}"=Werten\xspace}
+\newcommand{\lightwes}{\textsc{light}"=Wertes\xspace}
 \newcommand{\HPSGloc}{\textsc{loc}\xspace}
 \newcommand{\local}{\textsc{local}\xspace}
 \newcommand{\localf}{\textsc{local} feature\xspace}
@@ -300,6 +311,7 @@
 \newcommand{\phonf}{\textsc{phon} feature\xspace}
 \newcommand{\prd}{\textsc{prd}\xspace}
 \newcommand{\prdf}{\textsc{prd} feature\xspace}
+\newcommand{\pred}{\textsc{pred}\xspace}
 \newcommand{\predm}{\textsc{pred}"=Merkmal\xspace}
 \newcommand{\predw}{\textsc{pred}"=Wert\xspace}
 \newcommand{\predv}{\textsc{pred} value\xspace}
@@ -312,7 +324,8 @@
 \newcommand{\quev}{\textsc{que} value\xspace}%
 \newcommand{\qstore}{\textsc{qstore}\xspace}
 % avm.sty
-%\newcommand{\rel}{\textsc{rel}\xspace}
+\newcommand{\rel}{\textsc{rel}\xspace}
+%\newcommand{\REL}{\textsc{rel}\xspace}
 \newcommand{\rels}{\textsc{rels}\xspace}
 \iflanguage{german}{%
 \newcommand{\relsl}{\textsc{rels}"=Liste\xspace}}{%
@@ -328,6 +341,7 @@
 \newcommand{\relwe}{\textsc{rel}"=Werte\xspace}
 \newcommand{\sbcg}{Sign"=Based Construction Grammar\indexsbcg}
 \newcommand{\self}{\textsc{self}\xspace}
+\newcommand{\SLASH}{\textsc{slash}\xspace}
 \newcommand{\slasch}{\textsc{slash}\xspace}
 \newcommand{\slashel}{\textsc{slash}"=Element\xspace}
 \newcommand{\slashf}{\textsc{slash} feature\xspace}
@@ -674,7 +688,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\xbar}{\texorpdfstring{\mbox{$\overline{\mbox{X}}$}}{X̄}\xspace}
 \newcommand{\xbarbar}{\mbox{$\overline{\overline{\mbox{X}}}$}\xspace}
 \newcommand{\baro}[1]{\upshape\mbox{$\overline{\mbox{\textrm{#1}}}$}\xspace}
-\newcommand{\nbar}{\upshape\mbox{$\overline{\mbox{N}}$}\xspace}
+\newcommand{\nbar}{\mbox{$\overline{\mbox{\upshape N}}$}\xspace}
 \newcommand{\nbars}{\mbox{$\overline{\mbox{N}}$s}\xspace}
 \newcommand{\abar}{\mbox{$\overline{\mbox{A}}$}\xspace}
 \newcommand{\cbar}{\mbox{$\overline{\mbox{C}}$}\xspace}

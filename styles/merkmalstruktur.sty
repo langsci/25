@@ -96,6 +96,8 @@ $%
 }%
 }
 
+%\let\phonlist\phonliste
+
 \newcommand{\relliste}[1]{%
 \mbox{%
 $%
@@ -112,7 +114,7 @@ $%
 \mbox{%
 $%
 \left\{%
-\ignorespaces#1%
+\begin{tabular}{@{}l@{}}\ignorespaces#1\end{tabular}%
 \right\}%
 $%
 %\\[-1.5mm]
@@ -206,3 +208,9 @@ $%
 \adjustbox{valign=c}{%
 \xxms{#1}%
 }}
+
+
+
+\newcommand{\qeq}{$=_q$\xspace}
+
+\newcommand{\impl}{$\Rightarrow$}

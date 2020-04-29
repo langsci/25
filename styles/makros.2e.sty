@@ -386,9 +386,6 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 \renewcommand{\reftextcurrent}{}
 
 
-
-\newcommand{\ie}{i.\,e.\@\xspace}
-
 \newcommand{\longpage}{\enlargethispage{\baselineskip}}
 
 
@@ -421,7 +418,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 \def \rulenode #1{\begin{tabular}[t]{c}#1\end{tabular}}
 
 
-\newcommand{\qeq}{$=_q$\xspace}
+%\newcommand{\qeq}{$=_q$\xspace}
 
 % noexpand is needed to be able to use \trace in forest trees with translations 
 % the following definition is better
@@ -431,7 +428,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 % http://tex.stackexchange.com/questions/207259/passing-a-command-as-an-argument
 \newcommand\drawtrace{\raisebox{0.2ex}{\_}\rule{0cm}{0.7em}}
 
-\newcommand\trace{\usebox\tracebox}
+\newcommand\trace{\usebox\tracebox\xspace}
 \newsavebox\tracebox
 \AtBeginDocument{
   \savebox\tracebox{\drawtrace}
@@ -442,7 +439,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 \newcommand{\mturn}[1]{\begin{turn}{90}#1\end{turn}}
 
 
-\newcommand{\impl}{$\Rightarrow$}
+%\newcommand{\impl}{$\Rightarrow$}
 
 % used in figures to align things like SPR and COMPS
 \newcommand{\feattab}[1]{[\begin{tabular}[t]{@{}l@{}}#1]\end{tabular}}
@@ -469,7 +466,7 @@ Abbildung~\ref{#1}\vpageref[]{#1} und Abbildung~\ref{#2} \vpageref{#2}%
 
 
 
-
+\RequirePackage{etoolbox}
 
 % to be able to use this in glosses in forest trees
 \robustify\textsc

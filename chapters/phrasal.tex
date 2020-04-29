@@ -1056,7 +1056,7 @@ contributed by the c"=structure rule that optionally licenses a benefactive.
 \ea\label{c-struc-vp-benefactive-two}
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down\\*( @\textsc{Benefactive} )}
-\rulenode{DP\\*(\up\ \obj) = \down}
+\rulenode{DP\\*(\up\ \lfgobj) = \down}
 \rulenode{DP\\*(\up\ \objtheta) = \down}\hspace{-2ex}
 }
 \z
@@ -1138,7 +1138,7 @@ the arguments in (\ref{c-struc-vp-benefactive-two}) are made optional. (\mex{1})
 \ea\label{c-struc-vp-benefactive-optional-args}
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down\\*( @\textsc{Benefactive} )}
-\rulenode{(DP)\\*(\up\ \obj) = \down}
+\rulenode{(DP)\\*(\up\ \lfgobj) = \down}
 \rulenode{(DP)\\*(\up\ \objtheta) = \down}\hspace{-2ex}
 }
 \z
@@ -1148,23 +1148,23 @@ Since both of the DPs are optional (\mex{0}) is equivalent to a specification of
 \ex\label{c-struc-vp-benefactive-optional-args-otheta}
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down\\*( @\textsc{Benefactive} )}
-%\rulenode{(DP)\\*(\up\ \obj) = \down}
+%\rulenode{(DP)\\*(\up\ \lfgobj) = \down}
 \rulenode{DP\\*(\up\ \objtheta) = \down}\hspace{-2ex}
 }
 \ex\label{c-struc-vp-benefactive-optional-args-obj}
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down\\*( @\textsc{Benefactive} )}
-\rulenode{DP\\*(\up\ \obj) = \down}
+\rulenode{DP\\*(\up\ \lfgobj) = \down}
 %\rulenode{(DP)\\*(\up\ \objtheta) = \down}\hspace{-2ex}
 }
 \ex\label{c-struc-vp-benefactive-optional-args-none}
 \phraserule{V$'$}{
 \rulenode{V\\* \up~=~\down\\*( @\textsc{Benefactive} )}
-%\rulenode{(DP)\\*(\up\ \obj) = \down}
+%\rulenode{(DP)\\*(\up\ \lfgobj) = \down}
 %\rulenode{(DP)\\*(\up\ \objtheta) = \down}\hspace{-2ex}
 }
 \zl
-(\mex{0}a) is the variant of (\ref{c-struc-vp-benefactive-optional-args}) in which the \obj is
+(\mex{0}a) is the variant of (\ref{c-struc-vp-benefactive-optional-args}) in which the \lfgobj is
 omitted (needed for (\ref{ex-she-had-been-prepared-a-meal})), (\mex{0}b) is the variant in which the
 \objtheta is omitted (needed for (\ref{ex-extraction-secondary-object})) and in (\mex{0}c) both DPs are
 omitted (needed for (\ref{ex-benefactive-just-verb})). 
@@ -1192,12 +1192,12 @@ benefactive cannot be added. So, in fact the actual configuration in the c-struc
 play a minor role: the account mainly relies on semantics and resource sensitivity. There is one
 piece of information that is contributed by the c-structure rule: it constrains the grammatical
 functions of \argtwo and \argthree, which are disjunctively specified in the template definitions for \argtwo
-and \argthree: \argtwo can be realized as \subj or as \obj. In the active case \argone will be the \subj and because of function argument bi-uniqueness \citep[\page 334]{BATW2015a} no other element can be the \subj and hence \argtwo has to
-be an \obj. \argthree can be either an \obj or an \objtheta. Since \argtwo is an \obj in the active,
+and \argthree: \argtwo can be realized as \lfgsubj or as \lfgobj. In the active case \argone will be the \subj and because of function argument bi-uniqueness \citep[\page 334]{BATW2015a} no other element can be the \lfgsubj and hence \argtwo has to
+be an \lfgobj. \argthree can be either an \lfgobj or an \objtheta. Since \argtwo is an \lfgobj in the active,
 \argthree has to be an \objtheta in the active. In the passive case \argone is suppressed or
 realized as \obltheta (\emph{by} PP). \argtwo will be realized as \subj (since English requires a \subj to be realized) and \argthree could be realized as either
-\obj or \objtheta. This is not constrained by the template specifications so far. Because of the
-optionality in (\ref{c-struc-vp-benefactive-optional-args}), either the \obj or the \objtheta
+\lfgobj or \objtheta. This is not constrained by the template specifications so far. Because of the
+optionality in (\ref{c-struc-vp-benefactive-optional-args}), either the \lfgobj or the \objtheta
 function could be chosen for \argthree. This means that either Lexical Mapping Theory has to be
 revised or one has to make sure that the c-structure rule used in the passive of benefactives states the grammatical
 function of the object correctly. Hence one would need the c-structure rule in
@@ -1828,11 +1828,11 @@ German counterpart takes an \emph{über} PP:
 \label{ex-ergert-aan-aergert-ueber}
 \ex 
 \gll Kim ergert zich aan Sandy.\\
-     Kim annoys \refl{} to Sandy\\
+     Kim annoys \REFL{} to Sandy\\
 \glt `Kim is/gets annoyed at Sandy.'
 \ex 
 \gll Kim ärgert sich über Sandy.\\
-     Kim annoys \refl{} above Sandy\\
+     Kim annoys \REFL{} above Sandy\\
 \glt `Kim is/gets annoyed at Sandy.'
 \zl
 There are language-internal niches with the same type of prepositional objects. For instance,
@@ -2088,6 +2088,7 @@ He proposes the inheritance hierarchy in Figure~\ref{Abbildung-Haugereid} in ord
 possible argument combinations. The Arg5 role is omitted due to space considerations.
 
 \begin{figure}
+\tikzexternaldisable
 \oneline{%
 \begin{tabular}{@{}cccccccc@{}}
 \multicolumn{8}{c}{\mynode{link}{link}}\\[6ex]
@@ -2671,6 +2672,7 @@ model, we will discuss their proposal here. Culicover and Jackendoff assume a mu
 which semantic representations are linked to grammatical functions, which are linked to tree
 positions. Figure~\ref{fig-jackendoff-linking-active} shows an example for an active sentence.
 \begin{figure}
+\tikzexternaldisable
 \centering
 %\scalebox{.7}
 {%
@@ -2726,6 +2728,7 @@ Figure~\ref{fig-jackendoff-linking-passive} shows the mapping of the example dis
 corresponds to the passive.
 
 \begin{figure}
+\tikzexternaldisable
 \centering
 %\scalebox{.7}
 {%

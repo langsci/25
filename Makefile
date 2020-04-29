@@ -266,15 +266,21 @@ source:
 
 
 clean:
-	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tmp *.tpm *.adx *.idx *.ilg *.ind \
+	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tpm *.adx *.idx *.ilg *.ind \
 	*.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.ldx *.lnd *.rdx *.sdx *.snd *.wdx \
-	*.wdv *.xdv chapters/*.aux *.for *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml *.backup
+	*.wdv *.xdv chapters/*.aux *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml *.backup \
+	chapters/*.aux chapters/*.aux.copy chapters/*.old chapters/*~ chapters/*.bak chapters/*.backup \
+	langsci/*/*.aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup \
+
 
 check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
 
 externalization-clean:
 	rm -f external-figures/* *.for *.tmp *.aux.copy *-blx.bib *.auxlock
+
+cleanfor: # These files are precious, as it takes a long time to produce them all.
+	rm -f *.for *.for.tmp grammatical-theory.for.dir/*
 
 realclean: clean
 	rm -f *.dvi *.ps *.pdf

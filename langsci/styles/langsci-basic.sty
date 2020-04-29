@@ -16,24 +16,24 @@
 
 
 \ifx\lsBookLanguage\lsBookLanguageFrench
-  \renewcommand{\chapref}[1]{Chapitre~\ref{#1}}
-  \renewcommand{\partref}[1]{Partie~\ref{#1}}
-  \renewcommand{\tabref}[1]{Tableau~\ref{#1}}
-  \renewcommand{\figref}[1]{Figure~\ref{#1}}
+  \newcommand{\chapref}[1]{Chapitre~\ref{#1}}
+  \newcommand{\partref}[1]{Partie~\ref{#1}}
+  \newcommand{\tabref}[1]{Tableau~\ref{#1}}
+  \newcommand{\figref}[1]{Figure~\ref{#1}}
 \fi
 
 \ifx\lsBookLanguage\lsBookLanguageGerman
-  \renewcommand{\chapref}[1]{Kapitel~\ref{#1}}
-  \renewcommand{\partref}[1]{Teil~\ref{#1}}
-  \renewcommand{\tabref}[1]{Tabelle~\ref{#1}}
-  \renewcommand{\figref}[1]{Abbildung~\ref{#1}}
+  \newcommand{\chapref}[1]{Kapitel~\ref{#1}}
+  \newcommand{\partref}[1]{Teil~\ref{#1}}
+  \newcommand{\tabref}[1]{Tabelle~\ref{#1}}
+  \newcommand{\figref}[1]{Abbildung~\ref{#1}}
 \fi
 
 \ifx\lsBookLanguage\lsBookLanguagePortuguese
-  \renewcommand{\chapref}[1]{Capítulo~\ref{#1}}
-  \renewcommand{\partref}[1]{Parte~\ref{#1}}
-  \renewcommand{\tabref}[1]{Tabela~\ref{#1}}
-  \renewcommand{\figref}[1]{Figura~\ref{#1}}
+  \newcommand{\chapref}[1]{Capítulo~\ref{#1}}
+  \newcommand{\partref}[1]{Parte~\ref{#1}}
+  \newcommand{\tabref}[1]{Tabela~\ref{#1}}
+  \newcommand{\figref}[1]{Figura~\ref{#1}}
 \fi
 
 \newcommand{\lsptoprule}{\midrule\toprule}
@@ -55,11 +55,7 @@
 \newcommand{\citegen}[2][]{\citeauthor{#2}'s (\citeyear*[#1]{#2})}
 \newcommand{\citeapo}[2][]{\citeauthor{#2}' (\citeyear*[#1]{#2})}
 
-\newcommand{\protectedex}[1]{
-\noindent
-\parbox{\textwidth}{
-#1}
-}
+\newcommand{\protectedex}[1]{\noindent\parbox{\linewidth}{#1}}
 
 \newcommand{\largerpage}[1][1]{
 \enlargethispage{#1\baselineskip}
@@ -78,3 +74,12 @@
 
 \let\oldfootnotemark\footnotemark
 \renewcommand{\footnotemark}{\upshape\oldfootnotemark}
+ 
+\newcommand{\biberror}[1]{{\color{red}#1}}  
+
+\newcommand{\markuptitle}[2]{
+  \title{\texorpdfstring{#1}{#2}}
+  \shorttitlerunninghead{#2}
+  \renewcommand{\lsChapterFooterSize}{\scriptsize}
+  \renewcommand{\lsCollectionPaperFooterTitle}{Add\noexpand\texttt{\textbackslash renewcommand\{\textbackslash lsCollectionPaperFooterTitle\}\{A new theory of \textbackslash noexpand\textbackslash textit\{This\} and \textbackslash noexpand\textbackslash textit\{that\}\}} to preamble}
+} 

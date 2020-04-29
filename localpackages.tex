@@ -59,6 +59,12 @@
 
 \usepackage{langsci/styles/langsci-lgr}
 
+\newcommand{\nom}{\NOM}
+\newcommand{\gen}{\GEN}
+\newcommand{\dat}{\DAT}
+\newcommand{\acc}{\ACC}
+
+
 \usepackage{graphicx}
 
 
@@ -95,6 +101,9 @@
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
 \usepackage{langsci/styles/langsci-forest-setup}
+
+\tikzset{external/prefix={grammatical-theory.for.dir/}}
+\forestset{external/master=grammatical-theory}
 
 
 \forestset{
@@ -168,7 +177,7 @@ styles/eng-date,styles/my-theorems}
 
 % do nothing now
 %\let\addlinesold=\addlines
-%\renewcommand{\addlines}[1][1]{}
+\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck

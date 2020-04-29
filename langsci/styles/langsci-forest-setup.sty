@@ -32,13 +32,11 @@
 \tikzset{deparrow/.style={-Latex}}%,blue}}
 
 
-% does not work with forest v1.05 did not check later versions
 \usepackage[external,linguistics]{forest}
-\tikzset{external/up to date check=simple}
-% for texlive: -shell-escape, for miktex -enable-write18
-% All externalized graphics go go the \externaldirectory
-%\tikzexternalize[prefix=external-figures/,shell escape=-shell-escape]
-\tikzset{external/system call={xelatex \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"}}
+\tikzset{
+  external/system call={xelatex \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\texsource"},
+  external/up to date check=simple,
+}
 %\usepackage{morewrites}
 
 
@@ -199,34 +197,54 @@ dg junction/.style={no edge, tikz+={\draw (!p.east)--(!.west) (.east)--(!n.west)
 %
 % So cool! Thanks Sašo Živanović
 %
- wg/.style={
+% modified to cope with multiple occurances of the same word (the, the1, the2)
+%
+  wg/.style={
     for tree={
       no edge,
       draw,
       outer ysep=1pt,
     },
-    copy label/.style={
-      for children={
-        if content={}{
-            content/.pgfmath={content("!u")},
-            calign with current,
-            edge={draw,{-Triangle[open,reversed]}},
-            copy label,
-            !u.content/.pgfmath={content},
-            !u.content+=',
-        }{
-          copy label,
-        }
-      }
-    },
     delay={
       copy label,
-      for tree={name/.pgfmath={content}},
+      for tree={nameN/.option=content},
     },
     for tree={content format={\strut\forestoption{content}}},
     where n children={0}{
       tier=word,
     }{},
+  },
+  copy label/.style={
+    for children={
+      if content={}{
+        % content/.pgfmath={content("!u")},
+        content/.option=!u.content, % faster
+        calign with current,
+        edge={draw,{-Triangle[open,reversed]}},
+        copy label,
+        % !u.content/.pgfmath={content},
+        !u.content/.option=content, % faster
+        !u.content+=',
+      }{
+        copy label,
+      }
+    }
+  },
+  % 1. This is not effective if there's many clashes.
+  % 2. Register tempcounta must be free to use.
+  nameN/.style={
+    if nodewalk valid={name=#1}{
+      tempcounta=2,
+      @nameN=#1,
+    }{
+      name=#1,
+    },
+  },
+  @nameN/.style={
+    while nodewalk valid={name/.process=Rw1{tempcounta}{#1##1}}{
+      tempcounta+=1,
+    },
+    name/.process=Rw1{tempcounta}{#1##1},
   },
 %
 %
@@ -249,7 +267,10 @@ substitution/.style={edge={<-,dashed},l+=\baselineskip},
 %
 %
 typehierarchy/.style={for tree={parent anchor=south, child
-    anchor=north,align=center,base=top,font=\itshape,fit=rectangle}},
+% old version:
+%    anchor=north,align=center,base=top,font=\itshape,fit=rectangle}},
+% to get parallel lines:
+    anchor=north,align=center,base=top,font=\itshape,calign=fixed angles}},
 % if there are instances as leaves in the hiarchy
 instance/.style={edge=dotted},
 %

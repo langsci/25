@@ -859,7 +859,104 @@ Furthermore, the observation that relative clauses consist of a phrase with a re
 is lost. This insight can be kept if one assumes a GPSG"=style\indexgpsg analysis where information about whether there is a relative pronoun
 in the relative phrase can be passed up to the highest node of the relative phrase.
 The relative clause can then be analyzed as the combination of a sentence with a gap and an appropriately marked relative phrase.
-For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see Section~\ref{Abschnitt-Relativ-Interrogativsaetze}.
+For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see
+Section~\ref{Abschnitt-Relativ-Interrogativsaetze}.
+
+Kubota (p.c.\,2020) discussing this section and \citet{Kubota2020a} with me pointed out to me
+\citegen[\page 455]{Sag97a} claim that the relative phrases in English are restricted to be NPs or PPs. This information
+has to be encoded somewhere. \citet[\page 455]{Sag97a} encodes it on the phrasal level specifying in the phrasal schema
+for relative clauses that the relative phrase has to be an NP or a PP. Categorial Grammar being an
+extremely lexicalized theory has to express this constraint lexically. I think the claim that only
+NPs and PPs can be fillers in relative clauses is not correct for English and I will return to this
+question below. In any case this restriction does not hold for German since the relative phrase can
+be an NP, a PP, an adverb, even a verb phrase or adjectival phrase in German:
+\eal
+\settowidth\jamwidth{(AdvP)}
+\ex 
+\gll der Mann, \emph{den} er kennt\\
+     the man   who he knows\\\jambox{(NP)}
+\glt `the man who he knows'
+\ex 
+\gll der Mann, [von \emph{dem}] er gehört hat\\
+     the man   \spacebr{}of  whom he heard has\\\jambox{(PP)}
+\glt `the man he had heard about'
+\ex 
+\gll der Ort, \emph{wo} er schläft\\
+     the place where he sleeps\\\jambox{(AdvP)}
+\glt `the place where he seeps'
+\ex\label{ex-relative-clause-wie} 
+\gll die Art und Weise, \emph{wie} er lacht\\
+     the way and manner how he laughs\\\jambox{(AdvP)}
+\glt `the way he laughs'
+
+%\ex der Mann, der zu schlafen oft versucht hat
+%\ex ein Maler, der sie um jeden Preis heiraten will und [den auszuschlagen]$_i$ sie [die geradezu heupferdmäßige Dummheit \trace$_i$] hat
+%\ex eine Tat, [\sub{VP} die begangen zu haben]$_i$ Hans sich weigert\iw{weigern} [\sub{VP} dem Richter \_$_i$ zu gestehen]\footnote{
+%        \citep*[\page 48a]{Haider85c}
+%}
+\ex
+\gll ein Umstand, [den zu berücksichtigen] er immer vergißt,\footnotemark\\
+     a   fact     \spacebr{}which to consider he always forgets\\\jambox{(VP)}
+\footnotetext{
+  \citep[\page 79]{Bech55a}. See \citet{Haider85c} and \citet[Section~10.7]{Mueller99a} for a discussion of pied-piping in
+  relative clauses with fronted verbal projections.
+}
+\glt `a fact which he always forgets to consider'
+\ex 
+\gll der Mann, [auf \emph{den} stolz] wohl niemand sein würde\\
+     the man   \spacebr{}of  whom proud \partic{} nobody be would\\\jambox{(AdjP)}
+\glt `the man whom probably nobody would be proud of'
+\zl
+And these possibilities to have relative pronouns of different categories are not restricted to
+German. 
+%% The following English examples are taken from \citet[\page 1052]{HPP2002a-u}:
+%% %% This does not work since one could underspecify the category of which. Could be done in
+%% %% CG as well. 24.04.2020
+%% \eal
+%% \settowidth\jamwidth{(clause)}
+%% \ex She said he was \emph{arrogant}, [\emph{which} I don't think he is]. \jambox{(AdjP)}
+%% \ex He set out to \emph{redeem himself}, [\emph{which} he eventually did]. \jambox{(VP)}
+%% \ex \emph{He wouldn't let us defend ourselves}, [\emph{which} was completely unfair] \jambox{(clause)}
+%% \zl
+%% If one assumes that \emph{which} plays the normal role in syntax which a non-\emph{wh} element would play,
+%% then the part of speech of \emph{which} would be adjective or verb in the examples in (\mex{0}). 
+
+The following examples are taken from \citet[\page 311]{NS78a-u}.
+\eal
+\ex That woman, [compared to \emph{whom}] Attila the Hun was an angel, is unfortunately my husband's
+favorite aunt.\hfill(AdjP)
+\ex The elegant parties, [to be admitted to one of \emph{which}] was a privilege, had usually been held at Delmonico's.\hfill(VP)
+\zl
+\citet[\page 311--312]{NS78a-u} treat \emph{compared} as adjective so the pied piped phrase would be an AP, but even
+if one rejects this categorization, examples like (\mex{1}) involving clear adjectives are possible:
+\ea
+this son [proud of \emph{whom}] Peter always was
+\z
+
+\citet[\page 1053]{HPP2002a-u} discuss the following examples with \emph{when}, \emph{why}, and \emph{where}:
+\eal
+\ex I haven't seen him since the day [\emph{when} Kim was born].
+\ex That's the reason [\emph{why} she resigned].
+\ex This is much better than the hotel [\emph{where} we stayed last year].
+\zl
+These elements are adverbs. It follows from the discussion of the examples in (\mex{0}) and
+(\mex{-1}) that there should not be a restriction on the part of speech of the relative phrase to be
+noun or preposition. It might be useful to have such restrictions on some types of relative clauses
+but it is not a restriction holding for all relative clauses. Hence, the schema for relative clauses
+of the kind discussed here would be (\mex{1}) both for German and English:
+\ea
+RC$_i$ $\to$ XP[\rel \sliste{ \normalfont\textit{i} }], S[\slasch \sliste{ XP } ]
+\z
+This captures the generalization expressed above that a relative clause consists of a phrase
+containing a relative pronoun and a sentence from which this relative phrase is extracted. The
+category of the relative phrase is determined by two things: it must be possible to extract the
+respective category from the sentence. So it must play a role within this sentences and its category
+and properties like case are determined within the sentences. And furthermore it must be possible to
+build a phrase of the respective category containing a relative pronoun. In the case of adverbial
+relative phrases, the relative phrase has to be the adverbial element. Since \emph{how} does not
+function as relative element, it cannot appear as relative phrase. German has \emph{wie} as relative
+element and hence we have examples like (\ref{ex-relative-clause-wie}). 
+
 \is{Categorial Grammar (CG)|)}
 
 \bigskip
@@ -901,6 +998,8 @@ Mark Steedman discusses a variant of Categorial Grammar, \emph{Combinatory Categ
 combination of Dependency Grammar and Categorial Grammar, which they call Dependency Categorial Grammar\is{Dependency Categorial Grammar}.
 
 \citet{Briscoe2000a} and \citet{Villavicencio2002a} discuss UG"=based acquisition models in the framework of Categorial Grammar.
+
+\citet{Kubota2020a} compares Categorial Grammar with HPSG.
 }
 
 

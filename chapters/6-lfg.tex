@@ -15,7 +15,7 @@ the requirements regarding the psycholinguistic plausibility of linguistics theo
 
 The more in"=depth works on German are \citew{Berman96a-u,Berman2003a} and \citew{Cook2001a}.
 
-LFG has well-designed formal foundations \citep{KB82a-u,Kaplan95a}, and hence first implementations
+LFG has well-designed formal foundations \citep{KB82a-u,Kaplan89b}, and hence first implementations
 were available rather quickly \citep*{FR83b,FR83a,Yasukawa1984a-u,BH86a-u,%
 ED86a-u,% CHARON Parser
 WA86a-u,%
@@ -194,7 +194,7 @@ is externally controlled\is{control}\\
 \end{tabular}
 \caption{\label{Tabelle-GOV}Governable grammatical functions}
 \end{table}\todostefan{\objtheta im Deutschen?}%
-The \pred specification corresponds to the theta grid\is{theta-grid@$\theta$-grid} in \gbt. The valence\is{valence} of a head is specified by
+The \lfgpred specification corresponds to the theta grid\is{theta-grid@$\theta$-grid} in \gbt. The valence\is{valence} of a head is specified by
 the \predv.
 
 The non"=governable grammatical functions are given in Table~\vref{Tabelle-NGOV}.
@@ -258,10 +258,10 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \ex David sneezed.
 \ex
 \begin{tabular}[t]{l}
-($f$ \pred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\
+($f$ \lfgpred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\
 ($f$ \lfgtense) = \lfgpast\\
 ($f$ \lfgsubj) = $g$\\
-($g$ \pred) = {\small `DAVID'}
+($g$ \lfgpred) = {\small `DAVID'}
 \end{tabular}
 \zl
 
@@ -416,7 +416,7 @@ David devoured a sandwich that Peter sleeps.%\\
 
 \noindent
 The constraints on completeness and coherence together ensure that all and only those arguments required in
-the \pred specification are actually realized.
+the \lfgpred specification are actually realized.
 Both of those constraints taken together correspond to the Theta"=Criterion\is{theta-criterion@Theta"=Criterion} in \gbt (see
 page~\pageref{theta-Kriterium}).\footnote{%
 For the differences between predicate"=argument structures in LFG and the Deep Structure oriented Theta Criterion, see \citew[\page xxvi--xxviii]{BK82a}.} 
@@ -472,7 +472,7 @@ In the equation (\up\ \lfgobj) = \down{},  the arrows `\up' and `\down' correspo
 (\mex{1}) is an example with an intransitive verb and (\mex{2}) is the corresponding visualization:
 
 \ea
-\catlexentry{sneezed}{V}{(\up\ \pred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\*
+\catlexentry{sneezed}{V}{(\up\ \lfgpred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\*
                      (\up\ \lfgtense) = \lfgpast}
 \z
 
@@ -528,8 +528,8 @@ given in (\mex{1}b):
   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 \hspace*{3em}%
-{\fd{\rnode{s}{\fdand{\feat{\pred}{\small `YAWN\sliste{\lfgsubj}'}
-           \feat{\subj}{\rnode{i}{\fdand{\feat{\pred}{\small `DAVID'}}}}}}}}%
+{\fd{\rnode{s}{\fdand{\feat{\lfgpred}{\small `YAWN\sliste{\lfgsubj}'}
+           \feat{\subj}{\rnode{i}{\fdand{\feat{\lfgpred}{\small `DAVID'}}}}}}}}%
 \hspace*{2em}%
 \mt{\relation{yawn}(\relation{david})}{\rnode{x}{~[\ ]}}
 \ltor{ip}{s}
@@ -656,7 +656,7 @@ contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one
                         pred & `SANDWICH'\\
                       }\\
          adj & \menge{ \lfgms{ pred & `YESTERDAY' },
-                        \lfgms{ \pred & `AT\sliste{\lfgobj}'\\
+                        \lfgms{ \lfgpred & `AT\sliste{\lfgobj}'\\
                                 obj   & \lfgms{ pred & `NOON' }\\
                               } }\\
 }
@@ -667,7 +667,7 @@ be part of the \textsc{adj} set of the mother's f"=structure:
 \ea
 \phraserule{V$'$}{
 \rulenode{V$'$\\* \up~=~\down}
-\rulenode{PP\\*\hbox {$\downarrow$\kern .2em} $\in$ (\up\ \adj)}}
+\rulenode{PP\\*\hbox {$\downarrow$\kern .2em} $\in$ (\up\ \lfgadj)}}
 \z
 The representation of adjuncts in a set is not sufficient to characterize the meaning of an
 utterance containing scope"=bearing\is{scope} adjuncts (as for instance the negation in sentences like (\ref{bsp-absichtlich-nicht-anal})
@@ -915,14 +915,14 @@ C$'$ is licensed by a special rule:
 \rulenode{VP\\*\up~=~\down}}
 \z
 In LFG rules, there is normally only one element annotated with `\up~=~\down', namely the head. In (\mex{0}), there are two such elements, which is why both equally contribute to the
-f"=structure of the mother. The head domain of V has been extended to C. The information about \lfgsubj and \lfgobj comes from the VP and the information about \pred from C.%
+f"=structure of the mother. The head domain of V has been extended to C. The information about \lfgsubj and \lfgobj comes from the VP and the information about \lfgpred from C.%
 \is{head domain!extended|)}\is{verb"=final language}
 
 \section{Local reordering}
 \label{Abschnitt-LFG-Umstellung}
 
 Two\is{constituent order} possibilities for treating local reordering have been discussed in the literature:\footnote{%
-  \citet[\page 20--21]{Kaplan95a} shows how one can write grammars in the ID/LP format\is{ID/LP grammar} in LFG. A GPSG"=like\indexgpsg analysis of German constituent
+  \citet[\page 20--21]{Kaplan89b} shows how one can write grammars in the ID/LP format\is{ID/LP grammar} in LFG. A GPSG"=like\indexgpsg analysis of German constituent
   order has not been proposed in the LFG framework.%
 }
 \begin{itemize}
@@ -997,7 +997,7 @@ specification of case/grammatical function interaction would be much more compli
 }
 \ea
 \label{le-verschlingen}
-\catlexentry{verschlingt}{V}{(\up\ \pred) = {\small `VERSCHLINGEN\sliste{\lfgsubj, \lfgobj}'}\\*
+\catlexentry{verschlingt}{V}{(\up\ \lfgpred) = {\small `VERSCHLINGEN\sliste{\lfgsubj, \lfgobj}'}\\*
                              (\up\ \lfgsubj{} {\small AGR CAS}) = NOM\\*
                              (\up\ \lfgobj{} {\small AGR CAS}) = ACC\\*
                              (\up\ \lfgtense) = \small PRES}
@@ -1360,6 +1360,8 @@ with the XLE system.
 \citet{Levelt89a} developed a model of language production based on LFG.
  \citet{Pinker84a-u} -- one of the best"=known researchers on language acquisition -- used LFG as the model for his theory of acquisition. For another theory on first and second
  language acquisition that uses LFG, see \citew{Pienemann2005a}. 
+
+\citet{WA2020a} compare LFG with HPSG.
 }
 
 

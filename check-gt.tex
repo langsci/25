@@ -18,6 +18,7 @@
 %                ,showindex
 %                ,openreview
 %                ,copyright=CC-BY-ND
+                ,colorlinks, citecolor=brown 
 		  ]{langsci/langscibook}                          
 
 
@@ -36,9 +37,9 @@
 
 \newcommand{\LATER}[1]{}
 
-%\bibliography{bib-abbr,biblio}
+\bibliography{bib-abbr,biblio}
 %\bibliography{check-gt}
-\bibliography{gt}
+%\bibliography{gt}
 
 \providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{} \providecommand*{\printsecond}[2]{#2}
 
@@ -66,8 +67,9 @@
 %\includeonly{chapters/9-cxg}  % fertig
 %\includeonly{chapters/dg}
 %\includeonly{chapters/tag}    % fast fertig, aber der eine V-TAG-Baum und danach ...
+%\includeonly{chapters/preface-part-two}
 %\includeonly{chapters/innateness}
-\includeonly{chapters/mts}
+%\includeonly{chapters/mts}
 %\includeonly{chapters/competence}
 %\includeonly{chapters/acquisition}
 %\includeonly{chapters/complexity}
@@ -80,7 +82,7 @@
 %\includeonly{chapters/conclusions}
 %\includeonly{chapters/nothing}
 
-%\includeonly{chapters/loesungen}
+\includeonly{chapters/loesungen}
 
 %\includeonly{backmatter}
 
@@ -88,6 +90,6 @@
 
 % Hack to get all items cited in the files not included in this run.
 % only use this if you have gt.bib
-\nocite{*}
+%\nocite{*}
 
 \end{document}
