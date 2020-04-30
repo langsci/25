@@ -217,13 +217,19 @@ unusedgt.bib: ../../../Bibliographien/biblio.bib
 
 bib: gt.bib
 
+# We need a special .tex file loading biblio.bib to create gt.bib.
+# We cannot derive it from grammatical-theory.tex since this loads gt.bib.
+
 # two runs in order to get "also printed as ..." right
+# biber --tool removes unwanted fields (annotation, abstract)
+# explanation of bbl2nocite and stuff: https://tex.stackexchange.com/a/164365/18561
 gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
-	xelatex -no-pdf -interaction=nonstopmode bib-creation 
+	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
 	biber -m=1 bib-creation.bcf       # `--mincrossref | -m 1` produces a .bbl with all the references 
 	bbl2nocite bib-creation tmpfile
-	xelatex -no-pdf -interaction=nonstopmode bib-creation 
-	biber --output_format=bibtex bib-creation.bcf -O gt.bib
+	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
+	biber --output_format=bibtex bib-creation.bcf -O gt_tmp.bib
+	biber --tool --configfile=biber-tool-test.conf gt_tmp.bib -O gt.bib
 
 # --output_resolve removes all crossrefs if one wants crossref, one needs this:
 # https://tex.stackexchange.com/a/164365/18561
