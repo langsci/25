@@ -8,18 +8,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-\documentclass[ output=book
-	        %,blackandwhite
+\documentclass[output=book
 	        ,smallfont
-                ,newtxmath
-                ,nonflat
-%	        ,draftmode  
+		,modfonts
+		,nonflat
+%		,multiauthors
+%	        ,collection
+%	        ,collectionchapter
+%	        ,collectiontoclongg
+ 	        ,biblatex  
+                ,babelshorthands
 %                ,showindex
-%                ,openreview
-%                ,copyright=CC-BY-ND
-                ,colorlinks, citecolor=brown 
-		  ]{langsci/langscibook}                          
+                ,newtxmath
+                ,colorlinks, citecolor=brown % for drafts
+%                ,draftmode
+% 	        ,coverus
+		  ]{./langsci/langscibook}                              
 
 
 
@@ -82,9 +86,18 @@
 %\includeonly{chapters/conclusions}
 %\includeonly{chapters/nothing}
 
-\includeonly{chapters/loesungen}
+%\includeonly{chapters/loesungen}
 
 %\includeonly{backmatter}
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+% if you want externalize graphics, compile files in chapters directly
+%\forestset{external/readonly}
+% you may switch this off in the final run since eternalization may cut off overlays.
+\tikzexternalize
 
 \input grammatical-theory-include
 
@@ -93,3 +106,8 @@
 %\nocite{*}
 
 \end{document}
+
+
+%%% Local Variables:
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:

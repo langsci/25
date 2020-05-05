@@ -1098,10 +1098,9 @@ ISBN: &
   {}
   {ISSN: \lsISSN}
 
-
 \IfStrEq{\lsBookDOI}{??}
   {{\color{red} no DOI}}
-  {\doi{\lsBookDOI}}\\
+  {DOI: \href{https://doi.org/\lsBookDOI}{\nolinkurl{\lsBookDOI}}}\\
 \IfStrEq{\lsID}{000}{\color{red} ID not assigned!}{%
 \githubtext\\
 \paperhivetext
@@ -1337,8 +1336,8 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 	mincrossrefs=99,
 	maxcitenames=2,
 	isbn=false,
-	doi=false,
-	url=false,
+	doi=true,
+	url=true,
 	eprint=false,
 	autolang=hyphen,
 	\iflsResetCapitals
@@ -1462,17 +1461,17 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 \renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
 
 \usepackage{setspace}
-\usepackage{caption}
-% \captionsetup{labelfont=bf}
-\captionsetup{%
-font={%
-stretch=.8%
-,small%
-},%
-width=.8\textwidth
-}
+% \usepackage{caption}
+% % \captionsetup{labelfont=bf}
+% \captionsetup{%
+% font={%
+% stretch=.8%
+% ,small%
+% },%
+% width=.8\textwidth
+% }
 
-\setcapindent{0pt}
+% \setcapindent{0pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1686,18 +1685,6 @@ width=.8\textwidth
 %% http://tex.stackexchange.com/questions/66722/tex-live-2012-xelatex-moderncv-error-failed-to-convert-input-string-to-utf1
 \hypersetup{unicode,pdfencoding=auto,bookmarksopenlevel=0}
 
-%% add hyperlinks for DOIs in bibliography; must appear after hyperref
-\usepackage{doi}
-\renewcommand{\doitext}{DOI:}
-\iflsBiblatex
-\renewbibmacro*{finentry}{\finentry
-	\iffieldundef{url}{}{ \url{\thefield{url}}\iffieldundef{urlday}{}{, accessed \thefield{urlyear}-\thefield{urlmonth}-\thefield{urlday}}.}
-  \restorefield{note}{\lsnote}
-  \iffieldundef{note}{}{\addspace{\thefield{note}\addperiod}}
-	\iffieldundef{doi}{}{ {\color{lsDOIGray}\doi{\thefield{doi}}}}
-}
-%\DeclareFieldFormat{doi}{{\color{lsGuidelinesGray}\doi{#1}}}
-\fi
 
 %% autoref (part of hyperref)
 \ifx\lsBookLanguage\lsBookLanguageEnglish

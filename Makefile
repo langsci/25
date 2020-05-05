@@ -88,7 +88,6 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	xelatex -no-pdf -interaction=nonstopmode $* 
 	biber $*
 	xelatex -no-pdf -interaction=nonstopmode $*
-	correct-index
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.sdx # ordering of references to footnotes
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
@@ -287,6 +286,9 @@ externalization-clean:
 
 cleanfor: # These files are precious, as it takes a long time to produce them all.
 	rm -f *.for *.for.tmp grammatical-theory.for.dir/*
+
+brutal-clean: realclean cleanfor
+
 
 realclean: clean
 	rm -f *.dvi *.ps *.pdf

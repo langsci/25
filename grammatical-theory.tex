@@ -9,16 +9,26 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
 
 \documentclass[output=book
-	        %,blackandwhite
-	        ,smallfont
-%	        ,draftmode
-%                ,bibtex
+		,modfonts
+		,nonflat
+%		,multiauthors
+%	        ,collection
+%	        ,collectionchapter
+%	        ,collectiontoclongg
+ 	        ,biblatex  
+                ,babelshorthands
+%                ,showindex
                 ,newtxmath
-                ,nonflat
-                %,showindex
-		  ]{./langsci/langscibook}                          
+%                ,colorlinks, citecolor=brown % for drafts
+%                ,draftmode
+% 	        ,coverus
+		  ]{./langsci/langscibook}                              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -38,6 +48,16 @@
 %\newcommand{\NOTE}[1]{\marginpar{#1}}
 
 \newcommand{\LATER}[1]{}
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
+
+
+% if you want externalize graphics, compile files in chapters directly
+\forestset{external/readonly}
+% you may switch this off in the final run since eternalization may cut off overlays.
+\tikzexternalize
 
 
 \bibliography{bib-abbr,biblio}

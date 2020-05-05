@@ -1,26 +1,10 @@
-%\usepackage{bigfoot}
-
+\usepackage{csquotes}
 
 % http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
 \usepackage{etex}\reserveinserts{28}
 
-% http://tex.stackexchange.com/questions/229500/tikzmark-and-xelatex
-% temporary fix, remove later
-%\newcount\pdftexversion \pdftexversion140 \def\pgfsysdriver{pgfsys-dvipdfm.def} \usepackage{tikz} \usetikzlibrary{tikzmark}
-
-%\usepackage[section]{placeins}
 
 \usepackage{eurosym} % should go once Berthold fixes unicode
-
-
-% http://tex.stackexchange.com/questions/284097/subscript-like-math-but-without-the-minus-sign?noredirect=1#comment685345_284097
-% for subscripts
-\usepackage{amsmath}
-%\usepackage{unicode-math} breaks the CCG derivations, the horizontal lines are too high
-
-
-% \justify to switch of \raggedright in translations
-%\usepackage{ragged2e}
 
 % Haitao Liu
 \usepackage{xeCJK}
@@ -50,14 +34,13 @@
 
 \usepackage{styles/my-ccg-ohne-colortbl}
 
-\usepackage{langsci/styles/jambox}
 
 % This has side effects on my-ccg commands do no know why
 %\usepackage{langsci/styles/langsci-optional}
 
-\usepackage{styles/oneline}
+\usepackage{./styles/oneline}
 
-\usepackage{langsci/styles/langsci-lgr}
+\usepackage{./langsci/styles/langsci-lgr}
 
 \newcommand{\nom}{\NOM}
 \newcommand{\gen}{\GEN}
@@ -74,10 +57,10 @@
 
 
 
-\usepackage{styles/ogonek}        % For Ewa Dabrowska
+\usepackage{./styles/ogonek}        % For Ewa Dabrowska
 
 
-\usepackage{styles/mycommands}% \spacebr
+\usepackage{./styles/mycommands}% \spacebr
 
 
 % still needed
@@ -100,10 +83,12 @@
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{langsci/styles/langsci-forest-setup}
+\usepackage{./langsci/styles/langsci-forest-setup}
 
 \tikzset{external/prefix={grammatical-theory.for.dir/}}
 \forestset{external/master=grammatical-theory}
+
+\usepackage{./langsci/styles/forest-externalizetikz}
 
 
 \forestset{
@@ -118,7 +103,7 @@
 
 
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
-\usepackage{german}\selectlanguage{USenglish}
+%\usepackage{german}\selectlanguage{USenglish}
 
 \usepackage{styles/merkmalstruktur,styles/abbrev,styles/makros.2e,styles/my-xspace,styles/article-ex,styles/additional-langsci-index-shortcuts,
 styles/eng-date,styles/my-theorems}
