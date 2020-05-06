@@ -293,5 +293,13 @@ brutal-clean: realclean cleanfor
 realclean: clean
 	rm -f *.dvi *.ps *.pdf
 
+localformat.fmt: localformat.tex # todo: + everything in langsci/ etc.
+	xetex -ini -etex -jobname localformat '\let\origdump\dump \let\dump\relax \input xelatex.ini \input localformat.tex \origdump'
 
+.PHONY: mainwithlocalformat
+# ad-hoc!
+mainwithlocalformat:
+	xetex -fmt localformat.fmt -jobname grammatical-theory grammatical-theory-include.tex
 
+trees.pdf: trees.tex # etc
+	xetex -fmt localformat.fmt trees

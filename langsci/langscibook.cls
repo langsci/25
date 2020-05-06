@@ -709,70 +709,8 @@
 \usepackage{unicode-math}
 \fi
 
-\iflsNewtxmath
-%% Deprecated:
-\PassOptionsToPackage{no-math}{fontspec} % must appear before metalogo or any fontspec stuff; deactivates fontspec's math settings, which is necessary to let newtxmath do the job
-\fi
+%%%% Contents of localfonts.tex was here.  Initex complains if native font related stuff is here.
 
-\usepackage{metalogo}\newcommand{\xelatex}{\XeLaTeX\xspace}
-
-\setmonofont[
-%   Ligatures={TeX},% not supported by ttf
-  Scale=MatchLowercase,
-  BoldFont = DejaVuSansMono-Bold.ttf ,
-  SlantedFont = DejaVuSansMono-Oblique.ttf ,
-  BoldSlantedFont = DejaVuSansMono-BoldOblique.ttf
-]{DejaVuSansMono.ttf}
-
-\setsansfont[
-  %Ligatures={TeX,Common},% not supported by ttf
-  Scale=MatchLowercase,
-  Path=\fontpath,
-  BoldFont = Arimo-Bold.ttf,
-  ItalicFont = Arimo-Italic.ttf,
-  BoldItalicFont = Arimo-BoldItalic.ttf
-]{Arimo-Regular.ttf}
-
-\iflsNewtxmath\else
-\setmathfont[AutoFakeBold,Path=\fontpath]{LibertinusMath-Regular.otf}
-\setmathfont[range={cal},StylisticSet=1,Path=\fontpath]{XITSMath-Regular.otf}
-\setmathfont[range={bfcal},StylisticSet=1,Path=\fontpath]{XITSMath-Bold.otf}
-\fi
-
-\iflsOldStyleNumbers
-  \defaultfontfeatures[LibertinusSerif-Semibold.otf,LibertinusSerif-Italic.otf,LibertinusSerif-SemiboldItalic.otf,LibertinusSerif-Regular.otf]{SmallCapsFeatures={Numbers=OldStyle}}
- \fi
-
-\setmainfont[
-  Ligatures={TeX,Common},
-  Path=\fontpath,
-  PunctuationSpace=0,
-  Numbers={Proportional},
-  BoldFont = LibertinusSerif-Semibold.otf,
-  ItalicFont = LibertinusSerif-Italic.otf,
-  BoldItalicFont = LibertinusSerif-SemiboldItalic.otf,
-  BoldSlantedFont = LibertinusSerif-Semibold.otf,
-  SlantedFont    = LibertinusSerif-Regular.otf,
-  SlantedFeatures = {FakeSlant=0.25},
-  BoldSlantedFeatures = {FakeSlant=0.25},
-  SmallCapsFeatures = {FakeSlant=0},
-]{LibertinusSerif-Regular.otf}
-
-%% Deprecated:
-\iflsNewtxmath		% some users have problems when installing newtxmath
-	\usepackage[libertine]{newtxmath}
-	%% following http://tex.stackexchange.com/questions/297328/xelatex-does-not-load-newtxmath-with-linuxlibertine-sometimes
-	%% due to a bug in XeTeX. This also seems to fix an issue with \url in footnotes.
-  %% Unfortunately, this is NOT extensively tested!
-	\usepackage{xpatch}
-	\xpretocmd{\textsuperscript}
-	 {{\sbox0{$\textstyle x$}}}
-	 {}{}
-	\AtBeginDocument{%
-	  \DeclareSymbolFont{operators}{\encodingdefault}{\familydefault}{m}{n}%
-	  \SetSymbolFont{operators}{bold}{\encodingdefault}{\familydefault}{b}{n}%
-	}
-\fi
 
 \let\oldtabular\tabular	% number in tabulars
 \let\endoldtabular\endtabular
