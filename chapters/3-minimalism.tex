@@ -99,7 +99,6 @@ depicted in Figure~\vref{fig-architecture-minimalism} (left figure).
   % "inner xsep=0" on "covert syntax" and "Transfer" nodes --- both to get a
   % bit of space, and to achieve alignment to margins.  The macro below is used
   % to compensate "inner xsep=0" on one side of the node.
-\edef\innerxsep{\noexpand\hspace*{\pgfkeysvalueof{/pgf/inner xsep}}}%
 %\hfill
 \tikzexternaldisable
 %\scalebox{.92}{%
@@ -1050,8 +1049,6 @@ Grewendorf \citeyear[\page 85, 240]{Grewendorf2002a}; \citeyear{Grewendorf2009a}
 
 \begin{figure}[htb]
 \centering
-\newlength\mytextheight
-\settototalheight{\mytextheight}{XpX$^0$X$'$}
 \begin{forest}
   delay={
     where content={}{
