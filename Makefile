@@ -197,6 +197,17 @@ public: grammatical-theory.pdf
 commit:
 	svn commit -m "published version to the web"
 
+memos:
+	xelatex -shell-escape grammatical-theory
+	python3 memomanager.py split grammatical-theory.mmz
+
+
+forest-commit:
+	git add grammatical-theory.for.dir/*.pdf
+	git commit -m "forest trees" grammatical-theory.for.dir/*.pdf grammatical-theory.for
+	git push -u origin
+
+
 o-public: o-public-lehrbuch 
 #o-public-bib
 
@@ -281,13 +292,10 @@ clean:
 check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
 
-externalization-clean:
-	rm -f external-figures/* *.for *.tmp *.aux.copy *-blx.bib *.auxlock
+cleanmemo:
+	rm -f *.mmz chapters/*.mmz chapters/*.memo.dir/*
 
-cleanfor: # These files are precious, as it takes a long time to produce them all.
-	rm -f *.for *.for.tmp grammatical-theory.for.dir/*
-
-brutal-clean: realclean cleanfor
+brutal-clean: realclean cleanmemo
 
 
 realclean: clean

@@ -15,10 +15,10 @@
 \newcommand\mathdash{\text{\normalfont -}}
 
 
-\newcommand{\todostefan}[1]{{\tikzexternaldisable\todo[color=orange!80]{\footnotesize #1}}\xspace}
-\newcommand{\todosatz}[1]{{\tikzexternaldisable\todo[color=red!40]{\footnotesize #1}}\xspace}
+\newcommand{\todostefan}[1]{{\memoizeset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
+\newcommand{\todosatz}[1]{{\memoizeset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
 
-\newcommand{\inlinetodostefan}[1]{{\tikzexternaldisable\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
+\newcommand{\inlinetodostefan}[1]{{\memoizeset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
 
 
 
@@ -316,14 +316,12 @@ frbox/.style={
 % get rrid of these morewrite messages:
 % https://tex.stackexchange.com/questions/419489/suppressing-messages-to-standard-output-from-package-morewrites/419494#419494
 \ExplSyntaxOn
-\cs_set_protected:Npn \__lmorewrites_shipout_ii:
+\cs_set_protected:Npn \__morewrites_shipout_ii:
   {
     \__morewrites_before_shipout:
     \__morewrites_tex_shipout:w \tex_box:D \g__morewrites_shipout_box
     \edef\tmp{\interactionmode\the\interactionmode\space}\batchmode\__morewrites_after_shipout:\tmp
   }
-
-
 \ExplSyntaxOff
 
 % https://tex.stackexchange.com/questions/154594/how-to-diagnose-a-permanent-labels-may-have-changed-warning
@@ -343,7 +341,7 @@ frbox/.style={
 % Für die Lösung des van Trijp-Problems
 % \patchcmd{\mkbibindexname}{\ifdefvoid{#3}{}{\MakeCapital{#3} }}{\ifdefvoid{#3}{}{#3 }}{}{\AtEndDocument{\typeout{mkbibindexname could not be patched.}}}
 
-% I moved these definitions here (from 3-minimalism.tex) because of extraction
+% I moved these definitions here (from 3-minimalism.tex) because of extraction of trees
 \edef\innerxsep{\noexpand\hspace*{\pgfkeysvalueof{/pgf/inner xsep}}}%
 \newlength\mytextheight
 \settototalheight{\mytextheight}{XpX$^0$X$'$}

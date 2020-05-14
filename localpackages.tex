@@ -36,11 +36,26 @@
 
 
 % This has side effects on my-ccg commands do no know why
-%\usepackage{langsci/styles/langsci-optional}
+%\usepackage{./langsci/langsci-optional}
+
+% used to be in this package
+\providecommand{\citegen}{}
+\renewcommand{\citegen}[2][]{\citeauthor{#2}'s (\citeyear*[#1]{#2})}
+\providecommand{\lsptoprule}{}
+\renewcommand{\lsptoprule}{\midrule\toprule}
+\providecommand{\lspbottomrule}{}
+\renewcommand{\lspbottomrule}{\bottomrule\midrule}
+\providecommand{\largerpage}{}
+\renewcommand{\largerpage}[1][1]{\enlargethispage{#1\baselineskip}}
+
+\providecommand{\tablevspace}{}
+% vertical space to structure tables
+\renewcommand{\tablevspace}{\\[-.5em]}
+
 
 \usepackage{./styles/oneline}
 
-\usepackage{./langsci/styles/langsci-lgr}
+\usepackage{./langsci/langsci-lgr}
 
 \newcommand{\nom}{\NOM}
 \newcommand{\gen}{\GEN}
@@ -69,7 +84,7 @@
 % and one \Tree in mts.tex
 \usepackage{tikz-qtree}
 
-\usepackage{langsci/styles/langsci-gb4e}
+\usepackage{./langsci/langsci-gb4e}
 
 
 \usepackage{subfig}
@@ -83,13 +98,7 @@
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{./langsci/styles/langsci-forest-setup}
-
-\tikzset{external/prefix={grammatical-theory.for.dir/}}
-\forestset{external/master=grammatical-theory}
-
-\usepackage{./langsci/styles/forest-externalizetikz}
-
+\usepackage{./langsci/langsci-forest-setup}
 
 \forestset{
       terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
@@ -98,6 +107,12 @@
       set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
 }
 
+\providecommand\memoize[2][]{{#2}}
+\providecommand\memoizeset[1]{}
+%\usepackage{./styles/memoize} % this is safe to comment out because of the stubs defined above
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+}
 
 
 
@@ -183,7 +198,7 @@ styles/eng-date,styles/my-theorems}
 
 
 
-\usepackage{langsci/styles/langsci-tbls}
+\usepackage{./langsci/langsci-tbls}
 % do not need identation for enumerate since we are in a box anyway.
 \usepackage{enumitem}
 
