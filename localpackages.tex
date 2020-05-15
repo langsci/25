@@ -55,7 +55,7 @@
 
 \usepackage{./styles/oneline}
 
-\usepackage{./langsci/langsci-lgr}
+\usepackage{langsci-lgr}
 
 \newcommand{\nom}{\NOM}
 \newcommand{\gen}{\GEN}
@@ -84,7 +84,7 @@
 % and one \Tree in mts.tex
 \usepackage{tikz-qtree}
 
-\usepackage{./langsci/langsci-gb4e}
+\usepackage{langsci-gb4e}
 
 
 \usepackage{subfig}
@@ -92,13 +92,10 @@
 %\renewcommand{\xbar}{X̅\xspace}
 
 
-%\usepackage[external,linguistics]{styles/forest/forest}
-
-
 % for reasons I do not understand this cannot be moved further down and 
 % the loading of forest further down cannot be removed. St. Mü. 26.01.2017
 % It breaks the dependency grammar trees in forest.
-\usepackage{./langsci/langsci-forest-setup}
+\usepackage{langsci-forest-setup}
 
 \forestset{
       terminus/.style={tier=word, for children={tier=tabular}, for tree={fit=band}, for descendants={no path, align=left, l sep=0pt}},
@@ -198,7 +195,7 @@ styles/eng-date,styles/my-theorems}
 
 
 
-\usepackage{./langsci/langsci-tbls}
+\usepackage{langsci-tbls}
 % do not need identation for enumerate since we are in a box anyway.
 \usepackage{enumitem}
 
