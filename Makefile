@@ -285,7 +285,7 @@ clean:
 	rm -f *.bak *~ *.log *.blg *.bbl *.aux *.toc *.cut *.out *.tpm *.adx *.idx *.ilg *.ind \
 	*.and *.glg *.glo *.gls *.657pk *.adx.hyp *.bbl.old *.ldx *.lnd *.rdx *.sdx *.snd *.wdx \
 	*.wdv *.xdv chapters/*.aux *.aux.copy *-blx.bib *.auxlock *.bcf *.mw *.run.xml *.backup \
-	chapters/*.aux chapters/*.aux.copy chapters/*.old chapters/*~ chapters/*.bak chapters/*.backup \
+	chapters/*.aux chapters/*.log chapters/*.aux.copy chapters/*.old chapters/*~ chapters/*.bak chapters/*.backup \
 	langsci/*/*.aux langsci/*/*~ langsci/*/*.bak langsci/*/*.backup \
 
 
@@ -295,11 +295,12 @@ check-clean:
 cleanmemo:
 	rm -f *.mmz chapters/*.mmz chapters/*.memo.dir/*
 
-brutal-clean: realclean cleanmemo
+brutal-clean: clean cleanmemo
 
 
-realclean: clean
-	rm -f *.dvi *.ps *.pdf
+#realclean: clean
+#	rm -f *.dvi *.ps *.pdf
+#	cp langsci-graphics/ccby.pdf .
 
 
 
