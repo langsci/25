@@ -29,6 +29,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	localcommands.tex \
 	localpackages.tex \
 	backmatter.tex \
+	langscibook.cls \
         $(wildcard chapters/*.tex)	
 
 .SUFFIXES: .tex
