@@ -17,8 +17,10 @@
 
 \begin{document}
 
-\frontmatter
+\memoizeset{disable}
 \maketitle
+\frontmatter
+\memoizeset{enable}
 
 % Mit Widmung geht es auf S. 7 los
 \thispagestyle{empty}~\newpage\setcounter{page}{7}% for printing 2up
@@ -80,6 +82,8 @@
 %\addcontentsline{toc}{part}{Appendix} 
 \appendix
 \include{chapters/loesungen}
+
+\memoizeset{disable}
 
 \input{backmatter}
 

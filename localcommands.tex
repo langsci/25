@@ -136,7 +136,7 @@ frbox/.style={
   inner sep=5pt
   }
 }
-\newcommand\TZbox[1]{\tikz\node[frbox,baseline] {#1};}
+\newcommand\TZbox[1]{\tikz{\node[frbox,baseline] {#1};}}
 
 \renewcommand{\rm}{\upshape}
 \renewcommand{\mathrm}{\text}
