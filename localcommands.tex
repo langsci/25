@@ -285,14 +285,16 @@ frbox/.style={
 
 
 \newcommand{\questions}[1]{~\newline\vspace*{-10mm}
+\memoizeset{disable}%
 \tblssy{people}{Comprehension questions}{\setlist{leftmargin=*}#1}}
 %\tblssy{people}{Comprehension questions}{#1}}
 
-\newcommand{\exercises}[1]{
+\newcommand{\exercises}[1]{\memoizeset{disable}%
 \tblssy{pencil}{Exercises}{\setlist{leftmargin=*}#1}}
 %\tblssy{pencil}{Exercises}{#1}}
 
 \newcommand{\furtherreading}[1]{%~\newline\vspace*{-10mm}
+\memoizeset{disable}%
 \tblssy{book}{Further reading}{#1}}
 
 \newcommand{\greyboxrest}[1]{
