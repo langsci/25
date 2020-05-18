@@ -1578,7 +1578,7 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 	}
 	%% format of the TOC entry
 	\renewcommand{\addchaptertocentry}[2]{
-		\ifstr{#1}{}{%
+		\Ifstr{#1}{}{%
 		\addtocentrydefault{chapter}{}{#2}%
 		}{%
 		\addtocentrydefault{chapter}{}{\chapapp~#1: #2}%
