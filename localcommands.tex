@@ -1,4 +1,26 @@
-\languageshorthands{german}\useshorthands{"}
+% is done in langscibook
+%\useshorthands*{"}\languageshorthands{ngerman}
+
+
+% biblatex sets the option autolang=hyphens
+%
+% This disables language shorthands. To avoid this, the hyphens code can be redefined
+%
+% https://tex.stackexchange.com/a/548047/18561
+
+\makeatletter
+\def\hyphenrules#1{%
+  \edef\bbl@tempf{#1}%
+  \bbl@fixname\bbl@tempf
+  \bbl@iflanguage\bbl@tempf{%
+    \expandafter\bbl@patterns\expandafter{\bbl@tempf}%
+    \expandafter\ifx\csname\bbl@tempf hyphenmins\endcsname\relax
+      \set@hyphenmins\tw@\thr@@\relax
+    \else
+      \expandafter\expandafter\expandafter\set@hyphenmins
+      \csname\bbl@tempf hyphenmins\endcsname\relax
+    \fi}}
+\makeatother
 
 % Don't do this at home. I do not like the smaller font for captions.
 % This does not work. Throw out package caption in langscibook
