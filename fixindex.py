@@ -31,4 +31,4 @@ if __name__ == "__main__":
     except IndexError:
         pass
     for indextype in indextypes:
-        processfile("main.%sdx" % indextype)
+        processfile("grammatical-theory.%sdx" % indextype)
