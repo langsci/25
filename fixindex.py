@@ -1,48 +1,34 @@
-# -*- coding: utf-8 -*-
-import re
-from initd import INITD, REPLACEMENTS
+import sys
 
-  
-orig = ''
-trans = ''
+try:
+    from indextools import processfile
+except ImportError:
+    from langsci.indextools import processfile
 
-for k in INITD:
-  s = INITD[k]
-  for c in s:
-    orig+=c
-    trans+=k
-     
-transtable = str.maketrans(orig, trans)
+if __name__ == "__main__":
+    """
+    Transform a file main._dx into mainmod._dx, where the underscore represents an index type given in the argument.
 
-  
-p = re.compile(r"\\indexentry \{(.*)@") 
-    
-def process(s): 
-  if s.strip()=='':
-    return s
-  m = p.match(s) 
-  o = ''
-  try:
-    o = m.groups(1)[0]
-  except AttributeError:
-    print(repr(s))
-  t = o.translate(transtable)
-  
-  for r in REPLACEMENTS:
-    t = t.replace(r[0],r[1])
-  if t == o:
-    return s
-  else:
-    return s.replace("%s@"%o,"%s@"%t)
-  
-  
+    Index types are:
+    a: author index 
+    s: subject index 
+    l: language index
 
-if __name__ == '__main__':
-  fn = 'grammatical-theory.adx'
-  lines = open(fn).readlines()
-  print(len(lines))
-  lines2 = list(map(process, lines))
-  out = open('grammatical-theorymod.adx','w')
-  out.write(''.join(lines2))
-  out.close()
-  
+    Examples: 
+    > python3 fixindex.py 
+    fixes the author index only. Read: main.adx. Write: mainmod.adx
+    > python3 fixindex.py a
+    fixes the author index only. Read: main.adx. Write: mainmod.adx
+    > python3 fixindex.py l
+    fixes the language index only. Read: main.ldx. Write: mainmod.ldx
+    > python3 fixindex.py lsa
+    fixes all three index types. Read: main.adx, main.ldx, main.sdx. Write: mainmod.adx, mainmod.ldx, mainmod.sdx
+    """
+
+    indextypes = "a"
+    try:
+        indextypes = sys.argv[1]
+    except IndexError:
+        pass
+    for indextype in indextypes:
+        processfile("main.%sdx" % indextype)
