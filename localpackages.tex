@@ -130,9 +130,8 @@
       set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
 }
 
-\providecommand\memoize[2][]{{#2}}
-\providecommand\memoizeset[1]{}
-\usepackage{./styles/memoize} % this is safe to comment out because of the stubs defined above
+%\usepackage{memoize}
+\usepackage{nomemoize}
 \memoizeset{
   memo filename prefix={grammatical-theory.memo.dir/},
 }
