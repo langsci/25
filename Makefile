@@ -202,11 +202,10 @@ memos:
 	xelatex -shell-escape grammatical-theory
 	python3 memomanager.py split grammatical-theory.mmz
 
+memo-install:
+	cp -pr ~/Documents/Dienstlich/Projekte/memoize/memoize* .
+	cp -pr ~/Documents/Dienstlich/Projekte/memoize/nomemoize* .
 
-forest-commit:
-	git add grammatical-theory.for.dir/*.pdf
-	git commit -m "forest trees" grammatical-theory.for.dir/*.pdf grammatical-theory.for
-	git push -u origin
 
 
 o-public: o-public-lehrbuch 
