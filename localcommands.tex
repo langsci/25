@@ -85,8 +85,12 @@
 
 %\newcommand{\dom}{\textsc{dom}\xspace}
 
-\newcommand{\prt}{\textsc{prt}}
+% changed to \textsc{part}
+%\newcommand{\prt}{\textsc{prt}}
 %\newcommand{\refl}{\textsc{refl}}
+\newcommand{\rel}{\textsc{rel}\xspace}
+
+
 
 %% \newcommand{\snom}{\textit{snom}}
 %% \newcommand{\sgen}{\textit{sgen}}
@@ -254,9 +258,9 @@ frbox/.style={
 \newcommand{\featname}[1]{\mbox{\textsc{#1}}}    % feature name
 
 \newcommand{\argzero}{\featname{arg$_0$}\xspace}
-\newcommand{\argone}{\featname{arg$_1$}\xspace}
-\newcommand{\argtwo}{\featname{arg$_2$}\xspace}
-\newcommand{\argthree}{\featname{arg$_3$}\xspace}
+\renewcommand{\argone}{\featname{arg$_1$}\xspace}
+\renewcommand{\argtwo}{\featname{arg$_2$}\xspace}
+\renewcommand{\argthree}{\featname{arg$_3$}\xspace}
 
 \newcommand{\templaten}[1]{\textsc{#1}}
 
@@ -370,3 +374,8 @@ frbox/.style={
 \edef\innerxsep{\noexpand\hspace*{\pgfkeysvalueof{/pgf/inner xsep}}}%
 \newlength\mytextheight
 \settototalheight{\mytextheight}{XpX$^0$X$'$}
+
+
+
+% Felix 09.06.2020: copy code from the third line into localcommands.tex: https://github.com/langsci/langscibook#defined-environments-commands-etc
+\patchcmd{\mkbibindexname}{\ifdefvoid{#3}{}{\MakeCapital{#3} }}{\ifdefvoid{#3}{}{#3 }}{}{\AtEndDocument{\typeout{mkbibindexname could not be patched.}}}
