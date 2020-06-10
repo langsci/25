@@ -2388,12 +2388,12 @@ for the expression of the arguments.
 \begin{figure}
 \centering
 \begin{forest}
-typehierarchy
+type hierarchy
 [lexeme, for descendants={l sep+=5mm}
   [passive,name=passive, [passive $\wedge$ read, name=pr]]
-  [active, name=active,  [active $\wedge$  read,  name=ar]]
+  [active, name=active,  [active $\wedge$  read, name=ar]]
   [read,   name=read     [passive $\wedge$ eat,  name=pe, no edge]]
-  [eat,    name=eat,     [active $\wedge$  eat,   name=ae]] ]
+  [eat,    name=eat,     [active $\wedge$  eat,  name=ae]] ]
 \draw (passive.south)--(pe.north)
       (active.south) --(ae.north)
       (read.south)   --(pr.north)
