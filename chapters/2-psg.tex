@@ -12,17 +12,17 @@ This chapter deals with phase structure grammars (PSGs), which play an important
 Words can be assigned to a particular part of speech on the basis of their inflectional properties
 and syntactic distribution. Thus, \emph{weil} `because' in (\mex{1})
 is a conjunction\is{conjunction}, whereas \emph{das} `the' and \emph{dem} `the' are
-articles\is{article} and therefore classed as determiners\is{determiner}. Furthermore, \emph{Buch} `book' and \emph{Mann} `man' are nouns\is{noun} 
+articles\is{article} and therefore classed as determiners\is{determiner}. Furthermore, \emph{Buch} `book' and \emph{Kind} `child' are nouns\is{noun} 
 and \emph{gibt} `gives' is a verb\is{verb}.
-\ea\label{bsp-weil-er-das-buch-dem-mann-gibt}
-\gll weil er das Buch dem Mann gibt\\
-	 because he the book the man gives\\
-\glt `because he gives the man the book'
+\ea\label{bsp-weil-er-das-buch-dem-Kind-gibt}
+\gll weil er das Buch dem Kind gibt\\
+	 because he the book the child gives\\
+\glt `because he gives the child the book'
 \z
 Using the constituency tests we introduced in Section~\ref{konstituententests}, we can show that
-individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Mann} `the man',
+individual words as well as the strings \emph{das Buch} `the book' and \emph{dem Kind} `the child',
 form constituents. These get then assigned certain symbols. Since nouns form an important part of
-the phrases \emph{das Buch} and \emph{dem Mann}, these are referred to as \emph{noun phrases} or
+the phrases \emph{das Buch} and \emph{dem Kind}, these are referred to as \emph{noun phrases} or
 NPs, for short. The pronoun \emph{er} `he' can occur in the same positions as full NPs and can
 therefore also be assigned to the category NP.
 
@@ -48,7 +48,7 @@ complex units. A simple phrase structure grammar which can be used to analyze (\
 \end{tabular}\hspace{8mm}
 \begin{tabular}[t]{@{}l@{ }l}
 {N} & {$\to$ Buch}\\
-{N} & {$\to$ Mann}\\
+{N} & {$\to$ Kind}\\
 {V} & {$\to$ gibt}\\
 \end{tabular}
 \z
@@ -68,13 +68,13 @@ instance, in line 5 and 8, Det and N are rewritten as NP.
 \label{bsp-anwendung-grammatik}
 \begin{tabular}[t]{@{}r|llllll@{\hspace{1.7cm}}l@{}}
  & \multicolumn{6}{l@{}}{words and symbols} & rules that are applied\\\midrule
- 1 & er            & das          & Buch          & dem          & Mann & gibt                \\
- 2 & {NP}          & das          & Buch          & dem          & Mann & gibt & {NP $\to$ er}  \\
- 3 & NP            & Det          & Buch          & dem          & Mann & gibt & {Det $\to$ das}  \\
- 4 & NP            & Det          & N             & dem          & Mann & gibt & {N $\to$ Buch} \\
- 5 & NP            &              & NP            & dem          & Mann & gibt & {NP $\to$ Det N}\\
- 6 & NP            &              & NP            & Det          & Mann & gibt & {Det $\to$ dem}  \\
- 7 & NP            &              & NP            & Det          & N    & gibt & {N $\to$ Mann} \\
+ 1 & er            & das          & Buch          & dem          & Kind & gibt                \\
+ 2 & {NP}          & das          & Buch          & dem          & Kind & gibt & {NP $\to$ er}  \\
+ 3 & NP            & Det          & Buch          & dem          & Kind & gibt & {Det $\to$ das}  \\
+ 4 & NP            & Det          & N             & dem          & Kind & gibt & {N $\to$ Buch} \\
+ 5 & NP            &              & NP            & dem          & Kind & gibt & {NP $\to$ Det N}\\
+ 6 & NP            &              & NP            & Det          & Kind & gibt & {Det $\to$ dem}  \\
+ 7 & NP            &              & NP            & Det          & N    & gibt & {N $\to$ Kind} \\
  8 & NP            &              & NP            &              & NP   & gibt & {NP $\to$ Det N}\\
  9 & NP            &              & NP            &              & NP   & {V} & {V $\to$ gibt}  \\
 10 &               &              &               &              &      & {S} & {S $\to$ NP NP NP V}\\
@@ -85,12 +85,12 @@ In (\mex{0}), we began with a string of words and it was shown that we can deriv
 a given phrase structure grammar. We could have applied the same steps in reverse order: starting
 with the sentence symbol S, we would have applied the steps~9--1 and arrived at the string of words.
 Selecting different rules from the grammar for rewriting symbols, we could use the grammar in (\mex{-1}) to get
-from S to the string \emph{er dem Mann das Buch gibt} `he the man the book gives'.
+from S to the string \emph{er dem Kind das Buch gibt} `he the child the book gives'.
 We can say that this grammar licenses (or generates)\label{Seite-generiert} a set of sentences.\is{Generative Grammar}
 
 \addlines
 \enlargethispage{3pt}
-The derivation in (\mex{0}) can also be represented as a tree. This is shown by Figure~\vref{er-das-buch-dem-mann-gibt-flat}.
+The derivation in (\mex{0}) can also be represented as a tree. This is shown by Figure~\vref{er-das-buch-dem-Kind-gibt-flat}.
 \begin{figure}
 \centerline{
 \begin{forest}
@@ -103,7 +103,7 @@ sm edges
   ]
   [NP
     [Det [dem;the] ]
-    [N [Mann;man] ] 
+    [N [Kind;child] ] 
   ]
   [V [gibt;gives] ]
 ]
@@ -125,12 +125,12 @@ sm edges
 %%        [.V gibt\\gives ] ]
 %% \end{tikzpicture}
 }
-\caption{\label{er-das-buch-dem-mann-gibt-flat}Analysis of \emph{er das Buch dem Mann gibt} `he the
-book the man gives'}
+\caption{\label{er-das-buch-dem-Kind-gibt-flat}Analysis of \emph{er das Buch dem Kind gibt} `he the
+book the child gives'}
 \end{figure}%
 The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediately dominates the NP nodes and the V node\is{dominance}.
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
-relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-mann-gibt-flat}, S is the \emph{mother node}\is{node!mother}
+relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-Kind-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
 The NP node and V are \emph{sisters}\is{node!sister} since they have the same mother node.
 If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
@@ -141,21 +141,21 @@ if they are directly next to each other.
 Phrase structure rules are often omitted in linguistic publications. Instead, authors opt for tree diagrams or the compact equivalent bracket notation
 such as (\mex{1}).
 \ea
-\gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{Det} das] [\sub{N} Buch]]  [\sub{NP} [\sub{Det} dem] [\sub{N} Mann]] [\sub{V} gibt]]\\
-     {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       man     {}      gives\\  
+\gll {}[\sub{S} [\sub{NP} er] [\sub{NP} [\sub{Det} das] [\sub{N} Buch]]  [\sub{NP} [\sub{Det} dem] [\sub{N} Kind]] [\sub{V} gibt]]\\
+     {}         {}        he  {}        {}       the  {}       book    {}        {}       the  {}       child     {}      gives\\  
 \z
 Nevertheless, it is the grammatical rules which are actually important since these represent grammatical knowledge which is independent of specific structures.
 In this way, we can use the grammar in (\ref{bsp-grammatik-psg}) to parse or generate the sentence
-in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-mann-gibt}) in the order of objects: 
+in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}) in the order of objects: 
 \ea
-\gll {}[weil] er dem Mann das Buch gibt\\
-	 {}\spacebr{}because he.\nom{} the.\dat{} man the.\acc{} book gives\\
-\glt `because he gives the man the book'
+\gll {}[weil] er dem Kind das Buch gibt\\
+	 {}\spacebr{}because he.\nom{} the.\dat{} child the.\acc{} book gives\\
+\glt `because he gives the child the book'
 \z
-The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-mann-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Mann}.
+The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Kind}.
 
 At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
-(\ref{bsp-weil-er-das-buch-dem-mann-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
+(\ref{bsp-weil-er-das-buch-dem-Kind-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
 be used to analyze these kinds of sentences (see exercise \ref{ua-psg-eins}). Another possible grammar is given in (\mex{1}):
 
 \ea\label{psg-binaer}
@@ -170,11 +170,11 @@ V  & $\to$ NP V\\
 \end{tabular}\hspace{8mm}
 \begin{tabular}[t]{@{}l@{ }l}
 {N} & {$\to$ Buch}\\
-{N} & {$\to$ Mann}\\
+{N} & {$\to$ Kind}\\
 {V} & {$\to$ gibt}\\
 \end{tabular}
 \z
-This grammar licenses binary branching structures as shown in Figure~\vref{er-das-buch-dem-mann-gibt-bin}.
+This grammar licenses binary branching structures as shown in Figure~\vref{er-das-buch-dem-Kind-gibt-bin}.
 \begin{figure}
 \centerline{
 \begin{forest}
@@ -188,11 +188,11 @@ sm edges
     [V
       [NP
         [Det [dem;the] ]
-        [N [Mann;man] ] ]
+        [N [Kind;child] ] ]
       [V [gibt;gives] ] ] ] ]
 \end{forest}
 }
-\caption{\label{er-das-buch-dem-mann-gibt-bin}Analysis of \emph{er das Buch dem Mann gibt} with a
+\caption{\label{er-das-buch-dem-Kind-gibt-bin}Analysis of \emph{er das Buch dem Kind gibt} with a
   binary branching structure}
 \end{figure}%
 
@@ -204,12 +204,12 @@ license the ungrammatical sentences in (\mex{1}b--d):\footnote{%
   
 \eal
 \ex[*]{
-\gll der Mann erwartet\\
-     the man expects\\
+\gll der        Delphin erwartet\\
+     the.\NOM{} dolphin expects\\
 }
 \ex[*]{
-\gll des        Mannes     er        das Buch dem Mann gibt\\
-     the.\gen{} man.\gen{} he.\nom{} the.\acc{} book the.\dat{} man gives\\
+\gll des        Kindes       der        Delphin den        Ball dem Kind gibt\\
+     the.\gen{} child.\gen{} the.\nom{} dolphin the.\acc{} ball the.\dat{} child gives\\
 }
 \zl
 The number of arguments required by a verb must be somehow represented in the grammar. In the following chapters, we will see exactly
@@ -217,21 +217,21 @@ how the selection of arguments by a verb (valence) can be captured in various gr
 }
 \eal
 \ex[]{
-\gll er        das Buch        dem Mann       gibt\\
-     he.\nom{} the.\acc{} book the.\dat{} man gives\\
-\glt `He gives the book to the man.'
+\gll er        das Buch        dem Kind       gibt\\
+     he.\nom{} the.\acc{} book the.\dat{} child gives\\
+\glt `He gives the book to the child.'
 }
 \ex[*]{
-\gll ich      das Buch        dem Mann       gibt\\
-     I.\nom{} the.\acc{} book the.\dat{} man gives\\
+\gll ich      das Buch        dem Kind       gibt\\
+     I.\nom{} the.\acc{} book the.\dat{} child gives\\
 }
 \ex[*]{
-\gll er        das        Buch den        Mann gibt\\
-     he.\nom{} the.\acc{} book the.\acc{} man gives\\
+\gll er        das        Buch den        Kind gibt\\
+     he.\nom{} the.\acc{} book the.\acc{} child gives\\
 }
 \ex[*]{
-\gll er        den        Buch       dem Mann gibt\\
-     he.\nom{} the.\mas{} book(\neu) the man  gives\\
+\gll er        den        Buch       dem Kind gibt\\
+     he.\nom{} the.\mas{} book(\neu) the child  gives\\
 }
 \zl
 In (\mex{0}b), subject"=verb agreement\is{agreement|(} has been violated, in other words: \emph{ich} `I' and \emph{gibt} `gives' do not fit together.
@@ -243,7 +243,7 @@ of these two elements are not the same and the elements can therefore not be com
 In the following, we will consider how we would have to change our grammar to stop it from licensing the sentences in (\mex{0}b--d).
 If we want to capture subject"=verb agreement, then we have to cover the following six cases in German, as the verb has to agree with the
 subject in both person\is{person} (1, 2, 3) and number\is{number} (sg, pl)\is{agreement}:
-\eal\jamwidth=8cm\relax%\settowidth\jamwidth{(3, sg)}
+\eal\jamwidth=7cm\relax%\settowidth\jamwidth{(3, sg)}
 \ex 
 \gll Ich schlafe.\\
      I   sleep\\      \jambox{(1, sg)}
@@ -251,8 +251,8 @@ subject in both person\is{person} (1, 2, 3) and number\is{number} (sg, pl)\is{ag
 \gll Du schläfst.\\
      you sleep\\      \jambox{(2, sg)}
 \ex 
-\gll Er schläft.\\
-     he sleeps\\      \jambox{(3, sg)}
+\gll Er/sie/es schläft.\\
+     he/she/it sleeps\\      \jambox{(3, sg)}
 \ex 
 \gll Wir schlafen.\\
      we sleep\\       \jambox{(1, pl)}
@@ -296,22 +296,22 @@ other cases. Since verbs have to match the NPs, that is, we have to differentiat
 we have to increase the number of symbols we assume for verbs.\is{valence}
 \eal
 \ex[]{
-\gll Er schläft.\\
-	 he sleeps\\
-\glt `He is sleeping.'
+\gll Aicke schläft.\\
+	 Aicke sleeps\\
+\glt `Aicke is sleeping.'
 }
 \ex[*]{
-\gll Er schläft das Buch.\\
-	 he sleeps the book\\
+\gll Aicke schläft das Buch.\\
+	 Aicke sleeps the book\\
 }
 \ex[]{
-\gll Er kennt das Buch.\\
-	 he knows the book\\
-\glt `He knows the book.'
+\gll Aicke kennt das Buch.\\
+	 Aicke knows the book\\
+\glt `Aicke knows the book.'
 }
 \ex[*]{
-\gll Er kennt.\\
-	 he knows\\
+\gll Aicke kennt.\\
+	 Aicke knows\\
 }
 \zl
 In the rules above, the information about the number of arguments required by a verb is included in the marking `nom\_dat\_acc'.
@@ -325,16 +325,16 @@ For more on adjective classes see page~\pageref{page-Flexionsklasse-Wunderlich}.
 \eal\settowidth\jamwidth{(Inflectional class)}
 \ex 
 \gll der Mann, die Frau, das Buch\\
-	 the.\mas{} man(\mas) the.\fem{} woman(\fem) the.\neu{} book(\neu)\\\jambox{(gender)}
+	 the.\mas{} man(\mas)~~ the.\fem{} woman(\fem)~~ the.\neu{} book(\neu)\\\jambox{(gender)}
 \ex 
 \gll das Buch, die Bücher\\
-	 the book.\SG{} the books.\PL\\\jambox{(number)}
+	 the book.\SG{}~~ the books.\PL\\\jambox{(number)}
 \ex 
 \gll des Buches, dem Buch\\
-	 the.\gen{} book.\gen{} the.\dat{} book\\\jambox{(case)}
+	 the.\gen{} book.\gen{}~~ the.\dat{} book\\\jambox{(case)}
 \ex\is{inflectional class} 
 \gll ein Beamter, der Beamte\\
-	 a civil.servant the civil.servant\\\jambox{(inflectional class)}
+	 a civil.servant~~ the civil.servant\\\jambox{(inflectional class)}
 \zl
 %\addlines         
 Instead of the rule NP $\to$ Det N, we will have to use rules such as those in (\mex{1}):\footnote{%
@@ -461,6 +461,7 @@ that we are dealing with word meanings and not actual words. At first glance, it
 by using \relation{schlafen} to represent the meaning of (\mex{0}a), since it is just another form of the verb \emph{schläft} `sleeps'.
 It is, however, important to concentrate on a single verb form as inflection is irrelevant when it comes to meaning. We can see this by comparing the 
 examples in (\mex{1}a) and (\mex{1}b):
+
 \eal
 \ex 
 \gll Jeder Junge schläft.\\
@@ -479,6 +480,7 @@ from now on.\footnote{%
   and concepts that can be expressed in other languages.
 }
 So the meaning of (\mex{-1}a) is represented as (\mex{1}) rather then (\mex{-1}b):
+
 \ea
 \label{sleep-max}
 \relation{sleep}(\relation{max})
@@ -604,35 +606,35 @@ noun. Noun phrases can have a distinctly more complex structure than (\mex{1}a).
 \eal
 \label{Beispiele-NP-Adjunkte}
 \ex 
-\gll eine Frau\\
-	 a woman\\
+\gll ein Buch\\
+     a   book\\
 \ex 
-\gll eine Frau, die wir kennen\\
-	 a woman who we know\\
+\gll ein Buch, das  wir kennen\\
+     a   book  that we  know\\
 \ex 
-\gll eine Frau aus Stuttgart\\
-	 a woman from Stuttgart\\
+\gll ein Buch aus  Japan\\
+     a   book from Japan\\
 \ex 
-\gll eine kluge Frau\\
-	 a smart woman\\
+\gll ein interessantes Buch\\
+     an   interesting   book\\
 \ex 
-\gll eine Frau aus Stuttgart, die wir kennen\\
-	 a woman from Stuttgart who we know\\
+\gll ein Buch aus  Japan, das  wir kennen\\
+     a   book from Japan  that we  know\\
 \ex 
-\gll eine kluge Frau aus Stuttgart\\
-	 a smart woman from Stuttgart\\
+\gll ein interessantes Buch aus  Japan\\
+     an  interesting   book from Japan\\
 \ex 
-\gll eine kluge Frau, die wir kennen\\
-	 a smart woman who we know\\
+\gll ein interessantes Buch, das  wir kennen\\
+     an  interesting   book  that we  know\\
 \ex 
-\gll eine kluge Frau aus Stuttgart, die wir kennen\\
-	 a smart woman from Stuttgart who we know\\
+\gll ein interessantes Buch aus  Japan, das  wir kennen\\
+     an  interesting   book from Japan  that we  know\\
 \zl
 
 \noindent
 As well as determiners and nouns, noun phrases can also contain adjectives, prepositional phrases and relative clauses. 
 The additional elements in (\mex{0}) are adjuncts\is{adjunct|(}. They restrict the set of objects which the noun phrase 
-refers to. Whereas (\mex{0}a) refers to a being which has the property of being a woman, the referent of (\mex{0}b) must
+refers to. Whereas (\mex{0}a) refers to a being which has the property of being a book, the referent of (\mex{0}b) must
 also have the property of being known to us.
 
 Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
@@ -744,10 +746,10 @@ as well as big. These kinds of noun phrases can be used in contexts such as the 
 \label{Beispiel-Iteration-Adjektive}
 \gll A: Alle grauen Eichhörnchen sind groß.\\
 \spacebr{} all grey squirrels are big\\
-\glt `All grey squirrels are big.'\\
+\glt \hspaceThis{A:~}`All grey squirrels are big.'\\
 \gll B: Nein, ich habe ein kleines graues Eichhörnchen gesehen.\\
 	\spacebr{} no I have a small grey squirrel seen\\
-\glt `No, I saw a small grey squirrel.'
+\glt \hspaceThis{B:~}`No, I saw a small grey squirrel.'
 \z
 We observe that this discourse can be continued with \emph{Aber alle kleinen grauen Eichhörnchen
   sind krank} `but all small grey squirrels are ill' and a corresponding answer. The possibility
@@ -762,24 +764,24 @@ adjectival modifiers. As a result, the combination of an adjective and noun is g
 status. One may wonder at this point if it would not make sense to also assume that determiners and
 adjectives form a constituent, as we also have the following kind of noun phrases: 
 \ea
-\gll diese schlauen und diese neugierigen Frauen\\
-	 these smart and these curious women\\
+\gll diese schlauen und diese neugierigen Eichhörnchen\\
+     these smart    and these curious     squirrels\\
 \z
 Here, we are dealing with a different structure, however. Two full NPs have been
 conjoined\is{coordination} and part of the first conjunct has been deleted.
 \ea
-\gll diese schlauen \st{Frauen} und diese neugierigen Frauen\\
-	 these smart women and these curious women\\
+\gll diese schlauen \st{Eichhörnchen} und diese neugierigen Eichhörnchen\\
+     these smart    squirrels         and these curious     squirrels\\
 \z
 One can find similar phenomena at the sentence and even word level:
 \eal
 \ex 
-\gll dass Peter dem Mann das Buch \st{gibt} und Maria der Frau die Schallplatte gibt\\
-	 that Peter the man the book gives and Maria the woman the record gives\\
-\glt `that Peters gives the book to the man and Maria the record to the woman'
+\gll dass Peter dem Kind das Buch \st{gibt} und Maria der Frau die Schallplatte gibt\\
+	 that Peter the child the book gives and Maria the woman the record gives\\
+\glt `that Peters gives the book to the child and Maria the record to the woman'
 \ex 
 \gll be- und ent"=laden\\
-	 \prt{} and \prt{}"=load\\
+	 \prfx{} and \prfx{}"=load\\
 \glt `load and unload'
 \zl
 % Dass in (\mex{-1}) wirklich keine normale symmetrische Koordination vorliegt, sieht man, wenn man
@@ -816,7 +818,7 @@ so"=called \emph{relational nouns}\is{noun!relational}, with their arguments. Ex
 	 the picture of.the Gleimtunnel\\
 \glt `the picture of the Gleimtunnel'
 \ex 
-\gll das Kommen des Installateurs\\
+\gll das Kommen der Installateurin\\
 	 the coming of.the plumber\\
 \glt `the plumber's visit'
 \zl
@@ -863,22 +865,22 @@ but not the noun itself. The underscore marks the position where the noun would 
 \eal
 \label{ex-nounless-np}
 \ex 
-\gll eine kluge \_\\
-	 a smart\\
-\glt `a smart one'
+\gll ein interessantes \_\\
+     an  interesting\\
+\glt `an interesting one'
 \ex 
-\gll eine kluge große \_\\
-     a    smart tall\\
-\glt `a smart tall one'
+\gll ein neues interessantes \_\\
+     a   new   interesting\\
+\glt `a new interesting one'
 
 \ex 
-\gll eine kluge \_ aus Hamburg\\
-	 a smart {} from Hamburg\\
-\glt `a smart one from Hamburg'
+\gll ein interessantes \_ aus  Japan\\
+     an  interesting   {} from Japan\\
+\glt `an interesting one from Japan'
 \ex 
-\gll eine kluge \_, die alle kennen\\
-	 a smart {} who everyone knows\\
-\glt `a smart one who everyone knows'
+\gll ein interessantes \_, das  wir kennen\\
+     an  interesting   {}  that we  know\\
+\glt `an interesting one that we know'
 \zl
 
 \eal
@@ -892,7 +894,7 @@ but not the noun itself. The underscore marks the position where the noun would 
 	 \spacebr{}no not the picture of the motorway the {} of.the Gleimtunnel was impressive\\
 \glt `No, it wasn't the picture of the motorway, but rather the one of the Gleimtunnel that was impressive.'
 \ex 
-\gll (Nein, nicht das Kommen des Tischlers), das \_ des Installateurs ist wichtig.\\
+\gll (Nein, nicht das Kommen des Tischlers), das \_ der Installateurin ist wichtig.\\
 	 \spacebr{}no not the coming of.the carpenter the {} of.the plumber is important\\
 \glt `No, it isn't the visit of the carpenter, but rather the visit of the plumber that is important.'
 \zl
@@ -919,9 +921,9 @@ The corresponding trees are shown in Figure~\vref{Abbildung-NP-ohne-Nomen}.
 \begin{forest}
 sm edges
 [NP
-  [Det [eine;a] ]
+  [Det [ein;an] ]
   [\nbar
-    [A [kluge;smart] ]
+    [A [interessantes;interesting] ]
     [\nbar
       [N [\trace ] ] ] ] ]
 \end{forest}
@@ -949,19 +951,20 @@ It is not only possible to omit the noun from noun phrases, but the determiner c
 (\mex{1}) shows noun phrases in plural\is{plural}:
 \eal
 \ex 
-\gll Frauen\\
-	 women\\
+\gll Bücher\\
+     books\\
 \ex 
-\gll Frauen, die wir kennen\\
-	 women who we know\\
+\gll Bücher, die  wir kennen\\
+     books   that we  know\\
 \ex 
-\gll kluge Frauen\\
-	 smart women\\
+\gll interessante Bücher\\
+     interesting  books\\
 \ex 
-\gll kluge Frauen, die wir kennen\\
-	 smart women who we know\\
+\gll interessante Bücher, die  wir kennen\\
+     interesting  books   that we know\\
 \zl
-The determiner can also be omitted in singular if the noun denotes a mass noun\is{noun!mass}: 
+The determiner can also be omitted in singular if the noun denotes a mass noun\is{noun!mass}:
+
 \eal
 \ex 
 \gll Getreide\\
@@ -981,9 +984,9 @@ The determiner can also be omitted in singular if the noun denotes a mass noun\i
 Finally, both the determiner and the noun can be omitted: 
 \eal
 \ex 
-\gll Ich helfe klugen.\\
-	 I help smart\\
-\glt `I help smart ones.'
+\gll Ich lese interessante.\\
+     I   read interesting\\
+\glt `I read interesting ones.'
 \ex 
 \gll Dort drüben steht frisches, das gerade gemahlen wurde.\\
 	 there over stands fresh that just ground was\\
@@ -998,7 +1001,7 @@ sm edges
 [NP
   [Det [\trace] ]
   [\nbar
-    [N [Frauen;women] ] ] ]
+    [N [Bücher;books] ] ] ]
 \end{forest}
 \hfill
 \begin{forest}
@@ -1006,7 +1009,7 @@ sm edges
 [NP
   [Det [\trace] ]
   [\nbar
-    [A [klugen;smart] ]
+    [A [interessante;interesting] ]
     [\nbar
       [N [\trace] ] ] ] ]
 \end{forest}
@@ -1015,7 +1018,7 @@ sm edges
 \caption{\label{Abbildung-NP-ohne-Det}Noun phrases without overt determiner}
 \end{figure}%
 
-It is necessary to add two further comments to the rules we have developed up to this point: up to now, I have
+It is necessary to add two further comments to the rules that were developed up to this point: up to now, I have
 always spoken of adjectives. However, it is possible to have very complex adjective phrases in pre"=nominal position.
 These can be adjectives with complements (\mex{1}a,b) or adjectival participles (\mex{1}c,d):
 
@@ -1049,7 +1052,7 @@ An adjective phrase (AP) can consist of an NP and an adjective, a PP and an adje
 \ex AP $\to$ A
 \zl
 \addlines
-There are two imperfections resulting from the rules we have developed thus far. These are the rules for adjectives
+There are two imperfections resulting from the rules that were developed thus far. These are the rules for adjectives
 or nouns without complements in (\mex{0}c) as well as (\ref{NP-Regeln-Nbar-N}) -- repeated here as (\mex{1}):
 \ea
 \nbar $\to$ N
@@ -1133,6 +1136,7 @@ serve to further define the semantic contribution of the preposition by indicati
 \glt `In the middle of the jungle, the researches came across an old temple.'
 \zl
 To analyze the sentences in (\mex{0}a,b), one could propose the following rules in (\mex{1}):
+
 \eal
 \ex PP $\to$ NP PP
 \ex PP $\to$ AP PP
@@ -1235,7 +1239,7 @@ prepositional phrase consists of \pbar, that is, a combination of P and NP.\is{p
 
 %%\addlines
 \largerpage[2]
-If\is{X theory@\xbar theory|(}  we look again at the rules that we have formulated in the previous section, we see that heads are always 
+If\is{X theory@\xbar theory|(}  we look again at the rules formulated in the previous section, we see that heads are always 
 combined with their complements to form a new constituent (\mex{1}a,b), which can then be combined with further constituents (\mex{1}c,d):
 
 \eal
@@ -1251,10 +1255,10 @@ I discuss adjective phrases at this point and postpone the discussion of verb ph
 in English can take complements with the important restriction that adjective phrases with complements cannot realize these pre"=nominally in English. 
 (\mex{1}) gives some examples of adjective phrases:
 \eal
-\ex He is proud.
-\ex He is very proud.
-\ex He is proud of his son.
-\ex He is very proud of his son.
+\ex Kim and Sandy are proud.
+\ex Kim and Sandy are very proud.
+\ex Kim and Sandy are proud of their child.
+\ex Kim and Sandy are very proud of their child.
 \zl
 Unlike prepositional phrases, complements of adjectives are normally optional. \emph{proud} can be used with or without a PP.
 The degree expression \emph{very} is also optional.
@@ -1292,7 +1296,7 @@ sm edges
 [AP
   [\abar
     [A [proud] ]
-    [PP [of his son,roof] ] ] ]
+    [PP [of their child,roof] ] ] ]
 \end{forest}
 \hfill
 \begin{forest}
@@ -1301,7 +1305,7 @@ sm edges
   [AdvP [very] ]
   [\abar
     [A [proud] ]
-    [PP [of his son,roof] ] ] ]
+    [PP [of their child,roof] ] ] ]
 \end{forest}
 \hfill\mbox{}
 \caption{\label{Abbildung-AP}English adjective phrases}
@@ -1481,9 +1485,9 @@ than theories which adopt a strict version of the \xbar theory. See also the dis
 \item Assuming the grammar in (\ref{psg-binaer}), state which steps (replacing symbols) one has to take to get to the symbol 
 	 V in the sentence (\mex{1}).
 \ea
-\gll er das Buch dem Mann gibt\\
-	 he the book the man gives\\
-\glt `He gives the book to the man.'
+\gll er das Buch dem Kind gibt\\
+	 he the book the child gives\\
+\glt `He gives the book to the child.'
 \z
 Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
 %\pagebreak
@@ -1506,7 +1510,7 @@ Your answer should resemble the analysis in (\ref{bsp-anwendung-grammatik}).
 \begin{enumerate}
 \item\label{ua-psg-eins}
 	On page~\pageref{page-unendlich-viele-grammatiken}, I claimed that there is an infinite number of
-	grammars we could use to analyze (\ref{bsp-weil-er-das-buch-dem-mann-gibt}).
+	grammars we could use to analyze (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}).
 	Why is this claim correct?
 \item Try to come up with some ways in which we can tell which of these possible grammars is or are the best?
 
@@ -1630,16 +1634,12 @@ rules out the sentences in (\mex{2}).
      he.\nom{} waits next.to the.\dat{} bus.shelter on a miracle\\
 \glt `He is waiting for a miracle next to the bus shelter.'
 \zl
-\item Install a Prolog system (\eg SWI"=Prolog\footnote{%
-\url{http://www.swi-prolog.org}, 2018-02-20.
-})
-and try out your grammar. SWI-Prolog also comes with an online version where you can input your grammar
-directly without any installation.\footnote{%
-  \url{https://swish.swi-prolog.org/}, 2018-02-20.
+\item Use the online version of SWI-Prolog\footnote{%
+  \url{https://swish.swi-prolog.org/}, 2020-06-07.
 }
-Details regarding the notation can be found in the English Wikipedia entry for Definite Clause Grammar
+to test your grammar using a computer. Details regarding the notation can be found in the English Wikipedia entry for Definite Clause Grammar
 (DCG)\is{Definite Clause Grammar (DCG)}.\footnote{%
-\url{https://en.wikipedia.org/wiki/Definite_clause_grammar}, 2018-02-20.
+\url{https://en.wikipedia.org/wiki/Definite_clause_grammar}, 2020-06-07.
 }
 \end{enumerate}}
 
