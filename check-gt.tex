@@ -10,8 +10,6 @@
 
 \documentclass[output=book
 	        ,smallfont
-		,modfonts
-		,nonflat
 %		,multiauthors
 %	        ,collection
 %	        ,collectionchapter
@@ -54,7 +52,7 @@
 
 
 
-%\includeonly{chapters/preface}
+\includeonly{chapters/preface}
 %\includeonly{chapters/1-begriffe}
 %,2-psg,3-gb}
 %\includeonly{chapters/2-psg}
@@ -94,6 +92,7 @@
 \input{localpackages.tex}
 \input{localcommands.tex}
 
+\memoizeset{readonly}
 
 \input grammatical-theory-include
 

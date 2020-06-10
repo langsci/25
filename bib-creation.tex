@@ -9,16 +9,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
 \documentclass[output=book
-	        %,blackandwhite
-	        ,smallfont
-%	        ,draftmode
-%                ,bibtex
+                ,smallfont
+%		,multiauthors
+%	        ,collection
+%	        ,collectionchapter
+%	        ,collectiontoclongg
+ 	        ,biblatex  
+                ,babelshorthands
+%                ,showindex
                 ,newtxmath
-                ,nonflat
-                %,showindex
-		  ]{langsci/langscibook}                          
+%                ,colorlinks, citecolor=brown % for drafts
+%                ,draftmode
+% 	        ,coverus
+		  ]{langscibook}                              
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -38,6 +43,10 @@
 %\newcommand{\NOTE}[1]{\marginpar{#1}}
 
 \newcommand{\LATER}[1]{}
+
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localcommands.tex}
 
 
 \bibliography{bib-abbr,biblio}
