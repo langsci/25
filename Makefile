@@ -96,7 +96,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	sed -i.backup 's/{\\O }/Oe/' *.adx
 	sed -i.backup 's/@van Trijp/@\\MakeCapital {van} Trijp/g' *.adx
 	sed -i.backup 's/.*Group.*//' grammatical-theory.adx
-	python3 fixindex.py
+	python3 fixindex.py $*.adx
 	mv $*mod.adx $*.adx
 	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.lnd $*.ldx
@@ -198,7 +198,9 @@ public: grammatical-theory.pdf
 commit:
 	svn commit -m "published version to the web"
 
-memos:
+# to eliminate the risk of jumping trees build the complete pdf without
+# memozation (main.tex does load nomemoize) and then latex grammatical-theory.tex (which does load memoize) and call the extraction script after this.
+memos: main.pdf
 	xelatex -shell-escape grammatical-theory
 	python3 memomanager.py split grammatical-theory.mmz
 
@@ -293,7 +295,7 @@ check-clean:
 	rm -f *.bak *~ *.log *.blg complex-draft.dvi
 
 cleanmemo:
-	rm -f *.mmz chapters/*.mmz chapters/*.memo.dir/*
+	rm -f *.mmz *.memo.dir/*
 
 brutal-clean: clean cleanmemo
 
