@@ -88,34 +88,6 @@
 
 \usepackage{langsci-gb4e}
 
-% fixes problem with to much vertical space between \zl and \eal due to the \nopagebreak
-% command.
-\makeatletter
-\def\@exe[#1]{\ifnum \@xnumdepth >0%
-                 \if@xrec\@exrecwarn\fi%
-                 \if@noftnote\@exrecwarn\fi%
-                 \@xnumdepth0\@listdepth0\@xrectrue%
-                 \save@counters%
-              \fi%
-                 \advance\@xnumdepth \@ne \@@xsi%
-                 \if@noftnote%
-                        \begin{list}{(\thexnumi)}%
-                        {\usecounter{xnumi}\@subex{#1}{\@gblabelsep}{0em}%
-                        \setcounter{xnumi}{\value{equation}}}
-% this is commented out here since it causes additional space between \zl and \eal 06.06.2020
-%                        \nopagebreak}%
-                 \else%
-                        \begin{list}{(\roman{xnumi})}%
-                        {\usecounter{xnumi}\@subex{(iiv)}{\@gblabelsep}{\footexindent}%
-                        \setcounter{xnumi}{\value{fnx}}}%
-                 \fi}
-\makeatother
-
-% the texlive 2020 langsci-gb4e adds a newline after \eas, the texlive 2017 version was OK.
-\makeatletter
-\def\eas{\ifnum\@xnumdepth=0\begin{exe}[(34)]\else\begin{xlist}[iv.]\fi\ex\begin{tabular}[t]{@{}b{.99\linewidth}@{}}}
-\makeatother
-
 
 % not needed as of texlive 2020
 %\usepackage{jambox}
@@ -137,11 +109,13 @@
       set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
 }
 
+% These packages are loaded in main.tex and grammatical-theory.tex to make sure that the correct
+% setup is used in makefiles. main.tex is for the final file.
 %\usepackage{memoize}
-\usepackage{nomemoize}
-\memoizeset{
-  memo filename prefix={grammatical-theory.memo.dir/},
-}
+%\usepackage{nomemoize}
+%\memoizeset{
+%  memo filename prefix={grammatical-theory.memo.dir/},
+%}
 
 
 
@@ -206,7 +180,7 @@ styles/eng-date,styles/my-theorems}
 
 % do nothing now
 %\let\addlinesold=\addlines
-\renewcommand{\addlines}[1][1]{}
+%\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck
