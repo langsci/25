@@ -429,7 +429,11 @@ The subject and object are the arguments\is{argument} of the predicate. There ar
 to describe the set of selectional requirements such
 as \emph{argument structure}\is{argument structure}, \emph{valence frames}\is{valence frame},
 \emph{subcategorization frame}\is{subcategorization frame}, \emph{thematic grid}\is{thematic grid}
-and \emph{theta"=grid} or $\theta$-grid\is{theta-grid@$\theta$-grid}. 
+and \emph{theta"=grid} or $\theta$-grid\is{theta-grid@$\theta$-grid}.\footnote{%
+The exact meaning of the terms is framework-dependent. Coming from an HPSG perspective, I use the first three terms referring to syntactic and
+semantic information, the latter two refer to the selection of semantic roles. GB researchers often
+refer to argument structure as containing semantic information, to valence frames as containing
+syntactic information and to subcategorization as a mix of syntactic and semantic information.}
 %\todostefan{ich habe hier einige uebersetzungen erstmal weggelassen, weil ich mir nicht sicher bin wie die richtige uebersetzung ist.}
 %Subjekt und Objekt sind die Argumente\is{Argument} des Prädikats. Spricht man von der Gesamtheit
 %der Selektionsanforderungen, verwendet man Begriffe wie Argumentstruktur\is{Argumentstruktur}, Valenzrahmen\is{Valenz!-rahmen},
@@ -672,7 +676,7 @@ standard assumption that there are two projection levels, that is, phrases have 
 \label{Abschnitt-GB-CP-IP-System-Englisch}\label{sec-GB-CP-IP-System-English}
 
 \addlines
-Most work in Mainstream Generative Grammar is heavily influenced by previous publications dealing with English. If one wants to understand GB analyses of
+Most\il{English|(} work in Mainstream Generative Grammar is heavily influenced by previous publications dealing with English. If one wants to understand GB analyses of
 German and other languages, it is important to first understand the analyses of English and, for this reason, this will be the focus of this section.
 The CP/IP system is also assumed in LFG grammars of English and thus the following section also provides a foundation for understanding some of the
 fundamentals of LFG presented in Chapter~\ref{Kapitel-LFG}.
@@ -1616,7 +1620,7 @@ Similarly, there is no change in case with dative objects\is{case!dative|(}:
 \largerpage
 It still remains controversial as to whether all datives should be treated as lexical or whether some or all of the datives in verbal environments should be treated as instances of structural case.
 For reasons of space, I will not recount this discussion but instead refer the interested reader to Chapter~14 of \citew{MuellerLehrbuch1}.
-In what follows, I assume -- like \citet[\page 20]{Haider86} -- that the dative is in fact a lexical case.\is{case!lexical} 
+In what follows, I assume -- like \citet[\page 20]{Haider86} -- that the dative is in fact a lexical case.\is{case!structural|)}\is{case!lexical|)}
 
 
 
@@ -1670,6 +1674,7 @@ SpecIP.%
 %\fi
 \begin{figure}
 \hfill
+\memoizeset{disable} % 12.06.2020
 \begin{forest}
 sm edges
 [IP
@@ -1706,6 +1711,7 @@ absorbed case. Therefore, it has to move to a position where case can be assigne
 (\mex{0}b).
 \begin{figure}[t]
 \hfill
+\memoizeset{disable} % 12.06.2020
 \begin{forest}
 sm edges
 [IP
