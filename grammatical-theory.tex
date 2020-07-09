@@ -52,6 +52,12 @@
 \input{localpackages.tex}
 \input{localcommands.tex}
 
+\usepackage{memoize}
+%\usepackage{nomemoize}
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+}
+
 
 
 \bibliography{bib-abbr,biblio}

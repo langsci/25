@@ -25,10 +25,18 @@ if __name__ == "__main__":
     fixes all three index types. Read: main.adx, main.ldx, main.sdx. Write: mainmod.adx, mainmod.ldx, mainmod.sdx
     """
 
-    indextypes = "a"
+#    indextypes = "a"
+#    try:
+#        indextypes = sys.argv[1]
+#    except IndexError:
+#        pass
+#    for indextype in indextypes:
+#        processfile("grammatical-theory.%sdx" % indextype)
+
+    filename = 'main.adx'
     try:
-        indextypes = sys.argv[1]
+        filename = sys.argv[1]
     except IndexError:
-        pass
-    for indextype in indextypes:
-        processfile("grammatical-theory.%sdx" % indextype)
+        print("no filename given. Default is main.adx")
+    processfile(filename) 
+
