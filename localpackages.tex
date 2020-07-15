@@ -109,19 +109,20 @@
       set me left/.style={calign with current edge, child anchor=north west, for parent={parent anchor=south west}},
 }
 
-% These packages are loaded in main.tex and grammatical-theory.tex to make sure that the correct
-% setup is used in makefiles. main.tex is for the final file.
-%\usepackage{memoize}
+% package has to be loaded here because it has to be loaded before german.sty
+\usepackage{memoize}
 %\usepackage{nomemoize}
-%\memoizeset{
-%  memo filename prefix={grammatical-theory.memo.dir/},
-%}
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+}
 
 
 
 
 % has to be loaded after forest-setup because of incompatibilities with the dg-style.
-%\usepackage{german}\selectlanguage{USenglish}
+% sorry folks, this has to be loaded. All this babel-shorthands stuff is way too complicated and
+% does not work for my abbreviations. It does not work in bibtex items since it is language dependent.
+\usepackage{german}\selectlanguage{USenglish}
 
 \usepackage{styles/merkmalstruktur,styles/abbrev,styles/makros.2e,styles/my-xspace,styles/article-ex,styles/additional-langsci-index-shortcuts,
 styles/eng-date,styles/my-theorems}

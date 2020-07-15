@@ -568,6 +568,8 @@ This remainder is also the \compsv of the mother.
 \subsection{Linearization rules}
 \label{Abschnitt-LP-Regeln-HPSG}
 
+%\largerpage
+\addlines
 Dominance schemata do not say anything\indexgpsg about the order of the daughters. As in GPSG, linearization rules are specified separately.
 Linearization rules can make reference to the properties of daughters, their function in a schema (head\is{head}, complement\is{complement},
 adjunct\is{adjunct}, \ldots) or both.
@@ -703,7 +705,7 @@ for \emph{gibt} `gives':
                            }
 }
 \zs
-\addlines
+%\addlines
 The \emph{Head Feature Principle} takes the following form:
 \begin{principle-break}[\emph{Head~Feature~Principle}]\is{principle!Head Feature}
 \label{prinzip-hfp}
@@ -752,6 +754,7 @@ The following section will deal with how this principle is formalized as well as
 \subsection{Inheritance hierarchies and generalizations}
 \label{Abschnitt-Vererbung-HPSG}
 
+\largerpage
 Up to now, we have seen one example of a dominance schema and more will follow in the coming sections, \eg schemata for head"=adjunct structures as well
 as for the binding off of long"=distance dependencies. The Head Feature Principle is a general
 principle which must be met by all structures licensed by these schemata. As mentioned above, it must be met by all structures with a head. Formally, this can be captured by categorizing syntactic structures into those with and those without
@@ -774,13 +777,13 @@ synsem$|$loc$|$cat$|$head \ibox{1}\\
 head-dtr$|$synsem$|$loc$|$cat$|$head \ibox{1}\\
 } 
 \z
-\pagebreak
+%\pagebreak
 The arrow\is{\impl} corresponds to a logical implication\is{implication}, as mentioned above. Therefore, (\mex{0}) can be read as follows:
 if a structure is of type \type{headed"=phrase}, then it must hold that the value of
 \textsc{synsem$|$""loc$|$""cat$|$""head} is identical to the value of \textsc{head-dtr$|$""synsem$|$""loc$|$cat$|$head}.
   
 An extract from the type hierarchy under \type{sign} is given in Figure~\vref{fig-type-sign}.
-\begin{figure}
+\begin{figure}[t]
 \centering
 \begin{forest}
 typehierarchy
@@ -792,8 +795,8 @@ typehierarchy
 \end{forest}
 \caption{\label{fig-type-sign}Type hierarchy for \type{sign}: all subtypes of \type{headed"=phrase} inherit constraints}
 \end{figure}%
-
-\noindent
+%
+%\noindent
 \type{word} and \type{phrase} are subclasses of linguistic signs. Phrases can be divided into phrases with heads (\type{headed"=phrase})
 and those without (\type{non"=headed"=phrase}). There are also subtypes for phrases of type \type{non"=headed"=phrase} and \type{headed"=phrase}.
 We have already discussed \type{head"=complement"=phrase}, and other subtypes of \type{headed"=phrase} will be discussed in the later sections.
@@ -905,7 +908,7 @@ For example, \emph{sie} `she' in (\mex{1}) can refer to \emph{Frau} `woman' but 
 	 the woman buys a book she reads it\\
 \glt `The woman buys a book. She reads it.'
 \z
-\addlines
+%\addlines
 In general, pronouns have to agree in person, number and gender with the element they refer to. Indices are then identified accordingly.
 In HPSG, this is done by means of structure sharing. It is also common to speak of \textit{coindexation}\is{coindexation}.
 (\mex{1}) provides some examples of coindexation of reflexive pronouns\is{pronoun!reflexive}:
@@ -1004,6 +1007,7 @@ For more on theories of linking in HPSG, see \citew{Davis96a-u}, \citew{Wechsler
 \citew{DK2000b-u}. \citet{WKD2020a} provide an overview of approaches to linking within HPSG.
 \is{linking|)}
 
+\addlines
 Up to now, we have only seen how the meaning of lexical entries can be represented. The Semantics Principle\is{principle!Semantics}
 determines the computation of the semantic contribution of phrases: the index of the entire expression corresponds to the index of
 the head daughter, and the \relsv of the entire sign corresponds to the concatenation of the \relsvs of the daughters plus any relations
@@ -1012,7 +1016,7 @@ the fact that there are some cases where the entire meaning of a phrase is more 
 Pertinent examples are often discussed as part of Construction Grammar\indexcxg. Semantic
 composition in HPSG is organized such that meaning components that are due to certain patterns can be integrated into the complete meaning of an utterance. For examples, see Section~\ref{Abschnitt-Phrasale-Konstruktionen}.
 
-\addlines[-1]
+%\addlines[-1]
 The connection between the semantic contribution of the verb and its arguments is established in the lexical entry.
 As such, we ensure that the argument roles of the verb are assigned to the correct argument in the sentence. This is, however, not the only
 thing that the semantics is responsible for. It has to be able to generate the various readings associated with quantifier scope ambiguities 
@@ -1213,7 +1217,7 @@ Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
 \z
 
 %\addlines
-\enlargethispage{3pt}
+%\enlargethispage{3pt}
 \noindent
 This lexical rule takes a verb stem\footnote{%
 	The term \emph{stem} includes roots (\stem{helf} `help-'), products of derivation
@@ -1314,7 +1318,7 @@ arg-st  \sliste{ NP[\type{nom}]\ind{2} } \\
 }
 \end{tabular}
 \zl
-\pagebreak
+%\pagebreak
 The agent role is connected to the subject of \stem{schlag}. After passivization, the subject is suppressed and the argument connected to
 the patient role of \stem{schlag} becomes the subject of the participle. Argument linking is not affected by this and thus the nominative argument is
 correctly assigned to the patient role.
@@ -1426,8 +1430,7 @@ Lexical rule for personal and impersonal passive (simplified):\\
   phon \ibox{1}\\
   synsem$|$loc$|$cat$|$head \type{verb}  \\ 
   arg-st \sliste{ NP[\type{str}] } $\oplus$ \ibox{2} \\
-} $\mapsto$ \\
-\flushright\onems[word]{
+} $\mapsto$ \onems[word]{
   phon $f\iboxb{1}$\\
   synsem$|$loc$|$cat$|$head$|$vform  \type{ppp} \\
   arg-st \ibox{2} \\
@@ -1488,7 +1491,8 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
 
-%\addlines[2]
+\addlines
+\largerpage
 The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
 to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
 The analysis of (\mex{1}) can be summarized as follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special form of the 
@@ -1584,7 +1588,7 @@ sm edges
 The combination of the trace with \emph{diesen Mann} `this man' and \emph{jeder} `everbody' follows the rules and principles that we have encountered thus far.
 This begs the immediate question as to what licenses the verb \emph{kennt}
 in Figure~\ref{verb-movement-syn-simple} and what status it has.
-\pagebreak
+%\pagebreak
 
 If we want to capture the fact that the finite verb in initial position behaves like a complementizer\is{complementizer} \citep{Hoehle97a}, then it makes sense to
 give head status to \emph{kennt} in Figure~\ref{verb-movement-syn-simple} and have \emph{kennt} select a saturated, verb-final verbal projection.
@@ -1601,7 +1605,7 @@ of overt verbs:
 \glt `Does everybody know this man?'
 \zl
 
-\addlines[-1]
+\addlines[-4]
 \noindent
 It is normally not the case that \emph{kennen} `know' selects a complete sentence and nothing else as would be necessary for the analysis of 
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
@@ -1679,7 +1683,7 @@ projection of the trace is compatible.\footnote{%
   at the final version of the verb trace in (\ref{le-verbspur}) on page~\pageref{le-verbspur}.%
 }%
 \is{trace!verb|)}
-\pagebreak
+%\pagebreak
 
 The special lexical item for verb-initial position is licensed by the following lexical rule\is{lexical rule!verb"=initial position|(}:\footnote{%
 % SvNMP90a
@@ -1724,7 +1728,7 @@ synsem$|$loc$|$cat & \ms{ head & \ms[verb]{vform & fin\\
 \zs
 
 %\addlines
-\largerpage
+%\largerpage
 \noindent
 The verb licensed by this lexical rule selects a maximal projection of the verb trace which has the same local properties as the input verb.
 This is achieved by the coindexation of the \local values of the input verb and the \dsl values of the selected verb projection.
@@ -1778,7 +1782,7 @@ synsem$|$loc   \ibox{1} \ms{ cat$|$head$|$dsl   & \ibox{1}\\
                    }\\
 }
 \zs
-\largerpage
+%\largerpage
 This may seem surprising at first glance, but if we look closer at the interaction of the lexical rule (\ref{lr-verb-movement}) and the percolation of the
 \textsc{dsl} feature in the tree, then it becomes clear that the \dslv of the verb projection and therefore the \localv of the verb trace is determined by the \localv
 of the input verb. In Figure~\ref{verb-movement-syn}, \emph{kennt} is the input for the verb
@@ -1839,8 +1843,8 @@ sm edges
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: unmarked order}
 \end{figure}%
-\addlines
-\largerpage
+%\addlines
+%\largerpage
 The arguments of the verb are combined with the verb starting with the last element of the \compsl,
 as explained in Section~\ref{sec-HPSG-constituent-structure}. 
 The analysis of the marked order is shown in Figure~\vref{Abbildung-Konstituentenstellung-HPSG-markiert}. 
@@ -2537,7 +2541,7 @@ For a comparison of HPSG and Stabler's\ia{Stabler, Edward} Minimalist Grammars\i
 Section~\ref{Abschnitt-MG}.%
 \is{Head-Driven Phrase Structure Grammar (HPSG)|)}
 
-\addlines[2]
+%\addlines[2]
 \bigskip
 \questions{
 
