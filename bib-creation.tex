@@ -48,6 +48,13 @@
 \input{localpackages.tex}
 \input{localcommands.tex}
 
+\usepackage{memoize}
+%\usepackage{nomemoize}
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+}
+
+\renewcommand{\addlines}[1][1]{}
 
 \bibliography{bib-abbr,biblio}
 
@@ -56,6 +63,6 @@
 
 \input grammatical-theory-include
 
-\InputIfFileExists{tmpfile.tex}{\input{tmpfile}}{\relax}
+%\InputIfFileExists{tmpfile.tex}{\input{tmpfile}}{\relax}
 
 \end{document}

@@ -168,8 +168,8 @@ index:
 # 	xelatex $* | egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 
 
-stable.pdf: grammatical-theory.pdf
-	cp grammatical-theory.pdf stable.pdf
+stable.pdf: main.pdf
+	cp main.pdf stable.pdf
 
 
 # http://stackoverflow.com/questions/10934456/imagemagick-pdf-to-jpgs-sometimes-results-in-black-background

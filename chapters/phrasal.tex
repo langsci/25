@@ -1192,7 +1192,7 @@ benefactive cannot be added. So, in fact the actual configuration in the c-struc
 play a minor role: the account mainly relies on semantics and resource sensitivity. There is one
 piece of information that is contributed by the c-structure rule: it constrains the grammatical
 functions of \argtwo and \argthree, which are disjunctively specified in the template definitions for \argtwo
-and \argthree: \argtwo can be realized as \lfgsubj or as \lfgobj. In the active case \argone will be the \subj and because of function argument bi-uniqueness \citep[\page 334]{BATW2015a} no other element can be the \lfgsubj and hence \argtwo has to
+and \argthree: \argtwo can be realized as \lfgsubj or as \lfgobj. In the active case \argone will be the \subj and because of function argument bi-uniqueness \citep[\page 334]{BATW2016a} no other element can be the \lfgsubj and hence \argtwo has to
 be an \lfgobj. \argthree can be either an \lfgobj or an \objtheta. Since \argtwo is an \lfgobj in the active,
 \argthree has to be an \objtheta in the active. In the passive case \argone is suppressed or
 realized as \obltheta (\emph{by} PP). \argtwo will be realized as \subj (since English requires a \subj to be realized) and \argthree could be realized as either
@@ -2088,6 +2088,7 @@ He proposes the inheritance hierarchy in Figure~\ref{Abbildung-Haugereid} in ord
 possible argument combinations. The Arg5 role is omitted due to space considerations.
 
 \begin{figure}
+\memoizeset{disable}%
 \oneline{%
 \begin{tabular}{@{}cccccccc@{}}
 \multicolumn{8}{c}{\mynode{link}{link}}\\[6ex]
@@ -2203,6 +2204,7 @@ Instead, the verb normally has an event argument and the argument roles belongin
 \ex \relation{eat}(e, x, y) $\wedge$ \relation{man}(x) $\wedge$ \relation{pizza}(y)
 \ex \relation{eat}(e) $\wedge$ \type{agent}(e,x) $\wedge$ \type{theme}(e,y) $\wedge$ \relation{man}(x) $\wedge$ \relation{pizza}(y)
 \zl
+\largerpage
 Haugereid adopts Minimal Recursion Semantics (MRS)\indexmrs as his semantic formalism (see also Section~\ref{Abschnitt-HPSG-Semantik} and~\ref{Abschnitt-leere-Elemente-Semantik}). 
 The fact that arguments belong to a particular predicate is represented by the fact that the relevant predicates have the same handle. The representation in (\mex{0}c) corresponds
 to (\mex{1}):
@@ -2226,7 +2228,6 @@ For\is{raising|(} the sentence in (\mex{1}a), Haugereid (2007, p.\,c.) assumes t
 \ex h1:\relation{mann}(x), h2:\relation{teich}(y), h3:\relation{leer}(e),\\
     h4:\relation{fischen}(e2), h4:\type{arg1}(x), h4:\type{arg2}(y), h4:\type{arg4}(h3)
 \zl
-\largerpage
 In (\mex{0}b), the \type{arg1}, \type{arg2} and \type{arg4} relations have the same handle as \relation{fischen}. 
 Following Haugereid's definitions, this means that \type{arg2} is the patient of the event. In the case of
 (\mex{0}a), this makes incorrect predictions since the accusative element is not a semantic argument of the main
@@ -2315,7 +2316,6 @@ are the functions of HPSG lexical hierarchies, for example.
 \subsection{Summary}
 \label{sec-underspec-summary}
 
-\largerpage
 In Sections~\ref{idiom-asym}--\ref{sec-expletives} we showed that the question of which
 arguments must be realized in a sentence cannot be reduced to semantics and world knowledge or to
 general facts about subjects. The consequence is that valence information has to be connected to
@@ -2328,7 +2328,8 @@ various problems discussed above, such as the problem of coordination raised in 
 
 \section{Relations between constructions}
 \label{relations-sec}
-%\addlines[2]
+
+\largerpage
 On the lexical rules approach, word forms are related by lexical rules: a verb
 stem can be related to a verb with finite inflection and to a passive verb form; verbs can be converted
 to adjectives or nouns; and so on.  The lexical argument structure accompanies the word and can be manipulated by the lexical rule.  
@@ -2366,7 +2367,7 @@ The passive voice constructions corresponding to (\mex{0}) would be:
 \ex {}Dat Nom V V-Aux
 \zl  
 
-\largerpage
+%\largerpage
 \noindent
 Merely listing all these constructions is not only uneconomical but fails to capture the obvious
 systematic relation between active and passive constructions.  Since phrasalists reject both lexical rules and transformations, they need an alternative way to relate phrasal configurations and thereby explain the regular relation between active and passive.  
@@ -2403,6 +2404,7 @@ type hierarchy
 \caption{\label{fig-passive-inheritance}Inheritance Hierarchy for active and passive}
 \end{figure}%
 %
+\addlines[2]
 As was already discussed in Section~\ref{sec-passive-bcg}, inheritance"=based analyses cannot
 account for multiple changes in valence as for instance the combination of passive and impersonal
 construction that can be observed in languages like Lithuanian\il{Lithuanian}
@@ -2426,6 +2428,7 @@ construction that can be observed in languages like Lithuanian\il{Lithuanian}
 %%\addlines
 Another example from Section~\ref{sec-passive-bcg} that cannot be handled with inheritance is multiple causativization in
 Turkish. Turkish allows double and even triple causativization \citep[\page 146]{Lewis67a-u}: 
+
 \ea
 Öl-dür-t-tür-t- \hfill(Turkish)\\
 `to cause somebody to cause somebody to kill somebody' 
@@ -2674,6 +2677,7 @@ positions. Figure~\ref{fig-jackendoff-linking-active} shows an example for an ac
 \centering
 %\scalebox{.7}
 {%
+\memoizeset{disable}%
 \begin{tabular}{ccccc}
 DESIRE(&{~\mynode{b}{BILL$_2$}}, && & ~{\mynode{sw}{[SANDWICH; DEF]$_3$}})\\
 \\[1ex]
@@ -2729,6 +2733,7 @@ corresponds to the passive.
 \centering
 %\scalebox{.7}
 {%
+\memoizeset{disable}%
 \begin{tabular}{ccccc}
 DESIRE(&~{\mynode{b}{BILL$_2$},} & & & ~{}{\mynode{sw}{[SANDWICH; DEF]$_3$}})\\
 \\[1ex]
@@ -2748,7 +2753,7 @@ DESIRE(&~{\mynode{b}{BILL$_2$},} & & & ~{}{\mynode{sw}{[SANDWICH; DEF]$_3$}})\\
 \caption{\label{fig-jackendoff-linking-passive}Linking grammatical functions to tree positions: passive}
 \end{figure}%
 
-\largerpage
+\addlines
 Although Culicover and Jackendoff emphasize the similarity between their approach and Relational
 Grammar \citep{Perlmutter83a-ed}, there is an important difference: in Relational Grammar additional levels (strata) can be stipulated
 if additional remappings are needed. In Culicover and Jackendoff's proposal there is no additional
@@ -2803,7 +2808,7 @@ all these approaches can suggest though is that they just stipulate four differe
 argument structure and phrase structure: active, passive, impersonal construction, passive + impersonal construction. But this misses the fact
 that (\ref{ex-double-passivization-hit-three}) is an impersonal variant of the passive in (\mex{-1}).
 
-\largerpage
+%\largerpage
 In contrast, the lexical rule-based approach suggested by
 \citet{Mueller2003e} does not have any problems with such multiple alternations:
 the application of the passivization lexical rule suppresses the least oblique argument and
@@ -2838,6 +2843,7 @@ similar problems for theories that assume a phrasal construction with fixed orde
 \subsection{Particle verbs and commitment to phrase structure configurations}
 \label{sec-particle-verbs-phrasal}
 
+%\addlines
 A general problem of approaches that assume phrase structure configurations paired with meaning is
 that the construction may appear in different contexts: the construction parts may be involved in
 derivational morphology (as discussed in the previous subsection) or the construction parts may be
@@ -2855,7 +2861,6 @@ Examples for specific Dutch constructions are:
 \ex {}[ door [~]\sub{V} ]\sub{V$'$}
 \ex {}[ op   [~]\sub{V} ]\sub{V$'$}
 \zl 
-\largerpage[2]
 This suggestion comes with the claim that particles cannot be fronted.  This claim is made
 frequently in the literature, but it is based on introspection and wrong for languages like Dutch\il{Dutch} and German. On Dutch see \citew[\page19]{Hoeksema91a}, on German,
 \citew{Mueller2002b,Mueller2002d,Mueller2003a,Mueller2007c}.\footnote{%
@@ -2905,7 +2910,7 @@ in order to demonstrate how frameworks deal with the discontinuous realization o
 \subsection{Recognizability of constructions}
 \label{sec-recognizability-of-constructions}
  
-\largerpage[2]
+\largerpage
 I think that a purely pattern-based approach is weakened by the existence of examples like (\mex{1}):
 \eal
 \ex John tried to sleep.
@@ -2931,6 +2936,7 @@ realized overtly within the local clause, bracketed here:
 \glt `The sick man wanted to be shot dead.'
 % replaced "ill" by "sick" after submission
 \z
+\addlines
 Of course passivization and control are responsible for these occurrences, but the important point
 here is that arguments can remain unexpressed or implicit and nevertheless a meaning usually
 connected to some overt realization of arguments is present \citep[Section~4]{Mueller2007d}. So,
@@ -3203,7 +3209,7 @@ sm edges
 		[V
 			[V
 				[knows]]
-			[and]
+			[and,calign with current]
 			[V
 				[loves]]]
 		[NP
@@ -3220,6 +3226,8 @@ is something like \relation{and}(\relation{know}(x, y), \relation{love}(x, y)), 
 (and possibly additionally an event and a world variable depending on the semantic theory that is used). Goldberg would probably have to adopt an analysis such as the one in 
 Figure~\ref{Abbildung-He-knows-and-loves-this-record-TAG} in order to maintain the plugging analysis.
 
+\addlines
+\largerpage
 Croft would definitely have to adopt the TAG analysis since the verb is already present in his constructions. For the example in (\ref{Beispiel-Gapping-Steedman}),
 both Goldberg and Croft would have to draw from the TAG analysis in Figure~\vref{Abbildung-He-gave-george-a-book-and-martha-a-record-TAG}.
 \begin{figure}
@@ -3248,8 +3256,8 @@ sm edges
 \caption{\label{Abbildung-He-gave-george-a-book-and-martha-a-record-TAG}TAG analysis of \emph{He
     gave George a book and Martha a record.}}
 \end{figure}%
-
-\noindent
+%
+%\noindent
 The consequence of this is that one requires discontinuous\is{constituent!discontinuous} constituents. Since coordination allows a considerable number
 of variants, there can be gaps between all arguments of constructions. An example with a ditransitive verb is given in (\mex{1}):
 \ea
@@ -3401,6 +3409,7 @@ be unlikely.
 \subsection{Light verbs}
 \label{sec-psycho-lv}
 
+\addlines[2]
 \citet*{WJKP2014a} report on a number of experiments that test predictions made by
 various approaches to light verb constructions. (\mex{1}a) shows a typical light verb construction:
 \emph{take} is a light verb that is combined with the nominal that provides the main
@@ -3548,7 +3557,7 @@ without specifying an order between the elements of the two lists, that is, both
 \emph{auf} and \emph{auf}, \emph{wachen} are possible. The little marking \type{vc} is an assignment
 to a topological field in the clause.
 
-\largerpage[2]
+%\largerpage[2]
 I criticized such linearization-based proposals since it is unclear how
 analyses that claim that the particle is just linearized in the domain of its verb can account for
 sentences like (\mex{1}), in which complex syntactic structures are involved \citep{Mueller2007d}. German is a V2 language
@@ -3603,7 +3612,7 @@ and particle is represented.\footnote{%
   cortical memory circuit exists for it, similar to that encoding a single word''.
 I believe that my analysis is compatible with this statement.
 } Such a lexical analysis provides an easy way to account for fully
-\largerpage[2]
+%\largerpage[2]
 nontransparent particle verbs like \emph{an-fangen} `to begin'. However, I also argued for a
 lexical treatment of transparent particle verbs like \emph{losfahren} `to start to drive' and
 \emph{jemanden/etwas anfahren} `drive directed towards somebody/something'. The
@@ -3846,7 +3855,7 @@ The empty head is not perceptible in the signal. It is a theoretical construct a
 it is possible to translate an analysis using an empty head into one with a lexical rule. For the present example, any argumentation for a particular analysis will
 be purely theory"=internal.
 
-\largerpage
+%\largerpage
 Although Unsupervised Data-Oriented Parsing (U"=DOP) cannot help us to decide between analyses, there are areas of grammar for which these structures are of interest: under the assumption of
 binary"=branching structures, there are different branching possibilities depending on whether one assumes an analysis with verb movement or not. This means that
 although one does not see an empty element in the input, there is a reflex in statistically"=derived trees. The left tree in
@@ -3904,7 +3913,7 @@ theories, namely the phrasal one, is correct.
 
 \subsection{Collostructions}
 
-\largerpage
+%\largerpage
 \mbox{}\citet[Section~5]{SG2009a} assume a plugging analysis: ``words
   occur in (slots provided by) a given   construction if their meaning matches that of the
   construction''. The authors claim that their \emph{collostructional analysis has confirmed}
@@ -4082,7 +4091,7 @@ The directives in (\mex{1}) and (\mex{2}) are similarly problematic (see also \c
 	 to.the hell with this government\\
 \glt `To hell with this government!'
 \zl
-\largerpage
+%\largerpage
 Here, it is also not possible to simply identify an
 elided\is{ellipsis} verb. It is, of course, possible to assume an empty head that selects an adverb or a 
 \emph{mit}-PP, but this would be \emph{ad hoc}.
@@ -4160,7 +4169,7 @@ of the construction:
 	 where.to with the entire money\\
 \glt `Where should all this money go?'
 \zl
-\largerpage
+%\largerpage
 Since these questions correspond to V2 sentences, one does not require the constraint that the prefield can only be filled if the C position
 is filled. 
 % Das sind eigene Konstruktionen
@@ -4208,7 +4217,7 @@ needed in German. It would only be used in constructions of the kind discussed h
 any verb and it also triggers obligatory verb movement, which is something that is not known from any other morpheme used
 to form verb diatheses.
 % Imperativ?
-\pagebreak
+%\pagebreak
 
 The costs of this analysis are, of course, less severe if one assumes that humans already have this antipassive morpheme anyway, that is, this morpheme
 is part of our innate Universal Grammar\indexug. But if one follows the argumentation from the earlier sections of this chapter, then one should only assume
@@ -4318,6 +4327,7 @@ Setting the semantics to \type{imperative-or-interrogative}  rules out \emph{ass
 Whether this type is resolved in the direction of \type{imperative} or
 \type{interrogative} is ultimately decided by further properties of the utterance such as intonation or the use of interrogative pronouns.
 
+\addlines[2]
 The valence of the lexical daughters in (\mex{0}) as well as the connection to the semantic role (the linking to the patient role) are simply stipulated.
 Every approach has to stipulate that an argument of the verb has to be expressed as a \emph{mit}-PP. Since there is no antipassive\is{antipassive|)} in German,
 the effect that could be otherwise achieved by an antipassive lexical rule in (\mex{0}) is simply written into the \textsc{lex-dtr} of the verb movement rule.
@@ -4328,7 +4338,7 @@ The \compsl of \textsc{lex-dtr} contains a modifier (adverb, directional PP) and
 of \relation{directive} is unspecified since it depends on the context (speaker, hearer, third person).
 
 This analysis is shown in Figure~\vref{verb-movement-muell}.
-\begin{figure}[th]
+\begin{figure}[t]
 \oneline{%
 \begin{forest}
 sm edges
@@ -4537,6 +4547,7 @@ The bagels, I like.
 \ex The more people I met, \emph{the happier I became}.
 \ex \emph{The more people I met}, the happier I became.
 \zl
+\addlines
 These individual constructions vary in many respects. Sag lists the following questions that have to be answered
 for each construction:
 \begin{itemize}
