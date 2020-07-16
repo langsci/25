@@ -18,7 +18,7 @@
                 ,babelshorthands
 %                ,showindex
                 ,newtxmath
-                ,colorlinks, citecolor=brown % for drafts
+%                ,colorlinks, citecolor=brown % for drafts
 %                ,draftmode
 % 	        ,coverus
 		  ]{langscibook}                              
@@ -34,14 +34,16 @@
 %\newtoggle{draft}\toggletrue{draft}
 \newtoggle{draft}\togglefalse{draft}
 
-%\newcommand{\NOTE}[1]{}
-\newcommand{\NOTE}[1]{\marginpar{#1}}
+\newcommand{\NOTE}[1]{}
+%\newcommand{\NOTE}[1]{\marginpar{#1}}
 
 \newcommand{\LATER}[1]{}
 
-\bibliography{bib-abbr,biblio}
+%\bibliography{bib-abbr,biblio}
 %\bibliography{check-gt}
-%\bibliography{gt}
+% we have to load from here since we have to include all references since we need "Müller 2004d" in
+% the text since it takes more space than "Müller 2004". So we have to include a \nocite{*} here.
+\bibliography{gt}
 
 \providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{} \providecommand*{\printsecond}[2]{#2}
 
@@ -52,7 +54,7 @@
 
 
 
-\includeonly{chapters/preface}
+%\includeonly{chapters/preface}
 %\includeonly{chapters/1-begriffe}
 %,2-psg,3-gb}
 %\includeonly{chapters/2-psg}
@@ -84,21 +86,23 @@
 %\includeonly{chapters/conclusions}
 %\includeonly{chapters/nothing}
 
-%\includeonly{chapters/loesungen}
+\includeonly{chapters/loesungen}
 
 %\includeonly{backmatter}
 
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
+\input{locallangscifixes.tex}
 
-\memoizeset{readonly}
+%\memoizeset{readonly}
 
 \input grammatical-theory-include
 
 % Hack to get all items cited in the files not included in this run.
 % only use this if you have gt.bib
-%\nocite{*}
+% explanation above, we need this since we want to have all occurrances of Müller 2004a,b,c
+\nocite{*}
 
 \end{document}
 

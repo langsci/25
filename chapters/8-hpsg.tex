@@ -454,7 +454,7 @@ synsem & \ms{ loc & \ms[local]{ cat  & \ms[category]{ head & \ms[noun]{ case & \
             }
 }
 \z
-\addlines
+%\addlines
 In the outer layer, there are the features \phon and \synsem. As previously mentioned, \phon contains the phonological representation of a linguistic
 object. The value of \synsem is a feature structure which contains syntactic and semantic information that can be selected by other heads.
 The daughters of phrasal signs are represented outside of \synsem. This ensures that there is a
@@ -492,6 +492,7 @@ such as those in (\mex{1}) are identical.\label{Seite-HPSG-Koordination}
 \gll Er ist [dumm] und [arrogant].\\
 	he is \spacebr{}dumb and \spacebr{}arrogant\\
 \zl
+\largerpage
 (\mex{0}b) should be compared with the examples in (\mex{1}). In (\mex{1}a), the verbs select for an
 accusative and a dative object, respectively and in (\mex{1}b), the verbs select for an accusative
 and a prepositional object:
@@ -754,7 +755,7 @@ The following section will deal with how this principle is formalized as well as
 \subsection{Inheritance hierarchies and generalizations}
 \label{Abschnitt-Vererbung-HPSG}
 
-\largerpage
+\largerpage[-2]
 Up to now, we have seen one example of a dominance schema and more will follow in the coming sections, \eg schemata for head"=adjunct structures as well
 as for the binding off of long"=distance dependencies. The Head Feature Principle is a general
 principle which must be met by all structures licensed by these schemata. As mentioned above, it must be met by all structures with a head. Formally, this can be captured by categorizing syntactic structures into those with and those without
@@ -786,7 +787,7 @@ An extract from the type hierarchy under \type{sign} is given in Figure~\vref{fi
 \begin{figure}[t]
 \centering
 \begin{forest}
-typehierarchy
+type hierarchy
 [\type{sign}
   [\type{word}]
   [\type{phrase} 
@@ -1491,7 +1492,7 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \section{Verb position}
 \label{Abschnitt-Verbstellung-HPSG}
 
-\addlines
+%\addlines[2]
 \largerpage
 The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
 to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
@@ -1605,13 +1606,14 @@ of overt verbs:
 \glt `Does everybody know this man?'
 \zl
 
-\addlines[-4]
+%\addlines[-4]
 \noindent
 It is normally not the case that \emph{kennen} `know' selects a complete sentence and nothing else as would be necessary for the analysis of 
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
 \emph{kennt}. If it could contain a trace belonging to \emph{gibt} `gives', for example, we would be able to analyze sentences such as (\mex{1}b):
 %\addlines bug here?
 %\largerpage
+\addlines
 \eal
 \ex[]{
 \gll Gibt [der Mann der Frau das Buch \_$_{gibt}$]?\\
@@ -2477,6 +2479,7 @@ Instead, one assumed the S"=structure with traces straight away and the assumpti
 Form\is{Logical Form (LF)} was also abandoned (\citealp{Koster78b-u}; \citealp[Section~1.4]{Haider93a};
 \citealp[\page 14]{Frey93a}). This view corresponds to the view in HPSG and many of the analyses in one framework can be translated into the other.
 
+\addlines[2]
 In \gbt, the terms subject\is{subject} and object\is{object} do not play a direct role: one can use
 these terms descriptively, but subjects and objects are not marked by features or similar
 devices. Nevertheless it is possible to make the distinction since subjects and objects are usually
@@ -2537,8 +2540,10 @@ to rules without a lexical head. This is explicitly ruled out by \citet{Flicking
 \citet*[\page 265]{FPW85a} pointed out that this kind of constraint is unnecessary if one uses lexical rules rather than metarules since the former can only
 be applied to lexical heads.
 
+%\largerpage
 For a comparison of HPSG and Stabler's\ia{Stabler, Edward} Minimalist Grammars\indexmg, see
-Section~\ref{Abschnitt-MG}.%
+Section~\ref{Abschnitt-MG}. Torr's implementation of Minimalist Grammars is discussed in
+Section~\ref{sec-formalization-minimalism} on pages \pageref{page-torr-implementation-beginning}--\pageref{page-torr-implementation-end}.%
 \is{Head-Driven Phrase Structure Grammar (HPSG)|)}
 
 %\addlines[2]
