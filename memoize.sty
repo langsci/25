@@ -210,6 +210,8 @@
     \ifmemoizing\pgfkeysalso{#1}\else\pgfkeysalso{#2}\fi},
   if manual/.code 2 args={
     \ifmmz@manual\pgfkeysalso{#1}\else\pgfkeysalso{#2}\fi},
+  % This might need to go, as the regular output might define some stuff needed
+  % in the memoized output, see https://github.com/sasozivanovic/memoize/issues/1
   shipout only memoized/.is if=mmz@shipout@only@memoized,
 }
 
