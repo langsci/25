@@ -94,10 +94,11 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
 	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
 	sed -i.backup 's/{\\O }/Oe/' *.adx
-	sed -i.backup 's/@van Trijp/@\\MakeCapital {van} Trijp/g' *.adx
+	sed -i.backup 's/\\MakeCapital //g' *.adx
 	sed -i.backup 's/.*Group.*//' grammatical-theory.adx
 	python3 fixindex.py $*.adx
 	mv $*mod.adx $*.adx
+
 	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
@@ -204,10 +205,11 @@ memos: main.pdf
 	xelatex -shell-escape grammatical-theory
 	python3 memomanager.py split grammatical-theory.mmz
 
+
 memo-install:
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/memoize* .
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/nomemoize* .
-
+	cp -pr ~/Documents/Dienstlich/Projekte/memoize/xparse-arglist.sty .
 
 
 o-public: o-public-lehrbuch 
