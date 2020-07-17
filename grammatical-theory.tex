@@ -48,16 +48,20 @@
 
 \newcommand{\LATER}[1]{}
 
+% package has to be loaded before german.sty
+\usepackage{memoize}
+%\usepackage{nomemoize}
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+  enable=dependency,
+}
+
+
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localcommands.tex}
 \input{locallangscifixes.tex}
 
-\usepackage{memoize}
-%\usepackage{nomemoize}
-\memoizeset{
-  memo filename prefix={grammatical-theory.memo.dir/},
-}
 
 
 

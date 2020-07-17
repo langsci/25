@@ -80,15 +80,24 @@
 %\includeonly{chapters/branching-locality-recursion}
 %\includeonly{chapters/empty}
 %\includeonly{chapters/movement}
-%\includeonly{chapters/phrasal}
+\includeonly{chapters/phrasal}
 %\includeonly{chapters/potential-structure}
 %\includeonly{chapters/coregram}
 %\includeonly{chapters/conclusions}
 %\includeonly{chapters/nothing}
 
-\includeonly{chapters/loesungen}
+%\includeonly{chapters/loesungen}
 
 %\includeonly{backmatter}
+
+% package has to be loaded before german.sty
+\usepackage{memoize}
+%\usepackage{nomemoize}
+\memoizeset{
+  memo filename prefix={grammatical-theory.memo.dir/},
+  enable=dependency,
+}
+
 
 \input{localmetadata.tex}
 \input{localpackages.tex}
