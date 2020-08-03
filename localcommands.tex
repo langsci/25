@@ -279,6 +279,16 @@ frbox/.style={
     \makeatother
 
 
+% Some notes on how these things work. Sometimes the boxes are not of same hight.
+% Felix suggested to use vspace within the boxes to fix this:
+% https://github.com/langsci/25/issues/42
+% To fix this in a single frame, please use \vspace{n\baselineskip}, where n is a factor to be
+% adjusted to the particular case. In the boxes in your screenshot, I'd guess that n=1. 
+
+% Do you also want a more general solution? This kind of correction is probably best applied on a
+% case-by-case basis, but I don't know the other boxes in your book. 
+
+
 
 \newcommand{\questions}[1]{~\newline\vspace*{-10mm}
 {\memoizeset{disable}%
