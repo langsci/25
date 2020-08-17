@@ -288,8 +288,17 @@ frbox/.style={
 % Do you also want a more general solution? This kind of correction is probably best applied on a
 % case-by-case basis, but I don't know the other boxes in your book. 
 
+% Is tcolorbox used as backend?
+\ifbool{langsci@tbls@tcolorbox}{%
+\newcommand{\questions}[1]{{\memoizeset{disable}%
+\begin{tblsfilledsymbol}{Comprehension questions}{people}#1\end{tblsfilledsymbol}}}
+\newcommand{\exercises}[1]{{\memoizeset{disable}%
+\begin{tblsfilledsymbol}{Exercises}{pencil}#1\end{tblsfilledsymbol}}}
+\newcommand{\furtherreading}[1]{{\memoizeset{disable}%
+\begin{tblsfilledsymbol}{Further reading}{book}#1\end{tblsfilledsymbol}}}}{}
 
-
+% Is mdframed used as backend?
+\notbool{langsci@tbls@tcolorbox}{%
 \newcommand{\questions}[1]{~\newline\vspace*{-10mm}
 {\memoizeset{disable}%
 \tblssy{people}{Comprehension questions}{\setlist{leftmargin=*}#1}}}
@@ -315,7 +324,7 @@ frbox/.style={
 	linewidth=0pt,backgroundcolor=\tblsboxcolor,
 	innerleftmargin=5mm, innerrightmargin=5mm, innerbottommargin=5mm, innertopmargin=5mm,
 	frametitleaboveskip=15mm, frametitlebelowskip=5mm,frametitlerule=false, repeatframetitle=false
-}
+}}{}
 
 
 \robustify\textsc
