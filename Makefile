@@ -201,7 +201,7 @@ commit:
 
 # to eliminate the risk of jumping trees build the complete pdf without
 # memozation (main.tex does load nomemoize) and then latex grammatical-theory.tex (which does load memoize) and call the extraction script after this.
-memos: main.pdf
+memos: cleanmemo main.pdf
 	xelatex -shell-escape grammatical-theory
 	python3 memomanager.py split grammatical-theory.mmz
 
