@@ -102,7 +102,7 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
-	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label|aux'
+	xelatex $* | egrep -v 'math|PDFDocEncod|microtype' |egrep 'Warning|label'
 
 # use texfot instead?
 
@@ -150,7 +150,7 @@ bbl:
 index:
 	xelatex grammatical-theory -no-pdf |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
 	makeindex -gs index.format -o grammatical-theory.snd grammatical-theory.sdx
-	xelatex grammatical-theory |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label|aux'
+	xelatex grammatical-theory |egrep -v 'math|PDFDocEncod' |egrep 'Warning|label'
 
 
 # mit neu langsci.cls
@@ -200,10 +200,11 @@ commit:
 	svn commit -m "published version to the web"
 
 # to eliminate the risk of jumping trees build the complete pdf without
-# memozation (main.tex does load nomemoize) and then latex grammatical-theory.tex (which does load memoize) and call the extraction script after this.
+# memozation (main.tex does load nomemoize) and then latex compile-memos-grammatical-theory.tex
+# (which does load memoize, ignores \addlines and does not have the bibliography compiled) and call the extraction script after this.
 memos: cleanmemo main.pdf
-	xelatex -shell-escape grammatical-theory
-	python3 memomanager.py split grammatical-theory.mmz
+	xelatex -shell-escape compile-memos-grammatical-theory
+	python3 memomanager.py split compile-memos-grammatical-theory.mmz
 
 
 memo-install:
