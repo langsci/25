@@ -16,8 +16,7 @@ program in general should also be mentioned: \citew{Fanselow87a}, \citew{FF87a},
 The different implementations of Chomskyan theories are often grouped under the heading \emph{Generative Grammar}\is{Generative Grammar}.
 This term comes from the fact that phrase structure grammars and the augmented frameworks that were suggested by Chomsky can generate
 sets of well"=formed expressions (see p.\,\pageref{Seite-generiert}). It is such a set of sentences that constitutes a language (in the formal
-sense) and one can test if a sentence forms part of a language by checking if a particular sentence is in the set of sentences generated
-by a given grammar. In this sense, simple phrase structure grammars and, with corresponding formal assumptions, GPSG, LFG, 
+sense) and one can test if a sentence forms part of a language by checking if a particular sentence is in the set of sentences generate by a given grammar. In this sense, simple phrase structure grammars and, with corresponding formal assumptions, GPSG, LFG, 
 HPSG and Construction Grammar (CxG) are generative theories.
 In recent years, a different view of the formal basis of theories such as LFG, HPSG and CxG has
 emerged such that the aforementioned theories are now \emph{model theoretic}
@@ -708,7 +707,7 @@ sm edges
   [INFL
   	[will]]
   [VP
-  	[V$'$
+  	[\hspaceThis{$'$}V$'$
 		[V [read]]
 		[NP[the newspaper, roof]]]]]
 \end{forest}
@@ -720,11 +719,11 @@ sm edges
 [IP
   [NP
   	[Ann,roof]]
-  [I$'$
+  [\hspaceThis{$'$}I$'$
   	[I
   		[will]]
 	[VP
-  	[V$'$
+  	[\hspaceThis{$'$}V$'$
 		[V [read]]
 		[NP[the newspaper, roof]]]]]]
 \end{forest}}
@@ -758,11 +757,11 @@ IP. This position is usually referred to as SpecIP.\footnote{\label{fn-specxp-in
 %% [IP
 %%   [NP
 %%   	[Ann]]
-%%   [I$'$
+%%   [\hspaceThis{$'$}I$'$
 %%   	[I$^0$
 %%   		[will]]
 %% 	[VP
-%%   	[V$'$
+%%   	[\hspaceThis{$'$}V$'$
 %% 		[V$^0$[read]]
 %% 		[NP[the newspaper, roof]]]]]]
 %% \end{forest}}
@@ -791,14 +790,14 @@ of (\mex{0}a).
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [that]]
 	[IP
 		[NP[Ann,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[I [will]]
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[V [read]]
 					[NP[the newspaper, roof]]]]]]]]
 \end{forest}}{\caption{\label{Abb-GB-Englisch-CP}Complementizer phrase}}
@@ -806,14 +805,14 @@ sm edges
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [will$_k$]]
 	[IP
 		[NP[Ann,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[I [\trace$_k$]]
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[V [read]]
 					[NP[the newspaper, roof]]]]]]]]
 \end{forest}
@@ -836,14 +835,14 @@ empty and the auxiliary verb is later moved to this position. Figure~\ref{Abb-GB
 %% \begin{forest}
 %% sm edges
 %% [CP
-%% [C$'$
+%% [\hspaceThis{$'$}C$'$
 %% 	[C$^0$[will$_k$]]
 %% 	[IP
 %% 		[NP[Ann]]
-%% 		[I$'$
+%% 		[\hspaceThis{$'$}I$'$
 %% 			[I$^0$[\trace$_k$]]
 %% 			[VP
-%% 				[V$'$
+%% 				[\hspaceThis{$'$}V$'$
 %% 					[V$^0$[read]]
 %% 					[NP[the newspaper, roof]]]]]]]]
 %% \end{forest}
@@ -868,14 +867,14 @@ What will Ann read?
 sm edges
 [CP
 [NP$_i$ [what,roof]]
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [will$_k$]]
 	[IP
 		[NP[Ann,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[I [\trace$_k$]]
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[V [read]]
 					[NP[\trace$_i$]]]]]]]]
 \end{forest}}
@@ -887,10 +886,10 @@ sm edges
 %% sm edges
 %% [IP
 %% 	[NP[Ann,roof]]
-%% 	[I$'$
+%% 	[\hspaceThis{$'$}I$'$
 %% 		[I [-s]]
 %% 		[VP
-%% 			[V$'$
+%% 			[\hspaceThis{$'$}V$'$
 %% 				[V [read-]]
 %% 				[NP[the newspaper, roof]]]]]]
 %% \end{forest}}{
@@ -914,7 +913,7 @@ by a trace that is dominated by the NP as in Figure~\ref{fig-traces-xp} (\citeal
 \hfill\subfloat[Trace]{%
 \hspace{1cm} % adding some space here for the subcaptions
 \begin{forest}
-  [V$'$
+  [\hspaceThis{$'$}V$'$
     [V [read]]
     [\trace$_i$]]
 \end{forest}
@@ -923,7 +922,7 @@ by a trace that is dominated by the NP as in Figure~\ref{fig-traces-xp} (\citeal
 \subfloat[XP with empty daughter]{
 \hspace{1cm}
 \begin{forest}
-  [V$'$
+  [\hspaceThis{$'$}V$'$
     [V [read]]
     [NP[\trace$_i$]]]
 \end{forest}
@@ -931,7 +930,7 @@ by a trace that is dominated by the NP as in Figure~\ref{fig-traces-xp} (\citeal
 \hfill
 \subfloat[Mix of a and b]{
 \hspace{1cm}\begin{forest}
-  [V$'$
+  [\hspaceThis{$'$}V$'$
     [V [read]]
     [NP$_i$ [\trace]]]
 \end{forest}\hspace{1cm}\label{fig-traces-mix}}
@@ -966,10 +965,10 @@ in Figure~\vref{Abb-GB-englischer-Satz-ohne-Hilfsverb}.
 sm edges
 [IP
 	[NP[Ann,roof]]
-	[I$'$
+	[\hspaceThis{$'$}I$'$
 		[I [-s]]
 		[VP
-			[V$'$
+			[\hspaceThis{$'$}V$'$
 				[V [read-]]
 				[NP[the newspaper, roof]]]]]]
 \end{forest}}
@@ -1050,7 +1049,7 @@ topological\is{topology} fields as shown in Figure~\vref{Abb-GB-Topo}.
                   ]
                 ]
               ]
-              [C$'$
+              [\hspaceThis{$'$}C$'$
                     [{}
                       [C, terminus
                         [C \\left SB, name=c0
@@ -1068,7 +1067,7 @@ topological\is{topology} fields as shown in Figure~\vref{Abb-GB-Topo}.
                           ]
                         ]
                       ]
-                      [I$'$
+                      [\hspaceThis{$'$}I$'$
                               [VP, name=vp
                                 [V, name=v0, terminus, no path, anchor=east
                                   [{V , I \\right SB}, name=p2, set me left
@@ -1135,9 +1134,9 @@ with an adjunct is shown in Figure~\vref{GB-Adjunkte}.
 \begin{forest}
 sm edges
 [VP
-[V$'$
+[\hspaceThis{$'$}V$'$
 	[AdvP[morgen;tomorrow,roof]]
-	[V$'$
+	[\hspaceThis{$'$}V$'$
 		[NP[den Jungen;the boy, roof]]
 		[V[triff-;meet]]]]]
 \end{forest}}
@@ -1373,13 +1372,13 @@ Figure~\vref{Abb-GB-Komplementierer} gives an analysis of (\mex{0}).
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [dass;that]]
 	[IP
 		[NP [jeder;everybody,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP[diesen Mann;this man, roof]]
 					[V [\trace$_j$]]]]
 			[I [kenn-$_j$ -t;know- -s]]]]]]
@@ -1390,13 +1389,13 @@ sm edges
 %% \begin{forest}
 %% sm edges
 %% [CP
-%% [C$'$
+%% [\hspaceThis{$'$}C$'$
 %% 	[C [(kenn-$_j$ -t)$_k$;knows]]
 %% 	[IP
 %% 		[NP [jeder;everybody]]
-%% 		[I$'$
+%% 		[\hspaceThis{$'$}I$'$
 %% 			[VP
-%% 				[V$'$
+%% 				[\hspaceThis{$'$}V$'$
 %% 					[NP [diesen Mann; this man, roof]]
 %% 					[V [\trace$_j$]]]]
 %% 			[I  [\trace$_k$]]]]]]
@@ -1416,13 +1415,13 @@ In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via 
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [(kenn-$_j$ -t)$_k$;knows]]
 	[IP
 		[NP [jeder;everybody,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP [diesen Mann; this man, roof]]
 					[V [\trace$_j$]]]]
 			[I  [\trace$_k$]]]]]]
@@ -1473,13 +1472,13 @@ Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\r
 sm edges
 [CP
 [NP$_i$ [diesen Mann;this man, roof]]
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C [(kenn-$_j$ -t)$_k$; know- -s]]
 	[IP
 		[NP [jeder;everybody,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP[\trace$_i$]]
 					[V [\trace$_j$]]]]
 			[I  [\trace$_k$]]]]]]
@@ -1681,18 +1680,18 @@ SpecIP.%
 sm edges
 [IP
   [NP, name=subject [der Mann;the man, roof]]
-  [I$'$
+  [\hspaceThis{$'$}I$'$
 	[VP
-		[V$'$
+		[\hspaceThis{$'$}V$'$
 			[NP, name=dobject [der Frau;the woman, roof]]
-			[V$'$
+			[\hspaceThis{$'$}V$'$
 				[NP,   name=aobject [den Jungen;the boy, roof]]
 				[V ,name=verb    [zeig-;show-]]]]]
 	[I , name=Infl [-t;-s]]]]
-\draw[->,dotted] (Infl.north) .. controls (3.5,-0.6) and (-1.5,0)  .. ($(subject.north)+(-.1,.1)$);
+\draw[->,dotted] (Infl.north) .. controls (3.5,-0.2) and (-1.5,0.4)  .. ($(subject.north)+(-.1,.1)$);
 \draw[->]        (verb.north) .. controls (2.8,-2.9) and (-.4,.5)   .. ($(subject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.8,-3.2) and (0,-3.7)   .. ($(dobject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.3,-4.5) and (1.8,-4.9) .. ($(aobject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.8,-3.0) and (0,-3.3)   .. ($(dobject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.3,-4.2) and (1.8,-4.6) .. ($(aobject.north)+(0,.1)$);
 %\draw (-4,-7) to[grid with coordinates] (4,0.5);
 \end{forest}\hfill
 \begin{tabular}[b]{ll@{}}
@@ -1717,18 +1716,18 @@ absorbed case. Therefore, it has to move to a position where case can be assigne
 sm edges
 [IP
 [NP, name=subject [der Junge$_i$;the boy ,roof]]
-[I$'$
+[\hspaceThis{$'$}I$'$
 	[VP
-		[V$'$
+		[\hspaceThis{$'$}V$'$
 			[NP, name=dobject [der Frau;the woman, roof]]
-			[V$'$
+			[\hspaceThis{$'$}V$'$
 				[NP,   name=aobject [\_$_i$]]
 				[V ,name=verb [gezeigt wir-;shown is, roof]]]]]
 	[I  ,name=Infl [-\/d]]]]
-\draw[->,dotted] (Infl.north) .. controls (2.5,-.05)   and (-1.5,-.45) .. ($(subject.north)+(0,.1)$);
-\draw[->,dashed] (verb.north) .. controls (2.2,-3.7)  and (0,-3.4)    .. ($(dobject.north)+(0,.1)$);
-\draw[->]        (verb.north) .. controls (2.0,-4.75) and (1.2,-4.75) .. ($(aobject.north)+(0,.1)$);
-%\draw (-4,-7) to[grid with coordinates] (4,0.5);
+\draw[->,dotted] (Infl.north) .. controls (2.5,.3)   and (-1.5,-.05) .. ($(subject.north)+(0,.1)$);
+\draw[->,dashed] (verb.north) .. controls (2.2,-3.3)  and (0,-3.0)    .. ($(dobject.north)+(0,.1)$);
+\draw[->]        (verb.north) .. controls (2.0,-4.3) and (1.2,-4.3) .. ($(aobject.north)+(0,.1)$);
+%\draw (-3,-7) to[grid with coordinates] (3.6,0.5);
 \end{forest}\hspace{1cm}
 \begin{tabular}[b]{ll@{}}
 \tikz[baseline]\draw[dotted](0,1ex)--(1,1ex);&just case\\
@@ -1899,11 +1898,11 @@ sm edges
   [{NP[acc]$_i$} [das Buch;the book, roof]]
   [IP
     [{NP[nom]} [der Mann;the man, roof]]
-    [I$'$
+    [\hspaceThis{$'$}I$'$
  	[VP
-		[V$'$
+		[\hspaceThis{$'$}V$'$
 			[{NP[dat]} [der Frau;the woman, roof]]
-			[V$'$
+			[\hspaceThis{$'$}V$'$
 				[NP   [\trace$_i$]]
 				[V   [gib-;give-]]]]]
 	[I , name=Infl [-t;-s]]]] ]

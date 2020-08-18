@@ -222,7 +222,7 @@ o-public-lehrbuch: /Users/stefan/public_html/Pub/grammatical-theory.pdf
 
 # two runs in order to get "also printed as ..." right
 # biber changes everything
-unusedgt.bib: ../../../Bibliographien/biblio.bib
+unusedgt1.bib: ../../../Bibliographien/biblio.bib
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
 	biber bib-creation
 	xelatex -no-pdf -interaction=nonstopmode bib-creation 
