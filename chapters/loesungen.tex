@@ -215,13 +215,13 @@ In order to rule out the last two sentences, the grammar has to contain informat
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C$^0$[dass;that]]
 	[IP
 		[NP [die Frau;the woman,roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP[den Mann;the man, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$[lieb-$_j$ -t;love- -s]]]]]]
@@ -235,13 +235,13 @@ sm edges
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C$^0$[dass;that]]
         [IP
         [NP, [der Mann$_i$;the man ,roof]]
-        [I$'$
+        [\hspaceThis{$'$}I$'$
 	   [VP
-		[V$'$
+		[\hspaceThis{$'$}V$'$
 	           [NP,   [\_$_i$]]
 		   [V$^0$,[geliebt \trace$_j$;loved, roof]]]]
 	   [I$^0$ ,name=Infl [wir-$_j$ -d;is]]]]]]
@@ -257,13 +257,13 @@ sm edges
 sm edges
 [CP
    [NP, [der Mann$_i$;the man ,roof]]
-   [C$'$
+   [\hspaceThis{$'$}C$'$
 	[C$^0$[ (wir-$_j$ -d)$_k$;is]]
         [IP
         [NP, [\trace$_i$]]
-        [I$'$
+        [\hspaceThis{$'$}I$'$
 	   [VP
-		[V$'$
+		[\hspaceThis{$'$}V$'$
 	           [NP,   [\_$_i$]]
 		   [V$^0$,[geliebt \trace$_j$;loved, roof]]]]
 	   [I$^0$ ,name=Infl [\trace$_k$]]]]]]
@@ -278,13 +278,13 @@ sm edges
 \begin{forest}
 sm edges
 [CP
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C$^0$[dass;that]]
 	[IP
 		[NP [der Mann;the man, roof]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP[der Frau;the woman, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$[hilf-$_j$ -t;help- -s]]]]]]
@@ -299,13 +299,13 @@ sm edges
 sm edges
 [CP
 [NP [der Mann$_i$;the man, roof]]
-[C$'$
+[\hspaceThis{$'$}C$'$
 	[C$^0$ [(hilf-$_j$ -t)$_k$;help- -s]]
 	[IP
 		[NP [\trace$_i$]]
-		[I$'$
+		[\hspaceThis{$'$}I$'$
 			[VP
-				[V$'$
+				[\hspaceThis{$'$}V$'$
 					[NP [der Frau;the woman, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$ [\trace$_k$]]]]]]
@@ -856,7 +856,7 @@ tag
 tag
 [NP
   [Det$\downarrow$]
-  [N$'$
+  [\hspaceThis{$'$}N$'$
     [N [König;king]]]]
 \end{forest}
 }
@@ -866,12 +866,12 @@ tag
 \scalebox{.9}{
 \begin{forest}
 tag
-[N$'$
+[\hspaceThis{$'$}N$'$
   [AP
-    [A$'$
+    [\hspaceThis{$'$}A$'$
       [NP$\downarrow$]
       [A [treue;loyal]]]]
-  [N$'$*]]
+  [~~~N$'$*]]
 \end{forest}
 }
 %
@@ -882,12 +882,13 @@ tag
 tag
 [NP
   [Det$\downarrow$]
-  [N$'$
+  [\hspaceThis{$'$}N$'$
     [N [Diener;servant]]]]
 \end{forest}
 }
 \hfill\mbox{}
-\caption{\label{TAG-Elementarbaeume-dem-Koenig-treue}Elementary trees for \emph{der dem König treue Diener}}
+\caption{\label{TAG-Elementarbaeume-dem-Koenig-treue}Elementary trees for \emph{der dem König treue
+    Diener} `the servant loyal to the king'}
 \end{figure}%
 
 \noindent
@@ -900,15 +901,15 @@ for \emph{der} `the' can be combined with the one for \emph{Diener}. One then ha
 \scalebox{.9}{
 \begin{forest}
 tag
-[N$'$
+[\hspaceThis{$'$}N$'$
   [AP
-    [A$'$
+    [\hspaceThis{$'$}A$'$
       [NP
         [Det [dem;the]]
-        [N$'$
+        [\hspaceThis{$'$}N$'$
           [N [König;king]]]]
       [A [treue;loyal]]]]
-  [N$'$*]]
+  [~~~N$'$*]]
 \end{forest}
 }
 %
@@ -918,12 +919,13 @@ tag
 tag
   [NP
      [Det [der;the]]
-     [N$'$
+     [\hspaceThis{$'$}N$'$
         [N [Diener;servant]]]]
 \end{forest}
 }
 \hfill\mbox{}
-\caption{\label{TAG-substituiert}Trees for \emph{der dem König treue} and \emph{der Diener} after substitution}
+\caption{\label{TAG-substituiert}Trees for \emph{der dem König treue} and \emph{der Diener} `the
+  servant loyal to the king' after substitution}
 \end{figure}%
 The adjective tree can then be adjoined to the N$'$"=node of \emph{der Diener}, which yields the structure in Figure~\vref{TAG-Baeume-nach-Adjunktion}.
 \begin{figure}
@@ -933,15 +935,15 @@ The adjective tree can then be adjoined to the N$'$"=node of \emph{der Diener}, 
 tag
   [NP
      [Det [der;the]]
-     [N$'$
+     [\hspaceThis{$'$}N$'$
        [AP
-         [A$'$
+         [\hspaceThis{$'$}A$'$
            [NP
              [Det [dem;the]]
-             [N$'$
+             [\hspaceThis{$'$}N$'$
                [N [König;king]]]]
            [A [treue;loyal]]]]
-       [N$'$
+       [\hspaceThis{$'$}N$'$
          [N [Diener;servant]]]]]
 \end{forest}
 %}
