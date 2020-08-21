@@ -303,8 +303,8 @@ interested in minimal structures that contain the information provided in the de
 %% \Aput*{$\phi$}
 %% \end{tabular}
 \tree{IP}{%
-  \tree[b]{NP}{\tree{N$'$}{\tree{N}{\le{David}}}}
-  \tree{I$'$}{\tree{VP}{\tree{V$'$}{\tree{V}{\le{sneezed}}}}}}%
+  \tree[b]{NP}{\tree{\hspaceThis{$'$}N$'$}{\tree{N}{\le{David}}}}
+  \tree{\hspaceThis{$'$}I$'$}{\tree{VP}{\tree{\hspaceThis{$'$}V$'$}{\tree{V}{\le{sneezed}}}}}}%
 \hspace*{4em}%
 \raisebox{-2em}{\lfgms{
 pred & {\small `SNEEZE\sliste{\lfgsubj}}'\\
@@ -321,7 +321,7 @@ A phrase and its head always correspond to the same f"=structure:
 
 \ea
 \begin{tabular}[t]{@{}c@{}}
-\rnode{a}{\rnode{v1}{V$'$}}\\[2ex]
+\rnode{a}{\rnode{v1}{\hspaceThis{$'$}V$'$}}\\[2ex]
 \rnode{b}{\rnode{v}{V}}\\[2ex]
 \rnode{sneezed}{sneezed}\\
 \end{tabular}
@@ -342,11 +342,11 @@ In LFG grammars of English, the CP/IP system is assumed as in \gbt (see Section~
 \ex David is yawning.
 
 \ex {\tree[a]{IP}{%
-  \tree{NP}{\tree{N$'$}{%
+  \tree{NP}{\tree{\hspaceThis{$'$}N$'$}{%
     \tree{N}{\le{David}}}}
-  \tree[b]{I$'$}{%
+  \tree[b]{\hspaceThis{$'$}I$'$}{%
     \tree[c]{I}{\le{is}}
-    \tree[d]{VP}{\tree[e]{V$'$}{\tree[f]{V}{\le{yawning}}}}}}}%
+    \tree[d]{VP}{\tree[e]{\hspaceThis{$'$}V$'$}{\tree[f]{V}{\le{yawning}}}}}}}%
 \hspace*{4em}%
 {\rnode{o}{\raisebox{-2em}{\lfgms{ pred & {\small `YAWN\sliste{\lfgsubj}'}\\
                                    tense & \lfgpres\\
@@ -439,7 +439,7 @@ The annotation `\up~=~\down' is below the head\is{head} of a structure.
 
 Phrases which are licensed by the annotated c"=structure in (\mex{0}) can be visualized as follows:
 \ea
-\talltree[a]{V$'$}{\le[b]{V}}%
+\talltree[a]{\hspaceThis{$'$}V$'$}{\le[b]{V}}%
 \hspace*{3em}%
 \rnode{d}{[\ ]}
 \ltor{a}{d}
@@ -459,7 +459,7 @@ The annotation on the NP signals that the \textsc{obj} value in the f"=structure
 contributed from the material below the NP node (\down). 
 This is shown in the figure in (\mex{1}):
 \ea
-\talltree[a]{V$'$}{\le[b]{V} \le[c]{NP}}%
+\talltree[a]{\hspaceThis{$'$}V$'$}{\le[b]{V} \le[c]{NP}}%
 \hspace*{3em}%
 \rnode{d}{\fd{\fdand{\feat{\lfgobj}{\rnode{e}{[\ ]}}}}}
 \ltor{a}{d}
@@ -526,7 +526,7 @@ given in (\mex{1}b):
 \hspace*{-2em}
 {\ctree[ip]{IP}{%
   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
-  \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
+  \tree[ii]{\hspaceThis{$'$}I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 \hspace*{3em}%
 {\fd{\rnode{s}{\fdand{\feat{\lfgpred}{\small `YAWN\sliste{\lfgsubj}'}
            \feat{\subj}{\rnode{i}{\fdand{\feat{\lfgpred}{\small `DAVID'}}}}}}}}%
@@ -541,7 +541,7 @@ given in (\mex{1}b):
 %% \centerline{%
 %% {\ctree[ip]{IP}{%
 %%   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
-%%   \tree[ii]{I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
+%%   \tree[ii]{\hspaceThis{$'$}I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 %% \hspace*{3em}%
 %% {\rnode{s}{\lfgms{ pred & {\small `YAWN\sliste{\lfgsubj}'}\\
 %%                    subj & \rnode{i}{[ \textsc{pred} {\small `DAVID'} ]}}}}%
