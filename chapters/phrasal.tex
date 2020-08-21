@@ -4131,25 +4131,26 @@ gives the analysis of (\mex{0}b).
 \begin{figure}
 \centering
 \begin{forest}
+sm edges
 [CP
 	[C
-		[v $+$ APASS
-			[V, name=v1]
-			[v $+$ APASS
-				[$\varnothing$, name=zero, tier=word]]]
-		[C]]
+		[v $+$ APASS,tier=vC
+			[V, name=v1, tier=Vv]
+			[v $+$ APASS, tier=Vv
+				[$\varnothing$, name=zero]]]
+		[C,tier=vC]]
 	[vP
 		[PP$_2$
-			[in den Müll\\in the trash,tier=word,roof]]
+			[in den Müll\\in the trash,roof]]
 		[\hspaceThis{$'$}v$'$
 			[VP
 				[DP$_1$
 					[(mit) diesen Klamotten\\with these clothes,roof]]
 				[\hspaceThis{$'$}V$'$
 					[t$_2$]
-					[t$_V$, tier=word]]]
+					[t$_V$]]]
 			[v
-				[t$_v$, tier=word]]]]]
+				[t$_v$]]]]]
 \draw (v1.south)--(zero.north);
 \end{forest}
 \caption{\emph{In den Müll mit diesen Klamotten} `in the trash with these clothes' as an antipassive following G.\,\citet{GMueller2009a}}\label{abb-in-den-Muell-Gereon}
@@ -4669,7 +4670,17 @@ Bargmann data.
 \is{Construction Grammar (CxG)|)}
 
 
-
+\furtherreading{
+This chapter is a reflection of one of the most controversial discussions within Construction Grammar
+\citep{Croft2003a} and among proponents of Construction Grammar and other
+frameworks. \citegen{Goldberg95a} phrasal approach to argument structure constructions is very
+influential and many researchers also from other frameworks tried to incorporate her insights into
+their approaches (for example \citealp{ADT2008a,AGT2014a,LK2017a}). The chapter is an extended and updated version of
+\citew{MWArgSt,MWArgStReply}. \citew{MWArgSt} is a target article and the replies in this volume may
+be interesting for the reader and may help to get an idea of the complexity of the discussion.
+This chapter also contains parts of the discussion of constructional approaches suggested in LFG
+\citep*{ADT2008a,AGT2014a} that were taken from a book on the phrasal approach to benefactives in English \citew{MuellerLFGphrasal}.
+} 
 
 
 \if 0
