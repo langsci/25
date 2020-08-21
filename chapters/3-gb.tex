@@ -1272,12 +1272,12 @@ whereas they occur before any objects in Danish \citep[\page 146]{Oersnes2009b}:
 %\pagebreak
 \item\label{SOV-Skopus}\is{scope|(} The scope relations of the adverbs in
   (\ref{bsp-absichtlich-nicht-anal}) depend on their order:
-% Since we are in an itemize we have to adapt the indentation of the labels in gb4e.
-%
-%\fnlabelindent{1.5em}
 the left"=most adverb has scope over the two following elements.\footnote{%
 At this point, it should be mentioned that there seem to be exceptions from the rule that modifiers to the left take scope over those to
 their right. \citet*[\page47]{Kasper94a} discusses examples such as (i), which go back to \citet*[\page137]{BV72}.
+% Since we are in an itemize we have to adapt the indentation of the labels in gb4e.
+%
+\setlength{\footexindent}{1.5em}
 \eal
 \label{bsp-peter-liest-gut-wegen}
 \ex 
@@ -1320,7 +1320,7 @@ Nevertheless, this does not change anything regarding the fact that the correspo
 and (\ref{bsp-absichtlich-nicht-anal-v1}) have the same scope relations regardless of the position of the verb. The general means of semantic
 composition may well have to be implemented in the same way as in Crysmann's analysis.%
 }
-% change it back
+% change it back, not needed if set within the footnote
 %\fnlabelindent{0em}
 This was explained by assuming the following structure:
 \eal
@@ -1468,6 +1468,7 @@ as its base order (see \citealp{Oersnes2009b} for Danish).
 Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\ref{Abb-GB-Verberststellung}.
 \begin{figure}
 \centering
+%\scalebox{.95}{%
 \begin{forest}
 sm edges
 [CP
@@ -1482,7 +1483,7 @@ sm edges
 					[NP[\trace$_i$]]
 					[V [\trace$_j$]]]]
 			[I  [\trace$_k$]]]]]]
-\end{forest}
+\end{forest}%}
 \caption{\label{Abb-GB-Vorfeldbesetzung}Fronting in \gbt}
 \end{figure}%
 The crucial factor for deciding which phrase to move is the \emph{information structure}\is{information structure}
