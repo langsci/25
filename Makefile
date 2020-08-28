@@ -250,8 +250,11 @@ unusedgt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
 # https://tex.stackexchange.com/a/164365/18561
 
 
+# xelatex has to be run two times + biber to get "also printed as ..." right.
 gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
 	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
+	biber bib-creation
+	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation
 	biber --output_format=bibtex --output-legacy-date bib-creation.bcf -O gt_tmp.bib
 	biber --tool --configfile=biber-tool.conf --output-field-replace=location:address,journaltitle:journal --output-legacy-date gt_tmp.bib -O gt.bib
 
