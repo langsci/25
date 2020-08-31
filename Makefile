@@ -90,15 +90,14 @@ SOURCE=/Users/stefan/Documents/Dienstlich/Bibliographien/biblio.bib \
 	biber $*
 	xelatex -no-pdf -interaction=nonstopmode $*
 	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.sdx # ordering of references to footnotes
-	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
-	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
-	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
-	sed -i.backup 's/{\\O }/Oe/' *.adx
+#	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.adx
+#	sed -i.backup 's/hyperindexformat{\\\(infn {[0-9]*\)}/\1/' *.ldx
+#	sed -i.backup 's/\\protect \\active@dq \\dq@prtct {=}/"=/g' *.adx
+#	sed -i.backup 's/{\\O }/Oe/' *.adx
 	sed -i.backup 's/\\MakeCapital //g' *.adx
 	sed -i.backup 's/.*Group.*//' grammatical-theory.adx
 	python3 fixindex.py $*.adx
 	mv $*mod.adx $*.adx
-
 	makeindex -gs index.format-plus -o $*.and $*.adx
 	makeindex -gs index.format -o $*.lnd $*.ldx
 	makeindex -gs index.format -o $*.snd $*.sdx
