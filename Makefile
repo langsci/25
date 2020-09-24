@@ -262,6 +262,10 @@ check-gt.bib: ../../../Bibliographien/biblio.bib
 	biber --output_format=bibtex --output_resolve grammatical-theory.bcf -O check-gt.bib
 
 
+check-bib: gt.bib 
+	biber --validate-datamodel grammatical-theory
+
+
 PUB_FILE=stmue.bib
 
 o-public-bib: $(PUB_FILE)
