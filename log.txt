@@ -1,0 +1,4808 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.4.18)  15 NOV 2020 09:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**grammatical-theory
+(./grammatical-theory.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> (./langscibook.cls
+Document Class: langscibook 2020/02/12 Language Science Press HPSG-Handbook
+(/usr/local/texlive/2020/texmf-dist/tex/latex/silence/silence.sty
+Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
+sages
+\sl@Save=\count163
+\sl@StateNumber=\count164
+\sl@MessageCount=\count165
+\sl@Casualties=\count166
+\sl@Filter=\toks15
+\sl@Message=\toks16
+\sl@UnexpandedMessage=\toks17
+\sl@Mess@ge=\toks18
+\sl@WarningCount=\count167
+\sl@WarningNumber=\count168
+\sl@WarningCasualties=\count169
+\sl@TempBOW=\toks19
+\sl@BankOfWarnings=\toks20
+LaTeX Info: Redefining \GenericWarning on input line 433.
+\sl@ErrorCount=\count170
+\sl@ErrorNumber=\count171
+\sl@ErrorCasualties=\count172
+\sl@TempBOE=\toks21
+\sl@BankOfErrors=\toks22
+LaTeX Info: Redefining \GenericError on input line 601.
+)
+Warnings are disabled in langscibook.cls for underfull boxes, hyperref, tocstyl
+e, microtype and scrbook package incompatibility, todonotes length and babel/po
+lyglossia csquotes
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count173
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrbook.cls
+Document Class: scrbook 2020/01/24 v3.29 KOMA-Script document class (book)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2020/01/24 v3.29 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2020/01/24 v3.29 KOMA-Script package (loading files)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2020/01/24 v3.29 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box45
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Class scrbook Info: File `scrsize10pt.clo' used to setup font sizes on input li
+ne 2424.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrsize10pt.clo
+File: scrsize10pt.clo 2020/01/24 v3.29 KOMA-Script font size class option (10pt
+)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2020/01/24 v3.29 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count174
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 8
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 373.44246pt
+(typearea)              DIV departure   = -4%
+(typearea)              \evensidemargin = 77.107pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 538.0pt
+(typearea)              \topmargin      = 0.36087pt
+(typearea)              \headheight     = 15.0pt
+(typearea)              \headsep        = 18.0pt
+(typearea)              \topskip        = 10.0pt
+(typearea)              \footskip       = 42.0pt
+(typearea)              \baselineskip   = 12.0pt
+(typearea)              on input line 1719.
+)
+\c@part=\count175
+\c@chapter=\count176
+\c@section=\count177
+\c@subsection=\count178
+\c@subsubsection=\count179
+\c@paragraph=\count180
+\c@subparagraph=\count181
+\scr@dte@chapter@maxnumwidth=\skip53
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\chapter on input line 5545.
+\scr@dte@section@maxnumwidth=\skip54
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\section on input line 5555.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\section on input line 5555.
+\scr@dte@part@maxnumwidth=\skip55
+Class scrbook Info: using compatibility default `afterindent=true'
+(scrbook)           for `\part on input line 5564.
+\scr@dte@subsection@maxnumwidth=\skip56
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsection on input line 5574.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsection on input line 5574.
+\scr@dte@subsubsection@maxnumwidth=\skip57
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subsubsection on input line 5584.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subsubsection on input line 5584.
+\scr@dte@paragraph@maxnumwidth=\skip58
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\paragraph on input line 5594.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\paragraph on input line 5594.
+\scr@dte@subparagraph@maxnumwidth=\skip59
+Class scrbook Info: using compatibility default `runin=bysign'
+(scrbook)           for `\subparagraph on input line 5604.
+Class scrbook Info: using compatibility default `afterindent=bysign'
+(scrbook)           for `\subparagraph on input line 5604.
+\abovecaptionskip=\skip60
+\belowcaptionskip=\skip61
+\c@pti@nb@sid@b@x=\box46
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 6846.
+\scr@dte@figure@maxnumwidth=\skip62
+\c@figure=\count182
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 6867.
+\scr@dte@table@maxnumwidth=\skip63
+\c@table=\count183
+Class scrbook Info: Redefining `\numberline' on input line 7040.
+\bibindent=\dimen134
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/morewrites/morewrites.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count184
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count185
+\g__pdf_backend_annotation_int=\count186
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/morewrites/primargs.sty
+Package: primargs 2018/12/29 Parsing arguments of primitives
+)
+Package: morewrites 2018/12/29 Always room for a new write
+\g__morewrites_later_int=\count187
+\l__morewrites_user_int=\count188
+\g__morewrites_iow=\write3
+\g__morewrites_ior=\read2
+\g__morewrites_group_level_int=\count189
+\g__morewrites_shipout_box=\box48
+\l__morewrites_collect_next_int=\count190
+\g__morewrites_alloc_write_int=\count191
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
+\et@xins=\count192
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
+Normal \count register pool exhausted, switching to extended pool.
+\integerpart=\count277
+Invalid UTF-8 byte or sequence at line 35 replaced by U+FFFD.
+\decimalpart=\count278
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 83 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 86 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 102 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 114 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 120 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 125 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 183 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 184 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 266 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 295 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 302 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 303 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 595 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 597 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 602 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 610 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 615 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 633 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 635 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 637 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 647 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 653 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 678 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 700 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 705 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 719 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 810 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 831 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 861 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 862 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 908 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 964 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 965 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1006 replaced by U+FFFD.
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 105.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyphenat/hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language86
+LaTeX Info: Redefining \_ on input line 43.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks24
+\pgfutil@tempdima=\dimen137
+\pgfutil@tempdimb=\dimen138
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box49
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks25
+\pgfkeys@temptoks=\toks26
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex
+\pgfkeys@tmptoks=\toks27
+))
+\pgf@x=\dimen139
+\pgf@y=\dimen140
+\pgf@xa=\dimen141
+\pgf@ya=\dimen142
+\pgf@xb=\dimen143
+\pgf@yb=\dimen144
+\pgf@xc=\dimen145
+\pgf@yc=\dimen146
+\pgf@xd=\dimen147
+\pgf@yd=\dimen148
+\w@pgf@writea=\write4
+\r@pgf@reada=\read3
+\c@pgf@counta=\count279
+\c@pgf@countb=\count280
+\c@pgf@countc=\count281
+\c@pgf@countd=\count282
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
+\pgf@sys@id@count=\count283
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+File: pgfsys-xetex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+File: pgfsys-dvipdfmx.def 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)
+\pgfsys@objnum=\count284
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count285
+\pgfsyssoftpath@bigbuffer@items=\count286
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen149
+\pgfmath@count=\count287
+\pgfmath@box=\box50
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count288
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen150
+\pgf@picmaxx=\dimen151
+\pgf@picminy=\dimen152
+\pgf@picmaxy=\dimen153
+\pgf@pathminx=\dimen154
+\pgf@pathmaxx=\dimen155
+\pgf@pathminy=\dimen156
+\pgf@pathmaxy=\dimen157
+\pgf@xx=\dimen158
+\pgf@xy=\dimen159
+\pgf@yx=\dimen160
+\pgf@yy=\dimen161
+\pgf@zx=\dimen162
+\pgf@zy=\dimen163
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen164
+\pgf@path@lasty=\dimen165
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen166
+\pgf@shorten@start@additional=\dimen167
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box51
+\pgf@hbox=\box52
+\pgf@layerbox@main=\box53
+\pgf@picture@serial@count=\count289
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen168
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen169
+\pgf@pt@y=\dimen170
+\pgf@pt@temp=\dimen171
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen172
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen173
+\pgf@sys@shading@range@num=\count290
+\pgf@shadingcount=\count291
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box54
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box55
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen174
+\pgf@nodesepend=\dimen175
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen176
+\pgffor@skip=\dimen177
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count292
+\pgfplotmarksize=\dimen178
+)
+\tikz@lastx=\dimen179
+\tikz@lasty=\dimen180
+\tikz@lastxsaved=\dimen181
+Normal \dimen register pool exhausted, switching to extended pool.
+\tikz@lastysaved=\dimen256
+\tikz@lastmovetox=\dimen257
+\tikz@lastmovetoy=\dimen258
+\tikzleveldistance=\dimen259
+\tikzsiblingdistance=\dimen260
+\tikz@figbox=\box56
+\tikz@figbox@bg=\box57
+\tikz@tempbox=\box58
+\tikz@tempbox@bg=\box59
+\tikztreelevel=\count293
+\tikznumberofchildren=\count294
+\tikznumberofcurrentchild=\count295
+\tikz@fig@count=\count296
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count297
+\pgfmatrixcurrentcolumn=\count298
+\pgf@matrix@numberofcolumns=\count299
+)
+\tikz@expandcount=\count300
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pbox/pbox.sty
+Package: pbox 2011/12/07 v1.2 Dynamic parboxes
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count301
+\calc@Bcount=\count302
+\calc@Adimen=\dimen261
+\calc@Bdimen=\dimen262
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count303
+\calc@Cskip=\skip66
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\pb@xlen=\skip67
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./langsci-basic.sty) (/usr/local/texlive/2020/texmf-dist/tex/latex/todonotes
+/todonotes.sty
+Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
+Package: todonotes 2018/11/22
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks36
+\XKV@tempa@toks=\toks37
+)
+\XKV@depth=\count304
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings
+.code.tex
+File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+\c@@todonotes@numberoftodonotes=\count305
+)
+\bleed=\skip68
+\seitenbreite=\skip69
+\seitenhoehe=\skip70
+\spinewidth=\skip71
+\totalwidth=\skip72
+\totalheight=\skip73
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count306
+\Gm@cntv=\count307
+\c@Gm@tempcnt=\count308
+\Gm@bindingoffset=\dimen263
+\Gm@wd@mp=\dimen264
+\Gm@odd@mp=\dimen265
+\Gm@even@mp=\dimen266
+\Gm@layoutwidth=\dimen267
+\Gm@layoutheight=\dimen268
+\Gm@layouthoffset=\dimen269
+\Gm@layoutvoffset=\dimen270
+\Gm@dimlist=\toks38
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks39
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks40
+\ex@=\dimen271
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen272
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count309
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count310
+\leftroot@=\count311
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count312
+\DOTSCASE@=\count313
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box60
+\strutbox@=\box61
+\big@size=\dimen273
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count314
+\c@MaxMatrixCols=\count315
+\dotsspace@=\muskip17
+\c@parentequation=\count316
+\dspbrk@lvl=\count317
+\tag@help=\toks41
+\row@=\count318
+\column@=\count319
+\maxfields@=\count320
+\andhelp@=\toks42
+\eqnshift@=\dimen274
+\alignsep@=\dimen275
+\tagshift@=\dimen276
+\tagwidth@=\dimen277
+\totwidth@=\dimen278
+\lineht@=\dimen279
+\@envbody=\toks43
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks44
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count321
+\g__xparse_grabber_int=\count322
+\l__xparse_m_args_int=\count323
+\l__xparse_v_nesting_int=\count324
+)
+Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count325
+\l__fontspec_language_int=\count326
+\l__fontspec_strnum_int=\count327
+\l__fontspec_tmp_int=\count328
+\l__fontspec_tmpa_int=\count329
+\l__fontspec_tmpb_int=\count330
+\l__fontspec_tmpc_int=\count331
+\l__fontspec_em_int=\count332
+\l__fontspec_emdef_int=\count333
+\l__fontspec_strong_int=\count334
+\l__fontspec_strongdef_int=\count335
+\l__fontspec_tmpa_dim=\dimen280
+\l__fontspec_tmpb_dim=\dimen281
+\l__fontspec_tmpc_dim=\dimen282
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+\xl@everylogo=\toks45
+\xl@@everylogo=\toks46
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+
+Package fontspec Info: DejaVuSansMono scale = 0.7881116403135037.
+
+
+Package fontspec Info: DejaVuSansMono scale = 0.7881116403135037.
+
+
+Package fontspec Info: DejaVuSansMono-Bold scale = 0.7881116403135037.
+
+
+Package fontspec Info: DejaVuSansMono-Oblique scale = 0.7881116403135037.
+
+
+Package fontspec Info: DejaVuSansMono-BoldOblique scale = 0.7881116403135037.
+
+
+Package fontspec Info: Font family 'DejaVuSansMono.ttf(0)' created for font
+(fontspec)             'DejaVuSansMono.ttf' with options
+(fontspec)             [WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=Word
+Space,Scale=MatchLowercase,BoldFont
+(fontspec)             = DejaVuSansMono-Bold.ttf,SlantedFont =
+(fontspec)             DejaVuSansMono-Oblique.ttf,BoldSlantedFont =
+(fontspec)             DejaVuSansMono-BoldOblique.ttf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.7881116403135037]"[DejaVuSansMono.ttf]/OT:script
+=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.7881116403135037]"[DejaVuSansMono-Bold.ttf]/OT:s
+cript=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->s*[0.7881116403135037]"[DejaVuSansMono-Oblique.ttf]/O
+T:script=latn;language=dflt;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->s*[0.7881116403135037]"[DejaVuSansMono-BoldOblique.tt
+f]/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Arimo-Regular scale = 0.8157901577225113.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.8157901577225113.
+
+
+Package fontspec Info: Arimo-Bold scale = 0.8157901577225113.
+
+
+Package fontspec Info: Arimo-Italic scale = 0.8157901577225113.
+
+
+Package fontspec Info: Arimo-BoldItalic scale = 0.8157901577225113.
+
+
+Package fontspec Info: Font family 'Arimo-Regular.ttf(0)' created for font
+(fontspec)             'Arimo-Regular.ttf' with options
+(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,BoldFont =
+(fontspec)             Arimo-Bold.ttf,ItalicFont =
+(fontspec)             Arimo-Italic.ttf,BoldItalicFont =
+(fontspec)             Arimo-BoldItalic.ttf].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8157901577225113]"[Arimo-Regular.ttf]/OT:script=
+latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.8157901577225113]"[Arimo-Bold.ttf]/OT:script=lat
+n;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8157901577225113]"[Arimo-Italic.ttf]/OT:script=l
+atn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8157901577225113]"[Arimo-BoldItalic.ttf]/OT:scri
+pt=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Font family 'LibertinusSerif-Regular.otf(0)' created
+(fontspec)             for font 'LibertinusSerif-Regular.otf' with options
+(fontspec)             [Ligatures=TeX,Ligatures={TeX,Common},PunctuationSpace=0
+,Numbers={Proportional},BoldFont
+(fontspec)             = LibertinusSerif-Semibold.otf,ItalicFont =
+(fontspec)             LibertinusSerif-Italic.otf,BoldItalicFont =
+(fontspec)             LibertinusSerif-SemiboldItalic.otf,BoldSlantedFont =
+(fontspec)             LibertinusSerif-Semibold.otf,SlantedFont =
+(fontspec)             LibertinusSerif-Regular.otf,SlantedFeatures =
+(fontspec)             {FakeSlant=0.25},BoldSlantedFeatures =
+(fontspec)             {FakeSlant=0.25},SmallCapsFeatures = {FakeSlant=0}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Italic.otf]/OT:script=latn;language
+=dflt;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Italic.otf]/OT:script=latn;language
+=dflt;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0.25;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0.25;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-SemiboldItalic.otf]/OT:script=latn;
+language=dflt;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-SemiboldItalic.otf]/OT:script=latn;
+language=dflt;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0.25;+liga;+pnum;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0.25;slant=0;+liga;+pnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/newtxmath.sty
+Package: newtxmath 2020/03/02 v1.625
+
+`newtxmath' v1.625, 2020/03/02 Math macros based originally on txfonts (msharpe
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/oberdiek/centernot.sty
+Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
+)
+\tx@cntz=\count336
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kastrup/binhex.tex)
+\tx@Isdigit=\count337
+\tx@IsAlNum=\count338
+\tx@tA=\toks47
+\tx@tB=\toks48
+\tx@su=\read4
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 317.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/LibertinusSerif-Regular.otf(0)/m/n 
+on input line 317.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/LibertinusSerif-Regular.otf(0)/m/n
+ on input line 317.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/m/n --> OT1/Libertin
+usSerif-Regular.otf(0)/b/n on input line 318.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 326.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/Arimo-Regular.ttf(0)/m/n on input l
+ine 326.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/Arimo-Regular.ttf(0)/m/n on input 
+line 326.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 327.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/LibertinusSerif-Regular.otf(0)/m/i
+t on input line 327.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/LibertinusSerif-Regular.otf(0)/m/
+it on input line 327.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 328.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono.ttf(0)/m/n on input 
+line 328.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/DejaVuSansMono.ttf(0)/m/n on input 
+line 328.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 330.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/LibertinusSerif-Regular.otf(0)/b/n
+ on input line 330.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/LibertinusSerif-Regular.otf(0)/b/n
+ on input line 330.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/m/it --> OT1/Liberti
+nusSerif-Regular.otf(0)/b/it on input line 331.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  TU/Arimo-Regular.ttf(0)/m/n --> TU/Arimo-Regular.ttf(0)
+/b/n on input line 332.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  TU/DejaVuSansMono.ttf(0)/m/n --> TU/DejaVuSansMono.ttf(
+0)/b/n on input line 333.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 350.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/nxlmi/m/it on input line 350.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/nxlmi/m/it on input line 350.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/nxlmi/m/it --> OML/nxlmi/b/it on input line 351.
+\symlettersA=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lettersA' in version `bold'
+(Font)                  U/ntxmia/m/it --> U/ntxmia/b/it on input line 476.
+LaTeX Font Info:    Redeclaring math alphabet \mathfrak on input line 478.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 497.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 497.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> LMS/ntxsy/m/n on input line 497.
+LaTeX Font Info:    Encoding `OMS' has changed to `LMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 497.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> LMS/ntxsy/m/n on input line 497.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  LMS/ntxsy/m/n --> LMS/ntxsy/b/n on input line 498.
+\symAMSm=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `AMSm' in version `bold'
+(Font)                  U/ntxsym/m/n --> U/ntxsym/b/n on input line 521.
+\symsymbolsC=\mathgroup8
+LaTeX Font Info:    Overwriting symbol font `symbolsC' in version `bold'
+(Font)                  U/ntxsyc/m/n --> U/ntxsyc/b/n on input line 542.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 555.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 5
+55.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 555.
+LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 555
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 555.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 556.
+\symlargesymbolsTXA=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
+
+(Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 570.
+\tx@sbptoks=\toks49
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 792.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 793.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 794.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 795.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 796.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 797.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 798.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 800.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 804.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 805.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 876.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 877.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1940.
+\ntx@numstart=\count339
+\ntx@UCstart=\count340
+\ntx@lcstart=\count341
+\ntx@tmpc=\count342
+\ntx@imath=\count343
+\ntx@jmath=\count344
+LaTeX Info: Redefining \Bbbk on input line 2449.
+LaTeX Info: Redefining \not on input line 2598.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+\MT@toks=\toks50
+\MT@count=\count345
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen283
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count346
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2019/11/18 v2.7d Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 258.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+))
+Package scrkbase Info: You've told me to redefine the font selection of the
+(scrkbase)             element `sectioning' that is an alias of element
+(scrkbase)             `disposition' on input line 818.
+
+(./langsci-series.def)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pst-barcode/pst-barcode.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pstricks/pstricks.sty
+Package: pstricks 2018/12/21 v0.69 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/xkeyval/pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/pstricks.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count347
+\pstFP@xia=\count348
+\pstFP@xib=\count349
+\pstFP@xfa=\count350
+\pstFP@xfb=\count351
+\pstFP@rega=\count352
+\pstFP@regb=\count353
+\pstFP@regs=\count354
+\pstFP@times=\count355
+)
+\psLoopIndex=\count356
+
+`PSTricks' v2.97  <2019/05/11> (tvz,hv)
+\pst@dima=\dimen284
+\pst@dimb=\dimen285
+\pst@dimc=\dimen286
+\pst@dimd=\dimen287
+\pst@dimg=\dimen288
+\pst@dimh=\dimen289
+\pst@dimm=\dimen290
+\pst@dimn=\dimen291
+\pst@dimo=\dimen292
+\pst@dimp=\dimen293
+\pst@hbox=\box62
+\pst@ibox=\box63
+\pst@boxg=\box64
+\pst@cnta=\count357
+\pst@cntb=\count358
+\pst@cntc=\count359
+\pst@cntd=\count360
+\pst@cntg=\count361
+\pst@cnth=\count362
+\pst@cntm=\count363
+\pst@cntn=\count364
+\pst@cnto=\count365
+\pst@cntp=\count366
+\@zero=\count367
+\pst@toks=\toks51
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/xetex-pstricks/pstricks.con
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg))
+\psunit=\dimen294
+\psxunit=\dimen295
+\psyunit=\dimen296
+\pst@C@@rType=\count368
+\pslinewidth=\dimen297
+\psk@startLW=\dimen298
+\psk@endLW=\dimen299
+\pst@customdefs=\toks52
+\pslinearc=\dimen300
+\pst@symbolStep=\dimen301
+\pst@symbolWidth=\dimen302
+\pst@symbolLinewidth=\dimen303
+\everypsbox=\toks53
+\psframesep=\dimen304
+\pslabelsep=\dimen305
+\sh@wgridXunit=\dimen306
+\sh@wgridYunit=\dimen307
+\pst@shift=\dimen308
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/xetex-pstricks/pstricks.con
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
+Using PSTricks configuration for XeTeX+xdvipdfmx
+)))
+File: pstricks.tex 2019/05/11 v2.97 `PSTricks' (tvz,hv)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/pst-fp.tex)
+File: pst-fp.tex 2019/05/11 v2.97 `PST-fp' (hv)
+
+>>> Loading XeTeX special macros
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pstricks/pstricks-xetex.def))
+Package: pst-barcode 2016/04/22 package wrapper for pst-barcode.tex (hv)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pst-barcode/pst-barcode.tex
+`PST-barcode' v0.18, 2017/08/22 (tb,hv)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/marginnote/marginnote.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count369
+)
+\QR@box=\box65
+)
+File: pst-barcode.tex 2017/08/22 v0.18 `PST-barcode' (hv)
+)
+\pgf@layerbox@lspcls_bg=\box66
+\pgf@layerboxsaved@lspcls_bg=\box67
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/datetime/datetime.sty
+Package: datetime 2015/03/20 v2.60 Date Time Package
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fmtcount.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fmtcount 2020/01/30 v3.07
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fcprefix.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fcprefix 2012/09/28
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/fmtcount/fcnumparser.sty
+Invalid UTF-8 byte or sequence at line 10 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 22 replaced by U+FFFD.
+Package: fcnumparser 2017/06/15
+\fc@digit@counter=\count370
+))
+\c@padzeroesN=\count371
+\fc@tmpcatcode=\count372
+\@DT@modctr=\count373
+\@ordinalctr=\count374
+\@orgargctr=\count375
+\@strctr=\count376
+\@tmpstrctr=\count377
+\@DT@loopN=\count378
+\@DT@X=\count379
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/datetime/datetime-defaults.sty
+Package: datetime-defaults 2013/09/10
+)
+\@day=\count380
+\@month=\count381
+\@year=\count382
+\c@HOUR=\count383
+\c@HOURXII=\count384
+\c@MINUTE=\count385
+\c@TOHOUR=\count386
+\c@TOMINUTE=\count387
+\c@SECOND=\count388
+\currenthour=\count389
+\currentminute=\count390
+\currentsecond=\count391
+Package datetime Info: No datetime.cfg file found, using default settings on in
+put line 308.
+\@dtctr=\count392
+\dayofyear=\count393
+\dayofweek=\count394
+LaTeX Info: Redefining \today on input line 736.
+\dt@a=\toks54
+\dt@b=\toks55
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/koma-script/scrpage2.sty
+Package: scrpage2 2020/01/24 v3.29 KOMA-Script package (page head and foot)
+
+
+Package scrpage2 Warning: usage of obsolete package!
+(scrpage2)                Package `scrpage2' is obsolete.
+(scrpage2)                You should not longer use package `scrpage2'.
+(scrpage2)                You should replace usage of package `scrpage2'
+(scrpage2)                by `scrlayer-scrpage' on input line 52.
+
+LaTeX Info: Redefining \pagemark on input line 180.
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epigraph/epigraph.sty
+Package: epigraph 2020/01/02 v1.5e typesetting epigraphs
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/nextpage/nextpage.sty
+Package: nextpage 2009/09/03 v1.1a additional page commands
+)
+\beforeepigraphskip=\skip77
+\afterepigraphskip=\skip78
+\epigraphwidth=\skip79
+\epigraphrule=\skip80
+)
+\normalparindent=\skip81
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count395
+\U@D=\dimen309
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/xebabel.def
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read5
+\bbl@dirlevel=\count396
+)
+Package babel Info: Making " an active character on input line 121.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count397
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+\c@tabx@nest=\count398
+\c@listtotal=\count399
+\c@listcount=\count400
+\c@liststart=\count401
+\c@liststop=\count402
+\c@citecount=\count403
+\c@citetotal=\count404
+\c@multicitecount=\count405
+\c@multicitetotal=\count406
+\c@instcount=\count407
+\c@maxnames=\count408
+\c@minnames=\count409
+\c@maxitems=\count410
+\c@minitems=\count411
+\c@citecounter=\count412
+\c@maxcitecounter=\count413
+\c@savedcitecounter=\count414
+\c@uniquelist=\count415
+\c@uniquename=\count416
+\c@refsection=\count417
+\c@refsegment=\count418
+\c@maxextratitle=\count419
+\c@maxextratitleyear=\count420
+\c@maxextraname=\count421
+\c@maxextradate=\count422
+\c@maxextraalpha=\count423
+\c@abbrvpenalty=\count424
+\c@highnamepenalty=\count425
+\c@lownamepenalty=\count426
+\c@maxparens=\count427
+\c@parenlevel=\count428
+\blx@tempcnta=\count429
+\blx@tempcntb=\count430
+\blx@tempcntc=\count431
+\blx@maxsection=\count432
+\blx@maxsegment@0=\count433
+\blx@notetype=\count434
+\blx@parenlevel@text=\count435
+\blx@parenlevel@foot=\count436
+\blx@sectionciteorder@0=\count437
+\blx@entrysetcounter=\count438
+\labelnumberwidth=\skip82
+\labelalphawidth=\skip83
+\biblabelsep=\skip84
+\bibitemsep=\skip85
+\bibnamesep=\skip86
+\bibinitsep=\skip87
+\bibparsep=\skip88
+\bibhang=\skip89
+\blx@bcfin=\read6
+\blx@bcfout=\write5
+\blx@langwohyphens=\language87
+\c@mincomprange=\count439
+\c@maxcomprange=\count440
+\c@mincompwidth=\count441
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'langsci.dbx' found.
+
+(./langsci.dbx)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count442
+\c@savedafterword=\count443
+\c@annotator=\count444
+\c@savedannotator=\count445
+\c@author=\count446
+\c@savedauthor=\count447
+\c@bookauthor=\count448
+\c@savedbookauthor=\count449
+\c@commentator=\count450
+\c@savedcommentator=\count451
+\c@editor=\count452
+\c@savededitor=\count453
+\c@editora=\count454
+\c@savededitora=\count455
+\c@editorb=\count456
+\c@savededitorb=\count457
+\c@editorc=\count458
+\c@savededitorc=\count459
+\c@foreword=\count460
+\c@savedforeword=\count461
+\c@holder=\count462
+\c@savedholder=\count463
+\c@introduction=\count464
+\c@savedintroduction=\count465
+\c@namea=\count466
+\c@savednamea=\count467
+\c@nameb=\count468
+\c@savednameb=\count469
+\c@namec=\count470
+\c@savednamec=\count471
+\c@translator=\count472
+\c@savedtranslator=\count473
+\c@shortauthor=\count474
+\c@savedshortauthor=\count475
+\c@shorteditor=\count476
+\c@savedshorteditor=\count477
+\c@authauthor=\count478
+\c@savedauthauthor=\count479
+\c@autheditor=\count480
+\c@savedautheditor=\count481
+\c@labelname=\count482
+\c@savedlabelname=\count483
+\c@institution=\count484
+\c@savedinstitution=\count485
+\c@lista=\count486
+\c@savedlista=\count487
+\c@listb=\count488
+\c@savedlistb=\count489
+\c@listc=\count490
+\c@savedlistc=\count491
+\c@listd=\count492
+\c@savedlistd=\count493
+\c@liste=\count494
+\c@savedliste=\count495
+\c@listf=\count496
+\c@savedlistf=\count497
+\c@location=\count498
+\c@savedlocation=\count499
+\c@organization=\count500
+\c@savedorganization=\count501
+\c@origlocation=\count502
+\c@savedoriglocation=\count503
+\c@origpublisher=\count504
+\c@savedorigpublisher=\count505
+\c@publisher=\count506
+\c@savedpublisher=\count507
+\c@language=\count508
+\c@savedlanguage=\count509
+\c@origlanguage=\count510
+\c@savedoriglanguage=\count511
+\c@pageref=\count512
+\c@savedpageref=\count513
+\shorthandwidth=\skip90
+\shortjournalwidth=\skip91
+\shortserieswidth=\skip92
+\shorttitlewidth=\skip93
+\shortauthorwidth=\skip94
+\shorteditorwidth=\skip95
+\locallabelnumberwidth=\skip96
+\locallabelalphawidth=\skip97
+\localshorthandwidth=\skip98
+\localshortjournalwidth=\skip99
+\localshortserieswidth=\skip100
+\localshorttitlewidth=\skip101
+\localshortauthorwidth=\skip102
+\localshorteditorwidth=\skip103
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count514
+\c@textcitetotal=\count515
+\c@textcitemaxnames=\count516
+\c@biburlbigbreakpenalty=\count517
+\c@biburlbreakpenalty=\count518
+\c@biburlnumpenalty=\count519
+\c@biburlucpenalty=\count520
+\c@biburllcpenalty=\count521
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count522
+)
+Package biblatex Info: Trying to load natbib compatibility...
+Package biblatex Info: ... file 'blx-natbib.def' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/blx-natbib.def
+File: blx-natbib.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
+ overwriting.
+)
+Package biblatex Info: Trying to load bibliography style 'langsci-unified'...
+Package biblatex Info: ... file 'langsci-unified.bbx' found.
+
+(./langsci-unified.bbx
+File: langsci-unified.bbx 
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count523
+\c@bbx:relatedtotal=\count524
+)))
+Package biblatex Info: Trying to load citation style 'langsci-unified'...
+Package biblatex Info: ... file 'langsci-unified.cbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/langsci/langsci-unified.cbx
+File: sp-authoryear-comp.cbx 
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\footcites'.
+Package biblatex Info: Redefining '\footcitetexts'.
+Package biblatex Info: Redefining '\smartcites'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\citeauthor'.
+Package biblatex Info: Redefining '\citeyear'.
+Package biblatex Info: Redefining '\citeyearpar'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen310
+\captionmargin@=\dimen311
+\captionwidth=\dimen312
+\caption@tempdima=\dimen313
+\caption@indent=\dimen314
+\caption@parindent=\dimen315
+\caption@hangindent=\dimen316
+Package caption Info: KOMA-Script document class detected.
+)
+\c@float@type=\count525
+\float@exts=\toks56
+\float@box=\box68
+\@floatcapt=\box69
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks57
+\flrow@foot=\insert199
+\FB@wd=\dimen317
+\FBo@wd=\dimen318
+\FBc@wd=\dimen319
+\FBo@ht=\skip104
+\FBc@ht=\skip105
+\FBf@ht=\skip106
+\FBo@max=\skip107
+\FBc@max=\skip108
+\FBf@max=\skip109
+\c@FBl@b=\count526
+\floatbox@depth=\count527
+\c@FRobj=\count528
+\c@FRsobj=\count529
+\Xhsize=\skip110
+\sXhsize=\skip111
+\Zhsize=\skip112
+\sZhsize=\skip113
+\flrow@rowbox=\box70
+\FR@Zunitlength=\dimen320
+\c@FBcnt=\count530
+\FPOScnt=\count531
+\LTleft=\skip114
+\LTright=\skip115
+\LTleft=\skip116
+\LTright=\skip117
+\flrow@types=\toks58
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen321
+\lightrulewidth=\dimen322
+\cmidrulewidth=\dimen323
+\belowrulesep=\dimen324
+\belowbottomsep=\dimen325
+\aboverulesep=\dimen326
+\abovetopsep=\dimen327
+\cmidrulesep=\dimen328
+\cmidrulekern=\dimen329
+\defaultaddspace=\dimen330
+\@cmidla=\count532
+\@cmidlb=\count533
+\@aboverulesep=\dimen331
+\@belowrulesep=\dimen332
+\@thisruleclass=\count534
+\@lastruleclass=\count535
+\@thisrulewidth=\dimen333
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+\c@paperappendixsection=\count536
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/index/index.sty
+Package: index 2004/01/20 v4.2beta Improved index support (dmj)
+\@indexbox=\insert198
+\indexproofstyle=\toks59
+
+
+LaTeX Warning: Command \markboth  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \markright  has changed.
+               Check if current package is valid.
+
+)
+\idxtitle@default=\toks60
+\tf@default=\write6
+\openout6 = `grammatical-theory.idx'.
+
+Package index Info: Writing index file grammatical-theory.idx on input line 164
+5.
+\idxtitle@lan=\toks61
+\tf@lan=\write7
+\openout7 = `grammatical-theory.ldx'.
+
+Package index Info: Writing index file grammatical-theory.ldx on input line 164
+6.
+\idxtitle@sbj=\toks62
+\tf@sbj=\write8
+\openout8 = `grammatical-theory.sdx'.
+
+Package index Info: Writing index file grammatical-theory.sdx on input line 164
+7.
+\openout6 = `grammatical-theory.adx'.
+
+Package index Info: Writing index file grammatical-theory.adx on input line 164
+8.
+ (./styles/authorindex/authorindex.sty
+Package: authorindex 2002/09/13 make index of authors cited in a work
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen334
+\Hy@linkcounter=\count537
+\Hy@pagecounter=\count538
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count539
+Package hyperref Info: Option `bookmarks' set `true' on input line 4421.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4421.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4421
+.
+Package hyperref Info: Option `hyperindex' set `true' on input line 4421.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4421.
+Package hyperref Info: Option `draft' set `false' on input line 4421.
+Package hyperref Info: Option `plainpages' set `false' on input line 4421.
+Package hyperref Info: Option `pdfusetitle' set `true' on input line 4421.
+Package hyperref Info: Option `unicode' set `true' on input line 4421.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020/01/14 v7.00d Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count540
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen335
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count541
+\Field@Width=\dimen336
+\Fld@charsize=\dimen337
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count542
+\c@Item=\count543
+\c@Hfootnote=\count544
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2020/01/14 v7.00d Hyperref driver for XeTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\pdfm@box=\box71
+\c@Hy@AnnotLevel=\count545
+\HyField@AnnotCount=\count546
+\Fld@listcount=\count547
+\c@bookmark@seq@number=\count548
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip118
+)
+Package hyperref Info: Option `unicode' set `true' on input line 1763.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count549
+\rotFPtop=\skip119
+\rotFPbot=\skip120
+\rot@float@box=\box72
+\rot@mess@toks=\toks63
+)
+\LSPTmp=\skip121
+)
+(./memoize.sty
+Package: memoize 2020/07/17 Memoization, including externalization
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks64
+\pgfopts@list@add@b@toks=\toks65
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\mmz@out=\write9
+\mmz@box=\box73
+\mmz@realpage=\count550
+\mmz@temptoks=\toks66
+
+(./xparse-arglist.sty
+Package: xparse-arglist 
+)
+No file grammatical-theory.mmz.
+) (./localmetadata.tex) (./localpackages.tex
+(/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+\csq@reset=\count551
+\csq@gtype=\count552
+\csq@glevel=\count553
+\csq@qlevel=\count554
+\csq@maxlvl=\count555
+\csq@tshold=\count556
+\csq@ltx@everypar=\toks67
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box74
+)
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2020/02/18 v3.8.2 Typesetting CJK scripts with XeLaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.st
+y
+Package: xtemplate 2020-03-06 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen338
+\l__xtemplate_tmp_int=\count557
+\l__xtemplate_tmp_muskip=\muskip22
+\l__xtemplate_tmp_skip=\skip122
+)
+\l__xeCJK_tmp_int=\count558
+\l__xeCJK_tmp_box=\box75
+\l__xeCJK_tmp_dim=\dimen339
+\l__xeCJK_tmp_skip=\skip123
+\g__xeCJK_space_factor_int=\count559
+\l__xeCJK_begin_int=\count560
+\l__xeCJK_end_int=\count561
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip124
+\g__xeCJK_node_int=\count562
+\c__xeCJK_CJK_node_dim=\dimen340
+\c__xeCJK_CJK-space_node_dim=\dimen341
+\c__xeCJK_default_node_dim=\dimen342
+\c__xeCJK_default-space_node_dim=\dimen343
+\c__xeCJK_CJK-widow_node_dim=\dimen344
+\c__xeCJK_normalspace_node_dim=\dimen345
+\l__xeCJK_ccglue_skip=\skip125
+\l__xeCJK_ecglue_skip=\skip126
+\l__xeCJK_punct_kern_skip=\skip127
+\l__xeCJK_last_penalty_int=\count563
+\l__xeCJK_last_bound_dim=\dimen346
+\l__xeCJK_last_kern_dim=\dimen347
+\l__xeCJK_widow_penalty_int=\count564
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2302.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen348
+\l__xeCJK_mixed_punct_width_dim=\dimen349
+\l__xeCJK_middle_punct_width_dim=\dimen350
+\l__xeCJK_fixed_margin_width_dim=\dimen351
+\l__xeCJK_mixed_margin_width_dim=\dimen352
+\l__xeCJK_middle_margin_width_dim=\dimen353
+\l__xeCJK_bound_punct_width_dim=\dimen354
+\l__xeCJK_bound_margin_width_dim=\dimen355
+\l__xeCJK_margin_minimum_dim=\dimen356
+\l__xeCJK_kerning_total_width_dim=\dimen357
+\l__xeCJK_same_align_margin_dim=\dimen358
+\l__xeCJK_different_align_margin_dim=\dimen359
+\l__xeCJK_kerning_margin_width_dim=\dimen360
+\l__xeCJK_kerning_margin_minimum_dim=\dimen361
+\l__xeCJK_bound_dim=\dimen362
+\l__xeCJK_reverse_bound_dim=\dimen363
+\l__xeCJK_margin_dim=\dimen364
+\l__xeCJK_minimum_bound_dim=\dimen365
+\l__xeCJK_kerning_margin_dim=\dimen366
+\g__xeCJK_family_int=\count565
+\l__xeCJK_fam_int=\count566
+\g__xeCJK_fam_allocation_int=\count567
+\l__xeCJK_verb_case_int=\count568
+\l__xeCJK_verb_exspace_skip=\skip128
+ (/usr/local/texlive/2020/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2020/02/18 v3.8.2 Configuration file for xeCJK package
+))
+
+Package fontspec Info: SourceHanSerifSC-Regular scale = 0.9026036139559904.
+
+
+Package fontspec Info: SourceHanSerifSC-Regular scale = 0.9026036139559904.
+
+
+Package fontspec Info: Font family 'SourceHanSerifSC-Regular(0)' created for
+(fontspec)             font 'SourceHanSerifSC-Regular' with options
+(fontspec)             [Script={CJK},Scale={MatchUppercase},Path={fonts/}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9026036139559904]"[fonts/SourceHanSerifSC-Regula
+r]/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count569
+\mult@box=\box76
+\multicol@leftmargin=\dimen367
+\c@unbalance=\count570
+\c@collectmore=\count571
+\doublecol@number=\count572
+\multicoltolerance=\count573
+\multicolpretolerance=\count574
+\full@width=\dimen368
+\page@free=\dimen369
+\premulticols=\dimen370
+\postmulticols=\dimen371
+\multicolsep=\skip129
+\multicolbaselineskip=\skip130
+\partial@page=\box77
+\last@line=\box78
+\maxbalancingoverflow=\dimen372
+\mult@rightbox=\box79
+\mult@grightbox=\box80
+\mult@gfirstbox=\box81
+\mult@firstbox=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\c@minrows=\count575
+\c@columnbadness=\count576
+\c@finalcolumnbadness=\count577
+\last@try=\dimen373
+\multicolovershoot=\dimen374
+\multicolundershoot=\dimen375
+\mult@nat@firstbox=\box120
+\colbreak@box=\box121
+\mc@col@check@num=\count578
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
+File: bkm-dvipdfm.def 2019/12/03 v1.28 bookmark driver for dvipdfm (HO)
+\BKM@id=\count579
+))
+(./styles/my-ccg-ohne-colortbl.sty
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 57.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/b/n --> OT1/cmss/bx/
+n on input line 57.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/b/n --> OT1/cmss/bx/
+n on input line 57.
+) (./styles/oneline.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/langsci/langsci-lgr.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks68
+\SOUL@lasttoken=\toks69
+\SOUL@cmds=\toks70
+\SOUL@buffer=\toks71
+\SOUL@token=\toks72
+\SOUL@spaceskip=\skip131
+\SOUL@ttwidth=\dimen376
+\SOUL@uldp=\dimen377
+\SOUL@ulht=\dimen378
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen379
+\ar@mcellbox=\box122
+\extrarowheight=\dimen380
+\NC@list=\toks73
+\extratabsurround=\skip132
+\backup@length=\skip133
+\ar@cellbox=\box123
+)
+\TX@col@width=\dimen381
+\TX@old@table=\dimen382
+\TX@old@col=\dimen383
+\TX@target=\dimen384
+\TX@delta=\dimen385
+\TX@cols=\count580
+\TX@ftn=\toks74
+)
+(./styles/mycommands.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/tikz-qtree.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/pgftree.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/pgfsubpic.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/pgfsubpic.tex
+\pgf@subpicminx=\dimen386
+\pgf@subpicminy=\dimen387
+\pgf@subpicmaxx=\dimen388
+\pgf@subpicmaxy=\dimen389
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/pgftree.tex
+\levelsep=\dimen390
+\subtreesep=\dimen391
+\smuggle@levelsep=\dimen392
+\smuggle@subtreesep=\dimen393
+\this@levelsep=\dimen394
+\this@subtreesep=\dimen395
+\pgftree@childx=\dimen396
+\pgftree@savechildx=\dimen397
+\pgftree@childy=\dimen398
+\pgftree@savechildy=\dimen399
+\pgftree@childi=\count581
+\pgftree@savechildi=\count582
+\pgftree@level=\count583
+\pgftree@depth=\dimen400
+\pgf@subpic@hbox@children=\box124
+\pgf@subpic@minx@children=\dimen401
+\pgf@subpic@miny@children=\dimen402
+\pgf@subpic@maxx@children=\dimen403
+\pgf@subpic@maxy@children=\dimen404
+\pgftree@lastchildx=\dimen405
+\pgftree@lastchildy=\dimen406
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-qtree/tikz-qtree.tex
+\@result=\toks75
+\child@list=\toks76
+\root@node=\toks77
+))
+(/usr/local/texlive/2020/texmf-dist/tex/xelatex/langsci/langsci-gb4e.sty
+Package: langsci-gb4e 2020/01/01
+\c@fnx=\count584
+\@xnumdepth=\count585
+\c@xnumi=\count586
+\c@xnumii=\count587
+\c@xnumiii=\count588
+\c@xnumiv=\count589
+\c@rxnumi=\count590
+\c@rxnumii=\count591
+\c@rxnumiii=\count592
+\c@rxnumiv=\count593
+\footexindent=\skip134
+\gltoffset=\skip135
+\lineone=\box125
+\linetwo=\box126
+\linethree=\box127
+\linefour=\box128
+\linefive=\box129
+\linesix=\box130
+\lineseven=\box131
+\lineeight=\box132
+\wordone=\box133
+\wordtwo=\box134
+\wordthree=\box135
+\wordfour=\box136
+\wordfive=\box137
+\wordsix=\box138
+\wordseven=\box139
+\wordeight=\box140
+\gline=\box141
+\glossglue=\skip136
+\jamwidth=\dimen407
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+Package caption Info: KOMA-Script document class.
+\c@caption@flags=\count594
+\c@continuedfloat=\count595
+Package caption Info: float package is loaded.
+Package caption Info: floatrow package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+)
+\c@KVtest=\count596
+\sf@farskip=\skip137
+\sf@captopadj=\dimen408
+\sf@capskip=\skip138
+\sf@nearskip=\skip139
+\c@subfigure=\count597
+\c@subfigure@save=\count598
+\c@lofdepth=\count599
+\c@subtable=\count600
+\c@subtable@save=\count601
+\c@lotdepth=\count602
+\sf@top=\skip140
+\sf@bottom=\skip141
+)
+(./langsci-forest-setup.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tikz-dependency/tikz-dependency.s
+ty
+Package: tikz-dependency 2011/01/08 v1.1 Macros to draw dependency trees
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen409
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@layerbox@background=\box142
+\pgf@layerboxsaved@background=\box143
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
+s.code.tex
+File: pgflibrarypatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.callouts.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.callouts.code.tex))
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
+shapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodepartlowerbox=\box144
+\pgfnodeparttwobox=\box145
+\pgfnodepartthreebox=\box146
+\pgfnodepartfourbox=\box147
+\pgfnodeparttwentybox=\box148
+\pgfnodepartnineteenbox=\box149
+\pgfnodeparteighteenbox=\box150
+\pgfnodepartseventeenbox=\box151
+\pgfnodepartsixteenbox=\box152
+\pgfnodepartfifteenbox=\box153
+\pgfnodepartfourteenbox=\box154
+\pgfnodepartthirteenbox=\box155
+\pgfnodeparttwelvebox=\box156
+\pgfnodepartelevenbox=\box157
+\pgfnodeparttenbox=\box158
+\pgfnodepartninebox=\box159
+\pgfnodeparteightbox=\box160
+\pgfnodepartsevenbox=\box161
+\pgfnodepartsixbox=\box162
+\pgfnodepartfivebox=\box163
+)))
+\pgf@layerbox@depgroups=\box164
+\pgf@layerboxsaved@depgroups=\box165
+\c@dt@labelid=\count603
+\xca=\skip142
+\yca=\skip143
+\xcb=\skip144
+\ycb=\skip145
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen410
+\pgfarrowlength=\dimen411
+\pgfarrowwidth=\dimen412
+\pgfarrowlinewidth=\dimen413
+) (./forest.sty
+Package: forest 2020/05/06 v2.1.5+wip Drawing (linguistic) trees
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
+ctions.code.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+\pgf@intersect@solutions=\count604
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
+
+
+Package elocalloc Warning: \locbox already defined, stopping on input line 23.
+
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
+\ID@toks=\toks78
+\ID@count=\count605
+)
+\ID@usercommands=\toks79
+\safeloop@depth=\count606
+\safeRKloop@depth=\count607
+\forest@temp@dimen=\dimen414
+\forest@temp@count=\count608
+\forest@n=\count609
+\forest@temp@global@count=\count610
+\forest@temp@toks=\toks80
+\forest@temparray@M=\count611
+\forest@temparray@N=\count612
+\forest@global@temparray@M=\count613
+\forest@global@temparray@N=\count614
+\forest@isnum@count=\count615
+\forest@isdim@nonintpart=\count616
+\forest@isdim@dimen=\dimen415
+\forest@sort@m=\count617
+\forest@sort@k=\count618
+\forest@sort@p=\count619
+\bracket@content=\toks81
+\bracket@afterthought=\toks82
+\forest@node@maxid=\count620
+\forest@process@left@M=\count621
+\forest@process@left@N=\count622
+\forest@process@right@M=\count623
+\forest@process@right@N=\count624
+\forest@process@saved@M=\count625
+\forest@process@saved@N=\count626
+\forest@process@result@M=\count627
+\forest@process@result@N=\count628
+\forest@process@n=\count629
+\forest@nodewalk@branch@toks=\toks83
+\forest@nodewalk@shortsteps@resolution=\toks84
+\forest@do@dynamics=\toks85
+\forest@box=\box166
+\forest@xg=\dimen416
+\forest@yg=\dimen417
+\forest@xs=\dimen418
+\forest@ys=\dimen419
+\forest@pi@toks=\toks86
+\forest@segment@toks=\toks87
+\forest@PIi@toks=\toks88
+\forest@PIii@toks=\toks89
+\forest@copy@in=\read7
+\forest@copy@out=\write10
+\forest@externalize@max@outer@n=\count630
+\forest@externalize@inner@n=\count631
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
+Package: forest-lib-linguistics 2017/07/14 v0.1.2
+\standardnodestrutbox=\box167
+)) (/usr/local/texlive/2020/texmf-dist/tex/generic/german/german.sty
+v2.5e 1998-07-08
+Package: german 1998/07/08 v2.5e Support for writing german texts (br)
+\grmnU@D=\dimen420
+LaTeX Info: Redefining \glqq on input line 251.
+LaTeX Info: Redefining \glq on input line 264.
+LaTeX Info: Redefining \flqq on input line 277.
+LaTeX Info: Redefining \frqq on input line 285.
+LaTeX Info: Redefining \flq on input line 293.
+LaTeX Info: Redefining \frq on input line 300.
+german -- \language number for Austrian undefined, default 32 used.
+) (./styles/merkmalstruktur.sty
+\MyetagLength=\skip146
+LaTeX Font Info:    Trying to load font information for OT1+LibertinusSerif-Reg
+ular.otf(0) on input line 188.
+LaTeX Font Info:    No file OT1LibertinusSerif-Regular.otf(0).fd. on input line
+ 188.
+
+
+LaTeX Font Warning: Font shape `OT1/LibertinusSerif-Regular.otf(0)/m/n' undefin
+ed
+(Font)              using `OT1/cmr/m/n' instead on input line 188.
+
+
+LaTeX Font Warning: Font shape `OT1/LibertinusSerif-Regular.otf(0)/m/n' in size
+ <5.5> not available
+(Font)              size <5> substituted on input line 188.
+
+LaTeX Font Info:    Trying to load font information for OML+nxlmi on input line
+ 188.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/omlnxlmi.fd
+File: omlnxlmi.fd 2013/11/19 Fontinst v1.933 font definitions for OML/nxlmi.
+)
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
+ 188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
+e 188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 188
+.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 188
+.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
+188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
+188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
+188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
+188.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+))
+(./styles/abbrev.sty) (./styles/makros.2e.sty
+\c@uebung=\count632
+\mytemplength=\skip147
+\MyTempLength=\skip148
+Invalid UTF-8 byte or sequence at line 234 replaced by U+FFFD.
+\c@hours=\count633
+\c@minutes=\count634
+\quotewidth=\skip149
+\singlequotewidth=\skip150
+ (./styles/varioref.sty
+Package: varioref 2006/05/13 v1.4p package for extended references (FMi)
+\c@vrcnt=\count635
+LaTeX Info: Redefining \Ref on input line 721.
+)
+Invalid UTF-8 byte or sequence at line 318 replaced by U+FFFD.
+\mothernodedimen=\dimen421
+\tracebox=\box168
+)
+(./styles/my-xspace.sty
+
+LaTeX Warning: You have requested package `styles/my-xspace',
+               but the package provides `my-xspace'.
+
+Package: my-xspace 1997/10/13 v1.06 Space after command names (DPC)
+LaTeX Info: Redefining \xspace on input line 40.
+) (./styles/article-ex.sty
+\c@smtempcnt=\count636
+\widelabel=\dimen422
+) (./styles/additional-langsci-index-shortcuts.sty)
+(./styles/eng-date.sty) (./styles/my-theorems.sty
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/theorem.sty
+Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
+\theorem@style=\toks90
+\theorem@bodyfont=\toks91
+\theorempreskipamount=\skip151
+\theorempostskipamount=\skip152
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/thp.sty
+File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
+))
+\c@mydefinition=\count637
+\c@prinzip=\count638
+\c@principle=\count639
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/thb.sty
+File: thb.sty 2014/10/28 v2.2c Theorem extension package (FMi)
+)
+\c@schema=\count640
+\c@ref-regel=\count641
+\c@fest=\count642
+)
+(./styles/dgmacros.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pst-tree/pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pst-tree/pst-tree.tex
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pst-node/pst-node.tex
+ v1.42, 2019/03/03
+\psrow=\count643
+\pscol=\count644
+\psmatrixcnt=\count645
+\psrowsep=\skip153
+\pscolsep=\skip154
+\pst@args=\count646
+\num@pts=\count647
+\pst@argcnt=\count648
+)  v1.13, 2017/02/18(tvz,dg,hv)
+\pstree@rootbox=\box169
+Normal \box register pool exhausted, switching to extended pool.
+\pstree@box=\box256
+\psnodecnt=\count649
+\pstreelevel=\count650
+\pstreecnt=\count651
+\pstree@cnt=\count652
+\pstree@stop=\count653
+)
+File: pst-tree.tex 2017/02/18 1.13 `pst-tree' (tvz,hv)
+) (./styles/trees.sty
+\@input{pst-tree.aux}
+\openout2 = `pst-tree.aux'.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pst-tree/pst-tree.tex)
+\c@anglea=\count654
+\c@angleb=\count655
+)
+(./styles/dalrymple.sty
+\lexentrydimen=\dimen423
+\lexcategorydimen=\dimen424
+\mothernodedimen=\dimen425
+\catdimen=\dimen426
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box257
+)
+\tc@llx=\dimen427
+\tc@lly=\dimen428
+\tc@urx=\dimen429
+\tc@ury=\dimen430
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen431
+\adjbox@Height=\dimen432
+\adjbox@Depth=\dimen433
+\adjbox@Totalheight=\dimen434
+\adjbox@pwidth=\dimen435
+\adjbox@pheight=\dimen436
+\adjbox@pdepth=\dimen437
+\adjbox@ptotalheight=\dimen438
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count656
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box258
+\sift@deathcycles=\count657
+\@vwid@loff=\dimen439
+\@vwid@roff=\dimen440
+))
+(./styles/tikz-grid.sty)
+\offset=\skip155
+\offsetup=\skip156
+ (./styles/eng-hyp-utf8.sty)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count658
+\c@@ppsavesec=\count659
+\c@@ppsaveapp=\count660
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/addlines/addlines.sty
+Package: addlines 2018/12/05 v0.3 Add/remove lines from a page
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks92
+\AP@partial=\box259
+\AP@footins=\box260
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count661
+\cp@tempcnt=\count662
+LaTeX Info: Redefining \checkoddpage on input line 59.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/subdepth/subdepth.sty
+Package: subdepth 2007/09/02 v0.1 Unify subscript depths
+)
+(./langsci-tbls.sty
+Package: langsci-tbls 2020/08/14 langsci-tbls
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2019/11/15 version 4.22 text color boxes
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks93
+\verbatim@line=\toks94
+\verbatim@in@stream=\read8
+)
+\tcb@titlebox=\box261
+\tcb@upperbox=\box262
+\tcb@lowerbox=\box263
+\tcb@phantombox=\box264
+\c@tcbbreakpart=\count663
+\c@tcblayer=\count664
+\tcolorbox@number=\count665
+\tcb@temp=\box265
+\tcb@temp=\box266
+\tcb@temp=\box267
+\tcb@temp=\box268
+\tcb@out=\write11
+\tcb@record@out=\write12
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.22'
+\tcb@testbox=\box269
+\tcb@totalupperbox=\box270
+\tcb@totallowerbox=\box271
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.22'
+\tcb@waterbox=\box272
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.22'
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.22'
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip157
+\enit@outerparindent=\dimen441
+\enit@toks=\toks95
+\enit@inbox=\box273
+\enit@count@id=\count666
+\enitdp@description=\count667
+))
+(./localcommands.tex
+\usefulbox=\box274
+\mytextheight=\skip158
+) (./locallangscifixes.tex)
+(./grammatical-theory-include.tex (./memoize-tikz.tex)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'english'.
+
+(./grammatical-theory.aux (./chapters/preface.aux) (./chapters/1-begriffe.aux)
+(./chapters/2-psg.aux) (./chapters/3-gb.aux) (./chapters/3-minimalism.aux)
+(./chapters/4-gpsg.aux) (./chapters/5-merkmalstrukturen.aux)
+(./chapters/6-lfg.aux) (./chapters/7-cg.aux) (./chapters/8-hpsg.aux)
+(./chapters/9-cxg.aux) (./chapters/dg.aux) (./chapters/tag.aux)
+(./chapters/preface-part-two.aux) (./chapters/innateness.aux)
+(./chapters/mts.aux) (./chapters/competence.aux) (./chapters/acquisition.aux)
+(./chapters/complexity.aux) (./chapters/branching-locality-recursion.aux)
+(./chapters/empty.aux) (./chapters/movement.aux) (./chapters/phrasal.aux)
+(./chapters/potential-structure.aux) (./chapters/coregram.aux)
+(./chapters/conclusions.aux) (./chapters/loesungen.aux))
+\openout1 = `grammatical-theory.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+8.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+Package scrbase Info: activating USenglish \contentsname on input line 18.
+Package scrbase Info: activating USenglish \listfigurename on input line 18.
+Package scrbase Info: activating USenglish \listtablename on input line 18.
+
+ABD: EveryShipout initializing macros
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(58.32814pt, 355.65945pt, 69.70924pt)
+* v-part:(T,H,B)=(77.96053pt, 522.96085pt, 81.94476pt)
+* \paperwidth=483.69684pt
+* \paperheight=682.86613pt
+* \textwidth=355.65945pt
+* \textheight=522.96085pt
+* \oddsidemargin=-13.94185pt
+* \evensidemargin=-2.56075pt
+* \topmargin=-27.30946pt
+* \headheight=15.0pt
+* \headsep=18.0pt
+* \topskip=10.0pt
+* \footskip=42.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 18.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/m/n --> TU/Libertinu
+sSerif-Regular.otf(0)/m/n on input line 18.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/LibertinusSerif-Regular.otf(0)/b/n --> TU/Libertinu
+sSerif-Regular.otf(0)/m/n on input line 18.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/LibertinusSerif-Regular.otf(0)/m/n --> TU/Libertinus
+Serif-Regular.otf(0)/b/n on input line 18.
+LaTeX Info: Redefining \microtypecontext on input line 18.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LibertinusSerif-Regular.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+))
+Package biblatex Info: XeTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout5 = `grammatical-theory.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'grammatical-theory.bbl' found.
+
+(./grammatical-theory.bbl
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'KO2015a':
+(biblatex)                - Datamodel: Entry 'KO2015a' (gt.bib): Missing mandat
+ory field 'editor'.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Son2007a':
+(biblatex)                - Datamodel: Entry 'Son2007a' (gt.bib): Invalid field
+ 'location' for entrytype 'article'.
+
+)
+Package biblatex Info: Reference section=0 on input line 18.
+Package biblatex Info: Reference segment=0 on input line 18.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/floatrow/fr-subfig.sty
+Package: fr-subfig 2007/12/24 v0.1g (beta) floatrow: additions for subfig
+\FBsc@max=\skip159
+\FBso@max=\skip160
+)
+\AtBeginShipoutBox=\box275
+Package hyperref Info: Link coloring OFF on input line 18.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count668
+LaTeX Info: Redefining \Ref on input line 520.
+)
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \Ref on input line 18.
+\openout9 = `grammatical-theory.mmz'.
+
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 18.
+
+
+Package xeCJK Warning: Unknown CJK family `\CJKsfdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKsansfont[...]{...}' to define it.
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 41.60559pt on input line 21.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `Arimo-Regular.ttf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package fontspec Info: Arimo-Regular scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.9564107693445069.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.9564107693445069.
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 8.15796pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package fontspec Info: Arimo-Bold scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-Bold scale = 0.9564107693445069.
+
+
+Package fontspec Info: Arimo-Italic scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-Italic scale = 0.9564107693445069.
+
+
+Package fontspec Info: Arimo-BoldItalic scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-BoldItalic scale = 0.9564107693445069.
+
+
+Package fontspec Info: Font family 'Arimo-Regular.ttf(1)' created for font
+(fontspec)             'Arimo-Regular.ttf' with options
+(fontspec)             [Ligatures=TeX,Scale=MatchLowercase,BoldFont =
+(fontspec)             Arimo-Bold.ttf,ItalicFont =
+(fontspec)             Arimo-Italic.ttf,BoldItalicFont =
+(fontspec)             Arimo-BoldItalic.ttf,Scale=MatchUppercase].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.9564107693445069]"[Arimo-Regular.ttf]/OT:script=
+latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.9564107693445069]"[Arimo-Bold.ttf]/OT:script=lat
+n;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.9564107693445069]"[Arimo-Italic.ttf]/OT:script=l
+atn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.9564107693445069]"[Arimo-BoldItalic.ttf]/OT:scri
+pt=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(1)/m/n' will be
+(Font)              scaled to size 48.77669pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/51'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(1)/m/n' will be
+(Font)              scaled to size 49.7331pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/52'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 20.3949pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Package fontspec Info: Arimo-Regular scale = 0.8120069177369248.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.9564106135462977.
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(1)/m/n' will be
+(Font)              scaled to size 23.91014pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/n/25'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(1)/m/it' will be
+(Font)              scaled to size 23.91014pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/25'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(1)/m/it' will be
+(Font)              scaled to size 16.52669pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(1)/m/it/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+File: langsci_logo_nocolor.pdf Graphic file (type pdf)
+<use langsci_logo_nocolor.pdf>
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 13.86853pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/17'.
+(microtype)             Ignoring protrusion settings for this character.
+(/usr/local/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
+File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
+
+)
+\openout3 = `grammatical-theory.mw'.
+
+
+[1
+
+
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/m/n' will be
+(Font)              scaled to size 9.78955pt on input line 21.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/SourceHanSerifSC-Regular(0)/m/n' will be
+(Font)              scaled to size 9.02603pt on input line 21.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceHanSerifSC-Regular' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\openout3 = `grammatical-theory.mw'.
+
+[2
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+
+Package fontspec Info: Arimo-Regular scale = 0.8120068523211533.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.9564107693445069.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.8120069177369248.
+
+
+Package fontspec Info: Arimo-Regular scale = 0.9564106135462977.
+
+File: langsci_logo_nocolor.pdf Graphic file (type pdf)
+<use langsci_logo_nocolor.pdf>
+\openout3 = `grammatical-theory.mw'.
+
+[3
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+File: ccby.pdf Graphic file (type pdf)
+<use ccby.pdf>
+File: storagelogo.pdf Graphic file (type pdf)
+<use storagelogo.pdf>
+\openout3 = `grammatical-theory.mw'.
+
+ [4]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[5]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[6
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+Package tocbasic Info: character protrusion at toc deactivated on input line 25
+.
+(./grammatical-theory.toc
+\openout3 = `grammatical-theory.mw'.
+
+ [1
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[2]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[3]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[4]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+
+Overfull \hbox (0.93997pt too wide) detected at line 471
+ []\TU/LibertinusSerif-Regular.otf(0)/b/n/12 451
+ []
+
+\openout3 = `grammatical-theory.mw'.
+
+[5]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[6]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[7]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+)
+\tf@toc=\write13
+\openout13 = `grammatical-theory.toc'.
+
+\openout3 = `grammatical-theory.mw'.
+
+ [8]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout2 = `chapters/preface.aux'.
+
+(./chapters/preface.tex
+chapter without number
+
+Class scrbook Warning: \float@addtolists detected!
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface .
+
+\openout3 = `grammatical-theory.mw'.
+
+[9
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+(./chapters/acknowledgments.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [10]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+
+Package xeCJK Warning: Unknown CJK family `\CJKttdefault' is being ignored.
+(xeCJK)                
+(xeCJK)                Try to use `\setCJKmonofont[...]{...}' to define it.
+
+LaTeX Font Info:    Font shape `TU/DejaVuSansMono.ttf(0)/m/n' will be
+(Font)              scaled to size 7.88116pt on input line 154.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `DejaVuSansMono.ttf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/DejaVuSansMono.ttf(0)/m/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+\openout3 = `grammatical-theory.mw'.
+
+[11]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+) (./chapters/ontheway.tex
+
+Package fontspec Info: Font family 'LibertinusSerif-Regular.otf(1)' created
+(fontspec)             for font 'LibertinusSerif-Regular.otf' with options
+(fontspec)             [Ligatures=TeX,Ligatures={TeX,Common},PunctuationSpace=0
+,Numbers={Proportional},BoldFont
+(fontspec)             = LibertinusSerif-Semibold.otf,ItalicFont =
+(fontspec)             LibertinusSerif-Italic.otf,BoldItalicFont =
+(fontspec)             LibertinusSerif-SemiboldItalic.otf,BoldSlantedFont =
+(fontspec)             LibertinusSerif-Semibold.otf,SlantedFont =
+(fontspec)             LibertinusSerif-Regular.otf,SlantedFeatures =
+(fontspec)             {FakeSlant=0.25},BoldSlantedFeatures =
+(fontspec)             {FakeSlant=0.25},SmallCapsFeatures =
+(fontspec)             {FakeSlant=0},Numbers=Lining].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Italic.otf]/OT:script=latn;language
+=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Italic.otf]/OT:script=latn;language
+=dflt;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'slanted' (m/sl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0.25;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'slanted small caps'  (m/scsl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Regular.otf]/OT:script=latn;languag
+e=dflt;slant=0.25;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-SemiboldItalic.otf]/OT:script=latn;
+language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-SemiboldItalic.otf]/OT:script=latn;
+language=dflt;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+(fontspec)             - 'bold slanted' (b/sl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0.25;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold slanted small caps'  (b/scsl) with NFSS spec.:
+(fontspec)             <->"[LibertinusSerif-Semibold.otf]/OT:script=latn;langua
+ge=dflt;slant=0.25;slant=0;+liga;+pnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 7\font =0\fontdimen 7\font 
+
+\openout3 = `grammatical-theory.mw'.
+
+ [12]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+) (./chapters/langsci.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [13]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[14]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+) (./chapters/edition2.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [15]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+) (./chapters/edition3.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [16]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[17]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+) (./chapters/edition4.tex) (./chapters/edition5.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [18]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+))
+\openout3 = `grammatical-theory.mw'.
+
+ [19]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[20
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+part I.
+Package scrkbase Info: You've told me to use the font selection of the element
+(scrkbase)             `partprefix' that is an alias of element `partnumber'
+(scrkbase)              on input line 31.
+\openout3 = `grammatical-theory.mw'.
+
+[1
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[2]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout2 = `chapters/1-begriffe.aux'.
+
+(./chapters/1-begriffe.tex
+chapter 1.
+\openout3 = `grammatical-theory.mw'.
+
+[3
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[4]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[5]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[6]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/93B8B8496C8BF7C2F3AB33F9C4D67707.memo.
+Package memoize Info: Memoizing 93B8B8496C8BF7C2F3AB33F9C4D67707  on input line
+ 247.
+[7]
+\openout3 = `grammatical-theory.mw'.
+
+ [7]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[8]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[9]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[10]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[11]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[12]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[13]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[14]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[15]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[16]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[17]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[18]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[19]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[20]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[21]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[22]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[23]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/0BD9448613323ECE9FEFD985F8CD5C42.memo.
+Package memoize Info: Memoizing 0BD9448613323ECE9FEFD985F8CD5C42  on input line
+ 1203.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1203 \end{forest}
+                   
+? 
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1203 \end{forest}
+                   
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1203 \end{forest}
+                   
+? 
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1203 \end{forest}
+                   
+? 
+[24]
+Overfull \hbox (97.56938pt too wide) in paragraph at lines 1203--1204
+ [][] 
+ []
+
+\openout3 = `grammatical-theory.mw'.
+
+[24]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[25]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[26]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[27]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[28]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[29]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/5FA3F5D7B521F5FA3742FB6422783E03.memo.
+Package memoize Info: Memoizing 5FA3F5D7B521F5FA3742FB6422783E03  on input line
+ 1517.
+[30]
+\openout3 = `grammatical-theory.mw'.
+
+ [30]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/1BF2B803EA8E70C108968667D4223C2E.memo.
+Package memoize Info: Memoizing 1BF2B803EA8E70C108968667D4223C2E  on input line
+ 1574.
+[31]
+\openout3 = `grammatical-theory.mw'.
+
+ [31]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/52AAC45B0ADFA9F63FA77CECF5911555.memo.
+Package memoize Info: Memoizing 52AAC45B0ADFA9F63FA77CECF5911555  on input line
+ 1626.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+[32]
+No file grammatical-theory.memo.dir/32F35227A7975BF0BA4C3162D5C9E91A.memo.
+Package memoize Info: Memoizing 32F35227A7975BF0BA4C3162D5C9E91A  on input line
+ 1632.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+[32]
+\openout3 = `grammatical-theory.mw'.
+
+ [32]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[33]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[34]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[35]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[36]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[37]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[38]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[39]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[40]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[41]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[42]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[43]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[44]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[45]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[46]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[47]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[48]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[49]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[50]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/b/n' will be
+(Font)              scaled to size 8.15796pt on input line 2871.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/10'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Arimo-Regular.ttf(0)/b/n' will be
+(Font)              scaled to size 11.74745pt on input line 2871.
+Package microtype Info: Character `textendash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textemdash ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquoteright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblleft ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textquotedblright ' is missing
+(microtype)             in font `TU/Arimo-Regular.ttf(0)/b/n/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+File: tbls-people.pdf Graphic file (type pdf)
+<use tbls-people.pdf>
+\openout3 = `grammatical-theory.mw'.
+
+[51]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+File: tbls-pencil.pdf Graphic file (type pdf)
+<use tbls-pencil.pdf>
+File: tbls-book.pdf Graphic file (type pdf)
+<use tbls-book.pdf>
+\openout3 = `grammatical-theory.mw'.
+
+[52]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+)
+\openout3 = `grammatical-theory.mw'.
+
+ [53]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout2 = `chapters/2-psg.aux'.
+
+(./chapters/2-psg.tex
+\openout3 = `grammatical-theory.mw'.
+
+ [54
+
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+chapter 2.
+\openout3 = `grammatical-theory.mw'.
+
+[55]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/85D367DC4B70BE1A7FA4FF617F9FC180.memo.
+Package memoize Info: Memoizing 85D367DC4B70BE1A7FA4FF617F9FC180  on input line
+ 127.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+\forest@temp@box=\box32752 (local)
+\forest@temp@box=\box32751 (local)
+\forest@temp@box=\box32750 (local)
+\forest@temp@box=\box32749 (local)
+\forest@temp@box=\box32748 (local)
+\forest@temp@box=\box32747 (local)
+\forest@temp@box=\box32746 (local)
+[56]
+\openout3 = `grammatical-theory.mw'.
+
+ [56]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/9E46F34AE1B0BF7195B4F46128764D54.memo.
+Package memoize Info: Memoizing 9E46F34AE1B0BF7195B4F46128764D54  on input line
+ 194.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+\forest@temp@box=\box32752 (local)
+\forest@temp@box=\box32751 (local)
+\forest@temp@box=\box32750 (local)
+\forest@temp@box=\box32749 (local)
+\forest@temp@box=\box32748 (local)
+\forest@temp@box=\box32747 (local)
+\forest@temp@box=\box32746 (local)
+\forest@temp@box=\box32745 (local)
+\forest@temp@box=\box32744 (local)
+[57]
+
+LaTeX Warning: Float too large for page by 49.16692pt on input line 197.
+
+\openout3 = `grammatical-theory.mw'.
+
+[57]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[58]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[59]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[60]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[61]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[62]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[63]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[64]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[65]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[66]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/8C40277F13DD14E72B2EEEEE8D52C44C.memo.
+Package memoize Info: Memoizing 8C40277F13DD14E72B2EEEEE8D52C44C  on input line
+ 712.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+[67]
+No file grammatical-theory.memo.dir/ED31212407FF28C5D39A644E97764B30.memo.
+Package memoize Info: Memoizing ED31212407FF28C5D39A644E97764B30  on input line
+ 722.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+[67]
+No file grammatical-theory.memo.dir/87B475734DE67B69745420FBA7DA5FEE.memo.
+Package memoize Info: Memoizing 87B475734DE67B69745420FBA7DA5FEE  on input line
+ 735.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+\forest@temp@box=\box32752 (local)
+\forest@temp@box=\box32751 (local)
+[67]
+Overfull \hbox (17.91254pt too wide) in paragraph at lines 712--739
+ [][] 
+ []
+
+
+Overfull \hbox (257.99594pt too wide) in paragraph at lines 712--739
+ [] 
+ []
+
+
+Overfull \hbox (155.88466pt too wide) in paragraph at lines 712--739
+ [] 
+ []
+
+
+LaTeX Warning: Float too large for page by 1354.79834pt on input line 740.
+
+\openout3 = `grammatical-theory.mw'.
+
+[67]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[68]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[69]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/96913B693F408A21879B7ED30EDFD6EC.memo.
+Package memoize Info: Memoizing 96913B693F408A21879B7ED30EDFD6EC  on input line
+ 855.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+[70]
+No file grammatical-theory.memo.dir/24772F7129593F070D45B3BBDDF125C8.memo.
+Package memoize Info: Memoizing 24772F7129593F070D45B3BBDDF125C8  on input line
+ 855.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+\forest@temp@box=\box32752 (local)
+[70]
+\openout3 = `grammatical-theory.mw'.
+
+ [70]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/D137A40B855CF896740DD197FCE4B041.memo.
+Package memoize Info: Memoizing D137A40B855CF896740DD197FCE4B041  on input line
+ 929.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+[71]
+No file grammatical-theory.memo.dir/E0B8987E558F5A167A97A59CF7A1CA19.memo.
+Package memoize Info: Memoizing E0B8987E558F5A167A97A59CF7A1CA19  on input line
+ 938.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+[71]
+\openout3 = `grammatical-theory.mw'.
+
+ [71]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/397107C0C1EB58CE415B1436B7288451.memo.
+Package memoize Info: Memoizing 397107C0C1EB58CE415B1436B7288451  on input line
+ 1005.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+[72]
+No file grammatical-theory.memo.dir/83B031CCE5431E772BBDEB8DF0667E58.memo.
+Package memoize Info: Memoizing 83B031CCE5431E772BBDEB8DF0667E58  on input line
+ 1015.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+[72]
+\openout3 = `grammatical-theory.mw'.
+
+ [72]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[73]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[74]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[75]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/77FBA9A6445E500BBBE848CC604AAB8F.memo.
+Package memoize Info: Memoizing 77FBA9A6445E500BBBE848CC604AAB8F  on input line
+ 1184.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+[76]
+No file grammatical-theory.memo.dir/33251E5DC0F8248F75859313760FBF75.memo.
+Package memoize Info: Memoizing 33251E5DC0F8248F75859313760FBF75  on input line
+ 1193.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+[76]
+\openout3 = `grammatical-theory.mw'.
+
+ [76]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/4229860D2B8DC43D18F275E4B10FDBD3.memo.
+Package memoize Info: Memoizing 4229860D2B8DC43D18F275E4B10FDBD3  on input line
+ 1284.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+[77]
+No file grammatical-theory.memo.dir/3DFCC8F25E6CE51D46C3297CDD0FF5D7.memo.
+Package memoize Info: Memoizing 3DFCC8F25E6CE51D46C3297CDD0FF5D7  on input line
+ 1292.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+[77]
+No file grammatical-theory.memo.dir/24001C0367B61E13A7D92A882C8348EC.memo.
+Package memoize Info: Memoizing 24001C0367B61E13A7D92A882C8348EC  on input line
+ 1300.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+[77]
+No file grammatical-theory.memo.dir/6C70E8979102DF39C7EAFC4BC58FA529.memo.
+Package memoize Info: Memoizing 6C70E8979102DF39C7EAFC4BC58FA529  on input line
+ 1309.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+[77]
+\openout3 = `grammatical-theory.mw'.
+
+ [77]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[78]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/7E2F2F257B054437FCC61082010C8F24.memo.
+Package memoize Info: Memoizing 7E2F2F257B054437FCC61082010C8F24  on input line
+ 1376.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+[79]
+No file grammatical-theory.memo.dir/6108BB719EC82C46DF9A115BF86E4EF7.memo.
+Package memoize Info: Memoizing 6108BB719EC82C46DF9A115BF86E4EF7  on input line
+ 1388.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+[79]
+No file grammatical-theory.memo.dir/3F4EB1A2F32E3193A66FC82B50E15FB0.memo.
+Package memoize Info: Memoizing 3F4EB1A2F32E3193A66FC82B50E15FB0  on input line
+ 1419.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+[79]
+No file grammatical-theory.memo.dir/6EF4D7942D7F8851FA3D03FFE06FDBBF.memo.
+Package memoize Info: Memoizing 6EF4D7942D7F8851FA3D03FFE06FDBBF  on input line
+ 1439.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+\forest@temp@box=\box32753 (local)
+\forest@temp@box=\box32752 (local)
+\forest@temp@box=\box32751 (local)
+\forest@temp@box=\box32750 (local)
+\forest@temp@box=\box32749 (local)
+\forest@temp@box=\box32748 (local)
+\forest@temp@box=\box32747 (local)
+\forest@temp@box=\box32746 (local)
+\forest@temp@box=\box32745 (local)
+\forest@temp@box=\box32744 (local)
+\forest@temp@box=\box32743 (local)
+\forest@temp@box=\box32742 (local)
+\forest@temp@box=\box32741 (local)
+[79]
+\openout3 = `grammatical-theory.mw'.
+
+ [79]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[80]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+File: tbls-people.pdf Graphic file (type pdf)
+<use tbls-people.pdf>
+File: tbls-pencil.pdf Graphic file (type pdf)
+<use tbls-pencil.pdf>
+\openout3 = `grammatical-theory.mw'.
+
+[81
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[82]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[83]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+File: tbls-book.pdf Graphic file (type pdf)
+<use tbls-book.pdf>
+)
+\openout3 = `grammatical-theory.mw'.
+
+ [84]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout2 = `chapters/3-gb.aux'.
+
+(./chapters/3-gb.tex
+chapter 3.
+\openout3 = `grammatical-theory.mw'.
+
+[85
+
+
+
+
+]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[86]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/ACDCAAD857B5E05BEB1095CD410A7B7F.memo.
+Package memoize Info: Memoizing ACDCAAD857B5E05BEB1095CD410A7B7F  on input line
+ 128.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+[87]
+No file grammatical-theory.memo.dir/74F0C8F58FEA6DF3661944270C3AB35F.memo.
+Package memoize Info: Memoizing 74F0C8F58FEA6DF3661944270C3AB35F  on input line
+ 142.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+\forest@temp@box=\box32763 (local)
+\forest@temp@box=\box32762 (local)
+\forest@temp@box=\box32761 (local)
+\forest@temp@box=\box32760 (local)
+\forest@temp@box=\box32759 (local)
+\forest@temp@box=\box32758 (local)
+\forest@temp@box=\box32757 (local)
+\forest@temp@box=\box32756 (local)
+\forest@temp@box=\box32755 (local)
+\forest@temp@box=\box32754 (local)
+[87]
+\openout3 = `grammatical-theory.mw'.
+
+ [87]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+\openout3 = `grammatical-theory.mw'.
+
+[88]
+(./grammatical-theory.mw)
+\openout3 = `grammatical-theory.mw'.
+
+
+No file grammatical-theory.memo.dir/6609D96A3A0697B31B4B2B48E915CB59.memo.
+Package memoize Info: Memoizing 6609D96A3A0697B31B4B2B48E915CB59  on input line
+ 260.
+\forest@temp@box=\box32767 (local)
+\forest@temp@box=\box32766 (local)
+\forest@temp@box=\box32765 (local)
+\forest@temp@box=\box32764 (local)
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260     \end{forest}
+                      
+? x
+ 
+Here is how much of TeX's memory you used:
+ 79809 strings out of 479418
+ 1716374 string characters out of 5884585
+ 3924794 words of memory out of 8644454
+ 95625 multiletter control sequences out of 15000+600000
+ 561521 words of font info for 180 fonts, out of 8000000 for 9000
+ 1508 hyphenation exceptions out of 8191
+ 202i,31n,236p,10110b,6702s stack positions out of 5000i,500n,10000p,200000b,80000s
+Output written on grammatical-theory.pdf (143 pages).
