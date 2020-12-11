@@ -212,6 +212,9 @@ memo-install:
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/xparse-arglist.sty .
 	cp -pr ~/Documents/Dienstlich/Projekte/memoize/memomanager.py .
 
+forest-install:
+	cp -pr ~/Documents/Dienstlich/Projekte/LangSci/Git-Hub/latex/langsci-forest-setup.sty .
+
 o-public: o-public-lehrbuch 
 #o-public-bib
 
