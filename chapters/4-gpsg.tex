@@ -173,24 +173,24 @@ arbitrary order. (\mex{1}) gives some examples:
 \eal
 \label{bsp-GPSG-anordnung}
 \ex 
-\gll {}[weil] der Mann der Frau das Buch gibt\\
-     {}\spacebr{}because the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
-\glt `because the man gives the book to the woman'
+\gll {}[weil] der Mann dem Kind das Buch gibt\\
+     \spacebr{}because the man the child the book gives\\
+\glt `because the man gives the book to the child'
 \ex 
-\gll {}[weil] der Mann das Buch der Frau gibt\\
-     {}\spacebr{}because the.\nom{} man the.\acc{} book the.\dat{} woman gives\\
+\gll {}[weil] der Mann das Buch dem Kind gibt\\
+     \spacebr{}because the man the book the child gives\\
+\ex
+\gll {}[weil] das Buch der Mann dem Kind gibt\\
+     \spacebr{}because the book the man the child gives\\
 \ex 
-\gll {}[weil] das Buch der Mann der Frau gibt\\
-{}\spacebr{}because the.\acc{} book the.\nom{} man the.\dat{} woman gives\\
+\gll {}[weil] das Buch dem Kind der Mann gibt\\
+     \spacebr{}because the book the child the man gives\\
 \ex 
-\gll {}[weil] das Buch der Frau der Mann gibt\\
-{}\spacebr{}because the.\acc{} book the.\dat{} woman the.\nom{} man gives\\
+\gll {}[weil] dem Kind der Mann das Buch gibt\\
+     \spacebr{}because the child the man the book gives\\
 \ex 
-\gll {}[weil] der Frau der Mann das Buch gibt\\
-{}\spacebr{}because the.\dat{} woman the.\nom{} man the.\acc{} book gives\\
-\ex 
-\gll {}[weil] der Frau das Buch der Mann gibt\\
-{}\spacebr{}because the.\dat{} woman the.\acc{} book the.\nom{} man gives\\
+\gll {}[weil] dem Kind das Buch der Mann gibt\\
+     \spacebr{}because the child the book the man gives\\
 \zl
 
 \noindent
@@ -240,7 +240,7 @@ from those which refer to \emph{linear precedence}\is{linear precedence}\is{ID/L
 have anything to say about the order of the daughters \citep{Pullum82a}.
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
-S  & $\to$ V, NP[nom], NP[acc], NP[dat]\\
+S  & $\to$ V, NP[nom], NP[dat], NP[acc]\\
 \end{tabular}
 \z
 The rule in (\mex{0}) simply states that S dominates all other nodes. Due to the abandonment of ordering restrictions for the right"=hand side of the rule, we
@@ -249,9 +249,9 @@ only need one rule rather than twelve.
 Nevertheless, without any kind of restrictions on the right"=hand side of the rule, there would be far too much freedom. For example, the following order would be
 permissible:
 \ea[*]{
-\label{bsp-der-frau-der-mann-gibt}
-\gll Der Frau der Mann gibt ein Buch.\\
-     the woman.\dat{} the.\nom{} man gives the.\acc{} book\\
+\label{bsp-dem-kind-der-mann-gibt}
+\gll Dem Kind der Mann gibt ein Buch.\\
+     the.\dat{} child the.\nom{} man gives the.\acc{} book\\
 }
 \z
 Such orders are ruled out by so"=called \emph{Linear Precedence Rules}\is{Linear Precedence Rule} or LP"=rules\is{LP"=rule}. LP"=constraints are restrictions on
@@ -266,14 +266,14 @@ sm edges
 [S
   [V]
   [{NP[nom]}]
-  [{NP[acc]}]
-  [{NP[dat]}] ]
+  [{NP[dat]}]
+  [{NP[acc]}] ]
 \end{forest}}
 \caption{\label{fig-gpsg-lokaler-Baum}Example of a local tree}
 \end{figure}%
 
 \noindent
-The following linearization rules serve to exclude orders such as those in (\ref{bsp-der-frau-der-mann-gibt}):
+The following linearization rules serve to exclude orders such as those in (\ref{bsp-dem-kind-der-mann-gibt}):
 \ea
 \begin{tabular}[t]{@{}l@{~$<$~}l@{}}
 V[+\textsc{mc}]  & X\\
@@ -328,7 +328,7 @@ sm edges
 [S
   [{N2[nom]} [der Mann;the man,roof] ]
   [V2
-    [{N2[dat]} [der Frau;the woman,roof] ]
+    [{N2[dat]} [dem Kind;the child,roof] ]
     [{N2[acc]} [das Buch;the book,roof] ] 
     [V [gibt;gives] ] ] ]
 \end{forest}}
@@ -456,18 +456,18 @@ to nominal structures in German. Nevertheless, there is a problem regarding the 
 freely occur between arguments:
 \eal
 \ex 
-\gll weil der Mann der Frau das Buch \emph{gestern} gab\\
-	 because the man the woman the book yesterday gave\\
-\glt `because the man gave the book to the woman yesterday'
+\gll weil der Mann dem Kind das Buch \emph{gestern} gab\\
+	 because the man the child the book yesterday gave\\
+\glt `because the man gave the book to the child yesterday'
 \ex 
-\gll weil der Mann der Frau \emph{gestern} das Buch gab\\
-	 because the man the woman yesterday the book gave\\
+\gll weil der Mann dem Kind \emph{gestern} das Buch gab\\
+	 because the man the child yesterday the book gave\\
 \ex 
-\gll weil der Mann \emph{gestern} der Frau das Buch gab\\
-	 because the man yesterday the woman the book gave\\
+\gll weil der Mann \emph{gestern} dem Kind das Buch gab\\
+	 because the man yesterday the child the book gave\\
 \ex 
-\gll weil \emph{gestern} der Mann der Frau das Buch gab\\
-	 because yesterday the man the woman the book gave\\
+\gll weil \emph{gestern} der Mann dem Kind das Buch gab\\
+	 because yesterday the man the child the book gave\\
 \zl
 For (\mex{0}), one requires the following rule:
 \ea
@@ -482,9 +482,9 @@ Of course, adjuncts can also occur between the arguments of verbs from other val
 \z
 Furthermore, adjuncts can occur between the arguments of a VP:
 \ea
-\gll Der Mann hat versucht, der Frau heimlich das Buch zu geben.\\
-	the man has tried the woman secretly the book to give\\
-\glt `The man tried to secretly give the book to the woman.'
+\gll Der Mann hat versucht, dem Kind heimlich das Buch zu geben.\\
+	the man has tried the child secretly the book to give\\
+\glt `The man tried to secretly give the book to the child.'
 \z 
 
 %\addlines[2]
@@ -580,13 +580,13 @@ This is true for all verb classes which can form the passive. It does not make a
 \zl
 \eal
 \ex 
-\gll weil sie ihn geschlagen hat\\
-	 because she.\nom{} him.\acc{} beaten has\\
-\glt `because she has beaten him'
+\gll weil Judit den Weltmeister geschlagen hat\\
+     because Judit.\nom{} the.\acc{} world.champion beaten has\\
+\glt `because Judit has beaten the world champion'
 \ex 
-\gll weil er geschlagen wurde\\
-	 because he.\nom{} beaten was\\
-\glt `because he was beaten'
+\gll weil der Weltmeister geschlagen wurde\\
+	 because the.\nom{} world.champion beaten was\\
+\glt `because the world champion was beaten'
 \zl
 \eal
 \ex 
@@ -613,13 +613,13 @@ unrelated structures, that is, the structure of (\mex{1}b) is not derived from t
 
 \eal
 \ex 
-\gll weil sie ihn geschlagen hat\\
-     because she.\nom{} him.\acc{} beaten has\\
-\glt `because she has beaten him'
+\gll weil Judit den Weltmeister geschlagen hat\\
+     because Judit.\nom{} the.\acc{} world.champion beaten has\\
+\glt `because Judit has beaten the world champion'
 \ex 
-\gll weil er geschlagen wurde\\
-     because he.\nom{} beaten was\\
-\glt `because he was beaten'
+\gll weil der Weltmeister geschlagen wurde\\
+     because the.\nom{} world.champion beaten was\\
+\glt `because the world champion was beaten'
 \zl
 %
 The generalization with regard to active/passive is captured nevertheless.
@@ -672,9 +672,9 @@ We arrive at a problem, however, if we try to apply this analysis to German sinc
 by simply suppressing an object. The V2"=rules for verbs such as \emph{arbeiten} `work' and \emph{denken} `think' as used for the analysis of
 (\ref{beispiel-arbeiten}a) and (\ref{beispiel-denken}a) have the following form:
 \ea
-\begin{tabular}[t]{@{}l@{}}
-V2 $\to$ H[5]\\
-V2 $\to$ H[13], PP[\emph{an}]\\
+\begin{tabular}[t]{@{}l@{\hspace{2cm}}l@{}}
+V2 $\to$ H[5] & (\emph{arbeiten} `work')\\
+V2 $\to$ H[13], PP[\emph{an}] & (\emph{denken} `think')\\
 \end{tabular}
 \z
 There is no NP on the right"=hand side of these rules which could be turned into a \emph{von}-PP. If the passive
@@ -731,24 +731,25 @@ example. Until now, we have only seen the GPSG analysis for verb-initial and ver
 sequences in (\mex{1}) are simply linearization variants.
 \eal
 \ex 
-\gll {}[dass] der Mann der Frau das Buch gibt\\
-	 {}\spacebr{}that the man the woman the book gives\\
-\glt `that the man gives the book to the woman'
 \ex 
-\gll Gibt der Mann der Frau das Buch?\\
-	 gives the man the woman the book\\
-\glt `Does the man give the book to the woman?'
+\gll {}[dass] der Mann dem Kind das Buch gibt\\
+	 {}\spacebr{}that the.\NOM{} man the.\DAT{} child the.\ACC{} book gives\\
+\glt `that the man gives the book to the child'
+\ex 
+\gll Gibt der Mann dem Kind das Buch?\\
+	 gives the.\NOM{} man the.\DAT{} child the.\ACC{} book\\
+\glt `Does the man give the book to the child?'
 \zl
 What we want is to derive the verb"=second order in the examples in (\mex{1}) from V1 order in (\mex{0}b).
 \eal
 \ex 
-\gll Der Mann gibt der Frau das Buch.\\
-     the man  gives the woman the book\\
-\glt `The man gives the woman the book.'
+\gll Der Mann gibt dem Kind das Buch.\\
+     the.\NOM{} man  gives the.\DAT{} child the.\ACC{} book\\
+\glt `The man gives the child the book.'
 \ex 
-\gll Der Frau gibt der Mann das Buch.\\
-     the woman gives the man the book\\
-\glt `The man gives the woman the book.'
+\gll Dem Kind gibt der Mann das Buch.\\
+     the.\DAT{} child gives the.\NOM{} man the.\ACC{} book\\
+\glt `The man gives the child the book.'
 \zl
 
 \noindent
@@ -817,16 +818,16 @@ Figure~\vref{fig-nld-gpsg} shows the interaction of the rules for the analysis o
 }
 %\addlines[2]
 \ea
-\gll Dem Mann gibt er das Buch.\\
-     the.\dat{} man gives he.\nom{} the.\acc{} book\\
-\glt `He gives the man the book.'
+\gll Dem Kind gibt er das Buch.\\
+     the.\dat{} child gives he.\nom{} the.\acc{} book\\
+\glt `He gives the child the book.'
 \z
 \begin{figure}
 \centerline{%
 \begin{forest}
 sm edges
-[{V3[+\textsc{fin}, $+$\textsc{mc}]}
-  [{N2[dat,+\textsc{top}]} [dem Mann;the man,roof] ]
+[{V3[+\textsc{fin}, $+$\textsc{mc}]},s sep+=1em
+  [{N2[dat,+\textsc{top}]} [dem Kind;the child,roof] ]
   [{V3[+\textsc{mc}]/N2[dat]}
     [{V[8,+\textsc{mc}]} [gibt;gives] ]
     [{N2[nom]} [er;he] ] 
@@ -1007,24 +1008,30 @@ Grammar\indexcxg are discussed that share assumptions about the encoding of vale
 \citet{Nerbonne86a} and \citet{Johnson86a} investigate fronting of partial VPs\is{partial verb phrase fronting|(} in the GPSG
 framework.
 (\mex{1}) gives some examples: in (\mex{1}a) the bare verb is fronted and its arguments are realized
-in the middle field, in (\mex{1}b) one of the objects is fronted together with the verb and in
-(\mex{1}c) both objects are fronted with the verb.
+in the middle field, in (\mex{1}b) one of the objects is fronted together with the verb, in
+(\mex{1}c) the other object is fronted with the verb and in
+(\mex{1}d) both objects are fronted with the verb.
 \eal
 \ex 
-\gll Erzählen wird er seiner Tochter ein Märchen können.\\
-     tell will he his daughter a fairy.tale can\\
+\gll [Erzählen] wird er        seiner     Tochter  ein      Märchen müssen.\\
+     \spacebr{}tell     will he.\NOM{} his.\DAT{} daughter a.\ACC{} fairy.tale must\\
+\glt `He will have to tell his daughter a fairy tale.'
 \ex 
-\gll Ein Märchen erzählen wird er seiner Tochter können.\\
-     a fairy.tale tell will he his daughter can\\
+\gll [Ein Märchen erzählen] wird er seiner Tochter müssen.\\
+     \spacebr{}a.\ACC{} fairy.tale tell will he.\NOM{} his.\ACC{} daughter must\\
 \ex 
-\gll Seiner Tochter ein Märchen erzählen wird er können.\\
-     his daughter a fairy.tale tell will he can\\
-\glt `He will be able to tell his daughter a fairy tale.'
+\gll [Seiner Tochter erzählen] wird er das Märchen müssen.\\
+     \spacebr{}his.\DAT{} daughter tell will he.\NOM{} the.\ACC{} fairy.tale  must\\
+\ex 
+\gll [Seiner Tochter ein Märchen erzählen] wird er müssen.\\
+     \spacebr{}his.\DAT{} daughter a.\ACC{} fairy.tale tell will he.\NOM{} must\\
 \zl
 The problem with sentences such as those in (\mex{0}) is that the valence requirements of the verb
 \emph{erzählen} `to tell' are realized in various positions in the sentence. For fronted
 constituents, one requires a rule which allows a ditransitive to be realized without its arguments
-or with one or two objects. Furthermore, it has to be ensured that the arguments that are
+or with one or two objects. This means that the ditransitive verb \emph{erzählen} `to tell' should
+have the same valence numbers as \emph{schalfen} `to sleep', as \emph{helfen} `to help', as
+\emph{kennen} `to know' in addition to its normal ditransitive number. Furthermore, it has to be ensured that the arguments that are
 missing in the prefield are realized in the remainder of the clause. It is not legitimate to omit
 obligatory arguments or realize arguments with other properties like a different case, as the
 examples in (\mex{1}) show:

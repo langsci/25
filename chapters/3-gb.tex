@@ -112,18 +112,18 @@ left"=hand side. \emph{en} stands for the morpheme which forms the participle (\
 Both trees for (\mex{1}a,b) are shown in Figure~\ref{fig-Passivtransformation}.
 
 \eal
-\ex John loves Mary.
-\ex Mary is loved by John.
+\ex Kim loves Sandy.
+\ex Sandy is loved by Kim.
 \zl
 \begin{figure}
 \hfill
 \begin{forest}
 %sm edges
 [S, for tree={parent anchor=south, child anchor=north}
-  [NP [John] ]
+  [NP [Kim] ]
   [VP
     [V [loves] ]
-    [NP [Mary] ] 
+    [NP [Sandy] ] 
   ]]
 \end{forest}
 \hspace{1em}
@@ -132,13 +132,13 @@ Both trees for (\mex{1}a,b) are shown in Figure~\ref{fig-Passivtransformation}.
   \begin{forest}
   %sm edges
   [S, for tree={parent anchor=south, child anchor=north}
-  	[NP[Mary]]
+  	[NP[Sandy]]
 	[VP
 	[Aux[is, tier=word]]
 	[V[loved, tier=word]]
 	[PP
 	[P[by, tier=word]]
-	[NP[John, tier=word]]]]]
+	[NP[Kim, tier=word]]]]]
 \end{forest}
 \hfill\mbox{}
 \caption{\label{fig-Passivtransformation}Application of passive transformation}
@@ -282,15 +282,15 @@ The surface position in which constituents are realized is not necessarily the p
 D"=structure. For example, a sentence with a ditransitive verb has the following ordering variants:
 \eal
 \ex 
-\gll {}[dass] der Mann der Frau das Buch gibt\\
-	 {}\spacebr{}that the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
+\gll {}[dass] der Mann dem Kind das Buch gibt\\
+     {}\spacebr{}that the.\nom{} man the.\dat{} woman the.\acc{} book gives\\
 \glt `that the man gives the woman the book'
 \ex 
-\gll Gibt der Mann der Frau das Buch?\\
+\gll Gibt der Mann dem Kind das Buch?\\
 	 gives the.\nom{} man the.\dat{} woman the.\acc{} book\\
 \glt `Does the man give the woman the book?'
 \ex 
-\gll Der Mann gibt der Frau das Buch.\\
+\gll Der Mann gibt dem Kind das Buch.\\
 	 the.\nom{} man gives the.\dat{} woman the.\acc{} book\\
 \glt `The man gives the woman the book.'
 \zl
@@ -309,15 +309,15 @@ frightening when one encounters them first, but I already motivated the assumpti
 of empty elements in nominal structures in Section~\ref{sec-psg-np}  (page~\pageref{np-epsilon}). 
 \eal
 \ex 
-\gll {}[dass] der Mann der Frau das Buch gibt\\
+\gll {}[dass] der Mann dem Kind das Buch gibt\\
 	 {}\spacebr{}that the man the woman the book gives\\
 \glt `that the man gives the woman the book'
 \ex 
-\gll Gibt$_i$ der Mann der Frau das Buch \_$_i$?\\
+\gll Gibt$_i$ der Mann dem Kind das Buch \_$_i$?\\
 	 gives the man the woman the book\\
 \glt `Does the man give the woman the book?'
 \ex 
-\gll {}[Der Mann]$_j$ gibt$_i$ \_$_j$ der Frau das Buch \_$_i$.\\
+\gll {}[Der Mann]$_j$ gibt$_i$ \_$_j$ dem Kind das Buch \_$_i$.\\
 	 {}\spacebr{}the man gives {} the woman the book\\
 \glt `The man gives the woman the book.'
 \zl
@@ -379,13 +379,13 @@ LF is also important for quantifier scope. Sentences such as (\mex{1}a) have two
 
 \eal
 \label{Beispiel-Every-man-loves-a-woman}
-\ex Every man loves a woman.
-\ex $\forall x \exists y (man(x) \to (woman(y) \wedge love(x,y)))$
-\ex $\exists y \forall x (man(x) \to (woman(y) \wedge love(x,y)))$
+\ex Every dolphin attacks a shark.
+\ex $\forall x \exists y (dolphin(x) \to (shark(y) \wedge attack(x,y)))$
+\ex $\exists y \forall x (dolphin(x) \to (shark(y) \wedge attack(x,y)))$
 \zl
 The symbol $\forall$\is{$\forall$} stands for a \emph{universal quantifier}\is{quantifier!universal} and $\exists$\is{$\exists$} stands for an
-\emph{existential quantifier}\is{quantifier!existential}. The first formula corresponds to the reading that for every man, there is a woman who he loves
-and in fact, these can be different women. Under the second reading, there is exactly one woman such that all men love her. The question of when such an
+\emph{existential quantifier}\is{quantifier!existential}. The first formula corresponds to the reading that for every dolphin, there is a shark who it attacks
+and in fact, these can be different sharks. Under the second reading, there is exactly one shark such that all dolphins attack it. The question of when such an
 ambiguity arises and which reading is possible when depends on the syntactic properties of the given utterance. LF is the level which is important for the
 meaning of determiners such as \emph{a} and \emph{every}.
 
@@ -393,15 +393,15 @@ Control Theory\is{Control Theory} is also specified with reference to LF. Contro
 subject in sentences such as (\mex{1}) is filled.
 \eal
 \ex 
-\gll Der Professor schlägt dem Studenten vor, die Klausur noch mal zu~~~~~~ schreiben.\\
+\gll Die Professorin schlägt der Studentin vor, die Klausur noch mal zu~~~~~~ schreiben.\\
 	 the professor suggests the student \textsc{part} the test once again to write\\
 \glt `The professor advises the student to take the test again.'
 \ex 
-\gll Der Professor schlägt dem Studenten vor, die Klausur nicht zu bewerten.\\
+\gll Die Professorin schlägt der Studentin vor, die Klausur nicht zu bewerten.\\
 	 the professor suggests the student \textsc{part} the test not to grade\\
 \glt `The professor suggests to the student not to grade the test.'
 \ex 
-\gll Der Professor schlägt dem Studenten vor, gemeinsam ins Kino zu gehen.\hspace{-3pt}\\
+\gll Die Professorin schlägt der Studentin vor, gemeinsam ins Kino zu gehen.\hspace{-3pt}\\
 	 the professor suggests the student \textsc{part} together into cinema to go\\
 \glt `The professor suggests to the student to go to the cinema together.'
 \zl
@@ -429,9 +429,9 @@ transitive verb) are formed with regard to valence information. Sometimes the ph
 \relation{beat} is the logical predicate.
 The subject and object are the arguments\is{argument} of the predicate. There are several terms used
 to describe the set of selectional requirements such
-as \emph{argument structure}\is{argument structure}, \emph{valence frames}\is{valence frame},
+as \emph{argument structure}\is{argument structure}, \emph{valence frame}\is{valence frame},
 \emph{subcategorization frame}\is{subcategorization frame}, \emph{thematic grid}\is{thematic grid}
-and \emph{theta"=grid} or $\theta$-grid\is{theta-grid@$\theta$-grid}.\footnote{%
+and \emph{theta"=grid} or \emph{$\theta$-grid}\is{theta-grid@$\theta$-grid}.\footnote{%
 The exact meaning of the terms is framework-dependent. Coming from an HPSG perspective, I use the first three terms referring to syntactic and
 semantic information, the latter two refer to the selection of semantic roles. GB researchers often
 refer to argument structure as containing semantic information, to valence frames as containing
@@ -577,8 +577,8 @@ Apart from this, some authors have tried to associate the head position with the
 the head precedes the complement in German:
 \eal
 \ex
-\gll \emph{für} Marie\\
-	 for Marie\\
+\gll \emph{für} Maria\\
+     for Maria\\
 \ex 
 \gll \emph{Bild} von Maria\\
 	 picture of Maria\\
@@ -649,7 +649,8 @@ D   & Determiner\is{category!functional!D} (article, demonstrative)\\
 
 \subsubsection{Assumptions and rules}
 
-In GB, it is assumed that all rules must follow the \xbar format discussed in Section~\ref{sec-xbar}. In other theories, rules which correspond
+In GB, it is assumed that all rules must follow the \xbar format discussed in
+Section~\ref{sec-xbar}. In other theories, rules which correspond 
 to the \xbar format are used along other rules which do not. If the strict version of \xbart is
 assumed, this comes with the assumption of \emph{endocentricity}\is{endocentricity}: every phrase
 has a head and every head is part of a phrase (put more technically: every head
@@ -1150,7 +1151,7 @@ sm edges
 
 %\addlines[-2]
 In German, the position of the heads of VP and IP (\vnull and \inull) are to the right of their
-complements and \vnull and \inull form part of the right sentence bracket.
+arguments and \vnull and \inull form part of the right sentence bracket.
 The subject and all other constituents (complements and adjuncts) all occur to the left of \vnull
 and \inull and form the middle field. It is assumed
 that German -- at least in terms of D"=structure -- is an SOV language (=~a language with the base order Subject--Object--Verb).
@@ -1211,13 +1212,13 @@ The assumption of verb"=final order\label{page-verbletzt} as the base order is m
 \item Verb particles form a close unit with the verb.
 \eal
 \ex 
-\gll weil er morgen an-fängt\\
-     because he tomorrow \textsc{part}-starts\\
-\glt `because he is starting tomorrow'
+\gll weil sie morgen an-fängt\\
+     because she tomorrow \textsc{part}-starts\\
+\glt `because she is starting tomorrow'
 \ex 
-\gll Er fängt morgen an.\\
-	 he starts tomorrow \textsc{part}\\
-\glt `He is starting tomorrow.'
+\gll Sie fängt morgen an.\\
+     she starts tomorrow \textsc{part}\\
+\glt `She is starting tomorrow.'
 \zl
 This unit can only be seen in verb"=final structures, which speaks for the fact that this structure
 reflects the base order.
@@ -1225,8 +1226,8 @@ reflects the base order.
 
 Verbs which are derived from a noun by back-formation\is{back-formation} (\eg \emph{uraufführen} 
 `to perform something for the first time'), can often not be divided into their component parts and
-V2 clauses are therefore ruled out (This was first mentioned by \citet{Hoehle91b} in unpublished
-work. The first published source is \citew[\page 62]{Haider93a}):
+V2 clauses are therefore ruled out (This was first mentioned by \citet[\page 2]{Hoehle91b} in unpublished
+work (now published as \citew[\page 370--371]{Hoehle2018Projektionsstufen}). The first published source is \citew[\page 62]{Haider93a}):
 \eal
 \ex[]{
 \gll weil sie das Stück heute ur-auf-führen\\
@@ -1362,9 +1363,9 @@ in two different ways: in subordinate clauses introduced by a conjunction, the s
 complementizer\is{complementizer}) occupies \cnull as in English. The verb remains in the right
 sentence bracket, as illustrated by (\mex{1}).
 \ea 
-\gll dass jeder diesen Mann kennt\\
-     that everybody this man knows\\
-\glt `that everybody knows this man'
+\gll dass jeder diese Frau kennt\\
+     that everybody this woman knows\\
+\glt `that everybody knows this woman'
 \z
 Figure~\vref{Abb-GB-Komplementierer} gives an analysis of (\mex{0}).
 \begin{figure}
@@ -1379,7 +1380,7 @@ sm edges
 		[\hspaceThis{$'$}I$'$
 			[VP
 				[\hspaceThis{$'$}V$'$
-					[NP[diesen Mann;this man, roof]]
+					[NP[diese Frau;this woman, roof]]
 					[V [\trace$_j$]]]]
 			[I [kenn-$_j$ -t;know- -s]]]]]]
 \end{forest}
@@ -1406,9 +1407,9 @@ sm edges
 In verb"=first and verb"=second clauses, the finite verb is moved to \cnull via the \inull position:
 \vnull $\to$  \inull $\to$ \cnull \citep[\page 1289]{Grewendorf93}.  Figure~\vref{Abb-GB-Verberststellung} shows the analysis of (\mex{1}):
 \ea
-\gll Kennt jeder diesen Mann?\\
-	 knows everybody this man\\
-\glt `Does everybody know this man?'
+\gll Kennt jeder diese Frau?\\
+	 knows everybody this woman\\
+\glt `Does everybody know this woman?'
 \z
 \begin{figure}
 \centerline{%
@@ -1422,7 +1423,7 @@ sm edges
 		[\hspaceThis{$'$}I$'$
 			[VP
 				[\hspaceThis{$'$}V$'$
-					[NP [diesen Mann; this man, roof]]
+					[NP [diese Frau; this woman, roof]]
 					[V [\trace$_j$]]]]
 			[I  [\trace$_k$]]]]]]
 \end{forest}
@@ -1472,7 +1473,7 @@ Figure~\vref{Abb-GB-Vorfeldbesetzung} shows the structure derived from Figure~\r
 \begin{forest}
 sm edges
 [CP
-[NP$_i$ [diesen Mann;this man, roof]]
+[NP$_i$ [diese Frau;this woman, roof]]
 [\hspaceThis{$'$}C$'$
 	[C [(kenn-$_j$ -t)$_k$; know- -s]]
 	[IP
@@ -1581,16 +1582,21 @@ The following are examples of structural case:\footnote{%
 \zl
 In the first example, the subject is in the nominative case\is{case!nominative}, whereas \emph{Installateur} `plumber' is
 in accusative\is{case!accusative} in the second example and even in the genitive\is{case!genitive} in the third following nominalization.\is{nominalization}
-The accusative case of objects is normally structural case. This case becomes nominative under passivization\is{passive}:
+The accusative case of objects is normally structural case. This case becomes nominative under
+passivization\is{passive} and genitive in nominalizations:
 \eal
 \ex 
-\gll Karl schlägt den Weltmeister.\\
-     Karl beats the.\acc{} world.champion\\
-\glt `Karl beats the world champion.'
+\gll Judit schlägt den Weltmeister.\\
+     Judit beats the.\acc{} world.champion\\
+\glt `Judit beats the world champion.'
 \ex 
 \gll Der Weltmeister wird geschlagen.\\
 	 the.\nom{} world.champion is beaten\\
 \glt `The world champion is being beaten.'
+\ex
+\gll das Schlagen des Weltmeisters\\
+      the beating  of.the world.champion\\
+\glt `the beating of the world champion'
 \zl
 
 \noindent
@@ -1662,7 +1668,7 @@ to create a well"=formed S"=structure, the verb would have to move to its affix 
 that the assignment of the subject theta-role by the verb crosses a phrase boundary. This problem
 can be solved by assuming that the subject is generated within the VP, gets a theta role there and
 then moves to SpecIP. An alternative suggestion was to assume that the VP assigns a semantic role to
-SpecIP.%
+SpecIP \parencites[\page 104--105]{Chomsky81a}[\page 229]{AS83a}.%
 }
 \eal
 \ex 
@@ -1680,13 +1686,13 @@ SpecIP.%
 \begin{forest}
 sm edges
 [IP
-  [NP, name=subject [der Mann;the man, roof]]
+  [{NP[nom]}, name=subject [der Mann;the man, roof]]
   [\hspaceThis{$'$}I$'$
 	[VP
 		[\hspaceThis{$'$}V$'$
-			[NP, name=dobject [der Frau;the woman, roof]]
+			[{NP[dat]}, name=dobject [der Frau;the woman, roof]]
 			[\hspaceThis{$'$}V$'$
-				[NP,   name=aobject [den Jungen;the boy, roof]]
+				[{NP[acc]},   name=aobject [den Jungen;the boy, roof]]
 				[V ,name=verb    [zeig-;show-]]]]]
 	[I , name=Infl [-t;-s]]]]
 \draw[->,dotted] (Infl.north) .. controls (3.5,-0.2) and (-1.5,0.4)  .. ($(subject.north)+(-.1,.1)$);
@@ -1716,11 +1722,11 @@ absorbed case. Therefore, it has to move to a position where case can be assigne
 \begin{forest}
 sm edges
 [IP
-[NP, name=subject [der Junge$_i$;the boy ,roof]]
+[{NP[nom]}, name=subject [der Junge$_i$;the boy ,roof]]
 [\hspaceThis{$'$}I$'$
 	[VP
 		[\hspaceThis{$'$}V$'$
-			[NP, name=dobject [der Frau;the woman, roof]]
+			[{NP[dat]}, name=dobject [der Frau;the woman, roof]]
 			[\hspaceThis{$'$}V$'$
 				[NP,   name=aobject [\_$_i$]]
 				[V ,name=verb [gezeigt wir-;shown is, roof]]]]]
@@ -1864,24 +1870,24 @@ Arguments in the middle field can, in principle, occur in an almost arbitrary or
 \eal
 \label{ex-gb-umstellung}
 \ex 
-\gll {}[weil] der Mann der Frau das Buch gibt\\
-     \spacebr{}because the man the woman the book gives\\
-\glt `because the man gives the book to the woman'
+\gll {}[weil] der Mann dem Kind das Buch gibt\\
+     \spacebr{}because the man the child the book gives\\
+\glt `because the man gives the book to the child'
 \ex 
-\gll {}[weil] der Mann das Buch der Frau gibt\\
-     \spacebr{}because the man the book the woman gives\\
+\gll {}[weil] der Mann das Buch dem Kind gibt\\
+     \spacebr{}because the man the book the child gives\\
 \ex\label{ex-das-buch-der-mann-der-frau-gibt} 
-\gll {}[weil] das Buch der Mann der Frau gibt\\
-     \spacebr{}because the book the man the woman gives\\
+\gll {}[weil] das Buch der Mann dem Kind gibt\\
+     \spacebr{}because the book the man the child gives\\
 \ex 
-\gll {}[weil] das Buch der Frau der Mann gibt\\
-     \spacebr{}because the book the woman the man gives\\
+\gll {}[weil] das Buch dem Kind der Mann gibt\\
+     \spacebr{}because the book the child the man gives\\
 \ex 
-\gll {}[weil] der Frau der Mann das Buch gibt\\
-     \spacebr{}because the woman the man the book gives\\
+\gll {}[weil] dem Kind der Mann das Buch gibt\\
+     \spacebr{}because the child the man the book gives\\
 \ex 
-\gll {}[weil] der Frau das Buch der Mann gibt\\
-     \spacebr{}because the woman the book the man gives\\
+\gll {}[weil] dem Kind das Buch der Mann gibt\\
+     \spacebr{}because the child the book the man gives\\
 \zl
 
 \noindent
@@ -1902,7 +1908,7 @@ sm edges
     [\hspaceThis{$'$}I$'$
  	[VP
 		[\hspaceThis{$'$}V$'$
-			[{NP[dat]} [der Frau;the woman, roof]]
+			[{NP[dat]} [dem Kind;the child, roof]]
 			[\hspaceThis{$'$}V$'$
 				[NP   [\trace$_i$]]
 				[V   [gib-;give-]]]]]
@@ -1978,23 +1984,23 @@ would be first since it is part of a different phrase. So the orders in (\mex{1}
 analyzed, but the ones in (\mex{1}c--f) could not:
 \eal
 \ex 
-\gll dass der       Mann der       Frau  ein Buch gibt\\
-     that the.\nom{} man  the.\dat{} woman a.\acc{} book gives\\
+\gll dass der       Mann dem       Kind  ein Buch gibt\\
+     that the.\nom{} man  the.\dat{} child a.\acc{} book gives\\
 \ex
-\gll dass der       Mann ein Buch der       Frau gibt\\
-     that the.\nom{} man  a.\acc{} book   the.\dat{} woman gives\\
+\gll dass der       Mann ein Buch dem       Kind gibt\\
+     that the.\nom{} man  a.\acc{} book   the.\dat{} child gives\\
 \ex
-\gll dass der       Frau  der Mann ein Buch gibt\\
-     that the.\dat{} woman the.\nom{} man a.\acc{} book gives\\
+\gll dass dem       Kind  der Mann ein Buch gibt\\
+     that the.\dat{} child the.\nom{} man a.\acc{} book gives\\
 \ex 
-\gll dass der Frau ein Buch der Mann gibt\\
-     that the.\dat{} woman a.\acc{} book the.\nom{} man gives\\
+\gll dass dem Kind ein Buch der Mann gibt\\
+     that the.\dat{} child a.\acc{} book the.\nom{} man gives\\
 \ex
-\gll dass ein Buch der Frau der Mann gibt\\
-     that a.\acc{}   book the.\dat{} woman the.\nom{} man gives\\
+\gll dass ein Buch dem Kind der Mann gibt\\
+     that a.\acc{}   book the.\dat{} child the.\nom{} man gives\\
 \ex
-\gll dass ein Buch der Mann der Frau gibt\\
-     that a.\acc{}   book the.\nom{} man the.\dat{} woman gives\\
+\gll dass ein Buch der Mann dem Kind gibt\\
+     that a.\acc{}   book the.\nom{} man the.\dat{} child gives\\
 \zl
 
 For the discussion of different approaches to describing constituent position, see 
@@ -2362,25 +2368,25 @@ question.
 \item Draw syntactic trees for the following examples:
 \eal
 \ex 
-\gll dass die Frau den Mann liebt\\
-     that the.\nom{} woman the.\acc{} man loves\\
-\glt `that the woman loves the man'
+\gll dass der Delphin dem Kind hilft\\
+     that the.\nom{} dolphin the.\dat{} child helps\\
+\glt `that the dolphin helps the child'
 \ex 
-\gll dass der Mann geliebt wird\\
-     that the.\nom{} man loved is\\
-\glt `that the man is loved'
+\gll dass der Delphin den Hai attackiert\\
+     that the.\nom{} dolphin the.\acc{} shark attacks\\
+\glt `that the dolphin attacks the shark'
 \ex 
-\gll Der Mann wird geliebt.\\
-     the.\nom{} man is loved\\
-\glt `The man is loved.'
+\gll dass der Hai attackiert wird\\
+     that the.\nom{} shark attacked is\\
+\glt `that the shark is attacked'
 \ex 
-\gll dass der Mann der Frau hilft\\
-     that the.\nom{} man the.\dat{} woman helps\\
-\glt `that the man helps the woman'
+\gll Der Hai wird attackiert.\\
+     the.\nom{} shark is attacked\\
+\glt `The shark is attacked.'
 \ex 
-\gll Der Mann hilft der Frau.\\
-     the man.\nom{} helps the.\dat{} woman\\
-\glt `The man is helping the woman.'
+\gll Der Delphin hilft dem Kind.\\
+     the dolphin.\nom{} helps the.\dat{} child\\
+\glt `The dolphin is helping the child.'
 \zl
 For the passive sentences, use the analysis where the subject noun phrase is moved from the object position, that is, the analysis
 without an empty expletive as the subject.
