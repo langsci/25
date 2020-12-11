@@ -63,8 +63,10 @@ the variety espoused by \citet{Morrill94a-u}, \citet{Dowty97a-u}, \citet{Moortga
 \subsection{Representation of valence information}
 \label{sec-forward-backward-application}
 
-In\is{valence|(} Categorial Grammar, complex categories replace the \subcatf that is used in GPSG\indexgpsg to ensure that a head can only be used with
-suitable grammatical rules. Simple phrase structure rules\is{phrase structure grammar} can be replaced with complex categories as follows:\is{/|(} 
+In\is{valence|(} Categorial Grammar, complex categories replace the \subcatf that is used in
+GPSG\indexgpsg to ensure that a head can only be used with suitable grammatical rules. Simple phrase
+structure rules\is{phrase structure grammar} can be replaced with complex categories as
+follows:\is{/|(}  
 
 \ea
 \label{LE-CG}
@@ -96,22 +98,20 @@ with its object.
 \begin{figure}
 \centerline{%
 \deriv{2}{
-%\begin{tabular}{@{}cc@{}}
-chased       & Mary\\
-%\uline{1}    & \uline{1} \\
-\hr & \hr\\
-vp/np   & np\\
+chased & Mary\\
+\hr    & \hr\\
+vp/np  & np\\
 \multicolumn{2}{@{}c@{}}{\forwardapp} \\
 \multicolumn{2}{@{}c@{}}{vp}\\
-%\cgmc<2->{2}{vp}\\
-%\end{tabular}
 }
 }
 \caption{\label{abb-cg-transitives-Verb}Combination of a verb and its object (preliminary)}
 \end{figure}%
 A derivation in CG is basically a binary branching tree; it is, however, mostly represented as follows:
-an arrow under a pair of categories indicates that these have been combined via a combinatorial rule. The direction of this arrow indicates the direction
-of this combination. The result is given beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to Figure~\ref{abb-cg-transitives-Verb}.
+an arrow under a pair of categories indicates that these have been combined via a combinatorial
+rule. The direction of this arrow indicates the direction of this combination. The result is given
+beneath the arrow. Figure~\vref{Abb-CG-als-Baum} shows the tree corresponding to
+Figure~\ref{abb-cg-transitives-Verb}. 
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -130,11 +130,14 @@ sm edges
 One usually assumes left associativity\is{left associativity}
 for `/'; that is, (vp/pp)/np = vp/pp/np.\is{/|)}
 
-If we look at the lexical entries in (\ref{LE-CG}), it becomes apparent that the category v does not appear. The lexicon only determines what the product of
-combination of a lexical entry with its arguments is. The symbol for vp can also be eliminated: an (English) vp is something that requires an NP to its left in
-order to form a complete sentence. This\is{$\backslash$|(} can be represented as s$\backslash$np.
-Using the rule for backward application, it is possible to compute derivations such as the one in Figure~\vref{abb-the-cat-chased-Mary}.\is{valence|)}
+If we look at the lexical entries in (\ref{LE-CG}), it becomes apparent that the category v does not
+appear. The lexicon only determines what the product of combination of a lexical entry with its
+arguments is. The symbol for vp can also be eliminated: an (English) vp is something that requires
+an NP to its left in order to form a complete sentence. This\is{$\backslash$|(} can be represented
+as s$\backslash$np. Using the rule for backward application, it is possible to compute derivations
+such as the one in Figure~\vref{abb-the-cat-chased-Mary}.\is{valence|)} 
 \ea
+\label{backward-application}
 Backward application\is{backward application}:\\
 Y $*$ X$\backslash$Y = X 
 \z
@@ -343,14 +346,15 @@ The question as to how to analyze the pair of sentences in (\mex{1}) still remai
 \ex He gave the book to Mary.
 \ex The book was given to Mary.
 \zl
-\emph{gave} has the category ((s\bs np)/pp)/np, that is, the verb must first combine with an NP (\emph{the
-  book}) and a PP (\emph{to Mary}) before it can be combined with the subject. The problem is that the rule in (\ref{Lexikonregel-Passiv-CG}) cannot be applied to \emph{gave}
-  with a \emph{to}-PP since the pp argument is sandwiched between both np arguments in ((s\bs np)/pp)/np. One would have to generalize the rule in (\ref{Lexikonregel-Passiv-CG}) somehow
-  by introducing new technical means\footnote{%
+\emph{gave} has the category ((s\bs np)/pp)/np, that is, the verb must first combine with an NP
+(\emph{the book}) and a PP (\emph{to Mary}) before it can be combined with the subject. The problem
+is that the rule in (\ref{Lexikonregel-Passiv-CG}) cannot be applied to \emph{gave} with a
+\emph{to}-PP since the pp argument is sandwiched between both np arguments in ((s\bs np)/pp)/np. One
+would have to generalize the rule in (\ref{Lexikonregel-Passiv-CG}) somehow by introducing new
+technical means\footnote{% 
   Baldridge\ia{Baldridge, Jason} (p.\,M.\ 2010) suggests using regular expressions in a general lexical rule for passive.%
  }
-  or assume additional rules for cases such as (\mex{0}b).\is{passive|)}\todostefan{NW:
-    \citew{Dowty97a-u} head wrapping does this.}
+or assume additional rules for cases such as (\mex{0}b).\is{passive|)}\todostefan{NW: \citew{Dowty97a-u} head wrapping does this.}
 
 \section{Verb position}
 \label{sec-Verbstellung-CG-Steedman}
@@ -487,22 +491,26 @@ This description of verb position in German captures the central insights of the
 \section{Local reordering}
 \label{Abschnitt-CG-lokale-Umstellung}
 
-Up to now,\is{constituent order|(} we have seen combinations of functors and arguments where the arguments were either to the left or to the right of the functor. The
-saturation of arguments always took place in a fixed order: the argument furthest to the right was
-combined first with the functor, \eg (s\bs np)/pp first combined with
-the PP, and the result of this combination was combined with the NP.
+Up to now,\is{constituent order|(} we have seen combinations of functors and arguments where the
+arguments were either to the left or to the right of the functor. The saturation of arguments always
+took place in a fixed order: the argument furthest to the right was combined first with the functor,
+\eg (s\bs np)/pp first combined with the PP, and the result of this combination was combined with
+the NP.
 
-There are a number of possibilities to analyze ordering variants in German: \citet{Uszkoreit86b} suggests accounting for possible orders lexically; that is, that
-each possible order corresponds to a lexical item. One would therefore have at least six lexical items for a ditransitive verb. \citet[\page 257]{Briscoe2000a} and 
-\citet[\page 96--98]{Villavicencio2002a} propose a variant of this analysis where the order of arguments is modified in the syntax: a syntactic rule can, for example, change
-the order (S/PRT)/NP into (S/NP)/PRT.
+There are a number of possibilities to analyze ordering variants in German: \citet{Uszkoreit86b}
+suggests accounting for possible orders lexically; that is, that each possible order corresponds to
+a lexical item. One would therefore have at least six lexical items for a ditransitive
+verb. \citet[\page 257]{Briscoe2000a} and \citet[\page 96--98]{Villavicencio2002a} propose a variant
+of this analysis where the order of arguments is modified in the syntax: a syntactic rule can, for
+example, change the order (S/PRT)/NP into (S/NP)/PRT.
 
-A different approach is suggested by \citet{SB2006a-u}. They discuss various options for ordering arguments attested in the languages of the world.
-This includes languages in which the order of combination is free, as well as languages where
-the direction of combination is free.\is{constituent order!free}\is{constituent
-  order!fixed} Steedman and Baldridge introduce the following convention for
-representing categories: elements in curly brackets can be discharged in any order. `$|$'\is{$\vert$} in place of `$\backslash$'\is{$\backslash$} 
-or `/'\is{/} serves to indicate that the direction of combination is free. Some prototypical examples are shown in (\mex{1}):
+A different approach is suggested by \citet{SB2006a-u}. They discuss various options for ordering
+arguments attested in the languages of the world.  This includes languages in which the order of
+combination is free, as well as languages where the direction of combination is free.\is{constituent
+  order!free}\is{constituent order!fixed} Steedman and Baldridge introduce the following convention
+for representing categories: elements in curly brackets can be discharged in any
+order. `$|$'\is{$\vert$} in place of `$\backslash$'\is{$\backslash$} or `/'\is{/} serves to indicate
+that the direction of combination is free. Some prototypical examples are shown in (\mex{1}):
 
 \ea
 \begin{tabular}[t]{@{}lll@{}}
@@ -512,8 +520,10 @@ Tagalog\il{Tagalog}     & S\{/NP[nom], /NP[acc] \} & free order, verb-initial\\
 Japanese\il{Japanese} & S\{$\backslash$NP[nom], $\backslash$NP[acc] \} & free order, verb-final\\
 \end{tabular}
 \z
-\citet[Section~3.1]{Hoffmann95a-u} has proposed an analysis analogous to that of Japanese for Turkish\il{Turkish} and this could also be used in conjunction with an analysis
-of verb position for German. This would correspond to the GB/MP\indexgb analysis of \citet{Fanselow2001a} or the HPSG analysis\indexhpsg presented in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}.
+\citet[Section~3.1]{Hoffmann95a-u} has proposed an analysis analogous to that of Japanese for
+Turkish\il{Turkish} and this could also be used in conjunction with an analysis of verb position for
+German. This would correspond to the GB/MP\indexgb analysis of \citet{Fanselow2001a} or the HPSG
+analysis\indexhpsg presented in Section~\ref{Abschnitt-HPSG-lokale-Umstellung}. 
 \is{constituent order|}
 
 \section{Long"=distance dependencies}
@@ -528,29 +538,38 @@ the category of \emph{Harry must have been eating} or \emph{Harry devours} is s/
 These apples, Harry must have been eating.
 \ex apples which Harry devours
 \zl
-The fronted NP \emph{these apples} and the relative pronoun \emph{which} are both functors in the analysis of (\mex{0}) which take s/np as their argument.
-Using the machinery introduced up to now, we cannot assign the category s/np to the strings
-\emph{Harry must have been eating} and \emph{Harry devours} in (\mex{0}) although it is intuitively the case that \emph{Harry devours}
-is a sentence missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type raising} and forward\is{composition!forward}
-and backward composition\is{composition!backward}. Both of these operations will be introduced in the following sections.
+The fronted NP \emph{these apples} and the relative pronoun \emph{which} are both functors in the
+analysis of (\mex{0}) which take s/np as their argument. Using the machinery introduced up to now,
+we cannot assign the category s/np to the strings \emph{Harry must have been eating} and \emph{Harry
+  devours} in (\mex{0}) although it is intuitively the case that \emph{Harry devours} is a sentence
+missing an NP. We still require two further extensions of Categorial Grammar: type raising\is{type
+  raising} and forward\is{composition!forward} and backward
+composition\is{composition!backward}. Both of these operations will be introduced in the following
+sections.  
 
 \subsection{Type Raising}
+\label{sec-typeraising}
 
 \addlines
-The category np can be transformed into the category (s/(s\bs np)) by \emph{type raising}\is{type raising}. If we combine this category with (s\bs np), then we
-get the same result as if we had combined np and (s\bs np) with the forward application rule in (\ref{vorwaertsapplikation}). (\mex{1}a) shows the combination of an NP
-with a VP (a sentence missing an NP to its left). The combination of the type"=raised NP with the VP is given in (\mex{1}b).
+The category np can be transformed into the category (s/(s\bs np)) by \emph{type raising}\is{type
+  raising}. If we combine this category with (s\bs np), then we get the same result as if we had
+combined np and (s\bs np) with the backward application rule in
+(\ref{backward-application}). (\mex{1}a) shows the combination of an NP with a VP (a sentence
+missing an NP to its left). The combination of the type"=raised NP with the VP is given in
+(\mex{1}b). 
 \eal
 \ex np $*$ s\bs np = s 
 \ex s/(s\bs np) $*$ s\bs np = s
 \zl
-In (\mex{0}a), a verb or verb phrase selects an NP to its left (s\bs np). In (\mex{0}b), an NP having undergone type raising selects a verb or verb phrase to its right which requires
-an NP to its left (s\bs np). 
+In (\mex{0}a), a verb or verb phrase selects an NP to its left (s\bs np). In (\mex{0}b), an NP
+having undergone type raising selects a verb or verb phrase to its right which requires an NP to its
+left (s\bs np).  
 
 Type raising simply reverses the direction of selection: the VP in (\mex{0}a) is the functor and the
-NP is the argument, whereas in  (\mex{0}b), it is the type raised NP which acts as the functor,
-and the VP is the argument. In each case, the result of the combination is the same. This change of selectional direction may just seem like a trick at first glance, but as we will see, this
-trick can be extremely useful. First, however, we will introduce forward and backward composition.
+NP is the argument, whereas in (\mex{0}b), it is the type raised NP which acts as the functor, and
+the VP is the argument. In each case, the result of the combination is the same. This change of
+selectional direction may just seem like a trick at first glance, but as we will see, this trick can
+be extremely useful. First, however, we will introduce forward and backward composition.
 \is{type raising|)}
 
 \subsection{Forward and backward composition}
@@ -664,9 +683,11 @@ st/(s/np)\;\;     & s/(s\bs np)  & (s\bs np)/s'    & s'/s & s/(s\bs np) & (s\bs 
 %
 %\addlines
 Using the previously described tools, it is, however, only possible to describe extractions where the fronted element
-in the sentence would have occurred at the right edge of the phrase without fronting. This means it is not possible to analyze sentences where the
-middle argument of a ditransitive verb has been extracted \citep[\page 532]{Steedman85a-u}. \citet[\page 406]{Pollard88a} provides the derivation
-in Figure~\ref{abb-CG-UDC-Ditrans} for (\mex{1}).
+in the sentence would have occurred at the right edge of the phrase without fronting. This means it
+is not possible to analyze sentences where the middle argument of a ditransitive verb has been
+extracted \citep[\page 532]{Steedman85a-u}. \citet[\page 406]{Pollard88a} provides the derivation in
+Figure~\ref{abb-CG-UDC-Ditrans} for (\mex{1}).
+
 \ea
 Fido we put downstairs.
 \z
@@ -783,18 +804,20 @@ constructions such as those in (\mex{1}).
 Here's the minister [[in [the middle [of [whose sermon]]]] the dog barked].\footnote{%
 \citew[\page 212]{ps2}.
 }
-\ex Reports [the height of the lettering on the covers of which] the government prescribes should be
+\ex Reports [[the height of the lettering on the covers of which] the government prescribes] should be
 abolished.\label{Ross-reports}\footnote{%
 \citew[\page 109]{Ross67a}.\nocite{Ross86a-u}
 }
 \zl
-In (\mex{0}), the relative pronoun is embedded in a phrase that has been extracted from the rest of the relative clause. The relative pronoun
-in (\mex{0}a) is the determiner of \emph{sermon}. Depending on the analysis, \emph{whose} is the head of the phrase \emph{whose sermon}.
-The NP is embedded under \emph{of} and the phrase \emph{of whose sermon} depends on \emph{middle}. The entire NP \emph{the middle of the sermon}
-is a complement of the preposition \emph{in}. It would be quite a stretch to claim that \emph{whose} is the head of the relative clause in (\mex{0}a).
-The relative pronoun in (\mex{0}b) is even more deeply embedded.
-\citet[\page 50]{Steedman97a} gives the following lexical entries for \emph{who},
-\emph{whom} and \emph{which}:
+In (\mex{0}), the relative pronoun is embedded in a phrase that has been extracted from the rest of
+the relative clause. The relative pronoun in (\mex{0}a) is the determiner of
+\emph{sermon}. Depending on the analysis, \emph{whose} is the head of the phrase \emph{whose
+  sermon}. The NP is embedded under \emph{of} and the phrase \emph{of whose sermon} depends on
+\emph{middle}. The entire NP \emph{the middle of the sermon} is a complement of the preposition
+\emph{in}. It would be quite a stretch to claim that \emph{whose} is the head of the relative clause
+in (\mex{0}a). The relative pronoun in (\mex{0}b) is even more deeply embedded. \citet[\page
+50]{Steedman97a} gives the following lexical entries for \emph{who}, \emph{whom} and \emph{which}:
+
 \eal
 \label{le-relpron-Steedman}
 \settowidth\jamwidth{(komplexe extrahierte NP-Relativphrase)}
@@ -821,8 +844,10 @@ which]\sub{(n$\backslash$n)/(s/np)} the government prescribes
 The complex expression \emph{the height of the lettering on the covers of} becomes np/np after composition and the rest of the analysis
 proceeds as that of (\mex{-1}a).
 
-In addition to entries such as those in (\ref{le-relpron-Steedman}), we also need further entries to analyze sentences such as (\mex{1}), where
-the relative phrase has been extracted from the middle of the clause (see \citealp[\page 410]{Pollard88a}):
+In addition to entries such as those in (\ref{le-relpron-Steedman}), we also need further entries to
+analyze sentences such as (\mex{1}), where the relative phrase has been extracted from the middle of
+the clause (see \citealp[\page 410]{Pollard88a}):
+
 \ea
 Fido is the dog which we put downstairs.
 \z

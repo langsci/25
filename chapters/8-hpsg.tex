@@ -4,12 +4,12 @@
 \label{Kapitel-HPSG}
 \label{chap-HPSG}\label{chap-hpsg}
 
-Head-Driven Phrase Structure Grammar (HPSG)\is{Head-Driven Phrase Structure
-  Grammar (HPSG)|(} was developed by Carl Pollard and
-Ivan Sag in the mid-80's in Stanford and in the Hewlett"=Packard research laboratories in Palo Alto
-(\citealp{ps,ps2}; see \citealp{FWPEvolution} for more on the history of HPSG). Like LFG, HPSG is part of so"=called West Coast linguistics. Another similarity to
+Head-Driven Phrase Structure Grammar (HPSG)\is{Head-Driven Phrase Structure Grammar (HPSG)|(} was
+developed by Carl Pollard and Ivan Sag in the mid-80s in Stanford and in the Hewlett"=Packard
+research laboratories in Palo Alto (\citealp{ps,ps2}; see \citealp{FWPEvolution} for more on the
+history of HPSG). Like LFG, HPSG is part of so"=called West Coast linguistics. Another similarity to
 LFG is that HPSG aims to provide a theory of competence which is compatible with performance
-(\citealp{SW2011a,SW2015a,Wasow2020a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).  
+(\citealp{SW2011a,SW2015a,Wasow2020a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).
 
 The formal properties of the description language for HPSG grammars are well"=understood and there are
 many systems for processing such grammars
@@ -144,18 +144,19 @@ For further information on the interaction between HPSG and computational lingui
 
 HPSG has the following characteristics: it is a lexicon"=based theory, that is, the majority of
 linguistic constraints are situated in the descriptions of words or roots. HPSG is sign-based in the
-sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and meaning of linguistic signs are always
-represented together. Typed feature structures are used to model all relevant information.\footnote{%
-Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
-and typed feature structures should consult Chapter~\ref{chap-feature-descriptions} first.
+sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and meaning of
+linguistic signs are always represented together. Typed feature structures are used to model all
+relevant information.\footnote{% 
+  Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
+  and typed feature structures should consult Chapter~\ref{chap-feature-descriptions} first.
 } Hence, HPSG belongs to the class of model-theoretic grammars\is{model"=theoretic
-  grammar} (\citealp{King99a-u}; see also Chapter~\ref{chap-mts} of this book). 
-The feature structures can be described with feature descriptions such as in (\mex{1}). Lexical entries, phrases
+  grammar} (\citealp{King99a-u}; see also Chapter~\ref{chap-mts} of this book). The feature
+structures can be described with feature descriptions such as in (\mex{1}). Lexical entries, phrases
 and principles are always modeled and described with the same formal means.  Generalizations about
-word classes or rule schemata are captured with inheritance hierarchies (see Section~\ref{sec-formalismus-typen}). Phonology, syntax and
-semantics are represented in a single structure. There are no separate levels of representation such
-as PF or LF in Government \& Binding Theory.  (\mex{1}) shows an excerpt from the representation of
-a word such as \emph{Grammatik} `grammar'.
+word classes or rule schemata are captured with inheritance hierarchies (see
+Section~\ref{sec-formalismus-typen}). Phonology, syntax and semantics are represented in a single
+structure. There are no separate levels of representation such as PF or LF in Government \& Binding
+Theory.  (\mex{1}) shows an excerpt from the representation of a word such as \emph{Grammatik} `grammar'.
 
 %\begin{figure}
 \ea
@@ -174,33 +175,36 @@ syntax-semantics  \ldots \ms[local]{ category  & \ms[category]{ head & \ms[noun]
 \z
 %\vspace{-\baselineskip}
 %\end{figure}%
-One can see that this feature description contains information about the phonology, syntactic category and semantic content of the word
-\emph{Grammatik} `grammar'. To keep things simple, the value of \textsc{phonology} (\phon) is mostly given as
-an orthographic representation. In fully fleshed-out
-theories, the \phonv is a complex structure that contains information about metrical grids\is{metrical grid} and weak or strong accents\is{accent}.
-See \citew{BK94b}, \citew{Orgun96a}, \citew{Hoehle99a-u}, \citew{Walther99a-u},
-\citew[Chapter~6]{Crysmann2002a}, and \citew{Bildhauer2008a} for phonology\is{phonology} in the
-framework of HPSG. The details of the description in (\mex{0}) will be explained in the following sections.
+One can see that this feature description contains information about the phonology, syntactic
+category and semantic content of the word \emph{Grammatik} `grammar'. To keep things simple, the
+value of \textsc{phonology} (\phon) is mostly given as an orthographic representation. In fully
+fleshed-out theories, the \phonv is a complex structure that contains information about metrical
+grids\is{metrical grid} and weak or strong accents\is{accent}.  See \citew{BK94b}, \citew{Orgun96a},
+\citew{Hoehle99a-u}, \citew{Walther99a-u}, \citew[Chapter~6]{Crysmann2002a}, and
+\citew{Bildhauer2008a} for phonology\is{phonology} in the framework of HPSG. The details of the
+description in (\mex{0}) will be explained in the following sections.
 
-HPSG has adopted various insights from other theories and newer analyses have been influenced by developments in other theoretical frameworks.
-Functor"=argument structures, the treatment of valence information and function
-composition\is{function composition} have been adopted from
+HPSG has adopted various insights from other theories and newer analyses have been influenced by
+developments in other theoretical frameworks.  Functor"=argument structures, the treatment of
+valence information and function composition\is{function composition} have been adopted from
 Categorial Grammar\indexcg. Function composition plays an important role in the analysis of verbal
-complexes in languages like German and Korean\il{Korean}. The Immediate Dominance\is{dominance!immediate}/Linear Precedence\is{linear precedence}\is{ID/LP grammar} format
+complexes in languages like German and Korean\il{Korean}. The Immediate
+Dominance\is{dominance!immediate}/Linear Precedence\is{linear precedence}\is{ID/LP grammar} format
 (ID/LP format, see Section~\ref{sec-IDLP-intro}) as well as the Slash mechanism for long"=distance
 dependencies (see Section~\ref{sec-nld-gpsg}) both come from GPSG\indexgpsg. The analysis assumed
-here for verb position in German is inspired by the one that was developed in the framework of Government \& Binding\indexgb
-(see Section~\ref{sec-verb-position-gb}). Starting in 1995, HPSG also incorporated insights from
-Construction Grammar\indexcxg (\citealt{Sag97a}, see also Section~\ref{sec-SBCG} on Sign"=Based Construction Grammar, which is a
-HPSG variant).
+here for verb position in German is inspired by the one that was developed in the framework of
+Government \& Binding\indexgb (see Section~\ref{sec-verb-position-gb}). Starting in 1995, HPSG also
+incorporated insights from Construction Grammar\indexcxg (\citealt{Sag97a}, see also
+Section~\ref{sec-SBCG} on Sign"=Based Construction Grammar, which is a HPSG variant).
 
 \subsection{Representation of valence information}
 \label{sec-valence-hpsg}\label{Abschnitt-Spr}
 \label{Abschnitt-Arg-St}
 
-The\is{valence|(} phrase structure grammars\is{phrase structure grammar} discussed in Chapter~\ref{Kapitel-PSG} have the disadvantage that
-one requires a great number of different rules for the various valence types. (\mex{1}) shows some examples of this kind of rules and the corresponding
-verbs.
+The\is{valence|(} phrase structure grammars\is{phrase structure grammar} discussed in
+Chapter~\ref{Kapitel-PSG} have the disadvantage that one requires a great number of different rules
+for the various valence types. (\mex{1}) shows some examples of this kind of rules and the
+corresponding verbs.  
 \ea
 \label{psg-valenz}
 %\oneline{%
@@ -228,19 +232,23 @@ In order for the grammar not to create any incorrect sentences, one has to ensur
 	 that Peter about the man expects\\
 }
 \zl
-Therefore, verbs (and heads in general) have to be divided into valence classes. These valence classes have to then be assigned to grammatical rules.
-One must therefore further specify the rule for transitive verbs in (\mex{-1}) as follows:
+Therefore, verbs (and heads in general) have to be divided into valence classes. These valence
+classes have to then be assigned to grammatical rules. One must therefore further specify the rule
+for transitive verbs in (\mex{-1}) as follows: 
 \ea
 S $\to$ NP[\type{nom}], NP[\type{acc}], V[\type{nom\_acc}]
 \z
-Here, valence has been encoded twice. First, we have said something in the rules about what kind of elements can or must occur, and then we have stated
- in the lexicon which valence class the verb belongs to. In Section~\ref{Abschnitt-Einordnung-GPSG}, it was pointed out that morphological processes
- need to refer to valence information. Hence, it is desirable to remove redundant valence information from grammatical rules. For this reason, HPSG
- -- like Categorial Grammar --  includes descriptions of the arguments of a head in the lexical
- entry of that head. There are the features \textsc{specifier} (\spr\isfeat{spr}) and
- \textsc{complements} (\comps\isfeat{comps}), whose values are lists containing descriptions of the
- elements that must combine with a head in order to yield a complete phrase. (\mex{1}) gives some examples for the verbs in (\ref{psg-valenz}):
+Here, valence has been encoded twice. First, we have said something in the rules about what kind of
+elements can or must occur, and then we have stated in the lexicon which valence class the verb
+belongs to. In Section~\ref{Abschnitt-Einordnung-GPSG}, it was pointed out that morphological
+processes need to refer to valence information. Hence, it is desirable to remove redundant valence
+information from grammatical rules. For this reason, HPSG  -- like Categorial Grammar --  includes
+descriptions of the arguments of a head in the lexical entry of that head. There are the features
+\textsc{specifier}\isfeat{spr} (\spr) and \textsc{complements}\isfeat{comps} (\comps), whose values
+are lists containing descriptions of the elements that must combine with a head in order to yield a
+complete phrase. (\mex{1}) gives some examples for the verbs in (\ref{psg-valenz}): 
 \ea
+Valence lists for finite verbs:\\
 \begin{tabular}[t]{@{}lll}
       verb             & \comps\\
       \emph{schlafen} `to sleep'  & \sliste{ NP[\type{nom}] }\\
@@ -288,15 +296,18 @@ sm edges
     Peter schläft} `that Peter sleeps'}
 \end{figure}%
 %\addlines
-In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \compsl is combined with its head in each
-local tree. The elements that are combined with the selecting head are then no longer present in the \compsl of the mother node.
-V[\comps \sliste{ }] corresponds to a complete phrase (VP or S). The boxes with numbers show the structure sharing (see Section~\ref{sec-strukturteilung}).
-Structure sharing\is{structure sharing} is the most important means of expression in HPSG. It plays a central role for phenomena such as valence, agreement
-and long"=distance dependencies. In the examples above, \iboxt{1} indicates that the description in
-the \compsl is identical to another daughter in the tree.
-The descriptions contained in valence lists are usually partial descriptions, that is, not all properties of the argument are exhaustively described. Therefore, it is
-possible that a verb such as \emph{schläft} `sleeps' can be combined with various kinds of linguistic objects: the subject can be a pronoun, a proper name
-or a complex noun phrase, it only matters that the linguistic object in question is complete (has an
+In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \compsl
+is combined with its head in each local tree. The elements that are combined with the selecting head
+are then no longer present in the \compsl of the mother node. V[\comps \sliste{ }] corresponds to a
+complete phrase (VP or S). The boxes with numbers show the structure sharing (see
+Section~\ref{sec-strukturteilung}). Structure sharing\is{structure sharing} is the most important
+means of expression in HPSG. It plays a central role for phenomena such as valence, agreement and
+long"=distance dependencies. In the examples above, \iboxt{1} indicates that the description in the
+\compsl is identical to another daughter in the tree. The descriptions contained in valence lists
+are usually partial descriptions, that is, not all properties of the argument are exhaustively
+described. Therefore, it is possible that a verb such as \emph{schläft} `sleeps' can be combined
+with various kinds of linguistic objects: the subject can be a pronoun, a proper name or a complex
+noun phrase, it only matters that the linguistic object in question is complete (has an 
 empty \sprl and an empty \compsl) and bears the correct case.\footnote{%
 Furthermore, it must agree with the verb. This is not shown here.
 }
@@ -311,7 +322,7 @@ sm edges
 	[V{[\comps \sliste{ \ibox{1} }]}
 		[{\ibox{2} NP[\type{acc}]}
 			[Maria;Maria]]
-		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \ibox{1}, \ibox{2} }]}
 			[erwartet;expects]]]]
 \end{forest}}
 \caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter expects Maria.'}
@@ -528,11 +539,12 @@ After this general introduction of the feature geometry that is assumed here, we
       non-head-dtrs \sliste{ [ \synsem \ibox{2} ] }
       }
 \end{schema}
-Schema~\ref{schema-bin-prel} states the properties a linguistic object of the type \type{head"=complement"=phrase} must have.
-The arrow\is{\impl} in Schema~\ref{schema-bin-prel} stands for a logical implication\is{implication} and not for the arrow of rewrite rules
-as we know it from phrase structure grammars. `$\oplus$'\is{$\oplus$}
-(\emph{append}\is{relation!\emph{append}}) is a relation which combines two lists. (\mex{1}) shows 
-possible splits of a list that contains two elements:
+Schema~\ref{schema-bin-prel} states the properties a linguistic object of the type
+\type{head"=complement"=phrase} must have. (For more on types see Section~\ref{sec-types-hpsg}.) The
+arrow\is{\impl} in Schema~\ref{schema-bin-prel} stands for a logical implication\is{implication} and
+not for the arrow of rewrite rules as we know it from phrase structure
+grammars. `$\oplus$'\is{$\oplus$} (\emph{append}\is{relation!\emph{append}}) is a relation which
+combines two lists. (\mex{1}) shows possible splits of a list that contains two elements:
 \ea
 \begin{tabular}[t]{@{}l@{~}l@{}}
 \phonliste{ x, y } = & \phonliste{ x } $\oplus$ \phonliste{ y } or\\
@@ -679,11 +691,11 @@ sm edges, for tree={l+=\baselineskip}
 		[er;he]]
 	[V{[\type{fin}, \comps \sliste{ \ibox{1} }]}, name=fin2
 		[\ibox{2} NP{[\textit{dat}]}
-			[dem Mann;the man,roof]]
-		[V{[\type{fin}, \comps \sliste{ \iboxsp{1}, \ibox{2} }]}, name=fin3
+			[dem Kind;the child,roof]]
+		[V{[\type{fin}, \comps \sliste{ \ibox{1}, \ibox{2} }]}, name=fin3
 			[\ibox{3} NP{[\textit{acc}]}
 				[das Buch;the book,roof]]
-			[V{[\type{fin}, \comps \sliste{ \iboxsp{1}, \iboxsp{2}, \ibox{3} }]}, name=fin4
+			[V{[\type{fin}, \comps \sliste{ \ibox{1}, \ibox{2}, \ibox{3} }]}, name=fin4
 				[gibt;gives]]]]]	
 tikz={\draw[<->] ($(fin1.south west)+(\offsetup,0)$) to ($(fin2.north west)+(\offset,0)$);
       \draw[<->] ($(fin2.south west)+(\offsetup,0)$) to ($(fin3.north west)+(\offset,0)$);
@@ -730,10 +742,10 @@ sm edges
              comps & \sliste{ \ibox{2} }
              }
 		[\ibox{3} NP{[\textit{dat}]}
-			[dem Mann;the man, roof]]
+			[dem Kind;the child, roof]]
 		[\ms{
                                                                                    head & \ibox{1}\\
-                                                                                   comps & \sliste{ \iboxsp{2}, \ibox{3} }
+                                                                                   comps & \sliste{ \ibox{2}, \ibox{3} }
                                                                                     }
 			[\ibox{4} NP{[\textit{acc}]}
 				[das Buch;the book, roof]]
@@ -741,7 +753,7 @@ sm edges
                                                                                    head & \ibox{1} \ms[verb]{
                                                                                                   vform & fin
                                                                                                   }\\
-                                                                                   comps & \sliste{ \iboxsp{2}, \iboxsp{3}, \ibox{4} }
+                                                                                   comps & \sliste{ \ibox{2}, \ibox{3}, \ibox{4} }
                                                                                     }
 				[gibt;gives]]]]]	
 \end{forest}
@@ -753,7 +765,7 @@ sm edges
 The following section will deal with how this principle is formalized as well as how it can be integrated into the architecture of HPSG.
 
 \subsection{Inheritance hierarchies and generalizations}
-\label{Abschnitt-Vererbung-HPSG}
+\label{Abschnitt-Vererbung-HPSG}\label{sec-types-hpsg}
 
 \largerpage[-2]
 Up to now, we have seen one example of a dominance schema and more will follow in the coming sections, \eg schemata for head"=adjunct structures as well
@@ -1008,21 +1020,27 @@ For more on theories of linking in HPSG, see \citew{Davis96a-u}, \citew{Wechsler
 \citew{DK2000b-u}. \citet{WKD2020a} provide an overview of approaches to linking within HPSG.
 \is{linking|)}
 
-\addlines
-Up to now, we have only seen how the meaning of lexical entries can be represented. The Semantics Principle\is{principle!Semantics}
-determines the computation of the semantic contribution of phrases: the index of the entire expression corresponds to the index of
-the head daughter, and the \relsv of the entire sign corresponds to the concatenation of the \relsvs of the daughters plus any relations
-introduced by the dominance schema. The last point is important because the assumption that schemata can add something to meaning can capture
-the fact that there are some cases where the entire meaning of a phrase is more than simply the sum of its parts.\is{compositionality}
-Pertinent examples are often discussed as part of Construction Grammar\indexcxg. Semantic
-composition in HPSG is organized such that meaning components that are due to certain patterns can be integrated into the complete meaning of an utterance. For examples, see Section~\ref{Abschnitt-Phrasale-Konstruktionen}.
+\addlines 
+Up to now, we have only seen how the meaning of lexical entries can be represented. The
+Semantics Principle\is{principle!Semantics} determines the computation of the semantic contribution
+of phrases: the index of the entire expression corresponds to the index of the head daughter, and
+the \relsv of the entire sign corresponds to the concatenation of the \relsvs of the daughters plus
+any relations introduced by the dominance schema. The last point is important because the assumption
+that schemata can add something to meaning can capture the fact that there are some cases where the
+entire meaning of a phrase is more than simply the sum of its parts.\is{compositionality} Pertinent
+examples are often discussed as part of Construction Grammar\indexcxg. Semantic composition in HPSG
+is organized such that meaning components that are due to certain patterns can be integrated into
+the complete meaning of an utterance. For examples, see
+Section~\ref{Abschnitt-Phrasale-Konstruktionen}.
 
 %\addlines[-1]
-The connection between the semantic contribution of the verb and its arguments is established in the lexical entry.
-As such, we ensure that the argument roles of the verb are assigned to the correct argument in the sentence. This is, however, not the only
-thing that the semantics is responsible for. It has to be able to generate the various readings associated with quantifier scope ambiguities 
-(see page~\pageref{Beispiel-Every-man-loves-a-woman}) as well as deal with semantic embedding of predicates under other predicates. All these
-requirements are fulfilled by MRS. Due to space considerations, we cannot go into detail here. The reader is referred to the article by
+The connection between the semantic contribution of the verb and its arguments is established in the
+lexical entry.  As such, we ensure that the argument roles of the verb are assigned to the correct
+argument in the sentence. This is, however, not the only thing that the semantics is responsible
+for. It has to be able to generate the various readings associated with quantifier scope ambiguities
+(see page~\pageref{Beispiel-Every-man-loves-a-woman}) as well as deal with semantic embedding of
+predicates under other predicates. All these requirements are fulfilled by MRS. Due to space
+considerations, we cannot go into detail here. The reader is referred to the article by
 \citet*{CFPS2005a} and to Section~\ref{Abschnitt-leere-Elemente-Semantik} in the discussion chapter.
 \is{semantics|)}
 
@@ -1184,27 +1202,41 @@ with the \synsemv of the head daughter.
 \section{Passive}
 \label{Abschnitt-HPSG-Passiv}\label{sec-hpsg-passive}
 
-HPSG\is{passive|(} follows Bresnan's argumentation (see Section~\ref{Abschnitt-LFG-Passiv}) and takes care of the passive in the lexicon.\footnote{%
-	Some exceptions to this are analyses influenced by \cxg such as \citet{Tseng2007a} and \citet{Haugereid2007a}.
-	These approaches are problematic, however, as they cannot account for Bresnan's adjectival passives. For other problems with
-	Haugereid's analysis, see \citew{Mueller2007d} and Section~\ref{Abschnitt-Diskussion-Haugereid}.%
-} A lexical rule\is{lexical rule|(} takes the verb stem as its input and licenses the participle form and the most prominent argument (the so-called
-designated argument\is{argument!designated}) is suppressed.\footnote{%
-	For more on the designated argument, see \citew{Haider86}. HPSG analyses of the passive in German have been considerably influenced by Haider.
-	Haider uses the designated argument to model the difference between so-called unaccusative
-        and unergative verbs \citep{Perlmutter78}: unaccusative verbs\is{verb!unaccusative} differ from unergatives\is{verb!unergative} and transitives\is{verb!transitive} in that they do not have
-	a designated argument. We cannot go into the literature on unaccusativity here. The reader is referred to the original works by Haider and the
-	chapter on the passive in \citew{MuellerLehrbuch1}.
+HPSG\is{passive|(} follows Bresnan's argumentation (see Section~\ref{Abschnitt-LFG-Passiv}) and
+takes care of the passive in the lexicon.\footnote{% 
+  Some exceptions to this are analyses influenced by \cxg such as \citet{Tseng2007a} and \citet{Haugereid2007a}.
+  These approaches are problematic, however, as they cannot account for Bresnan's adjectival passives. For other problems with
+  Haugereid's analysis, see \citew{Mueller2007d} and Section~\ref{Abschnitt-Diskussion-Haugereid}.%
+} 
+A lexical rule\is{lexical rule|(} takes the verb stem as its input and licenses the participle form
+and the most prominent argument (the so-called designated argument\is{argument!designated}) is
+suppressed.\footnote{% 
+  For more on the designated argument, see \citew{Haider86}. HPSG analyses of the passive in German
+  have been considerably influenced by Haider. Haider uses the designated argument to model the
+  difference between so-called unaccusative and unergative verbs \citep{Perlmutter78}: unaccusative
+  verbs\is{verb!unaccusative} differ from unergatives\is{verb!unergative} and
+  transitives\is{verb!transitive} in that they do not have a designated argument. We cannot go into
+  the literature on unaccusativity here. The reader is referred to the original works by Haider and
+  the chapter on the passive in \citew{MuellerLehrbuch1}.
 }
-Since grammatical functions\is{grammatical function} are not part of theory in HPSG, we do not require any mapping principles that map objects to subjects.
-Nevertheless, one still has to explain the change of case under passivization. If one fully
-specifies the case of a particular argument in the lexical entries, one has to ensure that the
-accusative argument of a transitive verb is realized as nominative in the passive. (\mex{1}) shows
-what the respective lexical rule would look like:
+Since grammatical functions\is{grammatical function} are not part of theory in HPSG, we do not
+require any mapping principles that map objects to subjects. Nevertheless, one still has to explain
+the change of case under passivization. The following two subsections introduce passive lexical
+rules and show how passive can be accounted for by explicitly mapping the accusative to the
+nominative (Section~\ref{sec-passive-lr-acc-nom}) and how this analysis can be improved so that
+accusatives do not have to be mentioned and the analysis accounts for impersonal passives as well
+(Section~\ref{sec-passive-case-principle-hpsg}). 
+
+\subsection{Passive as a lexical rule}
+\label{sec-passive-lr-acc-nom}
+
+If one fully specifies the case of a particular argument in
+the lexical entries, one has to ensure that the accusative argument of a transitive verb is realized
+as nominative in the passive. (\mex{1}) shows what the respective lexical rule would look like:
 
 \ea
 \label{pass-lr-mlr}
-Lexical rule for personal passives adapted from \citet{Kiss92}:\\*
+Lexical rule for personal passives adapted from \citet{Kiss92}:\\[2pt]
 \onems[stem]{
   phon \ibox{1}\\
   synsem$|$loc$|$cat$|$head \type{verb}  \\ 
@@ -1355,6 +1387,7 @@ explain both personal and impersonal passives and thereby only require one lexic
 participle form.
 
 \subsection{Valence information and the Case Principle}
+\label{sec-passive-case-principle-hpsg}
 
 \addlines[2]
 In\is{principle!Case|(} Section~\ref{Abschnitt-struktureller-Kasus}, the difference between structural
@@ -1367,15 +1400,15 @@ cases receive a unique value dependent on their
 environment. This is handled by the Case Principle:\footnote{%
 	The Case Principle has been simplified here. Cases of so-called `raising'\is{raising} require special treatment.
 	For more details, see \citew{Meurers99b}, \citew{Prze99b} and \citew[Chapter~14,
-    Chapter~17]{MuellerLehrbuch1}. The Case Principle given in these publications is very similar to the one proposed by \citet*{YMJ87}
-	and can therefore also explain the case systems of the languages discussed in their work, notably the complicated
-	case system of Icelandic.\is{Icelandic}
+    Chapter~17]{MuellerLehrbuch1}. The Case Principle given in these publications is very similar to
+    the one proposed by \citet*{YMJ87} and can therefore also explain the case systems of the
+    languages discussed in their work, notably the complicated case system of Icelandic.\is{Icelandic}
 }
 \begin{principle-break}[\hypertarget{case-p}{Case Principle (simplified)}]
 \label{case-p}
 \begin{itemize}
-\item The first element with structural case in the argument structure list receives nominative.
-\item All other elements in the list with structural case receive accusative.
+\item The first element with structural case in the argument structure list of a verb receives nominative.
+\item All other elements in the argument structure list of a verb with structural case receive accusative.
 \item In nominal environments, elements with structural case are assigned genitive\is{case!genitive}.
 \end{itemize}
 \end{principle-break}
@@ -1418,11 +1451,11 @@ d. & \emph{schenkt} `gives':        & \argst \sliste{ NP[\type{str}]$_j$, NP[\ty
 %%   \citeyear{PS92a}; \citeyear[Chapter~6]{ps2})
 %% \end{itemize}
 %% \noindent
-The Case Principle ensures that the subjects of the verbs listed above have to be realized in the nominative and also that objects with structural case are assigned
-accusative.
+The Case Principle ensures that the subjects of the verbs listed above have to be realized in the
+nominative and also that objects with structural case are assigned accusative.
 
-With the difference between structural and lexical case, it is possible to formulate a passive-lexical rule that can account for both the personal and the
-impersonal passive\is{passive!impersonal}:
+With the difference between structural and lexical case, it is possible to formulate a
+passive-lexical rule that can account for both the personal and the impersonal passive\is{passive!impersonal}:
 
 \eas
 \label{pass-lr-mlr-str}
@@ -1493,17 +1526,21 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \label{Abschnitt-Verbstellung-HPSG}
 
 %\addlines[2]
-\largerpage
-The\is{verb position|(} analysis of verb position that I will present here is based on the GB"=analysis. In HPSG, there are a number of different approaches
-to describe the verb position, however in my opinion, the HPSG variant of the GB analysis is the only adequate one \citep{Mueller2005c,Mueller2005d,MuellerGS}.
-The analysis of (\mex{1}) can be summarized as follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special form of the 
-verb in initial position that selects a projection of the verb trace. This special lexical item is licensed by a lexical rule. The connection between the
-verb and the trace is treated like long"=distance dependencies in GPSG via identification of information in the tree or feature structure (structure sharing\is{structure sharing}).
+\largerpage 
+The\is{verb position|(} analysis of verb position that I will present here is based on
+the GB"=analysis. In HPSG, there are a number of different approaches to describe the verb position,
+however in my opinion, the HPSG variant of the GB analysis is the only adequate one
+\citep{Mueller2005c,Mueller2005d,MuellerGS}.  The analysis of (\mex{1}) can be summarized as
+follows: in the verb-initial clauses, there is a trace in verb-final position. There is a special
+form of the verb in initial position that selects a projection of the verb trace. This special
+lexical item is licensed by a lexical rule. The connection between the verb and the trace is treated
+like long"=distance dependencies in GPSG via identification of information in the tree or feature
+structure (structure sharing\is{structure sharing}).
 
 \ea
 \label{bsp-kennt-jeder-diesen-Mann}
 \gll Kennt$_k$ jeder diesen Mann \_$_k$?\\
-	knows everyone this man\\
+     knows everyone.\NOM{} this.\ACC{} man\\
 \glt `Does everyone know this man?'
 \z
 Figure~\vref{Abbildung-Verbstellung-HPSG} gives an overview of this.
@@ -1538,8 +1575,8 @@ for the lexical rule and that would normally occur in final position. In
 Figure~\ref{Abbildung-Verbstellung-HPSG}, there are two maximal verb projections:
 \emph{jeder diesen Mann \_$_k$} with the trace as the head and \emph{kennt jeder diesen Mann \_$_k$} with \emph{kennt} as the head.
 
-This analysis will be explained in more detail in what follows. For the trace in Figure~\ref{Abbildung-Verbstellung-HPSG}, one could assume
-the lexical entry in (\mex{1}).
+This analysis will be explained in more detail in what follows. For the trace in
+Figure~\ref{Abbildung-Verbstellung-HPSG}, one could assume the lexical entry in (\mex{1}).
 %\begin{figure}
 \eas
 Verb trace for \emph{kennt} `knows':\\
@@ -1580,7 +1617,7 @@ sm edges
 		[V{[\comps \sliste{ \ibox{3} }]}
 			[\ibox{4} NP{[\textit{acc}]}
 				[diesen Mann;this man, roof]]
-			[{[V[\comps \sliste{ \iboxsp{3}, \ibox{4} }]}
+			[{[V[\comps \sliste{ \ibox{3}, \ibox{4} }]}
 				[\trace]]]]]]
 \end{forest}
 }
@@ -1591,18 +1628,19 @@ This begs the immediate question as to what licenses the verb \emph{kennt}
 in Figure~\ref{verb-movement-syn-simple} and what status it has.
 %\pagebreak
 
-If we want to capture the fact that the finite verb in initial position behaves like a complementizer\is{complementizer} \citep{Hoehle97a}, then it makes sense to
-give head status to \emph{kennt} in Figure~\ref{verb-movement-syn-simple} and have \emph{kennt} select a saturated, verb-final verbal projection.
-Finite verbs in initial position differ from complementizers in that they require a projection of a verb trace, whereas complementizers need projections
-of overt verbs:
+If we want to capture the fact that the finite verb in initial position behaves like a
+complementizer\is{complementizer} \citep{Hoehle97a}, then it makes sense to give head status to
+\emph{kennt} in Figure~\ref{verb-movement-syn-simple} and have \emph{kennt} select a saturated,
+verb-final verbal projection. Finite verbs in initial position differ from complementizers in that
+they require a projection of a verb trace, whereas complementizers need projections of overt verbs:
 \eal
 \ex 
 \gll dass [jeder diesen Mann kennt]\\
-     that \spacebr{}everybody this man knows\\
+     that \spacebr{}everybody.\NOM{} this.\ACC{} man knows\\
 \glt `that everybody knows this man'
 \ex 
 \gll Kennt [jeder diesen Mann \_ ]\\
-	 knows \spacebr{}everybody this man\\
+	 knows \spacebr{}everybody.\NOM{} this.\ACC{} man\\
 \glt `Does everybody know this man?'
 \zl
 
@@ -1758,7 +1796,7 @@ sm edges
 				[diesen Mann;this man,roof]]
 			[V{\feattab{
                               \textsc{dsl$|$cat$|$comps} \ibox{2},\\
-                              \textsc{comps} \ibox{2} \sliste{ \iboxsp{3}, \ibox{4} } }}
+                              \textsc{comps} \ibox{2} \sliste{ \ibox{3}, \ibox{4} } }}
 				[\trace]]]]]
 \end{forest}
 \caption{\label{verb-movement-syn}Visualization of the analysis of \emph{Kennt jeder diesen Mann?} `Does everyone know this man?'}
@@ -1823,10 +1861,10 @@ Figure~\vref{Abbildung-Konstituentenstellung-HPSG-normal} shows the analysis of 
 \eal
 \ex 
 \gll {}[weil] jeder diesen Mann kennt\\
-	 {}\spacebr{}because everyone this man knows\\
+	 {}\spacebr{}because everyone.\NOM{} this.\ACC{} man knows\\
 \ex 
 \gll {}[weil] diesen Mann jeder kennt\\
-	 {}\spacebr{}because this man everyone knows\\
+	 {}\spacebr{}because this.\ACC{} man everyone.\NOM{} knows\\
 \glt `because everyone knows this man'
 \zl
 %
@@ -1840,7 +1878,7 @@ sm edges
 	[V{[\comps \sliste{ \ibox{1} }]}
 		[\ibox{2} NP{[\type{acc}]}
 			[diesen Mann;this man, roof]]
-		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \ibox{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-normal}Analysis of constituent order in HPSG: unmarked order}
@@ -1860,7 +1898,7 @@ sm edges
 	[V{[\comps \sliste{ \ibox{2} }]}
         	[\ibox{1} NP{[\type{nom}]}
 	        	[jeder;everybody]]
-		[V{[\comps \sliste{ \iboxsp{1}, \ibox{2} }]}
+		[V{[\comps \sliste{ \ibox{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
 \caption{\label{Abbildung-Konstituentenstellung-HPSG-markiert}Analysis of constituent order in
@@ -2162,7 +2200,7 @@ sm edges
                    \textsc{inher$|$slash} \sliste{ \ibox{1} },\\
                    \textsc{to-bind$|$slash} \sliste{ \ibox{1} } }
 		[V{[\comps \sliste{ \ibox{2} }]},  l sep=2\baselineskip
-			[V{[\comps \sliste{ \iboxsp{3}, \ibox{4} }]},edge
+			[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]},edge
                           label={node[midway,right]{V1-LR}}, tier=trace
 				[kennt;knows]]]
 		[\ibox{2} V\feattab{\textsc{comps} \sliste{}, %\\
@@ -2173,7 +2211,7 @@ sm edges
 			[V{[\comps \sliste{ \ibox{4} }]},tier=trace
 				[\ibox{3} NP{[\textit{nom}]}
 					[jeder;everyone]]
-				[V{[\comps \sliste{ \iboxsp{3}, \ibox{4} }]}
+				[V{[\comps \sliste{ \ibox{3}, \ibox{4} }]}
 					[\trace]]]]]]
 \end{forest}
 }
@@ -2183,7 +2221,7 @@ sm edges
 The verb movement trace for \emph{kennt} `knows' is combined with a nominative NP and an extraction trace.
 The extraction trace stands for the accusative object in our example. The accusative object is
 described in the \compsl of the verb \iboxb{4}. Following the mechanism for verb movement, the valence information that was originally contained
-in the entry for \emph{kennt} (\sliste{ \iboxsp{3}, \ibox{4} }) is present on the verb trace. The combination of the projection of the verb trace with
+in the entry for \emph{kennt} (\sliste{ \ibox{3}, \ibox{4} }) is present on the verb trace. The combination of the projection of the verb trace with
 the extraction trace works in exactly the same way as for non-fronted arguments. The \slashv of the extraction trace is passed up the tree
 and bound off by the Head"=Filler Schema.
 
@@ -2279,7 +2317,7 @@ in that dependency.%
 %% 		[N\feattab{\spr \sliste{ \ibox{1} },\\
 %%                    \comps \sliste{ \ibox{2} } }
 %% 			[N\feattab{\spr \sliste{ \ibox{1} },\\
-%%                                    \comps \sliste{ \iboxsp{2}, \ibox{3} } }
+%%                                    \comps \sliste{ \ibox{2}, \ibox{3} } }
 %% 				[Zerstörung;destruction]]
 %% 			[\ibox{3} NP{[\type{gen}]}
 %% 				[der Stadt; of the city,roof]]]

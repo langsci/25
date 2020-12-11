@@ -424,9 +424,11 @@ For the differences between predicate"=argument structures in LFG and the deep s
 \subsection{Restrictions on the c-structure/f-structure relation}
 
 \largerpage
-Symbols in c"=structures\is{c"=structure|(} are assigned restrictions for f"=structures. The following symbols are used: `\up'\is{$\uparrow$} refers to the f"=structure of the
-immediately dominating node and `$\downarrow$'\is{$\downarrow$} refers to the f"=structure of the c"=structure node bearing the annotation. A common annotation is
-`\up~=~\down'. This constraint states that the f"=structure of the mother node is identical to that of the annotated category:
+Symbols in c"=structures\is{c"=structure|(} are assigned restrictions for f"=structures. The
+following symbols are used: `\up'\is{$\uparrow$} refers to the f"=structure of the immediately
+dominating node and `$\downarrow$'\is{$\downarrow$} refers to the f"=structure of the c"=structure
+node bearing the annotation. A common annotation is `\up~=~\down'. This constraint states that the
+f"=structure of the mother node is identical to that of the annotated category: 
 
 \ea
 V$'$ $\to$ \begin{tabular}[t]{@{}r@{~=~}l@{}}
@@ -563,8 +565,8 @@ derived from the lexical information for the verb \emph{yawned}, which is given 
 \z
 
 \noindent 
-This formula is referred to as the \emph{meaning constructor}\is{meaning constructor}. Its job is to combine the meaning of \emph{yawned} -- a one place predicate
-$\lambda x. \relation{yawn}(x)$ -- with the formula\is{\linimp}
+This formula is referred to as the \emph{meaning constructor}\is{meaning constructor}. Its job is to
+combine the meaning of \emph{yawned} -- a one place predicate $\lambda x. \relation{yawn}(x)$ -- with the formula\is{\linimp}
 \mbox{$(\up\ \lfgsubj)_\sigma\ \linimp\ \ups$} in linear logic. Here, the connective \linimp\ is the
 \emph{linear implication} symbol of linear logic. The symbol contains the meaning that \emph{if} a
 semantic resource $(\up\;\lfgsubj)_\sigma$ for the meaning of the subject is available,
@@ -686,7 +688,6 @@ restrictions\is{linearization rule} in LFG, see \citew{ZK95b}.\is{adjunct|)}
 which syntactic structure is comprised (\emph{lexical integrity}\is{lexical integrity}\footnote{%
  See \citew[\page 84]{Anderson92a-u} for more on lexical integrity.%
 }).
-
 Syntactic rules cannot create new words or make reference to the internal structure of words. Every terminal node (each ``leaf'' of the tree) is a word. It follows from this that
 analyses such as the GB analysis of \citet{Pollock89a-u} in Figure~\vref{abb-Pollock} for the French example in (\mex{1})  are ruled out (the figure is taken from
 \citealp[\page 617]{Kuhn2007a}): 
@@ -758,13 +759,16 @@ Bresnan noticed that, as well as passivized verbs, there are passivized adjectiv
 \il{English|)}
 
 \noindent
-If one assumes lexical integrity, then adjectives would have to be derived in the lexicon. If the verbal passive were not a lexical process, but rather a phrase"=structural one, then
+If one assumes lexical integrity, then adjectives have to be derived in the lexicon. If the verbal
+passive were not a lexical process, but rather a phrase"=structural one, then 
 the form identity would remain unexplained.\is{morphology}\todostefan{wieso?}
 
-In LFG, grammatical functions\is{grammatical function} are primitives, that is, they are not derived from a position in the tree (\eg Subject = SpecIP). Words (fully inflected word"=forms)
-determine the grammatical function of their arguments. Furthermore, there is a hierarchy of grammatical functions. During participle formation in morphology, the highest verbal argument is
-suppressed. The next highest argument moves up and is not realized as the \textsc{object} but rather as the \textsc{subject}. This was explicitly encoded in earlier 
-work \citep[\page 8]{Bresnan82a}:
+In LFG, grammatical functions\is{grammatical function} are primitives, that is, they are not derived
+from a position in the tree (\eg Subject = SpecIP). Words (fully inflected word"=forms) 
+determine the grammatical function of their arguments. Furthermore, there is a hierarchy of
+grammatical functions. During participle formation in morphology, the highest verbal argument is 
+suppressed. The next highest argument moves up and is not realized as the \textsc{object} but rather
+as the \textsc{subject}. This was explicitly encoded in earlier work \citep[\page 8]{Bresnan82a}:
 \ea
 Passivization rule:\\
 \begin{tabular}{@{}l@{~$\mapsto$~}l@{}}
@@ -773,8 +777,8 @@ Passivization rule:\\
 \end{tabular}
 \z
 The first rule states that the subject is either not realized ($\varnothing$) or it is realized as
-an oblique element (the \emph{by}-PP in English).
-The second rule states that if there is an accusative object, this becomes the subject.
+an oblique element (the \emph{by}-PP in English). The second rule states that if there is an
+accusative object, this becomes the subject. 
 
 In later work, the assignment of grammatical functions was taken over by Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)|(}\is{linking|(}\label{page-LMT}
 \LATER{\citep{Levin87a}}\citep{BresnanK89a-u}. It is assumed that thematic roles\is{semantic role|(} are ordered in a universally valid hierarchy (\citealp{BresnanK89a-u}; \citealp[\page
@@ -1006,7 +1010,7 @@ specification of case/grammatical function interaction would be much more compli
 %\addlines
 \largerpage
 \noindent
-Berman proposes an analysis that does not combine the verb with all its arguments and adjuncts at
+\citeauthor{Berman96a-u} proposes an analysis that does not combine the verb with all its arguments and adjuncts at
 the same time, as was the case in GPSG\indexgpsg. Instead, she chooses the other extreme and assumes
 that the verb is not combined with an adjunct or an argument, but rather forms a VP directly. The rule for this is shown in (\mex{1}):
 \ea
@@ -1070,9 +1074,12 @@ other rules.\is{constituent order|)}
 \section{Long"=distance dependencies and functional uncertainty}
 \label{Abschnitt-NLA-LFG}
 
-We\is{long"=distance dependency|(} have seen that LFG can explain phenomena such as passivization, local reordering as well as verb placement without transformations.
-In Chapter~\ref{Kapitel-GPSG} on GPSG, we already saw that the development of a transformation"=less analysis for long"=distance dependencies constitutes a real achievement.
-In LFG, \citet{KZ89a} proposed another transformation"=less analysis of long"=distance dependencies, which we will consider in further detail in what follows.
+We\is{long"=distance dependency|(} have seen that LFG can explain phenomena such as passivization,
+local reordering as well as verb placement without transformations. In Chapter~\ref{Kapitel-GPSG} on
+GPSG, we already saw that the development of a transformation"=less analysis for long"=distance
+dependencies constitutes a real achievement. In LFG, \citet{KZ89a} proposed another
+transformation"=less analysis of long"=distance dependencies, which we will consider in further
+detail in what follows.
 
 %\addlines[-1]
 In example (\mex{1}), the displaced constituent \emph{Chris} is characterized by two functions:
@@ -1080,17 +1087,20 @@ In example (\mex{1}), the displaced constituent \emph{Chris} is characterized by
 \label{ex-Chris-we-think}
 Chris, we think that David saw.
 \z
-For one, it has an argument function which is normally realized in a different position (the \lfgobj function of \emph{saw} in the above example) and additionally it has a discourse function:
+For one, it has an argument function which is normally realized in a different position (the \lfgobj
+function of \emph{saw} in the above example) and additionally it has a discourse function: 
 a certain emphasis of the information"=structural status in this construction (\textsc{topic} in the matrix clause).
-In LFG, \textsc{topic} and \textsc{focus} are assumed to be grammaticalized discourse functions (furthermore, \textsc{subj} is classified as the default discourse function). Only
+In LFG, \textsc{topic} and \textsc{focus} are assumed to be grammaticalized discourse functions
+(furthermore, \textsc{subj} is classified as the default discourse function). Only 
 grammaticalized discourse functions are represented on the level of f"=structure, that is, those
 that are created by a fixed syntactic mechanism and that interact with the rest of the syntax. 
 
 Unlike argument functions, the discourse functions  \textsc{topic}\isfeat{topic}\is{topic} and
-\textsc{focus}\isfeat{focus}\is{focus} are not lexically subcategorized and are therefore not subject to the completeness\is{completeness} and 
-coherence\is{coherence} conditions. The values of discourse function features like \textsc{topic}
-and \textsc{focus} are identified with an f"=structure that bears an argument function.  (\mex{1})  
-gives the f"=structure for the sentence in (\ref{ex-Chris-we-think}):
+\textsc{focus}\isfeat{focus}\is{focus} are not lexically subcategorized and are therefore not
+subject to the completeness\is{completeness} and coherence\is{coherence} conditions. The values of
+discourse function features like \textsc{topic} and \textsc{focus} are identified with an
+f"=structure that bears an argument function.  (\mex{1}) gives the f"=structure for the sentence in
+(\ref{ex-Chris-we-think}): 
 
 \ea
 \lfgms{ pred & `THINK\sliste{ \lfgsubj, \comp }' \\
@@ -1213,8 +1223,8 @@ One can use disjunctions in LFG equations and express the corresponding conditio
 \ea
 (\upsp  \textsc{topic$|$focus}) = (\upsp \textsc{comp* obj})
 \z
-One can introduce a special symbol for \textsc{topic$|$focus}, which stands for a disjunction of discourse functions: \textsc{df}\isfeat{df}.
-(\mex{0}) can then be abbreviated as in (\mex{1}):
+One can introduce a special symbol for \textsc{topic$|$focus}, which stands for a disjunction of
+discourse functions: \textsc{df}\isfeat{df}. (\mex{0}) can then be abbreviated as in (\mex{1}):
 
 \ea
 (\upsp  \textsc{df}) = (\upsp \textsc{comp* obj})
@@ -1348,18 +1358,27 @@ The c"=structure rule for the NP can also be omitted and a triangle can be drawn
 }
 
 %\clearpage 
-\furtherreading{
-Section~\ref{Abschnitt-Format-LFG} was based extensively on the textbook and introductory article of \citet{Dalrymple2001a-u,Dalrymple2006a}. Additionally, I have drawn from
-teaching materials of Jonas Kuhn from 2007. \citew{Bresnan2001a} is a comprehensive textbook in English for the advanced reader. Some of the more in"=depth analyses of
-German in LFG are \citew{Berman96a-u,Berman2003a}.  \citew{SdA2016a-u} is an introduction to LFG that uses French\il{French} examples. The authors demonstrate how the XLE system can be used for the development of a
-French\il{French} LFG grammar. The textbook also discusses the Finite State Morphology component that comes
-with the XLE system.
+\furtherreading{ 
+Section~\ref{Abschnitt-Format-LFG} was based extensively on the textbook and introductory article
+of \citet{Dalrymple2001a-u,Dalrymple2006a}. Additionally, I have drawn from teaching materials of
+Jonas Kuhn from 2007. \citew{Bresnan2001a} is a comprehensive textbook in English for the advanced
+reader. Some of the more in"=depth analyses of German in LFG are \citew{Berman96a-u,Berman2003a}.
+\citew{SdA2016a-u} is an introduction to LFG that uses French\il{French} examples. The authors
+demonstrate how the XLE system can be used for the development of a French\il{French} LFG
+grammar. The textbook also discusses the Finite State Morphology component that comes with the XLE
+system. \citew{LFGHandbook} is a large handbook on LFG research covering various syntactic
+phenomena, various descriptive levels and also other subdisciplines of linguistics.
 
-\citet{Levelt89a} developed a model of language production based on LFG.
- \citet{Pinker84a-u} -- one of the best"=known researchers on language acquisition -- used LFG as the model for his theory of acquisition. For another theory on first and second
- language acquisition that uses LFG, see \citew{Pienemann2005a}. 
+\citet{Levelt89a} developed a model of language production based on LFG. \citet{Pinker84a-u} -- one
+of the best"=known researchers on language acquisition -- used LFG as the model for his theory of
+acquisition. For another theory on first and second language acquisition that uses LFG, see
+\citew{Pienemann2005a}.
 
-\citet{WA2020a} compare LFG with HPSG.
+\citet{MuellerLFGphrasal} discusses recent phrasal approaches to argument structure constructions in LFG,
+argues for a lexical treatment and provides such a treatment in HPSG. 
+
+\citet{WA2020a} and \citet{Przepiorkowski2021a} compare LFG with HPSG. The first reference is a chapter in
+the HPSG handbook published by Language Science Press and the second one is a chapter in the LFG handbook.
 }
 
 

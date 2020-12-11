@@ -35,17 +35,22 @@ Other terms for feature description are the following:
 \item \emph{attribute-value matrix} (AVM)\is{attribute"=value matrix (AVM)}
 \item \emph{feature matrix}
 \end{itemize}
-In what follows, I will restrict the discussion to the absolutely necessary details in order to keep the formal part of the book as short as possible. I refer
-the interested reader to \citet{Shieber86a}, \citet[Chapter~2]{ps}, \citet{Johnson88}, \citet{Carpenter92a},
-\citet{King94a} and \citet{Richter2004a-u}. Shieber's book is an accessible introduction to Unification Grammars. The works by King and Richter, which introduce important
-foundations for HPSG, would most probably not be accessible for those without a good grounding in mathematics. 
-However, it is important to know that these works exist and that the corresponding linguistic theory is build on a solid foundation.
+In what follows, I will restrict the discussion to the absolutely necessary details in order to keep
+the formal part of the book as short as possible. I refer the interested reader to
+\citet{Shieber86a}, \citet[Chapter~2]{ps}, \citet{Johnson88}, \citet{Carpenter92a}, \citet{King94a}
+and \citet{Richter2004a-u,Richter2021a}. Shieber's book is an accessible introduction to Unification
+Grammars. The works by King and Richter, which introduce important foundations for HPSG, would most
+probably not be accessible for those without a good grounding in mathematics. However, it is
+important to know that these works exist and that the corresponding linguistic theory is build on a
+solid foundation. 
 
 \section{Feature descriptions}
 
-When\is{feature description|(} describing linguistic signs, we have to say something about their properties. For a noun, we can say that it has case, gender, number and person features.
-For a word such as  \emph{Mannes} `man', we can say that these features have the values \emph{genitive}, \emph{masculine}, \emph{singular} and \emph{3}.
-If we were to write these as a list of feature"=value pairs, we would arrive at the following feature description:
+When\is{feature description|(} describing linguistic signs, we have to say something about their
+properties. For a noun, we can say that it has case, gender, number and person features. For a word
+such as  \emph{Mannes} `man', we can say that these features have the values \emph{genitive},
+\emph{masculine}, \emph{singular} and \emph{3}. If we were to write these as a list of
+feature"=value pairs, we would arrive at the following feature description: 
 \eas
 Feature-value pair for \emph{Mannes}:\\
 \ms{
@@ -890,15 +895,22 @@ combinatorial possibilities of such structures could not be discussed in detail 
 at least part of these properties is important for work in computational linguistics and in
 developing one's own analyses. For more information, I refer the interested reader to the following publications: 
 %
-\citet{Shieber86a} is a short introduction to the theory of Unification Grammar. It offers a relatively general overview followed by the discussion of important grammar types
-such as DCG\is{Definite Clause Grammar (DCG)}, \lfg, \gpsg,
-HPSG, PATR-II\is{PATR-II}.
+\citet{Shieber86a} is a short introduction to the theory of Unification Grammar. It offers a
+relatively general overview followed by the discussion of important grammar types such as
+DCG\is{Definite Clause Grammar (DCG)}, \lfg, \gpsg, HPSG, PATR-II\is{PATR-II}.
 %
 \citet{Johnson88} describes the formalism of untyped feature structures in a mathematically precise way.
 %
-\citet{Carpenter92a} goes into the detail about the mathematical aspects of typed feature structures. The formalism developed by \citet{King99a-u} for HPSG"=grammars forms the basis
-for the formalism by \citet{Richter2004a-u}, which currently counts as the standard formalism for
-HPSG. See also \citet{Richter2020a} for an overview of the formal properties of HPSG grammars.
+\citet{Carpenter92a} goes into the detail about the mathematical aspects of typed feature
+structures. The formalism developed by \citet{King99a-u} for HPSG"=grammars forms the basis for the
+formalism by \citet{Richter2004a-u}, which currently counts as the standard formalism for HPSG. See
+also \citet{Richter2020a} for an overview of the formal properties of HPSG grammars.
+
+This chapter introduced typed feature structures/descriptions. Frameworks like LFG do not use types
+and type hierarchies, but they use macros instead. The formal underpinnings of LFG, including
+assumptions regarding models, differ slightly from those presented here. \citet{Przepiorkowski2021a}
+discusses both LFG and HPSG assumptions about the model theoretic foundations of the respective
+frameworks and points out commonalities and differences.
 }
 
 %      <!-- Local IspellDict: en_US-w_accents -->
