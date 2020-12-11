@@ -11,8 +11,8 @@
 \ex \field{Der Mann}{VF} \field{liebt}{LS} \field{eine Frau, \field{die}{VF} \field{Peter}{MF} \field{kennt}{RS}}{MF}.
 %\ex \field{Die Studenten}{VF} \field{behaupten}{LS}, \field{\field{nur wegen der Hitze}{MF} \field{einzuschlafen}{RS}}{MF}.
 \ex \field{Die Studenten}{VF} \field{haben}{LS} \field{behauptet}{RS}, \field{\field{nur wegen der Hitze}{MF} \field{einzuschlafen}{RS}}{NF}.
-\ex \field{\field{Dass}{LS} \field{Peter nicht}{MF} \field{kommt}{RS}}{VF}, \field{ärgert}{LS} \field{Klaus}{MF}.
-\ex \field{\field{Einen Mann}{MF} \field{küssen}{RS}, \field{\field{der}{VF} \field{ihr nicht}{MF} \field{gefällt}{RS}}{NF}}{VF}, \field{würde}{LS} \field{sie nie}{MF}.
+\ex \field{\field{Dass}{LS} \field{Aicke nicht}{MF} \field{kommt}{RS}}{VF}, \field{ärgert}{LS} \field{Conny}{MF}.
+\ex \field{\field{Ein Buch}{MF} \field{lesen}{RS}, \field{\field{das}{VF} \field{sie nicht}{MF} \field{fesselt}{RS}}{NF}}{VF}, \field{würde}{LS} \field{sie nie}{MF}.
 \zl
 On (\mex{0}c): theoretically, this could also be a case of extraposition of the relative clause to
 the postfield. Since \emph{eine Frau, die Peter kennt} is a constituent, however, it is assumed that
@@ -203,11 +203,16 @@ In order to rule out the last two sentences, the grammar has to contain informat
 \section{Transformational Grammar -- Government \& Binding}
 
 
-% \ex dass die Frau den Mann liebt
-% \ex dass der Mann geliebt wird
-% \ex Der Mann wird geliebt.
-% \ex dass der Mann der Frau hilft
-% \ex Der Mann hilft der Frau.
+% \ex 
+% \gll dass der Delphin dem Kind hilft\\
+% \ex 
+% \gll dass der Delphin den Hai attackiert\\
+% \ex 
+% \gll dass der Hai attackiert wird\\
+% \ex 
+% \gll Der Hai wird attackiert.\\
+% \ex 
+% \gll Der Delphin hilft dem Kind.\\
 
 \begin{figure}[H]
 \centering
@@ -218,17 +223,38 @@ sm edges
 [\hspaceThis{$'$}C$'$
 	[C$^0$[dass;that]]
 	[IP
-		[NP [die Frau;the woman,roof]]
+		[NP [der Delphin;the dolphin, roof]]
 		[\hspaceThis{$'$}I$'$
 			[VP
 				[\hspaceThis{$'$}V$'$
-					[NP[den Mann;the man, roof]]
+					[NP[dem Kind;the child, roof]]
 					[V$^0$[\trace$_j$]]]]
-			[I$^0$[lieb-$_j$ -t;love- -s]]]]]]
+			[I$^0$[hilf-$_j$ -t;help- -s]]]]]]
+\end{forest}
+}
+\hfill
+\scalebox{.9}{%
+\begin{forest}
+sm edges
+[CP
+[\hspaceThis{$'$}C$'$
+	[C$^0$[dass;that]]
+	[IP
+		[NP [der Delphin;the dolphin,roof]]
+		[\hspaceThis{$'$}I$'$
+			[VP
+				[\hspaceThis{$'$}V$'$
+					[NP[den Hai;the shark, roof]]
+					[V$^0$[\trace$_j$]]]]
+			[I$^0$[attackier-$_j$ -t;attack- -s]]]]]]
 \end{forest}
 }
 %\end{figure}%
-\hfill
+\end{figure}%
+
+
+% der Mann wird geliebt
+\begin{figure}[H]
 % dass der Mann geliebt wird
 %\begin{figure}[H]
 \scalebox{.9}{
@@ -238,25 +264,21 @@ sm edges
 [\hspaceThis{$'$}C$'$
 	[C$^0$[dass;that]]
         [IP
-        [NP, [der Mann$_i$;the man ,roof]]
+        [NP, [der Hai$_i$;the shark,roof]]
         [\hspaceThis{$'$}I$'$
 	   [VP
 		[\hspaceThis{$'$}V$'$
 	           [NP,   [\_$_i$]]
-		   [V$^0$,[geliebt \trace$_j$;loved, roof]]]]
+		   [V$^0$,[attackiert \trace$_j$;attacked, roof]]]]
 	   [I$^0$ ,name=Infl [wir-$_j$ -d;is]]]]]]
 \end{forest}
 }
-\end{figure}%
-
-
-% der Mann wird geliebt
-\begin{figure}[H]
+\hfill
 \scalebox{.9}{%
 \begin{forest}
 sm edges
 [CP
-   [NP, [der Mann$_i$;the man ,roof]]
+   [NP, [der Hai$_i$;the shark ,roof]]
    [\hspaceThis{$'$}C$'$
 	[C$^0$[ (wir-$_j$ -d)$_k$;is]]
         [IP
@@ -265,7 +287,7 @@ sm edges
 	   [VP
 		[\hspaceThis{$'$}V$'$
 	           [NP,   [\_$_i$]]
-		   [V$^0$,[geliebt \trace$_j$;loved, roof]]]]
+		   [V$^0$,[attackiert \trace$_j$;attacked, roof]]]]
 	   [I$^0$ ,name=Infl [\trace$_k$]]]]]]
 \end{forest}
 }
@@ -274,22 +296,6 @@ sm edges
 % \ex dass der Mann der Frau hilft
 %\begin{figure}[H]
 %\centering
-\scalebox{.9}{%
-\begin{forest}
-sm edges
-[CP
-[\hspaceThis{$'$}C$'$
-	[C$^0$[dass;that]]
-	[IP
-		[NP [der Mann;the man, roof]]
-		[\hspaceThis{$'$}I$'$
-			[VP
-				[\hspaceThis{$'$}V$'$
-					[NP[der Frau;the woman, roof]]
-					[V$^0$[\trace$_j$]]]]
-			[I$^0$[hilf-$_j$ -t;help- -s]]]]]]
-\end{forest}
-}
 \end{figure}%
 
 % \ex Der Mann hilft der Frau.
@@ -298,7 +304,7 @@ sm edges
 \begin{forest}
 sm edges
 [CP
-[NP [der Mann$_i$;the man, roof]]
+[NP [der Delphin$_i$;the dolphin, roof]]
 [\hspaceThis{$'$}C$'$
 	[C$^0$ [(hilf-$_j$ -t)$_k$;help- -s]]
 	[IP
@@ -306,7 +312,7 @@ sm edges
 		[\hspaceThis{$'$}I$'$
 			[VP
 				[\hspaceThis{$'$}V$'$
-					[NP [der Frau;the woman, roof]]
+					[NP [dem Kind;the child, roof]]
 					[V$^0$[\trace$_j$]]]]
 			[I$^0$ [\trace$_k$]]]]]]
 \end{forest}
