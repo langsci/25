@@ -25,16 +25,16 @@
     "doi": "10.5281/zenodo.1193241"
   }, {
     "versiontype": "third_edition",
-    "title": "Grammatical Theory, 2nd edition",
+    "title": "Grammatical Theory, 3rd edition",
     "authors": [{"name": "Stefan Müller"}],
     "publishedAt": "2019-08-29T00:00:33.000Z",
     "license": "CC-BY-4.0",
     "doi": "10.5281/zenodo.3364215"
   }, {
     "versiontype": "fourth_edition",
-    "title": "Grammatical Theory, 2nd edition",
+    "title": "Grammatical Theory, 4th edition",
     "authors": [{"name": "Stefan Müller"}],
-    "publishedAt": "2020-10-09T00:00:33.000Z",
+    "publishedAt": "2020-10-09T00:01:33.000Z",
     "license": "CC-BY-4.0",
     "doi": "10.5281/zenodo.3364215"
   }]
