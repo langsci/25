@@ -6,7 +6,10 @@
 \newcommand{\ua}{u.\,a.\ }
 \newcommand{\eg}{e.g.,\xspace}
 \newcommand{\Eg}{E.g.,\xspace}
-\newcommand{\ie}{i.e.\@\xspace}
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\eguk}{e.g.\xspace}
+\newcommand{\Eguk}{E.g.\xspace}
+\newcommand{\ieuk}{i.e.\xspace}
 \newcommand{\uae}{u.\,"a.\ }
 \newcommand{\zb}{z.\,B.\ }
 \newcommand{\Zb}{Z.\,B.\ }
@@ -34,7 +37,7 @@
 \newcommand{\neu}{\textsc{n}\xspace}
 \newcommand{\thirdsg}{3\textsc{sg}\xspace}
 
-
+% defined in langsci-lgr in texlive 2021
 \newcommand{\INF}{\textsc{inf}{}\xspace}	%infinitive
 
 
@@ -104,7 +107,8 @@
 
 
 
-\newcommand{\iwithini}{\emph{i}-within"=\emph{i}"=Condition\xspace}
+\newcommand{\iwithini}{\emph{i}-within"=\emph{i}\xspace}
+\newcommand{\iwithinic}{\emph{i}-within"=\emph{i}"=Condition\xspace}
 
 
 
@@ -119,6 +123,7 @@
 
 \newcommand{\accf}{\textsc{acc}\xspace}
 \newcommand{\accv}{\textsc{acc} value\xspace}
+%\newcommand{\agr}{\textsc{agr}\xspace}
 \newcommand{\argst}{\textsc{arg-st}\xspace}
 \newcommand{\argstf}{\textsc{arg-st} feature\xspace}
 \newcommand{\argstw}{\textsc{arg-st}"=Wert\xspace}
@@ -129,7 +134,7 @@
 }{\newcommand{\argstl}{\textsc{arg-st} list\xspace}}
 \newcommand{\argstls}{\textsc{arg-st} lists\xspace}
 
-\newcommand{\aux}{\textsc{aux}\xspace}
+%\newcommand{\aux}{\textsc{aux}\xspace}
 \newcommand{\auxf}{\textsc{aux} feature\xspace}
 \newcommand{\auxv}{\textsc{aux} value\xspace}
 
@@ -265,6 +270,22 @@
 \newcommand{\lightwe}{\textsc{light}"=Werte\xspace}
 \newcommand{\lightwen}{\textsc{light}"=Werten\xspace}
 \newcommand{\lightwes}{\textsc{light}"=Wertes\xspace}
+\newcommand{\lista}{\textsc{list-a}\xspace}
+\iflanguage{german}{%
+\newcommand{\listal}{\textsc{list-a}"=Liste\xspace}}{%
+\newcommand{\listal}{\textsc{list-a} list\xspace}%
+}
+\newcommand{\listz}{\textsc{list-z}\xspace}
+\newcommand{\listu}{\textsc{list-u}\xspace}
+\iflanguage{german}{%
+\newcommand{\listul}{\textsc{list-u}"=Liste\xspace}}{%
+\newcommand{\listul}{\textsc{list-u} list\xspace}%
+}
+\newcommand{\listlu}{\textsc{list-lu}\xspace}
+\iflanguage{german}{%
+\newcommand{\listlul}{\textsc{list-lu}"=Liste\xspace}}{%
+\newcommand{\listlul}{\textsc{list-lu} list\xspace}%
+}
 \newcommand{\HPSGloc}{\textsc{loc}\xspace}
 \newcommand{\local}{\textsc{local}\xspace}
 \newcommand{\localf}{\textsc{local} feature\xspace}
@@ -296,6 +317,7 @@
 \newcommand{\nonlocv}{\textsc{nonloc} value\xspace}
 \newcommand{\nonlocf}{\textsc{nonloc} feature\xspace}
 \newcommand{\nonlocw}{\textsc{nonloc}"=Wert\xspace}
+\newcommand{\num}{\textsc{num}\xspace}
 \newcommand{\numw}{\textsc{num}"=Wert\xspace}
 \newcommand{\objw}{\textsc{obj}"=Wert\xspace}
 \newcommand{\objz}{\textsc{obj2}\xspace}
@@ -496,8 +518,11 @@ Derivation}{derivation}\xspace}
 \newcommand{\bards}{"~\emph{bar}"=derivations\xspace}
 \newcommand{\barden}{"~\emph{bar}"=Derivationen\xspace}
 
-\newcommand{\itsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\xspace}
+\newcommand{\itsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\indexitsdb}
+\newcommand{\indexitsdb}{\is{incr tsdb()@\mbox{\textsf{\lbrack incr tsdb()\rbrack}}}\xspace}
 \newcommand{\tsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\xspace}
+
+\newcommand{\indexlkb}{\is{Linguistic Knowledge Builder (LKB)}\xspace}
 
 \newcommand{\word}[1]{\emph{#1}\iw{#1}}
 \newcommand{\noword}[1]{\emph{*\,#1}\iw{#1@*\,#1}}
@@ -660,34 +685,34 @@ Derivation}{derivation}\xspace}
 
 
 %% % taken from https://tex.stackexchange.com/a/95079/18561
-%% \newbox\usefulbox
+\newbox\usefulbox
 
-%% \makeatletter
-%% \def\getslant #1{\strip@pt\fontdimen1 #1}
+%\makeatletter
+\def\getslant #1{\strip@pt\fontdimen1 #1}
 
-%% \def\skoverline #1{\mathchoice
-%%  {{\setbox\usefulbox=\hbox{$\m@th\displaystyle #1$}%
-%%     \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
-%%     \divide\dimen@ \tw@ 
-%%     \kern\dimen@ 
-%%     \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
-%%  {{\setbox\usefulbox=\hbox{$\m@th\textstyle #1$}%
-%%     \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
-%%     \divide\dimen@ \tw@ 
-%%     \kern\dimen@ 
-%%     \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
-%%  {{\setbox\usefulbox=\hbox{$\m@th\scriptstyle #1$}%
-%%     \dimen@ \getslant\the\scriptfont\symletters \ht\usefulbox
-%%     \divide\dimen@ \tw@ 
-%%     \kern\dimen@ 
-%%     \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
-%%  {{\setbox\usefulbox=\hbox{$\m@th\scriptscriptstyle #1$}%
-%%     \dimen@ \getslant\the\scriptscriptfont\symletters \ht\usefulbox
-%%     \divide\dimen@ \tw@ 
-%%     \kern\dimen@ 
-%%     \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}%
-%%  {}}
-%% \makeatother
+\def\skoverline #1{\mathchoice
+ {{\setbox\usefulbox=\hbox{$\m@th\displaystyle #1$}%
+    \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
+    \divide\dimen@ \tw@ 
+    \kern\dimen@ 
+    \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+ {{\setbox\usefulbox=\hbox{$\m@th\textstyle #1$}%
+    \dimen@ \getslant\the\textfont\symletters \ht\usefulbox
+    \divide\dimen@ \tw@ 
+    \kern\dimen@ 
+    \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+ {{\setbox\usefulbox=\hbox{$\m@th\scriptstyle #1$}%
+    \dimen@ \getslant\the\scriptfont\symletters \ht\usefulbox
+    \divide\dimen@ \tw@ 
+    \kern\dimen@ 
+    \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}
+ {{\setbox\usefulbox=\hbox{$\m@th\scriptscriptstyle #1$}%
+    \dimen@ \getslant\the\scriptscriptfont\symletters \ht\usefulbox
+    \divide\dimen@ \tw@ 
+    \kern\dimen@ 
+    \overline{\kern-\dimen@ \box\usefulbox\kern\dimen@ }\kern-\dimen@ }}%
+ {}}
+%\makeatother
 
 
 

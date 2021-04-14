@@ -15,7 +15,7 @@ Categorial Grammar\is{Categorial Grammar (CG)|(} is the second oldest of the app
 \href{http://en.wikipedia.org/wiki/Kazimierz_Ajdukiewicz}{Kazimierz Ajdukiewicz}
 \citep{Ajdukiewicz35a-u}. Since syntactic and semantic descriptions are tightly connected and all syntactic combinations correspond
 to semantic ones, Categorial Grammar is popular amongst logicians and semanticists.
-Some stellar works in the field of semantics making use of Categorial Grammar are those of Richard Montague \citeyearpar{Montague74a-u}.
+Some stellar works in the field of semantics making use of Categorial Grammar are those of Richard Montague \citeyearpar{Montague74a-ed}.
 Other important works come from David Dowty in Columbus, Ohio \citeyearpar{Dowty79a}, Michael
 Moortgat in Utrecht \citeyearpar{Moortgat89a-u}, Glyn Morrill in Barcelona
 \citeyearpar{Morrill94a-u}, Bob Carpenter in New York \citeyearpar{Carpenter98a-u} and Mark Steedman
@@ -279,7 +279,7 @@ np/n & n/n   & n   & (s\bs np)/np & np   & (s\bs np)\bs (s\bs np) & (s\bs np)\bs
 &&&&&&\multicolumn{3}{c@{}}{\forwardapp}\\
 &&&&&&\multicolumn{3}{c@{}}{(s\bs np)\bs (s\bs np)}\\
 &&&\multicolumn{6}{c@{}}{\backwardapp}\\
-&&&\multicolumn{6}{c@{}}{(s\bs np)}\\
+&&&\multicolumn{6}{c@{}}{s\bs np}\\
 \multicolumn{9}{@{}c@{}}{\backwardapp}\\
 \multicolumn{9}{@{}c@{}}{s}\\
 }}
@@ -429,11 +429,11 @@ The entry for the verb trace is very complex. It is probably simpler to examine 
 \deriv{4}{%
 isst & er  & ihn & \_\\
 \hr & \hr  & \hr & \hr \\
-(s\bs np[nom]) \bs np[acc]    & np[nom] & np[acc]      & (((s\bs (s\bs np[nom]) \bs np[acc])\bs np[nom]) \bs np[acc]\\
+(s\bs np[nom]) \bs np[acc]    & np[nom] & np[acc]      & ((s\bs ((s\bs np[nom]) \bs np[acc]))\bs np[nom]) \bs np[acc]\\
 &&\mc{2}{c@{}}{\backwardapp}\\
-&&\mc{2}{c@{}}{(s\bs (s\bs np[nom]) \bs np[acc])\bs np[nom]}\\
+&&\mc{2}{c@{}}{\hspaceThis{$($}\hspace{1.5pt}(s\bs ((s\bs np[nom]) \bs np[acc]))\bs np[nom]}\\
 &\mc{3}{c@{}}{\backwardapp}\\
-&\mc{3}{c@{}}{s\bs ((s\bs np[nom]) \bs np[acc])}\\
+&\mc{3}{c@{}}{\hspaceThis{$(($}\hspace{3pt}s\bs ((s\bs np[nom]) \bs np[acc])}\\
 \mc{4}{@{}c@{}}{\backwardapp}\\
 \mc{4}{@{}c@{}}{s}\\
 }
@@ -887,7 +887,7 @@ The relative clause can then be analyzed as the combination of a sentence with a
 For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see
 Section~\ref{Abschnitt-Relativ-Interrogativsaetze}.
 
-Kubota (p.c.\,2020) discussing this section and \citet{Kubota2020a} with me pointed out to me
+Kubota (p.c.\,2020) discussing this section and \citet{Kubota2021a} with me pointed out to me
 \citegen[\page 455]{Sag97a} claim that the relative phrases in English are restricted to be NPs or PPs. This information
 has to be encoded somewhere. \citet[\page 455]{Sag97a} encodes it on the phrasal level specifying in the phrasal schema
 for relative clauses that the relative phrase has to be an NP or a PP. Categorial Grammar being an
@@ -1024,7 +1024,7 @@ combination of Dependency Grammar and Categorial Grammar, which they call Depend
 
 \citet{Briscoe2000a} and \citet{Villavicencio2002a} discuss UG"=based acquisition models in the framework of Categorial Grammar.
 
-\citet{Kubota2020a} compares Categorial Grammar with HPSG.
+\citet{Kubota2021a} compares Categorial Grammar with HPSG.
 }
 
 

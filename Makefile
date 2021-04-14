@@ -1,5 +1,6 @@
 LSP-STYLES=~/Documents/Dienstlich/Projekte/OALI/Git-HUB/latex/langsci/
 BIBTOOL=bibtool-Mac
+STYLE-PATH= ${HOME}/Library/texmf/tex/latex/
 
 
 all: grammatical-theory.pdf
@@ -215,6 +216,15 @@ memo-install:
 forest-install:
 	cp -pr ~/Documents/Dienstlich/Projekte/LangSci/Git-Hub/latex/langsci-forest-setup.sty .
 
+stmue-install:
+	cp -p ${STYLE-PATH}makros.2e.sty                   styles/
+	cp -p ${STYLE-PATH}abbrev.sty                        styles/
+	cp -p ${STYLE-PATH}eng-date.sty                      styles/
+	cp -p ${STYLE-PATH}biblatex-series-number-checks.sty styles/
+	cp -p ${STYLE-PATH}Ling/article-ex.sty               styles/
+	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty          styles/
+
+
 o-public: o-public-lehrbuch 
 #o-public-bib
 
@@ -267,6 +277,9 @@ check-gt.bib: ../../../Bibliographien/biblio.bib
 
 check-bib: gt.bib 
 	biber --validate-datamodel grammatical-theory
+
+todo-bib.unique.txt: grammatical-theory.bcf
+	biber -V grammatical-theory | grep -i warn | sort -uf > todo-bib.unique.txt
 
 
 PUB_FILE=stmue.bib

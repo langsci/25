@@ -9,7 +9,7 @@ developed by Carl Pollard and Ivan Sag in the mid-80s in Stanford and in the Hew
 research laboratories in Palo Alto (\citealp{ps,ps2}; see \citealp{FWPEvolution} for more on the
 history of HPSG). Like LFG, HPSG is part of so"=called West Coast linguistics. Another similarity to
 LFG is that HPSG aims to provide a theory of competence which is compatible with performance
-(\citealp{SW2011a,SW2015a,Wasow2020a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).
+(\citealp{SW2011a,SW2015a,Wasow2021a}, see also Chapter~\ref{Abschnitt-Diskussion-Performanz}).
 
 The formal properties of the description language for HPSG grammars are well"=understood and there are
 many systems for processing such grammars
@@ -104,7 +104,7 @@ The first implemented HPSG grammar was a grammar of English developed in the Hew
 Saarbrücken in the LILOG project. Subsequently, grammars for German, English and Japanese were
 developed in Heidelberg, Saarbrücken and Stanford in the \verbmobil project. \verbmobil was the
 largest ever AI project in Germany. It was a machine translation project for spoken language in the
-domains of trip planning and appointment scheduling \citep{Wahlster2000a-ed-not-crossreferenced}.
+domains of trip planning and appointment scheduling \citep{Wahlster2000a-ed}.
 
 Currently there are two larger groups that are working on the development of grammars: the DELPH-IN consortium (Deep Linguistic Processing with HPSG)\footnote{%
   \url{http://www.delph-in.net/}. 2018-02-20.
@@ -144,7 +144,7 @@ For further information on the interaction between HPSG and computational lingui
 
 HPSG has the following characteristics: it is a lexicon"=based theory, that is, the majority of
 linguistic constraints are situated in the descriptions of words or roots. HPSG is sign-based in the
-sense of Saussure \citeyearpar{Saussure16a-Fr}\nocite{Saussure16a}: the form and meaning of
+sense of Saussure \citeyearpar{Saussure16a-En}: the form and meaning of
 linguistic signs are always represented together. Typed feature structures are used to model all
 relevant information.\footnote{% 
   Readers who read this book non-sequentially and who are unfamiliar with typed feature descriptions
@@ -482,7 +482,7 @@ is, the head information. This is represented under \head. Further details of th
  linguistic object belongs to the head properties of a phrase. As well as \head, \spr and \comps belongs to the information contained inside \cat. The semantic content
  of a sign is present under \cont. The type of the \contv is \type{mrs}, which stands for \emph{Minimal Recursion
 Semantics}\indexmrs \citep*{CFPS2005a}. An MRS structure is comprised of an index and a list of
-relations which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
+relations (\textsc{relations} or \textsc{rels}) which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
 and interrogative clauses\is{interrogative clause} (\citealp{ps2}; \citealp{Sag97a};
 \citealp{GSag2000a-u}; \citealp{Holler2005a-u}), which will not be discussed here.
 %\pagebreak
