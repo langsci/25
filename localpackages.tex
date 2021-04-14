@@ -50,6 +50,27 @@
 \providecommand{\largerpage}{}
 \renewcommand{\largerpage}[1][1]{\enlargethispage{#1\baselineskip}}
 
+\DeclareFieldInputHandler{%
+annote,
+cited,
+optlocation,
+optnote,
+opturldate,
+optpages,
+price,
+optnumber,
+opteditor,
+optchapter,
+optisbn,
+optissn,
+optmonth,
+optpublisher,
+optschool,
+opturl,
+optyear}{\def\NewValue{}}
+
+
+
 \providecommand{\tablevspace}{}
 % vertical space to structure tables
 \renewcommand{\tablevspace}{\\[-.5em]}
@@ -172,7 +193,7 @@ styles/eng-date,styles/my-theorems}
 
 % do nothing now
 %\let\addlinesold=\addlines
-%\renewcommand{\addlines}[1][1]{}
+\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck

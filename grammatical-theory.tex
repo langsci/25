@@ -65,9 +65,31 @@
 
 
 
-%\bibliography{bib-abbr,biblio}
+\bibliography{bib-abbr,biblio}
 
-\bibliography{gt}
+%\bibliography{gt}
+
+% https://tex.stackexchange.com/a/111851/18561
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+      \map{
+        \step[fieldsource=checked]
+        \step[fieldset=usera,origfieldval]
+    }
+  }
+}
+
+%\DeclareFieldFormat{usera}{\red{#1}}
+
+% This shows the value of checked:
+%\AtEveryBibitem{
+%\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{usera}{\space \red{Not checked!}}{\space\green{\printfield{usera}}}}
+%}
+% This just shows a warning for unchecked items
+\AtEveryBibitem{
+\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{usera}{\space \red{Not checked!}}{}}
+}
+
 
 \input grammatical-theory-include
 
