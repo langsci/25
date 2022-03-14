@@ -144,14 +144,37 @@
   }
 }  
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Various bibmacros used in producing the bibliography
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewbibmacro*{date+extrayear}{%
+%% Thanks to moeve, https://tex.stackexchange.com/a/402702,
+%% One case added by Stefan Müller
+\renewbibmacro*{citeindex}{%
+  \ifciteindex
+    {\iffieldequalstr{labelnamesource}{shortauthor} 
+      {\ifnameundef{indexauthor}                     
+        {\indexnames{author}}                       
+        {\indexnames{indexauthor}}}                  
+      {\iffieldequalstr{labelnamesource}{author}    
+        {\ifnameundef{indexauthor}                   
+          {\indexnames{author}}
+          {\indexnames{indexauthor}}} 
+        {\iffieldequalstr{labelnamesource}{shorteditor} 
+          {\ifnameundef{indexeditor}                     
+            {\indexnames{editor}}                       
+            {\indexnames{indexeditor}}}                  
+          {\iffieldequalstr{labelnamesource}{editor}    
+            {\ifnameundef{indexeditor}
+              {\indexnames{editor}}
+              {\indexnames{indexeditor}}}} 
+          {\indexnames{labelname}}}}} 
+    {}}
+
+\newbibmacro*{date+extradate}{%
   \iffieldundef{labelyear}
     {}
-    {\printtext{\printlabeldateextra}}}%     Took out the parentheses around the year
+    {\printtext{\printlabeldateextra}}}% Took out the parentheses around the year
 
 \renewbibmacro*{author}{%
   \ifboolexpr{
@@ -173,7 +196,7 @@
     {\global\undef\bbx@lasthash
      \usebibmacro{labeltitle}%
      \newunit}%                               period instead of space
-  \usebibmacro{date+extrayear}}
+  \usebibmacro{date+extradate}}
 
 \renewbibmacro*{editor}{%
   \usebibmacro{bbx:editor}{editorstrg}}
@@ -196,7 +219,7 @@
     {\global\undef\bbx@lasthash
      \usebibmacro{labeltitle}%
      \newunit}%                                         period instead of space
-  \usebibmacro{date+extrayear}}
+  \usebibmacro{date+extradate}}
 
 \renewbibmacro*{translator}{%
   \usebibmacro{bbx:translator}{translatorstrg}}
@@ -219,7 +242,7 @@
     {\global\undef\bbx@lasthash
      \usebibmacro{labeltitle}%
      \newunit}%                                     period instead of space
-  \usebibmacro{date+extrayear}}
+  \usebibmacro{date+extradate}}
 
 \renewbibmacro*{journal}{%
   \iffieldundef{journaltitle}
@@ -431,7 +454,7 @@
 
 \renewcommand{\intitlepunct}{\addspace}
 
-\renewcommand{\subtitlepunct}{\addcolon\space}
+\renewcommand*{\subtitlepunct}{\addcolon\space}
 \renewcommand*{\bibpagespunct}{\newunitpunct}  % No comma before pages, just the usual new unit period
 
 \DefineBibliographyStrings{english}{%
@@ -520,14 +543,14 @@
   \usebibmacro{byeditor+others}%
   \newunit\newblock
   \printfield{edition}%
-  \newunit
+  \setunit{\addcomma\space}
   \iffieldundef{maintitle}
     {\printfield{volume}%
      \printfield{part}}
     {}%
-  \newunit
+  \setunit{\addcomma\space}
   \printfield{volumes}%
-  \setunit{\addspace}%                         crucial difference from standard.bbx: space and then (Series + number)
+  \setunit{\addspace}%
   \usebibmacro{series+number}%
   \newunit\newblock
   \printfield{note}%
@@ -728,3 +751,4 @@
 \DeclareFieldFormat{postnote}{#1}% display pages without page prefix (p., pp.)
 \DeclareBibliographyAlias{inbook}{incollection}% see https://github.com/semprag/biblatex-sp-unified/issues/35
 \DeclareFieldFormat[techreport,report,misc]{titlecase}{\MakeSentenceCase*{#1}}% techreport/report and misc are not genuinely supported by biblatex-sp-unified 
+\AtBeginBibliography{\sloppy}

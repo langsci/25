@@ -3,7 +3,7 @@
 \label{Kapitel-DG}
 
 Dependency Grammar (DG) is the oldest framework described in this book. According to
-\citet{HudsonHPSG-DG}, the basic assumptions made today in Dependency Grammar were already present in
+\citet[\page 1452]{Hudson2021a}, the basic assumptions made today in Dependency Grammar were already present in
 the work of the Hungarian Sámuel Brassai in 1873 (see \citealp{Imrenyi2013a}), the Russian Aleksej Dmitrievsky in 1877 and the German Franz
 \citet{Kern1884a-u}. The most influential version of DG was developed by the
 French linguist Lucien Tesnière (1893--1954). His foundational work \emph{Eléments de syntaxe
@@ -17,7 +17,7 @@ almost all of the current theories \citep[\page 262--263, 284]{AF2010a}.
 
 Although there is some work on English \citep{Anderson71a-u,Hudson84a-u}, Dependency Grammar is most popular in central Europe and especially so in Germany \citep[\page
   56--57]{Engel96a}. \citet[\page 250]{AF2010a} identified a possible reason for this: \tes's
-original work was not available in English until very recently \citep{Tesniere2015a-not-crossreferenced}, but there has
+original work was not available in English until very recently \citep{Tesniere2015a-u}, but there has
 been a German translation for more than 35 years now \citep{Tesniere80a-u}. Since Dependency Grammar focuses on dependency relations rather than
 linearization of constituents, it is often felt to be more appropriate for languages with freer
 constituent order, which is one reason for its popularity among researchers working on Slavic\il{Slavic}
@@ -566,7 +566,7 @@ serializations of constituents \citep{GK2001a,Hellwig2003a}.
 %\addlines
 \tes already distinguished the participants of a verb in a way that was later common in theories of
 semantic roles. He suggested that the first actant is the agent, the second one a patient and the
-third a benefactive \citep[Chapter~106]{Tesniere2015a-not-crossreferenced}.
+third a benefactive \citep[Chapter~106]{Tesniere2015a-u}.
 % \citealp[\page 258]{AF2010a}).
 %\citet{Welke2003a-u} and \citet{Fillmore2003a-u} discuss the assignment of semantic roles in
 %overview articles on Dependency Grammar. 
@@ -598,7 +598,7 @@ Grammar as well. Glue semantics was already introduced in Section~\ref{glue-sema
 
 There are some variants of Dependency Grammar that have explicit treatments of
 semantics. One example is \mtt \citep{Melcuk88a-u}. Word Grammar is another one
-(Hudson \citeyear[Chapter~7]{Hudson91a-u}; \citeyear[Chapter~5]{Hudson2007a-u}). The notations of
+(Hudson \citeyear[Chapter~7]{Hudson90a-u}; \citeyear[Chapter~5]{Hudson2007a-u}). The notations of
 these theories cannot be introduced here. It should be noted though that theories like Hudson's Word
 Grammar are rather rigid about linear order and do not assume that all the sentences in
 (\ref{ex-gestern-war-ich-bei-tom}) have the same dependency structure (see Section~\ref{sec-nld-dg}). Word
@@ -1134,15 +1134,17 @@ verb-final sentences.%
 \section{New developments and theoretical variants}
 
 \addlines[-2]
-This section mainly deals with \tes's variant of Dependency Grammar. Section~\ref{sec-tesniere-pos}
+This section and the following one are for advanced readers.
+The present section mainly deals with \tes's variant of Dependency Grammar. Section~\ref{sec-tesniere-pos}
 deals with \tes's part of speech system and Section~\ref{sec-connection-junction-transfer} describes the modes of combinations of
-linguistics objects assumed by \tes.
+linguistics objects assumed by \tes. Reading this section is not necessary for a basic understanding
+of Dependency Grammar.
 
 \subsection{\tes's part of speech classification}
 \label{sec-tesniere-pos}
 
 As mentioned in the introduction, \tes is a central figure in the history of Dependency Grammar
-as it was him who developed the first formal model \citep{Tesniere59a-u,Tesniere80a-u,Tesniere2015a-not-crossreferenced}. There are many versions
+as it was him who developed the first formal model \citep{Tesniere59a-u,Tesniere80a-u,Tesniere2015a-u}. There are many versions
 of Dependency Grammar today and most of them use the part of speech labels that are used in other
 theories as well (N, P, A, V, Adv, Conj, \ldots). \tes had a system of four major categories: noun,
 verb, adjective, and adverb. The labels for these categories were derived from the endings that are
@@ -1533,7 +1535,7 @@ could be identified as the head. For more on headless constructions see Section~
 As \citet[\page lix]{KO2015a} point out, \tes uses so-called polygraphs\is{polygraph|(} to represent scopal
 relations. So, since \emph{that you saw yesterday} in (\mex{1}) refers to \emph{red cars} rather
 than \emph{cars} alone, this is represented by a line that starts at the connection between
-\emph{red} and \emph{cars} rather than on one of the individual elements \citep[\page 150, Stemma~149]{Tesniere2015a-not-crossreferenced}.
+\emph{red} and \emph{cars} rather than on one of the individual elements \citep[\page 150, Stemma~149]{Tesniere2015a-u}.
 \ea
 red cars that you saw yesterday
 \z
@@ -1541,14 +1543,24 @@ red cars that you saw yesterday
 corresponds to the phrase structure tree on the right of Figure~\ref{fig-tesniere-scope}.
 \begin{figure}
 \hfill
+% St. Mü.: my handdrawn version
+% \begin{forest}
+% %baseline
+% [cars, l sep=9ex
+%   [red,edge label={node[midway,above,font=\small]{B~~~~~}}]
+%   [that you saw yesterday, no edge]]
+% %\draw (-1.4,-3) to[grid with coordinates] (3,0.2);
+% \draw (-.5,-.8) -- (.6,-1.6)  node[font=\small,midway,above] {~~~A};
+% \end{forest}
+% \hfill
+% Felix Kopechky: "($ (cars) !.5! (red) $)" ist TikZonisch für "Mittelpunkt zwischen cars und red". Wenn man die Linie dann nach (thatyousawyesterday) schickt, sucht sich TikZ automatisch den richtigen Ankerpunkt, sodass eine schöne Linie im rechten Winkel entsteht.
+% St.Mü.: Ist kein rechter Winkel aber ein guter. =:-)
 \begin{forest}
-%baseline
-[cars, l sep=9ex
-  [red,edge label={node[midway,above,font=\small]{B~~~~~}}]
-  [that you saw yesterday, no edge]]
-%\draw (-1.4,-3) to[grid with coordinates] (3,0.2);
-\draw (-.5,-.8) -- (.6,-1.6)  node[font=\small,midway,above] {~~~A};
-\end{forest}
+[cars, l sep=9ex, name=cars
+  [red,name=red, edge label={node[midway,above,font=\small]{B~~~~~}}]
+  [that you saw yesterday, no edge, name=thatyousawyesterday]]
+\draw ($ (cars) !.5! (red) $) -- (thatyousawyesterday)  node[font=\small,midway,above] {~~~A};
+\end{forest} 
 \hfill
 \begin{forest}
 %baseline, 
@@ -1601,6 +1613,8 @@ that Hudson assumes in order to model semantic relations.
 % Uzonyi2003a-u: Konstituenz vs. Dependenz: Zur Kompatibilität und Konvertierbarkeit der beiden Strukturprinzipien
 
 % Es muss einen Valenzträger geben.
+
+This section is for advanced readers. It compares Dependency Grammar to phrase structure grammars.
 
 Proponents of Dependency Grammar emphasize the point that Dependency Grammar is much simpler than
 phrase structure grammars, since there are fewer nodes and the general concept is more easy to
@@ -2433,7 +2447,7 @@ dg edges
 But note that this does not hold in the general case. Take for instance the example in (\mex{1}):
 \ea
 \gll Dass Peter kommt, klärt nicht, ob Klaus kommt.\\
-     that Peter comes    resolves not whether Klaus plays\\
+     that Peter comes    resolves not whether Klaus comes\\
 \glt `That Peter comes does not resolve the question of whether Klaus comes.'
 \z
 Here the word \emph{kommt} appears twice. Without any notion of constituency or
@@ -2853,7 +2867,7 @@ gap \citep[\page 216--217]{ps2}. Similar analyses can be found in Dependency Gra
   head. 
 
   Another option is to assume that words may have multiple functions: so, a relative pronoun may be
-  both a head and a dependent simultaneously (\citealp[Chapter 246, §8--11]{Tesniere2015a-not-crossreferenced}; \citealp[\page xlvi]{KO2015a}; \citealp[\page
+  both a head and a dependent simultaneously (\citealp[Chapter 246, §8--11]{Tesniere2015a-u}; \citealp[\page xlvi]{KO2015a}; \citealp[\page
     129--130]{Kahane2009a}). At least the analysis of Kahane is an instance of the Categorial
   Grammar analysis that was discussed in Section~\ref{Abschnitt-Relativsaetze-CG} and it suffers from the same problems: if the
   relative pronoun is a head that selects for a clause that is missing the relative pronoun, it is not easy to see how
@@ -2954,7 +2968,7 @@ One way out of these problems would of course be to assume that there are specia
 mechanisms that assign a new category to one or several elements. This would basically be an
 unheaded phrase structure rule and this is what \tes suggested: transfer rules (see
 Section~\ref{sec-transfer-dg}). But this is of course an extension of pure Dependency Grammar
-towards a mixed model. See also \citet{HudsonHPSG-DG} for a treatment of the N-P-N construction in
+towards a mixed model. See also \citet[\page 1476--1477]{Hudson2021a} for a treatment of the N-P-N construction in
 Word Grammar\indexwg involving a complex network of nodes, that is, something that leaves the normal
 descriptive devices of Dependency Grammars.\is{construction!N-P-N|)}
 
@@ -2990,12 +3004,12 @@ In the section on further reading in Chapter~\ref{chap-GB}, I referred to the bo
 and all analyze the same newspaper article. The book also contains a chapter by \citet{Engel2014a},
 assuming his version of Dependency Grammar, namely \emph{Dependent Verb Grammar}.
 
-\citet*{AEEHHL2003a-ed-not-crossreferenced,AEEHHL2006a-ed-not-crossreferenced} published a handbook on dependency and valence that discusses
+\citet*{AEEHHL2003a-ed,AEEHHL2006a-ed} published a handbook on dependency and valence that discusses
 all aspects related to Dependency Grammar in any imaginable way. Many of the papers have been cited
 in this chapter. Papers comparing Dependency Grammar with other theories are especially relevant
 in the context of this book: \citet{Lobin2003a} compares Dependency Grammar and
 Categorial Grammar, \citet{Oliva2003a} deals with the representation of valence and dependency in
-HPSG, \citet{HudsonHPSG-DG} discusses Dependency Grammar in general and compares his version of the
+HPSG, \citet{Hudson2021a} discusses Dependency Grammar in general and compares his version of the
 theory, namely Word Grammar, with HPSG, and \citet*{BJR2003a-u} describe how valence and dependency are covered in
 TAG. \citet{Hellwig2006a} compares rule"=based grammars with Dependency Grammars with special
 consideration given to parsing by computer programs.
@@ -3004,7 +3018,7 @@ consideration given to parsing by computer programs.
 that certain variants of Minimalism are in fact reinventions of dependency"=based analyses.
 
 The original work on Dependency Grammar by \citet{Tesniere59a-u} is also available in parts in German
-\citep{Tesniere80a-u} and in full in English \citep{Tesniere2015a-not-crossreferenced}.}
+\citep{Tesniere80a-u} and in full in English \citep{Tesniere2015a-u}.}
 
 \if0
 

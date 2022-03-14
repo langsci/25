@@ -37,15 +37,17 @@
 
 
 % bibdesk stuff
-\DeclareDatamodelFields[type=field,datatype=literal]{
+
+\DeclareDatamodelFields[type=field,datatype=uri]{
    bdsk-url-1,
-   bdsk-url-2,
+   bdsk-url-2}
+
+\DeclareDatamodelFields[type=field,datatype=literal]{
    bdsk-file-1,
    bdsk-file-2,
    bdsk-file-3,
    date-added,
    date-modified,
-   rating,
    read}
 \DeclareDatamodelEntryfields{
    bdsk-url-1,
@@ -55,57 +57,61 @@
    bdsk-file-3,
    date-added,
    date-modified,
-   rating,
    read}
 
 % opt fields
 
+\DeclareDatamodelFields[type=field,datatype=uri]{
+   opturl}
+
 \DeclareDatamodelFields[type=field,datatype=literal]{
-%optdate,
-cited,
 optaddress,
-optbooktitle,
-optdoi,
-optlocation,
-optnote,
-opturldate,
-optpages,
-price,
-optnumber,
+%optdate,
 opteditor,
 optchapter,
 optisbn,
 optissn,
+optlocation,
+optnote,
 optmonth,
+optpages,
 optpublisher,
+opturldate,
 optschool,
-opttype,
-opturl,
 optyear}
 
 \DeclareDatamodelEntryfields{
-%optdate,
-cited,
 optaddress,
-optbooktitle,
-optdoi,
-optlocation,
-optnote,
-opturldate,
-optpages,
-price,
-optnumber,
+%optdate,
 opteditor,
 optchapter,
 optisbn,
 optissn,
+optlocation,
 optmonth,
+optnote,
+optpages,
 optpublisher,
 optschool,
-opttype,
-opturl}
+opturl,
+opturldate}
 
+% other stuff
+\DeclareDatamodelFields[type=field,datatype=literal]{
+cited,
+price,
+rating}
 
+\DeclareDatamodelEntryfields{
+cited,
+price,
+rating}
+
+%\DeclareDatamodelFields[type=field,datatype=literal]{
+%xdata}
+
+%\DeclareDatamodelEntryfields{
+%xdata}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

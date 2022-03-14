@@ -57,10 +57,11 @@ large grammar fragments of various languages. The following is a list of impleme
 Kiss91a,%
 Netter93a-u,Netter96a,% DISCO
 Meurers94,% ALE, Troll
-HMRSW97a-ed,Kordoni99a-ed-not-crossreferenced,Tseng2000a-ed,% ConTroll
+HMRSW97a-ed,Kordoni99a-ed,Tseng2000a-ed,% ConTroll
 GK94-u,% STUF
 Keller95,% CUF
 Babel,Mueller99a,% Babel
+SRTD96a,%ALEP, LS-GRAM
 %LKB
 MK2000a,Crysmann2003b,Crysmann2005a-u,Crysmann2005c,%
 MuellerLehrbuch1,%
@@ -83,11 +84,11 @@ KP2007a,KP2008a-u,Kaufmann2009a-u,Fokkens2011a},
 \item Mandarin Chinese\il{Mandarin Chinese} 
 \citep*{Liu97a,% PATR
 Ng97a,% ALE
-ML2009a,ML2013a,YF2014a-u,FSB2015a-u},
+ML2009a,ML2013a,YF2014a-u,FSB2015a-u,FanSongBond2015a-u},
 \item Norwegian\il{Norwegian} \citep{HH2004a-u,BH2004a-u,HB2006a-u,Haugereid2017a-u}, 
 \item Persian\il{Persian} \citep{MuellerPersian,MG2010a},
 \item Polish\il{Polish} \citep*{PKMM2002a-u,MMPK2003a-u}, % did not do any work ,Bolc2005a-u},
-\item Portuguese\il{Portuguese} \citep{BC2008a-u,BC2008b-single-quotes,CB2010a-u},
+\item Portuguese\il{Portuguese} \citep{BC2008a-u,BC2008b-u,CB2010a-u},
 \item Russian\il{Russian} \citep{AZ2009a-u}, %aus Korpora konvertiert ...
 \item Sahaptin\il{Sahaptin} \citep{Drellishak2009a-u}, % auch NACL 2010
 \item Spanish\il{Spanish}
@@ -138,7 +139,7 @@ The following URLs point to pages on which grammars can be tested:
 % nicht wirklich HPSG
 %http://www-tsujii.is.s.u-tokyo.ac.jp/enju/demo.html
 \end{itemize}
-For further information on the interaction between HPSG and computational linguistics see \citet{BE2020a}.
+For further information on the interaction between HPSG and computational linguistics see \citew{Bender:Emerson:2021a}.
 
 \section{General remarks on the representational format}
 
@@ -897,7 +898,7 @@ An important difference between theories such as GB, LFG and TAG, on the one han
 object is modeled in a feature structure just like all its other properties. As previously mentioned, semantic information is found under the path
 \textsc{synsem|""loc|""cont}. (\mex{1}) gives an example of the \contv for \emph{Buch} `book'. The
 representation is based on Minimal Recursion Semantics\indexmrs (MRS):\footnote{%
-   \citet{ps2} and \citet{GSag2000a-u} make use of Situation Semantics\is{Situation Semantics}  \citep*{BP83a,CMP90,Devlin92}\nocite{BP87a}.
+   \citet{ps2} and \citet{GSag2000a-u} make use of Situation Semantics\is{Situation Semantics} \citep*{BP83a,CMP90,Devlin92}\nocite{BP87a}.
    An alternative approach which has already been used in HPSG is Lexical Resource Semantics\is{Lexical Resource Semantics (LRS)} \citep{RS2004a-u}.
    For an early underspecification analysis in HPSG, see \citew{Nerbonne93a}.
 }
@@ -1017,7 +1018,7 @@ The type for the relation \relation{geben} is a subtype of \type{agent-goal-them
 The lexical entry for the word \emph{geben} `give' or rather the root \stem{geb} has the linking pattern in (\mex{0}).
 %
 For more on theories of linking in HPSG, see \citew{Davis96a-u}, \citew{Wechsler95a-u} and
-\citew{DK2000b-u}. \citet{WKD2020a} provide an overview of approaches to linking within HPSG.
+\citew{DK2000b-u}. \citet{DKW2021a} provide an overview of approaches to linking within HPSG.
 \is{linking|)}
 
 \addlines 
@@ -1912,7 +1913,7 @@ The following schema is a revised version of the Head"=Complement Schema:
 \begin{schema}[Head-Complement Schema (binary branching)]
 \label{schema-bin-prel2}
 ~\\*[-8pt]
-\type{head"=complement"=phrase}\istype{head"complement"=phrase} \impl\\*
+\type{head"=complement"=phrase}\istype{head"=complement"=phrase} \impl\\*
 \onems{
       synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \ibox{3}\\
       head-dtr$|$synsem$|$loc$|$cat$|$comps \ibox{1} $\oplus$ \sliste{ \ibox{2} } $\oplus$ \ibox{3}\\
@@ -2262,6 +2263,8 @@ in that dependency.%
 
 \section{New developments and theoretical variants}
 
+This section and the following one is for advanced readers. It can be skipped without problems in
+understanding the following chapters on other frameworks.
 
 %% This section discusses refinements of the representation of valence information in
 %% Subsection~\ref{Abschnitt-Arg-St} and briefly mentions an important variant of HPSG, namely
@@ -2481,7 +2484,7 @@ of long"=distance dependencies. Theories such as LFG and HPSG are therefore more
 the analysis of relative phrases.
 \end{sloppypar}
 
-In the first decade of HPSG history (\citealp*{ps,ps2,NNP94a-ed-not-crossreferenced}), despite the differences already mentioned here, HPSG was still very similar to Categorial Grammar
+In the first decade of HPSG history (\citealp*{ps,ps2,NNP94a-ed}), despite the differences already mentioned here, HPSG was still very similar to Categorial Grammar
 in that it was a strongly lexicalized theory. The syntactic make-up and semantic content of a phrase was determined by the head (hence the term \emph{head-driven}).
 In cases where head-driven analyses were not straight-forwardly possible, because no head could be identified in the phrase in question, then it was commonplace to
 assume empty heads\is{empty element}. An example of this is the analysis of relative clauses in \citet[Chapter~5]{ps2}.
