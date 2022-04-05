@@ -132,7 +132,7 @@ The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediat
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
 relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-Kind-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
-The NP node and V are \emph{sisters}\is{node!sister} since they have the same mother node.
+The NP nodes and V are \emph{sisters}\is{node!sister} since they have the same mother node.
 If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
 If there is exactly one daughter, then we have a unary\is{unary}\is{branching!unary} branching
 structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
@@ -361,7 +361,7 @@ NP\_3\_pl\_nom  & $\to$ Det\_neu\_pl\_nom & N\_neu\_pl\_nom \\[2mm]
 \end{tabular}
 \z
 (\mex{0}) shows the rules for nominative noun phrases. We would need analogous rules for genitive,
-dative, and accusative. We would then require 24 symbols for determiners ($3*2*4$), 24 symbols for nouns and
+dative, and accusative. We would then require 24 symbols for determiners ($3 \cdot 2 \cdot 4$), 24 symbols for nouns and
 24 rules rather than one. If inflection class is taken into account, the number of symbols and the
 number of rules doubles.\is{agreement|)} 
 
@@ -402,7 +402,7 @@ NP({3},{Num},{Case}) & $\to$ & Det(Gen,{Num},{Case}) N(Gen,{Num},{Case})\\
 The values of the variables here are not important. What is important is that they match. For this
 to work, it is important that the values are ordered; that is, in the category of a determiner, the gender is always first, number
 second and so on. The value of the person feature (the first position in the NP(3,Num,Case)) is fixed at `3' by the rule. These
-kind of restrictions on the values can, of course, be determined in the lexicon: 
+kinds of restrictions on the values can, of course, be determined in the lexicon: 
 \ea
 \begin{tabular}[t]{@{}l@{ }l}
 NP(3,sg,nom)  & $\to$ es\\
@@ -637,7 +637,7 @@ The additional elements in (\mex{0}) are adjuncts\is{adjunct|(}. They restrict t
 refers to. Whereas (\mex{0}a) refers to a being which has the property of being a book, the referent of (\mex{0}b) must
 also have the property of being known to us.
 
-Our previous rules for noun phrases simply combined a noun and a determiner and can therefore only be used to
+Our previous rule for noun phrases simply combines a noun and a determiner and can therefore only be used to
 analyze (\mex{0}a). The question we are facing now is how we can modify this rule or which additional rules we would
 have to assume in order to analyze the other noun phrases in (\mex{0}). In addition to rule (\mex{1}a), one could propose 
 a rule such as the one in (\mex{1}b).\footnote{%
@@ -679,7 +679,7 @@ is still possible in (\mex{1}):
 \ea
 \gll alle [[großen Seeelefanten] und [grauen Eichhörnchen]]\\
      all  \spacebr{}\spacebr{}big elephant.seals and  \spacebr{}grey squirrels\\
-\glt `all the big elephant seals and grey squirrels'	 
+\glt `all big elephant seals and grey squirrels'	 
 \z
 If we assume that coordination involves the combination of two or more word strings with the same syntactic properties, then we would have to assume
 that the adjective and noun form a unit.
@@ -1059,7 +1059,7 @@ or nouns without complements in (\mex{0}c) as well as (\ref{NP-Regeln-Nbar-N}) -
 \ea
 \nbar $\to$ N
 \z
-If we apply these rules, then we will generate unary branching subtrees, that is trees with a mother that
+If we apply these rules, then we will generate unary branching subtrees, that is, trees with a mother that
 only has one daughter. See Figure~\ref{Abbildung-NP-ohne-Det} for an example of this. If we maintain the
 parallel to the boxes, this would mean that there is a box which contains another box which is the one with 
 the relevant content.
