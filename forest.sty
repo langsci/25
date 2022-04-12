@@ -3954,8 +3954,13 @@
   declare dimen={s}{0pt},
   declare dimen={l}{6ex}, % just in case: should be set by the calibration
   declare dimen={s sep}{0.6666em},
+  % todo: Note that "s sep before/after" makes sense even in the presence of the "padding" options, because it operates in the (l,s) coordinate system, while padding operates in the node's coordinate system.
   declare dimen={s sep before}{0pt},
   declare dimen={s sep after}{0pt},
+  declare dimen={padding west}{0pt},
+  declare dimen={padding east}{0pt},
+  declare dimen={padding north}{0pt},
+  declare dimen={padding south}{0pt},
   declare dimen={l sep}{1ex},  % just in case: calibration!
   declare keylist={node options}{anchor=base},
   declare toks={tikz}{},
@@ -4610,6 +4615,9 @@
 }
 \def\forest@nodewalk@oninvalid@inherited@text{inherited}
 \def\forest@Nodewalk#1#2{% #1 = nodewalk, #2 = every step keylist
+  \ifforestdebugnodewalks
+    \typeout{About to start nodewalk "\detokenize{#1}" with every step = "\detokenize{#2}"}%
+  \fi
   \ifx\forest@nodewalk@config@oninvalid\forest@nodewalk@oninvalid@inherited@text
     \edef\forest@nodewalk@config@oninvalid{\forest@nodewalk@oninvalid}%
   \fi
@@ -4669,7 +4677,7 @@
 }
 \def\forest@nodewalk@makestep@debug{%
   \edef\forest@marshal{%
-    \noexpand\typeout{\ifforest@nodewalk@fake fake \fi "\forest@nodewalk@currentstepname" step to node id=\forest@cn, content=\forestoption{content}}%
+    \noexpand\typeout{\ifforest@nodewalk@fake fake \fi "\forest@nodewalk@currentstepname" step to node id=\forest@cn, content=\noexpand\unexpanded{\forestoption{content}}}%
   }\forest@marshal
 }%
 \def\forest@nodewalk@makestep@invalidtolastvalid@debug{%
@@ -4743,7 +4751,7 @@
     \pretotoks\forest@temp@toks{\appto\forest@nodewalk@currentstepname{,#1}}%
     \expandafter\forest@temp@toks\expandafter{\expandafter\forest@saveandrestoremacro\expandafter\forest@nodewalk@currentstepname\expandafter{\the\forest@temp@toks}}%
     \ifforestdebugnodewalks
-      \epretotoks\forest@temp@toks{\noexpand\typeout{Starting step "#1" from id=\noexpand\forest@cn
+      \epretotoks\forest@temp@toks{\noexpand\typeout{Starting step "#1" from id=\noexpand\forest@cn, content=\noexpand\forestoption{content}
           \ifnum\forest@nodewalkstephandler@nargs>0 \space with args \noexpand\unexpanded{####1}\fi
           \ifnum\forest@nodewalkstephandler@nargs>1 ,\noexpand\unexpanded{####2}\fi
           \ifnum\forest@nodewalkstephandler@nargs>2 ,\noexpand\unexpanded{####3}\fi
@@ -4934,6 +4942,9 @@
     \edef\forest@cn{%
       \forest@node@Ifnamedefined{#1}{\forest@node@Nametoid{#1}}{0}%
     }%
+  },
+  define long step={relative name}{autostep,n args=1,must start at valid node=false}{%
+    \forest@nameandgo{#1}%
   },
   define long step={id}{autostep,n args=1,must start at valid node=false}{%
     \forestOifdefined{#1}{@parent}{\edef\forest@cn{#1}}{\edef\forest@cn{0}}%
@@ -5790,6 +5801,7 @@
 \def\forest@create@node#1{% #1=bracket representation
   \bracketParse{\forest@create@collectafterthought}%
                \forest@last@node=#1\forest@end@create@node
+  \let\forest@last@created\forest@last@node
 }
 \def\forest@create@collectafterthought#1\forest@end@create@node{%
   \forest@node@Foreach{\forest@last@node}{%
@@ -5802,6 +5814,7 @@
 \def\forest@create@node@and@process@given@options#1{% #1=bracket representation
   \bracketParse{\forest@createandprocess@collectafterthought}%
                \forest@last@node=#1\forest@end@create@node
+  \let\forest@last@created\forest@last@node
 }
 \def\forest@createandprocess@collectafterthought#1\forest@end@create@node{%
   \forest@node@Compute@numeric@ts@info{\forest@last@node}%
@@ -5899,8 +5912,10 @@
    \forest@nodehandleby@name@nodewalk@or@bracket{#2}%
    \ifcase\forest@dynamics@copyhow\relax\or
      \forest@tree@copy{\forest@last@node}\forest@last@node
+     \let\forest@last@created\forest@last@node
    \or
      \forest@node@copy{\forest@last@node}\forest@last@node
+     \let\forest@last@created\forest@last@node
    \fi
    \forest@node@Ifnamedefined{forest@last@node}{%
      \forestOepreto{\forest@last@node}{delay}
@@ -6061,7 +6076,10 @@
 \forestset{
   define long step={last dynamic node}{style,must start at valid node=false}{%
     name=forest@last@node
-  }
+  },
+  define long step={last created}{style,must start at valid node=false}{%
+    id=\forest@last@created
+  },
 }
 \def\forest@root{0}
   %%% begin listing region: stages
@@ -6102,8 +6120,12 @@
   do dynamics/.code={%
     \the\forest@do@dynamics
     \forest@do@dynamics{}%
-    \forest@node@Compute@numeric@ts@info{\forest@root}%
+    \forest@forthis{%
+      \forest@nameandgo{#1}%
+      \forest@node@Compute@numeric@ts@info{\forest@cn}%
+    }%
   },
+  do dynamics/.default=!{root'},
   declare keylist={given options}{},
   declare keylist={before typesetting nodes}{},
   declare keylist={before packing}{},
@@ -6228,7 +6250,7 @@
   % note: this macro works on (nodewalk starting at) the current node
   \safeloop
     \forest@forthis{\forest@process@hook@keylist@{#1}{#2}}%
-  \forest@havedelayedoptions{#1}{#2}%
+    \forest@havedelayedoptions{#1}{#2}%
   \ifforest@havedelayedoptions
   \saferepeat
 }
@@ -6310,6 +6332,7 @@
   \gdef\forest@smuggle{}%
   \setbox0=\hbox{%
     \tikzset{every picture/.style={}}%
+    \forest@unmarknextpictureposition
     \begin{tikzpicture}[%
       /forest/copy command key={/tikz/anchor}{/tikz/forest@orig@anchor},
       anchor/.style={%
@@ -6326,6 +6349,9 @@
   \setbox\forestove{@box}=\box\forest@box % smuggle the box
   \forestolet{@boundary}\forest@global@boundary
   \forest@smuggle % ... and the rest
+}
+\def\forest@unmarknextpictureposition{%
+  \global\cslet{pgf@sys@pdf@mark@pos@pgfid\the\numexpr\pgf@picture@serial@count+1\relax}\relax
 }
 
 \forestset{
@@ -7240,7 +7266,15 @@
     alignment.}%
 }
 \pgfdeclaregenericanchor{forestcomputenodeboundary}{%
-  \letcs\forest@temp@boundary@macro{forest@compute@node@boundary@#1}%
+  \forestoget{padding west}\forest@temp
+  \forest@padding@west=\forest@temp\relax
+  \forestoget{padding east}\forest@temp
+  \forest@padding@east=\forest@temp\relax
+  \forestoget{padding north}\forest@temp
+  \forest@padding@north=\forest@temp\relax
+  \forestoget{padding south}\forest@temp
+  \forest@padding@south=\forest@temp\relax
+  \forest@temp@dimen=0pt
   \ifcsname forest@compute@node@boundary@#1\endcsname
     \csname forest@compute@node@boundary@#1\endcsname
   \else
@@ -7251,14 +7285,53 @@
 }
 \def\forest@mt#1{%
   \expandafter\pgfpointanchor\expandafter{\pgfreferencednodename}{#1}%
+  \forest@pad
   \pgfsyssoftpath@moveto{\the\pgf@x}{\the\pgf@y}%
 }%
 \def\forest@lt#1{%
   \expandafter\pgfpointanchor\expandafter{\pgfreferencednodename}{#1}%
+  \forest@pad
   \pgfsyssoftpath@lineto{\the\pgf@x}{\the\pgf@y}%
 }%
+\newdimen\forest@padding@west
+\newdimen\forest@padding@east
+\newdimen\forest@padding@north
+\newdimen\forest@padding@south
+\def\forest@pad{%
+  \ifdim\pgf@x<\forest@temp@dimen % 0pt
+    \global\advance\pgf@x -\forest@padding@west
+  \else
+    \ifdim\pgf@x>\forest@temp@dimen % 0pt
+      \global\advance\pgf@x \forest@padding@east
+    \fi
+  \fi
+  \ifdim\pgf@y<\forest@temp@dimen % 0pt
+    \global\advance\pgf@y -\forest@padding@north
+  \else
+    \ifdim\pgf@y>\forest@temp@dimen % 0pt
+      \global\advance\pgf@y \forest@padding@south
+    \fi
+  \fi
+}
 \def\forest@compute@node@boundary@coordinate{%
+  \let\forest@cnb@next\forest@cnb@padded@coordinate
+  \ifdim\forest@padding@west=\forest@temp@dimen\relax
+    \ifdim\forest@padding@east=\forest@temp@dimen\relax
+      \ifdim\forest@padding@north=\forest@temp@dimen\relax
+        \ifdim\forest@padding@south=\forest@temp@dimen\relax
+          \let\forest@cnb@next\forest@cnb@nonpadded@coordinate
+  \fi\fi\fi\fi
+  \forest@cnb@next
+}
+\def\forest@cnb@nonpadded@coordinate{%
   \forest@mt{center}%
+}
+\def\forest@cnb@padded@coordinate{%
+  \pgfsyssoftpath@moveto{-\forest@padding@west}{-\forest@padding@south}%
+  \pgfsyssoftpath@lineto{\forest@padding@east}{-\forest@padding@south}%
+  \pgfsyssoftpath@lineto{\forest@padding@east}{\forest@padding@north}%
+  \pgfsyssoftpath@lineto{-\forest@padding@west}{\forest@padding@north}%
+  \pgfsyssoftpath@lineto{-\forest@padding@west}{-\forest@padding@south}%
 }
 \def\forest@compute@node@boundary@circle{%
   \forest@mt{east}%
@@ -8565,9 +8638,10 @@
   \ifdefempty\forest@extract@filename{}{%
     \immediate\write\forest@extract@out{%
       \noexpand\begin{forest}(\unexpanded{#2})}}%
+  \IfBooleanF{#1}{\begingroup}%
   \forest@config{#2}%
-  \IfBooleanTF{#1}{\let\forest@next\forest@env}{\let\forest@next\forest@group@env}%
-  \forest@next{#3}%
+  \forest@env{#3}%
+  \IfBooleanF{#1}{\endgroup}%
 }
 \def\forestconfigset#1{\pgfqkeys{/forest/@config}{#1}}%
 \def\forest@config#1{%
@@ -8587,7 +8661,6 @@
   externalize/.append code={\forest@config@externalizethisappliedtrue},
   .unknown/.code={\PackageError{forest}{Unknown config option for forest environment/command.}{In Forest v2.0.0 and v2.0.1, this (parenthesized) argument accepted the definition of style stages for the current forest environment/macro. Since v2.0.2, you should write "\string\begin{forest}(stages={...})...\string\end{forest}", or "\string\Forest(stages={...}){...}" instead.}}
 }
-\def\forest@group@env#1{{\forest@env{#1}}}
 \newif\ifforest@externalize@tree@
 \newif\ifforest@was@tikzexternalwasenable
 \newif\ifforest@config@externalizethis
@@ -8724,7 +8797,7 @@
   \expandafter\forest@temp@toks\expandafter{\the\forest@temp@toks}%
   \immediate\write\forest@extract@out{%
     \detokenize\expandafter{\the\forest@temp@toks}%
-    \noexpand\end{forest}%
+    \noexpand\end{forest}\par
   }%
 }
 \long\def\forestLoadExternal#1#2#3#4{% #1=n,#2=context+source code,#3=update check code, #4=load code
@@ -9331,6 +9404,7 @@
       \def\forest@pa@temp@name{later@name}%
     }%
   }{}%
+  \forest@unmarknextpictureposition
   \setbox0\hbox{%
     \begin{pgfpicture}%
       \if\relax\forestOve{#1}{#2}\relax
