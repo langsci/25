@@ -2156,8 +2156,8 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 \usepackage[figuresright]{rotating}
 
 %% hspace over width of something without showing it
-\newlength{\LSPTmp}
-\newcommand*{\hspaceThis}[1]{\settowidth{\LSPTmp}{#1}\hspace*{\LSPTmp}}
+%\newlength{\LSPTmp}
+%\newcommand*{\hspaceThis}[1]{\settowidth{\LSPTmp}{#1}\hspace*{\LSPTmp}}
 
 % no this does add vertical space instead of horizontal St. Mü. 04.03.2018
 % \newcommand*{\hspaceThis}[1]{\hphantom{#1}} %should be equivalent

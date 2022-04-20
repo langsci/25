@@ -220,6 +220,8 @@ stmue-install:
 	cp -p ${STYLE-PATH}makros.2e.sty                   styles/
 	cp -p ${STYLE-PATH}abbrev.sty                        styles/
 	cp -p ${STYLE-PATH}eng-date.sty                      styles/
+	cp -p ${STYLE-PATH}eng-hyp-utf8.sty                  styles/
+	cp -p ${STYLE-PATH}mycommands.sty                    styles/
 	cp -p ${STYLE-PATH}biblatex-series-number-checks.sty styles/
 	cp -p ${STYLE-PATH}Ling/article-ex.sty               styles/
 	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty          styles/
@@ -263,11 +265,11 @@ unusedgt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
 
 
 # xelatex has to be run two times + biber to get "also printed as ..." right.
-gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
+gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation.tex
 	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
 	biber bib-creation
 	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation
-	biber --output_format=bibtex --output-legacy-date bib-creation.bcf -O gt_tmp.bib
+	biber --output_format=bibtex --output-resolve-xdata --output-legacy-date bib-creation.bcf -O gt_tmp.bib
 	biber --tool --configfile=biber-tool.conf --output-field-replace=location:address,journaltitle:journal --output-legacy-date gt_tmp.bib -O gt.bib
 
 
@@ -278,8 +280,14 @@ check-gt.bib: ../../../Bibliographien/biblio.bib
 check-bib: gt.bib 
 	biber --validate-datamodel grammatical-theory
 
+# what do you have to do after changing langsci.dbx? Everything?
+grammatical-theory.bcf: langsci.dbx ../../../Bibliographien/biblio.bib
+	xelatex grammatical-theory
+	biber grammatical-theory
+
 todo-bib.unique.txt: grammatical-theory.bcf
 	biber -V grammatical-theory | grep -i warn | sort -uf > todo-bib.unique.txt
+
 
 
 PUB_FILE=stmue.bib
