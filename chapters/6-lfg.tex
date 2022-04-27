@@ -172,7 +172,7 @@ The grammatical functions governed by a head (government = subcategorization)
 are determined in the specification of \textsc{pred}.\footnote{%
 In the structure in (\mex{0}b), the \lfgsubj{} and \lfgobj{} in the list following \emph{devour} are identical to the values of \lfgsubj{} and \lfgobj{} in the structure. For reasons of presentation, this will not be explicitly indicated in this structure and following structures.
 }
-Corresponding functions are called \emph{governable grammatical functions}\is{grammatical function!governable}. Examples of this are shown in Table~\vref{Tabelle-GOV} \citep{Dalrymple2006a}.
+Corresponding functions are called \emph{governable grammatical functions}\is{grammatical function!governable}. Examples of these are shown in Table~\vref{Tabelle-GOV} \citep{Dalrymple2006a}.
 \begin{table}
 \centering
 \begin{tabular}[t]{@{}lp{26em}@{}} 
@@ -194,7 +194,7 @@ is externally controlled\is{control}\\
 \end{tabular}
 \caption{\label{Tabelle-GOV}Governable grammatical functions}
 \end{table}\todostefan{\objtheta im Deutschen?}%
-The \lfgpred specification corresponds to the theta grid\is{theta-grid@$\theta$-grid} in \gbt. The valence\is{valence} of a head is specified by
+The \lfgpred{} specification corresponds to the theta grid\is{theta-grid@$\theta$-grid} in \gbt. The valence\is{valence} of a head is specified by
 the \predv.
 
 The non"=governable grammatical functions are given in Table~\vref{Tabelle-NGOV}.
@@ -258,10 +258,10 @@ For the analysis of (\mex{1}a), we get the constraints in (\mex{1}b):
 \ex David sneezed.
 \ex
 \begin{tabular}[t]{l}
-($f$ \lfgpred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\
+($f$ \lfgpred{}) = {\small `SNEEZE\sliste{\lfgsubj}'}\\
 ($f$ \lfgtense) = \lfgpast\\
 ($f$ \lfgsubj) = $g$\\
-($g$ \lfgpred) = {\small `DAVID'}
+($g$ \lfgpred{}) = {\small `DAVID'}
 \end{tabular}
 \zl
 
@@ -416,7 +416,7 @@ David devoured a sandwich that Peter sleeps.%\\
 
 \noindent
 The constraints on completeness and coherence together ensure that all and only those arguments required in
-the \lfgpred specification are actually realized.
+the \lfgpred{} specification are actually realized.
 Both of those constraints taken together correspond to the Theta"=Criterion\is{theta-criterion@Theta"=Criterion} in \gbt (see
 page~\pageref{theta-Kriterium}).\footnote{%
 For the differences between predicate"=argument structures in LFG and the deep structure oriented Theta Criterion, see \citew[\page xxvi--xxviii]{BK82a}.} 
@@ -474,7 +474,7 @@ In the equation (\up\ \lfgobj) = \down{},  the arrows `\up' and `\down' correspo
 (\mex{1}) is an example with an intransitive verb and (\mex{2}) is the corresponding visualization:
 
 \ea
-\catlexentry{sneezed}{V}{(\up\ \lfgpred) = {\small `SNEEZE\sliste{\lfgsubj}'}\\*
+\catlexentry{sneezed}{V}{(\up\ \lfgpred{}) = {\small `SNEEZE\sliste{\lfgsubj}'}\\*
                      (\up\ \lfgtense) = \lfgpast}
 \z
 
@@ -501,8 +501,8 @@ The following discussion heavily draws from the corresponding section of \citew{
 is a translation of my translation of the original material into German.)
 }
 Under a glue"=based approach, it is assumed that f"=structure is the level of syntactic representation which is crucial for the semantic interpretation of
-a phrase, that is, unlike \gbt, it is not the position of arguments in the tree which play a role in the composition of meaning, but rather functional relations such as 
-\lfgsubj and \lfgobj. Glue semantics assumes that each substructure of the f"=structure corresponds to a semantic resource connected to a meaning and furthermore, that the meaning
+a phrase, that is, unlike in \gbt, it is not the position of arguments in the tree which plays a role in the composition of meaning, but rather functional relations such as 
+\lfgsubj and \lfgobj. Glue semantics assumes that each substructure of the f"=structure corresponds to a semantic resource connected to a meaning and, furthermore, that the meaning
 of a given f"=structure comes from the sum of these parts. The way the meaning is assembled is
 regulated by certain instructions for the combination of semantic resources. These instructions are given
 as a set of logic premises written in linear logic\is{linear logic} as \emph{glue language}\is{glue language}. The computation of the meaning of an utterance corresponds to a logical conclusion.
@@ -516,7 +516,7 @@ premises of conclusions are not used at all or more than once in a derivation. H
 are resources which have to be used. This corresponds directly to the use of words in an expression:
 words contribute to the entire meaning exactly once. It is not possible to ignore them or to use
 their meaning more than once. A sentence such as \emph{Peter knocked twice.} does not mean the same as \emph{Peter knocked}. The meaning of
-\emph{twice} must be included in the full meaning of the sentences. Similarly, the sentence cannot
+\emph{twice} must be included in the full meaning of the sentence. Similarly, the sentence cannot
 mean the same as \emph{Peter knocked twice twice.}, since the semantic contribution of a given word cannot be used twice.
 
 The syntactic structure for the sentence in (\mex{1}a) together with its semantic representation is
@@ -530,8 +530,8 @@ given in (\mex{1}b):
   \tree[b]{NP}{\tree[n]{N}{\le{David}}}
   \tree[ii]{\hspaceThis{$'$}I$'$}{\tree[vp]{VP}{\tree[v]{V}{\le{yawned}}}}}}%
 \hspace*{3em}%
-{\fd{\rnode{s}{\fdand{\feat{\lfgpred}{\small `YAWN\sliste{\lfgsubj}'}
-           \feat{\subj}{\rnode{i}{\fdand{\feat{\lfgpred}{\small `DAVID'}}}}}}}}%
+{\fd{\rnode{s}{\fdand{\feat{\lfgpred{}}{\small `YAWN\sliste{\lfgsubj}'}
+           \feat{\subj}{\rnode{i}{\fdand{\feat{\lfgpred{}}{\small `DAVID'}}}}}}}}%
 \hspace*{2em}%
 \mt{\relation{yawn}(\relation{david})}{\rnode{x}{~[\ ]}}
 \ltor{ip}{s}
@@ -574,7 +574,7 @@ semantic resource $(\up\;\lfgsubj)_\sigma$ for the meaning of the subject is ava
 Unlike the implication operator of classic logic, the linear implication must consume and produce
 semantic resources: the formula \mbox{$(\up\ \lfgsubj)_\sigma\ \linimp\ \ups$} states that if a
 semantic resource \mbox{$(\up\  \lfgsubj)_\sigma$} is found, it is consumed and the semantic resource
-\ups is produced.
+\ups{} is produced.
 
 Furthermore, it is assumed that a proper name such as \emph{David} contributes its own semantic structure as a semantic resource. In an utterance such as \emph{David yawned},
 this resource is consumed by the verb \emph{yawned}, which requires a resource for its \lfgsubj in order to produce the resource for the entire sentence. This corresponds to the intuition
@@ -646,7 +646,7 @@ by \citet{Asudeh04a-u}\is{glue semantics|)}.
 
 Adjuncts\is{adjunct|(}\il{English|(} are not selected by their head. The grammatical function \textsc{adj}\isfeat{adj} is a non"=governable grammatical function. Unlike arguments, where every grammatical
 function can only be realized once, a sentence can contain multiple adjuncts. The value of \textsc{adj} in the f"=structure is therefore not a simple structure as with the other
-grammatical functions, but rather a set. For example, the f structure for the sentence in (\mex{1}a)
+grammatical functions, but rather a set. For example, the f"=structure for the sentence in (\mex{1}a)
 contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one for \emph{at noon}.
 \eal
 \ex\label{ex-david-devoured-a-sandwich-at-noon-yesterday} David devoured a sandwich at noon yesterday.
@@ -658,7 +658,7 @@ contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one
                         pred & `SANDWICH'\\
                       }\\
          adj & \menge{ \lfgms{ pred & `YESTERDAY' },
-                        \lfgms{ \lfgpred & `AT\sliste{\lfgobj}'\\
+                        \lfgms{ \lfgpred{} & `AT\sliste{\lfgobj}'\\
                                 obj   & \lfgms{ pred & `NOON' }\\
                               } }\\
 }
@@ -919,7 +919,7 @@ C$'$ is licensed by a special rule:
 \rulenode{VP\\*\up~=~\down}}
 \z
 In LFG rules, there is normally only one element annotated with `\up~=~\down', namely the head. In (\mex{0}), there are two such elements, which is why both equally contribute to the
-f"=structure of the mother. The head domain of V has been extended to C. The information about \lfgsubj and \lfgobj comes from the VP and the information about \lfgpred from C.%
+f"=structure of the mother. The head domain of V has been extended to C. The information about \lfgsubj and \lfgobj comes from the VP and the information about \lfgpred{} from C.%
 \is{head domain!extended|)}\is{verb"=final language}
 
 \section{Local reordering}
@@ -942,7 +942,7 @@ In what follows, I will present the analysis proposed by  \citet[Section~2.1.3]{
 somewhat simplified form. Case and grammatical functions of verbal arguments are determined
 in the lexicon \citep[\page 22]{Berman96a-u}. (\mex{1}) shows the lexical entry for the verb \emph{verschlingen} `devour':\footnote{%
 The four cases in German can be represented using two binary features ({\small GOV}, {\small OBL}) \citep[\page 22]{Berman96a-u}. Nominative corresponds to {\small GOV}$-$ and
-  {\small OBL}$-$ and accusative to {\small GOV}$+$ and {\small OBL}$-$. This kind of encoding allows one to leave case partially underspecified. If one does not provided a value
+  {\small OBL}$-$ and accusative to {\small GOV}$+$ and {\small OBL}$-$. This kind of encoding allows one to leave case partially underspecified. If one does not provide a value
   for {\small GOV}, then an element with {\small OBL}$-$  is compatible with both nominative and accusative. Since this underspecification is not needed in the following discussion,
   I will omit this feature decomposition and insert the case values directly.
 }$^,$\footnote{%
@@ -955,8 +955,8 @@ The four cases in German can be represented using two binary features ({\small G
 
 \noindent
   \citet[Section~2.1]{Karttunen89a-u} makes a similar suggestion for Finnish\il{Finnish} in the framework of Categorial Grammar\indexcxg.
-  Such analyses are not entirely unproblematic as case cannot always be reliably paired with grammatical functions. In German, as well as temporal
-  accusatives (ii.a), there are also verbs with two accusative objects (ii.b--c) and predicative accusatives (ii.d).
+  Such analyses are not entirely unproblematic as case cannot always be reliably paired with
+  grammatical functions. In German, there are temporal accusatives (ii.a), as well as verbs with two accusative objects (ii.b--c) and predicative accusatives (ii.d).
 
 \eal
 \ex 
@@ -987,8 +987,8 @@ f"=structure of \emph{glauben} `believe'. One would have to reformulate the impl
 for the fact that accusatives can come from a more deeply embedded f"=structure.
 
 \citet[\page 202]{Bresnan2001a} assumes that nonlocal dependencies crossing a clause involve a gap
-in German. With such a gap one can assume that case is only assigned locally within the verbal
-projection. In any case one would have to distinguish several types of frontings in German and the
+in German. With such a gap, one can assume that case is only assigned locally within the verbal
+projection. In any case, one would have to distinguish several types of frontings in German and the
 specification of case/grammatical function interaction would be much more complicate than (\ref{Kasus-Implikation-Berman}).%
 %Stellt sich aber immer noch die Frage, ob man weiß, was der Trace für kategoriale
 %Eigenschaften hat. Man findet den inside out und sagt dann OK, Deine Eigenschaften kenne ich jetzt
@@ -1001,7 +1001,7 @@ specification of case/grammatical function interaction would be much more compli
 }
 \ea
 \label{le-verschlingen}
-\catlexentry{verschlingt}{V}{(\up\ \lfgpred) = {\small `VERSCHLINGEN\sliste{\lfgsubj, \lfgobj}'}\\*
+\catlexentry{verschlingt}{V}{(\up\ \lfgpred{}) = {\small `VERSCHLINGEN\sliste{\lfgsubj, \lfgobj}'}\\*
                              (\up\ \lfgsubj{} {\small AGR CAS}) = NOM\\*
                              (\up\ \lfgobj{} {\small AGR CAS}) = ACC\\*
                              (\up\ \lfgtense) = \small PRES}
@@ -1011,7 +1011,7 @@ specification of case/grammatical function interaction would be much more compli
 \largerpage
 \noindent
 \citeauthor{Berman96a-u} proposes an analysis that does not combine the verb with all its arguments and adjuncts at
-the same time, as was the case in GPSG\indexgpsg. Instead, she chooses the other extreme and assumes
+the same time, as was the case in GPSG\indexgpsg. Instead, she chooses the other extreme, assuming
 that the verb is not combined with an adjunct or an argument, but rather forms a VP directly. The rule for this is shown in (\mex{1}):
 \ea
 \label{LFG-v-vp}
@@ -1029,10 +1029,10 @@ The following rule can be used additionally to combine the verb with its subject
 \ea
 \label{lfg-vp-regel}
 \phraserule{VP}{
-\rulenode{NP\\* (\upsp \lfgsubj|\lfgobj|\objtheta) = \down}
+\rulenode{NP\\* (\upsp \lfgsubj{}|\lfgobj{}|\objtheta) = \down}
 \rulenode{VP\\* \up~=~\down}}
 \z
-The `|'\is{$\vert$} here stands for a disjunction\is{disjunction}, that is, the NP can either be the subject or the object of the superordinate f"=structure. Since VP occurs both on the left
+The `|'\is{$\vert$} here stands for a disjunction\is{disjunction}, that is, the NP can be either the subject or the object of the superordinate f"=structure. Since VP occurs both on the left
 and right"=hand side of the rule in (\mex{0}), it can be applied multiple times.
 The rule is not complete, however. For instance, one has to account for prepositional objects, for clausal
 arguments, for adjectival arguments and for adjuncts. See footnote~\ref{fn-zp} on page~\pageref{fn-zp}.
@@ -1064,7 +1064,7 @@ The analysis of (\mex{0}b) is shown in Figure~\vref{Abb-OSV-LFG}.
 The analysis of (\mex{0}b) differs from the one of (\mex{0}a) only in the order of the replacement
 of the NP node by the subject or object.\todostefan{fix the arrows, should not cross SUBJ and OBJ}
 
-One further fact must be discussed: in the rule (\ref{LFG-v-vp}), the verb is optional. If it is
+One further fact must be discussed: in rule (\ref{LFG-v-vp}), the verb is optional. If it is
 omitted, the VP is empty. In this way, the VP rule in (\ref{lfg-vp-regel}) can have an empty VP on
 the right"=hand side of the rule. This VP is also simply
 omitted even though the VP symbol in the right-hand side of rule (\ref{lfg-vp-regel})  is not marked as optional.
@@ -1103,12 +1103,12 @@ f"=structure that bears an argument function.  (\mex{1}) gives the f"=structure 
 (\ref{ex-Chris-we-think}): 
 
 \ea
-\lfgms{ pred & `THINK\sliste{ \lfgsubj, \comp }' \\
+\lfgms{ pred & `THINK\sliste{\lfgsubj, \comp}' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
                      }\\
-        comp & \lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }'\\
+        comp & \lfgms{ pred & `SEE\sliste{\lfgsubj, \lfgobj}'\\
                        subj & \lfgms{ pred & `DAVID' \\
                                     }\\
                        obj  & \rnode{obj}{}\\
@@ -1129,7 +1129,7 @@ It is possible to formulate the structure sharing in (\mex{0}) as an f-structure
 \z
 
 \noindent
-Fronting operations such as (\ref{ex-Chris-we-think}) are possible from various levels of embedding:
+Fronting operations like in (\ref{ex-Chris-we-think}) are possible from various levels of embedding:
 for instance, (\mex{1}a) shows an example with less embedding.
 The object is located in the same f"=structure as the topic. However, the object in (\ref{ex-Chris-we-think}) comes from a clause embedded under \emph{think}.
 
@@ -1138,7 +1138,7 @@ The f"=structure corresponding to (\mex{1}a) is given in (\mex{1}b):
 \eal
 \ex Chris, we saw.
 \ex 
-\lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }' \\
+\lfgms{ pred & `SEE\sliste{\lfgsubj, \lfgobj}' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
@@ -1164,15 +1164,15 @@ Example (\mex{1}a) shows a case of even deeper embedding than in (\ref{ex-Chris-
 \eal
 \ex Chris, we think Anna claims that David saw.
 \ex 
-\lfgms{ pred & `THINK\sliste{ \lfgsubj, \comp }' \\
+\lfgms{ pred & `THINK\sliste{\lfgsubj, \comp}' \\
         topic & \rnode{topic}{\lfgms{ pred & `CHRIS' \\
                                    }}\\[4mm]
         subj & \lfgms{ pred & `pro'\\
                      }\\
-        comp & \lfgms{ pred & `CLAIM\sliste{ \lfgsubj, \comp }\\
+        comp & \lfgms{ pred & `CLAIM\sliste{\lfgsubj, \comp}\\
                        subj & \lfgms{ pred & `ANNA' \\
                                    }\\
-                       comp & \lfgms{ pred & `SEE\sliste{ \lfgsubj, \lfgobj }\\
+                       comp & \lfgms{ pred & `SEE\sliste{\lfgsubj, \lfgobj}\\
                                       subj & \lfgms{ pred & `DAVID' \\
                                                    }\\
                                       obj  & \rnode{obj}{}\\
@@ -1217,7 +1217,8 @@ Here, `*'\is{*} stands for an unrestricted number of occurrences of \mbox{\small
 as \emph{functional uncertainty}\is{functional uncertainty}, see \citew{KZ89a}.
 
 As was shown in the discussion of examples (\ref{bsp-fronted-focus}) and (\ref{bsp-fronted-topic}) on
-page~\pageref{bsp-fronted-focus}, it is not the case that only a \textsc{topic} can be placed in the specifier position of CP in English as \focus can occur there too.
+page~\pageref{bsp-fronted-focus}, it is not the case that only a \textsc{topic} can be placed in the
+specifier position of CP in English as a \focus can occur there too.
 One can use disjunctions in LFG equations and express the corresponding condition as follows:
 
 \ea
@@ -1245,7 +1246,7 @@ CP & $\rightarrow$ & \multicolumn{2}{l}{\hspaceThis{(\upsp \textsc{df})}XP} & C$
  & &  (\upsp \textsc{df}) & (\upsp \textsc{comp* obj})\\
 \end{tabular}
 \z
-In German, as well as objects, nearly any other constituent (\eg subjects, sentential complements, adjuncts) can be fronted. The c"=structure rule for
+In German, objects as well as nearly any other constituent (\eg subjects, sentential complements, adjuncts) can be fronted. The c"=structure rule for
 this is shown in
 (\mex{1}):\footnote{\label{fn-zp}%
   \citet{Berman96a-u} uses the symbol ZP for symbols in the prefield rather than XP in (\mex{1}). She formulates various phrase structure rules for ZPs, which replace ZP
@@ -1290,7 +1291,7 @@ I suggest coming back here after reading Chapters~\ref{chap-CG}--\ref{chap-tag}.
 
 LFG is a constraint"=based\is{constraint"=based grammar} theory and utilizes feature descriptions and PSG rules. Grammatical functions are treated
 as primitives of the theory, which sets LFG apart from most of the other theories covered in this book. They are not defined structurally (as in GB). LFG is a lexicalist theory. Like GPSG, LFG can do without transformations. Processes affecting
-argument structure such as passivization are analyzed by means of lexical rules. Whereas GPSG treated long"=distance dependencies using the percolation of information
+argument structure such as passivization are analyzed by means of lexical rules. Whereas GPSG treats long"=distance dependencies using the percolation of information
 in trees, LFG uses functional uncertainty: a part of the f"=structure is identified with another
 f"=structure that can be embedded to an arbitrary depth. Coherence\is{coherence} and completeness\is{completeness}
 ensure that the long"=distance dependency can be correctly resolved, that is, it ensures that a fronted object is not assigned to an f"=structure which already contains an object or one

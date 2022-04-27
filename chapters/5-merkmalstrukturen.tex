@@ -41,7 +41,7 @@ the formal part of the book as short as possible. I refer the interested reader 
 and \citet{Richter2004a-u,Richter2021a}. Shieber's book is an accessible introduction to Unification
 Grammars. The works by King and Richter, which introduce important foundations for HPSG, would most
 probably not be accessible for those without a good grounding in mathematics. However, it is
-important to know that these works exist and that the corresponding linguistic theory is build on a
+important to know that these works exist and that the corresponding linguistic theory is built on a
 solid foundation. 
 
 \section{Feature descriptions}
@@ -204,11 +204,11 @@ children     & \liste{ \ldots, \ldots{} }
 \z
 Types are written in \textit{italics}. 
 
-The specification of a type determines which properties a modelled object has. It is then only
+The specification of a type determines which properties a modeled object has. It is then only
 possible for a theory to say something about these properties.
 Properties such as \textsc{operating voltage} are not relevant for objects of the type \textit{person}. If we know the type of a given object, then we
 also know that this object must have certain properties even if we do not yet know their exact values. In this way, (\mex{1}) is still a description of
-Max Meier even though it does not contain any information about Max' date of birth:
+Max Meier even though it does not contain any information about Max's date of birth:
 \ea
 \ms[person]{
 firstname   & max\\
@@ -236,9 +236,9 @@ types such as \type{person}, however, as no features belong to them. These kinds
 
 Types are organized into hierarchies\is{type hierarchy|(}.
 It is possible to define the subtypes  \textit{woman} and \textit{man} for  \textit{person}. These would determine the gender of a given object.
-(\mex{1}) shows the feature structure for the type \textit{woman}, which is analogous to that of \textit{man}.
+(\mex{1}) shows the feature description for the type \textit{woman}. The feature description for \textit{man} would be analogous.
 \ea
-\ms[female person]{
+\ms[woman]{
 firstname    & firstname\\
 lastname & lastname\\
 date-of-birth & date\\
@@ -251,7 +251,7 @@ children    & list of person~
 At this point, we could ask ourselves if we really need the feature \textsc{gender}. The necessary information is already represented in the type \type{woman}.
 The question if specific information is represented by special features or whether it is stored in a type without a corresponding individual feature will
 surface again in the discussion of linguistic analyses.
-Both alternatives differ mostly in the fact that the information which is modelled by types is not
+Both alternatives differ mostly in the fact that the information which is modeled by types is not
 immediately accessible for structure sharing, which is discussed in Section~\ref{sec-strukturteilung}.
 
 %\addlines
@@ -279,7 +279,7 @@ if one wishes to describe various electric appliances, one can use the hierarchy
 %% \draw (scanning.south)--(copier.north);
 %% \end{forest}
 \begin{tabular}{cccc}
-\multicolumn{4}{c}{\mynode{ed}{\type{electric appliance}}}\\[6ex]
+\multicolumn{4}{c}{\mynode{ed}{\type{electric device}}}\\[6ex]
 \mynode{p}{\type{printing device}} & & \mynode{sc}{\type{scanning device}} & \mynode{other}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\[6ex]
 \mynode{printer}{\type{printer}}   & \mynode{copy}{\type{photocopier}}  & \mynode{scanner}{\type{scanner}}\\[6ex]
 \mynode{l-p}{\type{laser printer}}  & \mynode{other-p}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}  & \mynode{negscan}{\type{negative scanner}} & \mynode{other-sc}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\
@@ -439,7 +439,7 @@ Meier. Our world knowledge tells us that both of them must have the same child n
 We\is{cycle!in feature description|(} have introduced structure sharing in order to be able to express
 the fact that Max's parents both have a son Klaus together. It would not be enough to list Max in
 the child"=lists of his parents separately. We want to capture the fact that it is the same Max which
-appears in each of these lists and furthermore, we have to ensure that the child being described is
+appears in each of these lists and, furthermore, we have to ensure that the child being described is
 identical to the entire object being described. Otherwise, the description would permit a situation where Max's
 parents could have a second child also called Max.  The description given in
 (\mex{1}) can capture all facts correctly.
@@ -496,14 +496,14 @@ Max Müller and wants to find a specific person. Normally, those who go to a det
 are looking for, \eg the gender, hair color or date of birth. Perhaps even the registration number of the car belonging to the person is known.
 
 It is then expected of the detective that he or she provides information fitting the description. If
-we are looking for a blonde female named Meier (\mex{1}a), then we
+we are looking for a blond female named Meier (\mex{1}a), then we
 do not want to get descriptions of a male red-head (\mex{1}b). The descriptions in (\mex{1}) are incompatible and cannot be unified:
 \eal
-\ex\label{ex-meier-female-blonde}
+\ex\label{ex-meier-female-blond}
 \ms[person]{
 lastname   & meier\\
 gender & female\\
-haircolor  & blonde
+haircolor  & blond
 }
 \ex \ms[person]{
 lastname   & meier\\
@@ -512,7 +512,7 @@ haircolor & red
 }
 \zl
 \addlines[-1]
-The description in (\mex{1}) would be a possible result for a search for a blonde, female individual called Meier:
+The description in (\mex{1}) would be a possible result for a search for a blond, female individual called Meier:
 \ea
 \label{info-detective}
 \ms[person]{
@@ -520,7 +520,7 @@ firstname    & katharina\\
 lastname   & meier\\
 gender & female\\
 date-of-birth & 15.10.1965\\
-haircolor  & blonde
+haircolor  & blond
 }
 \z
 Katharina Meier could also have other properties unknown to the detective. The important thing is that the properties known to the detective match those
@@ -537,7 +537,7 @@ children     & \liste{}
 }
 \z
 (\mex{0}) contains information about children, which is neither contained in
-(\ref{ex-meier-female-blonde}) nor in (\ref{info-detective}).
+(\ref{ex-meier-female-blond}) nor in (\ref{info-detective}).
 It could indeed be the case that Katharina Meier has no children, but there are perhaps several people
 called Katharina Meier with otherwise identical properties. With this invented information, we might
 exclude one or more possible candidates. 
@@ -870,14 +870,14 @@ mother      \ms[person]{
 \item Think about how one could describe musical instruments using feature descriptions.
 \item Come up with a type hierarchy for the word classes (\type{det}, \type{comp}, \type{noun}, \type{verb},
       \type{adj}, \type{prep}). Think about the ways in which one can organize the type hierachy so that one
-	  can express the generalizations that where captured by the binary features in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} on page~\pageref{Tabelle-Merkmalszerlegung-Wortarten}.
+	  can express the generalizations that were captured by the binary features in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} on page~\pageref{Tabelle-Merkmalszerlegung-Wortarten}.
 \item\label{ua-liste} In this chapter, we introduced lists. This may look like an extension of the formalism, but it is not as it is possible to
 convert the list notation into a notation which only requires feature"=value pairs. Think about how one could do this.
 \item (Additional exercise) The relation \emph{append}\is{relation!\emph{append}} will play a role in Chapter~\ref{Kapitel-HPSG}. This relation serves to
 combine two lists to form a third.
 Relational constraints such as \emph{append} do in fact constitute an expansion of the formalism. Using relational constraints, it is possible to relate any number
 of feature values to other values, that is, one can write programs which compute a particular value depending on other values. 
-This poses the question as to whether one needs such powerful descriptive tools in a linguistic theory and if we do allow them, what kind of complexity we afford them.
+This poses the question as to whether one needs such powerful descriptive tools in a linguistic theory and, if we do allow them, what kind of complexity we afford them.
 A theory which can do without relational constraints should be preferred over one that uses
 relational constraints (see \citealp[Chapter~20]{MuellerLehrbuch1} for a comparison of theories).
 
@@ -901,7 +901,7 @@ DCG\is{Definite Clause Grammar (DCG)}, \lfg, \gpsg, HPSG, PATR-II\is{PATR-II}.
 %
 \citet{Johnson88} describes the formalism of untyped feature structures in a mathematically precise way.
 %
-\citet{Carpenter92a} goes into the detail about the mathematical aspects of typed feature
+\citet{Carpenter92a} enters into details about the mathematical aspects of typed feature
 structures. The formalism developed by \citet{King99a-u} for HPSG"=grammars forms the basis for the
 formalism by \citet{Richter2004a-u}, which currently counts as the standard formalism for HPSG. See
 also \citet{Richter2021a} for an overview of the formal properties of HPSG grammars.

@@ -89,8 +89,8 @@ only be used in the second. Furthermore, (\mex{0}) contains information about th
 
 If we analyze the sentence in (\mex{1}) with the second rule in (\mex{-1}) and the second rule in (\mex{0}), then we arrive at the structure in Figure~\vref{Abb-HFC}.
 \ea
-\gll Karl hat versucht, [den Kuchen aufzuessen].\\
-	Karl has tried \spacebr{}the cake to.eat.up\\
+\gll Karl hat versucht, [den          Kuchen aufzuessen].\\
+     Karl has tried     \spacebr{}the cake   to.eat.up\\
 \glt `Karl tried to finish eating the cake.'
 \z 
 \begin{figure}
@@ -113,28 +113,28 @@ we arrive at the category V2[\textsc{vform} \emph{inf}] and this ensures that th
 \eal
 \label{Beispiel-GPSG-Kopfeigenschaften}
 \ex[]{
-\gll [Den Kuchen aufzuessen] hat er nicht gewagt.\\
-	\spacebr{}the cake to.eat.up has he not dared\\
+\gll [Den          Kuchen aufzuessen] hat er nicht gewagt.\\
+     \spacebr{}the cake   to.eat.up   has he not   dared\\
 \glt `He did not dare to finish eating the cake.'
 }
 \ex[*]{
-\gll [Den Kuchen aufzuessen] darf er nicht.\\
-\spacebr{}the cake to.eat.up be.allowed.to he not\\
+\gll     [Den Kuchen aufzuessen] darf          er nicht.\\
+\spacebr{}the cake   to.eat.up   is.allowed.to he not\\
 }
 \glt Intended: `He is not allowed to finish eating the cake.'
 \ex[*]{
-\gll [Den Kuchen aufessen] hat er nicht gewagt.\\
-	\spacebr{}the cake eat.up has he not dared\\
+\gll [Den          Kuchen aufessen] hat er nicht gewagt.\\
+     \spacebr{}the cake   eat.up    has he not   dared\\
 \glt Intended: `He did not dare to finish eating the cake.'
 }
 \ex[]{
-\gll [Den Kuchen aufessen] darf er nicht.\\
-	\spacebr{}the cake eaten.up be.allowed.to he not\\
+\gll [Den          Kuchen aufessen] darf          er nicht.\\
+     \spacebr{}the cake   eat.up    is.allowed.to he not\\
 \glt `He is not allowed to finish eating the cake.'
 }
 \zl
 \emph{gewagt} `dared' selects for a verb or verb phrase with an infinitive with \emph{zu} `to' but
-not a bare infinitive, while \emph{darf} `be allowed to' takes a bare infinitive.
+not a bare infinitive, while \emph{darf} `is allowed to' takes a bare infinitive.
 
 This works in an analogous way for noun phrases: there are rules for nouns which do not take an argument as well as for nouns with certain arguments. Examples of rules for 
 nouns which either require no argument or two PPs are given in (\mex{1}) \citep*[\page 127]{GKPS85a}:
@@ -336,20 +336,24 @@ sm edges
 \end{figure}%
 %
 This has to do with the fact that only elements in the same local tree, that is, elements which occur on the right"=hand side of a rule, can be reordered.
-While we can reorder the parts of the VP and thereby derive (\ref{bsp-GPSG-anordnung}b), it is not possible to place the subject at a lower position between
-the objects. Instead, a metarule can be used to analyze sentences where the subject occurs between other arguments of the verb. This rule relates phrase structure
-rules to other phrase structure rules. A metarule can be understood as a kind of instruction that creates
-another rule for each rule with a certain form and these newly created rules will in turn license local trees.
+While we can reorder the parts of the VP and thereby derive (\ref{bsp-GPSG-anordnung}b), it is not
+possible to place the subject at a lower position between the objects. Instead, a metarule can be
+used to analyze sentences where the subject occurs between other arguments of the verb. This rule
+relates phrase structure  rules to other phrase structure rules. A metarule can be understood as a
+kind of instruction that creates another rule for each rule with a certain form and these newly
+created rules will in turn license local trees. 
 
-For the example at hand, we can formulate a metarule which says the following: if there is a rule with the form ``V2 consists of something'' in the grammar,
-then there also has to be another rule ``V3 consists of whatever V2 consists $+$ an NP in the nominative''. In formal terms, this looks as follows:
+For the example at hand, we can formulate a metarule which says the following: if there is a rule
+with the form ``V2 consists of something'' in the grammar, then there also has to be another rule
+``V3 consists of whatever V2 consists $+$ an NP in the nominative''. In formal terms, this looks as
+follows: 
 \ea
 \label{subjekt-meta}
 V2  $\to$ W $\mapsto$\\
 V3  $\to$ W, N2[\textsc{case} nom]
 \z
-W is a variable which stands for an arbitrary number of categories (W = \emph{what\-ever}). The metarule creates the following rule in (\mex{1}) from the rules
-in (\ref{gpsg-regel-dat-ditransitiv}):
+W is a variable which stands for an arbitrary number of categories (W = \emph{what\-ever}). The
+metarule creates the following rules in (\mex{1}) from the rules in (\ref{gpsg-regel-dat-ditransitiv}):
 \ea
 \begin{tabular}[t]{@{}l@{~$\to$~}l@{}}
 V3  & H[7], N2[\textsc{case} dat], N2[\textsc{case} nom]                \\
@@ -358,7 +362,8 @@ V3  & H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} nom] 
 \z
 
 \noindent
-Now, the subject and other arguments both occur in the right"=hand side of the rule and can therefore be freely ordered as long as no LP rules are violated.%
+Now, the subject and other arguments both occur in the right"=hand side of the rule and can
+therefore be freely ordered as long as no LP rules are violated.%
 \is{metarule|)}
 
 
@@ -380,12 +385,13 @@ If $\alpha$ is of type \sliste{ \type{b}, \type{a} } and $\beta$ of type \type{b
 %\addlines[2]
 \largerpage[2]
 This type of combination is also called \emph{functional application}\is{functional application}.
-With the rule in (\mex{0}), it is possible that the type \sliste{ \type{e}, \sliste{
-    \type{e}, \type{t} }} corresponds to an expression which still has to be combined with two expressions of
-	type \type{e} in order to result in an expression of \type{t}. The first combination step with \type{e} will yield \sliste{ \type{e}, \type{t} }
-	and the second step of combination with a further \type{e} will give us \type{t}. This is similar to what we saw with $\lambda$"=expressions on
-	page~\pageref{lambda-moegen}: $\lambda y \lambda x$ \relation{like}(x, y) has to combine with a y and an x. The result in this example was 
-	\relation{mögen}(\relation{max}, \relation{lotte}), that is, an expression that is either true or false in the relevant world.
+With the rule in (\mex{0}), it is possible that the type \sliste{ \type{e}, \sliste{ \type{e},
+    \type{t} }} corresponds to an expression which still has to be combined with two expressions of
+type \type{e} in order to result in an expression of \type{t}. The first combination step with
+\type{e} will yield \sliste{ \type{e}, \type{t} } and the second step of combination with a further
+\type{e} will give us \type{t}. This is similar to what we saw with $\lambda$"=expressions on 
+page~\pageref{lambda-moegen}: $\lambda y \lambda x$ \relation{like}(x, y) has to combine with a y and an x. The result in this example was 
+\relation{like}(\relation{max}, \relation{lotte}), that is, an expression that is either true or false in the relevant world.
 
 In \citew{GKPS85a}, an additional type is assumed for worlds in which an expression is true or false. For reasons of simplicity, I will omit this here. The types
 that we need for sentences, NPs and N$'$s, determiners and VPs are given in (\mex{1}):
@@ -416,7 +422,7 @@ This means that an NP is something that must be combined with an expression whic
 an NP corresponds to a semantic expression which needs something of type \sliste{ \type{e},
   \type{t} } to form an expression which is either true or false (that is, of type \type{t}).
 
-An N$'$ stands for a nominal expression for the kind  $\lambda$x child(x). This means if there is a specific individual which one can insert in place of the x, then we arrive at an
+An N$'$ stands for a nominal expression of the kind  $\lambda$x child(x). This means if there is a specific individual which one can insert in place of the x, then we arrive at an
 expression that is either true or false. For a given situation, it is the case that either John has the property of being a child or he does not. An N$'$ has the same type as
 a VP.
 %\todostefan{Andrew: sind Determinierer nicht((e,t),e)?}
@@ -456,18 +462,18 @@ to nominal structures in German. Nevertheless, there is a problem regarding the 
 freely occur between arguments:
 \eal
 \ex 
-\gll weil der Mann dem Kind das Buch \emph{gestern} gab\\
-	 because the man the child the book yesterday gave\\
+\gll [weil] der Mann dem Kind das Buch \emph{gestern} gab\\
+	 \spacebr{}because the man the child the book yesterday gave\\
 \glt `because the man gave the book to the child yesterday'
 \ex 
-\gll weil der Mann dem Kind \emph{gestern} das Buch gab\\
-	 because the man the child yesterday the book gave\\
+\gll [weil] der Mann dem Kind \emph{gestern} das Buch gab\\
+	 \spacebr{}because the man the child yesterday the book gave\\
 \ex 
-\gll weil der Mann \emph{gestern} dem Kind das Buch gab\\
-	 because the man yesterday the child the book gave\\
+\gll [weil] der Mann \emph{gestern} dem Kind das Buch gab\\
+	 \spacebr{}because the man yesterday the child the book gave\\
 \ex 
-\gll weil \emph{gestern} der Mann dem Kind das Buch gab\\
-	 because yesterday the man the child the book gave\\
+\gll [weil] \emph{gestern} der Mann dem Kind das Buch gab\\
+	 \spacebr{}because yesterday the man the child the book gave\\
 \zl
 For (\mex{0}), one requires the following rule:
 \ea
@@ -476,8 +482,8 @@ V3  $\to$ H[8], N2[\textsc{case} dat], N2[\textsc{case} acc], N2[\textsc{case} n
 \z
 Of course, adjuncts can also occur between the arguments of verbs from other valence classes:
 \ea
-\gll weil (oft) die Frau (oft) dem Mann (oft) hilft\\
-	because \spacebr{}often the woman \spacebr{}often the man \spacebr{}often helps\\
+\gll [weil] (oft) die Frau (oft) dem Mann (oft) hilft\\
+     \spacebr{}because \spacebr{}often the woman \spacebr{}often the man \spacebr{}often helps\\
 \glt `because the woman often helps the man'
 \z
 Furthermore, adjuncts can occur between the arguments of a VP:
@@ -518,7 +524,7 @@ V2  $\to$ W, AdvP*
 \z 
 If one adopts the rule in (\mex{0}), then it is not immediately clear how the semantic contribution of the adjuncts can be determined.\footnote{%
 	In LFG\indexlfg, an adjunct is entered into a set in the functional structure (see Section~\ref{Abschnitt-LFG-Adjunkte}). This also works with the use
-	of the Kleene Star notation. From the f"=structure\is{f"=structure}, it is possible to compute the semantic denotation with corresponding scope by making reference
+	of the Kleene star notation. From the f"=structure\is{f"=structure}, it is possible to compute the semantic denotation with corresponding scope by making reference
 	to the c"=structure\is{c"=structure}. In HPSG\indexhpsg, \citet{Kasper94a} has made a proposal which corresponds to the
         GPSG proposal with regard to flat branching structures and
 	an arbitrary number of adjuncts. In HPSG, however, one can make use of so"=called relational constraints. These are similar to small programs which
@@ -559,43 +565,43 @@ This is true for all verb classes which can form the passive. It does not make a
 \eal
 \label{beispiel-arbeiten}
 \ex 
-\gll weil er noch gearbeitet hat\\
-	 because he.\nom{} still worked has\\
+\gll [weil] er noch gearbeitet hat\\
+	 \spacebr{}because he.\nom{} still worked has\\
 \glt 'because he has still worked'
 \ex 
-\gll weil noch gearbeitet wurde\\
-	 because still worked was\\
+\gll [weil]    noch  gearbeitet wurde\\
+     \spacebr{}because still worked     \AUX\\
 \glt `because there was still working there'
 \zl
 \eal
 \label{beispiel-denken}
 \ex 
-\gll weil er an Maria gedacht hat\\
-	 because he.\nom{} on Maria thought has\\
+\gll [weil]    er        an Maria gedacht hat\\
+     \spacebr{}because he.\nom{} at Maria thought has\\
 \glt `because he thought of Maria'
 \ex 
-\gll weil an Maria gedacht wurde\\
-	 because on Maria thought was\\
+\gll [weil]    an Maria gedacht wurde\\
+     \spacebr{}because at Maria thought \AUX\\
 \glt `because Maria was thought of'
 \zl
 \eal
 \ex 
-\gll weil Judit den Weltmeister geschlagen hat\\
-     because Judit.\nom{} the.\acc{} world.champion beaten has\\
+\gll [weil] Judit den Weltmeister geschlagen hat\\
+     \spacebr{}because Judit.\nom{} the.\acc{} world.champion beaten has\\
 \glt `because Judit has beaten the world champion'
 \ex 
-\gll weil der Weltmeister geschlagen wurde\\
-	 because the.\nom{} world.champion beaten was\\
+\gll [weil] der Weltmeister geschlagen wurde\\
+	 \spacebr{}because the.\nom{} world.champion beaten \AUX\\
 \glt `because the world champion was beaten'
 \zl
 \eal
 \ex 
-\gll weil er ihm den Aufsatz gegeben hat\\
-     because he.\nom{} him.\dat{} the.\acc{} essay given has\\
+\gll [weil] er ihm den Aufsatz gegeben hat\\
+     \spacebr{}because he.\nom{} him.\dat{} the.\acc{} essay given has\\
 \glt `because he has given him the essay'
 \ex 
-\gll weil ihm der Aufsatz gegeben wurde\\
-     because him.\dat{} the.\nom{} essay given was\\
+\gll [weil] ihm der Aufsatz gegeben wurde\\
+     \spacebr{}because him.\dat{} the.\nom{} essay given \AUX\\
 \glt `because he was given the essay'
 \zl
 
@@ -613,12 +619,12 @@ unrelated structures, that is, the structure of (\mex{1}b) is not derived from t
 
 \eal
 \ex 
-\gll weil Judit den Weltmeister geschlagen hat\\
-     because Judit.\nom{} the.\acc{} world.champion beaten has\\
+\gll [weil] Judit den Weltmeister geschlagen hat\\
+     \spacebr{}because Judit.\nom{} the.\acc{} world.champion beaten has\\
 \glt `because Judit has beaten the world champion'
 \ex 
-\gll weil der Weltmeister geschlagen wurde\\
-     because the.\nom{} world.champion beaten was\\
+\gll [weil] der Weltmeister geschlagen wurde\\
+     \spacebr{}because the.\nom{} world.champion beaten \AUX\\
 \glt `because the world champion was beaten'
 \zl
 %
@@ -677,7 +683,7 @@ V2 $\to$ H[5] & (\emph{arbeiten} `work')\\
 V2 $\to$ H[13], PP[\emph{an}] & (\emph{denken} `think')\\
 \end{tabular}
 \z
-There is no NP on the right"=hand side of these rules which could be turned into a \emph{von}-PP. If the passive
+There is no NP on the right"=hand side of these rules which could be replaced by a \emph{von}-PP. If the passive
 is to be analyzed as suppressing an NP argument in a rule, then it should follow from the existence of the impersonal passive 
 that the passive metarule has to be applied to rules which license finite clauses, since information about whether there is a subject
  or not is only present in rules for finite clauses.\footnote{%
@@ -731,14 +737,13 @@ example. Until now, we have only seen the GPSG analysis for verb-initial and ver
 sequences in (\mex{1}) are simply linearization variants.
 \eal
 \ex 
-\ex 
-\gll {}[dass] der Mann dem Kind das Buch gibt\\
-	 {}\spacebr{}that the.\NOM{} man the.\DAT{} child the.\ACC{} book gives\\
-\glt `that the man gives the book to the child'
+\gll {}[dass]         der        Mann dem        Kind das Buch gibt\\
+     {}\spacebr{}that the.\NOM{} man  the.\DAT{} child the.\ACC{} book gives\\
+\glt `that the man gives the child the book'
 \ex 
 \gll Gibt der Mann dem Kind das Buch?\\
 	 gives the.\NOM{} man the.\DAT{} child the.\ACC{} book\\
-\glt `Does the man give the book to the child?'
+\glt `Does the man give the child the book?'
 \zl
 What we want is to derive the verb"=second order in the examples in (\mex{1}) from V1 order in (\mex{0}b).
 \eal

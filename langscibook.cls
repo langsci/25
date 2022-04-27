@@ -1196,7 +1196,7 @@ ISBN: &
 Cover and concept of design:
 Ulrike Harbort \\
 \if\@translator\empty\else
-Translator:
+Translation:
 \@translator \\
 \fi
 \if\@typesetter\empty\else
