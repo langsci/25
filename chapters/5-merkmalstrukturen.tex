@@ -238,6 +238,7 @@ Types are organized into hierarchies\is{type hierarchy|(}.
 It is possible to define the subtypes  \textit{woman} and \textit{man} for  \textit{person}. These would determine the gender of a given object.
 (\mex{1}) shows the feature description for the type \textit{woman}. The feature description for \textit{man} would be analogous.
 \ea
+\label{avm-woman}
 \ms[woman]{
 firstname    & firstname\\
 lastname & lastname\\
@@ -279,7 +280,7 @@ if one wishes to describe various electric appliances, one can use the hierarchy
 %% \draw (scanning.south)--(copier.north);
 %% \end{forest}
 \begin{tabular}{cccc}
-\multicolumn{4}{c}{\mynode{ed}{\type{electric device}}}\\[6ex]
+\multicolumn{4}{c}{\mynode{ed}{\type{electrical device}}}\\[6ex]
 \mynode{p}{\type{printing device}} & & \mynode{sc}{\type{scanning device}} & \mynode{other}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\[6ex]
 \mynode{printer}{\type{printer}}   & \mynode{copy}{\type{photocopier}}  & \mynode{scanner}{\type{scanner}}\\[6ex]
 \mynode{l-p}{\type{laser printer}}  & \mynode{other-p}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}  & \mynode{negscan}{\type{negative scanner}} & \mynode{other-sc}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\

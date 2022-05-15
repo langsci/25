@@ -258,7 +258,7 @@ Adjectives are modifiers, which must occur before the noun. They have the catego
 Modifiers occurring after nouns (prepositional phrases and relative clauses) have the category
 n\bs n instead.\footnote{%
 	In Categorial Grammar, there is no category symbol like \xbar for intermediate projections of
-	\xbart. So rather than assuming \nbar/\nbar, CG uses n/n. See Exercise~\ref{ue-Xbar-CG}.
+	\xbart. So, rather than assuming \nbar/\nbar, CG uses n/n. See Exercise~\ref{ue-Xbar-CG}.
 } For VP-modifiers, X is replaced by the symbol for the VP (s\bs np) and this yields the relatively complex expression (s\bs np)\bs (s\bs np).
 Adverbials in English are VP"=modifiers and have this category. Prepositions that can be used in a PP modifying a verb require an NP in order to
 form a complete PP and therefore have the category ((s\bs np)\bs (s\bs
@@ -285,7 +285,7 @@ np/n & n/n   & n   & (s\bs np)/np & np   & (s\bs np)\bs (s\bs np) & (s\bs np)\bs
 }}
 \caption{\label{abb-CG-Adjunktion}Example of an analysis with adjuncts in Categorial Grammar}
 \end{figure}%
-Note that the result of the combination of \emph{round} and \emph{the garden} corresponds to the category of the adverb ((s\bs np)\bs (s\bs np)).
+Note that the result of the combination of \emph{round} and \emph{the garden} corresponds to the category of the adverb (s\bs np)\bs (s\bs np).
 In \gbt, adverbs and prepositions were also placed into a single class (see page~\pageref{Seite-Adverbien-PP}). This overarching class was then divided into subclasses
 based on the valence of the elements in question.
 \is{adjunct|)}
@@ -340,7 +340,7 @@ np   & (s\bs np)/\mathit{PstP} & \mathit{PstP}/np_{by} & np_{by}/np & np\\
 \noindent
 %\addlines
 The question as to how to analyze the pair of sentences in (\mex{1}) still remains unanswered.\footnote{%
-	Thanks to Roland Schäfer\ia{Schäfer, Roland} (p.\,c., 2009) for pointing out these data to me.
+	Thanks to Roland Schäfer\ia{Schäfer, Roland} (p.c., 2009) for pointing out these data to me.
 }
 \eal
 \ex He gave the book to Mary.
@@ -352,7 +352,7 @@ is that the rule in (\ref{Lexikonregel-Passiv-CG}) cannot be applied to \emph{ga
 \emph{to}-PP since the pp argument is sandwiched between both np arguments in ((s\bs np)/pp)/np. One
 would have to generalize the rule in (\ref{Lexikonregel-Passiv-CG}) somehow by introducing new
 technical means\footnote{% 
-  Baldridge\ia{Baldridge, Jason} (p.\,M.\ 2010) suggests using regular expressions in a general lexical rule for passive.%
+  Baldridge\ia{Baldridge, Jason} (p.c., 2010) suggests using regular expressions in a general lexical rule for passive.%
  }
 or assume additional rules for cases such as (\mex{0}b).\is{passive|)}\todostefan{NW: \citew{Dowty97a-u} head wrapping does this.}
 
@@ -454,14 +454,16 @@ A problem with this kind of analysis is that the verb \emph{isst} `eats', as wel
 \z
 \addlines[2]
 Since adjuncts can occur before, after or between arguments of the verb in German, one would expect that \emph{morgen} `tomorrow' can occur before the verb
-\emph{isst}, since \emph{isst} is just a normal argument of the verbal trace in final position. As adjuncts do not change the categorial status of a projection, the phrase \emph{morgen isst er ihn} `tomorrow he eats him' should be able to
+\emph{isst}, since \emph{isst} is just a normal argument of the verbal trace in final position. As
+adjuncts do not change the categorial status of a projection, the phrase \emph{morgen isst er ihn}
+`He will eat it/him tomorrow.' should be able to
 occur in the same positions as \emph{isst er ihn}. This is not the case, however. If we replace
 \emph{isst er ihn} by \emph{morgen isst er ihn} in (\mex{1}a), the result is (\mex{1}b), which is ungrammatical.
 \eal
 \ex[]{
 \gll Deshalb isst er ihn.\\
      therefore eats he him\\
-\glt `Therefore he eats it/him.'
+\glt `Therefore, he is eating it/him.'
 }
 \ex[*]{
 \gll Deshalb morgen isst er ihn.\\
@@ -473,18 +475,18 @@ occur in the same positions as \emph{isst er ihn}. This is not the case, however
 An approach which avoids this problem comes from \citet{KW91a} (see
 Section~\ref{Abschnitt-Verbstellung-HPSG}). Here, the authors assume that there is a verb in initial
 position which selects a projection of the verb trace. If adverbials are only combined with verbs in
-final-position, then a direct combination of \emph{morgen} `tomorrow' and \emph{isst er ihn} `eats he
-it' is ruled out. If one assumes that the verb in first-position is the functor, then it is possible to capture the
+final-position, then a direct combination of \emph{morgen} `tomorrow' and \emph{isst er ihn} `he is eating
+it/him' is ruled out. If one assumes that the verb in first-position is the functor, then it is possible to capture the
 parallels between complementizers\is{complementizer} and verbs in initial position
 \citep{Hoehle97a}: finite verbs in initial position differ from complementizers only in requiring
 a projection of a verb trace, whereas complementizers require projections of overt verbs: 
 \eal
 \ex 
 \gll dass [er ihn isst]\\
-     that \spacebr{}he it eats\\
+     that \spacebr{}he him eats\\
 \ex 
 \gll Isst [er ihn \_ ]\\
-     eats \spacebr{}he it\\
+     eats \spacebr{}he him\\
 \zl
 This description of verb position in German captures the central insights of the GB analysis in Section~\ref{Abschnitt-Verbstellung-GB}.\is{verb position|)}
 
@@ -506,7 +508,7 @@ example, change the order (S/PRT)/NP into (S/NP)/PRT.
 
 A different approach is suggested by \citet{SB2006a-u}. They discuss various options for ordering
 arguments attested in the languages of the world.  This includes languages in which the order of
-combination is free, as well as languages where the direction of combination is free.\is{constituent
+combination is free as well as languages where the direction of combination is free.\is{constituent
   order!free}\is{constituent order!fixed} Steedman and Baldridge introduce the following convention
 for representing categories: elements in curly brackets can be discharged in any
 order. `$|$'\is{$\vert$} in place of `$\backslash$'\is{$\backslash$} or `/'\is{/} serves to indicate
@@ -551,9 +553,9 @@ sections.
 \label{sec-typeraising}
 
 \addlines
-The category np can be transformed into the category (s/(s\bs np)) by \emph{type raising}\is{type
-  raising}. If we combine this category with (s\bs np), then we get the same result as if we had
-combined np and (s\bs np) with the backward application rule in
+The category np can be transformed into the category s/(s\bs np) by \emph{type raising}\is{type
+  raising}. If we combine this category with s\bs np, then we get the same result as if we had
+combined np and s\bs np with the backward application rule in
 (\ref{backward-application}). (\mex{1}a) shows the combination of an NP with a VP (a sentence
 missing an NP to its left). The combination of the type"=raised NP with the VP is given in
 (\mex{1}b). 
@@ -710,8 +712,8 @@ Fido                 & we            & put        & downstairs\\
 \caption{\label{abb-CG-UDC-Ditrans}Analysis of long"=distance dependencies across sentence boundaries}
 \end{figure}%
 In this analysis, it is not possible to combine \emph{we} and \emph{put} using the rule in
-(\ref{Regel-Vorwaertskomposition}) since (s\bs np) is not directly accessible: 
-breaking down ((s\bs np)/pp)/np into functor and argument gives us ((s\bs np)/pp) and np. 
+(\ref{Regel-Vorwaertskomposition}) since s\bs np is not directly accessible: 
+breaking down ((s\bs np)/pp)/np into functor and argument gives us (s\bs np)/pp and np. 
 In order to deal with such cases, we need another variant of composition:
 \pagebreak
 \ea
@@ -747,7 +749,7 @@ clauses. Readers who are mainly interested in an introduction to the core theory
 
 The operations of Combinatory Categorial Grammar, which go beyond those of standard Categorial Grammar, allow for so much flexibility that it is even possible
 to assign a category to sequences of words that would not normally be treated as a constituent. This is an advantage for the analysis of coordination\is{coordination}
-(see Section~\ref{Abschnitt-Koordination}) and furthermore, \citet{Steedman91a} has argued that intonation data\is{prosody} support the constituent status of these strings.
+(see Section~\ref{Abschnitt-Koordination}) and, furthermore, \citet{Steedman91a} has argued that intonation data\is{prosody} support the constituent status of these strings.
 See also Section~\ref{Abschnitt-Inkrementelle-Verarbeitung} for a direct model of incremental language processing in Categorial Grammar. In phrase structure grammars,
 it is possible to use GPSG mechanisms to pass information about relative pronouns contained in a phrase up the tree. These techniques are not used in CG and this leads
 to a large number of recategorization rules for topicalization and furthermore leads to inadequate analyses of pied-piping constructions in relative clauses. As the
@@ -890,7 +892,7 @@ The relative clause can then be analyzed as the combination of a sentence with a
 For the discussion of such analyses in the framework of \gbt and HPSG/CxG, see
 Section~\ref{Abschnitt-Relativ-Interrogativsaetze}.
 
-Kubota (p.c.\,2020) discussing this section and \citet{Kubota2021a} with me pointed out to me
+Kubota (p.c.\ 2020) discussing this section and \citet{Kubota2021a} with me pointed out to me
 \citegen[\page 455]{Sag97a} claim that the relative phrases in English are restricted to be NPs or PPs. This information
 has to be encoded somewhere. \citet[\page 455]{Sag97a} encodes it on the phrasal level specifying in the phrasal schema
 for relative clauses that the relative phrase has to be an NP or a PP. Categorial Grammar being an
@@ -911,7 +913,7 @@ be an NP, a PP, an adverb, even a verb phrase or adjectival phrase in German:
 \ex 
 \gll der Ort, \emph{wo} er schläft\\
      the place where he sleeps\\\jambox{(AdvP)}
-\glt `the place where he seeps'
+\glt `the place where he sleeps'
 \ex\label{ex-relative-clause-wie} 
 \gll die Art und Weise, \emph{wie} er lacht\\
      the way and manner how he laughs\\\jambox{(AdvP)}
@@ -969,7 +971,7 @@ this son [proud of \emph{whom}] Peter always was
 \zl
 These elements are adverbs. It follows from the discussion of the examples in (\mex{0}) and
 (\mex{-1}) that there should not be a restriction on the part of speech of the relative phrase to be
-noun or preposition. It might be useful to have such restrictions on some types of relative clauses
+noun or preposition. It might be useful to have such restrictions on some types of relative clauses,
 but it is not a restriction holding for all relative clauses. Hence, the schema for relative clauses
 of the kind discussed here would be (\mex{1}) both for German and English:
 \ea
