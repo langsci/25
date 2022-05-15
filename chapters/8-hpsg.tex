@@ -37,7 +37,7 @@ Slayden2012a-u,% agree http://moin.delph-in.net/AgreeTop
 Packard2015a-u% ACE http://moin.delph-in.net/AceTop
 }.\footnote{%
 \citet{UBCCDDEEMMO-96a} and \citet{Bolc:Czuba:ea:96a-u} compare systems that were available or were
-developed at the beginnings of the 1990s. \citet{MelnikHandWritten}
+developed at the beginning of the 1990s. \citet{MelnikHandWritten}
 compares LKB and TRALE. See also \citew[Section~5.1]{MuellerCoreGram}.
 }
 Currently, the LKB system\is{Linguistic Knowledge Builder (LKB)} by Ann Copestake and the TRALE
@@ -119,12 +119,12 @@ were derived from the Grammar Matrix\is{Grammar Matrix} which was developed for 
 grammar writers with a typologically motivated initial grammar that corresponds to the properties of
 the language under development \citep*{BFO2002a-u}. The CoreGram project\is{CoreGram}\footnote{%
 \url{https://hpsg.hu-berlin.de/Projects/CoreGram.html}. \mytoday.
-} is a similar project that was started at the Freie Universität Berlin and which is now being run
+} is a similar project that was started at the Freie Universität Berlin and is now being run
 at the Humboldt"=Universität zu Berlin. It is developing grammars for German\il{German}, Danish\il{Danish},
 Persian\il{Persian}, Maltese\il{Maltese}, Mandarin Chinese\il{Mandarin Chinese},
 Spanish\il{Spanish}, French\il{French}, Welsh\il{Welsh}, and Yiddish\il{Yiddish} that share a common core. Constraints
-that hold for all languages are represented in one place and used by all grammars. Furthermore there are constraints that
-hold for certain language classes and again they are represented together and used by the respective
+that hold for all languages are represented in one place and used by all grammars. Furthermore, there are constraints that
+hold for certain language classes and, again, they are represented together and used by the respective
 grammars. So while the Grammar Matrix is used to derive grammars that individual grammar writers can use, adapt and modify to suit
 their needs, CoreGram really develops grammars for various languages that are used simultaneously
 and have to stay in sync. A description of the CoreGram can be found in \citew{MuellerCoreGramBrief,MuellerCoreGram}.
@@ -329,13 +329,13 @@ sm edges
 \caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter expects Maria.'}
 \end{figure}%
 
-As mentioned above researchers working on German usually assume that subjects and objects should be
+As mentioned above, researchers working on German usually assume that subjects and objects should be
 treated similarly since they do not differ in fundamental ways as they do in SVO languages like
 English. Hence, for German, all arguments are represented in the same list. However, for
 SVO languages it proved useful to assume a special valence feature for preverbal dependents
 (\citealt{Borsley87a}; \citealt[Chapter~9]{ps2}). The
 arguments can be split in subjects, that are represented in the \sprl, and other arguments
-(complements), which are represented in the \compsl. The equivalent of our table for German is given
+(complements), which are represented in the \compsl. The English equivalent of our table for German is given
 as (\mex{1}):
 \ea
 \label{ex-spr-comps-arg-st}
@@ -377,7 +377,7 @@ sm edges
 \caption{\label{abb-kim-talks-about-the-summer}Analysis of \emph{Kim talks about the summer.}}
 \end{figure}%
 A head is combined with all its complements first and then with its specifier.\footnote{%
-  I present the analyses in a bottom-up way here but it is very important that HPSG does not make
+  I present the analyses in a bottom-up way here, but it is very important that HPSG does not make
   any statements about the order in which linguistic objects are combined. This is crucial when it
   comes to psycholinguistic plausibility of linguistic theories. See Chapter~\ref{chap-competence-performance} for discussion.%
 } So, \emph{talks} is combined with \emph{about the summer} and the resulting VP is combined with
@@ -386,7 +386,7 @@ it is not contained in the \sprl of the mother. Figure~\ref{abb-kim-talks-about-
 shows the analysis of an NP: nouns select a determiner via \spr. The combination of \emph{the} and
 \emph{summer} is complete as far as specifiers are concerned and hence the \sprl at the node for
 \emph{the summer} is the empty list. Nominal elements with empty \sprl and \compsl will be
-abbreviated as NP. Similarly fully saturated linguistic objects with Ps as heads are PPs.
+abbreviated as NP. Similarly, fully saturated linguistic objects with Ps as heads are PPs.
 
 (\ref{ex-spr-comps-arg-st}) provides the \spr and \compsvs of some example verbs. In addition it
 also provides the \argstv. \argst\isfeat{arg-st} stands for \emph{argument structure} and is a list of all
@@ -474,13 +474,13 @@ certain degree of locality\is{locality} involved in selection: a head cannot acc
 structure of the elements which it selects (Pollard \& Sag \citeyear[\page 143--145]{ps};
 \citeyear[\page 23]{ps2}). See also Sections~\ref{sec-mother} and~\ref{sec-locality} for a
 discussion of locality. Inside \synsem, there is information relevant in local contexts (\local,
-abbreviated to \loc) as well as information important for long"=distance dependencies
+abbreviated to \HPSGloc) as well as information important for long"=distance dependencies
 (\textsc{nonlocal} or \nonloc for short). Locally relevant information includes syntactic
 (\textsc{category} or \cat), and semantic (\textsc{content} or \cont) information. Syntactic
 information encompasses information that determines the central characteristics of a phrase, that
 is, the head information. This is represented under \head. Further details of this will be discussed in
  Section~\ref{Abschnitt-Kopfeigenschaften}. Among other things, the part of speech of a 
- linguistic object belongs to the head properties of a phrase. As well as \head, \spr and \comps belongs to the information contained inside \cat. The semantic content
+ linguistic object belongs to the head properties of a phrase. As well as \head, \spr and \comps belong to the information contained inside \cat. The semantic content
  of a sign is present under \cont. The type of the \contv is \type{mrs}, which stands for \emph{Minimal Recursion
 Semantics}\indexmrs \citep*{CFPS2005a}. An MRS structure is comprised of an index and a list of
 relations (\textsc{relations} or \textsc{rels}) which restrict this index. Of the \textsc{nonlocal} features, only \slasch is given here. There are further features for dealing with relative\is{relative clause}
@@ -635,7 +635,7 @@ their arguments.
 \subsection{Projection of head properties}
 \label{Abschnitt-Kopfeigenschaften}
 
-As was explained in Section~\ref{Abschnitt-Kopf} certain properties of heads are important for the distribution of
+As was explained in Section~\ref{Abschnitt-Kopf}, certain properties of heads are important for the distribution of
 the whole phrase. For instance, the verb form belongs to the features that are important for the
 distribution of verbal projections. Certain verbs require a verbal argument with a particular form:
 \eal
@@ -777,8 +777,8 @@ The type \type{head"=complement"=phrase} -- the type which the description in
 Schema~\ref{schema-bin-prel} on page~\pageref{schema-bin-prel} has -- is a subtype
 of \type{headed"=phrase}. Objects of a certain type x always have all properties that objects
 have that are supertypes of x. Recall the example from Section~\ref{sec-formalismus-typen}:
-an object of the type \textit{female person} has all the properties of the type
-\textit{person}. Furthermore, objects of type \type{female person} have additional, more specific properties not shared by other subtypes of \type{person}.
+an object of the type \textit{woman} has all the properties of the type
+\textit{person}. Furthermore, objects of type \type{woman} have additional, more specific properties not shared by other subtypes of \type{person}.
 
 %\enlargethispage{1.5\baselineskip}
 %\largerpage[2]
@@ -796,7 +796,7 @@ The arrow\is{\impl} corresponds to a logical implication\is{implication}, as men
 if a structure is of type \type{headed"=phrase}, then it must hold that the value of
 \textsc{synsem$|$""loc$|$""cat$|$""head} is identical to the value of \textsc{head-dtr$|$""synsem$|$""loc$|$cat$|$head}.
   
-An extract from the type hierarchy under \type{sign} is given in Figure~\vref{fig-type-sign}.
+An extract of the type hierarchy under \type{sign} is given in Figure~\vref{fig-type-sign}.
 \begin{figure}[t]
 \centering
 \begin{forest}
@@ -865,7 +865,7 @@ the head value of the verb \emph{gibt} `gives'.
 
 
 \noindent
-For the entire clause \emph{er das Buch dem Mann gibt} `he the book to the man gives', we arrive at a structure (already shown in Figure~\ref{fig-projektion-head-feat-ausf}) 
+For the entire clause \emph{er das Buch dem Mann gibt} `he gives the book to the man', we arrive at a structure (already shown in Figure~\ref{fig-projektion-head-feat-ausf}) 
 described by (\mex{1}):
 \ea
 \label{HPSG-Rootnode}
@@ -894,7 +894,7 @@ how the meaning of a phrase can be determined compositionally.
 \subsection{Semantics}
 \label{Abschnitt-HPSG-Semantik}
 
-An important difference between theories such as GB, LFG and TAG, on the one hand, and HPSG and CxG on the other is that the semantic content of a linguistic
+An important difference between theories such as GB, LFG and TAG, on the one hand, and HPSG and CxG, on the other, is that the semantic content of a linguistic
 object is modeled in a feature structure just like all its other properties. As previously mentioned, semantic information is found under the path
 \textsc{synsem|""loc|""cont}. (\mex{1}) gives an example of the \contv for \emph{Buch} `book'. The
 representation is based on Minimal Recursion Semantics\indexmrs (MRS):\footnote{%
@@ -989,7 +989,7 @@ semantics takes place on \argst as well.
 For finite verbs, the value of \argst is identical to the
 value of \comps in German.\todostefan{Oneida} As was explained in Section~\ref{sec-valence-hpsg}, the first element of the \argstl is the
 subject in languages like English and it is represented in the \sprl (\citealt*[Section 4.3, 7.3.1]{SWB2003a}; \citealt{MuellerGermanic}). All other elements from \argst
-are contained in the \compsl. So there are language specific ways to represent the valence but there is one
+are contained in the \compsl. So there are language specific ways to represent the valence, but there is one
 common representation that is the same for all argument structure representations. This makes it
 possible to capture cross-linguistic generalizations.
 
@@ -1118,7 +1118,7 @@ to the \modv of the lexical entry for \emph{treues} `loyal'.
 As an alternative to the selection of the head by the modifier, one could assume a description of all possible adjuncts on the head itself. This was suggested by
 \citet[\page 161]{ps}. \citet[Section~1.9]{ps2} revised the earlier analysis since the semantics of
 modification could not be captured.\footnote{%
-		See \citew*{BMS2001a}, however. \citet*{BMS2001a} pursue a hybrid analysis where there are adjuncts which select heads and also adjuncts that are selected
+		See \citew*{BMS2001a}, however. The authors pursue a hybrid analysis where there are adjuncts which select heads and also adjuncts that are selected
 		by a head. Minimal Recursion Semantics\indexmrs is the semantic theory underlying this analysis. Using this semantics, the problems
 		arising for \citet*{ps} with regard to the semantics of modifiers are avoided.
 }
@@ -1260,13 +1260,12 @@ This lexical rule takes a verb stem\footnote{%
 } as its input, which requires a nominative argument, an accusative argument and possibly further arguments (if \iboxt{3} is not the empty
 list) and licenses a lexical entry that requires a nominative argument and possibly the arguments in
 \ibox{3}.\footnote{%
-  This rule assumes that arguments of ditransitive verbs are in the order nominative, accusative,
-  dative. Throughout this chapter, I assume a nominative, dative, accusative order, which
+  This rule assumes that arguments of ditransitive verbs are in the order nominative--accusative--dative. Throughout this chapter, I assume a nominative, dative, accusative order, which
   corresponds to the unmarked order of arguments in the German clause. \citet{Kiss2001a} argued that
   a representation of the unmarked order is needed to account for scope facts in
   German. Furthermore, the order of the arguments corresponds to the order one would assume for
   English, which has the advantage that cross"=linguistic generalizations can be captured. In
-  earlier work I assumed that the order is nominative, accusative, dative since this order encodes a
+  earlier work I assumed that the order is nominative--accusative--dative since this order encodes a
   prominence hierarchy that is relevant in a lot of areas in German grammar. Examples are: ellipsis\is{ellipsis} \citep{Klein85},
   Topic Drop\is{prefield!ellipsis}\is{Topic Drop} \citep{Fries88b}, free relatives\is{relative clause!free}
   \citep{Bausewein90,Pittner95b,Mueller99b},
@@ -1275,7 +1274,7 @@ list) and licenses a lexical entry that requires a nominative argument and possi
   Binding Theory\is{Binding Theory} (\citealp{Grewendorf85a}; Pollard \& Sag: \citeyear{PS92a};
   \citeyear[Chapter~6]{ps2}). This order also corresponds to the Obliqueness
   Hierarchy\is{obliqueness} suggested by \citet{KC77a} and \citet{Pullum77a}. In order to capture
-  this hierarchy, a special list with nominative, accusative, dative order would have to be assumed.
+  this hierarchy, a special list with nominative--accusative--dative order would have to be assumed.
 
   The version of the passive lexical rule that will be suggested below is compatible with both orders of arguments.
 } The output
@@ -1285,16 +1284,16 @@ in their valence in Kiss' approach:
 \eal
 \ex[]{
 \gll Der Mann hat den Weltmeister geschlagen.\\
-	 the man has the world.champion beaten\\
+     the man has the world.champion beaten\\
 \glt `The man has beaten the world champion.'
 }
 \ex[*]{
-\gll Der Mann wird den Weltmeister geschlagen.\\
-	 the man is the world.champion beaten\\
+\gll Der Mann wird   den Weltmeister geschlagen.\\
+     the man  \AUX{} the world.champion beaten\\
 }
 \ex[]{
 \gll Der Weltmeister wird geschlagen.\\
-	 the world.champion is beaten\\
+     the world.champion \AUX{} beaten\\
 \glt `The world champion is (being) beaten.'
 }
 \zl
@@ -1304,7 +1303,7 @@ There are a few conventions for the interpretation of lexical rules: all informa
 in the output sign is taken over from the input sign. Thus, the meaning of the verb is not mentioned
 in the passive rule, which makes sense as the passive rule is a meaning preserving rule. The \contvs
 of the input and output are not mentioned in the rule and hence are identical. It is important here that the linking
-information its retained. As an example consider the application of the rule to the verb stem
+information is retained. As an example consider the application of the rule to the verb stem
 \stem{schlag} `beat': 
 \eal
 \label{lr-passiv-beispiel}
@@ -1481,8 +1480,8 @@ c. & \emph{geholfen}    `helped':    & \argst \sliste{ NP[\type{ldat}]$_k$ }\\[1
 d. & \emph{geschenkt}   `given':     & \argst \sliste{ NP[\type{ldat}]$_k$, NP[\type{str}]$_l$ }\\
 \end{tabular}
 \z
-The standard analysis of verb auxiliary
-constructions in German assumes that the main verb and the auxiliary forms a verbal complex
+The standard analysis of verb--auxiliary
+constructions in German assumes that the main verb and the auxiliary form a verbal complex
 \citep{HN94a,Pollard94a,Mueller99a,Mueller2002b,Meurers2000b,Kathol2000a}. The arguments of the
 embedded verb are taken over by the auxiliary. For the analysis of the passive this means that the
 auxiliary has an \argst that starts with the elements shown in (\mex{0}). (\mex{0}) differs from
@@ -1496,11 +1495,11 @@ used for (\mex{1}).
 \eal
 \ex 
 \gll Er hat den Weltmeister geschlagen.\\
-	 he has the world.champion beaten\\
+     he has the world.champion beaten\\
 \glt `He has beaten the world champion.'
 \ex 
 \gll Der Weltmeister wurde geschlagen.\\
-	 the world.champion was beaten\\
+     the world.champion \AUX{} beaten\\
 \glt `The world champion was beaten.'
 \zl
 It is the auxiliary that determines which arguments are realized (\citealp{Haider86}; \citealp[Chapter~17]{MuellerLehrbuch1}).
@@ -1539,10 +1538,10 @@ like long"=distance dependencies in GPSG via identification of information in th
 structure (structure sharing\is{structure sharing}).
 
 \ea
-\label{bsp-kennt-jeder-diesen-Mann}
-\gll Kennt$_k$ jeder diesen Mann \_$_k$?\\
-     knows everyone.\NOM{} this.\ACC{} man\\
-\glt `Does everyone know this man?'
+\label{bsp-kennt-jeder-diese-Frau}
+\gll Kennt$_j$ jeder diesen Roman \_$_j$?\\
+     knows everyone.\NOM{} this.\ACC{} novel\\
+\glt `Does everyone know this novel?'
 \z
 Figure~\vref{Abbildung-Verbstellung-HPSG} gives an overview of this.
 \begin{figure}
@@ -1551,12 +1550,12 @@ Figure~\vref{Abbildung-Verbstellung-HPSG} gives an overview of this.
 sm edges
 [VP
 	[V \sliste{ VP//V }, name=vini
-	   [V,name=vlast [kennt$_k$;knows]]]
+	   [V,name=vlast [kennt$_j$;knows]]]
 	[VP//V, name=vp
 	   [NP [jeder;everyone]]
 	   [V$'$//V, name=vbar
-	     [NP [diesen Mann;this man, roof]]
-		[V//V,name=vtrace [ \trace$_k$]]]]]
+	     [NP [diesen Roman;this novel, roof]]
+		[V//V,name=vtrace [ \trace$_j$]]]]]
 %\draw[<->] (vone) to (vtwo);
 %%\draw (-2,-5) to[grid with coordinates] (4,0.5);
 %% \draw[<-] (3,-3.4) .. controls (3.2,-3.6) .. (3.5,-3.4)
@@ -1574,7 +1573,7 @@ as the value of the feature \textsc{double slash} (abbreviated: \textsc{dsl}\isf
 (VP). The verb in initial position has a VP in its \compsl which is missing a verb (VP//V). This is the same verb that was the input
 for the lexical rule and that would normally occur in final position. In
 Figure~\ref{Abbildung-Verbstellung-HPSG}, there are two maximal verb projections:
-\emph{jeder diesen Mann \_$_k$} with the trace as the head and \emph{kennt jeder diesen Mann \_$_k$} with \emph{kennt} as the head.
+\emph{jeder diesen Roman \_$_j$} with the trace as the head and \emph{kennt$_j$ jeder diesen Roman \_$_j$} with \emph{kennt} as the head.
 
 This analysis will be explained in more detail in what follows. For the trace in
 Figure~\ref{Abbildung-Verbstellung-HPSG}, one could assume the lexical entry in (\mex{1}).
@@ -1617,14 +1616,14 @@ sm edges
 			[jeder;everyone]]
 		[V{[\comps \sliste{ \ibox{3} }]}
 			[\ibox{4} NP{[\textit{acc}]}
-				[diesen Mann;this man, roof]]
-			[{[V[\comps \sliste{ \ibox{3}, \ibox{4} }]}
+				[diesen Roman;this novel, roof]]
+			[{V[\comps \sliste{ \ibox{3}, \ibox{4} }]}
 				[\trace]]]]]]
 \end{forest}
 }
-\caption{\label{verb-movement-syn-simple}Analysis of \emph{Kennt jeder diesen Mann?} `Does everyone know this man?'}
+\caption{\label{verb-movement-syn-simple}Analysis of \emph{Kennt jeder diesen Roman?} `Does everyone know this novel?'}
 \end{figure}%
-The combination of the trace with \emph{diesen Mann} `this man' and \emph{jeder} `everbody' follows the rules and principles that we have encountered thus far.
+The combination of the trace with \emph{diesen Roman} `this novel' and \emph{jeder} `everbody' follows the rules and principles that we have encountered thus far.
 This begs the immediate question as to what licenses the verb \emph{kennt}
 in Figure~\ref{verb-movement-syn-simple} and what status it has.
 %\pagebreak
@@ -1636,13 +1635,13 @@ verb-final verbal projection. Finite verbs in initial position differ from compl
 they require a projection of a verb trace, whereas complementizers need projections of overt verbs:
 \eal
 \ex 
-\gll dass [jeder diesen Mann kennt]\\
-     that \spacebr{}everybody.\NOM{} this.\ACC{} man knows\\
-\glt `that everybody knows this man'
+\gll dass [jeder diesen Roman kennt]\\
+     that \spacebr{}everybody.\NOM{} this.\ACC{} novel knows\\
+\glt `that everybody knows this novel'
 \ex 
-\gll Kennt [jeder diesen Mann \_ ]\\
-	 knows \spacebr{}everybody.\NOM{} this.\ACC{} man\\
-\glt `Does everybody know this man?'
+\gll Kennt [jeder diesen Roman \_ ]\\
+	 knows \spacebr{}everybody.\NOM{} this.\ACC{} novel\\
+\glt `Does everybody know this novel?'
 \zl
 
 %\addlines[-4]
@@ -1794,20 +1793,20 @@ sm edges
                       \textsc{dsl$|$cat$|$comps} \ibox{2},\\
                       \textsc{comps} \sliste{ \ibox{3} } }}
 			[\ibox{4} NP{[\textit{acc}]}
-				[diesen Mann;this man,roof]]
+				[diesen Roman;this novel,roof]]
 			[V{\feattab{
                               \textsc{dsl$|$cat$|$comps} \ibox{2},\\
                               \textsc{comps} \ibox{2} \sliste{ \ibox{3}, \ibox{4} } }}
 				[\trace]]]]]
 \end{forest}
-\caption{\label{verb-movement-syn}Visualization of the analysis of \emph{Kennt jeder diesen Mann?} `Does everyone know this man?'}
+\caption{\label{verb-movement-syn}Visualization of the analysis of \emph{Kennt jeder diesen Roman?} `Does everyone know this novel?'}
 \end{figure}%
 %V1-LR steht für die Verberst"=Lexikonregel.
 %\noindent
 The lexical rule in (\mex{0}) licenses a verb that selects a VP (\iboxt{1} in
 Figure~\ref{verb-movement-syn}). The \dslv of this VP corresponds to the \locv of the verb that is the input of the lexical rule.
 Part of the \dslv is also the valence information represented in Figure \ref{verb-movement-syn} \iboxb{2}.
-Since \dsl is a head feature, the \dslv of the VP is identical to that of the verb trace and since the \locv of the verb trace is identified
+Since \dsl is a head feature, the \dslv of the VP is identical to that of the verb trace, and since the \locv of the verb trace is identified
 with the \dslv, the \comps information of the verb \emph{kennen} is also available at the trace. The combination of the trace with its
 arguments proceeds exactly as with an ordinary verb.
 
@@ -1828,7 +1827,7 @@ This may seem surprising at first glance, but if we look closer at the interacti
 \textsc{dsl} feature in the tree, then it becomes clear that the \dslv of the verb projection and therefore the \localv of the verb trace is determined by the \localv
 of the input verb. In Figure~\ref{verb-movement-syn}, \emph{kennt} is the input for the verb
 movement lexical rule. The relevant structure sharing ensures that, in
-the analysis of (\ref{bsp-kennt-jeder-diesen-Mann}), the \localv of the verb trace corresponds exactly to what is given in (\ref{le-verbspur-kennt}).
+the analysis of (\ref{bsp-kennt-jeder-diese-Frau}), the \localv of the verb trace corresponds exactly to what is given in (\ref{le-verbspur-kennt}).
 
 The most important points of the analysis of verb position are summarized below:
 \begin{itemize}
@@ -1861,12 +1860,12 @@ Figure~\vref{Abbildung-Konstituentenstellung-HPSG-normal} shows the analysis of 
 
 \eal
 \ex 
-\gll {}[weil] jeder diesen Mann kennt\\
-	 {}\spacebr{}because everyone.\NOM{} this.\ACC{} man knows\\
+\gll {}[weil] jeder diesen Roman kennt\\
+	 {}\spacebr{}because everyone.\NOM{} this.\ACC{} novel knows\\
 \ex 
-\gll {}[weil] diesen Mann jeder kennt\\
-	 {}\spacebr{}because this.\ACC{} man everyone.\NOM{} knows\\
-\glt `because everyone knows this man'
+\gll {}[weil] diesen Roman jeder kennt\\
+	 {}\spacebr{}because this.\ACC{} novel everyone.\NOM{} knows\\
+\glt `because everyone knows this novel'
 \zl
 %
 \begin{figure}
@@ -1878,7 +1877,7 @@ sm edges
 		[jeder;everybody]]
 	[V{[\comps \sliste{ \ibox{1} }]}
 		[\ibox{2} NP{[\type{acc}]}
-			[diesen Mann;this man, roof]]
+			[diesen Roman;this novel, roof]]
 		[V{[\comps \sliste{ \ibox{1}, \ibox{2} }]}
 			[kennt;knows]]]]
 \end{forest}
@@ -1895,7 +1894,7 @@ The analysis of the marked order is shown in Figure~\vref{Abbildung-Konstituente
 sm edges
 [V{[\comps \sliste{}]}
 	[\ibox{2} NP{[\type{acc}]}
-		[diesen Mann;this man, roof]]
+		[diesen Roman;this novel, roof]]
 	[V{[\comps \sliste{ \ibox{2} }]}
         	[\ibox{1} NP{[\type{nom}]}
 	        	[jeder;everybody]]
@@ -1930,7 +1929,7 @@ differ from languages such as German in that they discharge the arguments starti
 English, see Section~\ref{Abschnitt-Spr}), whereas languages with free constituent order can combine arguments with the verb
 in any order. In languages with fixed constituent order, either \ibox{1} or \ibox{3} is always the empty list. Since German structures are
 not restricted with regard to \ibox{1}
-or \ibox{3}, that is \ibox{1} and \ibox{3} can either be the empty list or contain elements, the
+or \ibox{3} -- that is, \ibox{1} and \ibox{3} can either be the empty list or contain elements -- the
 intuition is captured that there are less restrictions in languages with free constituent order than in languages with fixed order.
 We can compare this to the Kayneian\ia{Kayne, Richard S.} analysis from Section~\ref{Abschnitt-Kaynesche-Modelle}, where it was assumed
 that all languages are derived from the base order [specifier [head complement]] (see
@@ -1967,7 +1966,7 @@ information about missing constituents is passed up the tree (or feature structu
         Section~\ref{sec-dtc}). Nevertheless, it makes sense for expository purposes to explain
         the analysis as if the structure were built bottom"=up, but linguistic knowledge is independent of the direction
 	of processing. In recent computer implementations, structure building is mostly carried out
-        bottom"=up but there were other systems which worked top"=down. The only thing that is
+        bottom"=up, but there were other systems which worked top"=down. The only thing that is
         important in the analysis of nonlocal dependencies is that the information about the missing
 	element on all intermediate nodes is identical to the information in the filler and the gap.
 }
@@ -1975,9 +1974,9 @@ There is a trace at the position where the fronted element would normally occur.
 the analysis of (\mex{1}).
 \ea
 \label{Beispiel-Diesen-Mann-kent-jeder-HPSG}
-\gll {}[Diesen Mann]$_j$ kennt$_i$ \_$_j$ jeder \_$_i$.\\
-	 {}\spacebr{}this man knows {} everyone\\
-\glt `Everyone knows this man.'
+\gll {}[Diesen Roman]$_i$ kennt$_j$ \_$_i$ jeder \_$_j$.\\
+	 {}\spacebr{}this novel knows {} everyone\\
+\glt `Everyone knows this novel.'
 \z
 \begin{figure}
 \settowidth{\offset}{N}
@@ -1985,12 +1984,12 @@ the analysis of (\mex{1}).
 \begin{forest}
 sm edges
 [VP
-	[NP,name=np
-		[diesen Mann$_i$;this man,roof]]
+	[NP$_i$,name=np
+		[diesen Roman;this novel,roof]]
 	[VP/NP,name=vpnp2
 		[V
 			[V
-				[kennt$_k$;knows]]]
+				[kennt$_j$;knows]]]
 		[VP/NP,name=vpnp1
 			[NP/NP, name=npnp
 				[\trace$_i$]]
@@ -1998,7 +1997,7 @@ sm edges
 				[NP
 					[jeder;everyone]]
 				[V
-				  [\trace$_k$]]]]]]
+				  [\trace$_j$]]]]]]
 \draw[<->] ($(npnp.east)$)  to [bend right=45] ($(vpnp1.south east)+(-.25,.1)$);
 \draw[<->] ($(vpnp1.north east)+(-.26,-.1)$)  to [bend right=45] ($(vpnp2.east)+(-0,0)$);
 \draw[<->] ($(vpnp2.north)+(.26,-0)$) parabola[parabola height=5mm] ($(np.north)+(-.15,0)$);
@@ -2012,9 +2011,9 @@ Section~\ref{sec-GB-lokale-Umstellung} on the unmarked position). The extraction
 follow the subject:
 \ea
 \label{Beispiel-Diesen-Mann-kent-jeder-trace-follows-subjectHPSG}
-\gll {}[Diesen Mann]$_j$ kennt$_i$ jeder \_$_j$  \_$_i$.\\
-	 {}\spacebr{}this man knows everyone {}\\
-\glt `Everyone knows this man.'
+\gll {}[Diesen Roman]$_i$ kennt$_j$ jeder \_$_i$  \_$_j$.\\
+	 {}\spacebr{}this novel knows everyone {}\\
+\glt `Everyone knows this novel.'
 \z
 \citet{Fanselow2004c} argues that certain phrases can be placed in the Vorfeld without having a
 special pragmatic function. For instance, (expletive) subjects in active sentences (\mex{1}a),
@@ -2038,16 +2037,16 @@ passives (\mex{1}e) can be placed in the Vorfeld, even though they are neither t
      a.\dat{} actor is the.\nom{} text forgotten\\
 \glt `An actor forgot the text.'
 \ex
-\gll Einem Kind wurde das Fahrrad gestohlen.\\
-     a.\dat{} child was the.\nom{} bike stolen\\
+\gll Einem    Kind  wurde  das Fahrrad gestohlen.\\
+     a.\dat{} child \AUX{} the.\nom{} bike stolen\\
 \glt `A bike was stolen from a child.'
 \zl
 Fanselow argues that information structural effects can be due to reordering in the Mittelfeld. So
 by ordering the accusative object as in (\mex{1}), one can reach certain effects:
 \ea
-\gll Kennt diesen Mann jeder?\\
-     knows this man everybody\\
-\glt `Does everybody know this man?'
+\gll Kennt diesen Roman jeder?\\
+     knows this novel everybody\\
+\glt `Does everybody know this novel?'
 \z
 If one assumes that there are frontings to the \vf that do not have information structural constraints
 attached to them and that information structural constraints are associated with reorderings in the
@@ -2073,7 +2072,7 @@ unmarked in the initial position in the Mittelfeld as well:
 \glt `Did an actor forget the text?'
 \ex
 \gll Wurde einem Kind das Fahrrad gestohlen?\\
-     was a.\dat{} child the.\nom{} bike stolen\\
+     \AUX{} a.\dat{} child the.\nom{} bike stolen\\
 \glt `Was a bike stolen from a child?'
 \zl
 So, I assume that the trace of a fronted argument that would not be Mittelfeld"=initial in the unmarked order is combined with
@@ -2081,10 +2080,10 @@ the head last, as described in Section~\ref{sec-HPSG-lokale-Umstellung}. Of cour
 to all extracted arguments that would be Mittelfeld"=initial in the unmarked order anyway: the
 traces are combined last with the head as for instance in (\mex{1}):
 \ea
-\label{Beispiel-jeder-kennt-diesen-Mann-HPSG}
-\gll {}[Jeder]$_j$ kennt$_i$ \_$_j$ diesen Mann \_$_i$.\\
-	 {}\spacebr{}everybody knows {} this man\\
-\glt `Everyone knows this man.'
+\label{Beispiel-jeder-kennt-diesen-Roman-HPSG}
+\gll {}[Jeder]$_i$ kennt$_j$ \_$_i$ diesen Roman \_$_j$.\\
+	 {}\spacebr{}everybody knows {} this novel\\
+\glt `Everyone knows this novel.'
 \z
 
 After this rough characterization of the basic idea, we now turn to the technical details: unlike verb
@@ -2111,7 +2110,7 @@ is a list of \type{local} objects.
 
 As\is{trace!extraction trace|(} with the analysis of verb movement, it is assumed that there is a
 trace in the position where the accusative object would normally occur and that this trace shares the properties of that object. The verb can therefore satisfy its valence requirements locally. Information about whether
-there has been combination with a trace and not with a genuine argument is represented inside the complex sign and passed upward in the tree.
+there has been a combination with a trace and not with a genuine argument is represented inside the complex sign and passed upward in the tree.
 The long"=distance dependency can then be resolved by an element in the prefield higher in the tree.
 
 Long"=distance dependencies are introduced by the trace, which has a feature corresponding to the \localv of the required argument in its \slashl.
@@ -2195,8 +2194,8 @@ sm edges
 [V\feattab{\textsc{comps} \eliste,\\ 
            \textsc{inher$|$slash} \eliste},s sep+=1em % increase the distance because otherwise we
                                 % are in the triangle
-	[NP{[\loc \ibox{1} \textit{acc}]}
-		[diesen Mann;this man,roof]]
+	[NP{[\HPSGloc \ibox{1} \textit{acc}]}
+		[diesen Roman;this novel,roof]]
 	[V\feattab{\textsc{comps} \sliste{},\\
                    \textsc{inher$|$slash} \sliste{ \ibox{1} },\\
                    \textsc{to-bind$|$slash} \sliste{ \ibox{1} } }
@@ -2216,7 +2215,7 @@ sm edges
 					[\trace]]]]]]
 \end{forest}
 }
-\caption{\label{Abbildung-Diesen-Mann-kennt-jeder}Analysis of \emph{Diesen Mann kennt jeder.} `Everyone knows this man.' combined with the verb movement analysis for verb-initial order}
+\caption{\label{Abbildung-Diesen-Mann-kennt-jeder}Analysis of \emph{Diesen Roman kennt jeder.} `Everyone knows this novel.' combined with the verb movement analysis for verb-initial order}
 \end{figure}%
 %
 The verb movement trace for \emph{kennt} `knows' is combined with a nominative NP and an extraction trace.
@@ -2431,7 +2430,7 @@ approaches are for instance
 \citet{Kathol95a,Kathol2000a,DS99a,RS99a,Crysmann2003c,BS2004a,Sato:06cluk,Wetta2011a}. I also
 suggested linearization"=based analyses \citep{Mueller99a,Mueller2002b} and implemented a
 large"=scale grammar fragment based on Reape's ideas \citep{Babel}. Linearization"=based approaches
-to the German sentence structure are similar to the GPSG approach in that it is assumed that verb
+to the German sentence structure are similar to the GPSG approach in that it is assumed that the verb
 and arguments and adjuncts are members of the same linearization domain and hence may be realized in
 any order. For instance, the verb may precede arguments and adjuncts or follow them. Hence, no empty element for the verb in
 final position is necessary. While this allows for grammars without empty elements for the analysis of the verb
@@ -2485,12 +2484,12 @@ the analysis of relative phrases.
 \end{sloppypar}
 
 In the first decade of HPSG history (\citealp*{ps,ps2,NNP94a-ed}), despite the differences already mentioned here, HPSG was still very similar to Categorial Grammar
-in that it was a strongly lexicalized theory. The syntactic make-up and semantic content of a phrase was determined by the head (hence the term \emph{head-driven}).
+in that it was a strongly lexicalized theory. The syntactic make-up and semantic content of a phrase were determined by the head (hence the term \emph{head-driven}).
 In cases where head-driven analyses were not straight-forwardly possible, because no head could be identified in the phrase in question, then it was commonplace to
 assume empty heads\is{empty element}. An example of this is the analysis of relative clauses in \citet[Chapter~5]{ps2}.
 Since an empty head can be assigned any syntactic valence and an arbitrary semantics (for discussion
 of this point, see Chapter~\ref{Abschnitt-Diskussion-leere-Elemente}), one has not really explained
-anything as one needs very good reasons for assuming an empty head, for example that this empty
+anything as one needs very good reasons for assuming an empty head, for example, that this empty
 position can be realized in other contexts. This is, however, not the case for empty heads that are only proposed in order to save theoretical assumptions. Therefore, \citet{Sag97a} developed
 an analysis of relative clauses without any empty elements. As in the analyses sketched for (\mex{-1}) and (\mex{0}), the relative phrases are combined directly
 with the partial clause in order to form the relative clause. For the various observable types of relative clauses in English, Sag proposes different dominance rules.
@@ -2512,7 +2511,7 @@ does not form part of theoretical explanations. In implementations, macros\is{ma
 and LFG\indexlfg, phrase structure rules are represented differently from other feature"=value pairs (however, see
 \citew*{ADT2008a,ADT2013a} for macros and inheritance used for c"=structure annotations). Furthermore, there are further differences between types and macros, which are of a
 more formal nature: in a typed system, it is possible under certain conditions to infer the type of a particular structure from the presence
-of certain features and of certain values. With macros, this is not the case as they are only abbreviations. The consequences for linguistic analyses made by this differences are, however, minimal.
+of certain features and of certain values. With macros, this is not the case as they are only abbreviations. The consequences for linguistic analyses entailed by these differences are, however, minimal.
 
 HPSG differs from \gbt and later variants in that it does not assume transformations. In the 80s, representational variants of GB were proposed, that is,
 it was assumed that there was no D"=structure\is{D"=structure} from which an S"=structure\is{S"=structure} is created by simultaneous marking of the original position of moved elements.
@@ -2537,20 +2536,20 @@ Once one has recreated the base order, then it is clear what is the subject and 
 structure in (\mex{1}a) have to be reversed.
 \eal
 \ex 
-\gll {}[weil] jeder diesen Mann kennt\\
-	 {}\spacebr{}because everyone this man knows\\
-\glt `because everyone knows this man'
+\gll {}[weil] jeder diesen Roman kennt\\
+	 {}\spacebr{}because everyone this novel knows\\
+\glt `because everyone knows this novel'
 \ex 
-\gll {}[weil] diesen Mann jeder kennt\\
-	 {}\spacebr{}because this man everyone knows\\
+\gll {}[weil] diesen Roman jeder kennt\\
+	 {}\spacebr{}because this novel everyone knows\\
 \zl
 In HPSG and also in other transformation-less models, the aim is to assign arguments in the order in (\mex{0}b) to descriptions
 in the valence list. The valence list (or \argst in newer approaches) corresponds in a sense to Deep Structure\is{Deep Structure} in GB.
 The difference is that the head itself is not included in the argument structure, whereas this is the case with D"=structure.
 
 \citet{Bender2008a}\label{Seite-Bender-Wambaya} has shown how one can analyze phenomena from non"=configurational languages such as Wambaya\il{Wambaya}
-by referring to the argument structure of a head. In Wambaya, words that would normally be counted as constituents in English or German can occur discontinuously, that
-is an adjective that semantically belongs to a noun phrase and shares the same case\is{case}, number\is{number} and gender\is{gender} values with other parts of the noun
+by referring to the argument structure of a head. In Wambaya, words that would normally be counted as constituents in English or German can occur discontinuously; that
+is, an adjective that semantically belongs to a noun phrase and shares the same case\is{case}, number\is{number} and gender\is{gender} values with other parts of the noun
 phrase can occur in a position in the sentence that is not adjacent to the remaining noun phrase. \citet{Nordlinger98a-u} has analyzed the relevant data in LFG\indexlfg. In her analysis, the various parts
 of the constituent refer to the f"=structure of the sentence and thus indirectly ensure that all parts of the noun phrase have the same case.
 Bender adopts a variant of HPSG where valence information is not removed from the valence list after an argument has been combined with its head, but rather
@@ -2595,8 +2594,8 @@ Section~\ref{sec-formalization-minimalism} on pages \pageref{page-torr-implement
 \item What status do syntactic trees have in HPSG?
 \item How does case assignment take place in the analysis of example (\mex{1})?
 \ea
-\gll Dem Mann wurde ein Buch geschenkt.\\
-	 the.\dat{} man was a.\nom{} book given\\
+\gll Dem        Mann wurde  ein Buch geschenkt.\\
+     the.\dat{} man  \AUX{} a.\nom{} book given\\
 \glt `The man was given a book.'
 \z
 \item What is \emph{linking} and how is it accounted for in HPSG?
@@ -2616,12 +2615,12 @@ It is, for example, not explained how one can ensure that the adjective and noun
 analysis so that the adjective"=noun combination in (\mex{1}a) can be analyzed, but not the one in (\mex{1}b):
 \eal
 \ex[]{
-\gll eines interessanten Mannes\\
-	 an.\gen{} interesting.\gen{} man.\gen{}\\
+\gll eines interessanten Romans\\
+     an.\gen{} interesting.\gen{} novel.\gen{}\\
 }
 \ex[*]{ 
-\gll eines interessanter Mannes\\
- an.\gen{} interesting.\nom{} man.\gen{}\\
+\gll eines interessanter Romans\\
+     an.\gen{} interesting.\nom{} novel.\gen{}\\
 }
 \zllast
 \end{enumerate}
@@ -2637,8 +2636,8 @@ modal infinitives as well as diverse passive variants and the long passive\is{pa
 \citew[Chapter~3]{Mueller2002b} and \citew[Chapter~17]{MuellerLehrbuch1}.
 
 Overviews of HPSG can be found in \citew{LM2006a}, \citew{PK2006a-u}, \citew{Bildhauer2014a-u} and
-\citew{MuellerHPSGHandbook}. Language Science Press will publish a large handbook on HPSG
-\citep{HPSGHandbook} containing chapters on foundational assumptions, the history of the framework,
+\citew{MuellerHPSGHandbook}. Language Science Press published a large handbook on HPSG
+\citep*{HPSGHandbook} containing chapters on foundational assumptions, the history of the framework,
 various syntactic phenomena, non-syntactic levels of description like morphology, semantics, information
 structure, dialog and the comparison with other frameworks (Minimalism, Categorial Grammar,
 Construction Grammar, Lexical Functional Grammar, Dependency Grammar).
@@ -2648,8 +2647,7 @@ comparing frameworks. The first one is in German and contains an analysis of a n
 text.\footnote{%
   See \url{https://hpsg.hu-berlin.de/~stefan/Pub/artenvielfalt.html} for the example sentences and
   some interactive analyses of the examples.
-} The
-second one is in English and contains a general description of the framework and a detailed analysis
+} The second one is in English and contains a general description of the framework and a detailed analysis
 of the sentence in (\mex{1}):\footnote{%
   See \url{https://hpsg.hu-berlin.de/~stefan/Pub/current-approaches-hpsg.html} for an interactive
   analysis of the example.
