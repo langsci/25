@@ -337,6 +337,7 @@ Since there is no possible binding for \emph{himself} in (\mex{0}a), the sentenc
 ungrammatical. (\mex{0}b) is fine, but \emph{himself} has to refer Peter, it cannot refer to
 Benjamin.
 
+%\largerpage[2]
 What is required for the analysis of Binding and NPI phenomena in theories that analyze these
 phenomena in terms of tree configurations is that the reflexive pronoun in (\mex{0}) is ``higher'' in the tree than
 the proper name \emph{Benjamin}. More precisely, the reflexive pronoun \emph{himself} has to
@@ -353,6 +354,7 @@ b. & contains B
 \end{tabular}
 \z
 
+\noindent
 In the trees to the left and in the middle of Figure~\vref{fig-ditransitives-options} the c-command
 relations are not as desired: in the left-most tree both DPs c-command each other and in the middle
 one \emph{Benjamin} c-commands \emph{himself} rather than the other way round.
@@ -394,7 +396,7 @@ there is some additional structure involving the category \textit{v}, which is c
 c-command \emph{himself}. \emph{Peter} in (\ref{ex-Peter-showed-himself-Benjamin}) is the specifier
 of \littlevbar and hence c-commands and binds \emph{himself}. As expected.
 
-\largerpage
+%\largerpage
 The analysis of ditransitives involving an additional verbal head goes back to
 \citet{Larson88a}. \citet[\page 70]{HK93a-u} assume that this verbal head contributes a causative
 semantics.
@@ -644,7 +646,7 @@ baseline
 \subsubsection{Case assignment}
 \label{sec-case-mp}
 
-\addlines
+%\addlines
 In the GB analysis that was presented in Chapter~\ref{chap-gb}, nominative was assigned by (finite)
 I and the other cases by the verb (see Section~\ref{sec-case-assignment}). The assignment of
 nominative is taken over to Minimalist analyses, so it is assumed
@@ -710,12 +712,14 @@ Intervention\is{intervention}: In a structure [X \ldots{} Z \ldots{} Y], Z inter
 c-commands\is{c"=command} Z and Z c-commands Y.
 \z
 
+\largerpage
+\noindent
 So, since T may Agree with \emph{Anna} in Figure~\ref{fig-Anna-reads-the-book-minimalism-TP}, it must not Agree with \emph{the book}. Hence
 nominative assignment to \emph{she} in (\ref{ex-him-likes-she}) is impossible and (\ref{ex-him-likes-she}) is correctly ruled out.
 
 \subsection{Adjuncts}
 
-\addlines
+%\addlines
 \citet[Section~4.2.3]{Adger2003a} assumes that adjuncts attach to XP and form a new XP. He calls
 this operation \emph{Adjoin}. Since this operation does not consume any features it is different from
 External Merge and hence a new operation would be introduced into the theory, contradicting
@@ -732,6 +736,7 @@ Section~\ref{sec-adjuncts-hpsg} on the HPSG schema for head adjunct combinations
 \label{sec-verb-position-MP}
 
 %\addlines[-1]
+\largerpage
 The analysis of verb first sentences in German is straightforward, given the machinery that was
 introduced in the previous section. The basic idea is the same as in GB: the finite verb moves from V to
 \textit{v} to T and then to C. The movement to T is forced by a strong tense feature on T and the movement of
@@ -740,9 +745,9 @@ Interrogative feature (Int) or a strong Declarative feature (Decl) by C. The ana
 interrogative clause in (\mex{1}) is shown in
 Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.\todostefan{Add page number to Adger ref}
 \ea
-\gll Kennt jeder diesen Mann?\\
-     knows everybody this man\\
-\glt `Does everybody know this man?'
+\gll Kennt jeder diesen Roman?\\
+     knows everybody this novel\\
+\glt `Does everybody know this novel?'
 \z
 \begin{figure}
 \begin{forest}
@@ -759,14 +764,14 @@ Figure~\vref{fig-kennt-jeder-diesen-mann-minimalism}.\todostefan{Add page number
           [\phonliste{ jeder }]
           [\littlevbar
             [VP
-              [DP [\textit{diesen Mann}, roof] ]
+              [DP [\textit{diesen Roman}, roof] ]
               [\phonliste{ kennt }]]
             [\textit{v}
               [\phonliste{ kennt }]
               [\textit{v}]]]]
         [\phonliste{ kennt T }]]]]
 \end{forest}
-\caption{\label{fig-kennt-jeder-diesen-mann-minimalism}Analysis of \emph{Kennt jeder diesen Mann?} `Does everybody know this man?' following the
+\caption{\label{fig-kennt-jeder-diesen-mann-minimalism}Analysis of \emph{Kennt jeder diesen Roman?} `Does everybody know this novel?' following the
   analysis of \citet{Adger2003a}}
 \end{figure}%
 
@@ -780,14 +785,14 @@ since the initial position in German declarative sentences is not restricted to 
 would assume an alternative C head with a foc feature). Figure~\vref{fig-diesen-mann-kennt-jeder}
 shows the analysis of (\mex{1}):
 \ea
-\gll Diesen Mann kennt jeder.\\
-     this man    knows everybody\\
-\glt `Everbody knows this man.'
+\gll Diesen Roman kennt jeder.\\
+     this   novel    knows everybody\\
+\glt `Everbody knows this novel.'
 \z
 \begin{figure}
 \begin{forest}
 [CP
-  [\emph{diesen Mann} {[top] }]
+  [\emph{diesen Roman} {[top] }]
   [\cbar{[\st{\textit{u}top*}]}
     [C
       [T{[\st{Decl*}]}
@@ -801,20 +806,20 @@ shows the analysis of (\mex{1}):
           [\phonliste{ jeder }]
           [\littlevbar
             [VP
-              [\phonliste{ diesen Mann }{[D]}]
+              [\phonliste{ diesen Roman }{[D]}]
               [\phonliste{ kennt }]]
             [\textit{v}
               [\phonliste{ kennt }]
               [\textit{v}]]]]
         [\phonliste{ kennt T }]]]]]
 \end{forest}
-\caption{\label{fig-diesen-mann-kennt-jeder}Analysis of \emph{Diesen Mann kennt jeder.} `Everybody
-  knows this man.' following the
+\caption{\label{fig-diesen-mann-kennt-jeder}Analysis of \emph{Diesen Roman kennt jeder.} `Everybody
+  knows this novel.' following the
   analysis of \citet[\page 331]{Adger2003a}}
 \end{figure}%
 As in the verb-initial clause in Figure~\ref{fig-kennt-jeder-diesen-mann-minimalism} a feature on C
 triggers verb movement. This time it is a Decl feature since we are dealing with a declarative
-clause. The top feature triggers movement of \emph{diesen Mann} `this man' to the specifier position of C.
+clause. The top feature triggers movement of \emph{diesen Roman} `this novel' to the specifier position of C.
 
 
 \section{Passive}
@@ -854,6 +859,7 @@ argument of \emph{getanzt} `danced' behaves like a subject. If adjectival passiv
 it is explained why (\mex{-1}b) is possible, while (\mex{-1}a) is not. 
 
 %\addlines[2]
+\largerpage
 \citet[\page 140]{Adger2003a} assumes the structure in Figure~\vref{fig-little-v-unaccusative} for \vPs with unaccusative verbs.
 \begin{figure}
 \begin{forest}
@@ -871,6 +877,7 @@ passive. Unaccusative verbs are similar to passivized verbs in that they do have
 somehow also has object properties. The special version of \littlev is selected by the Passive head
 \emph{werden} `\AUX', which forms a Passive Phrase\is{category!functional!Passive} (abbreviated as
 PassP). See Figure~\ref{fig-passive-schlagen-mp} for the analysis of the example in (\mex{1}):
+
 \ea
 \gll dass er geschlagen wurde\\
      that he beaten \AUX\\
@@ -929,12 +936,12 @@ literature. Since all reorderings in Minimalist theories are feature-driven, the
 that has a feature that triggers reorderings like those in (\mex{1}b):
 \eal
 \ex 
-\gll {}[weil] jeder diesen Mann kennt\\
-	 {}\spacebr{}because everyone this man knows\\
-\glt `because everyone knows this man'
+\gll {}[weil] jeder diesen Roman kennt\\
+     {}\spacebr{}because everyone this novel knows\\
+\glt `because everyone knows this novel'
 \ex 
-\gll {}[weil] diesen Mann jeder kennt\\
-	 {}\spacebr{}because this man everyone knows\\
+\gll {}[weil] diesen Roman jeder kennt\\
+	 {}\spacebr{}because this novel everyone knows\\
 \zl
 There have been various suggestions involving functional projections like Topic Phrase \citep[\page 222]{Laenzlinger2004a} or AgrS and
 AgrO \citep[Chapter~4]{Meinunger2000a} that offer places to move to. G.\ \citet[Section~3.5]{GMueller2014a-u} offers a leaner solution, though. In his approach, the
@@ -951,19 +958,19 @@ Figure~\vref{fig-scrambling-minimalism}.\footnote{%
       [\emph{dass}]]
     [TP
         [\vP
-          [\emph{diesen Mann}]
+          [\emph{diesen Roman}]
           [\littlevbar
             [ \emph{jeder}]
             [\littlevbar
                 [VP
-                  [\phonliste{ diesen Mann } {[D]}] 
+                  [\phonliste{ diesen Roman } {[D]}] 
                   [\phonliste{ kennt }]]
                 [\textit{v}
                   [\phonliste{ kennt }]
                   [\textit{v}]]]] ]
         [\textit{kennt} {[T]}]]]
 \end{forest}
-\caption{\label{fig-scrambling-minimalism}Analysis of \emph{dass diesen Mann jeder kennt} `that everybody knows this man' as movement
+\caption{\label{fig-scrambling-minimalism}Analysis of \emph{dass diesen Roman jeder kennt} `that everybody knows this novel' as movement
   of the object to a specifier position of \textit{v}}
 \end{figure}%
 
@@ -1010,6 +1017,7 @@ a theory as such, but rather a research program (Chomsky \citeyear[\page 4]{Chom
 \citep*{Kolb97a,JL97a-u,JL99a-u,LLJ2000b,LLJ2000a,LLJ2001a,Seuren2004a,PJ2005a},
 however, one should say that some criticisms overshoot the mark.
 
+\largerpage
 There are various strains of Minimalism. In the following sections, I will discuss some of the
 central ideas and explain which aspects are regarded problematic.
 
@@ -1029,6 +1037,7 @@ Move corresponds to the operation \movea, which was already discussed in Chapter
 Merge is the combination of (two) linguistic objects.
 
 %\addlines[2]
+\enlargethispage{5pt}
 It is generally assumed that exactly two objects can be combined \citep[\page 226]{Chomsky95a-u}.
 For Move, it is assumed that there must be a reason for a given movement operation. The reason for
 movement is assumed to be that an element can check some feature\is{feature!checking} in the position it is moved to. This idea was already presented in the analysis of the passive in
@@ -1130,7 +1139,7 @@ of scope phenomena without empty elements or movement, see Section~\ref{Abschnit
 \citew[\page 13]{BG2005a} assume the categories $-$PolP\is{category!functional!Pol@$-$Pol}, $+$PolP\is{category!functional!Pol@+Pol} and
 \%PolP\is{category!functional!Pol@\%Pol} for their discussion of polarity.
 
-\addlines[2]
+%\addlines[2]
 \citet[\page 76]{Webelhuth95a} gives an overview of the functional projections that had been proposed up to 1995 and offers references for AgrA\is{category!functional!AgrA},
 AgrN\is{category!functional!AgrN}, AgrV\is{category!functional!AgrV},
 Aux\is{category!functional!Aux}, Clitic Voices\is{category!functional!Clitic Voices}, Gender\is{category!functional!Gender},
@@ -1147,8 +1156,10 @@ position of clitics in Italian\il{Italian}.
 \citet[\page 470]{Speyer2008a} a SceneP.
 
 %\addlines[2]
+%\largerpage
+\enlargethispage{5pt}
 \citet[\page 106]{Cinque99a-u} adopts the 32 functional heads in Table~\vref{Tabelle-Cinque} in his work.
-\begin{table}
+\begin{table}[btp]
 \begin{tabular}[t]{@{}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{~~~}r@{~~}l@{}}
 \lsptoprule
  1. & Mood\sub{Speech Act}     &  2. & Mood\sub{Evaluative}     &  3. & Mood\sub{Evidential}      &  4. & Mood\sub{Epistemic}\\
@@ -1476,7 +1487,7 @@ and adverbs (\mex{1}d).
 \ex a [not unapproachable] figure
 \ex {}[Not always] has she seasoned the meat.
 \zl
-\addlines
+%\addlines
 If all of these projections are simply NegPs without any further properties (about verb form, adjective
 part of speech, adverb part of speech), it would be impossible to account for their different
 syntactic distributions. Negation is clearly just a special case of the more general problem, since
@@ -1595,6 +1606,7 @@ $\beta$.
 \ex\label{Label2} If $\alpha$ is internally merged to $\beta$, forming \{ $\alpha$, $\beta$ \} then
 the label of $\beta$ is the label of \{ $\alpha$, $\beta$ \}.
 \zl
+\largerpage
 As Chomsky notes, these rules are not unproblematic since the label is not uniquely determined in all
 cases. An example is the combination of two lexical elements. If both H and $\alpha$ in (\mex{0}a)
 are lexical items (LI), then both H and $\alpha$ can be the label of the resulting
@@ -1732,7 +1744,7 @@ to determine the label of $\gamma$. Following Chomsky's logic, either Z or W wou
 make it possible to label $\gamma$. \citet{Chomsky2013a} mentions this problem in footnote~40, but does not provide a solution.
 }
 
-\addlines[-1]
+%\addlines[-1]
 A special case that is discussed by Chomsky is the Internal Merge of an LI
 $\alpha$ with a non LI  $\beta$. According to rule \pref{Label1} the label would be $\alpha$. According
 to \pref{Label2}, the label would be $\beta$ (see also \citew{Donati2006a-u}). Chomsky discusses the combination of the
@@ -1814,6 +1826,7 @@ Thomas Gsella, taz, 12.02.1997, p.\,20.
       }
 \zl
 %
+\largerpage
 Since \emph{wessen Schuhe} `whose shoes' is not a lexical item, rule \pref{Label2} has to be
 applied, provided no additional rules are assumed to deal with such cases. This means that the whole
 free relative clause \emph{wessen Schuhe danach besprenkelt sind} is labeled as CP. For the free
@@ -1867,7 +1880,7 @@ economical one wins, but the assumption of transderivational constraints\is{tran
 consequences \citep[Section~5]{Pullum2013a}.\is{relative clause!free|)}
 
 %\addlines
-\addlines[-1]
+%\addlines[-1]
 \citet{Chomsky2013a} abandons the labeling condition in \pref{Label2} and replaces it with general
 labeling rules that hold for both internal and external Merge of two phrases. He distinguishes two
 cases. In the first case, labeling becomes possible since one of the two phrases of the set \{ XP,
@@ -1880,6 +1893,7 @@ YP \} is moved away. This case was already discussed above. Chomsky writes about
   number. These features would be responsible for the label of the sentence. The exact details are
   not worked out, but almost certainly will be more complex than \pref{Label2}.
 
+\largerpage
 A property that is inherent in both \citew{Chomsky2005a} and \citew{Chomsky2013a} is that the label
 is exclusively determined from one of the merged objects. As Bob Borsley pointed out to me, this is
 problematic for interrogative/relative phrases like \pmex{1}.
@@ -1946,6 +1960,7 @@ Schema of HPSG.
 \label{Abschnitt-Spezfikatoren-MP}
 
 %\addlines[-2]
+%\largerpage[-1]
 \mbox{}\citet[\page 146]{Chomsky2008a} assumes that every head has exactly one complement but an
 arbitrary number of specifiers. In standard \xbart,\is{X theory@\xbar theory|(}\is{specifier|(}\is{complement|(} the restriction that there can be at most one complement
 followed from the general \xbar schema and the assumption that structures are at most binary
@@ -2090,7 +2105,8 @@ conjunction) can be formulated such that the coordination of two $+$\textsc{min}
 item. In Chomsky's system an analogous rule cannot be defined, since the coordination of two lexical
 items is not a lexical item any longer.
 
-\largerpage
+%\largerpage
+\enlargethispage{8pt}
 Like Chomsky in his recent Minimalist work, Categorial Grammar \citep{Ajdukiewicz35a-u} and HPSG
 (Pollard \biband Sag \citeyear{ps}; \citeyear[\page 39--40]{ps2}) do not (strictly) adhere to
 \xbart. Both theories assign the symbol NP to pronouns (for CG see \citew[p.\,615]{SB2006a-u}, see
@@ -2617,7 +2633,8 @@ in order to make room for another constituent in a certain position (see Section
 A further difference between general \xbart and Stabler's formalization of Internal Merge on the
 one hand and HPSG on the other is that in the latter case there is no restriction regarding the
 completeness (or valence `saturation') of the filler daughter. Whether the filler daughter has to be
-a maximal projection (English) or not (German), follows from restrictions that are enforced locally
+a maximal projection (English) or not (German),\pagebreak{} 
+follows from restrictions that are enforced locally
 when the trace is combined with its head. This makes it possible to analyze sentences like \pmex{1}
 without remnant movement.\footnote{%
   See also \citew{MOe2013b} for an analysis of object shift in Danish that can account for verb
@@ -2663,6 +2680,7 @@ Bagels, I like and Ellison hates.\footnote{%
 \ex The man who$_i$ [Mary loves \_$_i$] and [Sally hates \_$_i$] computed my tax.
 \zl
 %\addlines[2]
+%\enlargethispage{3pt}
 This problem was solved for GPSG by \citet{Gazdar81a} and the solution carries over to HPSG. The
 Minimalist community tried to address these problems by introducing operations like sideward
 movement\is{sideward movement} \citep{Nunes2004a-u} where constituents can be inserted into sister trees. So in the
@@ -2712,7 +2730,7 @@ to determine this -- as Categorial Grammar does -- in the lexical entry for the 
 Chapter~\ref{Abschnitt-Phrasal-Lexikalisch} for a more general discussion of lexical and phrasal analyses). Regardless of
 this, every theory has to somehow account for these ten differences. If one wishes to argue that this has nothing to
 do with syntax, then somehow this has to be modeled in the semantic component. This means that there is no reason
-to prefer one theory over another at this point.
+to prefer one theory over another at this point.%
 \is{Minimalist Grammar (MG)|)}\is{Categorial Grammar (CG)|)}
 
 
@@ -2720,7 +2738,7 @@ to prefer one theory over another at this point.
 \label{sec-selection-features-vs-categories}
 
 \citet{BE95a} pointed out that Minimalist theories are very similar to Categorial Grammar and I
-have discussed the similarities between Minimalist theories and HPSG in \citew{MuellerUnifying} and in the previous
+have discussed the similarities between Minimalist theories and\pagebreak{} HPSG in \citew{MuellerUnifying} and in the previous
 subsections. However, I overlooked one crucial difference between the usual assumptions about
 selection in Minimalist proposals on the one hand and Categorial Grammar\indexcg, Dependency Grammar\indexdg, LFG\indexlfg, HPSG\indexhpsg, TAG\indextag, and
 Construction Grammar\indexcxg on the other hand: what is selected in the former type of theory is a single

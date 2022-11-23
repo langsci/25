@@ -133,7 +133,7 @@
 %% \newcommand{\iafdata}[1]{\index{autind}{#1|fn{\thefootnote}}}
 
 
-%% \newcommand{\is}[1]{\if@noftnote%
+%% \newcommansd{\is}[1]{\if@noftnote%
 %% \index{subind}{#1}%
 %% \else%
 %% \index{subind}{#1|fn{\thefootnote}}%
@@ -182,8 +182,8 @@
 
 \newcommand{\feat}[1]{\textsc{#1}\isfeat{#1}}
 
-\newcommand{\sub}[1]{\(_{\mbox{\scriptsize\textrm{#1}}}\)}
-\newcommand{\ssub}[1]{\(_{\mbox{\tiny\textrm{#1}}}\)}
+\newcommand{\sub}[1]{\textsubscript{\scriptsize\textrm{#1}}}
+\newcommand{\ssub}[1]{\textsubscript{\tiny\textrm{#1}}}
 
 
 
