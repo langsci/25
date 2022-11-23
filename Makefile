@@ -280,6 +280,10 @@ check-gt.bib: ../../../Bibliographien/biblio.bib
 check-bib: gt.bib 
 	biber --validate-datamodel grammatical-theory
 
+checked:
+	../../../Bibliographien/extracted-checked-items gt.bib
+
+
 # what do you have to do after changing langsci.dbx? Everything?
 grammatical-theory.bcf: langsci.dbx ../../../Bibliographien/biblio.bib
 	xelatex grammatical-theory
