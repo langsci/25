@@ -107,6 +107,7 @@ developed in Heidelberg, Saarbrücken and Stanford in the \verbmobil project. \v
 largest ever AI project in Germany. It was a machine translation project for spoken language in the
 domains of trip planning and appointment scheduling \citep{Wahlster2000a-ed}.
 
+\largerpage
 Currently there are two larger groups that are working on the development of grammars: the DELPH-IN consortium (Deep Linguistic Processing with HPSG)\footnote{%
   \url{http://www.delph-in.net/}. 2018-02-20.
 } and the group that developed out of the network CoGETI\is{CoGETI} (Constraintbasierte Grammatik: Empirie, Theorie und
@@ -1389,7 +1390,7 @@ participle form.
 \subsection{Valence information and the Case Principle}
 \label{sec-passive-case-principle-hpsg}
 
-\addlines[2]
+%\addlines[2]
 In\is{principle!Case|(} Section~\ref{Abschnitt-struktureller-Kasus}, the difference between structural
 and lexical case was motivated. In the HPSG literature, it is assumed following \citet{Haider86}
 that the dative is a lexical case. For arguments marked with a lexical case, their case value is
@@ -1526,7 +1527,7 @@ Lexical Mapping Theory\is{Lexical Mapping Theory (LMT)} (see page~\pageref{page-
 \label{Abschnitt-Verbstellung-HPSG}
 
 %\addlines[2]
-\largerpage 
+%\largerpage 
 The\is{verb position|(} analysis of verb position that I will present here is based on
 the GB"=analysis. In HPSG, there are a number of different approaches to describe the verb position,
 however in my opinion, the HPSG variant of the GB analysis is the only adequate one
@@ -1645,13 +1646,14 @@ they require a projection of a verb trace, whereas complementizers need projecti
 \zl
 
 %\addlines[-4]
+\addlines[2]
 \noindent
 It is normally not the case that \emph{kennen} `know' selects a complete sentence and nothing else as would be necessary for the analysis of 
 \emph{kennt} as the head in (\mex{0}b). Furthermore, we must ensure that the verbal projection with which \emph{kennt} is combined contains the verb trace belonging to
 \emph{kennt}. If it could contain a trace belonging to \emph{gibt} `gives', for example, we would be able to analyze sentences such as (\mex{1}b):
 %\addlines bug here?
 %\largerpage
-\addlines
+%\addlines
 \eal
 \ex[]{
 \gll Gibt [der Mann der Frau das Buch \_$_{gibt}$]?\\
@@ -1972,6 +1974,7 @@ information about missing constituents is passed up the tree (or feature structu
 }
 There is a trace at the position where the fronted element would normally occur. Figure~\vref{Abbildung-Fernabhaengigkeiten-HPSG} shows
 the analysis of (\mex{1}).
+\addlines
 \ea
 \label{Beispiel-Diesen-Mann-kent-jeder-HPSG}
 \gll {}[Diesen Roman]$_i$ kennt$_j$ \_$_i$ jeder \_$_j$.\\
@@ -2086,6 +2089,8 @@ traces are combined last with the head as for instance in (\mex{1}):
 \glt `Everyone knows this novel.'
 \z
 
+\largerpage
+\noindent
 After this rough characterization of the basic idea, we now turn to the technical details: unlike verb
 movement, which was discussed in Section~\ref{Abschnitt-Verbstellung-HPSG}, constituent movement is
 nonlocal, which is why the two movement types are modeled with different features (\textsc{slash}\isfeat{slash} vs.\ \textsc{dsl}\isfeat{dsl}).
@@ -2136,6 +2141,7 @@ nonloc & \ms{ inher$|$slash & \sliste{ \ibox{1} } \\
 }
 \zs
 
+\largerpage[2]
 \noindent
 Since traces do not have internal structure (no daughters), they are of type \type{word}.
 The trace has the same properties as the accusative object. The fact that the accusative object is not present at the position occupied by the trace
@@ -2157,7 +2163,7 @@ that is the concatenation of the \textsc{inherited} values of the daughters minu
 \noindent
 The Head"=Filler Schema (Schema~\ref{hf-schemaa}) licenses the highest node in Figure~\vref{Abbildung-Diesen-Mann-kennt-jeder}.
 %
-\begin{figure}
+%\begin{figure}[hbp]
 \begin{schema}[Head"=Filler Schema]
 \label{hf-schemaa}\is{schema!Filler"=Head}
 ~\\[-8pt]\samepage
@@ -2179,8 +2185,8 @@ non-head-dtrs  \sliste{ \onems{ synsem \onems{ loc \ibox{1}\\
                                  }} }
    }
 \end{schema}
-\vspace{-\baselineskip}
-\end{figure}%
+%\vspace{-\baselineskip}
+%\end{figure}%
 The schema combines a finite, verb-initial clause (\textsc{initial}+) that has an element in \textsc{slash} with a non"=head daughter whose
 \textsc{local} value is identical to the \textsc{slash} element.
 In this structure, no arguments are saturated. Nothing can be extracted from the filler daughter itself, which is ensured
@@ -2225,6 +2231,7 @@ in the entry for \emph{kennt} (\sliste{ \ibox{3}, \ibox{4} }) is present on the 
 the extraction trace works in exactly the same way as for non-fronted arguments. The \slashv of the extraction trace is passed up the tree
 and bound off by the Head"=Filler Schema.
 
+\largerpage[2]
 (\ref{le-spur-acc-o-kennen})\is{trace!extraction trace|(} provides the lexical entry for a trace
 that can function as the accusative object of \emph{kennen} `to know'. As with the analysis of verb movement, it is not necessary to have numerous extraction traces with differing properties 
 listed in the lexicon. A more general entry such as the one in (\mex{1}) will suffice:
@@ -2262,6 +2269,7 @@ in that dependency.%
 
 \section{New developments and theoretical variants}
 
+\largerpage[2]
 This section and the following one is for advanced readers. It can be skipped without problems in
 understanding the following chapters on other frameworks.
 
@@ -2454,6 +2462,7 @@ linguistically not necessary.
 HPSG differs from Categorial Grammar\indexcg in that it assumes considerably more features and also in that the way in which features are grouped plays
 an important role for the theory.
 
+\addlines
 Long"=distance dependencies\is{long"=distance dependency} are not analyzed using function composition as in Categorial Grammar, but instead
 as in GPSG by appealing to the percolation of information in the tree. In this way, it is possible to analyze pied-piping constructions such as those
 discussed in Section~\ref{Abschnitt-Ratte-CG} with just one lexical item per relative pronoun, whose relevant local properties are identical to those of the
@@ -2519,7 +2528,7 @@ Instead, one assumed the S"=structure with traces straight away and the assumpti
 Form\is{Logical Form (LF)} was also abandoned (\citealp{Koster78b-u}; \citealp[Section~1.4]{Haider93a};
 \citealp[\page 14]{Frey93a}). This view corresponds to the view in HPSG and many of the analyses in one framework can be translated into the other.
 
-\addlines[2]
+%\addlines[2]
 In \gbt, the terms subject\is{subject} and object\is{object} do not play a direct role: one can use
 these terms descriptively, but subjects and objects are not marked by features or similar
 devices. Nevertheless it is possible to make the distinction since subjects and objects are usually
@@ -2543,6 +2552,7 @@ structure in (\mex{1}a) have to be reversed.
 \gll {}[weil] diesen Roman jeder kennt\\
 	 {}\spacebr{}because this novel everyone knows\\
 \zl
+%\addlines[2]
 In HPSG and also in other transformation-less models, the aim is to assign arguments in the order in (\mex{0}b) to descriptions
 in the valence list. The valence list (or \argst in newer approaches) corresponds in a sense to Deep Structure\is{Deep Structure} in GB.
 The difference is that the head itself is not included in the argument structure, whereas this is the case with D"=structure.

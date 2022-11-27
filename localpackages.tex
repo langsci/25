@@ -1,7 +1,8 @@
 \usepackage{csquotes}
 
+% loaded in book class 2021
 % http://tex.stackexchange.com/questions/38607/no-room-for-a-new-dimen
-\usepackage{etex}\reserveinserts{28}
+% \usepackage{etex}\reserveinserts{28}
 
 
 \usepackage{eurosym} % should go once Berthold fixes unicode
@@ -22,6 +23,12 @@
 %% }{
 %% \usepackage[disable]{todonotes}
 %% }
+
+
+
+\usepackage{todonotes}
+
+%\newcommand{\addpages}{\todostefan{add pages}}
 
 \iftoggle{draft}{}{
 \presetkeys{todonotes}{disable}{}
@@ -60,6 +67,8 @@
 
 \usepackage{./styles/oneline}
 
+\usepackage{langsci-branding}
+%\usepackage[danger]{langsci-lgr}
 \usepackage{langsci-lgr}
 
 \newcommand{\nom}{\NOM}
@@ -85,6 +94,7 @@
 % for CoreGram classes
 % and one \Tree in mts.tex
 \usepackage{tikz-qtree}
+
 
 \usepackage{langsci-gb4e}
 
@@ -175,7 +185,7 @@ styles/eng-date,styles/my-theorems}
 
 % do nothing now
 %\let\addlinesold=\addlines
-\renewcommand{\addlines}[1][1]{}
+%\renewcommand{\addlines}[1][1]{}
 
 % for addlines to work
 \strictpagecheck

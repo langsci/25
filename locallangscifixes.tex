@@ -80,3 +80,18 @@
 % width=\textwidth%.8\textwidth
 % }
 % \setcaphanging
+
+
+
+% https://tex.stackexchange.com/questions/601046/getting-author-index-to-work-with-citeauthor
+% The following calls citeindex, which is needed to get the authauthor into the index.
+% shoul'd be fixed in langsci-unified.cbx
+
+\DeclareCiteCommand{\citeauthor}
+  {\boolfalse{citetracker}%
+   \boolfalse{pagetracker}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\printnames{labelname}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}

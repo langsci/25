@@ -1613,7 +1613,6 @@ that Hudson assumes in order to model semantic relations.
 % Uzonyi2003a-u: Konstituenz vs. Dependenz: Zur Kompatibilität und Konvertierbarkeit der beiden Strukturprinzipien
 
 % Es muss einen Valenzträger geben.
-
 This section is for advanced readers. It compares Dependency Grammar to phrase structure grammars.
 
 Proponents of Dependency Grammar emphasize the point that Dependency Grammar is much simpler than
@@ -1637,7 +1636,7 @@ levels are taken into account, Dependency Grammars are not necessarily simpler t
 \label{sec-linearization-problems-dg}
 \label{sec-dg-multiple-frontings}
 
-\largerpage
+%\largerpage
 We have seen several approaches to linearization in this chapter. Many just assume a dependency
 graph and some linearization according to the topological fields model. As has been argued in
 Section~\ref{sec-nld-dg}, allowing discontinuous serialization of a head and its dependents opens up
@@ -1784,7 +1783,7 @@ correspond to different readings. This is not predicted by an analysis that trea
 linearizations simply as alternative orderings.
 % Eroms 2000: 159 nicht is an adjunct, später dann Ergänzungskanten
 
-\largerpage
+%\largerpage
 Thomas Groß (p.\,c.\ 2013) suggested an analysis in which \emph{oft} does not depend on the verb but
 on the negation. This corresponds to constituent negation in phrase structure approaches. The
 dependency graph is shown on the left-hand side in Figure~\ref{fig-oft-liest-er-das-buch-nicht-dg-constituent-negation}.
@@ -1909,7 +1908,7 @@ dg edges
 \end{figure}%
 
 %%\addlines[2]
-\largerpage
+%\largerpage
 Such apparent multiple frontings\is{fronting!apparent multiple} are not restricted to NPs. Various types of dependents can be
 placed in the \vf. An extensive discussion of the data is provided in \citew{Mueller2003b}. Additional data
 have been collected in a research project on multiple frontings and information structure
@@ -2146,6 +2145,7 @@ lexicalized variant of the grammar given in (\mex{1}):
 {D}  & {$\to$ a}\\
 \end{tabular}
 \z
+\largerpage
 \emph{Lexicalized}  means that every partial tree licensed by a grammar rule contains a lexical element.
 The grammar in (\mex{0}) licenses exactly the tree in
 Figure~\ref{fig-the-child-reads-the-book-dg}.\footnote{\label{fn-flat-dg-rules}%
@@ -2160,7 +2160,7 @@ X is the category of the head, Y1, Y2, and Y3 are dependents of the head and `\t
 which the head is inserted.
 }
 
-\largerpage[-2]
+%\largerpage[-2]
 One important difference between classical phrase structure grammars and Dependency Grammars is that the
 phrase structure rules impose a certain order on the daughters. That is, the V rule in (\mex{0})
 implies that the first nominal projection, the verb, and the second nominal projection have to
@@ -2182,10 +2182,10 @@ that assuming these nodes makes things a lot easier. See also footnote~\ref{fn-d
 V $\to$ N reads N Adv*
 \z 
 
-
+\noindent
 Such generalized phrase structures would give us the equivalent of projective Dependency
 Grammars.\footnote{\label{fn-dg-binary-branching}%
-Sylvain Kahane (p.\,c.\, 2015) states that binarity is important for Dependency Grammars, since
+Sylvain Kahane (p.\,c.\,2015) states that binarity is important for Dependency Grammars, since
 there is one rule for the subject, one for the object and so on (as for instance in
 \citealp{Kahane2009a}, which is an implementation of Dependency Grammar in the HPSG formalism). However, I do not see any reason
 to disallow for flat structures. For instance, \citet[\page 364]{GSag2000a-u} assumed a flat rule for subject
@@ -2200,7 +2200,7 @@ HPSG.
 \subsubsection{Non-projective Dependency Grammars and phrase structure grammars with discontinuous constituents}
 \label{sec-discontinuous-constituents-HPSG}
 
-%\largerpage[2]
+\largerpage
 The equivalent to non-projective\is{projectivity|(} dependency graphs are discontinuous constituents in phrase
 structure grammars. In what follows I want to provide one
 example of a phrase structure"=based theory that permits discontinuous structures. Since, as I
@@ -2268,7 +2268,7 @@ It states that the \phonv of a sign is the concatenation of the \phonvs of its \
 elements. Since the order of the \textsc{domain} elements corresponds to their surface order, this is
 the obvious way to determine the \phonv of the whole linguistic object. 
 
-%\largerpage
+\largerpage
 Figure~\ref{fig-the-child-reads-the-book-reape-binary} shows how this machinery can be used to license binary
 branching structures with discontinuous constituents.
 \begin{figure}[b]
@@ -2367,7 +2367,7 @@ individual words into the \doml.
   dom  & \sliste{ \ibox{1} } $\bigcirc$ \sliste{ \ibox{2} } $\bigcirc$ \ldots{} $\bigcirc$  \sliste{ \ibox{n} } \\
 }
 \z
-\largerpage
+%\largerpage
 Using this constraint we have \domvs that basically contain all the words in an utterance in any
 permutation. What we are left with is a pure Dependency Grammar without any constraints on
 projectivity.
@@ -2727,6 +2727,7 @@ abbreviated version in Figure~\ref{fig-wg-small-children-are-playing-outside-abb
 \caption{\label{fig-wg-small-children-are-playing-outside}Analysis of \emph{Small children were
     playing outside.} according to \citet[\page 105]{Hudson2018a}}
 \end{figure}%
+\largerpage[2]
 \begin{figure}
 \begin{forest}
   wg
@@ -2756,7 +2757,7 @@ node.\footnote{\label{fn-dahl-hudson}%
   somewhere. At least at the semantic level. Hudson's additional nodes and classical \nbar nodes
   solve this problem as well.%
 }
-\largerpage[2] 
+%\largerpage[2] 
 For instance, the combination of \emph{playing} and \emph{outside} yields \emph{playing}$'$, the
 combination of \emph{small} and \emph{children} yields \emph{children}$'$, and the combination of
 \emph{children}$'$ and \emph{playing}$'$ yields \emph{playing}$''$. The combination of \emph{were}
@@ -2795,6 +2796,7 @@ replacement is shown in Figure~\ref{fig-small-children-are-playing-outside}.
 \caption{\label{fig-small-children-are-playing-outside}Analysis of \emph{Small children are
     playing outside.} with category symbols}
 \end{figure}%
+\largerpage[2]
 The only thing unusual in this graph (marked by dashed lines) is that N$'$ is combined with V{[\emph{ing}]}$'$ and the mother
 of N$'$, namely N$''$, is combined with V{[\emph{fin}]}$'$. As explained
 above, this is due to the analysis of raising in Word Grammar,
@@ -2820,7 +2822,7 @@ is unwarranted. This claim holds for compacted schematic representations like
 Figure~\ref{fig-wg-small-children-are-playing-outside-abbreviated} but it does not hold for fully
 worked out analyses. 
 
-\largerpage[2]
+%\largerpage[2]
 The\label{page-simplicity-dg} simplicity claim is repeatedly made in Timothy Osborne's work (for example in \citealp[\page
   132]{OG2016a-u}; \citealp[\page 2]{Osborne2018a}). In a reply to \citet{Osborne2018a}, I mentioned
 some of the phenomena discussed above and pointed out that they are not captured by simple dependency structures \citep{MuellerEvaluating} and argued
@@ -2997,7 +2999,7 @@ You may use non-projective dependencies. For the analysis of relative clauses au
 an abstract entity that functions as a dependent of the modified noun and as a head of the verb in
 the relative clause.}
 
-\pagebreak
+%\pagebreak
 \furtherreading{
 In the section on further reading in Chapter~\ref{chap-GB}, I referred to the book called
 \emph{Syntaktische Analyseperspektiven} `Syntactic perspectives on analyses'. The chapters in this book have been written by proponents of various theories

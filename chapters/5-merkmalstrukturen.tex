@@ -236,7 +236,8 @@ types such as \type{person}, however, as no features belong to them. These kinds
 
 Types are organized into hierarchies\is{type hierarchy|(}.
 It is possible to define the subtypes  \textit{woman} and \textit{man} for  \textit{person}. These would determine the gender of a given object.
-(\mex{1}) shows the feature description for the type \textit{woman}. The feature description for \textit{man} would be analogous.
+(\mex{1}) shows the feature description for the types \textit{woman} and \emph{man}.
+% The feature description for \textit{man} would be analogous.
 \ea
 \label{avm-woman}
 \ms[woman]{
@@ -244,8 +245,17 @@ firstname    & firstname\\
 lastname & lastname\\
 date-of-birth & date\\
 gender & female\\
-father      & person\\
-mother    & person\\
+father      & man\\
+mother    & woman\\
+children    & list of person~   
+}\hspace{2cm}
+\ms[man]{
+firstname    & firstname\\
+lastname & lastname\\
+date-of-birth & date\\
+gender & male\\
+father      & man\\
+mother    & woman\\
 children    & list of person~   
 }
 \z
@@ -256,13 +266,14 @@ Both alternatives differ mostly in the fact that the information which is modele
 immediately accessible for structure sharing, which is discussed in Section~\ref{sec-strukturteilung}.
 
 %\addlines
+%\largerpage
 Type hierarchies\label{Seite-Typhierarchie} play an important role in capturing linguistic generalizations, which is why type hierarchies and
 the inheritance of constraints and information will be explained with reference to a further example in what follows. One can think of type hierarchies as an effective
 way of organizing information. In an encyclopedia, the individual entries are linked in such a way
 that the entries for monkey and mouse will each contain a pointer to mammal. The description found
 under mammal does therefore not have to be repeated for the subordinate concepts. In the same way,
 if one wishes to describe various electric appliances, one can use the hierarchy in Figure~\vref{fig-electric-appliance}.
-\begin{figure}
+\begin{figure}[t]
 \centering
 %% \begin{forest}
 %% typehierarchy
@@ -820,7 +831,8 @@ The theory determines the model and makes predictions with regard to possible ph
 \is{model|)}\is{theory|)}\is{phenomenon|)}\is{feature description|)}\is{feature structure|)}
 
 \pagebreak
-~\newline\vspace*{-8mm}
+~\newline\vspace*{-12mm}
+\addlines
 \questions{
 
 \begin{enumerate}
@@ -865,14 +877,13 @@ mother      \ms[person]{
 \end{enumerate}
 }
 
-\addlines[2]
 \exercises{
 \begin{enumerate}
 \item Think about how one could describe musical instruments using feature descriptions.
 \item Come up with a type hierarchy for the word classes (\type{det}, \type{comp}, \type{noun}, \type{verb},
       \type{adj}, \type{prep}). Think about the ways in which one can organize the type hierachy so that one
 	  can express the generalizations that were captured by the binary features in Table~\ref{Tabelle-Merkmalszerlegung-Wortarten} on page~\pageref{Tabelle-Merkmalszerlegung-Wortarten}.
-\item\label{ua-liste} In this chapter, we introduced lists. This may look like an extension of the formalism, but it is not as it is possible to
+\item\label{ua-liste} In this chapter, I introduced lists. This may look like an extension of the formalism, but it is not as it is possible to
 convert the list notation into a notation which only requires feature"=value pairs. Think about how one could do this.
 \item (Additional exercise) The relation \emph{append}\is{relation!\emph{append}} will play a role in Chapter~\ref{Kapitel-HPSG}. This relation serves to
 combine two lists to form a third.

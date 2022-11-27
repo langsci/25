@@ -48,6 +48,7 @@
    bdsk-file-3,
    date-added,
    date-modified,
+   opturldate,
    read}
 \DeclareDatamodelEntryfields{
    bdsk-url-1,
@@ -57,6 +58,7 @@
    bdsk-file-3,
    date-added,
    date-modified,
+   opturldate,
    read}
 
 % opt fields
@@ -65,53 +67,45 @@
    opturl}
 
 \DeclareDatamodelFields[type=field,datatype=literal]{
-optaddress,
 %optdate,
 opteditor,
 optchapter,
+optlocation,
 optisbn,
 optissn,
-optlocation,
-optnote,
 optmonth,
-optpages,
 optpublisher,
-opturldate,
 optschool,
 optyear}
 
 \DeclareDatamodelEntryfields{
-optaddress,
 %optdate,
 opteditor,
 optchapter,
+optlocation,
 optisbn,
 optissn,
-optlocation,
 optmonth,
-optnote,
-optpages,
 optpublisher,
 optschool,
-opturl,
-opturldate}
+opturl}
 
 % other stuff
 \DeclareDatamodelFields[type=field,datatype=literal]{
-cited,
 price,
-rating}
+cited,
+optaddress,
+rating,
+optnote,
+optpages}
 
 \DeclareDatamodelEntryfields{
-cited,
 price,
-rating}
-
-%\DeclareDatamodelFields[type=field,datatype=literal]{
-%xdata}
-
-%\DeclareDatamodelEntryfields{
-%xdata}
+cited,
+optaddress,
+rating,
+optnote,
+optpages}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
