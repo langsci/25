@@ -265,6 +265,7 @@ unusedgt.bib: ../../../Bibliographien/biblio.bib $(SOURCE)
 
 
 # xelatex has to be run two times + biber to get "also printed as ..." right.
+# use texlife 2020/biber 2.15 to create gt.bib
 gt.bib: ../../../Bibliographien/biblio.bib $(SOURCE) langsci.dbx bib-creation.tex
 	xelatex -no-pdf -interaction=nonstopmode -shell-escape bib-creation 
 	biber bib-creation
@@ -280,8 +281,8 @@ check-gt.bib: ../../../Bibliographien/biblio.bib
 check-bib: gt.bib 
 	biber --validate-datamodel grammatical-theory
 
-checked:
-	../../../Bibliographien/extracted-checked-items gt.bib
+checked.bib: gt.bib
+	../../../Bibliographien/extract-checked-items gt.bib
 
 
 # what do you have to do after changing langsci.dbx? Everything?

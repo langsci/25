@@ -88,8 +88,8 @@ Selecting different rules from the grammar for rewriting symbols, we could use t
 from S to the string \emph{er dem Kind das Buch gibt} `he the child the book gives'.
 We can say that this grammar licenses (or generates)\label{Seite-generiert} a set of sentences.\is{Generative Grammar}
 
-\addlines
-\enlargethispage{3pt}
+\largerpage[2]
+%\enlargethispage{3pt}
 The derivation in (\mex{0}) can also be represented as a tree. This is shown by Figure~\vref{er-das-buch-dem-Kind-gibt-flat}.
 \begin{figure}
 \centerline{
@@ -132,8 +132,12 @@ The symbols in the tree are called \emph{nodes}\is{node}. We say that S immediat
 The other nodes in the tree are also dominated, but not immediately dominated, by S\is{dominance!immediate}. If we want to talk about the
 relationship between nodes, it is common to use kinship terms. In Figure~\ref{er-das-buch-dem-Kind-gibt-flat}, S is the \emph{mother node}\is{node!mother}
 of the three NP nodes and the V node.
-The NP nodes and V are \emph{sisters}\is{node!sister} since they have the same mother node.
-If a node has two daughters\is{node!daughter}, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
+The NP nodes and V are \emph{sisters}\is{node!sister} or \emph{daughters}\is{node!daughter}, since
+they have the same mother node.\footnote{\emph{Parent node}\is{node!parent} and \emph{child node}\is{node!child} are alternative
+  terms. I use \emph{mother} and \emph{daughter} here, since this terminology is also used in
+  formalizations of some of the theories discussed later.
+}
+If a node has two daughters, then we have a binary\is{binary} branching structure\is{branching}\is{branching!binary}.
 If there is exactly one daughter, then we have a unary\is{unary}\is{branching!unary} branching
 structure. Two constituents are said to be \emph{adjacent}\is{adjacency}
 if they are directly next to each other.
@@ -154,6 +158,7 @@ in (\mex{1}), which differs from (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}) in t
 \z
 The rules for replacing determiners and nouns are simply applied in a different order than in (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}). Rather than replacing the first Det with \emph{das} `the' and the first noun with \emph{Buch} `book', the first Det is replaced with \emph{dem} `the' and the first noun with \emph{Kind}.
 
+\largerpage[2]
 At this juncture, I should point out that the grammar in (\ref{bsp-grammatik-psg}) is not the only possible grammar for the example sentence in
 (\ref{bsp-weil-er-das-buch-dem-Kind-gibt}). There is an infinite\label{page-unendlich-viele-grammatiken} number of possible grammars which could
 be used to analyze these kinds of sentences (see exercise \ref{ua-psg-eins}). Another possible grammar is given in (\mex{1}):
