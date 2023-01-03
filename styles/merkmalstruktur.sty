@@ -194,7 +194,9 @@ $%
 \let\tbox=\iboxt
 
 
-\newcommand{\type}[1]{{\normalfont\itshape #1\/}}
+\newcommand{\type}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
+
+\newcommand{\typeSM}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
 
 
 

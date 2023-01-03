@@ -1,4 +1,37 @@
 
+% https://tex.stackexchange.com/questions/670413/copy-a-field-value-from-one-field-to-another-if-the-other-field-is-empty-with-bi?noredirect=1#comment1666486_670413
+\DeclareSortingTemplate{nyt}{
+  \sort{
+    \field{presort}
+  }
+  \sort[final]{
+    \field{sortkey}
+  }
+  \sort{
+    \field{sortname}
+    \field{authauthor}
+    \field{author}
+    \field{autheditor}
+    \field{editor}
+    \field{translator}
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{sortyear}
+    \field{year}
+  }
+  \sort{
+    \field{sorttitle}
+    \field{title}
+  }
+  \sort{
+    \field{volume}
+    \literal{0}
+  }
+}
+
+
 % https://tex.stackexchange.com/a/582962/18561
 % If the series value is "none", set the number to "none" as well.
 % This avoids warnings since we made number mandatory as well.
