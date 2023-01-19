@@ -37,5 +37,12 @@
     "publishedAt": "2020-10-09T00:01:33.000Z",
     "license": "CC-BY-4.0",
     "doi": "10.5281/zenodo.3364215"
+  }, {
+    "versiontype": "fifth_edition",
+    "title": "Grammatical Theory, 4th edition",
+    "authors": [{"name": "Stefan Müller"}],
+    "publishedAt": "2023-01-19T00:01:33.000Z",
+    "license": "CC-BY-4.0",
+    "doi": "10.5281/zenodo.3364215"
   }]
 }
