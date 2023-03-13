@@ -317,7 +317,14 @@ subj  & \rnode{i}{\lfgms{ pred & {\small `DAVID'} \\
 \ltor[-15]{b}[175]{i}
 \Aput*{$\phi$}
 \z
-The function $\phi$ from the NP"=node to the f"=structure corresponding to the NP is depicted with an arrow marked $\phi$.
+The function $\phi$ from the NP"=node to the f"=structure corresponding to the NP is depicted with
+an arrow marked $\phi$. 
+
+There is one interesting point to be mentioned with respect to (\mex{0}): while the c-structure is
+in \xbar format in general, the I node is missing. Some versions of LFG assume that empty nodes are
+not represented in structures but are simply omitted. Hence, VP projects to I$'$ directly without a
+combination with I \parencites[Section~4.4]{Dalrymple2001a-u}[\page 84]{Dalrymple2006a}.
+
 
 A phrase and its head always correspond to the same f"=structure:
 
@@ -393,7 +400,7 @@ why (\mex{1}a) is ruled out by the theory.
 
 \subsection{Coherence}
 
-\addlines
+%\addlines
 The Coherence Condition requires that all argument functions in a given f"=structure have to be selected in the value of the local 
  \textsc{pred} attribute. (\mex{1}a) is ruled out because \textsc{comp} does not appear under the arguments of \emph{devour}.
 
@@ -509,7 +516,6 @@ of a given f"=structure comes from the sum of these parts. The way the meaning i
 regulated by certain instructions for the combination of semantic resources. These instructions are given
 as a set of logic premises written in linear logic\is{linear logic} as \emph{glue language}\is{glue language}. The computation of the meaning of an utterance corresponds to a logical conclusion.
 
-%\addlines[2]
 This conclusion is reached on the basis of logical premises contributed by the words in an
 expression or possibly even by a syntactic construction itself. The requirements on how the meaning
 of the parts can be combined to yield the full meaning are expressed in linear logic, a
@@ -668,9 +674,10 @@ contains an \textsc{adj} set with two elements: one for \emph{yesterday} and one
 %
 The annotation on the c"=structure rule for adjuncts requires that the f"=structure of the adjuncts
 be part of the \textsc{adj} set of the mother's f"=structure:
+% Dalrymple2001a-u:269--270 Adjunktion an VP
 \ea
-\phraserule{V$'$}{
-\rulenode{V$'$\\* \up~=~\down}
+\phraserule{VP}{
+\rulenode{VP\\* \up~=~\down}
 \rulenode{PP\\*\hbox {$\downarrow$\kern .2em} $\in$ (\up\ \lfgadj)}}
 \z
 The representation of adjuncts in a set is not sufficient to characterize the meaning of an
@@ -797,7 +804,6 @@ a-structure & \emph{schlagen} `beat' & $\langle$ x & y~~ $\rangle$\\
 \z
 
 \noindent
-%\addlines
 The mapping of a"=structure to f"=structure is governed by the following restrictions:
 \eal\label{lmt}
 \ex
@@ -884,7 +890,8 @@ There are two possibilities for the analysis of verb placement in German.\is{ver
 In the analysis of extended head domains\is{head domain!extended|(}, the verb is simply omitted from the verb phrase. The following preliminary variant of the VP rule is used:\footnote{%
 See \citew[\page 110]{Bresnan2001a}, \citet[\page 413]{ZK2002a} and \citew[\page 84]{Dalrymple2006a} for corresponding rules
 with optional constituents on the right"=hand side of the rule. \citet[\page 413]{ZK2002a} suggest a rule that
-is similar to (\mex{1}) for German.%
+is similar to (\mex{1}) for German. A revised version of the analysis of elements in the \mf is
+introduced in Section~\ref{Abschnitt-LFG-Umstellung}.
 % Bresnan S -> C*
 % Dalrymple V -> (V) (NP) PP*
 % ZK        S|VP -> NP* (V') (S|VP)
@@ -1009,7 +1016,6 @@ specification of case/grammatical function interaction would be much more compli
                              (\up\ \lfgtense) = \small PRES}
 \z
 
-%\addlines
 \largerpage
 \noindent
 \citeauthor{Berman96a-u} proposes an analysis that does not combine the verb with all its arguments and adjuncts at
@@ -1066,12 +1072,26 @@ The analysis of (\mex{0}b) is shown in Figure~\vref{Abb-OSV-LFG}.
 The analysis of (\mex{0}b) differs from the one of (\mex{0}a) only in the order of the replacement
 of the NP node by the subject or object.\todostefan{fix the arrows, should not cross SUBJ and OBJ}
 
+Note that the verb and all combinations of the verb with arguments are VPs. This is compatible with
+the treatment of adjuncts presented in Section~\ref{Abschnitt-LFG-Adjunkte}. Adjuncts can be adjoined to VP nodes and hence
+it is explained why adjuncts can appear everywhere in the \mf.
+
 One further fact must be discussed: in rule (\ref{LFG-v-vp}), the verb is optional. If it is
 omitted, the VP is empty. In this way, the VP rule in (\ref{lfg-vp-regel}) can have an empty VP on
 the right"=hand side of the rule. This VP is also simply
 omitted even though the VP symbol in the right-hand side of rule (\ref{lfg-vp-regel})  is not marked as optional.
 That is, the corresponding symbol then also becomes optional as a result of taking the rest of the grammar into consideration as well as possible interactions with
-other rules.\is{constituent order|)}  
+other rules. Figure~\ref{fig-revised-v1-Berman} shows the adapted version of the analysis in
+Figure~\ref{Abb-Verbstellung-LFG} on page~\pageref{Abb-Verbstellung-LFG}.
+
+\begin{figure}
+\centerline{%
+\includegraphics{Figures/verschlingt-david-den-apfel-vp-mf-lfg-lsp-crop}
+}
+\caption{\label{fig-revised-v1-Berman}Revised analysis of a verb-first sentence using Berman's analysis of scrambling}
+\end{figure}
+\is{constituent order|)}  
+
 
 \section{Long"=distance dependencies and functional uncertainty}
 \label{Abschnitt-NLA-LFG}
@@ -1083,7 +1103,6 @@ dependencies constitutes a real achievement. In LFG, \citet{KZ89a} proposed anot
 transformation"=less analysis of long"=distance dependencies, which we will consider in further
 detail in what follows.
 
-%\addlines[-1]
 In example (\mex{1}), the displaced constituent \emph{Chris} is characterized by two functions:
 \ea
 \label{ex-Chris-we-think}
@@ -1198,7 +1217,6 @@ CP & $\rightarrow$ & \multicolumn{2}{l}{\hspaceThis{(\upsp \textsc{topic})}XP} &
  & &  (\upsp \textsc{topic}) & (\upsp \textsc{comp obj})\\
 \end{tabular}
 \z
-%\addlines
 \largerpage
 (\mex{0}) states that the first constituent contributes to the \textsc{topic} value in the f"=structure of the mother and furthermore that this topic value has to be
 identical to that of the object in the complement clause. We have also seen examples of other embeddings of various depths. We therefore need restrictions
@@ -1303,7 +1321,7 @@ While LFG does contain a phrase"=structural component, this plays a significantl
 optional and it has even been proposed for some languages that there are rules where the part of speech of the constituents is not specified (see Section~\ref{sec-Diskussion-X-Bar}).
 In these kinds of grammars, f"=structure, coherence and completeness work together to ensure that the grammar only allows well"=formed structures.
 
-\addlines
+%\addlines
 LFG differs from other theories such as \hpsg and variants of \cxg in that feature structures are untyped. Generalizations can therefore not be represented in type hierarchies. 
 Until a few years ago, the hierarchical organization of knowledge in inheritance hierarchies\is{inheritance} did not form part of theoretical analyses. In computer implementations,
 there were macros\is{macro} but these were viewed as abbreviations without any theoretical status. It is possible to organize macros into hierarchies and macros were discussed explicitly
