@@ -1547,6 +1547,7 @@ Storage and cataloguing done by \storageinstitution\\[3ex]
 	style=langsci-unified,
 	citestyle=langsci-unified,
 	datamodel=langsci,   % add authauthor and autheditor as possible fields to bibtex entries
+        sorting=nycot, % defined in langsci-unified.bbx
 	%refsection=chapter,
 	maxbibnames=99,
 	uniquename=false,
