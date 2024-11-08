@@ -2,7 +2,7 @@
 
 \begin{abstract}
 This paper discusses \citeauthor{AmbridgeBlything2024a}'s claim \citeyearpar{AmbridgeBlything2024a}
-that Large Language Models are the best linguistic theory we currently have. It discusses claims
+that Large Language Models are the best linguistic theory we currently have. It claims
 that LLMs are wrong linguistic theories and concludes that they are not a linguistic theory at
 all. It is pointed out that Chomsky's claims about innateness, about transformations as underlying
 mechanisms of the language faculty and about plausible representations of linguistic knowledge are
@@ -48,12 +48,15 @@ OK, so the model makes the right predictions but -- we hear you ask -- where is 
 the point: the model is the theory.
 \citep[\page 39]{AmbridgeBlything2024a}
 \end{quote}
-This shows some confusion in terminology. Model-theoretic approaches assume that there is a theory
-and that the theory can be used to build models \citep{Richter2021a}. A theory should use primitives
-that are appropriate for a certain domain and it should contain statements about these
+This shows some confusion in terminology. 
+A \emph{theory} contains descriptive and explaining statements about some part of the reality. It contains
+laws about the domain that is described by the theory. A \emph{model} is an abstract representation of the
+relevant part of the reality under consideration. A theory can be used to build such models.
+A theory should use primitives that are appropriate for a certain domain and it should contain statements about these
 primitives. Large language models are neuronal nets that have been organized and trained in a
 certain way. Nodes of such nets can be examined and we can even find certain information in them
-\citep{ManningClarkHewitt2020a,ZhangBowman2018a} but this information is not a theory.
+\citep{ManningClarkHewitt2020a,ZhangBowman2018a} but this information is not a theory. The net may
+reflect grammatical structures and reject impossible ones, but it does not tell us why this is the case.
 
 Later in the paper and contradicting their earlier claim, the authors argue that the programs that generate the LLMs are a theory:
 \begin{quote}
@@ -95,7 +98,8 @@ these failures to capture certain properties of language would indeed entail tha
 scientific theories, then neither Construction Grammar nor any flavor of Mainstream Generative
 Grammar (MGG)\footnote{%
   The term MGG goes back to \citet[\page 3]{CJ2005a}. It refers to all proposals developed by
-  Chomsky. Government \& Binding \citep{Chomsky81a} and Minimalism \citep{Chomsky95a-u} are the most recent incarnations.
+  Chomsky. Government \& Binding \citep{Chomsky81a} and theories developed under the label of
+  Minimalism \citep{Chomsky95a-u} are the most recent incarnations. 
 } would be. The distinction between competence and performance is rejected in
 Usage-Based Construction Grammar \citep[\page 297]{Diessel2015a-u}. I personally think that this is
 a mistake \citep[Chapter~15]{MuellerGT-Eng5}, but nevertheless approaches in Usage-based Construction
@@ -103,8 +107,8 @@ Grammar are theories. The alternative approaches in MGG do not fare any better. 
 architectural assumptions in all of Chomsky's approaches are highly implausible from a
 psycholinguistic point of view. The Derivational Theory of Complexity, which assumed that sentences
 involving more transformations in their analysis are more difficult to process than sentences with
-fewer transformations has been proven wrong \parencites[\page
-320--328]{FBG74a-u}[Chapter~15.1]{MuellerGT-Eng5}. The T-model with its autonomous components of 
+fewer transformations has been proven wrong (\citealt[\page 320--328]{FBG74a-u}; see
+\citealt[Chapter~15.1]{MuellerGT-Eng5} for a recent discussion). The T-model with its autonomous components of 
 syntax, phonological and logical form has been
 proven wrong resulting in spectacular analyses in Cartography \citep{CR2010a} to circumvent the
 autonomy of syntax restriction (see Müller \citeyear[Section~4.6.1.1]{MuellerGT-Eng5}, \citeyear[Section~4.10.2]{MuellerGermanic} on this point and on
@@ -112,7 +116,10 @@ problems with Cartographic approaches, for example, \citegen[\page 100]{Cinque94
 categories like Nationality are part of our genetic endowment). Derivation by Phase \citep{Chomsky2008a} and other Minimalist architectures \citep[812, 830]{Richards2015a} are
 entirely implausible as architectures for human language \citep[Section~3.6]{BM2021a}, since they
 are incompatible with incremental parallel processing of linguistic information at all descriptive
-levels \citep{Marslen-Wilson75a,TSKES96a,Labelle2007a}. If the argumentation by
+levels 
+\iftoggle{long}{\citep{Marslen-Wilson75a,TSKES96a,Labelle2007a}.}{%
+\citep{Marslen-Wilson75a,TSKES96a}.}
+If the argumentation by
 \citename{FoxKatzir2024a} was valid, it would follow that all approaches in 
 Usage-based Construction Grammar and MGG were not scientific theories. This would be a very strange
 conclusion, but it is not warranted. They are scientific theories, but they are bad ones.
@@ -126,16 +133,16 @@ dependency information is encoded in LLMs.\footnote{\label{fn-dependencies}%
   developed by Tesnière in 1924--1954. So the linguistic theory and related concepts were a prerequisite
   to find linguistic structure in the neural networks. This point will be taken up again
   below in the discussion of typological work.
-%
-  % Another note on linguistic information in LLMs. Imagine you build a model of a landscape in a
-  % lab. You have soil and water. The water runs in little rivers, carves valley into the soil. The
-  % landscape is formed over time, you get hills, canyons, creeks, rivers. This is like the training
-  % phase of a neuronal net. After this landscape forming phase you may put liquid into your artificial
-  % landscape and see what forms rivers will take. But does this tell you something about rivers in
-  % general? A theory about the way water distributes? No. It gives you concrete examples of how a possible
-  % river may look like after years and years of forming an artificial landscape. This is what we get
-  % from LLMs: we train them with lots and lots of data and then get a structure that was shaped by
-  % the data.
+
+  Another note on linguistic information in LLMs: Imagine you build a model of a landscape in a
+  lab. You have soil and water. The water runs in little rivers, carves valleys into the soil. The
+  landscape is formed over time, you get hills, canyons, creeks, rivers. This is like the training
+  phase of a neuronal net. After this landscape forming phase you may put liquid into your artificial
+  landscape and see what forms rivers will take. But does this tell you something about rivers in
+  general? A theory about the way water distributes? No. It gives you concrete examples of how a possible
+  river may look like after years and years of forming an artificial landscape. This is what we get
+  from LLMs: we train them with lots and lots of data and then get a structure that was shaped by
+  the data.
 }
 
 % \citet{Milway2023a} quotes Chomsky stating that LLMs have too much power. Since they could learn
@@ -173,7 +180,7 @@ theories about language; the information contained in LLMs is accessible only in
 you cannot directly access the information in brains. You can only research the behavior of
 people. That's what we've been doing for hundreds of years. We look at what people say and write. We
 conduct experiments with people. We ask them about the acceptability of sentences. We test where
-they look when certain sentences are uttered \citep{TSKES95a}. We measure brain activity (event-related potentials,
+they look when certain sentences are uttered \citep{TSKES96a}. We measure brain activity (event-related potentials,
 cerebral bloodflow, etc.) We investigate what happens when certain areas of the brain are damaged.
 This gives us information about the processes and representations of linguistic knowledge in the
 brain. From this we can then draw conclusions for plausible theories.  
@@ -212,8 +219,9 @@ model language acquisition, we would need grounded input, we would need a realis
 training data, we would have to simulate the development of brains and the growth of cognitive
 capacities in early childhood.\footnote{
   Children regularize more than adults \citep{HudsonN99a,HKN2005a}, a fact that can be traced back to their
-  limited brain capacity (``less is more''-hypothesis, \citealp{Newport90a,Elman93a}). 
-} But what the success of LLMs suggests is that an elaborated component of Universal
+  limited brain capacity (``less is more''-hypothesis, 
+\iftoggle{long}{\citealp{Newport90a,Elman93a}}{\citealp{Newport90a}). 
+}} But what the success of LLMs suggests is that an elaborated component of Universal
 Grammar is not needed, that the argument of the Poverty of the Stimulus was flawed and so on. Above
 I wrote that ``we know no more about our cognitive abilities than we did before''. And this is
 true. We knew in 1974 (50 years ago) that transformations are psycholinguistically
@@ -230,20 +238,27 @@ Phase-based variants of Minimalism \parencites{Chomsky95a-u,Chomsky2008a}[\page 
 empirical facts like incremental processing, how can they tell us anything about human cognition and
 inateness? The Principle \& Parameter model of language acquisition \citet[\page 6]{Chomsky81a}
 failed in various respects. It was assumed that one parameter was related to many properties of a
-language and worked like a switch \parencites{Rizzi86a}[\page 8]{Chomsky2000a-u}, but none of the suggested correlations held 
+language and worked like a switch 
+\iftoggle{long}{\parencites{Rizzi86a}[\page 8]{Chomsky2000a-u},}{
+\parencites[\page 8]{Chomsky2000a-u},}
+ but none of the suggested correlations held 
 up 
 \iftoggle{long}{%
 \parencites{Haider94c-u}[Section~2.2]{Haider2001a}[Section~16.1]{MuellerGT-Eng5}.}{%
-\parencites[Section~2.2]{Haider2001a}[Section~16.1]{MuellerGT-Eng5}.}
+(\citealt[Section~2.2]{Haider2001a}; see \citealt[Section~16.1]{MuellerGT-Eng5} for an overview).}
 The way
 parameterization was conceptualized was biologically implausible. For example, it was assumed that
 Subjacency was a universal principle and the parameterization concerned the part of speech of
-certain bounding nodes within nonlocal dependencies \parencites[\page 271]{Chomsky73a}[\page
-40]{Chomsky86b}{Baltin81a,Baltin2006a}. First, it could be shown that subjacency does not hold in
+certain bounding nodes within nonlocal dependencies 
+\iftoggle{long}{\parencites[\page 271]{Chomsky73a}[\page 40]{Chomsky86b}{Baltin81a,Baltin2006a}.}{
+\parencites[\page 40]{Chomsky86b}{Baltin81a}.}
+First, it could be shown that subjacency does not hold in
 Dutch, German and English \parencites[\page 52]{Koster78b-u}[\page
 211]{Mueller99a}{Mueller2004d}[Section~3]{Mueller2007c}{SS2013b-u} and second, it is biologically
 absolutely implausible that part of speech information is encoded in our genes
-\parencites{Bishop2002a}[Section~6.4.2.2]{Dabrowska2004a}{FM2005a}. This was realized by
+\iftoggle{long}{\parencites{Bishop2002a}[Section~6.4.2.2]{Dabrowska2004a}{FM2005a}.}{%
+\parencites{Bishop2002a}[Section~6.4.2.2]{FM2005a}.}
+This was realized by
 \citet*{HCF2002a}. What remained as property that was assumed to be part of Universal Grammar was
 Merge, an operation for combining linguistic material. Somehow a triviality
 \citep[475]{MuellerGT-Eng5}. A triviality that caused another linguistic war \citep{Pullum2024a}. 
@@ -264,13 +279,18 @@ is an SVO language and German is SOV).
 Typological research is fascinating and requires the comparison of many very different languages on a
 theoretical level. I doubt that the results of cross-linguistic research can be derived from LLMs,
 without any interaction with theoretical linguistics. Training LLMs on multilingual material will be
-non-trivial and discovering cross-linguistic generalizations in network representations is probably
+non-trivial\footnote{
+  See \citet{ChangArnettTu2024a} for comments on the low quality of multilingual language
+  models. Note also that a lot of typologically interesting languages are low-resource languages, so
+  a massive training like with LLMs is not possible because of the lack of data. See
+  \citet{ChangArnettTu2024a} on monolingual models for 350 languages.
+} and discovering cross-linguistic generalizations in network representations is probably
 impossible without a theoretically informed clue on what to look for (see also footnote~\ref{fn-dependencies}). A suggestion for a
 methodological clean way of deriving cross-linguistic generalizations that differs from the MGG
 approach is assumed in the CoreGram project \citep{MuellerCoreGram}.
 
 Chomsky claimed that there would be language universals but there are no plausible candidates for
-syntactic universals left \parencites{EL2009a}[Section~13.1]{MuellerGT-Eng5}. There are tendencies, for sure, but this is not sufficient for positing
+syntactic universals left (\citealt{EL2009a}; see \citealt[Section~13.1]{MuellerGT-Eng5} for an overview). There are tendencies, for sure, but this is not sufficient for positing
 innate knowledge of language. Recently, I discovered a universal, but it is not syntactic but rather
 on the text level: the Festschrift Universal. The reader is referred to \citew{MuellerFestschrift}
 for details.
@@ -286,15 +306,25 @@ procedure. Chomsky ignored these insights (\citealt*{BPYC2011a}, \citealt[\page 
 find the auxiliary inversion claim again two years later in the same journal that also published Bod's paper.
 Similarly pattern-based modeling language acquisition research was much more successful in explaining
 cross-linguistic differences in acquisition than alternative accounts couched in Chomskyan
-frameworks \citep{FPG2006a,FPAG2007a,FPG2009a}. 
+frameworks 
+\iftoggle{long}{\citep{FPG2006a,FPAG2007a,FPG2009a}.}%
+{\citep{FPAG2007a}.} 
+
 
 Connected to the assumption of Universal Grammar is the assumption of a Core/Periphery
-distinction \parencites[\page 7--8]{Chomsky81a}[\page 150--151]{Chomsky86a}[\page 343]{Fodor98a}. The idea is that there is a core of linguistic knowledge that is determined by our
+distinction 
+\iftoggle{long}{%
+\parencites[\page 7--8]{Chomsky81a}[\page 150--151]{Chomsky86a}[\page 343]{Fodor98a}}{%
+\parencites[\page 7--8]{Chomsky81a}}. The idea is that there is a core of linguistic knowledge that is determined by our
 genetic endowment and there is a periphery (e.\,g. idioms) that is learned in another way. The interesting and very
 simple argument against this is this: If we can learn the idiosyncratic parts of a language that is
 assigned to the periphery, we should be able to learn the more regular parts of the assumed core
-\parencites[\page 20]{Abney96a}[\page 222]{Goldberg2003b}[\page 100]{Newmeyer2005a}[\page 36]{Tomasello2006a}[\page
-20]{Tomasello2006c}{MuellerKernigkeit}. See \citew{MuellerKernigkeit} and the CoreGram project \citep{MuellerCoreGram}
+\iftoggle{long}{%
+\parencites[\page 20]{Abney96a}[\page 222]{Goldberg2003b}[\page 14]{Goldberg2006a}[\page 100]{Newmeyer2005a}[\page 36]{Tomasello2006a}[\page
+20]{Tomasello2006c}{MuellerKernigkeit}.}{%
+\parencites[\page 20]{Abney96a}[\page 14]{Goldberg2006a}[\page 100]{Newmeyer2005a}[\page
+20]{Tomasello2006c}{MuellerKernigkeit}.} 
+See \citew{MuellerKernigkeit} and the CoreGram project \citep{MuellerCoreGram}
 for a method for deriving language-internal and also cross-linguistic generalizations and the notion
 of \emph{Kernigkeit} (coriness) that does not refer to Chomsky's core/periphery distinction. 
 
@@ -306,10 +336,17 @@ knows this for more than a decade (see the first editions of my \emph{Grammatica
 from 2010 and 2014 for a summary of the
 respective discussions in German and English, respectively). We did not need LLMs for this, but maybe the actual usefulness of these networks is that
 they make the possibility that we do not need any innate domain-specific knowledge plausible to
-everybody: linguists and laymen. To show that LLMs can acquire languages like humans do, they have
+everybody: linguists and laymen. However, to show that LLMs can acquire languages like humans do, they have
 to be more human-like. To reach this goal, we probably need more knowledge about brains. As I
 pointed out above, if we manage to reach the goal of creating more human-like models, we know how
 brains work, but we do not necessarily know how languages work.
+
+I mentioned many of the failures of Chomskyan theories above, but note that they were very
+successful. They contributed to our understanding of language. The reason is that they were
+theories. They made predictions and contained claims about languages. We knew how to falsify them
+and we did. The era of research on Principles \& Parameters was fruitful in that it caused a
+enormous amount of typological research. LLMs on the other hand are black boxes. They make
+predictions, some right, some wrong, but this is all we have. There is no explicit law that is falsified.
 
 \section{Linguistic theories}
 
@@ -333,9 +370,19 @@ is true for LLMs and any other outcome of a distributional analysis unless seman
 explicitly encoded in the input and linked to real world experiences.\footnote{%
   There is semantic knowledge implicit in LLMs. \citet[358]{Piantadosi2024a} points out that it is
   interwoven with syntactic information. The important point when it comes to human cognition is
-  that the semantic knowledge in LLMs is not grounded. See \citet{CM2001a} for computational experiments on language
+  that the semantic knowledge in LLMs is not grounded. \citet[2]{JonesBergenTrott2024a} discuss
+  sentence-picture verification tasks. For example, hearers can infer from the sentences ``He
+  hammered the nail into the wall.'' and ``He hammered the nail into the floor.'' that the nail is
+  horizontal in the situation described by the first sentence and vertical in the second. This
+  information is not explicitly coded in the sentences, so LLMs, which are trained on language
+  alone, cannot learn this unless it is made explicit elsewhere in the training material.
+
+See \citet{CM2001a} for computational experiments on language
   acquisition with grounding in the framework of Construction Grammar and \citet{Steels2003a} for
-  experiments with grounded communication in robotics.%
+  experiments with grounded communication in robotics. \citet{BeulsVanEcke2024a} extensively
+  discuss the shortcomings of LLMs that are due to there representations not being grounded and they
+  suggest ways to model grounded language acquisition. \citet{JonesBergenTrott2024a} discuss first
+  experiments with Multimodal LLMs and point out some shortcomings of current architectures.%
 }
 %\itdopt{Add note about semantic knowledge}
 Therefore it is really surprising to see Construction Grammarians
@@ -355,9 +402,18 @@ from TV, but TV involves another modality, the language is grounded \citep{Rice1
 text. BERT was trained by guessing masked words in a sentence and by guessing the next
 sentence. Children do not play such games. In fact, they have to solve a very hard puzzle on their own:
 the segmentation of the speech signal. They have to find out what the units are in order to be able
-to discover what they mean. As \citet{BK2020a} pointed
+to discover what they mean. 
+% OK. This could be done in principle, the guessing game is more problematic, since it has nothing
+% to do with human acquisition.
+%
+% Any theory of language acquisition has to take into account lifelong
+% learning. Humans learn a language by using it. Since LLMs have clearly separated training and
+% deployment phases they cannot be considered as ``the leading current theories of how speakers learn
+% [\ldots] these restrictions'' \citet[\page 34]{AmbridgeBlything2024a}.\footnote{%
+% I thank Remi van Trijp for pointing this out to me.} 
+As \citet{BK2020a} pointed
 out: BERT and ChatGPT and the like do not have a clue about what they are ``saying''. Their representations do not have any
-connection to semantics, they are not grounded. ChatGPT is a bullshit machine in the sense of
+connection to semantics, they are not grounded \citep{BeulsVanEcke2024a}. ChatGPT is a bullshit machine in the sense of
 \citet{HicksHumphriesSlater2024a}, it is not and it does not contain a linguistic theory, not even a
 wrong one.
 %
@@ -381,9 +437,13 @@ not born with innate domain specific knowledge about language.
 \section*{Acknowledgements}
 
 I thank Rui Chaves, Mark Felfe, Hubert Haider, Joachim Jacobs, Tibor Kiss, Alexander Koller, Roland
-Schäfer, Oliver Schallert and Giuseppe
-Varaschin for comments and Konstantin Schulz, Anke Lüdeling, and Martin Klotz for 
+Schäfer, Oliver Schallert and Remi van Trijp, Giuseppe
+Varaschin for comments and discussion and Konstantin Schulz, Anke Lüdeling, and Martin Klotz for 
 discussion and Tine Mooshammer for raising questions about \citew{AmbridgeBlything2024a}.
 
 Oliver Schallert suggested adding more discussion of \citeauthor{Piantadosi2024a}'s paper. Thanks
 for this, I think it really improved the paper.
+
+
+
+%      <!-- Local IspellDict: en_US -->
