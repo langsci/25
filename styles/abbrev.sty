@@ -3,6 +3,8 @@
 
 % \, -> kurz \ -> '.' kein Satzende
 
+\RequirePackage{hyphenat}
+
 \newcommand{\ua}{u.\,a.\ }
 \newcommand{\eg}{e.g.,\xspace}
 \newcommand{\Eg}{E.g.,\xspace}
@@ -65,8 +67,8 @@
 \newcommand{\pos}{$_{pos}$}
 
 % used to be \ind, \ind used by LGR
-\providecommand\ind[1]{}% does nothing, if already defined
-\renewcommand{\ind}[1]{\mbox{$_{\ibox{#1}}$}}
+%\providecommand\ind[1]{}% does nothing, if already defined
+\newcommand{\ind}[1]{\mbox{$_{\ibox{#1}}$}}
 %\def\th{\ifmmode\theta\else$\theta$\fi}
 
 
@@ -107,8 +109,8 @@
 
 
 
-\newcommand{\iwithini}{\emph{i}-within"=\emph{i}\xspace}
-\newcommand{\iwithinic}{\emph{i}-within"=\emph{i}"=Condition\xspace}
+\newcommand{\iwithini}{\emph{i}-within\hyp \emph{i}\xspace}
+\newcommand{\iwithinic}{\emph{i}-within\hyp \emph{i}\hyp Condition\xspace}
 
 
 
@@ -126,11 +128,11 @@
 %\newcommand{\agr}{\textsc{agr}\xspace}
 \newcommand{\argst}{\textsc{arg-st}\xspace}
 \newcommand{\argstf}{\textsc{arg-st} feature\xspace}
-\newcommand{\argstw}{\textsc{arg-st}"=Wert\xspace}
+\newcommand{\argstw}{\textsc{arg-st}\hyp Wert\xspace}
 \newcommand{\argstv}{\textsc{arg-st} value\xspace}
 \newcommand{\argstvs}{\textsc{arg-st} values\xspace}
 \iflanguage{german}{
-\newcommand{\argstl}{\textsc{arg-st}"=Liste\xspace}
+\newcommand{\argstl}{\textsc{arg-st}\hyp Liste\xspace}
 }{\newcommand{\argstl}{\textsc{arg-st} list\xspace}}
 \newcommand{\argstls}{\textsc{arg-st} lists\xspace}
 
@@ -139,50 +141,59 @@
 \newcommand{\auxf}{\textsc{aux} feature\xspace}
 \newcommand{\auxv}{\textsc{aux} value\xspace}
 
+\newcommand{\body}{\textsc{body}\xspace}
+
 \newcommand{\casev}{\textsc{case} value\xspace}
-\newcommand{\casew}{\textsc{case}"=Wert\xspace}
+\newcommand{\casew}{\textsc{case}\hyp Wert\xspace}
 \newcommand{\casef}{\textsc{case} feature\xspace}
 \newcommand{\cat}{\textsc{cat}\xspace}
 \newcommand{\catv}{\textsc{cat} value\xspace}
 \newcommand{\catvs}{\textsc{cat} values\xspace}
-\newcommand{\catw}{\textsc{cat}"=Wert\xspace}
-\newcommand{\catwe}{\textsc{cat}"=Werte\xspace}
-\newcommand{\catwes}{\textsc{cat}"=Wertes\xspace}
+\newcommand{\catw}{\textsc{cat}\hyp Wert\xspace}
+\newcommand{\catwe}{\textsc{cat}\hyp Werte\xspace}
+\newcommand{\catwes}{\textsc{cat}\hyp Wertes\xspace}
 % used in mathtime
 %\newcommand{\comp}{\textsc{comp}\xspace}
 \newcommand{\comps}{\textsc{comps}\xspace}
 \newcommand{\compsdtrs}{\textsc{comps-dtrs}\xspace}
 \newcommand{\compsf}{\textsc{comps} feature\xspace}%
 \iflanguage{german}{%
-\newcommand{\compsl}{\textsc{comps}"=Liste\xspace}}{%
+\newcommand{\compsl}{\textsc{comps}\hyp Liste\xspace}}{%
 \newcommand{\compsl}{\textsc{comps} list\xspace}%
 }
+\newcommand{\compsln}{\textsc{comps}\hyp Listen\xspace}%
+\newcommand{\compslen}{\textsc{comps}\hyp Listen\xspace}
 \newcommand{\compsv}{\textsc{comps} value\xspace}%
 \newcommand{\compsvs}{\textsc{comps} values\xspace}%
-\newcommand{\compsw}{\textsc{comps}"=Wert\xspace}%
-\newcommand{\compswe}{\textsc{comps}"=Werte\xspace}%
+\newcommand{\compsm}{\textsc{comps}\hyp Merkmal\xspace}
+\newcommand{\compsw}{\textsc{comps}\hyp Wert\xspace}%
+\newcommand{\compswe}{\textsc{comps}\hyp Werte\xspace}%
+\newcommand{\compswes}{\textsc{comps}\hyp Wertes\xspace}
+
 \newcommand{\ccont}{\textsc{c-cont}\xspace}
 \newcommand{\ccontf}{\textsc{c-cont} feature\xspace}
+\newcommand{\ccontw}{\textsc{c-cont}\hyp Wert\xspace}
+\newcommand{\ccontwes}{\textsc{c-cont}\hyp Wertes\xspace}
 \newcommand{\cont}{\textsc{cont}\xspace}
 \newcommand{\content}{\textsc{content}\xspace}
 \newcommand{\contv}{\textsc{cont} value\xspace}
 \newcommand{\contvs}{\textsc{cont} values\xspace}
-\newcommand{\contw}{\textsc{cont}"=Wert\xspace}
-\newcommand{\contwe}{\textsc{cont}"=Werte\xspace}
-\newcommand{\contwes}{\textsc{cont}"=Wertes\xspace}
-\newcommand{\contws}{\textsc{cont}"=Wertes\xspace}
+\newcommand{\contw}{\textsc{cont}\hyp Wert\xspace}
+\newcommand{\contwe}{\textsc{cont}\hyp Werte\xspace}
+\newcommand{\contwes}{\textsc{cont}\hyp Wertes\xspace}
+\newcommand{\contws}{\textsc{cont}\hyp Wertes\xspace}
 \newcommand{\coord}{\textsc{coord}\xspace}
-\newcommand{\cstr}{c"=Struktur\xspace}
+\newcommand{\cstr}{c\hyp Struktur\xspace}
 \newcommand{\da}{\textsc{da}\xspace}
 \newcommand{\daf}{\textsc{da} feature\xspace}
 %
 % \dal is used by the arabi package
-\newcommand{\daliste}{\textsc{da}"=Liste\xspace}%
+\newcommand{\daliste}{\textsc{da}\hyp Liste\xspace}%
 \newcommand{\dalist}{\textsc{da} list\xspace}%
-\newcommand{\dam}{\textsc{da}"=Merkmal\xspace}
-\newcommand{\daw}{\textsc{da}"=Wert\xspace}
-\newcommand{\dawe}{\textsc{da}"=Werte\xspace}
-\newcommand{\dawes}{\textsc{da}"=Wertes\xspace}
+\newcommand{\dam}{\textsc{da}\hyp Merkmal\xspace}
+\newcommand{\daw}{\textsc{da}\hyp Wert\xspace}
+\newcommand{\dawe}{\textsc{da}\hyp Werte\xspace}
+\newcommand{\dawes}{\textsc{da}\hyp Wertes\xspace}
 \newcommand{\dav}{\textsc{da} value\xspace}
 \newcommand{\davs}{\textsc{da} values\xspace}
 \newcommand{\defv}{\textsc{def} value\xspace}
@@ -195,96 +206,111 @@
 \newcommand{\dslfs}{\textsc{dsl} features\xspace}
 \newcommand{\dslv}{\textsc{dsl} value\xspace}
 \newcommand{\dslvs}{\textsc{dsl} values\xspace}
-\newcommand{\dslw}{\textsc{dsl}"=Wert\xspace}
-\newcommand{\dslwe}{\textsc{dsl}"=Werte\xspace}
-\newcommand{\dslwes}{\textsc{dsl}"=Wertes\xspace}
+\newcommand{\dslm}{\textsc{dsl}\hyp Merkmal\xspace}
+\newcommand{\dslw}{\textsc{dsl}\hyp Wert\xspace}
+\newcommand{\dslwe}{\textsc{dsl}\hyp Werte\xspace}
+\newcommand{\dslwes}{\textsc{dsl}\hyp Wertes\xspace}
+\newcommand{\dslwen}{\textsc{dsl}\hyp Werten\xspace}
 \newcommand{\dtrs}{\textsc{dtrs}\xspace}
 \iflanguage{german}{%
-\newcommand{\dtrsl}{\textsc{dtrs}"=Liste\xspace}}{%
+\newcommand{\dtrsl}{\textsc{dtrs}\hyp Liste\xspace}}{%
 \newcommand{\dtrsl}{\textsc{dtrs} list\xspace}}
 \newcommand{\dtrsv}{\textsc{dtrs} value\xspace}
 
 % used by kluwer.cls
 \newcommand{\dom}{\textsc{dom}\xspace}
 \newcommand{\domv}{\textsc{dom} value\xspace}
-\newcommand{\domw}{\textsc{dom}"=Wert\xspace}
+\newcommand{\domw}{\textsc{dom}\hyp Wert\xspace}
 \iflanguage{german}{%
-\newcommand{\doml}{\textsc{dom}"=Liste\xspace}}{%
+\newcommand{\doml}{\textsc{dom}\hyp Liste\xspace}}{%
 \newcommand{\doml}{\textsc{dom} list\xspace}%
 }
 \newcommand{\HPSGerg}{\textsc{erg}\xspace}
-\newcommand{\ergm}{\textsc{erg}"=Merkmal\xspace}
+\newcommand{\ergm}{\textsc{erg}\hyp Merkmal\xspace}
 \newcommand{\ergv}{\textsc{erg} value\xspace}
-\newcommand{\ergw}{\textsc{erg}"=Wert\xspace}
+\newcommand{\ergw}{\textsc{erg}\hyp Wert\xspace}
 \newcommand{\ergf}{\textsc{erg} feature\xspace}
 \newcommand{\extra}{\textsc{extra}\xspace}
-\newcommand{\extraw}{\textsc{extra}"=Wertes\xspace}
+\newcommand{\extraw}{\textsc{extra}\hyp Wertes\xspace}
 \newcommand{\flipv}{\textsc{flip} value\xspace}
 \newcommand{\focus}{\textsc{focus}\xspace}
 \newcommand{\form}{\textsc{form}\xspace}
 \newcommand{\formf}{\textsc{form} feature\xspace}
 \newcommand{\formv}{\textsc{form} value\xspace}
 \newcommand{\formvs}{\textsc{form} values\xspace}
-\newcommand{\fstr}{f"=Struktur\xspace}
-\newcommand{\fstren}{f"=Strukturen\xspace}
+\newcommand{\fstr}{f\hyp Struktur\xspace}
+\newcommand{\fstren}{f\hyp Strukturen\xspace}
 \newcommand{\gap}{\textsc{gap}\xspace}
 \newcommand{\gapf}{\textsc{gap} feature\xspace}
 \newcommand{\gtop}{\textsc{gtop}\xspace}
 \newcommand{\hcons}{\textsc{hcons}\xspace}
-\newcommand{\hconsl}{\textsc{hcons} list\xspace}
+\iflanguage{german}{%
+\newcommand{\hconsl}{\textsc{hcons}\hyp Liste\xspace}}{%
+\newcommand{\hconsl}{\textsc{hcons} list\xspace}}
 \newcommand{\hconsv}{\textsc{hcons} value\xspace}
 \newcommand{\hconsvs}{\textsc{hcons} values\xspace}
+\newcommand{\hconsw}{\textsc{hcons}\hyp Wert\xspace}
+\newcommand{\hconswe}{\textsc{hcons}\hyp Werte\xspace}
+\newcommand{\hconswes}{\textsc{hcons}\hyp Wertes\xspace}
 \newcommand{\head}{\textsc{head}\xspace}
 \newcommand{\headdtr}{\textsc{head-dtr}\xspace}
 \newcommand{\headf}{\textsc{head} feature\xspace}
 \newcommand{\headfs}{\textsc{head} features\xspace}
 \newcommand{\headv}{\textsc{head} value\xspace}
 \newcommand{\headvs}{\textsc{head} values\xspace}
-\newcommand{\headw}{\textsc{head}"=Wert\xspace}
+\newcommand{\headw}{\textsc{head}\hyp Wert\xspace}
+\newcommand{\hook}{\textsc{hook}\xspace}
 \newcommand{\hookv}{\textsc{hook} value\xspace}
+\newcommand{\hookw}{\textsc{hook}\hyp Wert\xspace}
+\newcommand{\hookwes}{\textsc{hook}\hyp Wertes\xspace}
 \newcommand{\indv}{\textsc{ind} value\xspace}
+\newcommand{\indw}{\textsc{ind}\hyp Wert\xspace}
 \newcommand{\indexv}{\textsc{index} value\xspace}
-\newcommand{\islw}{\textsc{inher$|$"-slash}"=Wert\xspace}
-\newcommand{\isll}{\textsc{inher$|$"-slash}"=Liste\xspace}
+\newcommand{\indexwes}{\textsc{index}\hyp Wertes\xspace}
+\newcommand{\islw}{\textsc{inher$|$"-slash}\hyp Wert\xspace}
+\newcommand{\isll}{\textsc{inher$|$"-slash}\hyp Liste\xspace}
 \newcommand{\inv}{\textsc{inv}\xspace}
 \newcommand{\ini}{\textsc{ini}\xspace}
+\newcommand{\iniw}{\textsc{ini}\hyp Wert\xspace}
 \newcommand{\initial}{\textsc{initial}\xspace}
 \newcommand{\initialv}{\textsc{initial} value\xspace}
 \newcommand{\initialf}{\textsc{initial} feature\xspace}
-\newcommand{\initialw}{\textsc{initial}"=Wert\xspace}
-\newcommand{\initialwes}{\textsc{initial}"=Wertes\xspace}
-\newcommand{\initialm}{\textsc{initial}"=Merkmal\xspace}
+\newcommand{\initialw}{\textsc{initial}\hyp Wert\xspace}
+\newcommand{\initialwes}{\textsc{initial}\hyp Wertes\xspace}
+\newcommand{\initialm}{\textsc{initial}\hyp Merkmal\xspace}
 \newcommand{\ldat}{\normalfont\textit{ldat}}
 \newcommand{\lnom}{\normalfont\textit{lnom}}
 \newcommand{\snom}{\normalfont\textit{snom}}
 \newcommand{\sacc}{\normalfont\textit{sacc}}
 \newcommand{\lex}{\textsc{lex}\xspace}
 \newcommand{\lexf}{\textsc{lex} feature\xspace}
-\newcommand{\lexm}{\textsc{lex}"=Merkmal\xspace}
+\newcommand{\lexm}{\textsc{lex}\hyp Merkmal\xspace}
 \newcommand{\lexv}{\textsc{lex} value\xspace}
-\newcommand{\lexw}{\textsc{lex}"=Wert\xspace}
+\newcommand{\lexw}{\textsc{lex}\hyp Wert\xspace}
+\newcommand{\lexwen}{\textsc{lex}\hyp Werten\xspace}
+\newcommand{\lexwes}{\textsc{lex}\hyp Wertes\xspace}
 \newcommand{\light}{\textsc{light}\xspace}
 \newcommand{\lightf}{\textsc{light} feature\xspace}
-\newcommand{\lightm}{\textsc{light}"=Merkmal\xspace}
+\newcommand{\lightm}{\textsc{light}\hyp Merkmal\xspace}
 \newcommand{\lightv}{\textsc{light} value\xspace}
-\newcommand{\lightw}{\textsc{light}"=Wert\xspace}
-\newcommand{\lightwe}{\textsc{light}"=Werte\xspace}
-\newcommand{\lightwen}{\textsc{light}"=Werten\xspace}
-\newcommand{\lightwes}{\textsc{light}"=Wertes\xspace}
+\newcommand{\lightw}{\textsc{light}\hyp Wert\xspace}
+\newcommand{\lightwe}{\textsc{light}\hyp Werte\xspace}
+\newcommand{\lightwen}{\textsc{light}\hyp Werten\xspace}
+\newcommand{\lightwes}{\textsc{light}\hyp Wertes\xspace}
 \newcommand{\lista}{\textsc{list-a}\xspace}
 \iflanguage{german}{%
-\newcommand{\listal}{\textsc{list-a}"=Liste\xspace}}{%
+\newcommand{\listal}{\textsc{list-a}\hyp Liste\xspace}}{%
 \newcommand{\listal}{\textsc{list-a} list\xspace}%
 }
 \newcommand{\listz}{\textsc{list-z}\xspace}
 \newcommand{\listu}{\textsc{list-u}\xspace}
 \iflanguage{german}{%
-\newcommand{\listul}{\textsc{list-u}"=Liste\xspace}}{%
+\newcommand{\listul}{\textsc{list-u}\hyp Liste\xspace}}{%
 \newcommand{\listul}{\textsc{list-u} list\xspace}%
 }
 \newcommand{\listlu}{\textsc{list-lu}\xspace}
 \iflanguage{german}{%
-\newcommand{\listlul}{\textsc{list-lu}"=Liste\xspace}}{%
+\newcommand{\listlul}{\textsc{list-lu}\hyp Liste\xspace}}{%
 \newcommand{\listlul}{\textsc{list-lu} list\xspace}%
 }
 \newcommand{\HPSGloc}{\textsc{loc}\xspace}
@@ -294,60 +320,67 @@
 \newcommand{\localvs}{\textsc{local} values\xspace}
 \newcommand{\locv}{\textsc{local} value\xspace}
 \newcommand{\locvs}{\textsc{local} values\xspace}
-\newcommand{\locw}{\textsc{loc}"=Wert\xspace}
-\newcommand{\localw}{\textsc{local}"=Wert\xspace}
-\newcommand{\localwes}{\textsc{local}"=Wertes\xspace}
+\newcommand{\locw}{\textsc{loc}\hyp Wert\xspace}
+\newcommand{\localw}{\textsc{local}\hyp Wert\xspace}
+\newcommand{\localwes}{\textsc{local}\hyp Wertes\xspace}
 % conflict with some package loaded by langsci.cls
 \newcommand{\ltop}{\textsc{ltop}\xspace}
+\newcommand{\ltopm}{\textsc{ltop}\hyp Merkmal\xspace}
 \newcommand{\ltopv}{\textsc{ltop} value\xspace}
+\newcommand{\ltopw}{\textsc{ltop}-Wert\xspace}
+\newcommand{\ltopwe}{\textsc{ltop}\hyp Werte\xspace}
+\newcommand{\ltopwes}{\textsc{ltop}\hyp Wertes\xspace}
+\newcommand{\ltopwen}{\textsc{ltop}-Werten\xspace}
 % Konflikt mit Beamer
 %\newcommand{\mod}{\textsc{mod}\xspace}
 \newcommand{\modf}{\textsc{mod} feature\xspace}
-\newcommand{\modm}{\textsc{mod}"=Merkmal\xspace}
-\newcommand{\modms}{\textsc{mod}"=Merkmals\xspace}
+\newcommand{\modm}{\textsc{mod}\hyp Merkmal\xspace}
+\newcommand{\modms}{\textsc{mod}\hyp Merkmals\xspace}
 \newcommand{\modv}{\textsc{mod} value\xspace}
 \newcommand{\modvs}{\textsc{mod} values\xspace}
-\newcommand{\modw}{\textsc{mod}"=Wert\xspace}
+\newcommand{\modw}{\textsc{mod}\hyp Wert\xspace}
+\newcommand{\modwes}{\textsc{mod}\hyp Wertes\xspace}
+\newcommand{\modew}{\textsc{mode}\hyp Wert\xspace}
 \newcommand{\mother}{\textsc{mother}\xspace}
 \newcommand{\motherf}{\textsc{mother} feature\xspace}
 \newcommand{\movealpha}{Move-$\alpha$\xspace}
 \let\movea=\movealpha
 \newcommand{\nonloc}{\textsc{nonloc}\xspace}
 \newcommand{\nonlocal}{\textsc{nonlocal}\xspace}
-\newcommand{\nonlocm}{\textsc{nonloc}"=Merkmal\xspace}
+\newcommand{\nonlocm}{\textsc{nonloc}\hyp Merkmal\xspace}
 \newcommand{\nonlocv}{\textsc{nonloc} value\xspace}
 \newcommand{\nonlocf}{\textsc{nonloc} feature\xspace}
-\newcommand{\nonlocw}{\textsc{nonloc}"=Wert\xspace}
+\newcommand{\nonlocw}{\textsc{nonloc}\hyp Wert\xspace}
 \newcommand{\num}{\textsc{num}\xspace}
-\newcommand{\numw}{\textsc{num}"=Wert\xspace}
-\newcommand{\objw}{\textsc{obj}"=Wert\xspace}
+\newcommand{\numw}{\textsc{num}\hyp Wert\xspace}
+\newcommand{\objw}{\textsc{obj}\hyp Wert\xspace}
 \newcommand{\objz}{\textsc{obj2}\xspace}
-\newcommand{\perw}{\textsc{per}"=Wert\xspace}
+\newcommand{\perw}{\textsc{per}\hyp Wert\xspace}
 \newcommand{\pform}{\textsc{pform}\xspace}
 \newcommand{\pformf}{\textsc{pform} feature\xspace}
 \newcommand{\pformv}{\textsc{pform} value\xspace}
 \newcommand{\phon}{\textsc{phon}\xspace}
 \iflanguage{german}{%
-  \newcommand{\phonl}{\textsc{phon}"=Liste\xspace}}{%
+  \newcommand{\phonl}{\textsc{phon}\hyp Liste\xspace}}{%
 \newcommand{\phonl}{\textsc{phon} list\xspace}}
 \newcommand{\phonv}{\textsc{phon} value\xspace}
 \newcommand{\phonvs}{\textsc{phon} values\xspace}
-\newcommand{\phonw}{\textsc{phon}"=Wert\xspace}
-\newcommand{\phonwe}{\textsc{phon}"=Werte\xspace}
-\newcommand{\phonwes}{\textsc{phon}"=Wertes\xspace}
-\newcommand{\phonm}{\textsc{phon}"=Merkmal\xspace}
+\newcommand{\phonw}{\textsc{phon}\hyp Wert\xspace}
+\newcommand{\phonwe}{\textsc{phon}\hyp Werte\xspace}
+\newcommand{\phonwes}{\textsc{phon}\hyp Wertes\xspace}
+\newcommand{\phonm}{\textsc{phon}\hyp Merkmal\xspace}
 \newcommand{\phonf}{\textsc{phon} feature\xspace}
 \newcommand{\prd}{\textsc{prd}\xspace}
 \newcommand{\prdf}{\textsc{prd} feature\xspace}
 \newcommand{\pred}{\textsc{pred}\xspace}
-\newcommand{\predm}{\textsc{pred}"=Merkmal\xspace}
-\newcommand{\predw}{\textsc{pred}"=Wert\xspace}
+\newcommand{\predm}{\textsc{pred}\hyp Merkmal\xspace}
+\newcommand{\predw}{\textsc{pred}\hyp Wert\xspace}
 \newcommand{\predv}{\textsc{pred} value\xspace}
 \newcommand{\predvs}{\textsc{pred} values\xspace}
 \newcommand{\que}{\textsc{que}\xspace}
 \newcommand{\quef}{\textsc{que} feature\xspace}%
 \iflanguage{german}{%
-\newcommand{\quel}{\textsc{que}"=Liste\xspace}}{%
+\newcommand{\quel}{\textsc{que}\hyp Liste\xspace}}{%
 \newcommand{\quel}{\textsc{que} list\xspace}}
 \newcommand{\quev}{\textsc{que} value\xspace}%
 \newcommand{\qstore}{\textsc{qstore}\xspace}
@@ -356,110 +389,120 @@
 %\newcommand{\REL}{\textsc{rel}\xspace}
 \newcommand{\rels}{\textsc{rels}\xspace}
 \iflanguage{german}{%
-\newcommand{\relsl}{\textsc{rels}"=Liste\xspace}}{%
+\newcommand{\relsl}{\textsc{rels}\hyp Liste\xspace}}{%
 \newcommand{\relsl}{\textsc{rels} list\xspace}}
-\newcommand{\relslen}{\textsc{rels}"=Listen\xspace}%
+\newcommand{\relslen}{\textsc{rels}\hyp Listen\xspace}%
 \newcommand{\relsls}{\textsc{rels} lists\xspace}%
 %
 \newcommand{\relsv}{\textsc{rels} value\xspace}
 \newcommand{\relsvs}{\textsc{rels} values\xspace}
-\newcommand{\relsw}{\textsc{rels}"=Wert\xspace}
-\newcommand{\relswe}{\textsc{rels}"=Werte\xspace}
-\newcommand{\relw}{\textsc{rel}"=Wert\xspace}
-\newcommand{\relwe}{\textsc{rel}"=Werte\xspace}
-\newcommand{\sbcg}{Sign"=Based Construction Grammar\indexsbcg}
+\newcommand{\relsw}{\textsc{rels}\hyp Wert\xspace}
+\newcommand{\relswe}{\textsc{rels}\hyp Werte\xspace}
+\newcommand{\relswes}{\textsc{rels}\hyp Wertes\xspace}
+\iflanguage{german}{%
+\newcommand{\rell}{\textsc{rel}\hyp Liste\xspace}}{%
+\newcommand{\rell}{\textsc{rel} list\xspace}}
+\newcommand{\relw}{\textsc{rel}\hyp Wert\xspace}
+\newcommand{\relwe}{\textsc{rel}\hyp Werte\xspace}
+\newcommand{\restr}{\textsc{rstr}\xspace}
+\newcommand{\rstr}{\textsc{rstr}\xspace}
+\newcommand{\rstrw}{\textsc{rstr}\hyp Wert\xspace}
+\newcommand{\sbcg}{Sign\hyp Based Construction Grammar\indexsbcg}
 \newcommand{\self}{\textsc{self}\xspace}
 \newcommand{\SLASH}{\textsc{slash}\xspace}
 \newcommand{\slasch}{\textsc{slash}\xspace}
-\newcommand{\slashel}{\textsc{slash}"=Element\xspace}
+\newcommand{\slashel}{\textsc{slash}\hyp Element\xspace}
 \newcommand{\slashf}{\textsc{slash} feature\xspace}
-\newcommand{\slashl}{\iflanguage{german}{\textsc{slash}"=Liste\xspace}{\textsc{slash} list\xspace}}
+\newcommand{\slashl}{\iflanguage{german}{\textsc{slash}\hyp Liste\xspace}{\textsc{slash} list\xspace}}
 \newcommand{\slashls}{\textsc{slash} lists\xspace}
-\newcommand{\slashm}{\textsc{slash}"=Merkmal\xspace}
-\newcommand{\slashms}{\textsc{slash}"=Merkmals\xspace}
-\newcommand{\slashme}{\textsc{slash}"=Merkmale\xspace}
-\newcommand{\slashw}{\textsc{slash}"=Wert\xspace}
-\newcommand{\slashwe}{\textsc{slash}"=Werte\xspace}
-\newcommand{\slashws}{\textsc{slash}"=Wertes\xspace}
+\newcommand{\slashm}{\textsc{slash}\hyp Merkmal\xspace}
+\newcommand{\slashms}{\textsc{slash}\hyp Merkmals\xspace}
+\newcommand{\slashme}{\textsc{slash}\hyp Merkmale\xspace}
+\newcommand{\slashw}{\textsc{slash}\hyp Wert\xspace}
+\newcommand{\slashwe}{\textsc{slash}\hyp Werte\xspace}
+\newcommand{\slashws}{\textsc{slash}\hyp Wertes\xspace}
 \newcommand{\slashv}{\textsc{slash} value\xspace}
 \newcommand{\slashvs}{\textsc{slash} values\xspace}
+\newcommand{\specm}{\textsc{spec}\hyp Merkmal\xspace}
+\newcommand{\specms}{\textsc{spec}\hyp Merkmals\xspace}
+\newcommand{\spec}{\textsc{spec}\xspace}
 \newcommand{\specv}{\textsc{spec} value\xspace}
-\newcommand{\specw}{\textsc{spec}"=Wert\xspace}
-\newcommand{\specwes}{\textsc{spec}"=Wertes\xspace}
+\newcommand{\specw}{\textsc{spec}\hyp Wert\xspace}
+\newcommand{\specwes}{\textsc{spec}\hyp Wertes\xspace}
 \newcommand{\spr}{\textsc{spr}\xspace}
 \newcommand{\sprf}{\textsc{spr} feature\xspace}
 \iflanguage{german}{%
-\newcommand{\sprl}{\textsc{spr}"=Liste\xspace}}{%
+\newcommand{\sprl}{\textsc{spr}\hyp Liste\xspace}}{%
 \newcommand{\sprl}{\textsc{spr} list\xspace}%
 }
 \newcommand{\sprls}{\textsc{spr} lists\xspace}%
-\newcommand{\sprm}{\textsc{spr}"=Merkmal\xspace}
+\newcommand{\sprm}{\textsc{spr}\hyp Merkmal\xspace}
 \newcommand{\sprv}{\textsc{spr} value\xspace}
 \newcommand{\sprvs}{\textsc{spr} values\xspace}
-\newcommand{\sprw}{\textsc{spr}"=Wert\xspace}
-\newcommand{\sprwe}{\textsc{spr}"=Werte\xspace}
-\newcommand{\sprwes}{\textsc{spr}"=Wertes\xspace}
+\newcommand{\sprw}{\textsc{spr}\hyp Wert\xspace}
+\newcommand{\sprwe}{\textsc{spr}\hyp Werte\xspace}
+\newcommand{\sprwes}{\textsc{spr}\hyp Wertes\xspace}
 \newcommand{\subcat}{\textsc{subcat}\xspace}
 \newcommand{\subcatf}{\textsc{subcat} feature\xspace}
 
 \iflanguage{german}{%
-\newcommand{\subcatl}{\textsc{subcat}"=Liste\xspace}}{%
+\newcommand{\subcatl}{\textsc{subcat}\hyp Liste\xspace}}{%
 \newcommand{\subcatl}{\textsc{subcat} list\xspace}%
 }
 
-\newcommand{\subcatln}{\textsc{subcat}"=Listen\xspace}
-\newcommand{\subcatlen}{\textsc{subcat}"=Listen\xspace}
+\newcommand{\subcatln}{\textsc{subcat}\hyp Listen\xspace}
+\newcommand{\subcatlen}{\textsc{subcat}\hyp Listen\xspace}
 \newcommand{\subcatls}{\textsc{subcat} lists\xspace}%
 
-\newcommand{\subcatm}{\textsc{subcat}"=Merkmal\xspace}
-\newcommand{\subcatw}{\textsc{subcat}"=Wert\xspace}
-\newcommand{\subcatwe}{\textsc{subcat}"=Werte\xspace}
-\newcommand{\subcatwes}{\textsc{subcat}"=Wertes\xspace}
+\newcommand{\subcatm}{\textsc{subcat}\hyp Merkmal\xspace}
+\newcommand{\subcatw}{\textsc{subcat}\hyp Wert\xspace}
+\newcommand{\subcatwe}{\textsc{subcat}\hyp Werte\xspace}
+\newcommand{\subcatwes}{\textsc{subcat}\hyp Wertes\xspace}
 \newcommand{\subcatv}{\textsc{subcat} value\xspace}
 \newcommand{\subj}{\textsc{subj}\xspace}
 
 \iflanguage{german}{%
-\newcommand{\subjl}{\textsc{subj}"=Liste\xspace}}{%
+\newcommand{\subjl}{\textsc{subj}\hyp Liste\xspace}}{%
 \newcommand{\subjl}{\textsc{subj} list\xspace}
 }
 
 \newcommand{\subjf}{\textsc{subj} feature\xspace}
 \newcommand{\subjv}{\textsc{subj} value\xspace}
-\newcommand{\subjw}{\textsc{subj}"=Wert\xspace}
-\newcommand{\subjm}{\textsc{subj}"=Merkmal\xspace}
-\newcommand{\subjms}{\textsc{subj}"=Merkmals\xspace}
-\newcommand{\subjwes}{\textsc{subj}"=Wertes\xspace}
+\newcommand{\subjw}{\textsc{subj}\hyp Wert\xspace}
+\newcommand{\subjm}{\textsc{subj}\hyp Merkmal\xspace}
+\newcommand{\subjms}{\textsc{subj}\hyp Merkmals\xspace}
+\newcommand{\subjwes}{\textsc{subj}\hyp Wertes\xspace}
 \newcommand{\str}{{\normalfont\textit{str}}}% xspace does not work with NP[\str]
 \newcommand{\synsem}{\textsc{synsem}\xspace}
 \newcommand{\synsemf}{\textsc{synsem} feature\xspace}
-\newcommand{\synsemm}{\textsc{synsem}"=Merkmal\xspace}
+\newcommand{\synsemm}{\textsc{synsem}\hyp Merkmal\xspace}
 \newcommand{\synsemv}{\textsc{synsem} value\xspace}
 \newcommand{\synsemvs}{\textsc{synsem} values\xspace}
-\newcommand{\synsemw}{\textsc{synsem}"=Wert\xspace}
-\newcommand{\synsemwe}{\textsc{synsem}"=Werte\xspace}
-\newcommand{\synsemwes}{\textsc{synsem}"=Wertes\xspace}
-\newcommand{\synsemws}{\textsc{synsem}"=Wertes\xspace}
-\newcommand{\thetarolle}{$\theta$"=Rolle\xspace}
+\newcommand{\synsemw}{\textsc{synsem}\hyp Wert\xspace}
+\newcommand{\synsemwe}{\textsc{synsem}\hyp Werte\xspace}
+\newcommand{\synsemwes}{\textsc{synsem}\hyp Wertes\xspace}
+\newcommand{\synsemws}{\textsc{synsem}\hyp Wertes\xspace}
+\newcommand{\thetarolle}{$\theta$\hyp Rolle\xspace}
 \newcommand{\topic}{\textsc{topic}\xspace}
 \newcommand{\val}{\textsc{val}\xspace}
 \newcommand{\vcomp}{\textsc{vcomp}\xspace}
 \iflanguage{german}{%
-\newcommand{\vcompl}{\textsc{vcomp}"=Liste\xspace}}{%
+\newcommand{\vcompl}{\textsc{vcomp}\hyp Liste\xspace}}{%
 \newcommand{\vcompl}{\textsc{vcomp} list\xspace}}
 
 \newcommand{\vcompv}{\textsc{vcomp} value\xspace}
-\newcommand{\vcompw}{\textsc{vcomp}"=Wert\xspace}
+\newcommand{\vcompw}{\textsc{vcomp}\hyp Wert\xspace}
 \newcommand{\xarg}{\textsc{xarg}\xspace}
 \newcommand{\xargf}{\textsc{xarg} feature\xspace}
 \newcommand{\xargs}{\textsc{xarg}s\xspace}
 \newcommand{\xcomp}{\textsc{xcomp}\xspace}
-\newcommand{\xcompl}{\textsc{xcomp}"=Liste\xspace}
-\newcommand{\xcompw}{\textsc{xcomp}"=Wert\xspace}
+\newcommand{\xcompl}{\textsc{xcomp}\hyp Liste\xspace}
+\newcommand{\xcompw}{\textsc{xcomp}\hyp Wert\xspace}
 \newcommand{\xcompv}{\textsc{xcomp} value\xspace}
 \newcommand{\vform}{\textsc{vform}\xspace}
 \newcommand{\vformf}{\textsc{vform} feature\xspace}
 \newcommand{\vformv}{\textsc{vform} value\xspace}
-\newcommand{\vformw}{\textsc{vform}"=Wert\xspace}
+\newcommand{\vformw}{\textsc{vform}\hyp Wert\xspace}
 
 \newcommand{\prefix}[1]{\emph{#1}-\xspace}
 \newcommand{\stem}[1]{\emph{#1}-\xspace}
@@ -477,47 +520,47 @@
 \newcommand{\habenp}{\emph{haben}\iw{sein!Perfekt}\xspace}
 
 
-\newcommand{\er}{"~\emph{er}\xspace}
+\newcommand{\er}{\mbox{-\emph{er}}\xspace}
 \newcommand{\ern}{\iflanguage{german}{%
-"~\emph{er}"=Nominalisierung\xspace}{%
-"~\emph{er}"=nominalization\xspace}%
+\mbox{-\emph{er}}\hyp Nominalisierung\xspace}{%
+\mbox{-\emph{er}}\hyp nominalization\xspace}%
 }
-\newcommand{\erns}{"~\emph{er}"=nominalizations\xspace}
-\newcommand{\gee}{\emph{Ge}- "~\emph{e}\xspace}
+\newcommand{\erns}{"~\emph{er}\hyp nominalizations\xspace}
+\newcommand{\gee}{\emph{Ge}- \mbox{-\emph{e}}\xspace}
 \newcommand{\geen}{\iflanguage{german}{%
-\emph{Ge}- "~\emph{e}"=Nominalisierung\xspace}{%
-\emph{Ge}- "~\emph{e}"=nominalization\xspace}%
+\emph{Ge}- \mbox{-\emph{e}}\hyp Nominalisierung\xspace}{%
+\emph{Ge}- \mbox{-\emph{e}}\hyp nominalization\xspace}%
 }
-\newcommand{\geens}{\emph{Ge}- "~\emph{e}"=nominalizations\xspace}
-\newcommand{\geenen}{\emph{Ge}- "~\emph{e}"=Nominalisierungen\xspace}
-\newcommand{\geed}{\emph{Ge}- "~\emph{e}"=\iflanguage{german}{% 
+\newcommand{\geens}{\emph{Ge}- \mbox{-\emph{e}}\hyp nominalizations\xspace}
+\newcommand{\geenen}{\emph{Ge}- \mbox{-\emph{e}}\hyp Nominalisierungen\xspace}
+\newcommand{\geed}{\emph{Ge}- \mbox{-\emph{e}}\hyp \iflanguage{german}{% 
 Derivation}{derivation}\xspace}
-\newcommand{\geeds}{\emph{Ge}- "~\emph{e}"=derivations\xspace}
-\newcommand{\ung}{"~\emph{ung}\xspace}
-\newcommand{\ungd}{"~\emph{ung}"=derivation\xspace}
-\newcommand{\ungds}{"~\emph{ung}"=derivations\xspace}
+\newcommand{\geeds}{\emph{Ge}- \mbox{-\emph{e}}\hyp derivations\xspace}
+\newcommand{\ung}{\mbox{-\emph{ung}}\xspace}
+\newcommand{\ungd}{\mbox{-\emph{ung}}\hyp derivation\xspace}
+\newcommand{\ungds}{\mbox{-\emph{ung}}\hyp derivations\xspace}
 \newcommand{\ungn}{\iflanguage{german}{%
-"~\emph{ung}"=Nominalisierung\xspace}{%
-"~\emph{ung}"=nominalization\xspace}%
+\mbox{-\emph{ung}}\hyp Nominalisierung\xspace}{%
+\mbox{-\emph{ung}}\hyp nominalization\xspace}%
 }
-\newcommand{\ungs}{"~\emph{ung}"=nominalizations\xspace}
+\newcommand{\ungs}{-\mbox{\emph{ung}}\hyp nominalizations\xspace}
 
 
-\newcommand{\bars}{"~\emph{bar}\xspace}
+\newcommand{\bars}{-\emph{bar}\xspace}
 \newcommand{\baradj}{\iflanguage{german}{%
-"~\emph{bar}"=Adjektiv\xspace}{%
-"~\emph{bar}"=adjective\xspace}%
+\mbox{-\emph{bar}}\hyp Adjektiv\xspace}{%
+\mbox{-\emph{bar}}\hyp adjective\xspace}%
 }
 \newcommand{\baradjs}{\iflanguage{german}{%
-"~\emph{bar}"=Adjektivs\xspace}{%
-"~\emph{bar}"=adjectives\xspace}%
+\mbox{-\emph{bar}}\hyp Adjektivs\xspace}{%
+\mbox{-\emph{bar}}\hyp adjectives\xspace}%
 }
 \newcommand{\bard}{\iflanguage{german}{%
-"~\emph{bar}"=Derivation\xspace}%
-{"~\emph{bar} `able' derivation\xspace}%
+\mbox{-\emph{bar}}\hyp Derivation\xspace}%
+{\mbox{-\emph{bar}} `able' derivation\xspace}%
 }
-\newcommand{\bards}{"~\emph{bar}"=derivations\xspace}
-\newcommand{\barden}{"~\emph{bar}"=Derivationen\xspace}
+\newcommand{\bards}{\mbox{-\emph{bar}}\hyp derivations\xspace}
+\newcommand{\barden}{\mbox{-\emph{bar}}\hyp Derivationen\xspace}
 
 \newcommand{\itsdb}{\mbox{\textsf{\lbrack incr tsdb()\rbrack}}\indexitsdb}
 \newcommand{\indexitsdb}{\is{incr tsdb()@\mbox{\textsf{\lbrack incr tsdb()\rbrack}}}\xspace}
@@ -532,18 +575,18 @@ Derivation}{derivation}\xspace}
 %\newcommand{\constructions}{"`constructions"'\xspace}
 
 \iflanguage{german}{%
-\newcommand{\ppt}{Prinzipien und Parameter"=Theorie\xspace}}{%
+\newcommand{\ppt}{Prinzipien und Parameter\hyp Theorie\xspace}}{%
 \newcommand{\ppt}{Principles and Parameters Theory\xspace}}
 
-\newcommand{\kas}{Kopf"=Argument"=Struktur\xspace}
-\newcommand{\kasen}{Kopf"=Argument"=Strukturen\xspace}
-\newcommand{\kasch}{Kopf"=Argument"=Schema\xspace}
-\newcommand{\aciv}{AcI"=Verb\xspace}
+\newcommand{\kas}{Kopf\hyp Argument\hyp Struktur\xspace}
+\newcommand{\kasen}{Kopf\hyp Argument\hyp Strukturen\xspace}
+\newcommand{\kasch}{Kopf\hyp Argument\hyp Schema\xspace}
+\newcommand{\aciv}{AcI\hyp Verb\xspace}
 
-\newcommand{\zui}{\emph{zu}"=Infinitiv\xspace}
-\newcommand{\zuie}{\emph{zu}"=Infinitive\xspace}
-\newcommand{\zuien}{\emph{zu}"=Infinitiven\xspace}
-\newcommand{\zuis}{\emph{zu}"=Infinitivs\xspace}
+\newcommand{\zui}{\emph{zu}\hyp Infinitiv\xspace}
+\newcommand{\zuie}{\emph{zu}\hyp Infinitive\xspace}
+\newcommand{\zuien}{\emph{zu}\hyp Infinitiven\xspace}
+\newcommand{\zuis}{\emph{zu}\hyp Infinitivs\xspace}
 
 
 \newcommand{\Konstruktion}{\emph{Konstruktion}\xspace}
@@ -605,7 +648,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\indexgb}{\is{Government and Binding (GB)}\xspace}
 \newcommand{\gb}{GB\indexgb}
 \iflanguage{german}{%
-\newcommand{\gbt}{GB"=Theorie\indexgb}%
+\newcommand{\gbt}{GB\hyp Theorie\indexgb}%
 }{%
 \newcommand{\gbt}{GB theory\indexgb}%
 }
@@ -645,9 +688,9 @@ Derivation}{derivation}\xspace}
 
 \newcommand{\indextag}{\is{Tree Adjoining Grammar (TAG)}\xspace}
 \newcommand{\indexstag}{\is{Tree Adjoining Grammar (TAG)!\emph{Synchronous} (STAG)}\xspace}
-\newcommand{\indexmctag}{\is{Tree Adjoining Grammar (TAG)!\emph{Multi"=Component} (MCTAG)}\xspace}
+\newcommand{\indexmctag}{\is{Tree Adjoining Grammar (TAG)!\emph{Multi\hyp Component} (MCTAG)}\xspace}
 \newcommand{\indexftag}{\is{Tree Adjoining Grammar (TAG)!\emph{Feature
-    Structure"=Based} (FTAG)}\xspace}
+    Structure\hyp Based} (FTAG)}\xspace}
 \newcommand{\treeag}{TAG\indextag}
 
 \iflanguage{german}{%
@@ -665,8 +708,8 @@ Derivation}{derivation}\xspace}
 \newcommand{\Construction}{Construction\xspace}
 \newcommand{\Constructions}{Constructions\xspace}
 
-\newcommand{\zuinf}{\emph{zu}"=infinitive\xspace}
-\newcommand{\zuinfs}{\emph{zu}"=infinitives\xspace}
+\newcommand{\zuinf}{\emph{zu}\hyp infinitive\xspace}
+\newcommand{\zuinfs}{\emph{zu}\hyp infinitives\xspace}
 
 \newcommand{\andund}{\iflanguage{german}{und}{and}\xspace}
 
@@ -742,11 +785,16 @@ Derivation}{derivation}\xspace}
 \newcommand{\vbar}{\mbox{$\overline{\mbox{V}}$}\xspace}
 \newcommand{\tbar}{\mbox{$\overline{\mbox{T}}$}\xspace}
 
+\newcommand{\vbarDSLv}{V$'$\kern-0.2em//V}
+\newcommand{\vbarSLASH}{V$'$\kern-0.2em/}
+\newcommand{\vSLASHnp}{V\kern-0.1em/NP}
+\newcommand{\vSLASH}{V\kern-0.1em/}
+
 \iflanguage{german}{
-\newcommand{\xbart}{\texorpdfstring{\xbar"=Theorie\is{X-Theorie@\xbar-Theorie}}{X̄"=Theo\-rie}\xspace}
+\newcommand{\xbart}{\texorpdfstring{\xbar-Theo\-rie\is{X-Theorie@\xbar-Theorie}}{X̄-Theo\-rie}\xspace}
 }{\newcommand{\xbart}{\texorpdfstring{\xbar theory\is{X theory@\xbar theory}}{X̄ theo\-ry}\xspace}}
 
-\newcommand{\xbars}{\mbox{$\overline{\mbox{X}}$}"=Schema\xspace}
+\newcommand{\xbars}{\mbox{$\overline{\mbox{X}}$}\hyp Schema\xspace}
 
 
 \newcommand{\anull}{A$^0$\xspace}%
@@ -792,6 +840,7 @@ Derivation}{derivation}\xspace}
 \newcommand{\that}{\spacebr{}that\xspace}
 
 
+\newcommand{\argzero}{\textsc{arg0}\xspace}
 \newcommand{\argone}{\textsc{arg1}\xspace}
 \newcommand{\argtwo}{\textsc{arg2}\xspace}
 \newcommand{\argthree}{\textsc{arg3}\xspace}

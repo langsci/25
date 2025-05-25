@@ -8,10 +8,10 @@
 \newcommand\mathdash{\text{\normalfont -}}
 
 
-\newcommand{\todostefan}[1]{{\memoizeset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
-\newcommand{\todosatz}[1]{{\memoizeset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
+\newcommand{\todostefan}[1]{{\mmzset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
+\newcommand{\todosatz}[1]{{\mmzset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
 
-\newcommand{\inlinetodostefan}[1]{{\memoizeset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
+\newcommand{\inlinetodostefan}[1]{{\mmzset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
 
 
 
@@ -135,11 +135,11 @@ frbox/.style={
 }
 \newcommand\TZbox[1]{\tikz{\node[frbox,baseline] {#1};}}
 
-\renewcommand{\rm}{\upshape}
-\renewcommand{\mathrm}{\text}
-\renewcommand{\it}{\itshape}
-\renewcommand{\sc}{\scshape}
-\renewcommand{\bf}{\bfseries}
+\newcommand{\rm}{\upshape}
+%\newcommand{\mathrm}{\text}
+\newcommand{\it}{\itshape}
+\newcommand{\sc}{\scshape}
+\newcommand{\bf}{\bfseries}
 
 
 
@@ -228,10 +228,10 @@ frbox/.style={
 
 \newcommand{\featname}[1]{\mbox{\textsc{#1}}}    % feature name
 
-\newcommand{\argzero}{\featname{arg$_0$}\xspace}
-\renewcommand{\argone}{\featname{arg$_1$}\xspace}
-\renewcommand{\argtwo}{\featname{arg$_2$}\xspace}
-\renewcommand{\argthree}{\featname{arg$_3$}\xspace}
+% \newcommand{\argzero}{\featname{arg$_0$}\xspace}
+% \renewcommand{\argone}{\featname{arg$_1$}\xspace}
+% \renewcommand{\argtwo}{\featname{arg$_2$}\xspace}
+% \renewcommand{\argthree}{\featname{arg$_3$}\xspace}
 
 \newcommand{\templaten}[1]{\textsc{#1}}
 
@@ -296,32 +296,23 @@ frbox/.style={
 % You can also try more classical methods like \widowpenalty=10000 or \nopagebreak within the box.
 
 
-% Is tcolorbox used as backend?
-\ifbool{langsci@tbls@tcolorbox}{%
-\newcommand{\questions}[1]{{\memoizeset{disable}%
-\begin{tblsfilledsymbol}{Comprehension questions}{people}\setlist{leftmargin=*}#1\end{tblsfilledsymbol}}}
-\newcommand{\exercises}[1]{{\memoizeset{disable}%
-\begin{tblsfilledsymbol}{Exercises}{pencil}\setlist{leftmargin=*}#1\end{tblsfilledsymbol}}}
-\newcommand{\furtherreading}[1]{{\memoizeset{disable}%
-\begin{tblsfilledsymbol}{Further reading}{book}#1\end{tblsfilledsymbol}}}}{}
-
 % Is mdframed used as backend?
 \notbool{langsci@tbls@tcolorbox}{%
-\newcommand{\questions}[1]{~\newline\vspace*{-10mm}
-{\memoizeset{disable}%
+\newcommand{\questions}[1]{%~\newline\vspace*{-10mm}
+{\mmzset{disable}%
 \tblssy{people}{Comprehension questions}{\setlist{leftmargin=*}#1}}}
 %\tblssy{people}{Comprehension questions}{#1}}
 
-\newcommand{\exercises}[1]{{\memoizeset{disable}%
+\newcommand{\exercises}[1]{{\mmzset{disable}%
 \tblssy{pencil}{Exercises}{\setlist{leftmargin=*}#1}}}
 %\tblssy{pencil}{Exercises}{#1}}
 
 \newcommand{\furtherreading}[1]{%~\newline\vspace*{-10mm}
-{\memoizeset{disable}%
+{\mmzset{disable}%
 \tblssy{book}{Further reading}{#1}}}
 
 \newcommand{\greyboxrest}[1]{
-{\memoizeset{disable}%
+{\mmzset{disable}%
 \begin{mdframed}[style=greyexercisenologo]
 #1
 \end{mdframed}
@@ -333,6 +324,17 @@ frbox/.style={
 	innerleftmargin=5mm, innerrightmargin=5mm, innerbottommargin=5mm, innertopmargin=5mm,
 	frametitleaboveskip=15mm, frametitlebelowskip=5mm,frametitlerule=false, repeatframetitle=false
 }}{}
+
+% Is tcolorbox used as backend?
+\ifbool{langsci@tbls@tcolorbox}{%
+\newcommand{\questions}[1]{{\mmzset{disable}%
+\begin{tblsfilledsymbol}{Comprehension questions}{people}\setlist{leftmargin=*}#1\end{tblsfilledsymbol}}}
+\newcommand{\exercises}[1]{{\mmzset{disable}%
+\begin{tblsfilledsymbol}{Exercises}{pencil}\setlist{leftmargin=*}#1\end{tblsfilledsymbol}}}
+\newcommand{\furtherreading}[1]{{\mmzset{disable}%
+\begin{tblsfilledsymbol}{Further reading}{book}#1\end{tblsfilledsymbol}}}}{}
+
+
 
 
 \robustify\textsc

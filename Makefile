@@ -225,6 +225,7 @@ stmue-install:
 	cp -p ${STYLE-PATH}biblatex-series-number-checks.sty styles/
 	cp -p ${STYLE-PATH}Ling/article-ex.sty               styles/
 	cp -p ${STYLE-PATH}Ling/merkmalstruktur.sty          styles/
+	cp -p ${STYLE-PATH}Ling/my-ccg-ohne-colortbl.sty     styles/
 
 
 o-public: o-public-lehrbuch 

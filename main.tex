@@ -18,7 +18,8 @@
 %	        ,collection
 %	        ,collectionchapter
 %	        ,collectiontoclongg
- 	        ,biblatex  
+ 	        ,biblatex   
+                ,decapbib 
                 ,babelshorthands
 %                ,showindex
                 ,newtxmath
@@ -50,13 +51,14 @@
 \newcommand{\LATER}[1]{}
 
 % The final run has to be done without memoization.
+% Since memoization works now (2025-04), I will always use it.
 %
 % package has to be loaded before german.sty
-%\usepackage{memoize}
-\usepackage{nomemoize}
-\memoizeset{
-  memo filename prefix={grammatical-theory.memo.dir/},
-  enable=dependency,
+\usepackage{memoize}
+%\usepackage{nomemoize}
+\mmzset{
+  prefix={grammatical-theory.memo.dir/},
+%  enable=dependency,
 }
 
 
@@ -70,6 +72,8 @@
 \bibliography{bib-abbr,biblio-xdata-en,biblio}
 
 %\bibliography{gt}
+
+%\hypersetup{draft}
 
 \input grammatical-theory-include
 

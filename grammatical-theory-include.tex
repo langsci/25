@@ -12,19 +12,15 @@
 % \apptocmd\forest@pgfmathhelper@register@dimen{\global\pgfmathunitsdeclaredtrue}{\typeout{patching succeeded}}{patching failed}
 % \makeatother 
 
-
+\newtoggle{long-llms}\toggletrue{long-llms}
 
 
 \begin{document}
 
-\memoizeset{disable}
-\maketitle
-\frontmatter
-\memoizeset{enable}
-
-\tableofcontents
+\include{title-toc}
 
 \include{chapters/preface}
+%\include{chapters/acknowledgments}
 
 \mainmatter
 
@@ -61,13 +57,14 @@
 \include{chapters/phrasal}
 \include{chapters/potential-structure}
 \include{chapters/coregram}
+\include{chapters/llms}
 \include{chapters/conclusions}
 
 %\addcontentsline{toc}{part}{Appendix} 
 \appendix
 \include{chapters/loesungen}
 
-\memoizeset{disable}
+\mmzset{disable}
 
 \input{backmatter}
 

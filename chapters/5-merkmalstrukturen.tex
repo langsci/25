@@ -274,41 +274,22 @@ that the entries for monkey and mouse will each contain a pointer to mammal. The
 under mammal does therefore not have to be repeated for the subordinate concepts. In the same way,
 if one wishes to describe various electric appliances, one can use the hierarchy in Figure~\vref{fig-electric-appliance}.
 \begin{figure}[t]
-\centering
-%% \begin{forest}
-%% typehierarchy
-%% [\type{electric appliance}
-%%   [\type{printing device}
-%%     [\type{printer}
-%%       [\type{laser printer}]
-%%       [\ldots]]
-%%     [\subnode{copier}{\type{photocopier}}] ]
-%%   [\subnode{scanning}{\type{scanning device}}
-%%     [\type{scanner}
-%%       [\type{negative scanner}]
-%%       [\ldots] ] ]
-%%   [\ldots]]
-%% \draw (scanning.south)--(copier.north);
-%% \end{forest}
-\begin{tabular}{cccc}
-\multicolumn{4}{c}{\mynode{ed}{\type{electrical device}}}\\[6ex]
-\mynode{p}{\type{printing device}} & & \mynode{sc}{\type{scanning device}} & \mynode{other}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\[6ex]
-\mynode{printer}{\type{printer}}   & \mynode{copy}{\type{photocopier}}  & \mynode{scanner}{\type{scanner}}\\[6ex]
-\mynode{l-p}{\type{laser printer}}  & \mynode{other-p}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}  & \mynode{negscan}{\type{negative scanner}} & \mynode{other-sc}{\rule[-0.5ex]{0cm}{2.5ex}\ldots}\\
-\end{tabular}
-\begin{tikzpicture}[overlay,remember picture,shorten <=2pt,shorten >=2pt] 
-\draw(ed.south)--(p.north)
-     (ed.south)--(sc.north)
-     (ed.south)--(other.north)
-     (p.south)--(copy.north)
-     (p.south)--(printer.north)
-     (printer.south)--(l-p.north)
-     (printer.south)--(other-p.north)
-     (sc.south)--(copy.north)
-     (sc.south)--(scanner.north)
-     (scanner.south)--(negscan.north)
-     (scanner.south)--(other-sc.north);
-\end{tikzpicture}
+\centerline{%
+\begin{forest} 
+type hierarchy
+[elektrisches Gerät, calign=midpoint, calign children={1}{2},
+  [druckendes Gerät,calign=first
+    [Drucker,calign=first
+      [Laser-Drucker]
+      [\ldots]]
+    [Kopierer]]
+  [scannendes Gerät,calign=last
+    [,identify=!r12]
+    [Scanner,calign=first
+      [Negativ-Scanner]
+      [\ldots]]]
+  [\ldots]]
+\end{forest}}
 \caption{\label{fig-electric-appliance}Non"=linguistic example of multiple inheritance}
 \end{figure}%
 The most general type \type{electrical device} is the highest in Figure~\ref{fig-electric-appliance}. Electrical devices have certain properties, \eg 

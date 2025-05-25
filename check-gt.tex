@@ -21,6 +21,8 @@
 %                ,colorlinks, citecolor=brown % for drafts
 %                ,draftmode
 % 	        ,coverus
+                ,uniformtopskip
+                ,tblseight % to get the fonts for the Chinese title of GT
 		  ]{langscibook}                              
 
 
@@ -39,15 +41,32 @@
 
 \newcommand{\LATER}[1]{}
 
-%\bibliography{bib-abbr,biblio}
+\bibliography{bib-abbr,biblio-xdata-en,biblio}
 %\bibliography{check-gt}
 % we have to load from here since we have to include all references since we need "Müller 2004d" in
 % the text since it takes more space than "Müller 2004". So we have to include a \nocite{*} here.
-\bibliography{gt}
+%\bibliography{gt}
 
 \providecommand{\noopsort}[1]{} \providecommand*{\donothing}[1]{} \providecommand*{\printsecond}[2]{#2}
 
+% to fight a strange bug
+\makeatletter
+\newcounter{Hy@AnnotLevel}
+\makeatother
+
+%\usepackage{calc}
+
 %\includeonly{chapters/preface,chapters/1-begriffe,chapters/2-psg,chapters/3-gb,3-minimalism,chapters/4-gpsg,chapters/5-merkmalstrukturen,chapters/6-lfg,chapters/7-cg,chapters/8-hpsg,chapters/9-cxg,chapters/dg,chapters/tag}
+
+%\includeonly{chapters/preface,chapters/1-begriffe,chapters/2-psg,chapters/3-gb,3-minimalism}
+
+%\includeonly{chapters/4-gpsg,chapters/5-merkmalstrukturen,chapters/6-lfg,chapters/7-cg,chapters/8-hpsg,chapters/9-cxg,chapters/dg,chapters/tag}
+
+%\includeonly{chapters/4-gpsg,chapters/5-merkmalstrukturen,chapters/6-lfg,chapters/7-cg}
+%\includeonly{chapters/8-hpsg,chapters/9-cxg}
+%\includeonly{chapters/dg,
+%\includeonly{chapters/tag}
+
 
 %\includeonly{chapters/innateness,chapters/mts,chapters/competence,chapters/acquisition,chapters/complexity,chapters/branching-locality-recursion,chapters/empty,chapters/movement,chapters/phrasal,chapters/potential-structure,
 %chapters/coregram,chapters/conclusions,chapters/nothing,chapters/loesungen,backmatter}
@@ -66,11 +85,12 @@
 %\includeonly{chapters/6-lfg}
 %\includeonly{chapters/6-lfg,chapters/loesungen}
 %\includeonly{chapters/7-cg}
-%\includeonly{chapters/8-hpsg} % Inhalt?
+%\includeonly{chapters/8-hpsg}
 %\includeonly{chapters/none}
-%\includeonly{chapters/9-cxg}  % fertig
-%\includeonly{chapters/dg}
-%\includeonly{chapters/tag}    % fast fertig, aber der eine V-TAG-Baum und danach ...
+%\includeonly{chapters/9-cxg}
+% Problem with memo
+\includeonly{chapters/dg}
+%\includeonly{chapters/tag}  
 %\includeonly{chapters/preface-part-two}
 %\includeonly{chapters/innateness}
 %\includeonly{chapters/mts}
@@ -80,9 +100,11 @@
 %\includeonly{chapters/branching-locality-recursion}
 %\includeonly{chapters/empty}
 %\includeonly{chapters/movement}
-\includeonly{chapters/phrasal}
+% memo todo Haugereid figure
+%\includeonly{chapters/phrasal}
 %\includeonly{chapters/potential-structure}
 %\includeonly{chapters/coregram}
+%\includeonly{chapters/llms}
 %\includeonly{chapters/conclusions}
 %\includeonly{chapters/nothing}
 
@@ -93,25 +115,27 @@
 % package has to be loaded before german.sty
 \usepackage{memoize}
 %\usepackage{nomemoize}
-\memoizeset{
-  memo filename prefix={grammatical-theory.memo.dir/},
-  enable=dependency,
+\mmzset{
+  prefix={grammatical-theory.memo.dir/},
+%  enable=dependency,
 }
 
-
-\input{localmetadata.tex}
 \input{localpackages.tex}
+\input{localmetadata.tex}
 \input{localcommands.tex}
 \input{locallangscifixes.tex}
 
-%\memoizeset{readonly}
+%\renewcommand{\addlines}[1][1]{}
+
+
+%\mmzset{readonly}
 
 \input grammatical-theory-include
 
 % Hack to get all items cited in the files not included in this run.
 % only use this if you have gt.bib
 % explanation above, we need this since we want to have all occurrances of Müller 2004a,b,c
-\nocite{*}
+%\nocite{*}
 
 \end{document}
 

@@ -69,11 +69,11 @@
 % new version from here: https://tex.stackexchange.com/a/470505/18561
 \newcommand{\deriv}[2]
 {%% %\arraycolsep=.25em
-   \renewcommand{\arraystretch}{.5}%%
+  \renewcommand{\arraystretch}{.5}%%
   \ensuremath{\begin{array}[t]{@{}*{#1}{c}@{}}
      #2
    \end{array}}%%
- }
+}
 % newly defined from here: https://tex.stackexchange.com/a/470505/18561
 \def\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern0pt }
 
@@ -132,8 +132,8 @@
 { \cgmc{#1}{\hrulefilll_{{<}\mathbf{T}}}}
 \newcommand{\ccgconj}[1]
 { \cgmc{#1}{\hrulefilll_{{<}\Phi{>}}}}
-\newcommand{\boundary}[1]
-{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{\%}}}}
+%\newcommand{\boundary}[1]
+%{ \cgmc{#1}{\hrulefilll_{{<}\mathbf{\%}}}}
 \newcommand{\asterisk}[1]
 { \cgmc{#1}{\hrulefilll_{\mathbf{*}}}}
 \newcommand{\comb}[2] % an arbitrary combinator

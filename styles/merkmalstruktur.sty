@@ -28,8 +28,10 @@
   \fbox{$\scriptstyle #1$}%
 }}
 
-
-\newcommand{\ibox}[1]{%
+% added an extra \mbox for 
+% \comp \ibox{1}
+% to work with the standard xspace. St. Mü. 03.05.2025
+\newcommand{\ibox}[1]{\mbox{}%
 %  \iboxt{#1}\,%       why this extra space???? 20.02.2018
 \iboxt{#1}%
 }
@@ -43,8 +45,14 @@
 
 \newcommand{\sliste}[1]{%
 \mbox{%
-$\left\langle\mbox{\upshape\scshape #1}\right\rangle$}%
+$\langle$\mbox{\upshape\scshape #1}$\rangle$}%
 }
+% \newcommand{\sliste}[1]{%
+% \mbox{%
+% $\left\langle\mbox{\upshape\scshape #1}\right\rangle$}%
+% }
+
+
 
 \newcommand{\spirit}[1]{%
 {\renewcommand{\arraystretch}{0}%
@@ -54,9 +62,17 @@ $\left\langle\mbox{\upshape\scshape #1}\right\rangle$}%
 \end{tabular}}}
 
 
+%\newcommand{\nliste}[1]{%
+%\mbox{$\left\langle\right.$\upshape\normalfont#1$\left.\right\rangle$}%
+%}
 \newcommand{\nliste}[1]{%
-\mbox{$\left\langle\mbox{\upshape\normalfont#1}\right\rangle$}%
+\mbox{$\langle$\upshape\normalfont#1$\rangle$}%
 }
+
+
+
+\newcommand{\textmrs}[1]{%
+\textlangle #1 \textrangle}
 
 \let\semliste=\nliste
 
@@ -77,24 +93,48 @@ $%
 }%
 }
 
+
+
+% I do not remember, why there was a tabular environment. Seems to be overkill. 14.03.2025
 \newcommand{\liste}[1]{%
 \mbox{%
 $%
-\left\langle\begin{tabular}{@{}>{\upshape\scshape}l@{}}#1\end{tabular}\right\rangle%
+\left\langle\mbox{\upshape\normalfont#1}\right\rangle%
+$%
+}%\\[2pt]%
+}
+
+% Some lists have a newline after an element. 24.05.2025 (09-cxg.tex in Grammatical theory)
+\newcommand{\tabularliste}[1]{%
+\mbox{%
+$%
+\left\langle\begin{tabular}{@{}>{\upshape}l@{}}#1\end{tabular}\right\rangle%
 $%
 %\\[-1.5mm]
 }%
 }
 
+% \newcommand{\tabularliste}[1]{%
+% \mbox{%
+% $%
+% \left\langle\begin{tabular}{@{}>{\upshape\scshape}l@{}}#1\end{tabular}\right\rangle%
+% $%
+% %\\[-1.5mm]
+% }%
+% }
+
+
+
 \newcommand{\phonliste}[1]{%
-\mbox{%
-$%
-%
-\left\langle \mbox{\normalfont\itshape#1} \right\rangle%
-$%
-%\\[-1.5mm]
-}%
+\mbox{$\langle$\normalfont\itshape#1$\rangle$}%
 }
+
+% \newcommand{\phonliste}[1]{%
+% \mbox{%
+% \normalfont\textlangle \textit{#1}\textrangle}%
+% }
+
+
 
 %\let\phonlist\phonliste
 
@@ -194,7 +234,10 @@ $%
 \let\tbox=\iboxt
 
 
-\newcommand{\type}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
+%\newcommand{\type}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
+% not related to the question but \mathnormal{\mathit{#1}} is the same as \mathit{#1} as math font commands don't combine. – 
+% David Carlisle
+\newcommand{\type}[1]{\ifmmode\mathit{#1}\else\textnormal{\textit{#1}}\fi}
 
 \newcommand{\typeSM}[1]{\ifmmode\mathnormal{\mathit{#1}}\else\textnormal{\textit{#1}}\fi}
 
