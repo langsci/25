@@ -1,6 +1,28 @@
 %% -*- coding:utf-8 -*-
 
-\begin{abstract}
+
+\iftoggle{long-llms}{%
+\chapter{The end of theoretical linguistics? Did I read all this in vain?}
+\label{chapter-LLMs}
+
+\label{page-llms}You read \pageref{page-llms} pages about linguistic theories and may ask yourself:
+``Well, we have these great Large Language Models that can do impressive things without making use
+of any of the theories laid out in this book, so do we still need linguistic theories? Aren't the
+language models better theories of human language? Are all linguistic problems solved? What is the
+status of theoretical linguistics, what about its future?'' This issue is also discussed among
+theoretical linguists and surprisingly some claim, that Large Language Models (LLMs) are the best
+linguistic theory we have or that LLMs are good theories of
+acquisition and mental representations \citep{AmbridgeBlything2024a}. The book you just read contains enough information to be
+able to enter this discussion. This chapter will explain why LLMs differ fundamentally from the
+theories discussed in this book. LLMs are not theories (Section~\ref{sec-Are-LLMs-linghuistic-theories}). Theories about general aspects of the human
+brain may have played a role in the development of LLMs, but linguistic theories did not.
+
+The chapter also discusses \citegen{Piantadosi2024a} claim that LLMs refute Chomskyan approaches to linguistics. I show in
+Section~\ref{sec-LLMs-and-language-acquisition} that this is not the case yet, but that Chomskyan approaches have been refuted earlier
+as is discussed in many places of this book. The reason why they could be refuted is that they were
+linguistic theories, semi-formalized but specific enough to be falsified.
+
+}{\begin{abstract}
 This paper discusses \citeauthor{AmbridgeBlything2024a}'s claim \citeyearpar{AmbridgeBlything2024a}
 that Large Language Models are the best linguistic theory we currently have. It discusses claims
 that LLMs are wrong linguistic theories and concludes that they are not linguistic theories at
@@ -14,8 +36,11 @@ makes it more plausible to linguists and laymen that the innateness claims are w
 It is argued that the use of LLMs is probably limited when it comes to typological work and
 cross-linguistic generalizations. These require work in theoretical linguistics.
 \end{abstract}
+}
 
 \section{Are Large Language Models linguistic theories?}
+\label{sec-Are-LLMs-linghuistic-theories}
+
 
 In a recent paper in a special issue of Theoretical Linguistics containing ``Reflections on
 Theoretical Linguistics'' on the occasion of the 50th anniversary of the journal,
@@ -117,7 +142,7 @@ categories like Nationality are part of our genetic endowment). Derivation by Ph
 entirely implausible as architectures for human language \citep[Section~3.6]{BM2021a}, since they
 are incompatible with incremental parallel processing of linguistic information at all descriptive
 levels 
-\iftoggle{long}{\citep{Marslen-Wilson75a,TSKES96a,Labelle2007a}.}{%
+\iftoggle{long-llms}{\citep{Marslen-Wilson75a,TSKES96a,Labelle2007a}.}{%
 \citep{Marslen-Wilson75a,TSKES96a}.}
 If the argumentation by
 \citename{FoxKatzir2024a} was valid, it would follow that all approaches in 
@@ -216,6 +241,7 @@ cognitive abilities than we did before.
 %\section{Large Language Models, human first language acquisition and ``Chomsky's approach to language''}
 
 \section{LLMs and language acquisition}
+\label{sec-LLMs-and-language-acquisition}
 
 Maybe the last sentence in the previous section needs a bit of qualification. \citet{Piantadosi2024a} claims that Chomsky's
 approach to language has failed, that it was proven wrong by Large Language Models. As
@@ -226,7 +252,7 @@ training data, we would have to simulate the development of brains and the growt
 capacities in early childhood.\footnote{
   Children regularize more than adults \citep{HudsonN99a,HKN2005a}, a fact that can be traced back to their
   limited brain capacity (``less is more''-hypothesis, 
-\iftoggle{long}{\citealp{Newport90a,Elman93a}}{\citealp{Newport90a}). 
+\iftoggle{long-llms}{\citealp{Newport90a,Elman93a}}{\citealp{Newport90a}). 
 }} But what the success of LLMs suggests is that an elaborated component of Universal
 Grammar is not needed, that the argument of the Poverty of the Stimulus was flawed and so on. Above
 I wrote that ``we know no more about our cognitive abilities than we did before''. And this is
@@ -245,24 +271,24 @@ empirical facts like incremental processing, how can they tell us anything about
 inateness? The Principle \& Parameter model of language acquisition \citet[\page 6]{Chomsky81a}
 failed in various respects. It was assumed that one parameter was related to many properties of a
 language and worked like a switch 
-\iftoggle{long}{\parencites{Rizzi86a}[\page 8]{Chomsky2000a-u},}{
+\iftoggle{long-llms}{\parencites{Rizzi86a}[\page 8]{Chomsky2000a-u},}{
 \parencites[\page 8]{Chomsky2000a-u},}
  but none of the suggested correlations held 
 up 
-\iftoggle{long}{%
+\iftoggle{long-llms}{%
 \parencites{Haider94c-u}[Section~2.2]{Haider2001a}[Section~16.1]{MuellerGT-Eng5}.}{%
 (\citealt[Section~2.2]{Haider2001a}; see \citealt[Section~16.1]{MuellerGT-Eng5} for an overview).}
 The way
 parameterization was conceptualized was biologically implausible. For example, it was assumed that
 Subjacency was a universal principle and the parameterization concerned the part of speech of
 certain bounding nodes within nonlocal dependencies 
-\iftoggle{long}{\parencites[\page 271]{Chomsky73a}[\page 40]{Chomsky86b}{Baltin81a,Baltin2006a}.}{
+\iftoggle{long-llms}{\parencites[\page 271]{Chomsky73a}[\page 40]{Chomsky86b}{Baltin81a,Baltin2006a}.}{
 \parencites[\page 40]{Chomsky86b}{Baltin81a}.}
-First, it could be shown that subjacency does not hold in
+First, it could be shown that Subjacency does not hold in
 Dutch, German and English \parencites[\page 52]{Koster78b-u}[\page
 211]{Mueller99a}{Mueller2004d}[Section~3]{Mueller2007c}{SS2013b-u} and second, it is biologically
 absolutely implausible that part of speech information is encoded in our genes
-\iftoggle{long}{\parencites{Bishop2002a}[Section~6.4.2.2]{Dabrowska2004a}{FM2005a}.}{%
+\iftoggle{long-llms}{\parencites{Bishop2002a}[Section~6.4.2.2]{Dabrowska2004a}{FM2005a}.}{%
 \parencites{Bishop2002a}[Section~6.4.2.2]{FM2005a}.}
 This was realized by
 \citet*{HCF2002a}. What remained as property that was assumed to be part of Universal Grammar was
@@ -298,7 +324,7 @@ approach is assumed in the CoreGram project \citep{MuellerCoreGram}.
 Chomsky claimed that there would be language universals but there are no plausible candidates for
 syntactic universals left (\citealt{EL2009a}; see \citealt[Section~13.1]{MuellerGT-Eng5} for an overview). There are tendencies, for sure, but this is not sufficient for positing
 innate knowledge of language. 
-\iftoggle{long}{Recently, I discovered a universal, but it is not syntactic but rather
+\iftoggle{long-llms}{Recently, I discovered a universal, but it is not syntactic but rather
 on the text level: the Festschrift Universal. The reader is referred to \citew{MuellerFestschrift}
 for details.}
 
@@ -315,19 +341,19 @@ find the auxiliary inversion claim again two years later in the same journal tha
 Similarly pattern-based modeling language acquisition research was much more successful in explaining
 cross-linguistic differences in acquisition than alternative accounts couched in Chomskyan
 frameworks 
-\iftoggle{long}{\citep{FPG2006a,FPAG2007a,FPG2009a}.}%
+\iftoggle{long-llms}{\citep{FPG2006a,FPAG2007a,FPG2009a}.}%
 {\citep{FPAG2007a}.} 
 
 
 Connected to the assumption of Universal Grammar is the assumption of a core/""periphery
 distinction 
-\iftoggle{long}{%
+\iftoggle{long-llms}{%
 \parencites[\page 7--8]{Chomsky81a}[\page 150--151]{Chomsky86a}[\page 343]{Fodor98a}}{%
 \parencites[\page 7--8]{Chomsky81a}}. The idea is that there is a core of linguistic knowledge that is determined by our
 genetic endowment and there is a periphery (e.\,g. idioms) that is learned in another way. There is an interesting and very
 simple argument against this stance and it goes like this: If we can learn the idiosyncratic parts of a language that is
 assigned to the periphery, we should be able to learn the more regular parts of the assumed core
-\iftoggle{long}{%
+\iftoggle{long-llms}{%
 \parencites[\page 20]{Abney96a}[\page 222]{Goldberg2003b}[\page 14]{Goldberg2006a}[\page 100]{Newmeyer2005a}[\page 36]{Tomasello2006a}[\page
 20]{Tomasello2006c}{MuellerKernigkeit}.}{%
 \parencites[\page 20]{Abney96a}[\page 14]{Goldberg2006a}[\page 100]{Newmeyer2005a}[\page
@@ -378,7 +404,7 @@ is true for LLMs and any other outcome of a distributional analysis unless seman
 explicitly encoded in the input and linked to real world experiences.
   LLMs do contain semantic knowledge. \citet[358]{Piantadosi2024a} points out that it is
   interwoven with syntactic information. However, the important point when it comes to human cognition is
-  that the semantic knowledge in LLMs is not grounded. \citet[2]{JonesBergenTrott2024a} discuss
+  that the semantic knowledge in LLMs is not grounded. \citet[1417]{JonesBergenTrott2024a} discuss
   sentence-picture verification tasks. For example, hearers can infer from the sentences ``He
   hammered the nail into the wall.'' and ``He hammered the nail into the floor.'' that the nail is
   horizontal in the situation described by the first sentence and vertical in the second. This
@@ -398,7 +424,7 @@ told everybody in the field that human cognition is grounded
 \citep{Barsalou2008a} and that language is not just abstract
 % Tomasello2003: Fillmore77, Fillmore77b, Langacker
 syntax and cannot be learned as such without a connection to semantics and the real world
-\parencites[44]{Klein86a-u}[113]{Tomasello2003a}[Section~4.2.3, 4.2.8]{AL2011a-u}? With grasping the communicative
+\parencites[44]{Klein86a-u}[113]{Tomasello2003a}[Section~4.2.3, 4.2.8]{AL2011a-u}? Without grasping the communicative
 intention and attention sharing? Already in 1986, Klein pointed out that no human being could learn
 Chinese by sitting in a room continually exposed to Chinese from loudspeakers.\footnote{%
 Klein speculated that at most phonological regularities can be learned and \citet{NHSA2004a} showed
@@ -441,7 +467,11 @@ process of LLMs is quite different from how human brains develop and how humans 
 language. However, LLMs show that the data is rich and make it even more plausible that humans are
 not born with innate domain specific knowledge about language.
 
-\section*{Acknowledgements}
+\iftoggle{long-llms}{%
+\furtherreading{
+This chapter was published as \citew{MuellerLLMs}.
+}
+}{\section*{Acknowledgements}
 
 I thank Rui Chaves, Mark Felfe, Hubert Haider, Joachim Jacobs, Tibor Kiss, Alexander Koller, Roland
 Schäfer, Oliver Schallert and Remi van Trijp, Giuseppe
@@ -450,7 +480,7 @@ discussion and Tine Mooshammer for raising questions about \citew{AmbridgeBlythi
 
 Oliver Schallert suggested adding more discussion of \citeauthor{Piantadosi2024a}'s paper. Thanks
 for this, I think it really improved the paper.
-
+}
 
 
 %      <!-- Local IspellDict: en_US -->
