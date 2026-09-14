@@ -2081,60 +2081,54 @@ He proposes the inheritance hierarchy in Figure~\ref{Abbildung-Haugereid} in ord
 possible argument combinations. The Arg5 role is omitted due to space considerations.
 
 \begin{figure}
-\oneline{%
-\begin{tabular}{@{}cccccccc@{}}
-\multicolumn{8}{c}{\mynode{link}{link}}\\[6ex]
-\mynode{arg1p}{arg1$+$} & \mynode{arg4p}{arg4$+$} & \mynode{arg2p}{arg2$+$} & \mynode{arg3p}{arg3$+$} & \mynode{arg3m}{arg3$-$} & \mynode{arg4m}{arg4$-$} & \mynode{arg1m}{arg1$-$} & \mynode{arg2m}{arg2$-$}\\[8ex]
-\mynode{arg12123124}{arg12-123-124} & \mynode{arg12124224}{arg12-124-2-24} & \mynode{arg112}{arg1-12} & \mynode{arg1223}{arg12-23} & \mynode{arg02}{arg0-2}\\[8ex]
-\mynode{arg124}{arg124} & \mynode{arg123}{arg123} & \mynode{arg12}{arg12} & \mynode{arg24}{arg24} & \mynode{arg1}{arg1} & \mynode{arg2}{arg2} & \mynode{arg23}{arg23} & \mynode{arg0}{arg0}\\
-\end{tabular}
-% todo put south and north into a style
-\begin{tikzpicture}[overlay,remember picture,shorten <=2pt,shorten >=2pt] 
-\draw (link.south)--(arg1p.north)
-(link.south)--(arg4p.north)
-(link.south)--(arg2p.north)
-(link.south)--(arg3p.north)
-(link.south)--(arg3m.north)
-(link.south)--(arg4m.north)
-(link.south)--(arg1m.north)
-(link.south)--(arg2m.north)
-(arg1p.south)--(arg12123124.north)
-(arg1p.south)--(arg112.north)
-(arg4p.south)--(arg124.north)
-(arg4p.south)--(arg24.north)
-(arg2p.south)--(arg12123124.north)
-(arg2p.south)--(arg12124224.north)
-(arg2p.south)--(arg1223.north)
-(arg3p.south)--(arg123.north)
-(arg3p.south)--(arg23.north)
-(arg3m.south)--(arg12124224.north)
-(arg3m.south)--(arg112.north)
-(arg3m.south)--(arg24.north)
-(arg3m.south)--(arg02.north)
-(arg4m.south)--(arg112.north)
-(arg4m.south)--(arg1223.north)
-(arg4m.south)--(arg02.north)
-(arg1m.south)--(arg24.north)
-(arg1m.south)--(arg02.north)
-(arg1m.south)--(arg23.north)
-(arg2m.south)--(arg1.north)
-(arg2m.south)--(arg0.north)
-(arg12123124.south)--(arg124.north)
-(arg12123124.south)--(arg123.north)
-(arg12123124.south)--(arg12.north)
-(arg12124224.south)--(arg124.north)
-(arg12124224.south)--(arg12.north)
-(arg12124224.south)--(arg24.north)
-(arg12124224.south)--(arg2.north)
-(arg112.south)--(arg1.north)
-(arg112.south)--(arg12.north)
-(arg1223.south)--(arg12.north)
-(arg1223.south)--(arg23.north)
-(arg02.south)--(arg0.north)
-(arg02.south)--(arg2.north);
-\end{tikzpicture}
-
-}
+\begin{forest}
+type hierarchy, auto name, for tree={l sep+=1.5\baselineskip}
+[link
+  [arg1$+$ [arg12-123-124          [arg124]]]
+  [arg4$+$ [arg12-124-2-24,no edge [arg123, no edge]]]
+  [arg2$+$ [arg1-12,no edge,xshift=4ex [arg12]]]
+  [arg3$+$                         [arg24,no edge, tier=word]]
+  [arg3$-$ [arg12-23,no edge       [arg1, no edge]]]
+  [arg4$-$ [arg0-2                 [arg2, tier=word]]]
+  [arg1$-$                         [arg23,tier=word]]
+  [arg2$-$                         [arg0, tier=word]]
+]
+\draw[from south line to north]
+ (arg1$+$) to (arg1-12) 
+ (arg4$+$) to (arg124) 
+ (arg4$+$) to (arg24) 
+ (arg2$+$) to (arg12-123-124)
+ (arg2$+$) to (arg12-124-2-24)
+ (arg2$+$) to (arg12-23)
+ (arg3$+$) to (arg123)
+ (arg3$+$) to (arg23)
+ (arg3$-$) to (arg12-124-2-24)
+ (arg3$-$) to (arg1-12)
+ (arg3$-$) to (arg24)
+ (arg3$-$) to (arg0-2)
+ (arg4$-$) to (arg1-12)
+ (arg4$-$) to (arg12-23)
+%(arg4$-$) to (arg02)
+ (arg1$-$) to (arg24)
+ (arg1$-$) to (arg0-2)
+%(arg1$-$) to (arg23)
+ (arg2$-$) to (arg1)
+ (arg2$-$) to (arg0)
+ (arg12-123-124) to (arg124)
+ (arg12-123-124) to (arg123)
+ (arg12-123-124) to (arg12)
+ (arg12-124-2-24) to (arg124)
+ (arg12-124-2-24) to (arg12)
+ (arg12-124-2-24) to (arg24)
+ (arg12-124-2-24) to (arg2)
+ (arg1-12) to (arg1)
+%(arg1-12) to (arg12)
+ (arg12-23) to (arg12)
+ (arg12-23) to (arg23)
+ (arg0-2) to (arg0)
+ (arg0-2) to (arg2);
+\end{forest}
+%}
 \caption{\label{Abbildung-Haugereid}Hierarchy of argument frames following \citet{Haugereid2007a}}
 \end{figure}%
 Haugereid assumes binary"=branching\is{branching!binary} structures where arguments can be combined with a head in any order.
@@ -2666,11 +2660,11 @@ positions. Figure~\ref{fig-jackendoff-linking-active} shows an example for an ac
 %\scalebox{.7}
 {%
 \begin{tabular}{ccccc}
-DESIRE(&{~\mynode{b}{BILL$_2$}}, && & ~{\mynode{sw}{[SANDWICH; DEF]$_3$}})\\
+DESIRE(&{~\tikzmarknode{b}{BILL$_2$}}, && & ~{\tikzmarknode{sw}{[SANDWICH; DEF]$_3$}})\\
 \\[1ex]
-       &{\mynode{gf2}{GF$_2$}}    && & {\mynode{gf3}{GF$_3$}}~\\
+       &{\tikzmarknode{gf2}{GF$_2$}}    && & {\tikzmarknode{gf3}{GF$_3$}}~\\
 \\[1ex]
-~~~~~~~~~\hfill{}[\sub{S} & {\mynode{np2}{NP$_2$}}  & [\sub{VP} & V$_1$ & ~~{\mynode{np3}{NP$_3$}}]] \\
+~~~~~~~~~\hfill{}[\sub{S} & {\tikzmarknode{np2}{NP$_2$}}  & [\sub{VP} & V$_1$ & ~~{\tikzmarknode{np3}{NP$_3$}}]] \\
 \\
               & Bill           &  & desires & the sandwich.\\
 \end{tabular}
@@ -2721,11 +2715,11 @@ corresponds to the passive.
 %\scalebox{.7}
 {%
 \begin{tabular}{ccccc}
-DESIRE(&~{\mynode{b}{BILL$_2$},} & & & ~{}{\mynode{sw}{[SANDWICH; DEF]$_3$}})\\
+DESIRE(&~{\tikzmarknode{b}{BILL$_2$},} & & & ~{}{\tikzmarknode{sw}{[SANDWICH; DEF]$_3$}})\\
 \\[1ex]
-       &{\mynode{gf2}{GF$_2$}}    &&  & {\mynode{gf3}{GF$_3$}}\\
+       &{\tikzmarknode{gf2}{GF$_2$}}    &&  & {\tikzmarknode{gf3}{GF$_3$}}\\
 \\[1ex]
-~~~~~~~~~\hfill{}[\sub{S} & {\mynode{np3}{NP$_3$}}  & [\sub{VP} & V$_1$  & by {\mynode{np2}{NP$_2$}}]] \\
+~~~~~~~~~\hfill{}[\sub{S} & {\tikzmarknode{np3}{NP$_3$}}  & [\sub{VP} & V$_1$  & by {\tikzmarknode{np2}{NP$_2$}}]] \\
 \\
               & the sandwich             & & is desired & by Bill.\\
 \end{tabular}
@@ -4220,8 +4214,7 @@ lex-dtr  \onems{
                                    rels & \liste{ \ms[directive]{
                                                   event       & \ibox{2}\\
                                                   patient    & \ibox{1}\\
-                                                  }\\
-                                                 }\\
+                                                  } }\\
                                       }\\
                           }\\
 }\\
@@ -4280,8 +4273,7 @@ lex-dtr  \onems{
                                    rels & \ibox{4} \liste{ \ms[directive]{
                                                   event       & \ibox{2}\\
                                                   patient    & \ibox{1}\\
-                                                  }\\
-                                                 }\\
+                                                  } }\\
                                       }\\
                           }\\
 }\\
