@@ -1,3 +1,18 @@
+%https://github.com/latex3/latex2e/issues/1551#issuecomment-3789700211
+% to avoid crashes due to interaction between biblatex/hyperref and enlargethispage
+% with lualatex
+% St. Mü. 11.09.2026
+\RequirePackage{pdfmanagement}
+\makeatletter
+\AddToHook{cmd/@make@specialcolbox/before}{%
+ \@ifundefined{pdflinkadjustlevel}{}
+  {\setbox\@outputbox \vbox {%
+    \boxmaxdepth \@maxdepth
+    \pdflinkadjustlevel -1\relax%
+    \unvbox \@outputbox
+  }}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
 %%      File: langscibook.cls
 %%    Author: Language Science Press (http://langsci-press.org)
