@@ -11,7 +11,11 @@
 \newcommand{\todostefan}[1]{{\mmzset{disable}\todo[color=orange!80]{\footnotesize #1}}\xspace}
 \newcommand{\todosatz}[1]{{\mmzset{disable}\todo[color=red!40]{\footnotesize #1}}\xspace}
 
+\newcommand{\inlinetodoopt}[1]{\todo[color=green!40,inline]{\footnotesize #1}\xspace}
+\newcommand{\inlinetodoobl}[1]{\todo[color=red!40,inline]{\footnotesize #1}\xspace}
+
 \newcommand{\inlinetodostefan}[1]{{\mmzset{disable}\todo[color=green!40,inline]{\footnotesize #1}}\xspace}
+\newcommand{\itdopt}[1]{\iftoggle{draft}{\inlinetodoopt{#1}}{}}
 
 
 
@@ -87,22 +91,24 @@
 %\def\glt{\oldglt\justify}
 %\def\glt{\nopagebreak\vskip.17\baselineskip\transfont\parindent0ex}
 
-\makeatletter
-\def\ea{\ifnum\@xnumdepth=0\begin{exe}\else\begin{xlist}[iv.]\fi\ex}
-\def\eal{\begin{exe}\exnrfont\ex\begin{xlist}[iv.]}
+% why was this defined here? St. Mü. 08.09.2026
+% it breaks linebreaks
+% \makeatletter
+% \def\ea{\ifnum\@xnumdepth=0\begin{exe}\else\begin{xlist}[iv.]\fi\ex}
+% \def\eal{\begin{exe}\exnrfont\ex\begin{xlist}[iv.]}
 
-\def\gll%                  % Introduces 2-line text-and-gloss.
-    {
-%\raggedright%
-        \bgroup
-     \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
-	 \def\baselinestretch{1}\@selfnt\fi
-%        \vskip\baselineskip\def\baselinestretch{1}%
-%        \@selfnt\vskip-\baselineskip\fi%
-    \bgroup
-    \twosent
-   }
-\makeatother
+% \def\gll%                  % Introduces 2-line text-and-gloss.
+%     {
+% %\raggedright%
+%         \bgroup
+%      \ifx\@gsingle1%           conditionally force single spacing (hpk/MC)
+% 	 \def\baselinestretch{1}\@selfnt\fi
+% %        \vskip\baselineskip\def\baselinestretch{1}%
+% %        \@selfnt\vskip-\baselineskip\fi%
+%     \bgroup
+%     \twosent
+%    }
+% \makeatother
 
 
 % to set the MRSes for scope underspecification
@@ -378,3 +384,4 @@ frbox/.style={
 
 % Felix 09.06.2020: copy code from the third line into localcommands.tex: https://github.com/langsci/langscibook#defined-environments-commands-etc
 \patchcmd{\mkbibindexname}{\ifdefvoid{#3}{}{\MakeCapital{#3} }}{\ifdefvoid{#3}{}{#3 }}{}{\AtEndDocument{\typeout{mkbibindexname could not be patched.}}}
+
