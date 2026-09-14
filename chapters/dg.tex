@@ -313,6 +313,8 @@ from this it is equivalent to the representation in Figure~\ref{fig-the-child-re
 arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links are indicated by the direction of the arrows.
 \begin{figure}
 %http://en.wikibooks.org/wiki/LaTeX/Linguistics#Syntactic_trees
+{
+ \mmzset{disable} 
 \centerline{%
 \begin{dependency}[theme = simple]
    \begin{deptext}[column sep=1em]
@@ -324,6 +326,7 @@ arrow in Figure~\ref{fig-the-child-reads-the-book-dg-sentence}. Downward links a
    \depedge{3}{5}{OBJ}
    \depedge{5}{4}{DET}
 \end{dependency}
+}
 }
 \caption{\label{fig-the-child-reads-the-book-dg-sentence}Alternative presentation of the analysis of \emph{The child reads a book.}}
 \end{figure}%
@@ -362,7 +365,7 @@ Figure~\ref{fig-the-child-reads-the-book-dg}, and word order can be added to Fig
 
 The above figures depict the dependency relation that holds between a head and the respective
 dependents. This can be written down more formally as an $n$-ary rule\label{page-rule-format-dg} that is similar to phrase
-structure rules that were discussed in Chapter~\ref{Kapitel-PSG} (\citealp[\page 305]{Gaifman65a}; \citealp[\page 513]{Hays64a-u}; \citealp[\page 61]{Baumgaertner70a}; \citealp[Section~4.1]{Heringer96a-u}). For instance Baumgärtner suggests the
+structure rules that were discussed in Chapter~\ref{Kapitel-PSG} \parencites[\page 305]{Gaifman65a}[\page 513]{Hays64a-u}[\page 61]{Baumgaertner70a}[Section~4.1]{Heringer96a-u}. For instance Baumgärtner suggests the
 general rule format in (\mex{1}):
 \ea
 $\chi \to \varphi_1 \ldots \varphi_i * \varphi_{i+2} \ldots \varphi_n, where~0 < i \leq n$
@@ -446,6 +449,7 @@ The child often reads the book slowly.
     the book slowly.}}
 \end{figure}%
 The dependency annotation uses a technical device suggested by \citet{Engel77} to depict
+% Melchuck 2003: 193
 different dependency relations: adjuncts are marked with an additional line upwards from the adjunct
 node (see also \citealp{Eroms2000a}). An alternative way to specify the argument/adjunct, or rather the actant/circumstant distinction, is of course an explicit
 specification of the status as argument or adjunct. So one can use explicit labels for adjuncts and
@@ -903,16 +907,17 @@ dg edges
 \caption{\label{fig-wen-glaubst-du-dass-dg}Non-projective analysis of \emph{Wen glaubst du, dass ich gesehen habe?}
   `Who do you think I saw?'}
 \end{figure}%%
+\largerpage
 This graph differs from most graphs we have seen before in not being projective\is{projectivity}. This means that
 there are crossing lines: the connection between V\sub{prt} and the N for \emph{wen} `who' crosses
 the lines connecting \emph{glaubst} `believe' and \emph{du} `you' with their category symbols. Depending on
 the version of Dependency Grammar assumed, this is seen as a problem or it is not. Let us
 explore the two options: if discontinuity of the type shown in
 Figure~\ref{fig-wen-glaubst-du-dass-dg} is allowed for as in Heringer's and Eroms' grammars
-(\citealp[\page 261]{Heringer96a-u}; \citealp[Section~9.6.2]{Eroms2000a}),\footnote{%
+\parencites[\page 261]{Heringer96a-u}[Section~9.6.2]{Eroms2000a},\footnote{%
   However, the authors mention the possibility of raising an extracted element to a higher node. See
   for instance \citew[\page 260]{EH2003a}.
-}\largerpage
+}
 there has to be something in the grammar that excludes discontinuities that are ungrammatical. For instance, an analysis of (\mex{1}) as in
 Figure~\vref{fig-wen-glaubst-ich-du-dass-dg} should be excluded.
 \ea[*]{
@@ -1027,7 +1032,10 @@ its subject, object and so on, he assumes further dependencies for extracted ele
 Hudson states that the use of multiple dependencies in Word Grammar\indexwg corresponds to structure
 sharing\is{structure sharing} in HPSG\indexhpsg \citep[\page 15]{Hudson97a}. Nonlocal dependencies are modeled as a series
 of local dependencies as it is done in \gpsg and \hpsg. This is important since it allows one to
-capture extraction path marking\is{extraction path marking} effects \citep*[\page 1--2, Section~3.2]{BMS2001a}: for instance,
+capture extraction path marking\is{extraction path marking} effects 
+% bug hyperref page break: \citep*[\page 1--2, Section~3.2]{BMS2001a}:
+(\citeauthor*{BMS2001a} \citeyear[\page 1--2, Section~3.2]{BMS2001a}):
+for instance,
 there are languages that use a special form of the complementizer for sentences from which an
 element is extracted. Figure~\vref{fig-wen-glaubst-du-dass-wg} shows the analysis of
 (\ref{ex-wen-glaubst-du-dass-dg-two}) in \wg.

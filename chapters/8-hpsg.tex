@@ -34,6 +34,7 @@ Mueller2007b,% Grammix
 Sato2008a-u,%
 Kaufmann2009a-u,% Java
 Slayden2012a-u,% agree http://moin.delph-in.net/AgreeTop
+CP2012a-u,%Crysmann & Packard ACE
 Packard2015a-u% ACE http://moin.delph-in.net/AceTop
 }.\footnote{%
 \citet{UBCCDDEEMMO-96a} and \citet{Bolc:Czuba:ea:96a-u} compare systems that were available or were
@@ -96,7 +97,7 @@ ML2009a,ML2013a,YF2014a-u,FSB2015a-u,FanSongBond2015a-u},
 }, 
 \item Sign Language (German\il{sign language!German}, French\il{sign language!French}, British\il{sign language!British}, Greek!\il{sign language!Greek}) \citep{SM2002a-u,MS2004a-u,SG2010a-u},
 \item South African Sign Language\il{sign language!South African} \citep{Bungeroth2002a-u},
-\item Turkish\il{Turkish} \citep*{FPB09a-u},
+\item Turkish\il{Turkish} \citep*{Sehitoglu1996a-u,Gungordu1997a-u,FPB09a-u},
 \item Wambaya\il{Wambaya} \citep{Bender2008b-u,Bender2008a,Bender2010a-u}.
 \item Yiddish\il{Yiddish} \citep{MOe2011a},
 \end{itemize}
@@ -222,16 +223,16 @@ corresponding verbs.
 In order for the grammar not to create any incorrect sentences, one has to ensure that verbs are only used with appropriate rules.
 \eal
 \ex[*]{
-\gll dass Peter das Buch schläft\\
-	 that Peter the book sleeps\\
+\gll dass Kim das Buch schläft\\
+	 that Kim the book sleeps\\
 }
 \ex[*]{
-\gll dass Peter erwartet\\
-	 that Peter expects\\
+\gll dass Kim erwartet\\
+	 that Kim expects\\
 }
 \ex[*]{
-\gll dass Peter über den Mann erwartet\\
-	 that Peter about the man expects\\
+\gll dass Kim über den Mann erwartet\\
+	 that Kim about the man expects\\
 }
 \zl
 Therefore, verbs (and heads in general) have to be divided into valence classes. These valence
@@ -270,17 +271,17 @@ the case for SOV languages like German and hence it is usually assumed that all 
 verbs are treated alike (\citealp{Pollard90a-Eng}; \citealp[\page 376]{Eisenberg94b}). Therefore the subject is included in the lists above. I will return to
 English shortly.
 
-Figure~\ref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analysis for (\mex{1}b) is in Figure~\vref{abb-Peter-Maria-erwartet}:
+Figure~\ref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analysis for (\mex{1}b) is in Figure~\vref{abb-Kim-Maria-erwartet}:
 
 \begin{samepage}
 \eal
 \ex 
-\gll {}[dass] Peter schläft\label{Bsp-Peter-schlaeft}\\
-	{}\spacebr{}that Peter sleeps\\
+\gll {}[dass] Kim schläft\label{Bsp-Kim-schlaeft}\\
+	{}\spacebr{}that Kim sleeps\\
 \ex 
-\gll {}[dass] Peter Maria erwartet\\
-	{}\spacebr{}that Peter Maria expects\\
-\glt `that Peter expects Maria'
+\gll {}[dass] Kim Maria erwartet\\
+	{}\spacebr{}that Kim Maria expects\\
+\glt `that Kim expects Maria'
 \zl
 \end{samepage}
 %
@@ -290,15 +291,15 @@ Figure~\ref{abb-peter-schlaeft} shows the analysis for (\mex{1}a) and the analys
 sm edges
 [V{[\comps \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
-		[Peter;Peter]]
+		[Kim;Kim]]
 	[V{[\comps \sliste{ \ibox{1} }]}
 		[schläft;sleeps]]]
 \end{forest}
-\caption{\label{abb-peter-schlaeft}Analysis of \emph{Peter schläft} `Peter sleeps' in \emph{dass
-    Peter schläft} `that Peter sleeps'}
+\caption{\label{abb-peter-schlaeft}Analysis of \emph{Kim schläft} `Kim sleeps' in \emph{dass
+    Kim schläft} `that Kim sleeps'}
 \end{figure}%
 %\addlines
-In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Peter-Maria-erwartet}, one element of the \compsl
+In Figures~\ref{abb-peter-schlaeft} and~\ref{abb-Kim-Maria-erwartet}, one element of the \compsl
 is combined with its head in each local tree. The elements that are combined with the selecting head
 are then no longer present in the \compsl of the mother node. V[\comps \sliste{ }] corresponds to a
 complete phrase (VP or S). The boxes with numbers show the structure sharing (see
@@ -320,14 +321,14 @@ Furthermore, it must agree with the verb. This is not shown here.
 sm edges
 [V{[\comps \eliste]}
 	[{\ibox{1} NP[\type{nom}]}
-		[Peter;Peter]]
+		[Kim;Kim]]
 	[V{[\comps \sliste{ \ibox{1} }]}
 		[{\ibox{2} NP[\type{acc}]}
 			[Maria;Maria]]
 		[V{[\comps \sliste{ \ibox{1}, \ibox{2} }]}
 			[erwartet;expects]]]]
 \end{forest}}
-\caption{\label{abb-Peter-Maria-erwartet}Analysis of \emph{Peter Maria erwartet} `Peter expects Maria.'}
+\caption{\label{abb-Kim-Maria-erwartet}Analysis of \emph{Kim Maria erwartet} `Kim expects Maria.'}
 \end{figure}%
 
 As mentioned above, researchers working on German usually assume that subjects and objects should be
@@ -424,7 +425,7 @@ sm edges
 \end{figure}%
 \ea
 \ms{ 
-  phon     & \phonliste{ dem Mann }\\[1mm]
+  phon     & \phonliste{ dem, Mann }\\[1mm]
   head-dtr & \onems{ phon \phonliste{ Mann }
                  }\\
   non-head-dtrs & \sliste{ \onems{ phon \phonliste{ dem }
@@ -561,15 +562,15 @@ Schema~\ref{schema-bin-prel} can be read as follows: if an object is of the type
 on the right"=hand side of the implication. In concrete terms, this means that these objects always have a valence list which corresponds to 
 \iboxt{1}, that they have a head daughter with a valence list that can be divided into two sublists  \ibox{1} and \sliste{ \ibox{2} } and
 also that they have a non"=head daughter whose syntactic and semantic properties (\synsemv) are compatible with the last element of the
-\compsl of the head daughter \iboxb{2}. (\mex{1}) provides the corresponding feature description for the example in (\ref{Bsp-Peter-schlaeft}). 
+\compsl of the head daughter \iboxb{2}. (\mex{1}) provides the corresponding feature description for the example in (\ref{Bsp-Kim-schlaeft}). 
 \ea
 \onems[head-complement-phrase]{
-phon \phonliste{ Peter schläft }\\
+phon \phonliste{ Kim, schläft }\\
 synsem$|$loc$|$cat$|$comps \eliste\\
 head-dtr \onems{ phon \phonliste{ schläft }\\
                  synsem$|$loc$|$cat$|$comps \sliste{ \ibox{1} NP[\type{nom}] }
                }\\
-non-head-dtrs \sliste{ \onems{ phon \phonliste{ Peter }\\
+non-head-dtrs \sliste{ \onems{ phon \phonliste{ Kim }\\
                                \synsem \ibox{1}
                              } }
 }
@@ -664,13 +665,13 @@ distribution of verbal projections. Certain verbs require a verbal argument with
 \emph{glauben} `believe' can occur with a finite clause, but not with an infinitive without \emph{zu}:
 \eal
 \ex[]{
-\gll Ich glaube, Peter kommt morgen.\\
-	 I believe Peter comes tomorrow\\
-\glt `I think Peter is coming tomorrow.'
+\gll Ich glaube, Kim kommt morgen.\\
+	 I believe Kim comes tomorrow\\
+\glt `I think Kim is coming tomorrow.'
 }
 \ex[*]{
-\gll Ich glaube, Peter morgen kommen.\\
-	 I believe Peter tomorrow come\\
+\gll Ich glaube, Kim morgen kommen.\\
+	 I believe Kim tomorrow come\\
 }
 \ex[*]{
 \gll Ich glaube, morgen kommen.\\

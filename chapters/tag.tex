@@ -65,7 +65,7 @@ These are present in the lexicon and can be combined to create larger trees.
 \begin{forest}
 tag
 [NP
-	[John]]
+	[Kim]]
 \end{forest}
 \hfill
 \begin{forest}
@@ -104,7 +104,7 @@ tag
 [S
 	[NP$\downarrow$,
           [NP, substitution
-            [John]]]
+            [Kim]]]
 	[VP
 		[V
 			[laughs]]]]
@@ -116,7 +116,7 @@ $\leadsto$
 tag
 [S
 	[NP
-		[John]]
+		[Kim]]
 	[VP
 		[V
 			[laughs]]]]
@@ -125,7 +125,7 @@ tag
 \caption{\label{abb-Substitution}Substitution}
 \end{figure}%
 Other subtrees have to be inserted into substitution nodes such as the NP node in the tree for \emph{laughs}.
-The tree for \emph{John} is inserted there in the example derivation.\is{substitution|)}
+The tree for \emph{Kim} is inserted there in the example derivation.\is{substitution|)}
 
 \subsection{Adjunction}
 
@@ -138,7 +138,7 @@ Figure~\vref{abb-Adjunktion}\is{adjunction|(}\is{adjunct|(} shows an example of 
 tag
 [S
 	[NP
-		[John]]
+		[Kim]]
 	[VP
 		[V
 			[laughs]]]]
@@ -158,7 +158,7 @@ $\leadsto$
 tag
 [S
 	[NP
-		[John]]
+		[Kim]]
 	[VP
 		[ADV
 			[always]]
@@ -204,8 +204,8 @@ The basic mechanisms will be briefly presented in what follows.
 
 %\begin{sloppypar}
 In the literature on TAG, a distinction is made between derived trees and derivation trees\is{derivation tree}.
-Derived trees correspond to constituent structure (the trees for \emph{John laughs} and
-\emph{John always laughs} in Figures~\ref{abb-Substitution} and ~\ref{abb-Adjunktion}).
+Derived trees correspond to constituent structure (the trees for \emph{Kim laughs} and
+\emph{Kim always laughs} in Figures~\ref{abb-Substitution} and ~\ref{abb-Adjunktion}).
 The derivation tree contains the derivational history, that is, information about how the elementary trees were combined.
 The elements in a derivation tree represent predicate"=argument dependencies, which is why it is possible to derive
 a semantic derivation tree from them. This will be shown on the basis of the sentence in (\mex{1}):
@@ -609,7 +609,10 @@ the analyses in GB, Minimalism, and HPSG.
 \section{Passive}
 
 There is\is{passive|(} a possible analysis for the passive that is analogous to the transformations in Transformational Grammar: one assumes lexical rules that
-license a lexical item with a passive tree for every lexical item with an active tree \citep[\page 50--51]{KJ85a}. 
+license a lexical item with a passive tree for every lexical item with an active tree
+\parencites[\page 50--51]{KJ85a}[\page 125]{Becker94a-u}[80--81]{EGW95a}. Such rules are also called metarules
+\parencites[Section~6.1]{Becker94a-u}[596]{CDGRP2013a-u}, since they are similar to the metarules
+used in GPSG, the difference being the greater domain of locality of TAGs.
 
 \citet[\page 55]{KJ85a} propose an alternative to this transformation"=like approach that more adequately handles so"=called raising constructions\is{raising}.
 Their analysis assumes that arguments of verbs are represented in subcategorization lists. Verbs are entered into trees that match their subcategorization
@@ -621,11 +624,11 @@ analysis going back to \citet{Haider86}, which was presented in Section~\ref{Abs
 %\largerpage
 
 There\is{inheritance!multiple|(} are also proposals in TAG that use inheritance to deal with valence changing processes 
-in general and the passive in particular (\citealp{Candito96a} and \citealp*{KSYJ2006a} following Candito). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
-the Chapter on Construction Grammar, inheritance is not a suitable descriptive tool for valence changing processes. This is because these kinds of processes
+in general and the passive in particular (\citealp{Candito96a} and \citealp*{KSYJ2006a} following
+Candito, \citealp[\page 55]{KLOP2016a}, \citealp[210]{LK2017a}). As we saw in Section~\ref{Abschnitt-Passiv-CxG} of 
+the chapter on Construction Grammar, inheritance is not a suitable descriptive tool for valence changing processes. This is because these kinds of processes
 interact syntactically and semantically in a number of ways and can also be applied multiple times
-(\citealp{Mueller2006d,Mueller2007d}; \citeyear[Section~7.5.2]{MuellerLehrbuch1};
-\citeyear{MuellerUnifying}; \citeyear{MWArgSt}). See also Section~\ref{relations-sec} of this book.%
+\parencites{Mueller2006d,Mueller2007d}[Section~7.5.2]{MuellerLehrbuch1}{MuellerUnifying}{MWArgSt}. See also Section~\ref{relations-sec} of this book.%
 \is{inheritance!multiple|)}\is{passive|)}
 
 \section{Long"=distance dependencies}
@@ -633,7 +636,8 @@ interact syntactically and semantically in a number of ways and can also be appl
 
 \largerpage
 The\il{English|(}\is{long"=distance dependency|(} analysis of long"=distance dependencies in TAG is handled with the standard apparatus: simple trees are inserted
-into the middle of other trees. Figure~\vref{abb-nld-TAG} shows an example of the analysis of (\mex{1}):
+into the middle of other trees. Figure~\vref{abb-nld-TAG} shows the analysis of (\mex{1}) provided
+by \citet[99--100]{JS97a}:
 \ea
 Who$_i$ did John tell Sam that Bill likes \_$_i$?
 \z
@@ -774,7 +778,7 @@ tag
               num & sing\\
              }\\
       }}, substitution,tier=2
-      [John, tier=word] ] ]
+      [Kim, tier=word] ] ]
   [{\ms{
      cat & {\upshape VP}\\
      agr & \ibox{1} \ms{
@@ -795,11 +799,11 @@ tag
 ] 
 \end{forest}
 }
-\caption{\label{Abbildung-FTAG-laughs}Elementary trees for \emph{John} and \emph{laughs} in FTAG}
+\caption{\label{Abbildung-FTAG-laughs}Elementary trees for \emph{Kim} and \emph{laughs} in FTAG}
 \end{figure}%
 A noun phrase can be combined with the tree for \emph{laughs} in Figure~\ref{Abbildung-FTAG-laughs}. Its top structure is identified with
 the NP node in the tree for \emph{laughs}.
-The result of this combination is shown in Figure~\vref{Abbildung-FTAG-John-laughs}.
+The result of this combination is shown in Figure~\vref{Abbildung-FTAG-Kim-laughs}.
 \begin{figure}
 \centerline{%
 \begin{forest}
@@ -821,7 +825,7 @@ tag
               num & sing\\
              }\\
       }}
-      [John, tier=word] ]
+      [Kim, tier=word] ]
   [{\ms{
      cat & {\upshape VP}\\
      agr & \ibox{1} \ms{
@@ -842,7 +846,7 @@ tag
 ] 
 \end{forest}
 }
-\caption{\label{Abbildung-FTAG-John-laughs}Combination of the trees for \emph{John} and \emph{laughs} in FTAG}
+\caption{\label{Abbildung-FTAG-Kim-laughs}Combination of the trees for \emph{Kim} and \emph{laughs} in FTAG}
 \end{figure}%
 
 %\pagebreak
@@ -1025,7 +1029,7 @@ for the ditransitive verb \emph{geben} `give'.
             [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
     [VP
             [geben\\give]
-            [VP, tikz+={\ignoreme\draw [densely dashed] ([yshift=2.5pt].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
+            [VP\\~, tikz+={\ignoreme\draw [densely dashed] ([yshift=3.4ex].south) [out=-75, in=-125] to ($(!u.north)!3/4!(!un.north)$) [out=55,in=100] to (!rl.north); }]]
     [VP
             [$\epsilon$]]]
     \end{forest}
@@ -1081,11 +1085,11 @@ how such lexical entries can be used to analyze sentences with verbal complexes.
       ]
       [VP
         [VP
-          [$\epsilon$]
+          [$\epsilon$\\~]
           [zu reparieren\\to repair]
         ]
         [VP, baseline
-          [$\epsilon$]
+          [$\epsilon$\\~]
           [versprochen\\promised]
         ]
       ]

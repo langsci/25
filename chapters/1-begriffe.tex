@@ -6,7 +6,11 @@
 The aim of this chapter is to explain why we actually study syntax
 %% \todostefan{M: Ich fände es gut, irgendwo die Termini "`theory"' und "`framework"' zu besprechen (und sei es nur in einer Fußnote). Letzterer wird viel verwendet, aber offenbar gar nicht speziell eingeführt. Und "`theory"' wird sowohl als Massennomen ("`grammatical theory"') als auch as Zählnomen ("`specific theories"') verwendet – das sind offenbar etwas verschiedene Bedeutungen. Ich habe ja behauptet, dass man Grammatiktheorie auch ohne (allgemeines) Framework machen kann (siehe Haspelmath 2010b, im Anhang), und da verwende ich die Termini natürlich nicht synonym (siehe §14.2.2-5 für eine knappe Diskussion der oft verwirrenden Termini framework, theory, description, analysis). }
 (Section~\ref{sec-wozu-syntax}) and why it is important to formalize our findings
-(Section~\ref{sec-formal}). Some basic terminology will be introduced in
+(Section~\ref{sec-formal}).\footnote{
+  This chapter and the following one are based on my HPSG textbook, which appeared first in 2007
+  \citep{MuellerLehrbuch1}. I retained the copyright of the original chapters and did not see any
+  point in reformulating the text.%
+} Some basic terminology will be introduced in
 Sections~\ref{konstituententests}--\ref{sec-topo}: Section~\ref{konstituententests}
 deals with criteria for dividing up utterances into smaller units. Section~\ref{Abschnitt-Wortarten} 
 shows how words can be grouped into classes; that is I will introduce criteria for assigning words to
@@ -50,7 +54,7 @@ to answer is: what is the maximum length of a sentence?  For instance, it is pos
 the sentences in (\mex{1}): 
 
 \eal 
-\ex This sentence goes on and on and on and on \ldots 
+\ex This sentence goes on and on and on and on.
 \ex {}[A sentence is a sentence] is a sentence.
 \ex\label{einbettung-dass-Saetze}
 that Max thinks that Julius knows that Otto claims that Karl suspects that Richard confirms that Friederike is laughing
@@ -96,7 +100,7 @@ set containing infinitely many finite sentences (\citealp[\page 13]{Chomsky57a})
 
 
 It would be arbitrary to establish some cut-off point up to which such combinations can
-be considered to belong to our language (\citealp[\page 208]{Harris57a}; \citealp[\page 23]{Chomsky57a}). 
+be considered to belong to our language \parencites[\page 208]{Harris57a}[\page 23]{Chomsky57a}. 
 It is also implausible to claim that such complex sentences are stored in our brains as a single complex
 unit. While evidence from psycholinguistic experiments shows that highly frequent or
 idiomatic combinations are stored as complex units, this could not be the case for sentences such as
@@ -307,7 +311,7 @@ Similary, in (\mex{1}a), the string \emph{das Buch zu lesen} `the book to read' 
 by \emph{dem Kind das Buch zu geben} `the child the book to give'.
 
 \eal
-\ex\label{ex-den-Romanuch-zu-lesen} 
+\ex\label{ex-den-Roman-zu-lesen} 
 \gll Er versucht, [den Roman zu lesen].\\
      he tries \spacebr{}the novel to read\\
 \glt `He is trying to read the novel.'
@@ -341,7 +345,7 @@ It is also possible to use a pronoun to refer to constituents such as \emph{den 
 novel to read' in \pref{ex-den-Roman-zu-lesen}, as is shown in (\mex{1}):
 
 \eal
-\ex 
+\ex
 \gll Er versucht, [den Roman zu lesen].\\
      he tries \spacebr{}the novel to read\\
 \glt `He is trying to read the novel.'
@@ -421,7 +425,7 @@ to move \emph{keiner dieses} `nobody this' as a whole, we see that this leads to
 \zl
 
 \noindent
-Furthermore, constituents such as \emph{das Buch zu lesen} `to read the book' in \pref{ex-das-buch-zu-lesen} can be moved:
+Furthermore, constituents such as \emph{das Buch zu lesen} `to read the book' in \pref{ex-den-Roman-zu-lesen} can be moved:
 \eal
 \ex 
 \gll Er hat noch nicht [das Buch zu lesen] versucht.\\
@@ -2659,7 +2663,7 @@ How should we analyze relative clauses\is{relative clause|(} such as
 This can be tested using a test developed by \citet[\page72]{Bech55a} (\emph{Rangprobe}\is{Rangprobe}):
 first, we modify the example in (\mex{0}) so that it is in the perfect. Since non-finite verb forms occupy the right bracket, we
 can clearly see the border between the middle field and postfield. The examples in (\mex{1}) show that the relative clause cannot
-occur in the middle field unless it is part of a complex constituent with the head noun \emph{Frau} `woman'.
+occur in the middle field unless it is part of a complex constituent with the head noun \emph{Kind} `child'.
 \eal
 \ex[]{
 \gll Der Delphin hat [dem Kind] den Ball gegeben, [das er kennt].\\
@@ -2679,20 +2683,20 @@ occur in the middle field unless it is part of a complex constituent with the he
 \noindent
 This test does not help if the relative clause is realized together with its head noun at the end of the sentence as in (\mex{1}):
 \ea
-\gll Er gibt das Buch der Frau, die er kennt.\\
-      he gives the book the woman that he knows\\
-\glt `He gives the book to the woman that he knows.'
+\gll Der Delphin gibt den Ball dem Kind, das er kennt.\\
+     the dolphin gives the ball the child that he knows\\
+\glt `The dolphin gives the ball to the child that he knows.'
 \z
 %\addlines
 If we put the example in (\mex{0}) in the perfect, then we observe that the lexical verb can occur before or after the relative clause:
 \eal
 \ex 
-\gll Er hat das Buch [der Frau] gegeben, [die er kennt].\\
-     he has the book \spacebr{}the woman given \spacebr{}that he knows\\
-\glt `He has given the book to the woman he knows.'
+\gll Der Delphin hat den Ball [dem Kind] gegeben, [das er kennt].\\
+     the dolphin has the ball \spacebr{}the child given \spacebr{}that he knows\\
+\glt `The dolphin has given the ball to the child he knows.'
 \ex 
-\gll Er hat das Buch [der Frau, die er kennt,] gegeben.\\
-	 he has the book \spacebr{}the woman that he knows given\\
+\gll Der Delphin hat den Ball [dem Kind, das er kennt,] gegeben.\\
+     the dolphin has the ball \spacebr{}the child that he knows given\\
 \zl
 In (\mex{0}a), the relative clause has been extraposed. In (\mex{0}b) it forms part of the noun phrase \emph{der Frau, die er kennt} `the woman that he knows'
 and therefore occurs inside the NP in the middle field. It is therefore not possible to rely on this test for (\mex{-1}). We assume that the relative clause in (\mex{-1})
@@ -2728,9 +2732,9 @@ the NP. That is, we would have to assume the NP"=structure anyway and then extra
 
 We\is{interrogative clause|(}\is{relative clause|(} have a similar problem with interrogative and
 relative pronouns. Depending on the author, these are assumed to be in the left bracket
-(\citealp{Kathol2001a}; \citealp[\page 94--95]{Duerscheid2003a-u}; \citealp[\page
-403]{Eisenberg2004a}; \citealp[\page 54, 57, 69--70]{Pafel2011a-u}) or the prefield
-(\citealp[§1345]{Duden2005-Authors}; \citealp[\page 29--30, Section~3.1]{Woellstein2010a-u}) or even
+\parencites{Kathol2001a}[\page 94--95]{Duerscheid2003a-u}[\page
+403]{Eisenberg2004a}[\page 54, 57, 69--70]{Pafel2011a-u} or the prefield
+\parencites[§1345]{Duden2005-Authors}[\page 29--30, Section~3.1]{Woellstein2010a-u} or even
 in the middle field \citep[\page 75]{AH2004a-u}. In Standard German interrogative or relative
 clauses, both fields are never simultaneously
 occupied. For this reason, it is not immediately clear to which field an element
@@ -2738,9 +2742,9 @@ belongs. Nevertheless, we can draw parallels to main clauses: the pronouns in  i
 relative clauses can be contained inside complex phrases: 
 \eal
 \ex 
-\gll der Mann,         [mit dem] du gesprochen hast\\
-     the man \spacebr{}with whom you spoken have\\
-\glt `the man you spoke to'	 
+\gll das Kind,         [mit dem] du gesprochen hast\\
+     the child \spacebr{}with whom you spoken have\\
+\glt `the child you spoke to'	 
 \ex 
 \gll Ich möchte wissen, [mit wem] du gesprochen hast.\\
      I want.to know \spacebr{}with whom you spoken have\\
@@ -2767,13 +2771,13 @@ depends on \emph{Vortrag} `talk', which is deeply embedded in the sentence:
 argument of \emph{gebeten} `asked'.
 \eal
 \ex 
-\gll Über dieses Thema habe ich ihn gebeten, einen Vortrag zu halten.\\
-     about this topic  have I   him asked    a     talk    to hold\\
-\glt `I asked him to give a talk about this topic.'
+\gll Über dieses Thema habe ich sie gebeten, einen Vortrag zu halten.\\
+     about this topic  have I   she asked    a     talk    to hold\\
+\glt `I asked her to give a talk about this topic.'
 \ex 
-\gll das Thema, über das ich ihn gebeten habe, einen Vortrag zu halten\\
-     the topic  about which I him asked have a talk to hold\\
-\glt `the topic about which I asked him to give a talk'
+\gll das Thema, über das ich sie gebeten habe, einen Vortrag zu halten\\
+     the topic  about which I her asked have a talk to hold\\
+\glt `the topic about which I asked her to give a talk'
 \zl
 The situation is similar in (\mex{0}b): the relative phrase \emph{über das} `about which' is a dependent of
 \emph{Vortrag} `talk' which is realized far away from it. Thus, if the relative phrase is assigned to the \vf, it is
@@ -2781,13 +2785,12 @@ possible to say that such nonlocal frontings always target the \vf.
 
 Finally, the Duden grammar \citep[§1347]{Duden2005-Authors} provides the following examples from non-standard German
 (mainly southern dialects):
-\eal
-\ex 
+\ea 
 \gll Kommt drauf an, mit wem dass sie zu tun haben.\\
      comes there.upon \partic{} with whom that you to do have\\
 \glt `It depends on whom you are dealing with.'
 %\ex
-\zl
+\z
 \eal
 \ex 
 \gll Lotti, die wo eine tolle Sekretärin ist, hat ein paar merkwürdige~~~~~~ Herren empfangen.\\
